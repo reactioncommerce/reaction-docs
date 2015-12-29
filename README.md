@@ -1,7 +1,7 @@
 # Reaction
 ## Quick Tour
 - Login Credentials
-- Dashboard
+- [Dashboard](admin/dashboard.md)
 	- Packages
 - Admin Sidebar
 - Shop Settings
@@ -16,32 +16,34 @@
 	- Administrator
 	- Invite Managers
 	- Permissions
-- Tags and Categorization
-- Product Page
-	- Images
-	- Variants
-	- Inventory
-	- Publishing
-	- Tags
-	- Meta Data
-- Product Grid
-	- Layout
-	- Duplicate
-	- Visibility
+- [Tags and Categorization](admin/tags.md)
+- [Products](admin/products.md)
+	- Product Page
+		- Images
+		- Variants
+		- Inventory
+		- Publishing
+		- Tags
+		- Meta Data
+	- [Product Grid](admin/products.md)
+		- Layout
+		- Duplicate
+		- Visibility
 - Cart and Checkout
-- Shipping
+- [Shipping](admin/shipping.md)
 	- Flat Rate Methods
-- Payment Methods
+- [Payment Methods](admin/payment.md)
 	- Enabling
 	- Configuring
-- Promotions
-- Order Processing
+- [Order Processing](admin/orders.md)
 - Analytics
 - Social
 	- Configuration
 	- Product Page
 	- Footer
-- In progress
+- Future (features to be completed)
+	- [Taxes](admin/taxes.md)
+	- Promotions
 	- Email Templates
 	- Content Management
 	- Design & Theme
@@ -73,7 +75,7 @@
 ### Architecture
 - [Overview](developer/architecture/overview.md)
 - [Resources](developer/resources.md)
-- [Registry](packages/registry.md)
+- [Registry](developer/packages/registry.md)
 - [Permissions](developer/architecture/permissions.md)
 - [Routing](developer/architecture/routing.md)
 - [Logging](developer/architecture/logging.md)
@@ -81,6 +83,7 @@
 - [i18n](developer/architecture/i18n.md)
 - [Workflow](developer/architecture/workflow.md)
 - [Security](developer/architecture/security.md)
+- [SEO](developer/architecture/seo.md)
 
 #### Collections
 - [Collections](developer/collections/collections.md)
@@ -97,8 +100,8 @@
 - Images
 
 #### Methods / API
-- [Method Hooks](developer/architecture/hooks.md)
-- Analytics
+- [Method Hooks](developer/methods/hooks.md)
+- [Analytics](developer/methods/analytics.md)
 - Products
 - Cart
 - Payments
