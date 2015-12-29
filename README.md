@@ -49,7 +49,7 @@
 	- Search
 
 ## Prelaunch Checklist
-- [Prelaunch Checklist](quick-start/checklist.md)
+- [Prelaunch Checklist](admin/checklist.md)
 	- Store URL
 	- Security Certificate
 	- Store Email Address
@@ -62,7 +62,7 @@
 	- Privacy and Cookie Law Compliance
 
 
-## Developer Resources
+## Development Resources
 - [Requirements](developer/requirements.md)
 - [Installation](developer/installation.md)
 - [Configuration](developer/configuration.md)
@@ -73,34 +73,33 @@
 ### Architecture
 - [Overview](developer/architecture/overview.md)
 - [Resources](developer/resources.md)
+- [Registry](packages/registry.md)
+- [Permissions](developer/architecture/permissions.md)
 - [Routing](developer/architecture/routing.md)
 - [Logging](developer/architecture/logging.md)
 - [Globals](developer/architecture/globals.md)
 - [i18n](developer/architecture/i18n.md)
-- [Collection Hooks](developer/architecture/collection-hooks.md)
-- [Method Hooks](developer/architecture/hooks.md)
 - [Workflow](developer/architecture/workflow.md)
+- [Security](developer/architecture/security.md)
 
 #### Collections
-- [Collections](developer/architecture/collections.md)
-- [Schemas](developer/architecture/collections.md)
-- [Fixtures](developer/architecture/fixtures.md)
-- [Shipping](developer/architecture/shipping.md)
-- [Payments](developer/architecture/payments)
-- [Import](developer/architecture/import.md)
-- [Inventory](developer/architecture/inventory.md)
-- Security
+- [Collections](developer/collections/collections.md)
+- [Schemas](developer/collections/schema.md)
+- [Collection Hooks](developer/collections/collection-hooks.md)
+- [Fixtures](developer/collections/fixtures.md)
+- [Shipping](developer/collections/shipping.md)
+- [Payments](developer/collections/payments)
+- [Import](developer/collections/import.md)
+- [Inventory](developer/collections/inventory.md)
+- Products
 - Cart
-- Payments
 - Orders
-- Inventory
-- Shipping
 - Images
-- Import
 
 #### Methods / API
-
+- [Method Hooks](developer/architecture/hooks.md)
 - Analytics
+- Products
 - Cart
 - Payments
 - Orders
@@ -111,17 +110,19 @@
 - Import
 
 #### Packages
-- Creating a Package
-- Submitting Package 
+- [Registry](developer/packages/registry.md)
+- [Creating a package](developer/packages/packages.md)
+- [Including a package for distribution](developer/packages/including.md)
+- [Publishing a package](developer/packages/publishing.md)
 
 #### Testing
-- Fixtures / Factories
-- Writing Tests
+- [Fixtures / Factories](developer/testing/factories.md)
+- [Writing Tests](developer/testing/testing.md)
 - Project CI Flow
 
 #### Themes
-- Creating a Theme Package
-- Customization
+- [Creating a Theme Package](developer/themes/themes.md)
+- [Using Templates](developer/themes/tempates.md)
 
 #### Command Line
 - `meteor`

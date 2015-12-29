@@ -1,5 +1,23 @@
 # Routing
 
+[Iron:router](https://github.com/iron-meteor/iron-router) currently provides routing in Reaction.
+
+Routes are defined, both in app and packages. Most often found in `common/routers.js`.
+
+```
+Router.map ->
+  this.route 'paypal',
+    controller: ShopAdminController
+    path: 'dashboard/settings/paypal',
+    template: 'paypal'
+    waitOn: ->
+      return ReactionCore.Subscriptions.Packages
+```
+
+Use the controller `ShopController` for public/shop routes, and `ShopAdminController` for admin roles.
+
+In addition to defining the route in the `Router.map`, you should add the route and template in the `ReactionCore.registerPackage` to export this route to ReactionCore and add permissions. 
+
 [*common/routing.js](https://github.com/reactioncommerce/reaction/blob/master/common/routing.js) can be customized to change layouts.
 
 If you are adding reaction-core to your own meteor application, `iron:router` is installed as a dependency of `reactioncommerce:core`.
