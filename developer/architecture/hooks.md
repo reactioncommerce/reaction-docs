@@ -1,6 +1,6 @@
 # Hooks
 
-The method hooks utlized in ReactionCore are based on [Workpop/meteor-method-hooks
+The method hooks utilized in ReactionCore are based on [Workpop/meteor-method-hooks
 ](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
 
 Much of this documentation is forked from or based on [Workpop/meteor-method-hooks

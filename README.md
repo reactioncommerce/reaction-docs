@@ -1,20 +1,4 @@
 # Reaction
-## Quick Start
-- [Requirements](quick-start/requirements.md)
-- [Installation](quick-start/installation.md)
-- [Prelaunch Checklist](quick-start/checklist.md)
-	- Store URL
-	- Security Certificate
-	- Store Email Address
-	- Cart Options - guest checkout
-	- Email Templates
-	- Taxes
-	- Shipping Methods
-	- Payment Methods
-	- PCI Compliance Guidelines
-	- Privacy and Cookie Law Compliance
-
-
 ## Quick Tour
 - Login Credentials
 - Dashboard
@@ -64,28 +48,47 @@
 	- Multiple Stores, Sites
 	- Search
 
+## Prelaunch Checklist
+- [Prelaunch Checklist](quick-start/checklist.md)
+	- Store URL
+	- Security Certificate
+	- Store Email Address
+	- Cart Options - guest checkout
+	- Email Templates
+	- Taxes
+	- Shipping Methods
+	- Payment Methods
+	- PCI Compliance Guidelines
+	- Privacy and Cookie Law Compliance
+
+
 ## Developer Resources
-### Getting Started
-- Resources
-	- Meteor
-	- Mongo
-	- NPM & Atmosphere
-	- ES6 & React
-	- Docker
-- Style Guide
-- Pull Requests
-	- Circle CI / Tests
-	- Review
-	- CLA
+- [Requirements](developer/requirements.md)
+- [Installation](developer/installation.md)
+- [Configuration](developer/configuration.md)
+- [Style Guide](developer/styleguide.md)
+- [Pull Requests](developer/pr.md)
+- [Deploying](developer/deploying.md)
 
 ### Architecture
-- Overview
-- Themes
-- Routing
-- Logging
-- Templates
+- [Overview](developer/architecture/overview.md)
+- [Resources](developer/resources.md)
+- [Routing](developer/architecture/routing.md)
+- [Logging](developer/architecture/logging.md)
+- [Globals](developer/architecture/globals.md)
+- [i18n](developer/architecture/i18n.md)
+- [Collection Hooks](developer/architecture/collection-hooks.md)
+- [Method Hooks](developer/architecture/hooks.md)
+- [Workflow](developer/architecture/workflow.md)
 
-#### Collection Schemas
+#### Collections
+- [Collections](developer/architecture/collections.md)
+- [Schemas](developer/architecture/collections.md)
+- [Fixtures](developer/architecture/fixtures.md)
+- [Shipping](developer/architecture/shipping.md)
+- [Payments](developer/architecture/payments)
+- [Import](developer/architecture/import.md)
+- [Inventory](developer/architecture/inventory.md)
 - Security
 - Cart
 - Payments
@@ -94,11 +97,6 @@
 - Shipping
 - Images
 - Import
-
-#### Hooks and Workflow
-- Collection Hooks
-- Method Hooks
-- Workflow
 
 #### Methods / API
 
@@ -128,12 +126,6 @@
 #### Command Line
 - `meteor`
 - `reaction`
-
-### Deploying
-- Reaction Commerce
-- Galaxy (Meteor)
-- Digital Ocean
-- Docker and AWS
 
 ## FAQs
 - [Questions](faqs/faq.md)
