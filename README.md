@@ -89,9 +89,8 @@
 - [Collections](developer/collections/collections.md)
 - [Schemas](developer/collections/schema.md)
 - [Collection Hooks](developer/collections/collection-hooks.md)
-- [Fixtures](developer/collections/fixtures.md)
 - [Shipping](developer/collections/shipping.md)
-- [Payments](developer/collections/payments)
+- [Payments](developer/collections/payments.md)
 - [Import](developer/collections/import.md)
 - [Inventory](developer/collections/inventory.md)
 - Products
@@ -134,4 +133,4 @@
 ## FAQs
 - [Questions](faqs/faq.md)
 - [Troubleshooting](faqs/troubleshooting.md)
-- [Support](faqs/support.md)
+- [Support](faqs/support.md) 
