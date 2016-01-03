@@ -4,8 +4,7 @@
 
 To enable a payment provider for your shop, login as a shop admin and navigate to your Dashboard.
 
-![](https://raw.github.com/reactioncommerce/reaction/master/docs/assets/guide-admin-navigation-dropdown-dashboard.png "Reaction Commerce Dashboard")
-
+![](admin-dashboard-navigation.png "Reaction Commerce Dashboard")
 
 From the Dashboard, locate the payment package you want to enable. Click the plus icon to turn on particular payment package, and then click the cog icon to enter your settings.
 
