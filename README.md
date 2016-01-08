@@ -1,5 +1,5 @@
 # Reaction
-## Quick Tour
+## Introduction
 - Login Credentials
 - [Dashboard](admin/dashboard.md)
 	- Packages
@@ -41,36 +41,20 @@
 	- Configuration
 	- Product Page
 	- Footer
-- Future (features to be completed)
-	- [Taxes](admin/taxes.md)
-	- Promotions
-	- Email Templates
-	- Content Management
-	- Design & Theme
-	- Multiple Stores, Sites
-	- Search
 
-## Prelaunch Checklist
-- [Prelaunch Checklist](admin/checklist.md)
-	- Store URL
-	- Security Certificate
-	- Store Email Address
-	- Cart Options - guest checkout
-	- Email Templates
-	- Taxes
-	- Shipping Methods
-	- Payment Methods
-	- PCI Compliance Guidelines
-	- Privacy and Cookie Law Compliance
-
-
-## Development Resources
+# Developer Resources
 - [Requirements](developer/requirements.md)
 - [Installation](developer/installation.md)
+- [Command Line](developer/command.md)
 - [Configuration](developer/configuration.md)
 - [Style Guide](developer/styleguide.md)
 - [Pull Requests](developer/pr.md)
 - [Deploying](developer/deploying.md)
+
+#### Themes
+- [Creating a Theme Package](developer/themes/themes.md)
+- [Using Templates](developer/themes/tempates.md)
+
 
 ### Architecture
 - [Overview](developer/architecture/overview.md)
@@ -85,14 +69,15 @@
 - [Security](developer/architecture/security.md)
 - [SEO](developer/architecture/seo.md)
 
-#### Collections
-- [Collections](developer/collections/collections.md)
-- [Schemas](developer/collections/schema.md)
-- [Collection Hooks](developer/collections/collection-hooks.md)
-- [Shipping](developer/collections/shipping.md)
-- [Payments](developer/collections/payments.md)
-- [Import](developer/collections/import.md)
-- [Inventory](developer/collections/inventory.md)
+
+#### Core
+- [Collections](developer/core/collections.md)
+- [Schemas](developer/core/schema.md)
+- [Collection Hooks](developer/core/collection-hooks.md)
+- [Shipping](developer/core/shipping.md)
+- [Payments](developer/core/payments.md)
+- [Import](developer/core/import.md)
+- [Inventory](developer/core/inventory.md)
 - Products
 - Cart
 - Orders
@@ -119,16 +104,10 @@
 
 #### Testing
 - [Fixtures / Factories](developer/testing/factories.md)
+- [faker](developer/testing/faker.md)
 - [Writing Tests](developer/testing/testing.md)
-- Project CI Flow
-
-#### Themes
-- [Creating a Theme Package](developer/themes/themes.md)
-- [Using Templates](developer/themes/tempates.md)
-
-#### Command Line
-- `meteor`
-- `reaction`
+- [Project CI Flow](developer/testing/ci.md)
+- [Prelaunch Checklist](admin/checklist.md)
 
 ## FAQs
 - [Questions](faqs/faq.md)
