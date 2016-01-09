@@ -4,6 +4,6 @@ Reaction can be deployed as a [standard Meteor application](http://guide.meteor.
 - [Meteor Up](developer/deploying/mup.md)
 - [Docker and AWS](developer/deploying/docker.md)
 
-All Reaction [configuration options](configuration.md) can be used with these options.
+All Reaction [configuration options](configuration.md) can be used with these deployment choices.
 
-[Launchdock](developer/deploying/launchdock.md) is multi-tenant management hub under development from the Reaction Core team.
+[Launchdock](developer/deploying/launchdock.md) is a multi-tenant management hub under development from the Reaction Core team.
