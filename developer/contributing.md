@@ -7,7 +7,7 @@ At Reaction Commerce, we're dedicated to the open source community. In fact, we'
 curl https://install.meteor.com | /bin/sh
 git clone https://github.com/reactioncommerce/reaction.git
 cd reaction
-../reaction
+./reaction
 ```
 
 **Step 2:**

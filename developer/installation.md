@@ -23,7 +23,7 @@ To start Reaction, run the `reaction` command
 ./reaction
 ```
 
-This command runs a script that executes `meteor`. You can use any [Meteor command line option](http://docs.meteor.com/#/full/meteorhelp). ![](../assets/guide-installation-default-user.png)
+This command runs a script that executes `meteor`. You can use any [Meteor command line option](http://docs.meteor.com/#/full/meteorhelp). ![](/assets/guide-installation-default-user.png)
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
 
