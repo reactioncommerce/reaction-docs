@@ -1,3 +1,0 @@
-# Digital Ocean
-
-Coming soon.

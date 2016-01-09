@@ -1,4 +1,8 @@
-# Variables
+# Exports
+This is an evolving topic right now.
+
+Input appreciated.
+
 ## Globals
 _core/common/packageGlobals.js:_
 
@@ -13,6 +17,8 @@ ReactionCore.Locale = {}; //i18n translation object
 ReactionCore.Log = {}; // Logger instantiation (server)
 ```
 
+> In the future we may implement ReactionCore.methods
+
 _core/common/collections/products.js:_
 
 ```javascript
@@ -21,7 +27,3 @@ ReactionCore.Collections.Product = new Mongo.Collection("Product");
 ```
 
 The `reaction-core` package exports `ReactionCore`, on both client and server:
-
-```javascript
-api.export(["ReactionCore"]);
-```

@@ -63,7 +63,7 @@
 - [Permissions](developer/architecture/permissions.md)
 - [Routing](developer/architecture/routing.md)
 - [Logging](developer/architecture/logging.md)
-- [Globals](developer/architecture/globals.md)
+- [Globals](developer/architecture/exports.md)
 - [i18n](developer/architecture/i18n.md)
 - [Workflow](developer/architecture/workflow.md)
 - [Security](developer/architecture/security.md)
