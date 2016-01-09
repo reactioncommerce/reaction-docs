@@ -1,4 +1,11 @@
-# Analytics 
+# Analytics
+Analytics in Reaction is provided by [reaction-analytics](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-analytics) package.
+
+This package implements an [analytics framework](https://segment.com/docs/libraries/analytics.js/) for integrating third-party analytics services such as segment.io, Google Analytics, and Mixpanel.
+
+This package will only send analytics libraries to the client that you have enabled, and it is easily extensible to add additional analytics libraries as you need.
+
+Because Meteor restricts packages' build plugin access to assets, we have to work around this by requiring the additional [reactioncommerce:reaction-analytics-libs](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-analytics-libs) package where the analytics source files are kept.
 
 ## Tracking
 Example use:
@@ -8,16 +15,13 @@ Example use:
 ```
 
 Send event tracking to Google Analytics by adding the following data attribute to any anchor in Reaction:
-
-* data-event-category
-* data-event-action
-* data-event-label
-* data-event-value
+- data-event-category
+- data-event-action
+- data-event-label
+- data-event-value
 
 ## Events Tracked
-
 ### Product Clicked from Grid View
-
 A user clicks an individual product from the product grid view.
 
 **Example of data captured:**
@@ -34,7 +38,6 @@ A user clicks an individual product from the product grid view.
 ```
 
 ### Generic Product Grid Click
-
 A user clicks on the product grid view anywhere other than an individual product.
 
 **Example of data captured:**
@@ -50,7 +53,6 @@ A user clicks on the product grid view anywhere other than an individual product
 ```
 
 ### Cart Toggle Click
-
 A user clicks on the cart icon which toggles the drawer open/closed.
 
 **Example of data captured:**
@@ -67,7 +69,6 @@ A user clicks on the cart icon which toggles the drawer open/closed.
 ```
 
 ### Cart Item Click
-
 A user clicks on an item in their cart.
 
 **Example of data captured:**
@@ -84,7 +85,6 @@ A user clicks on an item in their cart.
 ```
 
 ### Checkout Click
-
 A user clicks on the checkout button in their cart.
 
 **Example of data captured:**
@@ -101,7 +101,6 @@ A user clicks on the checkout button in their cart.
 ```
 
 ### Navigation Tag Click
-
 A user clicks on a tag in the navigation bar.
 
 **Example of data captured:**
@@ -118,7 +117,6 @@ A user clicks on a tag in the navigation bar.
 ```
 
 ### Product Tag Click
-
 A user clicks on a tag from the product detail view.
 
 **Example of data captured:**
@@ -135,7 +133,6 @@ A user clicks on a tag from the product detail view.
 ```
 
 ### About Page Link Click
-
 A user clicks on the footer link to the About page.
 
 **Example of data captured:**
@@ -152,7 +149,6 @@ A user clicks on the footer link to the About page.
 ```
 
 ### Team Page Link Click
-
 A user clicks on the footer link to the Team page.
 
 **Example of data captured:**
@@ -169,7 +165,6 @@ A user clicks on the footer link to the Team page.
 ```
 
 ### Terms Page Link Click
-
 A user clicks on the footer link to the Terms page.
 
 **Example of data captured:**
@@ -186,7 +181,6 @@ A user clicks on the footer link to the Terms page.
 ```
 
 ### Privacy Page Link Click
-
 A user clicks on the footer link to the Privacy page.
 
 **Example of data captured:**
@@ -203,7 +197,6 @@ A user clicks on the footer link to the Privacy page.
 ```
 
 ### FAQs Page Link Click
-
 A user clicks on the footer link to the FAQs page.
 
 **Example of data captured:**
@@ -220,7 +213,6 @@ A user clicks on the footer link to the FAQs page.
 ```
 
 ### Meteor External Link Click
-
 A user clicks on the "Made with Meteor" footer link.
 
 **Example of data captured:**
@@ -237,7 +229,6 @@ A user clicks on the "Made with Meteor" footer link.
 ```
 
 ### Twitter External Link Click
-
 A user clicks on the Twitter icon footer link.
 
 **Example of data captured:**
@@ -254,7 +245,6 @@ A user clicks on the Twitter icon footer link.
 ```
 
 ### Facebook External Link Click
-
 A user clicks on the Facebook icon footer link.
 
 **Example of data captured:**
@@ -271,7 +261,6 @@ A user clicks on the Facebook icon footer link.
 ```
 
 ### Google+ External Link Click
-
 A user clicks on the Google+ icon footer link.
 
 **Example of data captured:**
@@ -288,7 +277,6 @@ A user clicks on the Google+ icon footer link.
 ```
 
 ### Pinterest External Link Click
-
 A user clicks on the Pinterest icon footer link.
 
 **Example of data captured:**

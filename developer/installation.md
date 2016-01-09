@@ -16,40 +16,40 @@ When using the `master` branch for with development packages and versions of pub
 
 See the [package development documentation](developer/packages/packages.md) for details on working with the `development` branch, and using local package dependencies. You can clone or create new packages in `reaction/packages` for local package development.
 
-### reaction run
+## reaction run
 To start Reaction, run the `reaction` command
 
 ```
-reaction
+./reaction
 ```
 
-This command runs a script that executes `meteor`. You can use any [Meteor command line option](http://docs.meteor.com/#/full/meteorhelp). ![](https://raw.github.com/reactioncommerce/reaction/development/docs/assets/guide-installation-default-user.png)
+This command runs a script that executes `meteor`. You can use any [Meteor command line option](http://docs.meteor.com/#/full/meteorhelp). ![](../assets/guide-installation-default-user.png)
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
 
 Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running (sample data same as on demo site)
 
-### reaction reset
+## reaction reset
 To reset the Reaction database, and optionally clear development packages. This will give you a fresh test dataset from `reactioncommerce:reaction-sample-data`.
 
 ```
-reaction reset
+./reaction reset
 ```
 
 See the [package development documentation](developer/packages/packages.md)  and the [settings and fixture data documentation](developer/architecture/fixtures.md) for detailed instructions on modifying initial fixture data.
 
-### reaction pull
+## reaction pull
 
 ```bash
-reaction pull
+./reaction pull
 ```
 
 You can just use `git pull`, but `reaction pull` will run a script that pulls all local packages as well as Reaction. It's the easiest way to make sure you're working with the complete developer package set.
 
 ```bash
 cd reaction
-reaction pull
-reaction
+./reaction pull
+./reaction
 ```
 
 You can also use `meteor upgrade` to upgrade to the latest Atmosphere published packages.

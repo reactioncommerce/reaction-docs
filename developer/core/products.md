@@ -1,6 +1,6 @@
 # Products
 ## Product Methods
-All product related server methods can be found in _/reaction-core/server/methods/products/methods.coffee_
+Product methods can be found in [reaction-core/server/methods/products/methods.js](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/methods/products.js)
 
 ### products/createProduct
 The createProduct method creates a new product with an empty variant. All products have at least one variant with pricing and details. This method can only be triggered by users with an admin role.

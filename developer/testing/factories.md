@@ -1,5 +1,4 @@
-## Factories
-
+# Factories
 The [reaction-factories](https://github.com/reactioncommerce/reaction-factories) package supplies `Factory` and `faker` with additional methods for testing Reaction packages.
 
 ## Factory

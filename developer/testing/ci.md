@@ -1,14 +1,18 @@
-# Continuous Integration
-When a pull requests to the Reaction repo is made, there are four acceptance steps that should be passed.
+# CI Builds
+When a Pull Request is made to the Reaction repo, there are four acceptance steps that should pass before we merge into the `development` branch.
 
-## Circle CI
-Automated CI tests, with Docker images pushed after a successful test build.
+When successful, Docker images are also pushed to [Docker Hub](https://hub.docker.com/u/reactioncommerce/).
 
-## Code Climate
-Automated review of `eslint` and [style guide](/styleguide.md) adherance.
+## Continuous Integration
+[Circle CI](https://circleci.com/gh/reactioncommerce/reaction) runs our Velocity tests, with Docker images pushed after a successful test build.
+
+## Lint Review
+Automated duplication, security, style review using Code Climate.
+
+Follows project `eslint` and [style guide](/styleguide.md) guide.
 
 ## Code Review
 At least two core team members or collaborators will review Pull requests.
 
 ## CLA
-Contributor License Agreement acceptance for new Pull Requests.
+Contributor License Agreement acceptance for new collaborators.

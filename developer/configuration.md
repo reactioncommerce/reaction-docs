@@ -1,5 +1,4 @@
 # Configuration
-
 ## Meteor Settings
 Copy the optional `settings/dev.settings.json` to `<your-settings>.json` and run:
 
@@ -42,9 +41,7 @@ Meteor.startup(function () {
 ```
 
 ### reaction.json
-
 As a default, Reaction uses `private/data/reaction.json` for loading custom Reaction configuration settings.
-
 
 ## Environment variables
 You can also use environment variables for settings, useful for headless and automated vm configuration.
@@ -65,7 +62,7 @@ _Note: Environment variables will override variables set in settings.json_
 
 **ROOT_URL**
 
-_Export `ROOT_URL` and `packages/reaction-core/fixtures.coffee` will update the domain in the `shops` collection to match the domain from `ROOT_URL`._ This lets you use alternate domains, or enforce SSL on a fresh installation.  An empty ROOT_URL will just default to _localhost_.
+_Export `ROOT_URL` and [packages/reaction-core/registry.js](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/registry.js) will update the domain in the `shops` collection to match the domain from `ROOT_URL`._ This lets you use alternate domains, or enforce SSL on a fresh installation.  An empty ROOT_URL will just default to _localhost_.
 
 **MAIL_URL** To send email you should configure the administrative SMTP email server. [env MAIL_URL variable](https://docs.meteor.com/#email_send)
 
@@ -73,7 +70,7 @@ _Note: This is not required, but password reset, and a few other items that use 
 
 **isDebug** Sets debugging levels. Accepts `true`,`false` or logging level.
 
-See: [conventions#logging](https://github.com/reactioncommerce/reaction/blob/development/docs/developer/conventions.md#logging).
+See: [conventions#logging](developer/architecture/logging/md).
 
 **These are the only `Reaction specific` variables used from settings.json.**
 
@@ -178,4 +175,3 @@ Example _private/settings/reaction.json_
   }]
 ]
 ```
-

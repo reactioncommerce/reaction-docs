@@ -1,14 +1,7 @@
 # Hooks
+The method hooks utilized in ReactionCore are based on [Workpop/meteor-method-hooks ](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
 
-The method hooks utilized in ReactionCore are based on [Workpop/meteor-method-hooks
-](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
-
-Much of this documentation is forked from or based on [Workpop/meteor-method-hooks
-](https://github.com/Workpop/meteor-method-hooks) docs.
-
-ReactionCore method hooks allow you to interact with a ReactionCore method **before** and **after** the method is called.
-You can pass either a single method name and hook function or pass a dictionary of `Object.<string, hook>` like you were setting up
-original Meteor methods.
+ReactionCore method hooks allow you to interact with a ReactionCore method **before** and **after** the method is called. You can pass either a single method name and hook function or pass a dictionary of `Object.<string, hook>` like you were setting up original Meteor methods.
 
 ReactionCore order hooks are called in the following order:
 
@@ -16,16 +9,14 @@ ReactionCore order hooks are called in the following order:
 
 2) The original method body
 
-3) **After** hooks `after` and `afterMethods` 
-*note these hooks occur regardless of error but you can catch errors within your hook function*
+3) **After** hooks `after` and `afterMethods` _note these hooks occur regardless of error but you can catch errors within your hook function_
 
 4) Callbacks, if any.
 
-### Components of the Reaction Hook
-
+## Components of the Reaction Hook
 There are four properties that are accessible within the ReactionCore method hooks options parameter:
 
-1) `result` - the result of the method you called *note in before hooks, this will be undefined*
+1) `result` - the result of the method you called _note in before hooks, this will be undefined_
 
 2) `error` - if the method executed returned an error, else will be undefined.
 
@@ -33,9 +24,8 @@ There are four properties that are accessible within the ReactionCore method hoo
 
 4) `hooksProcessed` - A counter of how many times the method has been modified.
 
-### Example
-
-#### Single Method Hook Example:
+## Example
+### Single Method Hook Example:
 This example hooks into the `orders/orderCompleted` method which takes one parameter `order` which is an Order object
 
 ```javascript
@@ -61,7 +51,7 @@ This example hooks into the `orders/orderCompleted` method which takes one param
   ReactionCore.MethodHooks.after('orders/orderCompleted', function(options){
 
     // after function here
-    
+
     // options.arguments is an array that carries all params on the original method.
     // For example with `orders/orderCompleted` the order param is the first (and only) param.
     var order = options.arguments[0];
@@ -70,18 +60,18 @@ This example hooks into the `orders/orderCompleted` method which takes one param
     console.log('Error:', options.error); // original method Error or `undefined` if successful
     console.log('arguments[0]:', order); // first param from original method (order object in this case)
     console.log('hooksProcessed:', options.hooksProcessed); // Tracker that looks at amount times result was modified previously
-    
+
     // To be safe, return the options.result in an after hook.
     return options.result;
   };
 
-/* 
+/*
 // CONSOLE
 */
 Results: 1
 Error: undefined
 arguments[0]: {_id: 'a123456ABC', etc: {}}}
-hooksProcessed: 0 
+hooksProcessed: 0
 
 // You can also pass a dictionary of Object.<String, Hook> like typical Meteor.methods.
 // The two functions available are `ReactionCore.MethodHooks.beforeMethods` and `ReactionCore.MethodHooks.afterMethods`.
@@ -94,12 +84,12 @@ ReactionCore.MethodHooks.afterMethods({
     if (options.error) {
       return;
     }
-    
+
     const cartId = options.arguments[0];
     const productId = options.arguments[1];
     const variantData = options.arguments[2];
     const quantity = options.arguments[3];
-    
+
     // Do something after something is addedToCart
 
     // You should return the result at the end of an after. You will receive a warning if a result was expected.

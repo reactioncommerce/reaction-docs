@@ -1,4 +1,5 @@
 # Collections
+Collections are implemented in the [reactioncommerce:reaction-collections](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-collections) package.
 
 [AutoForm, collection2, simple-schema](https://github.com/aldeed/meteor-autoform) packages provide functionality for defining forms, collections and schemas.
 

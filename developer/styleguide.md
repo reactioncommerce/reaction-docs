@@ -1,7 +1,12 @@
 # Style Guide
-_A work in progress, but this is good guide to start._
+Review [Meteor Style Guide](https://github.com/meteor/meteor/wiki/Meteor-Style-Guide) and [Meteor Guide](http://guide.meteor.com/) for general Meteor guidelines on format and style of contributions.
 
-Read [Meteor Style Guide](https://github.com/meteor/meteor/wiki/Meteor-Style-Guide) for ideas on format and style of contributions.
+>  _.eslintrc_ is provided to enforce Reaction specific style rules.
+
+Reaction specific style rules include:
+- Double quotes
+- Spaced functions
+- 160 character line length
 
 ## Linters
 **Installation & Usage**
