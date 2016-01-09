@@ -1,6 +1,5 @@
-# Reaction cycle
-
-Package authors should choose a support path for their packages, and use the `cycle` property in the package registry to indicate the kind of support path a package uses.
+# Package cycle
+Package authors should choose a support path for their packages, and use the `cycle` property in the **Reaction package registry** to indicate the kind of support path a package uses.
 
 **Core**
 
@@ -34,4 +33,4 @@ We'll do limited testing on these packages, so they will only be made available 
 
 **Licensing**
 
-The Reaction application is GPL v3 licensed. Package licensing may be GPL v3 compatible licenses such as GPL v3, MIT, APACHE v2 if you want to distribute with the Reaction application. 
+The Reaction application is GPL v3 licensed. Package licensing may be GPL v3 compatible licenses such as GPL v3, MIT, APACHE v2 if you want to distribute with the Reaction application.

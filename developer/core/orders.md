@@ -30,19 +30,19 @@ Called when any Order event occurs. The first occurance is when a user clicks on
     }
 ```
 
-## orders/shipmentTracking
+### orders/shipmentTracking
 Called when a tracking number has been entered and the **Add** button was clicked. This also triggers `addTracking` and `updateHistory`. This method verifies the order and tracking, then calls addTracking and updateHistory and updates the workflow/pushOrderWorkflow status.
 
-## orders/addTracking
+### orders/addTracking
 Called when a tracking number has been entered and the **Add** button has been clicked.  This updates `ReactionCore.Collections.Orders.shipping.shipmentMethod.tracking`
 
-## orders/documentPrepare
+### orders/documentPrepare
 Called when the **Download PDF** button is clicked or when the Adjustment _Approved_ button is clicked. This also calls updateHistory and updated that shipment is being prepared.
 
-## orders/processPayment
+### orders/processPayment
 This method calls the `processPayments` and also updates the workflow status.
 
-## orders/processPayments
+### orders/processPayments
 Determines the payment method and hits the payment API to capture the payment. If successful it updates `ReactionCore.Collections.Orders.payment.paymentMethod.transactionId` else it throws an error :
 
 ```javascript
@@ -65,16 +65,16 @@ if (result.capture) {
 }
 ```
 
-## orders/shipmentShipped
+### orders/shipmentShipped
 Called when payment is completed and updates the work flow to the coreShipmentShipped status.
 
-## orders/orderCompleted
+### orders/orderCompleted
 Called when the order has been completed. This updates the workflow status and also updated the order with the OrderCompleted Status.
 
-## orders/shipmentPacking
+### orders/shipmentPacking
 Updates the workflow status that the shipment is being packed.
 
-## orders/updateDocument
+### orders/updateDocument
 Updates the order with a reference to the specific doc created for shipping and label.
 
 ```javascript
@@ -88,7 +88,7 @@ ReactionCore.Collections.Orders.update(orderId, {
     });
 ```
 
-## orders/addItemToShipment
+### orders/addItemToShipment
 This adds an item to the Orders.shipping.items array.
 
 ```javascript
@@ -102,10 +102,10 @@ ReactionCore.Collections.Orders.update({
     });
 ```
 
-## orders/updateShipmentItem
+### orders/updateShipmentItem
 This updates the items that are being associatated with a specific shipping id.
 
-## orders/removeShipment
+### orders/removeShipment
 This method removed the shipment information from an order. It sets shipment object to null.
 
 ```javascript
@@ -116,8 +116,8 @@ ReactionCore.Collections.Orders.update(orderId, {
     });
 ```
 
-## orders/capturePayments
+### orders/capturePayments
 Cycles through each Orders paymentMethod and attempts to capture the payment. If successful it updates the Paymentmethod status to completed. Else it throws a server warning that payment was not captured.
 
-## orders/updateShipmentTracking
+### orders/updateShipmentTracking
 updated the shipment tracking information.

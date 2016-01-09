@@ -67,7 +67,7 @@
 - [i18n](developer/architecture/i18n.md)
 - [Workflow](developer/architecture/workflow.md)
 - [Security](developer/architecture/security.md)
-- [SEO](developer/architecture/seo.md)
+- [SEO](developer/architecture/metadata.md)
 
 
 #### Core

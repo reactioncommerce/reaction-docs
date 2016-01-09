@@ -1,18 +1,13 @@
-# Reaction Import
-This provides some general importing infrastructure, to be used with more specific integration packages.
-
-## Contributors
-Thanks to Tom De Caluwé for his work on [Reaction Import](https://github.com/tdecaluwe/reaction-import)
+# Import
+[`ReactionImport`](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/import.js) provides some general importing infrastructure, to be used with more specific integration packages.
 
 ## Contents
 - [Architecture](#architecture)
-  - [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
-  - [Choosing a suitable key](#choosing-a-suitable-key)
-  - [Importing from files](#importing-from-files)
-  - [Automatic collection detection](#automatic-collection-detection)
-
+- [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
+- [Choosing a suitable key](#choosing-a-suitable-key)
+- [Importing from files](#importing-from-files)
+- [Automatic collection detection](#automatic-collection-detection)
 - [Image uploader](#image-uploader)
-
 - [Reference](#reference)
   - [`ReactionImport.flush`](#flush)
   - [`ReactionImport.fixture`](#fixture)
@@ -24,6 +19,9 @@ Thanks to Tom De Caluwé for his work on [Reaction Import](https://github.com/td
   - [`ReactionImport.shop`](#shop)
   - [`ReactionImport.tag`](#tag)
   - [`ReactionImport.product`](#product)
+
+## Contributors
+Thanks to [@tdecaluwe](https://github.com/tdecaluwe/) for the contributions in [Reaction Import](https://github.com/tdecaluwe/reaction-import).
 
 ## Architecture
 The package only exports one global variable, `ReactionImport`, and  is structured around an import buffer. This buffer is used to support fast bulk updates and inserts by sending all the queries at once to the database server. The import buffer can be filled with a number of webshop entities. Currently supported are:
@@ -44,7 +42,6 @@ The key is an object used to identify the product in the database (and is passed
 When importing entities which need to be referenced by other entities it is recommended to provide a custom unique `_id` value as the `key`, thus avoiding an extra query to obtain this `_id`.
 
 ### Batch inserts and fixture data
-
 By default documents are inserted with the MongoDB `$set` modifier. This however poses a problem when importing data which only needs to be imported if it's not already present in the database, ignoring changes made to the document after it was imported. To accomodate such situations, `ReactionImport` provides the `fixture()` modifier method. This method modifies `ReactionImport` to use the `$setOnInsert` modifier when sending documents to the database. It can be used as follows:
 
 ```javascript
@@ -79,7 +76,6 @@ Send the contents of the import buffer to the database. Accepts an optional para
 Tell `ReactionImport` to use the `$setOnInsert` modifier when sending documents to MongoDB.
 
 ### `ReactionImport.object(collection, key, value)` <a name="object"></a>
-
 Import a document with an associated key into a designated collection. Keep in mind that the other import methods specific to a certain collection usually only wrap this method, but can potentially extend it with extra logic. As an example, `ReactionImport.shop()` also loads translations associated with a given shop.
 
 ### `ReactionImport.process(json, key, callback)` <a name="process"></a>
@@ -88,15 +84,12 @@ Processes a json array with a given callback. The `key` argument should be used 
 The callback should accept two parameters: a key and the data to be imported. Usually this will be one of the `ReactionImport` entity import functions, although a custom callback can be used as well. A custom callback can, for example, be used to pass the parent key when importing products/variants.
 
 ### `ReactionImport.identify(value)` <a name="identify"></a>
-
 Tries to associate a MongoDB collection with a certain document. Throws an error if it fails to do so or if results are ambiguous.
 
 ### `ReactionImport.load(key, value)` <a name="load"></a>
-
 Try to import any document with an associated key, using `ReactionImport.identify()` to determine the collection.
 
 ### `ReactionImport.indication(field, collection, probability)` <a name="indication"></a>
-
 Allow packages to extend the auto collection detection facility of `ReactionImport`. It is used to add a certain field as an indication that the document belongs to a certain collection. The probability should be a number between zero and one, where one is the strongest possible indication.
 
 ### `ReactionImport.tag(key, value)` <a name="tag"></a>

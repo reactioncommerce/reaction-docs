@@ -18,10 +18,50 @@ Most Reaction payment packages can support these transaction types.
 
 > This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 
+## Hooks
+Payments trigger order completion by using a [`method hook` in reaction-core. ](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/methods/hooks/cart.js)
+
+```js
+// Meteor.after to call after
+ReactionCore.MethodHooks.after("cart/submitPayment", function (options) {
+  // if cart/submit had an error we won't copy cart to Order
+  // and we'll throw an error.
+  ReactionCore.Log.debug("MethodHooks after cart/submitPayment", options);
+  if (options.error === undefined) {
+    let cart = ReactionCore.Collections.Cart.findOne({
+      userId: Meteor.userId()
+    });
+    // update workflow
+    Meteor.call("workflow/pushCartWorkflow", "coreCartWorkflow",
+      "paymentSubmitted");
+
+    if (cart) {
+      if (cart.items && cart.billing[0].paymentMethod) {
+        Meteor.call("cart/copyCartToOrder", cart._id);
+      } else {
+        throw new Meteor.Error(
+          "An error occurred verifing payment method. Failed to save order."
+        );
+      }
+    }
+  }
+  return options.result;
+});
+```
+
 ## Methods
+### cart/submitPayment (server, client)
+Saves a submitted payment to cart, triggers workflow and adds "paymentSubmitted" to cart workflow
+
+_Note: this method also has a client stub, that forwards to cartCompleted._
+
+```js
+Meteor.call("cart/submitPayment", paymentMethod);
+```
+
 ### payments/paymentMethod (server)
 Adds payment to an order.
 
-```
+```js
 Meteor.call("payments/paymentMethod", cartId, paymentMethod);
 ```
