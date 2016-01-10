@@ -1,10 +1,9 @@
 # Logging
-## Bunyan
-[Bunyan](https://github.com/trentm/node-bunyan) provides a JSON friendly log handler in Reaction Core.
+Reaction uses the [Bunyan](https://github.com/trentm/node-bunyan) logging library to provide a Stream capable, JSON friendly log handler in Reaction Core.
 
 The ongoworks:bunyan package exports `loggers`, and is instantiated by the `ReactionCore.Log` global that can be used anywhere in Reaction code.
 
-To enable logging set/add `isDebug: true` in `settings.json`.  Value can be any valid `bunyan level` in settings.json, or true/false.
+To configure logging you can modify `isDebug: true` in `settings.json`.  Value can be any valid `Bunyan level` in settings.json, or true/false.
 
 Setting a level of _debug_  `isDebug:  "debug"` or higher will display verbose logs as JSON. The JSON format is also the storage / display format for production.
 
@@ -24,9 +23,21 @@ The log levels in bunyan are as follows. The level descriptions are best practic
 Suggestions: Use "debug" sparingly. Information that will be useful to debug errors post mortem should usually be included in "info" messages if it's generally relevant or else with the corresponding "error" event. Don't rely on spewing mostly irrelevant debug messages all the time and sifting through them when an error occurs.
 ```
 
-Example:
+Example logging message:
 
+```js
+ReactionCore.Log.info("Something info, most likely for development", result);
+ReactionCore.Log.error("Something error want to investigate", error);
 ```
 
-ReactionCore.Log.info "Something we want to see during development"
+Example creation of new server logging for the [reaction-inventory](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-inventory/server/logger.js) package:
+
+```js
+// set logging level
+let formatOut = logger.format({
+  outputMode: "short",
+  levelInString: false
+});
+// define package Log
+ReactionInventory.Log = logger.bunyan.createLogger({name: "inventory", stream: formatOut});
 ```

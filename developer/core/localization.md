@@ -27,6 +27,8 @@ To add a currency you can add an entry in `reaction-sample-data/private/data/Sho
 ...
 ```
 
+_Please note that the currency must be supported by Open Exchange Rates service to get automatic conversion for a user's locale._
+
 ## locateAddress
 The locateAddress method determines a user's street address based on latitude and longitude coordinates or by ip address.
 
