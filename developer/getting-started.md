@@ -41,5 +41,3 @@ For development tasks/issues please use the [Reaction project issues of GItHub](
 
 ## Other Resources
 [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-([http://guide.meteor.com/build-tool.html#es2015](http://guide.meteor.com/build-tool.html#es2015))
