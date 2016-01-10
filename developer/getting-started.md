@@ -1,18 +1,45 @@
 # Getting Started with Reaction
+Reaction is a modern, open source, real time reactive, event driven commerce platform.
 
-[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Reaction is developed with the Meteor framework. Reaction also liberally uses NPM packages, and tooling.
+- [Meteor](http://guide.meteor.com/)
+- [ES2015+](https://github.com/meteor/meteor/tree/master/packages/ecmascript#supported-es2015-features)
+- [NPM + Browserify](http://guide.meteor.com/build-tool.html#client-npm)
+- [Less](http://guide.meteor.com/build-tool.html#less)
+
+## Packages
+A number of packages are included in the `reaction` local `packages` folder. In this documentation, these local packages are commonly referred to as "Core" packages.
+
+Some of the "Core" packages:
+- reaction-accounts
+- reaction-analytics
+- reaction-analytics-libs
+- reaction-collections
+- reaction-core
+- reaction-core-theme
+- reaction-default-theme
+- reaction-email-templates
+- reaction-sample-data
+- reaction-schemas
+- reaction-social
+- reaction-shipping
+- reaction-ui
+
+These packages are also published to [Atmosphere](https://atmospherejs.com/?q=reaction). Atmosphere is the Meteor package registry, and Reaction installs Meteor package dependencies from Atmosphere. These packages are referenced and linked throughout the documentation. To view a complete list, look at `.meteor/versions` and `.meteor/packages` in the Reaction root folder.
+
+You can create or [use community packages](http://guide.meteor.com/build-tool.html#using-packages) to add customized functionality to Reaction.
 
 ## Roadmap
 For a high level review our roadmap, take a look at our features page [Reaction Vision](https://reactioncommerce.com/features)
 
 For grouping of development channels by feature see [GitHub project milestones](https://github.com/reactioncommerce/reaction/milestones)
 
-And finally for the kanban-esque, hardcore, real time progress view, take a look our [project board](https://waffle.io/reactioncommerce/reaction)
+Perhaps the best overall view, is our [Waffle board](https://waffle.io/reactioncommerce/reaction). This project board includes additional project progress for Reaction Commerce beyond just the Core.
 
 ## Issues
-For development tasks/issues please use the [Reaction project issues of GItHub](https://github.com/reactioncommerce/reaction/issues?state=open). We're keeping this as the central issue tracking for all [reactioncommerce:*](https://github.com/reactioncommerce/) packages. 
+For development tasks/issues please use the [Reaction project issues of GItHub](https://github.com/reactioncommerce/reaction/issues?state=open). We're keeping this as the central issue tracking for all [reactioncommerce:*](https://github.com/reactioncommerce/) packages.
 
-You can also view issues on our [project board](https://waffle.io/reactioncommerce/reaction).
+## Other Resources
+[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-
-
+([http://guide.meteor.com/build-tool.html#es2015](http://guide.meteor.com/build-tool.html#es2015))

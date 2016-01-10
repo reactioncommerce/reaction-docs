@@ -7,4 +7,4 @@ To access the apps and packages available in your shop, login as an admin and na
 
 You can also see these and other Reaction packages at: [Atmospherejs.com](https://atmospherejs.com/?q=reaction)
 
-Developers can also create both private and public packages. [See developer documentation.](https://github.com/reactioncommerce/reaction/blob/master/docs/developer/packages.md)
+Developers can also create both private and public packages. [See developer documentation.](/developer/packages.md)

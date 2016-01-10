@@ -1,21 +1,21 @@
 # Frequently Asked Questions
 ## Is Reaction production ready?
-We're currently in our Beta release. Our [Features page](https://reactioncommerce.com/features) outlines what we have in store for our Beta and future releases. Production readiness will depend on your individual use case and requirements. 
+We're currently in our Beta release. Our [Features page](https://reactioncommerce.com/features) outlines what we have in store for our Beta and future releases. Production readiness will depend on your individual use case and requirements.
 
 ## What's your roadmap for Reaction?
 Our [Features page](https://reactioncommerce.com/features) outlines our roadmap and plans for Reaction. And here's our [project board](https://waffle.io/reactioncommerce/reaction).
 
 ## Do you offer hosted shops?
-Yes, we will offer hosted shops with the Beta release of our Platform as a Service (PaaS) in late 2015. Our Paas will give anyone the ability to launch Reaction shops. This will be an Early Access Beta Release of our PaaS solution for launching clusters of Docker-ized Reaction shops on a custom solution that we're developing that supports custom SSL certificates and domain names. Our vision is that you’ll be able to customize and extend, and then deploy your Reaction shops directly and conveniently on our platform.
+Yes, we will offer hosted shops with the Beta release of our Platform as a Service (PaaS) in early 2016. Our Paas will give anyone the ability to launch Reaction shops. This will be an Early Access Beta Release of our PaaS solution for launching clusters of Docker-ized Reaction shops on a custom solution that we're developing that supports custom SSL certificates and domain names. Our vision is that you'll be able to customize and extend, and then deploy your Reaction shops directly and conveniently on our platform.
 
 ## Is it possible for me to host a Reaction shop anywhere I want?
 Yes. You can host a Reaction shop on any host/virtual machine container that supports Meteor/Node.js and MongoDB. Our code is fully open source on GitHub at [github.com/reactioncommerce/reaction](https://github.com/reactioncommerce/reaction).
 
 ## Do you support multiple languages?
-Yes. We have [internationalization support](https://github.com/reactioncommerce/reaction/blob/master/docs/developer/i18n.md) for numerous languages, and we support currency conversion and localized currency formats.
+Yes. We have [internationalization support](/developer/architecture/i18n.md) for numerous languages, and we support currency conversion and localized currency formats.
 
 ## What is the pricing/licensing model?
-Reaction is currently free, and there will always be a free, open source version available. Eventually, we will offer premium plans with tiered pricing structures on the reactioncommerce.com platform. Our code is licensed under the GPL v3 license. The Terms & Conditions for shops hosted on our reactioncommerce.com platform can be found at [//reactioncommerce.com/legal](https://reactioncommerce.com/legal).
+Reaction is currently free, and there will always be a free, open source version available. Eventually, we will offer premium plans with tiered pricing structures on the reactioncommerce.com platform. Our code is licensed under the GPL v3 license. The Terms & Conditions for shops hosted on our reactioncommerce.com platform can be found at [https://reactioncommerce.com/legal](https://reactioncommerce.com/legal).
 
 ## Is MongoDB/NoSQL best suited for ecommerce?
 We think so! We believe that the common SQL schema for legacy ecommerce platforms isn't just unnecessary; it's overkill. By rethinking the way the database is architected, there are numerous benefits of Mongo/NoSQL -- from speed to simplified code.
