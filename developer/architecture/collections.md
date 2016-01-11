@@ -44,8 +44,6 @@ Collections and Schemas can be used to create or customize collections, includin
 
 In Reaction, we export the namespaced `ReactionCore.Collections` as a prefix for our collections.
 
-Client access to collections is through [publication]
-
 Some of the [ReactionCore.Collections](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-collections/common/collections/collections.js) are:
 - Accounts
 - AnalyticsEvents

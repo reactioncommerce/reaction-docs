@@ -1,7 +1,7 @@
 # Logging
-Reaction uses the [Bunyan](https://github.com/trentm/node-bunyan) logging library to provide a Stream capable, JSON friendly log handler in Reaction Core.
+Reaction uses the [ongoworks:bunyan-logger](https://github.com/ongoworks/meteor-bunyan) package, which exports `loggers`, which `reactioncommerce:reaction-core` configures and exports as `ReactionCore.Log`.
 
-The ongoworks:bunyan package exports `loggers`, and is instantiated by the `ReactionCore.Log` global that can be used anywhere in Reaction code.
+The [ongoworks:bunyan-logger](https://github.com/ongoworks/meteor-bunyan) package implements the [Bunyan](https://github.com/trentm/node-bunyan) logging library to provide a Stream capable, JSON friendly log handler in Reaction Core.
 
 To configure logging you can modify `isDebug: true` in `settings.json`.  Value can be any valid `Bunyan level` in settings.json, or true/false.
 
