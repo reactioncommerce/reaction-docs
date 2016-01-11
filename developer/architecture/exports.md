@@ -1,29 +1,28 @@
-# Exports
-This is an evolving topic right now.
+# Export
+## Namespaces
+There is a measure of [built in namespacing already provided by Meteor.](http://docs.meteor.com/#/full/namespacing).
 
-Input appreciated.
+Meteor constructs: `Session`, `Meteor.methods`, `Meteor.publish/subscribe`, `Mongo.Collection` are global.
 
-## Globals
-_core/common/packageGlobals.js:_
+`globals` defined in the packages are scoped to the package, unless [exported](http://docs.meteor.com/#/full/pack_export).
+
+## Exports
+`reaction/packages/reaction-core/common/global.js` configures the `ReactionCore` global.
+
+The `reaction-core` package exports `ReactionCore`, on both client and server:
 
 ```javascript
 // exported, global/window scope
 ReactionCore = {};
 ReactionCore.Schemas = {}; // Schemas defined in common/schemas
-ReactionCore.Collections = {}; //Collections defined in common/collections
-ReactionCore.Helpers = {}; //Misc.helpers defined in common/helpers
+ReactionCore.Collections = {}; // Collections defined in common/collections
+ReactionCore.Helpers = {}; // Misc.helpers defined in common/helpers
 ReactionCore.MetaData = {}; // SEO, Metadata object
-ReactionCore.Locale = {}; //i18n translation object
+ReactionCore.Locale = {}; // i18n translation object
 ReactionCore.Log = {}; // Logger instantiation (server)
 ```
 
-> In the future we may implement ReactionCore.methods
+## Meteor 1.3
+> Future Alert: Exporting ReactionCore.methods
 
-_core/common/collections/products.js:_
-
-```javascript
-ReactionCore.Collections.Product = new Mongo.Collection("Product");
-# etc...
-```
-
-The `reaction-core` package exports `ReactionCore`, on both client and server:
+Upcoming Meteor 1.3 will bring support for `import`, `export` and `require`.
