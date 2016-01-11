@@ -1,8 +1,8 @@
 # Routing
+Reaction is currently using [Iron:router](https://github.com/iron-meteor/iron-router) for Reaction Routing.
 
-[Iron:router](https://github.com/iron-meteor/iron-router) currently provides routing in Reaction.
-
-Routes are defined, both in app and packages. Most often found in `common/routers.js`.
+## Iron Router
+Routes are defined, both in app and packages. Most often found in `common/router.js`.
 
 ```
 Router.map ->
@@ -16,7 +16,7 @@ Router.map ->
 
 Use the controller `ShopController` for public/shop routes, and `ShopAdminController` for admin roles.
 
-In addition to defining the route in the `Router.map`, you should add the route and template in the `ReactionCore.registerPackage` to export this route to ReactionCore and add permissions. 
+In addition to defining the route in the `Router.map`, you should add the route and template in the `ReactionCore.registerPackage` to export this route to ReactionCore and add permissions.
 
 [*common/routing.js](https://github.com/reactioncommerce/reaction/blob/master/common/routing.js) can be customized to change layouts.
 
@@ -25,14 +25,14 @@ If you are adding reaction-core to your own meteor application, `iron:router` is
 You can defines routes at the app level. You can also extend the core routing, at the app level.
 
 ```javascript
-var ReactionController;
+let ReactionController;
 
 ReactionController = ShopController.extend({
   layoutTemplate: "layout"
 });
 ```
 
-## Iron Router > Configuration
+### Configuration
 
 ```
 Router.configure({
@@ -50,7 +50,7 @@ Router.configure({
 });
 ```
 
-## Iron Router > Mapping
+### Mapping
 
 ```
 Router.map ->
@@ -219,7 +219,7 @@ Server routes get the bare request, response, and next properties of the Connect
   where: 'server'
 ```
 
-## Iron Router > Hooks
+## Hooks
 For all the hooks below, the second argument can be except -- a list of routes to not apply to, or only -- a limited set of routes to match.
 
 ```
@@ -236,7 +236,7 @@ Router.onAfterAction ->   console.log 'runs reactively before the action.'
 Router.onStop ->   console.log 'runs once when the controller is stopped, like just before a user routes away.'
 ```
 
-## Iron Router > Route Controllers
+## Route Controllers
 AdminController = RouteController.extend
 
 We can define almost all of the same options on our RouteController as we have for our routes.
@@ -263,7 +263,7 @@ Note that `where` is not available on controllers, only in Router.map.
   });
 ```
 
-## Iron Router > Helpers
+### Helpers
 
 ```
 Router.routes['Homepage']                   // get the route by name Router.routes['PostShow'].path({_id: 1})    // return '/posts/1'
@@ -273,8 +273,7 @@ Router.path('Homepage')          // return the path of the defined route as a st
 Router.current().path            // return the current path
 ```
 
-## Iron Router > Extending Existing Routes
-
+### Extending Existing Routes
 At the app level you can define the following:
 
 ```

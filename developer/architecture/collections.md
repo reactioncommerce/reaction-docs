@@ -1,5 +1,5 @@
 # Collections
-Meteor and Reaction store data in `collections`.  Collections are declared with [Mongo.collection](http://docs.meteor.com/#/full/mongo_collection) which provides `find`,`findOne`,`update`,`upsert`, `remove` methods.
+Meteor and Reaction store data in `collections`.  Collections are declared with [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) which provides `find`,`findOne`,`update`,`upsert`, `remove` methods.
 
 Client example [from Meteor docs](http://docs.meteor.com/#/full/update):
 
@@ -34,7 +34,7 @@ Client collection access is restricted through a Meteor [publication/subscriptio
 ## Reaction Collections
 Reaction Core collections are defined in the [reactioncommerce:reaction-collections](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-collections) package.
 
-**reaction-collections** extends [Mongo.collection](http://docs.meteor.com/#/full/mongo_collection) with a framework of Forms, Collections and Schemas, using these dependencies:
+**reaction-collections** extends [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) with a framework of Forms, Collections and Schemas, using these dependencies:
 - [aldeed:AutoForm](https://github.com/aldeed/meteor-autoform)
 - [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
 - [aldeed:simple-schema](https://github.com/aldeed/meteor-simple-schema)
