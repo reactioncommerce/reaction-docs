@@ -27,6 +27,13 @@ If you want to use shell scripts under Windows:
 - bin/reset
 ```
 
+## MongoDB
+[MongoDB](https://www.mongodb.org/) is bundled with the developer environment, you don't need to install it.
+
+When using a production build or a standalone [MongoDB](https://www.mongodb.org/) server, make sure you are using **version 2.6** or better.
+
+You can connect to the local Meteor / MongoDB instance on the `Meteor port + 1`. No credentials required in development.
+
 ## Troubleshooting
 ### Failed to load c++ Json message
 You can ignore this error, but if it annoys you can run
