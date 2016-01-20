@@ -17,9 +17,9 @@ reaction
 
 #### Step 1.1
 
-Open `packages/my-custom-theme/package.js` and change `my:custom-theme-template` to your `my:custom-theme`. Save the file.
+Open `packages/my-custom-theme/package.js` and change `my:custom-theme-template` to `my:custom-theme`.
 
-The top of your `package.js` file should look like the following:
+The top of your `package.js` file should now look like the following:
 ```
 Package.describe({
   // Name of your package
@@ -52,7 +52,7 @@ Disable `reactioncommerce:default-theme` by **adding** a hashmark `#` in front o
 #### Step 2.2
 Enable `my:custom-theme` by **removing** the hashmark `#` in front of the line and save the file.
 
-The resulting `.meteor/packages` file should look like the following:
+The result of your modifications to `.meteor/packages` should look like the following:
 ```
 # Themes
 #reactioncommerce:default-theme
@@ -63,30 +63,32 @@ With `reactioncommerce:default-theme` disabled, and `my:custom-theme` now enable
 
 ### Step 3 (Easy): Customizing your new theme
 
-Open `packages/my-custom-theme/main.less`.
-- This file represents all of the style imports for your theme.
-- Notice that styles can be imported from other packages. In this case from `reactioncommerce:core-theme`;
+Open `packages/my-custom-theme/main.less`
+- This file represents all of the style imports for your theme. This includes css, images, templates, scripts and so on.
+- Notice that styles can be imported from other packages. In this case from `reactioncommerce:core-theme`.
 
-Open `packages/my-custom-theme/package.js`.
+Open `packages/my-custom-theme/package.js`
 - This file is a manifest of all the files your custom theme package uses.
 - Files **MUST** be included here otherwise they will not be available for use in your theme.
 
-Open `packages/my-custom-theme/styles/variables.less`.
-- This file is provided for your convenience.
+Open `packages/my-custom-theme/styles/variables.less`
+- **This file is provided for your convenience.**
 - Add your new variables and variable overrides here.
 - This is the best place to override default `bootstrap` and default `reactioncommerce:core-theme` variables.
 
-Open `packages/my-custom-theme/styles/base.less`.
-- This file is provided for your convenience.
+Open `packages/my-custom-theme/styles/base.less`
+- **This file is provided for your convenience.**
 - Add any styles here.
 
 ### Step 4 (Advanced): Adding more files to your theme
 
-Add a new file in `packages/my-custom-theme/styles`. For example we'll make the file `packages/my-custom-theme/styles/my-new-file.less`.
+Add a new file in `packages/my-custom-theme/styles`.
+
+For this example we'll make the file `packages/my-custom-theme/styles/my-new-file.less`.
 
 #### Step 4.1: Add your file to the package.js
 
-Open `packages/my-custom-theme/main.less`.
+Open `packages/my-custom-theme/package.js`.
 
 And add the following under the section `** ADD YOUR CUSTOM STYLES HERE **`
 ```
@@ -97,7 +99,7 @@ api.addFiles("styles/my-new-file.less", "client", {isImport: true});
 
 Open `packages/my-custom-theme/main.less`.
 
-And add this to the bottom of the file:
+And add the following to the bottom of the file:
 ```
 @import "styles/my-new-file.less";
 ```
@@ -109,13 +111,10 @@ After following the above steps, you should now file for adding more custom styl
 You'll have to change the name in 3 places.
 
 1. Change the folder name from `my-custom-theme` to your new theme name.
-2. Open `packages/my-custom-theme/package.js` and change `my:custom-theme` to your new theme name.
-3. Open `.meteor/packages` and enable replace `my:custom-theme` with your new theme name. Note
+2. Open `packages/<new theme name>/package.js` and change `my:custom-theme` to your new theme name.
+3. Open `.meteor/packages` and replace `my:custom-theme` with your new theme name.
 
-**Note** Meteor package names generally follow this format `namespace:package-name`; where by the `:` separates the namespace, usually your name or organization name, followed by the package name.
-
-Open `.meteor/packages` and look for the following near the bottom of the file.
-
+**NOTE:** Meteor package names generally follow this format `namespace:package-name`; where by the `:` separates the namespace, usually your name or organization name, followed by the package name.
 
 **NOTE**
 There are many ways to go about building a theme, this is a representation of one of those methods. If you've got a good handle on how meteor and its packages work, feel free to use the method you're most comfortable with.
@@ -127,20 +126,20 @@ Support for Right to Left languages
 
 The `rtl` class is added when the shops.languages language direction is 'rtl'. See [packages/core-theme/default/bootstrap.rtl.less](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core-theme/default/bootstrap.rtl.less) file for RTL mixins that you should use instead of standard css properties when editing LESS themes.
 
-For example, instead of
+For example, instead of doing the following:
 
 ```
-  .mystyle {
-    padding-right: 50px;
-  }
+.mystyle {
+  padding-right: 50px;
+}
 ```
 
-You should use the RTL mixin:
+You should use the RTL mixin instead:
 
 ```
-  .mystyle {
-    .padding-right(50px);
-  }
+.mystyle {
+  .padding-right(50px);
+}
 ```
 
 The following RTL mixins are available:
