@@ -18,4 +18,4 @@ Add any number of LESS or CSS files to your theme folder to customize the curren
 
 ## Moving Forward
 
-If you want a more control over the style of your shop, please see the [full theming guide](/developer/theming.md) which will walk you through making a custom theme package.
+If you want a more control over the style of your shop, please see the [full theming guide](/developer/themes/theming.md) which will walk you through making a custom theme package.
