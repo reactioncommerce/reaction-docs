@@ -28,3 +28,12 @@ The [browser-policy](https://atmospherejs.com/meteor/browser-policy) package set
 > The browser-policy family of packages, part of Webapp, lets you set security-related policies that will be enforced by newer browsers. These policies help you prevent and mitigate common attacks like cross-site scripting and clickjacking.
 
 The `browser-policy` package is installed by reaction-core and is not optional.
+
+## force-ssl
+You can force SSL redirection by adding the `force-ssl` package.
+
+```bash
+ meteor add force-ssl
+```
+
+You can use `meteor remove force-ssl` to remove redirection to the `https` protocol. When developing locally, you should not have to remove https as Meteor internally redirects all `localhost` requests to the `http` protocol, but, if you are running on a with some proxy, such as with Vagrant, you may need to remove this package.

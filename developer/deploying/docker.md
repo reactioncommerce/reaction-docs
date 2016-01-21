@@ -1,20 +1,20 @@
 # Docker
-Requires installation of Docker. On OS X or Windows install [boot2docker](https://boot2docker.io/).
+Install the Docker Toolbox from [https://www.docker.com/toolbox](https://www.docker.com/toolbox).
 
 We provide release images built from the master branch. You can pull our latest build from the [Docker Hub](https://hub.docker.com/r/reactioncommerce/reaction/), or from the Reaction directory you can build your own Docker image.
 
-### Dockerfile
+## Dockerfile
 The `Dockerfile` in the project root is an alias, `Dockerfile -> docker/reaction.dev.docker` builds a Docker image of Reaction Commerce that includes a local database and a preconfigured Reaction Commerce implementation .
 
 You can customize the packages that are included in the build by creating a package file in `bin/docker/packages`. The build process will then use your custom package list.
 
-### Build
+## Build
 
 ```bash
 docker build -t reaction .
 ```
 
-### Run
+## Run
 Start a Docker/Reaction container using [`docker run`](https://docs.docker.com/reference/commandline/cli/#run):
 
 ```bash

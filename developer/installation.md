@@ -1,42 +1,52 @@
 # Installation
+To install and run Reaction locally:
 
 ```bash
-curl https://install.meteor.com | /bin/sh
 git clone https://github.com/reactioncommerce/reaction.git
 cd reaction
-./reaction pull
-./reaction
+./reaction install
 ```
 
-The `master` branch will ensure your initial installation is the latest published release, and also should work with current packages from the [Meteor package manager](https://atmospherejs.com/).
+Installs Meteor, Node, NPM if necessary and then starts the most recent `development` branch of Reaction locally.
 
-However, the most recent code is in `development`, which is the recommended default branch if you are a developer.
+The `master` branch contains the latest published releases, and also should work with current packages from the [Meteor package manager](https://atmospherejs.com/).
 
-When using the `master` branch for with development packages and versions of published packages (versus local packages), you may get some package compatibility warnings. You can use `meteor --allow-incompatible-update` to resolve this.
+When using the `master` branch with development packages and versions of published packages (versus local packages), you may get some package compatibility warnings. You can use `--allow-incompatible-update` to resolve this.
 
-See the [package development documentation](developer/packages/packages.md) for details on working with the `development` branch, and using local package dependencies. You can clone or create new packages in `reaction/packages` for local package development.
+See the [package documentation](developer/packages/packages.md) for details on working with the `development` branch, and using local package dependencies. You can clone or create new packages in `reaction/packages` for local package development.
 
-## reaction run
+## reaction install
+
+```
+./reaction install
+```
+
+This command runs the `bin/install` script that installs Meteor, Node, NPM and starts `reaction`. ![](/assets/guide-installation-default-user.png)
+
+_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
+
+Sample data is loaded on a new installation from [`reactioncommerce:reaction-sample-data`](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-sample-data).
+
+Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
+
+## reaction
 To start Reaction, run the `reaction` command
 
 ```
 ./reaction
 ```
 
-This command runs a script that executes `meteor`. You can use any [Meteor command line option](http://docs.meteor.com/#/full/meteorhelp). ![](/assets/guide-installation-default-user.png)
+`/reaction` runs a script that executes `meteor`.
+
+ It appends `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
 
-Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running (sample data same as on demo site)
+Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
 
-## reaction reset
-To reset the Reaction database, and optionally clear development packages. This will give you a fresh test dataset from `reactioncommerce:reaction-sample-data`.
+To terminate `reaction` use `CTRL-c`.
 
-```
-./reaction reset
-```
-
-See the [package development documentation](developer/packages/packages.md)  and the [settings and fixture data documentation](developer/architecture/fixtures.md) for detailed instructions on modifying initial fixture data.
+This command also allows [Meteor command line options](http://docs.meteor.com/#/full/meteorhelp).
 
 ## reaction pull
 
@@ -44,7 +54,7 @@ See the [package development documentation](developer/packages/packages.md)  and
 ./reaction pull
 ```
 
-You can just use `git pull`, but `reaction pull` will run a script that pulls all local packages as well as Reaction. It's the easiest way to make sure you're working with the complete developer package set.
+You can just use `git pull`, but `reaction pull` will run `bin/clone-packages.sh`, a script that pulls all local packages as well as Reaction. It's the easiest way to make sure you're working with the complete developer package set.
 
 ```bash
 cd reaction
@@ -54,4 +64,25 @@ cd reaction
 
 You can also use `meteor upgrade` to upgrade to the latest Atmosphere published packages.
 
-_Note: currently there is not any data schema compatibility tests between releases, which is why we use `meteor reset` in this example. It's not necessary if you want to preserve your data, but there could be compatibility issues with the upgrade._
+## reaction reset
+To reset the Reaction database, and optionally removes bower packages.
+
+This will give you a fresh test dataset from [`reactioncommerce:reaction-sample-data`](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-sample-data).
+
+```
+./reaction reset
+```
+
+See the [package development documentation](/developer/packages/packages.md)  and the [settings and import documentation](/developer/core/import.md) for detailed instructions on modifying initial fixture data.
+
+## meteor
+You can use any [meteor command line](http://docs.meteor.com/#/full/commandline) methods as well.
+
+```sh
+curl https://install.meteor.com/ | sh
+git clone https://github.com/reactioncommerce/reaction.git
+cd reaction
+git pull
+meteor reset
+meteor --raw-logs --settings settings/dev.settings.json
+```

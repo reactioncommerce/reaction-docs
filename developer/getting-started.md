@@ -1,10 +1,11 @@
 # Getting Started with Reaction
-Reaction is a modern, open source, real time reactive, event driven commerce platform.
-
 Reaction is developed with the Meteor framework. Reaction also liberally uses NPM packages, and tooling.
-- [Meteor](http://guide.meteor.com/)
-- [ES2015+](https://github.com/meteor/meteor/tree/master/packages/ecmascript#supported-es2015-features)
-- [NPM + Browserify](http://guide.meteor.com/build-tool.html#client-npm)
+
+Before getting started, here's some resources worth reviewing:
+- [Meteor Guide](http://guide.meteor.com/)
+- [Meteor Docs](http://docs.meteor.com/#/basic/)
+- [ES2015+ features](https://github.com/meteor/meteor/tree/master/packages/ecmascript#supported-es2015-features)
+- [Using NPM + Browserify](http://guide.meteor.com/build-tool.html#client-npm)
 - [Less](http://guide.meteor.com/build-tool.html#less)
 
 ## Packages
@@ -41,5 +42,3 @@ For development tasks/issues please use the [Reaction project issues of GItHub](
 
 ## Other Resources
 [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-([http://guide.meteor.com/build-tool.html#es2015](http://guide.meteor.com/build-tool.html#es2015))
