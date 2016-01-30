@@ -21,7 +21,7 @@ As such, our testing falls into two locations:
    You enable these tests by uncommenting the velocity testing packages in `.meteor/packages`.
 
 ## Integration
-   Tests for the individual reaction packages, are respectively located in `/tests/jasmine/server/integration`. Each package should cover tests  these tests cover UIX testing. These are relatively fragile tests as they are only testing core theme and UIX.
+   Tests for the individual reaction packages, are respectively located in `/tests/jasmine/server/integration`. Each package should cover tests  these tests cover UIX testing.
 
    These tests are run independently from the end to end tests, and can be run from the command line:
 
