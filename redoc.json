@@ -236,6 +236,12 @@
     "docPath": "developer/core/accounts.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "reaction-alerts",
+    "label": "Alerts",
+    "repo": "reaction-docs",
+    "docPath": "developer/core/alerts.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "analytics",
     "label": "Analytics",
     "repo": "reaction-docs",
