@@ -12,7 +12,7 @@ a users perspective (as opposed to unit or integration tests)
 Each test assumes this environment unless otherwise stated
 
 1. Ran `reaction reset`
-2. Products are created from the `product-simple` package
+2. Products are created from the `reaction-sample-data` package
 3. All orders are processed with the Generic Payment method unless otherwise stated
 4. The developer console is open to monitor for client-side errors. A successful
 test implies that no error are shown here
