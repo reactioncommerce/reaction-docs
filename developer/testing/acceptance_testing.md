@@ -16,7 +16,9 @@ Each test assumes this environment unless otherwise stated
 3. All orders are processed with the Generic Payment method unless otherwise stated
 4. The developer console is open to monitor for client-side errors. A successful
 test implies that no error are shown here
-5. We are running with U.S. currency and English unless specified
+5. Server logs are monitored. (the console when running locally) A successful test 
+implies that no errors are shown here.
+6. Tests are performed using U.S. currency and English unless specified
 
 ### 1A - Place an order for a single product as an anonymous user
 
