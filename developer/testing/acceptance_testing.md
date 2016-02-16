@@ -103,6 +103,9 @@ implies that no errors are shown here.
 
 ### 4A - Place an order paid for via Paypal Express
 
+(**Note**: To test this method you will need to create a user (separate from your admin user) for testing. See
+the Paypal documentation for more details)
+
 1. Log in as the admin
 2. Click on "Dashboard" in right hand column
 3. Click on the gear icon
