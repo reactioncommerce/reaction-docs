@@ -71,4 +71,4 @@ From a `Packages.registry` document as defined in the `reaction-checkout` packag
 ```
 ### CoreLayout 
 
-![](assets/developer-registry-layout.png)
+![CoreLayout](../../assets/developer-registry-layout.png)
