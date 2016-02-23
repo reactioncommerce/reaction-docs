@@ -1,5 +1,5 @@
 # Routing
-Reaction implements the routing functionality provided [kadira:flow-router](https://github.com/kadirahq/flow-router) for routing in Reaction.
+Reaction implements the routing functionality provided by [kadira:flow-router](https://github.com/kadirahq/flow-router) for routing in the `reaction-router` package.
 
 `flow-router` is packaged with some utilities for loading routes from the Reaction Registry in the `reactioncommerce:reaction-router` package.
 
