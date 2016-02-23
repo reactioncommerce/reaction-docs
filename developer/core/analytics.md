@@ -11,7 +11,7 @@ Because Meteor restricts packages' build plugin access to assets, we have to wor
 Example use:
 
 ```
-<a href="{{pathForSEO 'product' 'handle'}}" data-event-category="grid" data-event-action="product-click" data-event-label="Grid product click" data-event-value="{{_id}}">
+<a href="{{pathFor 'product' handle=handle}}" data-event-category="grid" data-event-action="product-click" data-event-label="Grid product click" data-event-value="{{_id}}">
 ```
 
 Send event tracking to Google Analytics by adding the following data attribute to any anchor in Reaction:

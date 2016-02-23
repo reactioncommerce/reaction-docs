@@ -1,78 +1,89 @@
-
 # Registry
 The `Reaction Registry` is used to add settings, routes,  and permissions for Reaction specific packages.
 
-A `registry` object can be any combination of properties, with `provides` being the only required element.
+A `registry` object can be any combination of properties, with `provides` and `name` being the only required elements.
 
 _Note: The registry is currently refreshed only on update/deleting the package record in the database, or on delete/addition of the package._
 
 You may filter, or define using any of the optional registry properties:
 
+Example package  registry from ``reaction-product-variants` package.
+
 **package**
 
 ```
 ReactionCore.registerPackage({
-  name: 'core',
+  label: "Products",
+  name: "reaction-product-variant",
+  icon: "fa fa-cubes",
   autoEnable: true,
-  settings: {
-    "public": {
-      allowGuestCheckout: true
-    },
-    mail: {
-      user: "",
-      password: "",
-      host: "localhost",
-      port: "25"
+  registry: [{
+    route: "/product/:handle/:variantId?",
+    name: "product",
+    template: "productDetail",
+    workflow: "coreProductWorkflow"
+  }, {
+    route: "/tag/:slug",
+    name: "tag",
+    template: "products",
+    workflow: "coreProductWorkflow"
+  }, {
+    route: "/products/createProduct",
+    name: "createProduct",
+    label: "Add Product",
+    icon: "fa fa-plus",
+    template: "productDetail",
+    provides: "shortcut",
+    container: "addItem",
+    priority: 1,
+    permissions: [{
+      label: "Create Product",
+      permission: "createProduct"
+    }]
+  }],
+  layout: [{
+    layout: "coreLayout",
+    workflow: "coreProductWorkflow",
+    collection: "Products",
+    theme: "default",
+    enabled: true,
+    structure: {
+      template: "productDetail",
+      layoutHeader: "layoutHeader",
+      layoutFooter: "",
+      notFound: "productNotFound",
+      dashboardHeader: "",
+      dashboardControls: "dashboardControls",
+      dashboardHeaderControls: "",
+      adminControlsFooter: "adminControlsFooter"
     }
-  },
-```
-
-**registry**
+  }]
+});
 
 ```
-  registry: [
-    {
-      route: "dashboard/settings/shop",
-      provides: 'dashboard',
-      label: 'Core',
-      description: 'Reaction Commerce Core',
-      icon: 'fa fa-th',
-      cycle: 1,
-      container: "dashboard",
-      permissions: [
-        {
-          label: "Dashboard",
-          permission: "dashboard"
-        }
-      ]
-    }, {
-      route: "dashboard",
-      provides: 'shortcut',
-      label: 'Dashboard',
-      icon: 'fa fa-th',
-      cycle: 1
-    }, {
-      route: "dashboard",
-      label: 'Dashboard',
-      provides: 'console',
-      permissions: [
-        {
-          label: "Console",
-          permission: "console"
-        }
-      ]
-    }, {
-      route: "dashboard/settings/shop",
-      template: "shopSettings",
-      label: "Shop Settings",
-      provides: 'settings',
-      icon: "fa fa-cog fa-2x fa-fw",
-      container: 'dashboard'
-    }
-  ]
+ Layout definition can be added to registry, as well as layout workflow definitions.
+
+<u>Layouts defined here need to also exist in the Shops.layout collection to enable them.</u>
+
+
+```
+layout: [{
+  layout: "coreLayout",
+  workflow: "coreWorkflow",
+  theme: "default",
+  enabled: true,
+  structure: {
+    template: "products",
+    layoutHeader: "layoutHeader",
+    layoutFooter: "layoutFooter",
+    notFound: "productNotFound",
+    dashboardControls: "dashboardControls",
+    adminControlsFooter: "adminControlsFooter"
+  }
+}]
 ```
 
-**layout**
+A layout template definition that will be used for the `coreLayout` layout in the `coreCartWorkflow` workflows:
 
 ```
 layout: [
@@ -88,26 +99,19 @@ layout: [
 ]
 ```
 
-For more details about layouts, and workflows see: [workflow.md](workflow.md)
+The `container` group alike for presentation _example: used to connect settings on dashboard app card registry object_
 
-**_Special Usage_**
-- `cycle`  1- Core, 2- Community, 3- Public 4 - Local
-- `container` group alike for presentation _example: used to connect settings on dashboard app card registry object_
-
-See: [package-cycles.md](package-cycles.md)
 
 **Dynamic Templates**
 
 The `provides` property is a "placement" value, loading it as `dynamic template` where the other conditions match a request from the `reactionApps` helper.
 
 The following `provides` values are defined in reaction-core:
-- widget
 - paymentMethod
 - shippingMethod
 - settings
 - shortcut
 - dashboard
-- console
 - userAccountDropdown
 
 To add a new `settings` link to the app card:
@@ -115,27 +119,28 @@ To add a new `settings` link to the app card:
 ```
     # settings
     {
-      route: "dashboard/package/settings"
+      route: "/dashboard/package/settings"
       provides: 'settings'
       icon: "fa fa-user-plus"
     }
 ```
 
-To add a new link to the `console navbar`:
+To add a new `userAccountDropdown` link to the Accounts menu:
 
 ```
+    # settings
     {
-      route: "<custom-route>"
-      label: '<My Link>'
-      provides: 'console'
+      route: "/link"
+      provides: 'userAccountDropdown'
+      icon: "fa fa-user-plus"
     }
 ```
 
 From templates, you can create additional dynamic template `provides` using the `reactionApps` helper to load registry objects.
 
 ```html
-  {{#each reactionApps provides="settings" name=name group=group}}
-    <a href="{{pathFor route}}" class="pkg-settings" title="{{i18n 'app.settings'}}">
+  {{#each reactionApps provides="settings" name=packageName group=group}}
+    <a href="{{pathFor name}}" class="pkg-settings" title="{{i18n 'app.settings'}}">
       <i class="{{orElse icon 'fa fa-cog fa-2x fa-fw'}}"></i>
     </a>
   {{/each}}
