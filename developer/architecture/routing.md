@@ -1,8 +1,6 @@
 # Routing
 Reaction implements the routing functionality provided by [kadira:flow-router](https://github.com/kadirahq/flow-router) for routing in the `reaction-router` package.
 
-`flow-router` is packaged with some utilities for loading routes from the Reaction Registry in the `reactioncommerce:reaction-router` package.
-
 The Reaction router object is exported as `ReactionRouter`
 
 ## Helpers
@@ -16,7 +14,7 @@ ReactionRouter.current().path            // return the current path
 
 # Package implementation
 
-To future proof against to the router, the recommended approach is to define an entry in the Package.registry:
+To future proof against changes to the router, the recommended approach is to define an entry in the `Packages.registry`, but you can also use `ReactionRouter.route()` to define routes.
 
 ```
   registry: [{
