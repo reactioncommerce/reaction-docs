@@ -7,7 +7,7 @@ _Note: The registry is currently refreshed only on update/deleting the package r
 
 You may filter, or define using any of the optional registry properties:
 
-Example package  registry from ``reaction-product-variants` package.
+Example package  registry from `` `reaction-product-variants`` package.
 
 **package**
 
@@ -59,12 +59,11 @@ ReactionCore.registerPackage({
     }
   }]
 });
-
 ```
+
  Layout definition can be added to registry, as well as layout workflow definitions.
 
 <u>Layouts defined here need to also exist in the Shops.layout collection to enable them.</u>
-
 
 ```
 layout: [{
@@ -100,7 +99,6 @@ layout: [
 ```
 
 The `container` group alike for presentation _example: used to connect settings on dashboard app card registry object_
-
 
 **Dynamic Templates**
 
@@ -140,7 +138,7 @@ From templates, you can create additional dynamic template `provides` using the 
 
 ```html
   {{#each reactionApps provides="settings" name=packageName group=group}}
-    <a href="{{pathFor name}}" class="pkg-settings" title="{{i18n 'app.settings'}}">
+    <a href="{{pathFor name}}" class="pkg-settings" title="{{i18n 'app.settings' 'Settings'}}">
       <i class="{{orElse icon 'fa fa-cog fa-2x fa-fw'}}"></i>
     </a>
   {{/each}}
