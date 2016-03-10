@@ -16,15 +16,15 @@ var shopId = Factory.get("Shops")
 
 ## faker
 Additional custom faker methods added:
-- faker.reaction.address
-- faker.reaction.metaField
-- faker.reaction.productVariant
-- faker.reaction.cartItem
-- faker.reaction.order
-- faker.reaction.shops
-- faker.reaction.users
-- faker.reaction.products
+- ReactionFaker.address
+- ReactionFaker.metaField
+- ReactionFaker.productVariant
+- ReactionFaker.cartItem
+- ReactionFaker.order
+- ReactionFaker.shops
+- ReactionFaker.users
+- ReactionFaker.products
 
 ```
-shopId = faker.reaction.shops.getShop()._id;
+shopId = ReactionFaker.shops.getShop()._id;
 ```

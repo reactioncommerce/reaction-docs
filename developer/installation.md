@@ -1,4 +1,7 @@
 # Installation
+
+Developers using **Windows** should review the [Windows specific installation requirements for Meteor and Reaction](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
+
 To install and run Reaction locally:
 
 ```bash
