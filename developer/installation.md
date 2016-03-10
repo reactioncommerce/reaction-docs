@@ -36,6 +36,8 @@ To start Reaction, run the `reaction` command
  It appends `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
+![](/assets/guide-installation-default-user.png)
+
 
 Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
 
