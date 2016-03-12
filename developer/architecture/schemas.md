@@ -112,7 +112,7 @@ ReactionCore.Schemas.PaypalPackageConfig = new SimpleSchema([
 ```
 ### Description of some non-obvious fields
 #### Product
-- **ancestors: Array** ancestors array for product is always clean for now
+- **ancestors: Array** ancestors array for product is always empty in current version
 - **price: String** variants' price range, it is needed for denormalizing variants prices to display it in `productGrid`
 - **isLowQuantity: Boolean** indicates when at least one of variants' `inventoryQuantity` is lower than their `lowInventoryWarningThreshold`. Used to display 'Limited Supply' label in UI
 - **isSoldOut: Boolean** indicates when all variants' `inventoryQuantity` is zero
