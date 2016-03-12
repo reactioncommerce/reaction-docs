@@ -6,7 +6,7 @@ Package authors should choose a support path for their packages, and use the `cy
 Core packages are developed, and fully supported by the Reaction Core team.
 
 ```
- cycle: 1 // core
+ priority: 1 // core
 ```
 
 **Foundation**
@@ -19,15 +19,15 @@ Foundation packages should be reliable for use as dependencies by other packages
 
 Any documentation blocks should contain your organization and author information, while if you need to document a maintainer, you can use `Reaction Commerce <maintainer at reactioncommerce.org>`.
 
-In the package registry, packages of this type should be configured cycle:2.
+In the package registry, packages of this type should be configured priority:2.
 
 **Community**
 
-If a package needs to distributed with the base Reaction app installation, we can create a reactioncommerce org **fork** of your package repo, and maintain a supported fork that we publish as a `reactioncommerce:*` package. These packages may be included in the default `.meteor/packages` file for Reaction.  Packages of this type should be configured as `Foundation` ,  `cycle: 2` in the package registry.  Ideally these packages have CI and some testing coverage.
+If a package needs to distributed with the base Reaction app installation, we can create a reactioncommerce org **fork** of your package repo, and maintain a supported fork that we publish as a `reactioncommerce:*` package. These packages may be included in the default `.meteor/packages` file for Reaction.  Packages of this type should be configured as `Foundation` ,  `priority: 2` in the package registry.  Ideally these packages have CI and some testing coverage.
 
-**Local** All other package types should be `cycle:4`.
+**Local** All other package types should be `priority:4`.
 
-You want to manage all org, control and package publishing. You'll be responsible for compatibility updates and ensure that corresponding _Atmosphere and NPM_ package updates are published for every major Reaction release to maintain compatibility.  Packages of this type should be configured as `Public` ,  `cycle: 3` in the package registry.
+You want to manage all org, control and package publishing. You'll be responsible for compatibility updates and ensure that corresponding _Atmosphere and NPM_ package updates are published for every major Reaction release to maintain compatibility.  Packages of this type should be configured as `Public` ,  `priority: 3` in the package registry.
 
 We'll do limited testing on these packages, so they will only be made available as optional packages that have to be manually added.
 
