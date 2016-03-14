@@ -9,7 +9,7 @@ Once on the Dashboard page, you will see a selection of apps/packages available 
 
 ## Core
 Core is where you can view and modify your global shop settings. Click the cog wheel icon on the card to access your Shop Settings screen.
-- General: Edit your shop's Name,  Email, Description and Keywords.
+- General: Edit your shop's Name, Email, Description and Keywords, and upload your logo.
 - Address:  Enter your Company address and default shipping and billing addresses.
 - Mail: Configure email for your shop.
 - Localization: Set the default Timezone, Currency, Locale, and Base Unit of Measure.  

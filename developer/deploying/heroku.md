@@ -12,30 +12,40 @@ Install the Heroku Toolbelt based on your OS [here](https://toolbelt.heroku.com/
 
 Install a copy of reaction commerce.
 
+```bash
 git clone https://github.com/reactioncommerce/reaction.git
-
 git checkout master 
-
-heroku create 
+heroku create
+```
 
 Heroku create generates a random app name, so let's change it.
 
+```bash
 heroku apps:rename (desired-name) --app (current-name) 
+```
 
 Now add a ROOT_URL environment variable 
 
+```bash
 heroku config:set ROOT_URL=http://(desired-name).herokuapp.com
+```
 
 Now Add a Mongolab instance (they have a free tier for heroku) 
 
+```bash
 heroku addons:create mongolab
+```
 
 Now we'll need to add the buildpack that'll let Meteor play nice with Heroku
 
+```bash
 heroku buildpacks:set https://github.com/AdmitHub/meteor-buildpack-horse.git
+```
 
 Finally
 
+```bash
 git push heroku master
+```
 
 Wait... And Done :) 
