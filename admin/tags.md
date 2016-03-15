@@ -32,8 +32,8 @@ To create a new Navigation Tag, click inside the empty “Add tag” box, type i
 
 ![](/assets/admin-top-navigation-add.png "Reaction Commerce navigation bar")
 
-To delete a Navigation Tag, click the grey “x” icon (![](guide-icon-deletetag.png "Reaction Commerce delete tag")).
+To delete a Navigation Tag, click the grey “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
 
-To rearrange Navigation Tags, click on the 3 horizontal lines icon (![](guide-icon-movetag.png "Reaction Commerce move tag")), and drag and drop the tag where you want it. 
+To rearrange Navigation Tags, click on the 3 horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tag")), and drag and drop the tag where you want it. 
 
 When you finish updating your navigation, click anywhere on your shop outside of the top nav bar to close out of the editing interface.
