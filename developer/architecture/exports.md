@@ -17,7 +17,6 @@ ReactionCore = {};
 ReactionCore.Schemas = {}; // Schemas defined in common/schemas
 ReactionCore.Collections = {}; // Collections defined in common/collections
 ReactionCore.Helpers = {}; // Misc.helpers defined in common/helpers
-ReactionCore.MetaData = {}; // SEO, Metadata object
 ReactionCore.Locale = {}; // i18n translation object
 ReactionCore.Log = {}; // Logger instantiation (server)
 ```

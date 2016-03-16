@@ -1,11 +1,9 @@
 # Packages
 Reaction packages are Meteor packages that add a call to `ReactionCore.registerPackage` declaring the package structure to the Reaction registry.
-
 - [Core Packages](#core-packages)
 - [Public packages](#public-packages)
 - [Private packages](#private-packages)
 - [ReactionCore.registerPackage](#reactioncoreregisterpackage)
-
 
 ## Core Packages
 For local core package development you must _git clone_ packages locally, either into `reaction/packages`, or define the `PACKAGE_DIRS` env variable for an alternate location.
@@ -105,10 +103,16 @@ ReactionCore.registerPackage({
     {
       provides: 'dashboard',
       label: 'PayPal',
-      description: 'PayPal Payment for Reaction Commerce',
+      description: 'PayPal Payments',
       icon: 'fa fa-paypal',
-      cycle: '3',
-      container: 'reaction-paypal'
+      priority: 3,
+      container: 'reaction-paypal',
+      permissions: [
+        {
+          label: 'PayPal',
+          permission: 'dashboard/payments'
+        }
+      ]
     }, {
       label: 'PayPal Settings',
       route: 'paypal',
@@ -118,13 +122,6 @@ ReactionCore.registerPackage({
     }, {
       template: 'paypalPaymentForm',
       provides: 'paymentMethod'
-    }
-  ],
-  permissions: [
-    {
-      label: 'PayPal',
-      permission: 'dashboard/payments',
-      group: 'Shop Settings'
     }
   ]
 });

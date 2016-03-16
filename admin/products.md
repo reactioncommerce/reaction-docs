@@ -4,7 +4,7 @@ Products are the individual items that you are selling in your Reaction shop. Wi
 ## Creating Products
 To create a product, first login as an administrator and click on your avatar in the top right corner of your shop. Then click  "Add Product" in the dropdown window that appears.
 
-![](https://raw.github.com/reactioncommerce/reaction/development/docs/assets/guide-products-add-product.png "Reaction Commerce create product")
+![](/assets/guide-products-add-product.png "Reaction Commerce create product")
 
 You will then be taken to a view of your new product where you can simply click into and edit the available fields as well as add variants.
 

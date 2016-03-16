@@ -110,3 +110,187 @@ ReactionCore.Schemas.PaypalPackageConfig = new SimpleSchema([
   }
 ]);
 ```
+
+### Description of some non-obvious fields
+#### Product
+- **ancestors: Array** ancestors array for product is always empty in current version
+- **price: String** variants' price range, it is needed for denormalizing variants prices to display it in `productGrid`
+- **isLowQuantity: Boolean** indicates when at least one of variants' `inventoryQuantity` is lower than their `lowInventoryWarningThreshold`. Used to display 'Limited Supply' label in UI
+- **isSoldOut: Boolean** indicates when all variants' `inventoryQuantity` is zero
+- **isBackorder: Boolean** Indicates when the seller has allowed the sale of product which is not in stock
+
+#### ProductVariant
+- **ancestors: Array** contains ancestors of item. Currently it could be one or two `_ids`
+- **index: Number** position relative to other variants, similarly to index in array. This is needed for moving variants through list (i.e. drag'n'drop)
+- **minOrderQuantity: Number** restricts the minimum quantity which can be ordered. It is used inside cart `quantityProcessing` function
+- **inventoryPolicy: Boolean** if `false` it means items should always be sale-able regardless of inventory (we take backorders). if `true` then we warn when less than threshold, and stop accepting orders at 0
+- **lowInventoryWarningThreshold: Number** the count below which the variant is considered 'limited'
+
+# Multiple Schemas
+Multiple Schema functionality allows us to use different schemas for different documents within the same collection.
+
+To work with multi-schema you need to specify the selector. You can do this by several ways:
+
+If object contains selector (it should because selector should be required)
+
+```js
+MyCollection.simpleSchema(object);
+```
+
+And if object doesn't:
+
+```js
+MyCollection.simpleSchema(object, { selector: { field: 'value' } });
+```
+
+## Product Schema
+In `reaction-collections`, we attach two different schemas to the same `Products` collection.
+
+Multiple Schema Example:
+
+```
+Product = new SimpleSchema({
+  _id: {
+    type: String,
+    optional: true
+  },
+  title: {
+    type: String,
+    defaultValue: ""
+  },
+  type: {
+    label: "Type",
+    type: String,
+    defaultValue: "simple"
+  },
+  description: {
+    type: String,
+    defaultValue: "This is a simple product."
+  }
+});
+
+ProductVariant = new SimpleSchema({
+  _id: {
+    type: String,
+    optional: true
+  },
+  title: {
+    type: String,
+    defaultValue: ""
+  },
+  optionTitle: {
+    label: "Option",
+    type: String,
+    optional: true
+  },
+  type: {
+    label: "Type",
+    type: String,
+    defaultValue: "variant"
+  },
+  price: {
+    label: "Price",
+    type: Number,
+    decimal: true,
+    min: 0,
+    optional: true,
+    defaultValue: 5
+  }
+```
+
+The multiple schemas are attached to the collection with a **selector option**.
+
+```
+ReactionCore.Collections.Products.attachSchema(ReactionCore.Schemas.Product,
+  { selector: { type: "simple" } });
+ReactionCore.Collections.Products.attachSchema(ReactionCore.Schemas.ProductVariant,
+  { selector: { type: "variant" } });
+```
+
+However, now whenever we update a document in the `Products` collection, we need define a schema to use.
+
+Applies a schema where `price` is a **Number**:
+
+```
+ReactionCore.Collections.Products.update("SMr4rhDFnYvFMtDTX", {
+  $set: {
+    price: 10
+  }
+}, {
+  selector: {
+    type: "variant"
+  }
+});
+```
+
+Applies a schema where `price` is an **Object**:
+
+```
+ReactionCore.Collections.Products.update("BCTMZ6HTxFSppJESk", {
+  $set: {
+    price: {
+      range: "1.00 - 12.99",
+      min: 1.00,
+      max: 12.99
+    }
+  }
+}, {
+  selector: {
+    type: "simple"
+  }
+});
+```
+
+It's important to note that collections do not enforce structure, so nothing will stop you from updating a product with a "type:simple", using the "type:variant" schema.
+
+### Updates
+Updates where the _selector is not provided must have the selector in the update statement_.
+
+Provide selector in **query**
+
+```
+ReactionCore.Collections.Products.update(
+  {
+    title: "This is a product", type: "simple"
+  }, {
+    $set: { description: "This is a modified product" }
+  }
+);
+```
+
+Provide selector in **update** statement:
+
+```
+ReactionCore.Collections.Products.update(
+  { title: "Product One" },
+  { $set: {
+    description: "This is a modified product",
+    type: 'simple' // selector in <update>
+  }}
+);
+```
+
+Provide selector as an **option**
+
+```js
+ReactionCore.Collections.Products.update(
+  { title: "Product One", type: "simple" },
+  { $set: {
+    description: 'This is a modified product three.'
+  } },
+  { selector: { type: "simple" } }
+);
+```
+
+### Inserts
+Provide the schema selector in the insert object:
+
+```js
+ReactionCore.Collections.Products.insert({ title: "This is a product", type: "simple"});
+```
+
+Provide the schema selector as **options**
+
+```js
+ReactionCore.Collections.Products.insert({ title: "This is a product" }, { selector: { type: "simple" } });
+```

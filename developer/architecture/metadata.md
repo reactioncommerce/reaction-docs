@@ -1,12 +1,16 @@
 # SEO and Metadata
-Basic meta tag data is inserted by the `ReactionCore.MetaData.update` method.
+Basic meta tag data is inserted by the `ReactionRouter.DocHead.init` method which uses [kadira:dochead](https://github.com/kadirahq/meteor-dochead) package to manipulate `document.head`.
 
-You can add code to add additional meta objects to the `ReactionCore.MetaData.meta` array, and they will be added to the `<head>`.
+Add additional meta objects using `DocHead`, which is added by the `reaction-router` package.
 
-Example: `ReactionCore.MetaData.meta.push 'name': 'og:title', 'content': product.title`
+```
+DocHead.addMeta({
+  name: "keywords",
+  content: shop.keywords.toString()
+});
+```
 
-Site wide descriptions and keywords can be set in Dashboard->Settings.
+Default descriptions and keywords for a Shop can be set in Dashboard Core Settings.
 
-You can customize templates using the `Template.replaces` method if you need a more advanced meta data implementation.
 
 _A note on testing:_ Use `$("meta")` in the client console to view and test changes to the head meta elements. This is the head data that will be rendered in conjunction with the Meteor package `spiderable`.

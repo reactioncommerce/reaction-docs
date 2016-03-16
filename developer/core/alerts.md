@@ -1,6 +1,5 @@
 # Alerts
 
-
 ## Inline Alerts
 ```
 Alerts.inline("Alert message.", "success | info | warning | error", {
