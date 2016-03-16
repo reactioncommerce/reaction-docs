@@ -1,6 +1,8 @@
 # Localization
 ## Currency Localization
-Currency formatting is determined by users locale currency. The currency formatting is stored in the `Shops.currencies` object, and the configuration data is available in the client as `ReactionCore.Locale`
+Currency formatting is determined by users locale currency. The currency formatting is stored in the `Shops.currencies` object, and the configuration data is available in the client as `ReactionCore.Locale`. There are 2 important objects here:
+* `currency` - contains data about user's currency;
+* `shopCurrency` - contains data about base shop currency.
 
 We've created `formatPrice` and `currencySymbol` helpers for using in templates:
 
@@ -28,6 +30,23 @@ To add a currency you can add an entry in `reaction-sample-data/private/data/Sho
 ```
 
 _Please note that the currency must be supported by Open Exchange Rates service to get automatic conversion for a user's locale._
+
+### where
+In some currencies it is more natural to display only one currency symbol in price range (_"100 - 120 руб."_ instead of _"100 руб. - 120 руб."_).
+
+You can add optional field `where` to force usage of only one sign and specify on which side of range the symbol should be placed. Currently only `right` value is supported.
+
+```
+...
+"currencies" [
+     "RUB": {
+       "format": "%v %s",
+       ...
+       "where": "right"
+     }
+]
+...
+```
 
 ## locateAddress
 The locateAddress method determines a user's street address based on latitude and longitude coordinates or by ip address.

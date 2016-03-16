@@ -34,9 +34,9 @@ We're building everything to be "ephemeral" in nature, so "cloud" scaling is the
 Regardless, if it's Docker or other Virtual Machine (VM) containers, the idea is that the storefront itself should scale without issues. The bottleneck does become the database, but with sharding and lots of other solutions, we think that it's an easier problem to solve. We created Launch Dock as our project for the server-side/Docker launching. During our Alpha release, we did extensive tests deploying shops at scale and reviewing and testing different database scaling options.
 
 ## Reaction is an open source project, how can I get involved?
-You can find step-by-step instructions for becoming a contributor here: [//blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/](https://thoughts.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/).
+You can find step-by-step instructions for becoming a contributor here: [//blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/).
 
 ## The Reaction platform is reliant on JavaScript to run. Does that have a negative impact on SEO?
 [Google now indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
-Additionally, Reaction uses the Meteor spiderable package, which uses PhantomJS to render the static page version for search engines. You can read more about the Meteor spiderable package [here](https://docs.meteor.com/#spiderable), [here](https://www.meteorpedia.com/read/spiderable/), and [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package). We currently have this disabled by default, as we are still heavily in development, but if a site needed spiderable, all that you need to do to enable is 'meteor add spiderable'.
+Additionally, Reaction uses the Meteor spiderable package, which uses PhantomJS to render the static page version for search engines. You can read more about the Meteor spiderable package [here](https://www.meteorpedia.com/read/spiderable/) and [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package). We currently have this disabled by default, as we are still heavily in development, but if a site needed spiderable, all that you need to do to enable is 'meteor add spiderable'.
