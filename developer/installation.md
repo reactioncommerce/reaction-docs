@@ -5,26 +5,18 @@ Developers using **Windows** should review the [Windows specific installation re
 To install and run Reaction locally:
 
 ```bash
+curl https://install.meteor.com | /bin/sh
 git clone https://github.com/reactioncommerce/reaction.git
 cd reaction
-./reaction install
+reaction pull
+reaction
 ```
-
-Installs Meteor, Node, NPM if necessary and then starts the most recent `development` branch of Reaction locally.
 
 The `master` branch contains the latest published releases, and also should work with current packages from the [Meteor package manager](https://atmospherejs.com/).
 
 When using the `master` branch with development packages and versions of published packages (versus local packages), you may get some package compatibility warnings. You can use `--allow-incompatible-update` to resolve this.
 
-See the [package documentation](developer/packages/packages.md) for details on working with the `development` branch, and using local package dependencies. You can clone or create new packages in `reaction/packages` for local package development.
-
-## reaction install
-
-```
-./reaction install
-```
-
-This command runs the `bin/install` script that installs Meteor, Node, NPM and starts `reaction`. ![](/assets/guide-installation-default-user.png)
+See the [package documentation](/developer/packages/packages.md) for details on working with the `development` branch, and using local package dependencies. You can clone or create new packages in `reaction/packages` for local package development.
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
 
@@ -44,6 +36,8 @@ To start Reaction, run the `reaction` command
  It appends `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
+![](/assets/guide-installation-default-user.png)
+
 
 Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
 

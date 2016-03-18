@@ -3,28 +3,16 @@ The [reaction-factories](https://github.com/reactioncommerce/reaction-factories)
 
 ## Factory
 The following factories are predefined:
-- `Cart`
-- `Orders`
-- `Products`
-- `Shops`
-- `Users`
-
-```
-Factory.create("Shops")
-var shopId = Factory.get("Shops")
-```
-
-## faker
-Additional custom faker methods added:
-- ReactionFaker.address
-- ReactionFaker.metaField
-- ReactionFaker.productVariant
-- ReactionFaker.cartItem
-- ReactionFaker.order
-- ReactionFaker.shops
-- ReactionFaker.users
-- ReactionFaker.products
-
-```
-shopId = ReactionFaker.shops.getShop()._id;
-```
+- `cart` creates cart with 2 items
+- `cartToOrder` creates cart with `workflow.status: checkoutPayment`. It is
+ready for order testing
+- `anonymousCart` creates cart attached to anonymous user
+- `order`
+- `authorizedApprovedPaypalOrder` defines order factory which generates an authorized, apporved, paypal order
+- `shop` creates shop. But we recommend to use `faker` for shop creation
+- `user` creates user without `roles`
+- `registeredUser` creates normal user with an additional `account/profile` role to the default `roles` list.
+- `anonymous` creates anonymous user with an additional `anonymous` role to the default `roles` list.
+- following 2 factories are used internally and not used directly for creation of full product. We don't recommend use them for tests (check `faker` instead):
+  - `variant` creates item with `type = variant`
+  - `product` creates empty product without variants
