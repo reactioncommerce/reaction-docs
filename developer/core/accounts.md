@@ -20,18 +20,18 @@ Meteor.call("accounts/addressBookAdd", address, accountUserId);
 ### accounts/addressBookUpdate
 Update existing address in user's profile
 
+#### Parameters
+Parameter   | Type          | Description
+----------- | ------------- | ---
+address | Object | An object containing the address
+accountUserId |String / null|`account.userId` used by admin to
+type | String | "shipping" or "billing" address type
+**Returns** | **Type**      | **Description**
+  |Number| The number of affected documents
+
 ##### Example
 
 ```js
-/**
- * accounts/addressBookUpdate
- * @description update existing address in user's profile
- * @param {Object} address - address
- * @param {String|null} [accountUserId] - `account.userId` used by admin to
- * edit users
- * @param {shipping|billing} [type] - name of selected address type
- * @return {Number} The number of affected documents
- */
 Meteor.call("accounts/addressBookUpdate", address, accountUserId, type);
 ```
 
