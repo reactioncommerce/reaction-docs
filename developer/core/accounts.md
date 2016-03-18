@@ -11,12 +11,16 @@ The [reaction-accounts](https://github.com/reactioncommerce/reaction/tree/develo
 ### accounts/addressBookAdd
 Add new addresses to an account
 
+#### Example
+
 ```js
 Meteor.call("accounts/addressBookAdd", address, accountUserId);
 ```
 
 ### accounts/addressBookUpdate
 Update existing address in user's profile
+
+#### Example
 
 ```js
 /**
@@ -34,12 +38,16 @@ Meteor.call("accounts/addressBookUpdate", address, accountUserId, type);
 ### accounts/addressBookRemove
 Remove existing address in user's profile
 
+#### Example
+
 ```js
 Meteor.call("accounts/addressBookRemove", addressId, accountUserId);
 ```
 
 ### accounts/inviteShopMember
 Invite new administrative users
+
+#### Example
 
 ```js
 Meteor.call("accounts/inviteShopMember", shopId, email, name);
@@ -48,6 +56,8 @@ Meteor.call("accounts/inviteShopMember", shopId, email, name);
 ### accounts/sendWelcomeEmail
 Send a welcome email to consumers
 
+#### Example
+
 ```js
 Meteor.call("accounts/sendWelcomeEmail", shopId, userId);
 ```
@@ -55,23 +65,27 @@ Meteor.call("accounts/sendWelcomeEmail", shopId, userId);
 ### accounts/addUserPermissions
 Add user permissions.
 
+#### Example
+
 ```js
-/**
- * accounts/addUserPermissions
- * @param {String} userId - userId
- * @param {Array|String} permissions -
- *               Name of role/permission.  If array, users
- *               returned will have at least one of the roles
- *               specified but need not have _all_ roles.
- * @param {String} [group] Optional name of group to restrict roles to.
- *                         User"s Roles.GLOBAL_GROUP will also be checked.
- * @returns {Boolean} success/failure
- */
 Meteor.call("accounts/addUserPermissions", userId, permissions, group);
 ```
 
+##### Parameters
+Parameter   | Type          | Description
+----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------
+userId      | String        | userId
+permissions | Array, String | Name of role/permission.  If array, users returned will have at least one of the roles specified but need not have _all_ roles.
+group       | String        | Optional name of group to restrict roles to. User's Roles.GLOBAL_GROUP will also be checked.
+**Returns** | **Type**      | **Description**
+            | Boolean       | success / failure
+
+
+
 ### accounts/removeUserPermissions
 Remove user permissions.
+
+#### Example
 
 ```js
 Meteor.call("accounts/removeUserPermissions", userId, permissions, group);
@@ -79,6 +93,8 @@ Meteor.call("accounts/removeUserPermissions", userId, permissions, group);
 
 ### accounts/setUserPermissions
 Set user permissions.
+
+#### Example
 
 ```js
 Meteor.call("accounts/setUserPermissions", userId, permissions, group);
