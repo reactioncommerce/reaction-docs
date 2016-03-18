@@ -29,10 +29,45 @@ type          | String        | "shipping" or "billing" address type
 **Returns**   | **Type**      | **Description**
               | Number        | The number of affected documents
 
-##### Example
+##### Example - (Server)
 
 ```js
 Meteor.call("accounts/addressBookUpdate", address, accountUserId, type);
+```
+
+##### Example - (Client) (Blaze)
+```html
+<template name="updateAddressBook">
+  <form>
+    <!-- More inputs would be needed for a full address -->
+    <input type=text name="address1">
+
+    {{> button
+      type="submit"
+      label="Update Address"
+      data-event-action="updateAddress"
+    }}
+  <form>
+</template>
+```
+
+```js
+Template.updateAddressBook.events({
+  "submit form"(event, instance) {
+    const address = {
+      // More fields needed for a full address
+      address1: event.target.address1.value
+    };
+    const accountUserId = Meteor.userId();
+    const type = "shipping";
+
+    Meteor.call("accounts/addressBookUpdate", address, accountUserId, type, (error, result) => {
+      if (error) {
+        Alerts.toast("Couldn't update address", "error");
+      }
+    });
+  }
+})
 ```
 
 ### accounts/addressBookRemove
