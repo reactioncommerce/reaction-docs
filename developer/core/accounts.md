@@ -11,7 +11,7 @@ The [reaction-accounts](https://github.com/reactioncommerce/reaction/tree/develo
 ### accounts/addressBookAdd
 Add new addresses to an account
 
-#### Example
+##### Example
 
 ```js
 Meteor.call("accounts/addressBookAdd", address, accountUserId);
@@ -20,7 +20,7 @@ Meteor.call("accounts/addressBookAdd", address, accountUserId);
 ### accounts/addressBookUpdate
 Update existing address in user's profile
 
-#### Example
+##### Example
 
 ```js
 /**
@@ -38,7 +38,7 @@ Meteor.call("accounts/addressBookUpdate", address, accountUserId, type);
 ### accounts/addressBookRemove
 Remove existing address in user's profile
 
-#### Example
+##### Example
 
 ```js
 Meteor.call("accounts/addressBookRemove", addressId, accountUserId);
@@ -47,7 +47,7 @@ Meteor.call("accounts/addressBookRemove", addressId, accountUserId);
 ### accounts/inviteShopMember
 Invite new administrative users
 
-#### Example
+##### Example
 
 ```js
 Meteor.call("accounts/inviteShopMember", shopId, email, name);
@@ -56,7 +56,7 @@ Meteor.call("accounts/inviteShopMember", shopId, email, name);
 ### accounts/sendWelcomeEmail
 Send a welcome email to consumers
 
-#### Example
+##### Example
 
 ```js
 Meteor.call("accounts/sendWelcomeEmail", shopId, userId);
@@ -65,7 +65,7 @@ Meteor.call("accounts/sendWelcomeEmail", shopId, userId);
 ### accounts/addUserPermissions
 Add user permissions.
 
-#### Example
+##### Example
 
 ```js
 Meteor.call("accounts/addUserPermissions", userId, permissions, group);
@@ -85,7 +85,7 @@ group       | String        | Optional name of group to restrict roles to. User'
 ### accounts/removeUserPermissions
 Remove user permissions.
 
-#### Example
+##### Example
 
 ```js
 Meteor.call("accounts/removeUserPermissions", userId, permissions, group);
@@ -94,7 +94,7 @@ Meteor.call("accounts/removeUserPermissions", userId, permissions, group);
 ### accounts/setUserPermissions
 Set user permissions.
 
-#### Example
+##### Example
 
 ```js
 Meteor.call("accounts/setUserPermissions", userId, permissions, group);
