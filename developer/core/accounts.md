@@ -21,13 +21,13 @@ Meteor.call("accounts/addressBookAdd", address, accountUserId);
 Update existing address in user's profile
 
 #### Parameters
-Parameter   | Type          | Description
------------ | ------------- | ---
-address | Object | An object containing the address
-accountUserId |String / null|`account.userId` used by admin to
-type | String | "shipping" or "billing" address type
-**Returns** | **Type**      | **Description**
-  |Number| The number of affected documents
+Parameter     | Type          | Description
+------------- | ------------- | ------------------------------------
+address       | Object        | An object containing the address
+accountUserId | String / null | `account.userId` used by admin to
+type          | String        | "shipping" or "billing" address type
+**Returns**   | **Type**      | **Description**
+              | Number        | The number of affected documents
 
 ##### Example
 
