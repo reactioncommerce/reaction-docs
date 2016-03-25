@@ -1,5 +1,5 @@
-# Package cycle
-Package authors should choose a support path for their packages, and use the `cycle` property in the **Reaction package registry** to indicate the kind of support path a package uses.
+# Package Priority
+Package authors should choose a support path for their packages, and use the `priority` property in the **Reaction package registry** to indicate the kind of support path a package uses.
 
 **Core**
 
