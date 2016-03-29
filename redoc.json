@@ -404,7 +404,7 @@
     {
       "class": "guide-sub-sub-nav-item",
       "alias": "including",
-      "label": "Cycle",
+      "label": "Priority",
       "repo": "reaction-docs",
       "docPath": "developer/packages/including.md"
     },
