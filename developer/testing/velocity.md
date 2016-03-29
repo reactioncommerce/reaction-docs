@@ -1,5 +1,5 @@
 # Velocity
-We're using the Meteor testing framework [Velocity](https://velocity.meteor.com/). Velocity allows us to use different testing approaches as needed.  Currently we're using [Jasmine](https://github.com/Sanjo/meteor-jasmine) for the majority of tests.
+We're using the Meteor testing framework [Velocity](https://github.com/meteor-velocity/velocity). Velocity allows us to use different testing approaches as needed.  Currently we're using [Jasmine](https://github.com/Sanjo/meteor-jasmine) for the majority of tests.
 
 Running tests in continuous integration mode:
 

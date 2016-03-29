@@ -21,7 +21,7 @@
   - [`ReactionImport.product`](#product)
 
 ## Contributors
-Thanks to [@tdecaluwe](https://github.com/tdecaluwe/) for the contributions in [Reaction Import](https://github.com/tdecaluwe/reaction-import).
+Thanks to [@tdecaluwe](https://github.com/tdecaluwe/) for the contributions to Reaction Import.
 
 ## Architecture
 The package only exports one global variable, `ReactionImport`, and  is structured around an import buffer. This buffer is used to support fast bulk updates and inserts by sending all the queries at once to the database server. The import buffer can be filled with a number of webshop entities. Currently supported are:
