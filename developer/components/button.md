@@ -1,4 +1,4 @@
-# Component: Button
+# Button
 ## Using the Blaze Component
 Pros:
 - More future proof if there are updates to button structure
