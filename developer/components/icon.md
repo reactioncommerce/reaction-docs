@@ -1,7 +1,5 @@
 # Icon
 
-## Using the component
-
 The icon components give you a simple way to use the available icon sets in reaction commerce with one component.
 
 ### Properties

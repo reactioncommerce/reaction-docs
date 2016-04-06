@@ -1,24 +1,20 @@
 # Cards
 
-## Using the Component
-
-Property                       | Type     | Description
------------------------------- | -------- | -----------------------------------------------------------------------------
-[controls](#controls)          | Array    | Array of button Props. [see button component](#button)
-
-##### Example (Client) (Blaze)
-
-```
+```html
 {{#card}}
   Content at the body of the card
 {{/card}}
 ```
 
-## Property Examples
+Property                       | Type     | Description
+------------------------------ | -------- | -----------------------------------------------------------------------------
+[controls](#controls)          | Array    | Array of button Props. [see button component](#button)
+
+## Examples
 
 ### controls
 
-```
+```js
 Template.myTemplate.helpers({
   cardProps() {
     return {
@@ -30,13 +26,10 @@ Template.myTemplate.helpers({
       }]
     }
   }
-})
-const
+});
 ```
 
-##### Example
-
-```
+```html
 {{#card cardControls}}
   Content at the body of the card
 {{/card}}
