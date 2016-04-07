@@ -10,8 +10,6 @@
 }}
 ```
 
-## Properties
-
 Property                       | Type     | Description
 ------------------------------ | -------- | -----------------------------------------------------------------------------
 [label](#label)              | String   | Button text (alias for title)
@@ -22,9 +20,7 @@ Property                       | Type     | Description
 [type](#type)                | String   | button **(default)** &#124; submit
 [onClick](#onClick)          | Function | function reference from template helper
 
-## Property Examples
-
-### Button title/label
+## Label
 
 ```
 {{> button label="Add Product"}}
@@ -34,7 +30,7 @@ Property                       | Type     | Description
 {{> button title="Add Product"}}
 ```
 
-### Translation with i18nKeyLabel
+## Translating label
 
 i18n key for translation. If provided with `label`, then `label` will be used as the default if the i18n key is not found.
 
@@ -42,7 +38,7 @@ i18n key for translation. If provided with `label`, then `label` will be used as
 {{> button title="Add Product" i18nKeyLabel="app.addProduct"}}
 ```
 
-### Using Icon
+## Using an icon
 
 name of icon. We use font awesome as our default font. [fontawesome](fontawesome.io)
 
@@ -54,7 +50,7 @@ name of icon. We use font awesome as our default font. [fontawesome](fontawesome
 {{> button label="Add Product" icon="fa fa-clock"}}
 ```
 
-### On Click
+## Click events
 
 On click events represents a user clicking, or taping on a button that then triggers this event.
 
@@ -72,7 +68,7 @@ Template.myTemplate.helpers({
 {{> button label="Add Product" onClick=handleButtonClick}}
 ```
 
-### Other events
+## Custom events
 You can also use the standard way of attaching events to the button.
 
 ```
@@ -85,7 +81,7 @@ Template.myTemplate.events({
 });
 ```
 
-### Using the HTML version
+## Using the HTML version
 
 ```
 <button
