@@ -24,23 +24,25 @@ Property                       | Type     | Description
 
 ## Property Examples
 
-## label
+### Button title/label
 
 ```
 {{> button label="Add Product"}}
 ```
 
-## title
-
 ```
 {{> button title="Add Product"}}
 ```
 
-## i18nKeyLabel
+### Translation with i18nKeyLabel
 
 i18n key for translation. If provided with `label`, then `label` will be used as the default if the i18n key is not found.
 
-## icon
+```
+{{> button title="Add Product" i18nKeyLabel="app.addProduct"}}
+```
+
+### Using Icon
 
 name of icon. We use font awesome as our default font. [fontawesome](fontawesome.io)
 
@@ -49,53 +51,28 @@ name of icon. We use font awesome as our default font. [fontawesome](fontawesome
 ```
 
 ```
-{{ button label="Add Product" icon="fa fa-clock"}}
+{{> button label="Add Product" icon="fa fa-clock"}}
 ```
 
-## onClick
+### On Click
+
+On click events represents a user clicking, or taping on a button that then triggers this event.
 
 ```
 Template.myTemplate.helpers({
   handleButtonClick(event) {
     return () => {
-      console.log("Thing");
+      console.log("Button was clicked");
     }
   }
 });
 ```
 
 ```
-{{ button label="Add Product" onClick=handleButtonClick}}
+{{> button label="Add Product" onClick=handleButtonClick}}
 ```
 
-## Event handling
-There are a number of ways to handle events with components in [Reaction](https://reactioncommerce.com).
-
-### On Click
-On click events represents a user clicking, or taping on a button that then triggers this event.
-
-##### Example (Client) (Blaze)
-
-###### myTemplate.html
-```
-<template name="myTemplate">
-  {{> button title="Show Alert" onClick=handleButtonClick}}
-</template>
-```
-
-###### myTemplate.js
-```
-Template.myTemplate.helpers({
-  handleButtonClick() {
-    const instance = Template.instance();
-    return (event) => {
-      Alerts.alert("Button was clicked");
-    }
-  }
-});
-```
-
-### Standard events
+### Other events
 You can also use the standard way of attaching events to the button.
 
 ```
@@ -108,7 +85,7 @@ Template.myTemplate.events({
 });
 ```
 
-## Using the HTML version
+### Using the HTML version
 
 ```
 <button
