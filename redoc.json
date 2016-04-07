@@ -43,7 +43,7 @@
       "repo": "reaction-docs",
       "default": true,
       "docPath": "index.md",
-      "docPaths": [
+      "docIncludes": [
         "admin/dashboard.md",
         "admin/tags.md",
         "admin/products.md",
@@ -58,7 +58,7 @@
       "label": "Developer",
       "repo": "reaction-docs",
       "docPath": "developer/getting-started.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/requirements.md",
         "developer/installation.md",
         "developer/configuration.md",
@@ -72,7 +72,7 @@
       "label": "Architecture",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/overview.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/architecture/exports.md",
         "developer/architecture/security.md",
         "developer/architecture/schemas.md",
@@ -94,7 +94,7 @@
       "label": "Components",
       "repo": "reaction-docs",
       "docPath": "developer/components/README.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/components/button-group.md",
         "developer/components/button.md",
         "developer/components/cards.md",
@@ -117,7 +117,7 @@
       "label": "Themes",
       "repo": "reaction-docs",
       "docPath": "developer/themes/themes.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/themes/theming.md",
         "developer/themes/styling.md",
         "developer/themes/templates.md",
@@ -130,7 +130,7 @@
       "label": "Core",
       "repo": "reaction-docs",
       "docPath": "developer/core/core.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/core/accounts.md",
         "developer/core/alerts.md",
         "developer/core/analytics.md",
@@ -154,7 +154,7 @@
       "label": "Packages",
       "repo": "reaction-docs",
       "docPath": "developer/packages/packages.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/packages/registry.md",
         "developer/architecture/permissions.md",
         "developer/architecture/layout.md",
@@ -168,7 +168,7 @@
       "label": "Testing",
       "repo": "reaction-docs",
       "docPath": "developer/testing/testing.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/testing/velocity.md",
         "developer/testing/acceptance_testing.md",
         "developer/testing/factories.md",
@@ -182,7 +182,7 @@
       "label": "Deploying",
       "repo": "reaction-docs",
       "docPath": "developer/deploying.md",
-      "docPaths": [
+      "docIncludes": [
         "developer/deploying/launchdock.md",
         "developer/deploying/mup.md",
         "developer/deploying/galaxy.md",
