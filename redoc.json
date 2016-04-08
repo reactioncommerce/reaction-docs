@@ -1,498 +1,478 @@
 {
-  "repos": [
-    {
-      "org": "reactioncommerce",
-      "repo": "reaction-docs",
-      "label": "Reaction",
-      "description": "Reaction Commerce Guide"
-    },
-    {
-      "org": "reactioncommerce",
-      "class": "guide-sub-nav-item",
-      "repo": "reaction-braintree",
-      "label": "Braintree",
-      "docPath": "README.md"
-    },
-    {
-      "class": "guide-sub-nav-item",
-      "org": "reactioncommerce",
-      "repo": "reaction-paypal",
-      "label": "Paypal",
-      "docPath": "README.md"
-    },
-    {
-      "class": "guide-sub-nav-item",
-      "org": "reactioncommerce",
-      "repo": "reaction-stripe",
-      "label": "Stripe",
-      "docPath": "README.md"
-    },
-    {
-      "class": "guide-sub-nav-item",
-      "org": "reactioncommerce",
-      "repo": "reaction-auth-net",
-      "label": "Auth.Net",
-      "docPath": "README.md"
-    }
-  ],
-  "tocData": [
-    {
+  "repos": [{
+    "org": "reactioncommerce",
+    "repo": "reaction-docs",
+    "label": "Reaction",
+    "description": "Reaction Commerce Guide",
+    "default": true
+  }, {
+    "org": "reactioncommerce",
+    "class": "guide-sub-nav-item",
+    "repo": "reaction-braintree",
+    "label": "Braintree",
+    "docPath": "README.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "org": "reactioncommerce",
+    "repo": "reaction-paypal",
+    "label": "Paypal",
+    "docPath": "README.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "org": "reactioncommerce",
+    "repo": "reaction-stripe",
+    "label": "Stripe",
+    "docPath": "README.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "org": "reactioncommerce",
+    "repo": "reaction-auth-net",
+    "label": "Auth.Net",
+    "docPath": "README.md"
+  }],
+  "tocData": [{
       "class": "guide-nav-item",
       "alias": "intro",
       "label": "Introduction",
       "repo": "reaction-docs",
       "docPath": "index.md",
       "default": true
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "dashboard",
       "label": "Dashboard",
       "repo": "reaction-docs",
       "docPath": "admin/dashboard.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "tags",
       "label": "Navigation Tags",
       "repo": "reaction-docs",
       "docPath": "admin/tags.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "products",
       "label": "Product Management",
       "repo": "reaction-docs",
       "docPath": "admin/products.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "orders",
       "label": "Order Processing",
       "repo": "reaction-docs",
       "docPath": "admin/orders.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "shipping",
       "label": "Flat Rate Shipping",
       "repo": "reaction-docs",
       "docPath": "admin/shipping.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "faqs",
       "label": "FAQs",
       "repo": "reaction-docs",
       "docPath": "admin/faq.md"
-    },
-    {
+    }, {
       "class": "guide-nav-item",
       "alias": "getting-started-developing-with-reaction",
       "label": "Developer",
       "repo": "reaction-docs",
       "docPath": "developer/getting-started.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "requirements",
       "label": "Requirements",
       "repo": "reaction-docs",
       "docPath": "developer/requirements.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "installation",
       "label": "Installation",
       "repo": "reaction-docs",
       "docPath": "developer/installation.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "configuration",
       "label": "Configuration",
       "repo": "reaction-docs",
       "docPath": "developer/configuration.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "styleguide",
       "label": "Style Guide",
       "repo": "reaction-docs",
       "docPath": "developer/styleguide.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "contributing-to-reaction",
       "label": "Contributing",
       "repo": "reaction-docs",
       "docPath": "developer/contributing.md"
-    },
-    {
+    }, {
       "class": "guide-nav-item",
       "alias": "architecture",
       "label": "Architecture",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/overview.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "exports",
       "label": "Exports",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/exports.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "security",
       "label": "Security",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/security.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "simple-schema",
       "label": "Schemas",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/schemas.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "collections",
       "label": "Collections",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/collections.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "image-handling",
       "label": "Images",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/images.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "routing",
       "label": "Routing",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/routing.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "seo-metadata",
       "label": "Metadata",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/metadata.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "i18n",
       "label": "i18n and RTL",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/i18n.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "registry",
       "label": "Registry",
       "repo": "reaction-docs",
       "docPath": "developer/packages/registry.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "permissions",
       "label": "Permissions",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/permissions.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "layout",
       "label": "Layout",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/layout.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "workflow",
       "label": "Workflow",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/workflow.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "logging",
       "label": "Logging",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/logging.md"
-    },
-    {
+    }, {
       "class": "guide-nav-item",
       "alias": "themes",
       "label": "Themes",
       "repo": "reaction-docs",
       "docPath": "developer/themes/themes.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "creating-a-theme-package",
       "label": "Creating a Theme",
       "repo": "reaction-docs",
       "docPath": "developer/themes/theming.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "styling-a-theme",
       "label": "Overriding Styles",
       "repo": "reaction-docs",
       "docPath": "developer/themes/styling.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "templates",
       "label": "Templates",
       "repo": "reaction-docs",
       "docPath": "developer/themes/templates.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "template-helpers",
       "label": "Helpers",
       "repo": "reaction-docs",
       "docPath": "developer/themes/helpers.md"
-    },
-    {
+    }, {
       "class": "guide-nav-item",
       "alias": "reaction-core",
       "label": "Core",
       "repo": "reaction-docs",
       "docPath": "developer/core/core.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-user-accounts",
       "label": "Accounts",
       "repo": "reaction-docs",
       "docPath": "developer/core/accounts.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-alerts",
       "label": "Alerts",
       "repo": "reaction-docs",
       "docPath": "developer/core/alerts.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "analytics",
       "label": "Analytics",
       "repo": "reaction-docs",
       "docPath": "developer/core/analytics.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-shops",
       "label": "Shops",
       "repo": "reaction-docs",
       "docPath": "developer/core/shops.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-products",
       "label": "Products",
       "repo": "reaction-docs",
       "docPath": "developer/core/products.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-tags",
       "label": "Tags",
       "repo": "reaction-docs",
       "docPath": "developer/core/tags.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-cart",
       "label": "Cart",
       "repo": "reaction-docs",
       "docPath": "developer/core/cart.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-shipping",
       "label": "Shipping",
       "repo": "reaction-docs",
       "docPath": "developer/core/shipping.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-payments",
       "label": "Payments",
       "repo": "reaction-docs",
       "docPath": "developer/core/payments.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-orders",
       "label": "Orders",
       "repo": "reaction-docs",
       "docPath": "developer/core/orders.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-import",
       "label": "Import",
       "repo": "reaction-docs",
       "docPath": "developer/core/import.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-inventory",
       "label": "Inventory",
       "repo": "reaction-docs",
       "docPath": "developer/core/inventory.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "reaction-localization",
       "label": "Localization",
       "repo": "reaction-docs",
       "docPath": "developer/core/localization.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "method-hooks",
       "label": "Method Hooks",
       "repo": "reaction-docs",
       "docPath": "developer/core/hooks.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "collection-hooks",
       "label": "Collection Hooks",
       "repo": "reaction-docs",
       "docPath": "developer/core/collection-hooks.md"
     },
+
+
     {
+      "class": "guide-nav-item",
+      "alias": "components",
+      "label": "Components",
+      "repo": "reaction-docs",
+      "docPath": "developer/components/README.md"
+    }, {
+      "label": "Button Group",
+      "docPath": "developer/components/button-group.md"
+    }, {
+      "label": "Button",
+      "docPath": "developer/components/button.md"
+    }, {
+      "label": "Cards",
+      "docPath": "developer/components/cards.md"
+    }, {
+      "label": "Icon",
+      "docPath": "developer/components/icon.md"
+    }, {
+      "label": "Items",
+      "docPath": "developer/components/items.md"
+    }, {
+      "label": "Metadata",
+      "docPath": "developer/components/metadata.md"
+    }, {
+      "label": "Numeric Input",
+      "docPath": "developer/components/numeric-input.md"
+    }, {
+      "label": "Popover",
+      "docPath": "developer/components/popover.md"
+    }, {
+      "label": "Select",
+      "docPath": "developer/components/select.md"
+    }, {
+      "label": "Separator",
+      "docPath": "developer/components/separator.md"
+    }, {
+      "label": "Tags",
+      "docPath": "developer/components/tags.md"
+    }, {
+      "label": "Text Field",
+      "docPath": "developer/components/textfield.md"
+    }, {
+      "label": "Tooltip",
+      "docPath": "developer/components/tooltip.md"
+    }, {
+      "label": "Upload",
+      "docPath": "developer/components/upload.md"
+    }, {
       "class": "guide-nav-item",
       "alias": "packages",
       "label": "Packages",
       "repo": "reaction-docs",
       "docPath": "developer/packages/packages.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "registry",
       "label": "Registry",
       "repo": "reaction-docs",
       "docPath": "developer/packages/registry.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "permissions",
       "label": "Permissions",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/permissions.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "layout",
       "label": "Layout",
       "repo": "reaction-docs",
       "docPath": "developer/architecture/layout.md"
-    },
-    {
+    }, {
       "class": "guide-sub-sub-nav-item",
       "alias": "including",
       "label": "Priority",
       "repo": "reaction-docs",
       "docPath": "developer/packages/including.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "publishing",
       "label": "Publishing",
       "repo": "reaction-docs",
       "docPath": "developer/packages/publishing.md"
-    },
-    {
+    }, {
       "class": "guide-nav-item",
       "alias": "testing-reaction",
       "label": "Testing",
       "repo": "reaction-docs",
       "docPath": "developer/testing/testing.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "using-velocity-for-testing",
       "label": "Velocity",
       "repo": "reaction-docs",
       "docPath": "developer/testing/velocity.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "acceptance-testing",
       "label": "Acceptance Testing",
       "repo": "reaction-docs",
       "docPath": "developer/testing/acceptance_testing.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "using-factories-for-testing",
       "label": "Factories",
       "repo": "reaction-docs",
       "docPath": "developer/testing/factories.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "using-faker-for-testing",
       "label": "Faker",
       "repo": "reaction-docs",
       "docPath": "developer/testing/faker.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "using-ci",
       "label": "CI Builds",
       "repo": "reaction-docs",
       "docPath": "developer/testing/ci.md"
-    },
-    {
+    }, {
       "class": "guide-nav-item",
       "alias": "deploying",
       "label": "Deploying",
       "repo": "reaction-docs",
       "docPath": "developer/deploying.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "deploying-on-launchdock",
       "label": "Launchdock",
       "repo": "reaction-docs",
       "docPath": "developer/deploying/launchdock.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "deploying-reaction-with-mup",
       "label": "Mup",
       "repo": "reaction-docs",
       "docPath": "developer/deploying/mup.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "deploying-reaction-on-galaxy",
       "label": "Galaxy",
       "repo": "reaction-docs",
       "docPath": "developer/deploying/galaxy.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "deploying-reaction-using-docker",
       "label": "Docker",
       "repo": "reaction-docs",
       "docPath": "developer/deploying/docker.md"
-    },
-    {
+    }, {
       "class": "guide-sub-nav-item",
       "alias": "deploying-reaction-using-heroku",
       "label": "Heroku",

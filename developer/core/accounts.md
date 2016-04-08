@@ -7,7 +7,7 @@ The [reaction-accounts](https://github.com/reactioncommerce/reaction/tree/develo
 - user management
 - address book CRUD
 
-## Account methods
+## Methods
 ### accounts/addressBookAdd
 Add new addresses to an account
 

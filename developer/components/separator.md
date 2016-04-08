@@ -1,3 +1,3 @@
-# Button Group
+# Separator
 
 Coming soon...
