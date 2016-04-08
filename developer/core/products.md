@@ -126,6 +126,15 @@ Usage:
 Meteor.call "products/updateMetaFields", productId, updatedMeta
 ```
 
+### products/removeMetaFields
+The `products/removeMetaFields` method removes a meta field object from the product. Meta fields consist of a title and a value, for example "Material", "100% Cotton".
+
+Usage:
+
+```
+Meteor.call "products/removeMetaFields", productId, metafield
+```
+
 `products/updateMetaFields` takes a product id and a meta object that includes a key ("Material") and a value ("100% Cotton").
 
 ### products/createVariant
