@@ -3,7 +3,8 @@
     "org": "reactioncommerce",
     "repo": "reaction-docs",
     "label": "Reaction",
-    "description": "Reaction Commerce Guide"
+    "description": "Reaction Commerce Guide",
+    "default": true,
   }, {
     "org": "reactioncommerce",
     "class": "guide-sub-nav-item",
