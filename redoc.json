@@ -4,7 +4,7 @@
     "repo": "reaction-docs",
     "label": "Reaction",
     "description": "Reaction Commerce Guide",
-    "default": true,
+    "default": true
   }, {
     "org": "reactioncommerce",
     "class": "guide-sub-nav-item",
