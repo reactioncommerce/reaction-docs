@@ -7,20 +7,20 @@ The [reaction-accounts](https://github.com/reactioncommerce/reaction/tree/develo
 - user management
 - address book CRUD
 
-## Account methods
-### accounts/addressBookAdd
+## accounts/addressBookAdd
 Add new addresses to an account
 
-##### Example
+### Example
 
 ```js
 Meteor.call("accounts/addressBookAdd", address, accountUserId);
 ```
 
-### accounts/addressBookUpdate
+## accounts/addressBookUpdate
 Update existing address in user's profile
 
-#### Parameters
+### Parameters
+
 Parameter     | Type          | Description
 ------------- | ------------- | ------------------------------------
 address       | Object        | An object containing the address
@@ -29,13 +29,14 @@ type          | String        | "shipping" or "billing" address type
 **Returns**   | **Type**      | **Description**
               | Number        | The number of affected documents
 
-##### Example - (Server)
+#### Example - (Server)
 
 ```js
 Meteor.call("accounts/addressBookUpdate", address, accountUserId, type);
 ```
 
-##### Example - (Client) (Blaze)
+#### Example - (Client) (Blaze)
+
 ```html
 <template name="updateAddressBook">
   <form>
@@ -70,43 +71,44 @@ Template.updateAddressBook.events({
 })
 ```
 
-### accounts/addressBookRemove
+## accounts/addressBookRemove
 Remove existing address in user's profile
 
-##### Example
+### Example
 
 ```js
 Meteor.call("accounts/addressBookRemove", addressId, accountUserId);
 ```
 
-### accounts/inviteShopMember
+## accounts/inviteShopMember
 Invite new administrative users
 
-##### Example
+### Example
 
 ```js
 Meteor.call("accounts/inviteShopMember", shopId, email, name);
 ```
 
-### accounts/sendWelcomeEmail
+## accounts/sendWelcomeEmail
 Send a welcome email to consumers
 
-##### Example
+### Example
 
 ```js
 Meteor.call("accounts/sendWelcomeEmail", shopId, userId);
 ```
 
-### accounts/addUserPermissions
+## accounts/addUserPermissions
 Add user permissions.
 
-##### Example
+### Example
 
 ```js
 Meteor.call("accounts/addUserPermissions", userId, permissions, group);
 ```
 
-##### Parameters
+### Parameters
+
 Parameter   | Type          | Description
 ----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------
 userId      | String        | userId
@@ -115,21 +117,19 @@ group       | String        | Optional name of group to restrict roles to. User'
 **Returns** | **Type**      | **Description**
             | Boolean       | success / failure
 
-
-
-### accounts/removeUserPermissions
+## accounts/removeUserPermissions
 Remove user permissions.
 
-##### Example
+### Example
 
 ```js
 Meteor.call("accounts/removeUserPermissions", userId, permissions, group);
 ```
 
-### accounts/setUserPermissions
+## accounts/setUserPermissions
 Set user permissions.
 
-##### Example
+### Example
 
 ```js
 Meteor.call("accounts/setUserPermissions", userId, permissions, group);
