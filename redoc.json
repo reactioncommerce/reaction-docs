@@ -356,8 +356,8 @@
       "label": "Select",
       "docPath": "developer/components/select.md"
     }, {
-      "label": "Seperator",
-      "docPath": "developer/components/seperator.md"
+      "label": "Separator",
+      "docPath": "developer/components/separator.md"
     }, {
       "label": "Tags",
       "docPath": "developer/components/tags.md"
