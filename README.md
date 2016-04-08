@@ -1,4 +1,8 @@
 # Reaction
+
+This repository contains source for Reaction Commerce documentation found at [https://docs.reactioncommerce.com](https://docs.reactioncommerce.com)
+
+# Table of Contents
 ## Introduction
 - Login Credentials
 - [Dashboard](admin/dashboard.md)

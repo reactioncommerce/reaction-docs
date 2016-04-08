@@ -21,7 +21,7 @@
   - [`ReactionImport.product`](#product)
 
 ## Contributors
-Thanks to [@tdecaluwe](https://github.com/tdecaluwe/) for the contributions in [Reaction Import](https://github.com/tdecaluwe/reaction-import).
+Thanks to [@tdecaluwe](https://github.com/tdecaluwe/) for the contributions to Reaction Import.
 
 ## Architecture
 The package only exports one global variable, `ReactionImport`, and  is structured around an import buffer. This buffer is used to support fast bulk updates and inserts by sending all the queries at once to the database server. The import buffer can be filled with a number of webshop entities. Currently supported are:
@@ -69,8 +69,9 @@ The `ReactionImport.identify()` method is provided to determine the collection a
 This package also includes a bulk image uploader as these often need to be uploaded separately when importing from an ERP solution. Currently a filename in the format `${product.variants.barcode}.[${priority}.]${extension}` is expected (where the priority is optional). Images will be used for the product if the priority is equal to zero, but will always show when the corresponding variant is consulted. This uploader can be accessed through the reaction dashboard.
 
 ## Reference
-### `ReactionImport.flush([collection])` <a name="flush"></a>
-Send the contents of the import buffer to the database. Accepts an optional parameter restricting flushing data to a certain MongoDB collection.
+### `ReactionImport.flush(collection)` <a name="flush"></a>
+Send the contents of the import buffer to the database. Accepts an optional parameter (a collection object) restricting flushing data to a certain MongoDB collection.
+Executes `ReactionImport.commit(collection)`
 
 ### `ReactionImport.fixture()` <a name="fixture"></a>
 Tell `ReactionImport` to use the `$setOnInsert` modifier when sending documents to MongoDB.
