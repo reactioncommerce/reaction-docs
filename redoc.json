@@ -319,10 +319,7 @@
       "label": "Collection Hooks",
       "repo": "reaction-docs",
       "docPath": "developer/core/collection-hooks.md"
-    },
-
-
-    {
+    }, {
       "class": "guide-nav-item",
       "alias": "components",
       "label": "Components",
