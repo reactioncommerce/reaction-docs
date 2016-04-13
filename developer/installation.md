@@ -8,6 +8,7 @@ To install and run Reaction locally:
 curl https://install.meteor.com | /bin/sh
 git clone https://github.com/reactioncommerce/reaction.git
 cd reaction
+meteor npm install
 reaction pull
 reaction
 ```
