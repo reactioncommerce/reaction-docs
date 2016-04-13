@@ -1,6 +1,6 @@
 # Icon
 
-The icon components give you a simple way to use the available icon sets in reaction commerce with one component.
+The icon components give you a simple way to use the available icon sets in Reaction with one component.
 
 ### Properties
 
@@ -32,7 +32,7 @@ Template.myTemplate.helpers({
 ##### Example (Client) (React)
 
 ###### Basic Usage
-In this example we display a clock icon. The base icon pack for Reaction Commerce is font awesome. The namespace `fa fa-` are automatically applied for you.
+In this example we display a clock icon. The base icon pack for Reaction is font awesome. The namespace `fa fa-` are automatically applied for you.
 
 ```
 <icon icon="clock" />
