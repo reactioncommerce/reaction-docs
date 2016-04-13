@@ -51,9 +51,7 @@ function updateProductTitle(productId, title) {
     }
   });
 }
-```
 
-```js
 // Register you method as a Meteor Method
 Meteor.methods({
   "myNamespace/updateProductTitle": updateProductTitle
