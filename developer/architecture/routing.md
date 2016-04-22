@@ -7,7 +7,8 @@ The Reaction router object is exported as `ReactionRouter`
 
 ```
 ReactionRouter.go('index')
-ReactionRouter.go('/')                   // redirect to the defined route (here: '/') ReactionRouter.go('PostShow', {_id: 7})  //redirect to '/posts/7'
+ReactionRouter.go('/')                   // redirect to the defined route (here: '/') 
+ReactionRouter.go('PostShow', {_id: 7})  //redirect to '/posts/7'
 ReactionRouter.path('reaction-accounts/dashboard')          // return the path of the defined route as a string. (here: '/')
 ReactionRouter.current().path            // return the current path
 ```
