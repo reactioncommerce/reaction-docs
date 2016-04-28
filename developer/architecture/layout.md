@@ -1,10 +1,33 @@
 # Layout
 
-Layouts are a combination a `layout` and a series of `workflow` elements. 
+Layouts are a combination a `layout` and a series of `workflow` elements.
 
 The layout will render a Blaze template as defined in the layout structure.
 
-The workflow elements will be rendered with the `ReactionTemplates` helper, and are meant to be used in combination with the layout structure.
+The workflow elements will be rendered with the `ReactionTemplates` helper, and are meant to be used in combination with the layout **structure**.
+
+Layouts are meant to be created using the Package Registry, once they are defined in the Registry, they are copied into the `Shops.layout` array and referenced from there.  The Registry serves as the "source of truth", allowing customizations to be made directly to the individual Shops. In the case where we have two layouts with the same key structure (`layout`, `workflow`), the Array is loaded in reverse order, so that the newest layout will be used. Layouts can also be disabled in the data with `enabled:false`. This is reserved for a future UI implementation.
+
+If you need to override the default layouts set in `common/config.js`, you can override in `main.js`.
+
+```javascript
+DEFAULT_LAYOUT = "coreLayout";
+DEFAULT_WORKFLOW = "coreWorkflow";
+```
+
+For convenience, the home page structure can be overridden with `INDEX_OPTIONS`.
+
+```javascript
+INDEX_OPTIONS = {
+  template: "products",
+  layoutHeader: "layoutHeader",
+  layoutFooter: "layoutFooter",
+  notFound: "productNotFound",
+  dashboardControls: "dashboardControls",
+  adminControlsFooter: "adminControlsFooter"
+};
+```
+
 
 ## Package Registry - Layout
 From a `Packages.registry` document as defined in the `reaction-checkout` package.
@@ -69,6 +92,6 @@ From a `Packages.registry` document as defined in the `reaction-checkout` packag
   }]
 });
 ```
-### CoreLayout 
+### CoreLayout
 
 ![CoreLayout](/assets/developer-registry-layout.png)
