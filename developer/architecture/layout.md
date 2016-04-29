@@ -1,6 +1,6 @@
 # Layouts
 
-Layouts are a combination of a `layout` object and an array of `workflow` objects. The are initially created in the `Packages` collection using the registry, and are cloned to the `Shops` collection which is where the application refers to them, and where they can be modified or disabled.
+Layouts are a combination of a `layout` object and an array of `workflow` objects. They are initially created in the `Packages` collection during the registry loading, and are cloned to the `Shops` collection which is where the application refers to them, and where they can be modified or disabled.
 
 Layouts will [render a Blaze template](http://docs.meteor.com/#/full/blaze_render) as defined in the layout **structure**.
 
