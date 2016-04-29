@@ -9,6 +9,8 @@ The Reaction Flow Router instance is exported as `ReactionRouter`
 
 To future proof against changes to the router, the recommended approach is to define an entry in the **Package Registry**, but you can also use `ReactionRouter.route()` to define routes.
 
+Routes are very simple and based on the syntax of [path-to-regexp](https://github.com/pillarjs/path-to-regexp) which is used in both [Express](http://expressjs.com/) and `iron:router`.
+
 The **Reaction package registry** entries define routes that can be used with the Flow Router API. 
 
 ```js
