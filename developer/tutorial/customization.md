@@ -40,7 +40,8 @@ Besides changing obvious things like colors and fonts, BK has told us that they 
 
 ### Adding custom CSS
 
-_Note: This portion of the tutorial covers much of the same matter as https://docs.reactioncommerce.com/reaction-docs/development/creating-a-theme-package. It just assumed you will start with CSS changes and expand from here._
+_Note: This portion of the tutorial covers much of the same matter as the [Theming Tutorial](https://docs.reactioncommerce.com/reaction-docs/development/creating-a-theme-package).
+It just assumed you will start with CSS changes and expand from here._
 
 For the purposes of our tutorial I am going to assume you are working from a fresh checkout of Reaction.
 
@@ -144,7 +145,7 @@ Obviously you will want to do much, much more than change a couple of colors. Bu
 _Some of the concepts in this section will be easier to understand if you have read [Blaze](http://guide.meteor.com/blaze.html) section of the
 Meteor Guide_
 
-### Purpose:
+### Purpose
 
 In general layouts are a way of applying a structure to a site beyond what you would want to have in one particular template, allowing you to share components and reduce repetition. This is something you might do in server-side includes in other languages/frameworks.
 
@@ -188,7 +189,6 @@ special `main.js` that will add some global options.
 __Note__: If you just want to override the homepage and leave everything else alone, you can do that by adding special
 INDEX_OPTIONS parameters to this `main.js` file. See the ["Changing the index page layout"](https://docs.reactioncommerce.com/reaction-docs/development/layout)
 documentation for more info.
-
 
 First let's create our `main.js` with our custom layout. You will not place this in your package but in the root of
 the application so that it will be evaluated. The `main.js` just looks like this:
@@ -268,7 +268,6 @@ of Meteor packages. You can add these entries to your `package.js` before the `a
   api.use("jquery");
   api.use("tracker");
 
-
   // meteor add-on packages
   api.use("underscore");
   api.use("logging");
@@ -305,6 +304,7 @@ Now let's create a file called `core.html` and add our template tags like this:
 <template name="coreLayoutBeesknees">
 </template>
 ```
+
 Let's also add this file to our `package.js` so that it will be picked up by Meteor.
 
 ```
@@ -313,7 +313,6 @@ Let's also add this file to our `package.js` so that it will be picked up by Met
 ```
 
 Ok, still a blank site because we have nothing in our layout. Let's add back in our main section for now:
-
 
 ```
   <main role="main" id="main">
@@ -599,7 +598,6 @@ Review:
 ```
 
 and Completion:
-
 
 ```
 {
