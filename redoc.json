@@ -39,10 +39,10 @@
       "default": true
     }, {
       "class": "guide-sub-nav-item",
-      "alias": "dashboard",
-      "label": "Dashboard",
+      "alias": "tutorial",
+      "label": "Customization Guide",
       "repo": "reaction-docs",
-      "docPath": "admin/dashboard.md"
+      "docPath": "tutorial/customization.md"
     }, {
       "class": "guide-sub-nav-item",
       "alias": "dashboard",
