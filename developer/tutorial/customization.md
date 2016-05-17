@@ -1,5 +1,4 @@
-Customizing Reaction Commerce
-============
+# Customizing Reaction Commerce
 
 ### Purpose
 
