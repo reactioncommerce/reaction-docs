@@ -6,6 +6,7 @@ Reaction is developed on [Node](https://nodejs.org) and the [Meteor](https://met
 ## Docs Overview
 - The **Introduction** section of our documentation provides an overview of the features of Reaction, and it will answer questions about how to use Reaction as a shop owner.
 - The  **Developer** sections of our docs that are meant to help a developer or designer quickly start using the platform locally, where they can contribute changes to the project, or fork the project and modify to suit any requirement.
+- The **Customization Guide** is a step-by-step tutorial through making some of the most common customizations.
 
 The Reaction documentation source is located in the [reactioncommerce/reaction-docs](https://github.com/reactioncommerce/reaction-docs) repository, while this documentation site is a Meteor application [reactioncommerce/redoc](https://github.com/reactioncommerce/redoc).
 
