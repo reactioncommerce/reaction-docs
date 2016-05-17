@@ -1,6 +1,6 @@
 # Customizing Reaction Commerce
 
-### Purpose
+## Purpose
 
 This tutorial is intended to walk through most aspects of building a custom store, starting from simple appearance tweaks, through changing the behavior of the checkout and finally adding custom schemas and inventory hooks.
 
@@ -17,7 +17,7 @@ All the files created/modifed in this tutorial are in the [Bee's Knees](https://
 When you start to work with Reaction Commerce (and with many other open-source eCommerce packages) you have two paths to go down. The first is to simple fork the package and make the changes you want. The advantages of this are:
 
 1. Changes are often simpler to make and understand. If you want to change the look of a template, you just change it.
-2. You can make changes that the core package may not allow you to make
+1. You can make changes that the core package may not allow you to make
 
 However the disadvantage of this approach is that upgrading to newer releases of the software become more and more difficult. Depending on how complex your changes are, at some point it may become literally impossible to integrate your changes with updated software and you may end up rewriting your modifications again to be able to update.
 
@@ -26,7 +26,7 @@ It's possible that you believe that you never will need to upgrade. RC gives you
 The advantages of creating a package are:
 
 1. All of your changes are in one place and it's easy to see what's been modified and what is "stock". This also allows you to easily segment out what is "private" from what can be public or open-source.
-2. Upgrading is as simple as just pulling in the latest changes from the repo, or installing a new version and dropping your package in.
+1. Upgrading is as simple as just pulling in the latest changes from the repo, or installing a new version and dropping your package in.
 
 ### Our Store
 
@@ -35,7 +35,6 @@ We are building a store for a fictional children's clothes manufacturer: Bee's K
 #### The changes
 
 Besides changing obvious things like colors and fonts, BK has told us that they want the checkout process to be a simple as possible so they want a "one-page-checkout". Also they want the customers to be able to enter the names and ages of their children and store them in the database so that they can send out age-specific sales emails at a later point. They want to change the way the Product Grid and Product Details pages look as well.
-
 
 ## Creating Our Package
 
@@ -46,7 +45,6 @@ _Note: This portion of the tutorial covers much of the same matter as https://do
 For the purposes of our tutorial I am going to assume you are working from a fresh checkout of Reaction.
 
 Start off by creating a directory within the `packages` directory of RC. We will be calling our package `beesknees`. The minimum a package needs is a `package.js` files that defines what the package is and what it contains.  Here is the bare minimum of a package.
-
 
 ```
 Package.describe({
@@ -143,7 +141,8 @@ Obviously you will want to do much, much more than change a couple of colors. Bu
 
 ## Using Custom Layouts
 
-_Some of the concepts in this section will be easier to understand if you have read this section of the Meteor Guide_: http://guide.meteor.com/blaze.html
+_Some of the concepts in this section will be easier to understand if you have read [Blaze](http://guide.meteor.com/blaze.html) section of the
+Meteor Guide_
 
 ### Purpose:
 
@@ -187,7 +186,8 @@ In order to change our default layout, we need add a record to the **registry** 
 special `main.js` that will add some global options.
 
 __Note__: If you just want to override the homepage and leave everything else alone, you can do that by adding special
-INDEX_OPTIONS parameters to this `main.js` file. See "Changing the index page layout" on this page in the docs. https://docs.reactioncommerce.com/reaction-docs/development/layout
+INDEX_OPTIONS parameters to this `main.js` file. See the ["Changing the index page layout"](https://docs.reactioncommerce.com/reaction-docs/development/layout)
+documentation for more info.
 
 
 First let's create our `main.js` with our custom layout. You will not place this in your package but in the root of
@@ -197,6 +197,7 @@ the application so that it will be evaluated. The `main.js` just looks like this
 DEFAULT_LAYOUT = "coreLayoutBeesknees";
 DEFAULT_WORKFLOW = "coreWorkflow";
 ```
+
 (this file is in the root on the repo but not included in the `package.js` so if you want you could just symlink it to
 the app root to store any changes in source control)
 
@@ -215,6 +216,7 @@ ReactionCore.registerPackage({
   autoEnable: true,
 });
 ```
+
 (unlike most of the files we have been working with, this is not a Meteor standard, but a Reaction-specific file)
 
 To the `registry` key we are going to add a `layout` entry that looks like this:
@@ -277,15 +279,17 @@ of Meteor packages. You can add these entries to your `package.js` before the `a
   api.use("http");
   api.use("reactive-var");
   api.use("reactive-dict");
-  ```
-  We're not using all of these right now, but it's best to just get them out of the way.
+```
 
-  Now let's add the `register.js` file we just created, this time this file is used only on the server.
+We're not using all of these right now, but it's best to just get them out of the way.
 
-  ```
-  api.addFiles("server/register.js", "server");
-  ```
-  Because we have made changes to the registry, you must now `./reaction reset` for your changes to take affect.
+Now let's add the `register.js` file we just created, this time this file is used only on the server.
+
+```
+api.addFiles("server/register.js", "server");
+```
+
+Because we have made changes to the registry, you must now `./reaction reset` for your changes to take affect.
 
 ## Customizing Templates
 
@@ -310,6 +314,7 @@ Let's also add this file to our `package.js` so that it will be picked up by Met
 
 Ok, still a blank site because we have nothing in our layout. Let's add back in our main section for now:
 
+
 ```
   <main role="main" id="main">
     <span id="layout-alerts">{{> inlineAlerts}}</span>
@@ -324,6 +329,7 @@ Ok, still a blank site because we have nothing in our layout. Let's add back in 
 ```
 
 See that line that says:
+
 ```
 {{> Template.dynamic template=template}}
 ```
@@ -340,7 +346,7 @@ of displaying products? Well you have two choices:
 Do this if you are just changing the HTML of the template and not the behavior. This will save you from having to
 recreate a lot of the default behavior just because you want to massage the HTML a little.
 
-(see: https://github.com/aldeed/meteor-template-extension for more information)
+See the [Template Extensions Repo](https://github.com/aldeed/meteor-template-extension) for more information
 
 1. **Change the entry in the layout record to point to your template.**
 
@@ -460,6 +466,7 @@ Mongo is running on port 3001 so your command to export the `Products` collectio
 ```
 mongoexport --db meteor --collection Products --port 3001 --jsonArray --pretty > Products.json
 ```
+
 Note that while MongoDB is not a relational database, things like Products and Shops are tied to each via their
 unique ID's. So it's good to be conscious of that when exporting things. For example, all products are tied to a Shop
 and if you don't have a Shop with that ID the import will not work.
@@ -472,8 +479,8 @@ Now you should have your fixtures ready to go
 In any web framework, "routes" are one of the core elements of what happens on a website. Certainly rendering content
 when a user hits a particular URL is a majority of what happens in web development.
 
-Reaction Commerce uses the FlowRouter package (https://github.com/kadirahq/flow-router) for it's routing and discussing
-ll the specifics of how this works is beyond the scope of this document. However, to add simple routes it's not
+Reaction Commerce uses the [FlowRouter package](https://github.com/kadirahq/flow-router) for it's routing and discussing
+all the specifics of how this works is beyond the scope of this document. However, to add simple routes it's not
 necessary to understand that much about FlowRouter. One important element to understand is that Reaction Commerce
 stores all it's Routes in the "Registry" in the database, which allows packages to dynamically add routes along
 with their functionality, and even override or remove existing router. For more in-depth coverage of Routing you will
@@ -499,6 +506,7 @@ This entry will look like this (placed after the `autoEnable: true` entry):
     }
   ],
   ```
+
   The `route` entry is the URL that will match the users URL. (for how to include parameters in the route, please see
   the RC documentation or the FlowRouter documentation) The `name` is the string by which you will refer to this route
   in other parts of the application. The `template` is the template that will be rendered when the route is visited,
@@ -519,6 +527,7 @@ necessary). Workflows are simply an array of ordered records that point to a tem
 workflow looks like in the database. Each a record in the `reaction-checkout` package entry (in the Packages collection):
 
 Login:
+
 ```
 {
     "template" : "checkoutLogin",
@@ -534,7 +543,9 @@ Login:
     "enabled" : true
 }
 ```
+
 Address Book:
+
 ```
 {
     "template" : "checkoutAddressBook",
@@ -550,7 +561,9 @@ Address Book:
     "enabled" : true
 }
 ```
+
 Shipping Options:
+
 ```
 {
     "template" : "coreCheckoutShipping",
@@ -568,6 +581,7 @@ Shipping Options:
 ```
 
 Review:
+
 ```
 {
     "template" : "checkoutReview",
@@ -583,7 +597,9 @@ Review:
     "enabled" : true
 }
 ```
+
 and Completion:
+
 
 ```
 {
@@ -600,6 +616,7 @@ and Completion:
     "enabled" : true
 }
 ```
+
 To change this workflow you simple need to modify these records. In our example we are going to change the template for
 the Review step to a custom one (which will actually look just mostly like the original, but you can imagine that you
 could do a lot more.)
@@ -680,15 +697,19 @@ Because our package is loaded last, even though there is already an Accounts sch
 the built-in one and both forms and database inserts will use our custom one.
 
 ## Adding MetaData
+
 (under construction)
 
 ## Adding Custom Hooks
+
 (under construction)
 
 ## Creating a Custom Payment Provider
+
 (under construction)
 
 ## Creating a Custom Shipping Provider
+
 (under construction)
 
 
