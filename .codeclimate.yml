@@ -7,8 +7,9 @@ engines:
     enabled: false
   markdownlint:
     enabled: true
-    config:
-      line_length: 120
+    checks:
+      MD013:
+        enabled: false
   shellcheck:
     enabled: true
   fixme:
