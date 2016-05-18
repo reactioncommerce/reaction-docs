@@ -1,5 +1,5 @@
 # Configuration
-Reaction uses `private/data/reaction.json` for the configuration of Reaction packages and  [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
+Reaction uses `private/settings/reaction.json` for the configuration of Reaction packages and  [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
 ## Meteor settings
 You can use custom [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) by copying `settings/dev.settings.json` to `settings/settings.json`
