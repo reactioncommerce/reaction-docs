@@ -8,6 +8,11 @@ Before getting started, here's some resources worth reviewing:
 - [Using NPM + Browserify](http://guide.meteor.com/build-tool.html#client-npm)
 - [Less](http://guide.meteor.com/build-tool.html#less)
 
+## Customization Guide
+If you are creating a custom store with Reaction you probably want to start with the
+[customization guide](/developer/tutorial/customization.md) which walks you through many of the common customizations that
+you may require and how to create your own custom package to store them.
+
 ## Packages
 A number of packages are included in the `reaction` local `packages` folder. In this documentation, these local packages are commonly referred to as "Core" packages.
 
