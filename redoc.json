@@ -39,12 +39,6 @@
       "default": true
     }, {
       "class": "guide-sub-nav-item",
-      "alias": "tutorial",
-      "label": "Customization Guide",
-      "repo": "reaction-docs",
-      "docPath": "tutorial/customization.md"
-    }, {
-      "class": "guide-sub-nav-item",
       "alias": "dashboard",
       "label": "Dashboard",
       "repo": "reaction-docs",
@@ -79,6 +73,12 @@
       "label": "FAQs",
       "repo": "reaction-docs",
       "docPath": "admin/faq.md"
+    }, {
+      "class": "guide-nav-item",
+      "alias": "tutorial",
+      "label": "Customization Guide",
+      "repo": "reaction-docs",
+      "docPath": "tutorial/customization.md"
     }, {
       "class": "guide-nav-item",
       "alias": "getting-started-developing-with-reaction",
