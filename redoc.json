@@ -78,7 +78,7 @@
       "alias": "tutorial",
       "label": "Customization Guide",
       "repo": "reaction-docs",
-      "docPath": "tutorial/customization.md"
+      "docPath": "developer/tutorial/customization.md"
     }, {
       "class": "guide-nav-item",
       "alias": "getting-started-developing-with-reaction",
