@@ -14,7 +14,7 @@ While you can use the Flow Router API, `ReactionRouter.route()` to directly add 
 
 Routes are very simple and based on the syntax of [path-to-regexp](https://github.com/pillarjs/path-to-regexp) which is used in both [Express](http://expressjs.com/) and `iron:router`.
 
-The **Reaction package registry** entries define routes that can be used with the Flow Router API.
+The **Reaction package registry** entries define routes that can be used with the Flow Router API. You can also pass local functions to the registry.
 
 ```javascript
   registry: [{
@@ -25,7 +25,26 @@ The **Reaction package registry** entries define routes that can be used with th
   }]
 ```
 
-You can also pass local functions to the registry.
+When there are multiple shops in Reaction, we'll automatically prefix a url safe (transliterated) version of the shop name before the route. Where there is only one shop, the prefix will not be used.
+
+**Multi-shop prefixed urls structure**
+
+```
+//host/store: Reaction Test/product/title: Example Product/
+//localhost:3000/reaction-test/product/example-product
+```
+
+To define a route in the registry that does not add a prefix you can define the route in the registry _without a leading "/"_.
+
+```javascript
+  registry: [{
+    route: "about",
+    name: "about",
+    template: "about"
+  }]
+```
+
+This route will resolve to `//localhost:3000/about`.
 
 ### Permissions
 
