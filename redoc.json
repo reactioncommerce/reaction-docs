@@ -117,6 +117,12 @@
       "docPath": "developer/contributing.md"
     }, {
       "class": "guide-nav-item",
+      "alias": "tutorial",
+      "label": "Customization Guide",
+      "repo": "reaction-docs",
+      "docPath": "developer/tutorial/customization.md"
+    },{
+      "class": "guide-nav-item",
       "alias": "architecture",
       "label": "Architecture",
       "repo": "reaction-docs",
