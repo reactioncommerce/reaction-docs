@@ -10,4 +10,4 @@ Reaction is developed on [Node](https://nodejs.org) and the [Meteor](https://met
 
 The Reaction documentation source is located in the [reactioncommerce/reaction-docs](https://github.com/reactioncommerce/reaction-docs) repository, while this documentation site is a Meteor application [reactioncommerce/redoc](https://github.com/reactioncommerce/redoc).
 
-We welcome [contributions](https://reactioncommerce.com/contributors), and ideas, feedback and questions via [GitHub Isues](https://github.com/reactioncommerce/reaction/issues?state=open). For general discussion and support, check out our [chat room](https://gitter.im/reactioncommerce/reaction).
+We welcome [contributions](https://reactioncommerce.com/contributors), and ideas, feedback and questions via [GitHub Issues](https://github.com/reactioncommerce/reaction/issues?state=open). For general discussion and support, check out our [chat room](https://gitter.im/reactioncommerce/reaction).
