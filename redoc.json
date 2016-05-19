@@ -75,12 +75,6 @@
       "docPath": "admin/faq.md"
     }, {
       "class": "guide-nav-item",
-      "alias": "tutorial",
-      "label": "Customization Guide",
-      "repo": "reaction-docs",
-      "docPath": "tutorial/customization.md"
-    }, {
-      "class": "guide-nav-item",
       "alias": "getting-started-developing-with-reaction",
       "label": "Developer",
       "repo": "reaction-docs",
