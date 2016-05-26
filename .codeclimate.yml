@@ -7,6 +7,11 @@ engines:
     enabled: false
   markdownlint:
     enabled: true
+    checks:
+      MD013:
+        enabled: false
+      MD036:
+        enabled: false
   shellcheck:
     enabled: true
   fixme:

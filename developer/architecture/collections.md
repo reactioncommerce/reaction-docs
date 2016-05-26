@@ -1,34 +1,72 @@
 # Collections
 Meteor and Reaction store data in `collections`.  Collections are declared with [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) which provides `find`,`findOne`,`update`,`upsert`, `remove` methods.
 
-Client example [from Meteor docs](http://docs.meteor.com/#/full/update):
+## Client Example
+Listing products
+
+**myTemplate.html**
+
+```html
+<template name="myTemplate">
+  <ul>
+    {{#each product in products}}
+      <li>{{product.title}}</li>
+    {{/each}}
+  </ul>
+</template>
+```
+
+**myTemplate.js**
 
 ```js
-// When the givePoints button in the admin dashboard is pressed,
-// give 5 points to the current player. The new score will be
-// immediately visible on everyone's screens.
-Template.adminDashboard.events({
-  'click .givePoints': function () {
-    Players.update(Session.get("currentPlayer"), {$inc: {score: 5}});
+// Import Collections
+import { Template } from "meteor/templating";
+import { Collections } from "meteor/reactioncommerce:reaction-collections";
+
+Template.myTemplate.onCreated(function () {
+  this.subscribe("products");
+});
+
+Template.myTemplate.helpers(function () {
+  products() {
+    return Collections.Products.find({});
   }
 });
 ```
 
-Server example [from Meteor docs](http://docs.meteor.com/#/full/update):
+See the [Meteor docs for collection find](http://docs.meteor.com/#/full/find).
+
+## Server Example
+**Server**
 
 ```js
-// Give the "Winner" badge to each user with a score greater than
-// 10. If they are logged in and their badge list is visible on the
-// screen, it will update automatically as they watch.
+import { Collections } from "meteor/reactioncommerce:reaction-collections";
+
+function updateProductTitle(productId, title) {
+  Collections.Products.update({
+    _id: productId
+  }, {
+    $set: {
+      title
+    }
+  });
+}
+
+// Register you method as a Meteor Method
 Meteor.methods({
-  declareWinners: function () {
-    Players.update({score: {$gt: 10}},
-                   {$addToSet: {badges: "Winner"}},
-                   {multi: true});
-  }
+  "myNamespace/updateProductTitle": updateProductTitle
 });
 ```
 
+**Call from client or server**
+
+```js
+Meteor.call("myNamespace/updateProductTitle", "<product id>", "New Title");
+```
+
+See the [Meteor docs for collection updating](http://docs.meteor.com/#/full/update).
+
+## Security
 Client collection access is restricted through a Meteor [publication/subscription](http://docs.meteor.com/#/full/meteor_publish) model and policies implemented with the [ongoworks:meteor-security](https://github.com/ongoworks/meteor-security) package.
 
 ## Reaction Collections

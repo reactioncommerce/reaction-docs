@@ -1,13 +1,45 @@
-# Layout
+# Layouts
 
-Layouts are a combination a `layout` and a series of `workflow` elements. 
+Layouts are a combination of a `layout` object and an array of `workflow` objects. They are initially created in the `Packages` collection during the registry loading, and are cloned to the `Shops` collection which is where the application refers to them, and where they can be modified or disabled.
 
-The layout will render a Blaze template as defined in the layout structure.
+Layouts will [render a Blaze template](http://docs.meteor.com/#/full/blaze_render) as defined in the layout **structure**.
 
-The workflow elements will be rendered with the `ReactionTemplates` helper, and are meant to be used in combination with the layout structure.
+The workflow elements will be rendered with the `ReactionTemplates` helper, and are meant to be used in combination with the layout **structure**.
 
-## Package Registry - Layout
-From a `Packages.registry` document as defined in the `reaction-checkout` package.
+Layouts are meant to be created using the Package Registry, once they are defined in the Registry, they are copied into the `Shops.layout` array and referenced from there.  The Registry serves as the "source of truth", allowing customizations to be made directly to the individual Shops. In the case where we have two layouts with the same key structure (`layout`, `workflow`), the Array is loaded in reverse order, so that the newest layout will be used. Layouts can also be disabled in the data with `enabled:false`. This is reserved for a future UI implementation.
+
+## Changing the global layout
+
+If you need to override the default layout values from `common/config.js`, you can override by creating `main.js` and setting the values there.
+
+```javascript
+DEFAULT_LAYOUT = "coreLayout";
+DEFAULT_WORKFLOW = "coreWorkflow";
+```
+
+`main.js` is only a suggestion. You'll need to create it, as it’s not a file in the repo, and is loaded last and [eagerly by Meteor](http://docs.meteor.com/#/full/modules), thus overriding the values provided by `common/config.js`. *This is a Reaction core file, and thus not a good file to edit if we want to avoid annoying Git conflicts*.
+
+## Changing the index page layout
+
+For convenience, the home page structure can be overridden with `INDEX_OPTIONS`.
+
+```javascript
+INDEX_OPTIONS = {
+  template: "customHomePageTemplate",
+  layoutHeader: "layoutHeader",
+  layoutFooter: "layoutFooter",
+  notFound: "notFound",
+  dashboardControls: "dashboardControls",
+  adminControlsFooter: "adminControlsFooter"
+};
+```
+
+This example would load the `customHomePageTemplate` template, instead of the `coreLayout` default template of `products`.
+
+
+### Example layout from checkout
+
+Layouts can work in conjunction with [workflows](developer/architecture/workflow.md).  Here is an example of the layout defined in the `reaction-checkout` package in `server/register.js`.
 
 ```javascript
   layout: [{
@@ -69,6 +101,11 @@ From a `Packages.registry` document as defined in the `reaction-checkout` packag
   }]
 });
 ```
-### CoreLayout 
+## Default layout placement
+
+Layouts work in conjunction with two helpers.  The `reactionTemplate` and `reactionApps` helpers loop through matching workflow and layout elements to render in specific locations.  
+
+Here's a diagram of the default layout.
+
 
 ![CoreLayout](/assets/developer-registry-layout.png)
