@@ -10,28 +10,32 @@ Layouts are meant to be created using the Package Registry, once they are define
 
 ## Changing the global layout
 
-If you need to override the default layout values from `common/config.js`, you can override by creating `main.js` and setting the values there.
+If you need to override the default layout values from `client/config/defaults.js`, you can override by creating `main.js` and setting the values there.
 
 ```javascript
-DEFAULT_LAYOUT = "coreLayout";
-DEFAULT_WORKFLOW = "coreWorkflow";
+import { Session } from "meteor/session";
+
+Session.set("DEFAULT_LAYOUT", "coreLayout");
+Session.set("DEFAULT_WORKFLOW", "coreWorkflow");
 ```
 
-`main.js` is only a suggestion. You'll need to create it, as it’s not a file in the repo, and is loaded last and [eagerly by Meteor](http://docs.meteor.com/#/full/modules), thus overriding the values provided by `common/config.js`. *This is a Reaction core file, and thus not a good file to edit if we want to avoid annoying Git conflicts*.
+`main.js` is only a suggestion. You'll need to create it, as it’s not a file in the repo, and is loaded last and [eagerly by Meteor](http://docs.meteor.com/#/full/modules), thus overriding the values provided by `client/config/config.js`. *This is a Reaction core file, and thus not a good file to edit if we want to avoid annoying Git conflicts*.
 
 ## Changing the index page layout
 
 For convenience, the home page structure can be overridden with `INDEX_OPTIONS`.
 
 ```javascript
-INDEX_OPTIONS = {
+import { Session } from "meteor/session";
+
+Session.set("INDEX_OPTIONS", {
   template: "customHomePageTemplate",
   layoutHeader: "layoutHeader",
   layoutFooter: "layoutFooter",
   notFound: "notFound",
   dashboardControls: "dashboardControls",
   adminControlsFooter: "adminControlsFooter"
-};
+});
 ```
 
 This example would load the `customHomePageTemplate` template, instead of the `coreLayout` default template of `products`.
