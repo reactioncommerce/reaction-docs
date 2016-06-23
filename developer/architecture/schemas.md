@@ -5,12 +5,24 @@ However, we don't want to just get completely crazy, so we define a **Schema** t
 
 As we apply each additional layer of structure, it's good to remember that there are usually server side methods to bypass these layers as well.
 
-## Reaction Schemas
-Schemas implement the [simple-schema](https://github.com/aldeed/meteor-simple-schema) package.
+## Definition and import
+Schemas are implemented using the [aldeed:simple-schema](https://github.com/aldeed/meteor-simple-schema) package.
 
-The Core Collections defined in [reactioncommerce:reaction-collection](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-collections) attach the Core Schemas defined in [reactioncommerce:reaction-schemas](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-schemas).
+When the Reaction.Collections are defined in the common code of `lib/collections`  the Schemas defined in `lib/collections/schemas` are attached.
 
-[ReactionCore.Schemas ](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-schemas/common/schemas) | *
+Schemas should be imported to use
+
+```js
+import * as Schemas from "/lib/collections/schemas";
+```
+or an individual schema definition
+
+```js
+import { PackageConfig } from "/lib/collections/schemas/registry";
+```
+### Reaction Schemas
+
+[Reaction.Schemas ](https://github.com/reactioncommerce/reaction/tree/development/lib/collections/schemas) | *
 ------------------------------------------------------------------------------------------------------------------------------- | -----------------
 Email                                                                                                                           | Address
 Accounts                                                                                                                        | CartItem
@@ -41,12 +53,14 @@ ReactionCore provides two Autovalue [methods in `reactioncommerce:reaction-schem
 /**
  * Example Schema with Autovalue
  */
+import { SimpleSchema } from "meteor/aldeed:simple-schema";
+import { shopIdAutoValue } from "./helpers";
 
-ReactionCore.Schemas.Example = new SimpleSchema({
+export const SchemaExample =  SimpleSchema({
   shopId: {
     type: String,
     index: 1,
-    autoValue: ReactionCore.shopIdAutoValue,
+    autoValue: shopIdAutoValue,
     label: "Example shopId"
   },
   createdAt: {
@@ -79,8 +93,9 @@ Used for schema injection autoValue of a random id.
  * PackageWorkflow is controlling view flow
  * Shop defaultWorkflow is defined in Shop
  */
+import { SimpleSchema } from "meteor/aldeed:simple-schema";
 
-ReactionCore.Schemas.Workflow = new SimpleSchema({
+export const Workflow = new SimpleSchema({
   status: {
     type: String,
     defaultValue: "new"
@@ -93,11 +108,14 @@ ReactionCore.Schemas.Workflow = new SimpleSchema({
 ```
 
 #### Extending a Schema
-This example extends the `ReactionCore.Schemas.PackageConfig` and adds new properties to the schema.
+This example extends the `Schemas.PackageConfig` and adds new properties to the schema.
 
 ```js
-ReactionCore.Schemas.PaypalPackageConfig = new SimpleSchema([
-  ReactionCore.Schemas.PackageConfig, {
+import { SimpleSchema } from "meteor/aldeed:simple-schema";
+import { PackageConfig } from "/lib/collections/schemas/registry";
+
+export const PaypalPackageConfig = new SimpleSchema([
+  PackageConfig, {
     "settings.express_enabled": {
       type: Boolean,
       defaultValue: true
@@ -110,21 +128,6 @@ ReactionCore.Schemas.PaypalPackageConfig = new SimpleSchema([
   }
 ]);
 ```
-
-### Description of some non-obvious fields
-#### Product
-- **ancestors: Array** ancestors array for product is always empty in current version
-- **price: String** variants' price range, it is needed for denormalizing variants prices to display it in `productGrid`
-- **isLowQuantity: Boolean** indicates when at least one of variants' `inventoryQuantity` is lower than their `lowInventoryWarningThreshold`. Used to display 'Limited Supply' label in UI
-- **isSoldOut: Boolean** indicates when all variants' `inventoryQuantity` is zero
-- **isBackorder: Boolean** Indicates when the seller has allowed the sale of product which is not in stock
-
-#### ProductVariant
-- **ancestors: Array** contains ancestors of item. Currently it could be one or two `_ids`
-- **index: Number** position relative to other variants, similarly to index in array. This is needed for moving variants through list (i.e. drag'n'drop)
-- **minOrderQuantity: Number** restricts the minimum quantity which can be ordered. It is used inside cart `quantityProcessing` function
-- **inventoryPolicy: Boolean** if `false` it means items should always be sale-able regardless of inventory (we take backorders). if `true` then we warn when less than threshold, and stop accepting orders at 0
-- **lowInventoryWarningThreshold: Number** the count below which the variant is considered 'limited'
 
 # Multiple Schemas
 Multiple Schema functionality allows us to use different schemas for different documents within the same collection.
@@ -145,58 +148,6 @@ MyCollection.simpleSchema(object, { selector: { field: 'value' } });
 
 ## Product Schema
 In `reaction-collections`, we attach two different schemas to the same `Products` collection.
-
-Multiple Schema Example:
-
-```
-Product = new SimpleSchema({
-  _id: {
-    type: String,
-    optional: true
-  },
-  title: {
-    type: String,
-    defaultValue: ""
-  },
-  type: {
-    label: "Type",
-    type: String,
-    defaultValue: "simple"
-  },
-  description: {
-    type: String,
-    defaultValue: "This is a simple product."
-  }
-});
-
-ProductVariant = new SimpleSchema({
-  _id: {
-    type: String,
-    optional: true
-  },
-  title: {
-    type: String,
-    defaultValue: ""
-  },
-  optionTitle: {
-    label: "Option",
-    type: String,
-    optional: true
-  },
-  type: {
-    label: "Type",
-    type: String,
-    defaultValue: "variant"
-  },
-  price: {
-    label: "Price",
-    type: Number,
-    decimal: true,
-    min: 0,
-    optional: true,
-    defaultValue: 5
-  }
-```
 
 The multiple schemas are attached to the collection with a **selector option**.
 
