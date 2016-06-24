@@ -1,4 +1,5 @@
 # Configuration
+
 Reaction uses `/private/settings/reaction.json` for the configuration of Reaction packages and  [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
 ## Meteor settings
@@ -27,6 +28,7 @@ For convenience, the initial Reaction administrator can be configured here.
 `./reaction` is the equivalent of `meteor --settings settings/<your-settings>.json`
 
 ### Environment variables
+
 You can also use `environment` variables for settings, useful for headless and automated vm configuration.
 
 The `REACTION_EMAIL`, `REACTION_USER`, `REACTION_AUTH` environment variables will configure the default administrator account. These variables and `isDebug` are the only _Reaction specific_ variables used from settings.json.
@@ -44,19 +46,23 @@ export REACTION_EMAIL="<login email>"
 _Note: Environment variables will override variables set in settings.json_
 
 #### ROOT_URL
+
 _Export `ROOT_URL` and [packages/reaction-core/registry.js](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/registry.js) will update the domain in the `shops` collection to match the domain from `ROOT_URL`._ This lets you use alternate domains, or enforce SSL on a fresh installation.  An empty ROOT_URL will just default to _localhost_.
 
 #### MAIL_URL
+
 To send email you should configure the administrative SMTP email server. [env MAIL_URL variable](https://docs.meteor.com/#email_send)
 
 _Note: This is not required, but password reset, and a few other items that use email templates won't work unless you configure this._
 
 #### isDebug
+
 Set the [logging level](/developer/architecture/logging.md). Defaults to `info`.
 
 Accepts `true`,`false` or a [Bunyan](https://github.com/trentm/node-bunyan) logging level.
 
 ## Default Data
+
 Reaction installs sample data, translations, and other fixture defaults from `/private/data/` and `/private/data/i18n` using the `Reaction.Import` class.
 
  - Products.json
@@ -69,6 +75,7 @@ You can overwrite or delete these import files to alter the default data. If alt
 *Note:  the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method (except when used in packages).*
 
 ## Importing Data
+
 The `Reaction.Import` class provides import functionality.
 
 See: [import.md](/developer/core/import.md) for documentation on `Reaction.Import`.
@@ -86,6 +93,7 @@ Meteor.startup(function () {
 ```
 
 ## Package Settings
+
 Reaction packages configuration and [settings](http://docs.meteor.com/api/core.html#Meteor-settings) are loaded on startup from `/private/settings/reaction.json`
 
 **/private/settings/reaction.json**
