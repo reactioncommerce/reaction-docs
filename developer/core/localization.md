@@ -1,6 +1,6 @@
 # Localization
 ## Currency Localization
-Currency formatting is determined by users locale currency. The currency formatting is stored in the `Shops.currencies` object, and the configuration data is available in the client as `ReactionCore.Locale`. There are 2 important objects here:
+Currency formatting is determined by users locale currency. The currency formatting is stored in the `Shops.currencies` object, and the configuration data is available in the client as `Reaction.Locale`. There are 2 important objects here:
 * `currency` - contains data about user's currency;
 * `shopCurrency` - contains data about base shop currency.
 
@@ -12,7 +12,7 @@ We've created `formatPrice` and `currencySymbol` helpers for using in templates:
 
 We use the [accounting.js](https://openexchangerates.github.io/accounting.js/) library for formatting.
 
-Typical usage is `price = accounting.formatMoney price, ReactionCore.Locale.currency`
+Typical usage is `price = accounting.formatMoney price, Reaction.Locale.currency`
 
 _Note: changing base shop currency is not reactive. Refresh/restart to see changes._
 
