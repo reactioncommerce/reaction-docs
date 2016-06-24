@@ -189,6 +189,12 @@
       "docPath": "developer/architecture/layout.md"
     }, {
       "class": "guide-sub-nav-item",
+      "alias": "product-variants",
+      "label": "Layout",
+      "repo": "reaction-docs",
+      "docPath": "developer/architecture/product-variants.md"
+    }, {
+      "class": "guide-sub-nav-item",
       "alias": "workflow",
       "label": "Workflow",
       "repo": "reaction-docs",
