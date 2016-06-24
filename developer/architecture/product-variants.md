@@ -1,6 +1,5 @@
 # Products and Variants
 
-
 ## Schemas
 
 In `lib/collections`, we attach two different schemas to the same `Products` collection.
@@ -61,14 +60,16 @@ export const ProductVariant = new SimpleSchema({
 
 Most of the fields are pretty obvious, but here are some of the non-obvious fields contained in the product schema explained.
 
-#### Product
+### Product
+
 - **ancestors: Array** ancestors array for product is always empty in current version
 - **price: String** variants' price range, it is needed for denormalizing variants prices to display it in `productGrid`
 - **isLowQuantity: Boolean** indicates when at least one of variants' `inventoryQuantity` is lower than their `lowInventoryWarningThreshold`. Used to display 'Limited Supply' label in UI
 - **isSoldOut: Boolean** indicates when all variants' `inventoryQuantity` is zero
 - **isBackorder: Boolean** Indicates when the seller has allowed the sale of product which is not in stock
 
-#### ProductVariant
+### ProductVariant
+
 - **ancestors: Array** contains ancestors of item. Currently it could be one or two `_ids`
 - **index: Number** position relative to other variants, similarly to index in array. This is needed for moving variants through list (i.e. drag'n'drop)
 - **minOrderQuantity: Number** restricts the minimum quantity which can be ordered. It is used inside cart `quantityProcessing` function
