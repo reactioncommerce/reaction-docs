@@ -189,6 +189,12 @@
       "docPath": "developer/architecture/layout.md"
     }, {
       "class": "guide-sub-nav-item",
+      "alias": "product-variants",
+      "label": "Layout",
+      "repo": "reaction-docs",
+      "docPath": "developer/architecture/product-variants.md"
+    }, {
+      "class": "guide-sub-nav-item",
       "alias": "workflow",
       "label": "Workflow",
       "repo": "reaction-docs",
@@ -331,10 +337,7 @@
       "label": "Components",
       "repo": "reaction-docs",
       "docPath": "developer/components/README.md"
-    }, {
-      "label": "Button Group",
-      "docPath": "developer/components/button-group.md"
-    }, {
+    },  {
       "label": "Button",
       "docPath": "developer/components/button.md"
     }, {
@@ -343,31 +346,10 @@
     }, {
       "label": "Icon",
       "docPath": "developer/components/icon.md"
-    }, {
-      "label": "Items",
-      "docPath": "developer/components/items.md"
-    }, {
-      "label": "Metadata",
-      "docPath": "developer/components/metadata.md"
-    }, {
-      "label": "Numeric Input",
-      "docPath": "developer/components/numeric-input.md"
-    }, {
-      "label": "Popover",
-      "docPath": "developer/components/popover.md"
-    }, {
+    },  {
       "label": "Select",
       "docPath": "developer/components/select.md"
-    }, {
-      "label": "Separator",
-      "docPath": "developer/components/separator.md"
-    }, {
-      "label": "Tags",
-      "docPath": "developer/components/tags.md"
-    }, {
-      "label": "Text Field",
-      "docPath": "developer/components/textfield.md"
-    }, {
+    },  {
       "label": "Tooltip",
       "docPath": "developer/components/tooltip.md"
     }, {
@@ -403,24 +385,12 @@
       "label": "Priority",
       "repo": "reaction-docs",
       "docPath": "developer/packages/including.md"
-    }, {
-      "class": "guide-sub-nav-item",
-      "alias": "publishing",
-      "label": "Publishing",
-      "repo": "reaction-docs",
-      "docPath": "developer/packages/publishing.md"
-    }, {
+    },  {
       "class": "guide-nav-item",
       "alias": "testing-reaction",
       "label": "Testing",
       "repo": "reaction-docs",
       "docPath": "developer/testing/testing.md"
-    }, {
-      "class": "guide-sub-nav-item",
-      "alias": "using-velocity-for-testing",
-      "label": "Velocity",
-      "repo": "reaction-docs",
-      "docPath": "developer/testing/velocity.md"
     }, {
       "class": "guide-sub-nav-item",
       "alias": "acceptance-testing",

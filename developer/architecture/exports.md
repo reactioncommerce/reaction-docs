@@ -1,27 +1,79 @@
-# Export
-## Namespaces
-There is a measure of [built in namespacing already provided by Meteor.](http://docs.meteor.com/#/full/namespacing).
+# Using Import and Export
 
-Meteor constructs: `Session`, `Meteor.methods`, `Meteor.publish/subscribe`, `Mongo.Collection` are global.
+[Meteor allows you to import](https://guide.meteor.com/structure.html#intro-to-import-export) CSS, HTML and JavaScript in Reaction. 
 
-`globals` defined in the packages are scoped to the package, unless [exported](http://docs.meteor.com/#/full/pack_export).
 
-## Exports
-`reaction/packages/reaction-core/common/global.js` configures the `ReactionCore` global.
+## import
 
-The `reaction-core` package exports `ReactionCore`, on both client and server:
+[Meteor functions](http://docs.meteor.com/api/core.html) such  as `Session`, `Meteor.methods`, `Meteor.publish/subscribe`, `Mongo.Collection`.  While Meteor does make many of these available in the global exported `Meteor` object, you can also import Meteor.
 
-```javascript
-// exported, global/window scope
-ReactionCore = {};
-ReactionCore.Schemas = {}; // Schemas defined in common/schemas
-ReactionCore.Collections = {}; // Collections defined in common/collections
-ReactionCore.Helpers = {}; // Misc.helpers defined in common/helpers
-ReactionCore.Locale = {}; // i18n translation object
-ReactionCore.Log = {}; // Logger instantiation (server)
+```js
+import { Meteor } from "meteor/meteor";
 ```
 
-## Meteor 1.3
-> Future Alert: Exporting ReactionCore.methods
+### npm
 
-Upcoming Meteor 1.3 will bring support for `import`, `export` and `require`.
+To use an npm package from a file you can import the name of the package:
+
+```js
+import { isArray } from "lodash";
+```
+
+## export
+
+Meteor also supports the standard ES2015 modules `export` syntax:
+
+```js
+export const listRenderHold = LaunchScreen.hold();  // named export
+export { Todos };                                   // named export
+export default Lists;                               // default export
+export default new Collection('lists');             // default export
+```
+
+### Reaction 
+```js
+// import Logger functions and Reaction global object.
+import { Logger, Reaction } from "/server/api";
+```
+The convenience wrapper `Reaction`, exports a number of helpers from Reaction Core, that can be used without an independent import:
+
+```js
+/**
+ * Reaction methods (server)
+ */
+const Reaction = Object.assign(
+  Core,
+  AssignRoles,
+  { Collections },
+  { Import },
+  LoadSettings,
+  { Log },
+  { Router },
+  { Schemas },
+  SetDomain,
+  ShopName,
+  UI,
+  Utils
+);
+export default Reaction;
+```
+```js
+// import Logger functions and Reaction global object.
+import { Reaction } from "/server/api";
+```
+The includes additional helpers:
+
+*   Reaction
+*   Router
+*   GeoCoder
+*   Hooks
+*   Logger
+*   MethodHooks
+ 
+A similar export is available from `client/api` for client Reaction functions.
+
+```js
+// import Logger functions and Reaction global object.
+import { Reaction } from "/client/api";
+```
+

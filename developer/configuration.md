@@ -1,5 +1,6 @@
 # Configuration
-Reaction uses `private/settings/reaction.json` for the configuration of Reaction packages and  [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
+
+Reaction uses `/private/settings/reaction.json` for the configuration of Reaction packages and  [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
 ## Meteor settings
 You can use custom [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) by copying `settings/dev.settings.json` to `settings/settings.json`
@@ -27,6 +28,7 @@ For convenience, the initial Reaction administrator can be configured here.
 `./reaction` is the equivalent of `meteor --settings settings/<your-settings>.json`
 
 ### Environment variables
+
 You can also use `environment` variables for settings, useful for headless and automated vm configuration.
 
 The `REACTION_EMAIL`, `REACTION_USER`, `REACTION_AUTH` environment variables will configure the default administrator account. These variables and `isDebug` are the only _Reaction specific_ variables used from settings.json.
@@ -44,22 +46,57 @@ export REACTION_EMAIL="<login email>"
 _Note: Environment variables will override variables set in settings.json_
 
 #### ROOT_URL
+
 _Export `ROOT_URL` and [packages/reaction-core/registry.js](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/registry.js) will update the domain in the `shops` collection to match the domain from `ROOT_URL`._ This lets you use alternate domains, or enforce SSL on a fresh installation.  An empty ROOT_URL will just default to _localhost_.
 
 #### MAIL_URL
+
 To send email you should configure the administrative SMTP email server. [env MAIL_URL variable](https://docs.meteor.com/#email_send)
 
 _Note: This is not required, but password reset, and a few other items that use email templates won't work unless you configure this._
 
 #### isDebug
+
 Set the [logging level](/developer/architecture/logging.md). Defaults to `info`.
 
 Accepts `true`,`false` or a [Bunyan](https://github.com/trentm/node-bunyan) logging level.
 
-## Reaction configuration
-Reaction packages configuration and settings are loaded on startup from `private/settings/reaction.json`
+## Default Data
 
-**private/settings/reaction.json**
+Reaction installs sample data, translations, and other fixture defaults from `/private/data/` and `/private/data/i18n` using the `Reaction.Import` class.
+
+ - Products.json
+ - Shipping.json
+ - Shops.json
+ - Tags.json
+
+You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
+
+*Note:  the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method (except when used in packages).*
+
+## Importing Data
+
+The `Reaction.Import` class provides import functionality.
+
+See: [import.md](/developer/core/import.md) for documentation on `Reaction.Import`.
+
+_Example import of shipping records_
+
+```js
+import { Meteor} from "meteor/meteor";
+import { Reaction } from "/server/api";
+
+Meteor.startup(function () {
+  Reaction.Import.process(Assets.getText("data/Shipping.json"), ["name"], Reaction.Import.shipping);
+  Reaction.Import.flush();
+});
+```
+
+## Package Settings
+
+Reaction packages configuration and [settings](http://docs.meteor.com/api/core.html#Meteor-settings) are loaded on startup from `/private/settings/reaction.json`
+
+**/private/settings/reaction.json**
 
 ```json
 [
@@ -155,26 +192,15 @@ Reaction packages configuration and settings are loaded on startup from `private
 ]
 ```
 
-Note: _Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload._
+*Note:  Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload.*
 
-This `ReactionRegistry.loadSettings` method is used in `server/fixtures.js` to load Reaction package data on startup. This method can be used in custom packages as well.
+### loadSettings
 
 ```js
+// server side secure import of settings
+import { ReactionRegister } from "/server/api";
+
 ReactionRegistry.loadSettings(Assets.getText("settings/reaction.json"));
 ```
 
-## Importing Data
-The `reaction-core` package installs sample data, translations, and other fixture defaults from `packages/reaction-sample-data/private/data/`.
-
-The `ReactionImport` class provides import functionality.
-
-See: [import.md](/developer/core/import.md) for documentation on `ReactionImport`.
-
-_Example import of shipping records_
-
-```js
-Meteor.startup(function () {
-  ReactionImport.process(Assets.getText("private/data/Shipping.json"), ["name"], ReactionImport.shipping);
-  ReactionImport.flush();
-});
-```
+This `ReactionRegistry.loadSettings` method is made available in `server/api/core/index.js`.  This is the method that loads Reaction package data on startup. This method can be used in custom packages as well.

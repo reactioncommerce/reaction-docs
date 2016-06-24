@@ -4,7 +4,7 @@ When a Pull Request is made to the Reaction repo, there are four acceptance step
 When successful, Docker images are also pushed to [Docker Hub](https://hub.docker.com/u/reactioncommerce/).
 
 ## Continuous Integration
-[Circle CI](https://circleci.com/gh/reactioncommerce/reaction) runs our Velocity tests, with Docker images pushed after a successful test build.
+[Circle CI](https://circleci.com/gh/reactioncommerce/reaction) runs our tests, with Docker images pushed after a successful test build.
 
 ## Lint Review
 Automated duplication, security, style review using Code Climate.
