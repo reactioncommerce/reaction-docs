@@ -5,10 +5,11 @@ Reaction implements the [Bunyan](https://github.com/trentm/node-bunyan) logging 
 To configure logging you can modify `isDebug: true` in `settings.json`.  Value can be any true/false or any valid `Bunyan level` in `settings.json` or as an environment variable.
 
 ## Debug Log
+
 Setting a level of `debug` or higher will display verbose logs as JSON. The JSON format is also the storage / display format for production.
 
 ```js
-  isDebug:  "debug" 
+  isDebug:  "debug"
 ```
 
 Feel free to include verbose logging, but follow [Bunyan recommendations on log levels](https://github.com/trentm/node-bunyan#levels) and use appropriate levels for your messages.
@@ -27,6 +28,7 @@ The log levels in bunyan are as follows. The level descriptions are best practic
 Suggestions: Use "debug" sparingly. Information that will be useful to debug errors post mortem should usually be included in "info" messages if it's generally relevant or else with the corresponding "error" event. Don't rely on spewing mostly irrelevant debug messages all the time and sifting through them when an error occurs.
 
 ## Server Log
+
 **Example `server` logger:**
 
 ```js
@@ -48,8 +50,8 @@ Logger.error("Something error want to investigate", error);
 ```
 
 ## Custom
-To add custom logger output you can create a new logger instance:
 
+To add custom logger output you can create a new logger instance:
 
 ```js
 import bunyan from "bunyan";
