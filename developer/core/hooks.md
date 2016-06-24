@@ -46,15 +46,17 @@ This example hooks into the `orders/orderCompleted` method which takes one param
   After hooks can change the result values. Use `hooksProcessed` to keep
   track of how many modifications have been made.
  */
+  
+  import { MethodHooks } from "/server/api";
 
   // pass a method name and a hook function
-  ReactionCore.MethodHooks.after('orders/orderCompleted', function(options){
+  MethodHooks.after('orders/orderCompleted', function(options){
 
     // after function here
 
     // options.arguments is an array that carries all params on the original method.
     // For example with `orders/orderCompleted` the order param is the first (and only) param.
-    var order = options.arguments[0];
+    const order = options.arguments[0];
 
     console.log('Results:', options.result); //Result of orderCompleted method
     console.log('Error:', options.error); // original method Error or `undefined` if successful
@@ -68,17 +70,17 @@ This example hooks into the `orders/orderCompleted` method which takes one param
 /*
 // CONSOLE
 */
-Results: 1
-Error: undefined
-arguments[0]: {_id: 'a123456ABC', etc: {}}}
-hooksProcessed: 0
+// Results: 1
+// Error: undefined
+// arguments[0]: {_id: 'a123456ABC', etc: {}}}
+// hooksProcessed: 0
 
 // You can also pass a dictionary of Object.<String, Hook> like typical Meteor.methods.
 // The two functions available are `ReactionCore.MethodHooks.beforeMethods` and `ReactionCore.MethodHooks.afterMethods`.
 //
 // Original example method: "cart/addToCart": function (cartId, productId, variantData, quantity)
 //
-ReactionCore.MethodHooks.afterMethods({
+MethodHooks.afterMethods({
   "cart/addToCart": function(options) {
     // The hook will run even if the method threw an error, so you must always check for an error!
     if (options.error) {
