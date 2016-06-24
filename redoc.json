@@ -385,13 +385,7 @@
       "label": "Priority",
       "repo": "reaction-docs",
       "docPath": "developer/packages/including.md"
-    }, {
-      "class": "guide-sub-nav-item",
-      "alias": "publishing",
-      "label": "Publishing",
-      "repo": "reaction-docs",
-      "docPath": "developer/packages/publishing.md"
-    }, {
+    },  {
       "class": "guide-nav-item",
       "alias": "testing-reaction",
       "label": "Testing",
