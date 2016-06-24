@@ -61,26 +61,19 @@ If `workflow.workflow` contains the current `workflow.status`, that means the wo
 For reference, the Workflow schema is:
 
 ```javascript
-ReactionCore.Schemas.Workflow = new SimpleSchema({
-  template: {
-    type: String,
-    optional: true
-  },
-  label: {
-    type: String,
-    optional: true
-  },
-  provides: {
-    type: String,
-    optional: true
-  },
-  audience: {
-    type: [String],
-    optional: true
-  },
+import { SimpleSchema } from "meteor/aldeed:simple-schema";
+
+/**
+ * workflow schema for attaching to collection where
+ * PackageWorkflow is controlling view flow
+ * Shop defaultWorkflow is defined in Shop
+ */
+
+export const Workflow = new SimpleSchema({
   status: {
     type: String,
-    optional: true
+    defaultValue: "new",
+    index: 1
   },
   workflow: {
     type: [String],
