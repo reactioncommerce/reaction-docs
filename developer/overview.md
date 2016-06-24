@@ -1,8 +1,11 @@
 # Overview
+
 ## Style Guide
+
 For configuration instructions on setting up Linting and other code style tools, please see: [styleguide.md](styleguide.md)
 
 ## Methods
+
 Documentation for [Meteor methods](https://guide.meteor.com/methods.html) can be found in [methods.md](methods.md).
 
 It's also a good idea to review the source in `server/api` and in `imports/plugins/*/server` for reference.
@@ -10,13 +13,16 @@ It's also a good idea to review the source in `server/api` and in `imports/plugi
 For more details take a look at [variables.md](variables.md).
 
 ### Presentation
+
 See [themes.md](themes.md) for details on the themes and LESS implementation.
 
 ### Logging
+
 Client and server logging.
 
 ```js
 import { Logger } from "/server/api";
+
 Logger.info("This is some info");
 ```
 
@@ -29,11 +35,13 @@ Integration testing is implemented using the[ `meteor --test` with Mocha](https:
 Tests can be run from the command line:
 
 ```bash
-SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:mocha"
+./reaction test
 ```
+
 More details can be found in [testing.md](testing.md).
 
 ## Issues
+
 For development tasks/issues please use the [Reaction project issues](https://github.com/reactioncommerce/reaction/issues?state=open). We're keeping this as the central issue tracking for all [reactioncommerce:*](https://github.com/reactioncommerce/) packages. You can also view issues on our [waffle board](https://waffle.io/reactioncommerce/reaction).
 
 Pull requests made into the _development_ branch, will be reviewed weekly and accepted into development for a quick release cycle, while we work on specific feature branches separately, to be merged into _development_.
@@ -47,6 +55,7 @@ The [ready](https://github.com/reactioncommerce/reaction/labels/ready) label gro
 Of course, [in progress](https://github.com/reactioncommerce/reaction/labels/in%20progress) labels are actively being worked on.
 
 ## Releases
+
 We will publish releases, and merge `development` into `master` as quickly as tests are all passing.
  
 No pull requests to `master` will be accepted.
@@ -54,6 +63,7 @@ No pull requests to `master` will be accepted.
 `master` should always be a stable branch, but with a rapid merge cycle from `development`.  The [release](https://github.com/reactioncommerce/reaction/releases) and published packages will be tagged for minor release or higher, and sometimes for special case patches.
 
 ## Pull Requests
+
 **Caution: your own research may be needed here, feedback is appreciated!**
 
 Please make sure your pull requests are to the active `development` branch, no pull requests to `master` will be accepted. When you create a pull request, you can click the 'edit' button to change the "to" branch.
