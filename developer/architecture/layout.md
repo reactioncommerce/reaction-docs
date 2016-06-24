@@ -4,13 +4,13 @@ Layouts are a combination of a `layout` object and an array of `workflow` object
 
 Layouts will [render a Blaze template](http://docs.meteor.com/#/full/blaze_render) as defined in the layout **structure**.
 
-The workflow elements will be rendered with the `ReactionTemplates` helper, and are meant to be used in combination with the layout **structure**.
+The workflow elements will be rendered with the `ReactionTemplates` Meteor helper, and are meant to be used in combination with the layout **structure**.
 
 Layouts are meant to be created using the Package Registry, once they are defined in the Registry, they are copied into the `Shops.layout` array and referenced from there.  The Registry serves as the "source of truth", allowing customizations to be made directly to the individual Shops. In the case where we have two layouts with the same key structure (`layout`, `workflow`), the Array is loaded in reverse order, so that the newest layout will be used. Layouts can also be disabled in the data with `enabled:false`. This is reserved for a future UI implementation.
 
 ## Changing the global layout
 
-If you need to override the default layout values from `client/config/defaults.js`, you can override by creating `main.js` and setting the values there.
+If you need to change the default layout values initial set in `/client/config/defaults.js`, you can customize the layout creating a file like `custom/client/defaults.js` and setting a [Meteor Session](http://docs.meteor.com/api/session.html) variable for `DEFAULT_LAYOUT`.
 
 ```javascript
 import { Session } from "meteor/session";
@@ -19,7 +19,7 @@ Session.set("DEFAULT_LAYOUT", "coreLayout");
 Session.set("DEFAULT_WORKFLOW", "coreWorkflow");
 ```
 
-`main.js` is only a suggestion. You'll need to create it, as it’s not a file in the repo, and is loaded last and [eagerly by Meteor](http://docs.meteor.com/#/full/modules), thus overriding the values provided by `client/config/config.js`. *This is a Reaction core file, and thus not a good file to edit if we want to avoid annoying Git conflicts*.
+This is only a suggested location. You'll need to create the file and it will be automatically loaded by Meteor. We've added a `.gitignore` and `index.js` as placeholders. 
 
 ## Changing the index page layout
 
@@ -43,7 +43,7 @@ This example would load the `customHomePageTemplate` template, instead of the `c
 
 ### Example layout from checkout
 
-Layouts can work in conjunction with [workflows](developer/architecture/workflow.md).  Here is an example of the layout defined in the `reaction-checkout` package in `server/register.js`.
+Layouts can work in conjunction with [workflows](developer/architecture/workflow.md).  Here is an example of the layout defined in the `/imports/plugins/core/checkout` module.
 
 ```javascript
   layout: [{
