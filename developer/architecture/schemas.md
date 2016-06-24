@@ -1,4 +1,5 @@
 # Schemas
+
 Reaction uses MongoDB, which is a schema-less database. This allows maximum flexibility, particularly important when quickly reacting to the design challenges that uniquely different customizations require in the course of a commerce operation.
 
 However, we don't want to just get completely crazy, so we define a **Schema** that is attached to the previously schema-less collection. These Schemas apply basic content and structure validation, also very necessary in commerce.
@@ -6,57 +7,61 @@ However, we don't want to just get completely crazy, so we define a **Schema** t
 As we apply each additional layer of structure, it's good to remember that there are usually server side methods to bypass these layers as well.
 
 ## Definition and import
+
 Schemas are implemented using the [aldeed:simple-schema](https://github.com/aldeed/meteor-simple-schema) package.
 
-When the Reaction.Collections are defined in the common code of `lib/collections`  the Schemas defined in `lib/collections/schemas` are attached.
+Reaction.Collections are defined in the common code of `lib/collections`, where the Schemas defined in `lib/collections/schemas` are attached.
 
 Schemas should be imported to use
 
-```js
+```javascript
 import * as Schemas from "/lib/collections/schemas";
 ```
+
 or an individual schema definition
 
-```js
+```javascript
 import { PackageConfig } from "/lib/collections/schemas/registry";
 ```
+
 ### Reaction Schemas
 
-[Reaction.Schemas ](https://github.com/reactioncommerce/reaction/tree/development/lib/collections/schemas) | *
-------------------------------------------------------------------------------------------------------------------------------- | -----------------
-Email                                                                                                                           | Address
-Accounts                                                                                                                        | CartItem
-CartItem                                                                                                                        | CartItems
-Cart                                                                                                                            | DiscountType
-DiscountRules                                                                                                                   | Discounts
-Layout                                                                                                                          | OrderItem
-OrderTransaction                                                                                                                | Order
-Permissions                                                                                                                     | Workflow
-PackageConfig                                                                                                                   | CorePackageConfig
-PaymentMethod                                                                                                                   | Invoice
-Payment                                                                                                                         | VariantMedia
-ProductPosition                                                                                                                 | ProductVariant
-Product                                                                                                                         | ShippingMethod
-ShipmentQuote                                                                                                                   | ShipmentItem
-ShippingParcel                                                                                                                  | Shipment
-ShippingProvider                                                                                                                | Shipping
-CustomEmailSettings                                                                                                             | Metafield
-Currency                                                                                                                        | Locale
-Shop                                                                                                                            | Tag
-TaxRates                                                                                                                        | Taxes
-Templates                                                                                                                       | Translation
+[Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/development/lib/collections/schemas) | *
+--------------------------------------------------------------------------------------------------------- | -----------------
+Email                                                                                                     | Address
+Accounts                                                                                                  | CartItem
+CartItem                                                                                                  | CartItems
+Cart                                                                                                      | DiscountType
+DiscountRules                                                                                             | Discounts
+Layout                                                                                                    | OrderItem
+OrderTransaction                                                                                          | Order
+Permissions                                                                                               | Workflow
+PackageConfig                                                                                             | CorePackageConfig
+PaymentMethod                                                                                             | Invoice
+Payment                                                                                                   | VariantMedia
+ProductPosition                                                                                           | ProductVariant
+Product                                                                                                   | ShippingMethod
+ShipmentQuote                                                                                             | ShipmentItem
+ShippingParcel                                                                                            | Shipment
+ShippingProvider                                                                                          | Shipping
+CustomEmailSettings                                                                                       | Metafield
+Currency                                                                                                  | Locale
+Shop                                                                                                      | Tag
+TaxRates                                                                                                  | Taxes
+Templates                                                                                                 | Translation
 
 ### Autovalue
-ReactionCore provides two Autovalue [methods in `reactioncommerce:reaction-schemas`](https://github.com/reactioncommerce/reaction/blob/e9ddd6dee16573a86c30179b4f3427913b47287d/packages/reaction-schemas/common/globals.js).
 
-```js
+Reaction provides Autovalue helpers in `/lib/collections/helpers.js`.
+
+```javascript
 /**
  * Example Schema with Autovalue
  */
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
 import { shopIdAutoValue } from "./helpers";
 
-export const SchemaExample =  SimpleSchema({
+export const SchemaExample =  new SimpleSchema({
   shopId: {
     type: String,
     index: 1,
@@ -78,16 +83,19 @@ export const SchemaExample =  SimpleSchema({
 });
 ```
 
-#### ReactionCore.shopIdAutoValue
+#### Reaction.shopIdAutoValue
+
 Used for schema injection autoValue of currentShopId.
 
-#### ReactionCore.schemaIdAutoValue
+#### Reaction.schemaIdAutoValue
+
 Used for schema injection autoValue of a random id.
 
 ### Examples
+
 #### Schema Definition
 
-```js
+```javascript
 /**
  * workflow schema for attaching to collection where
  * PackageWorkflow is controlling view flow
@@ -107,10 +115,11 @@ export const Workflow = new SimpleSchema({
 });
 ```
 
-#### Extending a Schema
+### Extending a Schema
+
 This example extends the `Schemas.PackageConfig` and adds new properties to the schema.
 
-```js
+```javascript
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
 import { PackageConfig } from "/lib/collections/schemas/registry";
 
@@ -129,32 +138,34 @@ export const PaypalPackageConfig = new SimpleSchema([
 ]);
 ```
 
-# Multiple Schemas
+## Multiple Schemas
+
 Multiple Schema functionality allows us to use different schemas for different documents within the same collection.
 
 To work with multi-schema you need to specify the selector. You can do this by several ways:
 
 If object contains selector (it should because selector should be required)
 
-```js
+```javascript
 MyCollection.simpleSchema(object);
 ```
 
 And if object doesn't:
 
-```js
+```javascript
 MyCollection.simpleSchema(object, { selector: { field: 'value' } });
 ```
 
-## Product Schema
-In `reaction-collections`, we attach two different schemas to the same `Products` collection.
+### Product Schema
+
+In `/lib/collections/schemas/products.js`, we attach two different schemas to the same `Products` collection.
 
 The multiple schemas are attached to the collection with a **selector option**.
 
-```
-ReactionCore.Collections.Products.attachSchema(ReactionCore.Schemas.Product,
+```javascript
+Reaction.Collections.Products.attachSchema(Reaction.Schemas.Product,
   { selector: { type: "simple" } });
-ReactionCore.Collections.Products.attachSchema(ReactionCore.Schemas.ProductVariant,
+Reaction.Collections.Products.attachSchema(Reaction.Schemas.ProductVariant,
   { selector: { type: "variant" } });
 ```
 
@@ -162,8 +173,8 @@ However, now whenever we update a document in the `Products` collection, we need
 
 Applies a schema where `price` is a **Number**:
 
-```
-ReactionCore.Collections.Products.update("SMr4rhDFnYvFMtDTX", {
+```javascript
+Reaction.Collections.Products.update("SMr4rhDFnYvFMtDTX", {
   $set: {
     price: 10
   }
@@ -176,8 +187,8 @@ ReactionCore.Collections.Products.update("SMr4rhDFnYvFMtDTX", {
 
 Applies a schema where `price` is an **Object**:
 
-```
-ReactionCore.Collections.Products.update("BCTMZ6HTxFSppJESk", {
+```javascript
+Reaction.Collections.Products.update("BCTMZ6HTxFSppJESk", {
   $set: {
     price: {
       range: "1.00 - 12.99",
@@ -195,12 +206,13 @@ ReactionCore.Collections.Products.update("BCTMZ6HTxFSppJESk", {
 It's important to note that collections do not enforce structure, so nothing will stop you from updating a product with a "type:simple", using the "type:variant" schema.
 
 ### Updates
+
 Updates where the _selector is not provided must have the selector in the update statement_.
 
 Provide selector in **query**
 
-```
-ReactionCore.Collections.Products.update(
+```javascript
+Reaction.Collections.Products.update(
   {
     title: "This is a product", type: "simple"
   }, {
@@ -211,8 +223,8 @@ ReactionCore.Collections.Products.update(
 
 Provide selector in **update** statement:
 
-```
-ReactionCore.Collections.Products.update(
+```javascript
+Reaction.Collections.Products.update(
   { title: "Product One" },
   { $set: {
     description: "This is a modified product",
@@ -223,8 +235,8 @@ ReactionCore.Collections.Products.update(
 
 Provide selector as an **option**
 
-```js
-ReactionCore.Collections.Products.update(
+```javascript
+Reaction.Collections.Products.update(
   { title: "Product One", type: "simple" },
   { $set: {
     description: 'This is a modified product three.'
@@ -234,14 +246,15 @@ ReactionCore.Collections.Products.update(
 ```
 
 ### Inserts
+
 Provide the schema selector in the insert object:
 
-```js
-ReactionCore.Collections.Products.insert({ title: "This is a product", type: "simple"});
+```javascript
+Reaction.Collections.Products.insert({ title: "This is a product", type: "simple"});
 ```
 
 Provide the schema selector as **options**
 
-```js
-ReactionCore.Collections.Products.insert({ title: "This is a product" }, { selector: { type: "simple" } });
+```javascript
+Reaction.Collections.Products.insert({ title: "This is a product" }, { selector: { type: "simple" } });
 ```
