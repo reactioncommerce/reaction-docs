@@ -393,12 +393,6 @@
       "docPath": "developer/testing/testing.md"
     }, {
       "class": "guide-sub-nav-item",
-      "alias": "using-velocity-for-testing",
-      "label": "Velocity",
-      "repo": "reaction-docs",
-      "docPath": "developer/testing/velocity.md"
-    }, {
-      "class": "guide-sub-nav-item",
       "alias": "acceptance-testing",
       "label": "Acceptance Testing",
       "repo": "reaction-docs",
