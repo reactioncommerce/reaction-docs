@@ -1,20 +1,22 @@
 # Analytics
-Analytics in Reaction is provided by [reaction-analytics](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-analytics) package.
 
-This package implements an [analytics framework](https://segment.com/docs/libraries/analytics.js/) for integrating third-party analytics services such as segment.io, Google Analytics, and Mixpanel.
 
-This package will only send analytics libraries to the client that you have enabled, and it is easily extensible to add additional analytics libraries as you need.
 
-Because Meteor restricts packages' build plugin access to assets, we have to work around this by requiring the additional [reactioncommerce:reaction-analytics-libs](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-analytics-libs) package where the analytics source files are kept.
+Analytics in Reaction is provided by an optional plugin module ` imports/plugins/included/analytics`.
+
+This plugin implements an [analytics framework](https://segment.com/docs/libraries/analytics.js/) for integrating third-party analytics services such as segment.io, Google Analytics, and Mixpanel.
+
+This plugin will only send analytics to libraries in the client that you have enabled, and it is easily extensible to add additional analytics libraries as you need.
 
 ## Tracking
 Example use:
 
-```
+```html
 <a href="{{pathFor 'product' handle=handle}}" data-event-category="grid" data-event-action="product-click" data-event-label="Grid product click" data-event-value="{{_id}}">
 ```
 
 Send event tracking to Google Analytics by adding the following data attribute to any anchor in Reaction:
+
 - data-event-category
 - data-event-action
 - data-event-label
