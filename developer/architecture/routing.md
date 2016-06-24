@@ -6,7 +6,7 @@ More Flow Router documentation is on the [kadirahq/flow-router GitHub repository
 
 The Reaction Router instance is exported as `Reaction.Router`.
 
-```js
+```javascript
 import { Router } from "/client/api";
 
 const urlParam = Router.getQueryParam("urlParam");
@@ -14,7 +14,7 @@ const urlParam = Router.getQueryParam("urlParam");
 
 ## Route Definition
 
-While you can use the Flow Router API, and `Reaction.route()` to directly add routes to the routing table.  The routing methods exported from `/client/modules/router ` integrate routing with permissions, and help to future proof against changes to the routing layer. 
+While you can use the Flow Router API, and `Reaction.route()` to directly add routes to the routing table. The routing methods exported from `/client/modules/router` integrate routing with permissions, and help to future proof against changes to the routing layer.
 
 Our recommended approach is to define routing entries in the **Package Registry**.
 
@@ -37,11 +37,9 @@ When there are multiple shops in Reaction, we'll automatically prefix a url safe
 
 **Multi-shop prefixed urls structure**
 
-
 > //host/store: Reaction Test/product/title: Example Product/
 
 **//localhost:3000/reaction-test/product/example-product**
-
 
 To define a route in the registry that does not add a prefix you can define the route in the registry _without a leading "/"_.
 
@@ -73,9 +71,9 @@ defaultVisitorRole =  ["anonymous", "guest", "product", "tag", "index", "cart/ch
 
 The package registry route entries are collectively added to the Flow Router routing table upon startup.
 
-You can view these routes for debugging.  Add to a file in `custom` a global export of the Router.
+You can view these routes for debugging. Add to a file in `custom` a global export of the Router.
 
-```js
+```javascript
 import { Router } from "/client/modules/router";
 ReactionRouter = Router;
 ```
@@ -168,13 +166,13 @@ This will get the path via `Router.path` based on the arguments and re-route to 
 
 You can call `Router.go` like this as well:
 
-```js
+```javascript
 import { Router } from "/client/api";
 
 Router.go("/blog");
 ```
 
-### Router(pathDef, params, queryParams)
+### Router.url(pathDef, params, queryParams)
 
 Just like `Router.path`, but gives the absolute url. (Uses `Meteor.absoluteUrl` behind the scenes.)
 
