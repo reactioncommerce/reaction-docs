@@ -337,10 +337,7 @@
       "label": "Components",
       "repo": "reaction-docs",
       "docPath": "developer/components/README.md"
-    }, {
-      "label": "Button Group",
-      "docPath": "developer/components/button-group.md"
-    }, {
+    },  {
       "label": "Button",
       "docPath": "developer/components/button.md"
     }, {
@@ -349,31 +346,10 @@
     }, {
       "label": "Icon",
       "docPath": "developer/components/icon.md"
-    }, {
-      "label": "Items",
-      "docPath": "developer/components/items.md"
-    }, {
-      "label": "Metadata",
-      "docPath": "developer/components/metadata.md"
-    }, {
-      "label": "Numeric Input",
-      "docPath": "developer/components/numeric-input.md"
-    }, {
-      "label": "Popover",
-      "docPath": "developer/components/popover.md"
-    }, {
+    },  {
       "label": "Select",
       "docPath": "developer/components/select.md"
-    }, {
-      "label": "Separator",
-      "docPath": "developer/components/separator.md"
-    }, {
-      "label": "Tags",
-      "docPath": "developer/components/tags.md"
-    }, {
-      "label": "Text Field",
-      "docPath": "developer/components/textfield.md"
-    }, {
+    },  {
       "label": "Tooltip",
       "docPath": "developer/components/tooltip.md"
     }, {
