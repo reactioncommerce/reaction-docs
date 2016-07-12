@@ -121,6 +121,7 @@ _(If at this point you are asking yourself "Can I use {insert name of other CSS/
 ```
 
 Now we need to import all the default styles from the default Reaction theme.
+
 ```
 // -----------------------------------------------------------------------------
 // Reaction Core theme files
@@ -209,6 +210,7 @@ import "bootstrap/dist/js/npm.js";
 ```
 
 Now we want to go back to our `/client/main.js` file and add in the import for our `client` directory. You would add a line that looks like:
+
 ```
 /**
  * Custom Plugins
@@ -236,16 +238,22 @@ a.rui.tag.link {
   color: #4c3000;
 }
 ```
+
 Now we need to add importing that file into our `main.less` (at the bottom, order matters) like this:
+
 ```
 @import "base.less";
 ```
+
 If we want to override Bootstrap variables we can add another file called `variables.less` and add this change:
+
 ```
 // Example: Override less variable override
 @navbar-default-bg: #61462f;
 ```
+
 and then also import that file in our `main.less`
+
 ```
 @import "variables.less";
 ```
@@ -306,6 +314,7 @@ First let's create our `defaults.js` with our custom layout. You will place this
 DEFAULT_LAYOUT = "coreLayoutBeesknees";
 DEFAULT_WORKFLOW = "coreWorkflow";
 ```
+
 In order for this file to take affect, we need to also import it. So we add it to our `index.js` in your `client` directory.
 
 ```
@@ -358,6 +367,7 @@ One important thing to understand is that at any point in time when RC goes to r
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step. It is essentially the "default" workflow when you hit the home page.
 
 Now to make this file active, we need to add an import to the `main.js` in the root `server` directory.
+
 ```
 /**
  * Custom Plugins
@@ -379,16 +389,19 @@ Now let's create a file called `core.html` and add our template tags like this:
 <template name="coreLayoutBeesknees">
 </template>
 ```
+
 To make this template part of the project we need to import it, so we add it to the `index.js` at the root of the `client` directory (where we imported the LESS files). We add this line
 
 ```
 import "./templates";
 ```
+
 Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. *Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out*. So in `client/templates/index.js` we add
 
 ```
 import "./layouts/core.html";
 ```
+
 (Could you just import this file directly into `client/index.js`? Yes. This is just my style.)
 
 Ok, still a blank site because we have nothing in our layout. Let's add back in our main section for now (between the beginning and ending `<template>` tags:
@@ -472,8 +485,6 @@ import "./products/productsLanding";
 Now we need to change the entry in our layout record in our `register.js` file. Just change the entry that says
 "template" to be "productsLanding" (no need for the .html) Again this will require a `./reaction reset` to take effect.
 
-
-
 ## Adding Fixtures
 
 As we have been going through this tutorial you may have noticed that we keep having to `./reaction reset` which clears
@@ -509,18 +520,23 @@ if (Hooks) {
 ```
 
 Now we want to add an `index.js` to our server directory and import our `load.js`. That file should just look like
+
 ```
 import "./load";
 ```
 
 And we want to add the import to the `/server/main.js` again. So we add the line
+
 ```
 import "/imports/plugins/custom/beesknees/server";
 ```
+
 Right next to the line
+
 ```
 import "/imports/plugins/custom/beesknees/register";
 ```
+
 This should be the last of these global imports that we need to add. Generally the only imports you need to add to the main.js files are one import for client, one for the registry and one for server.
 
 
@@ -537,9 +553,8 @@ Critical things like Name and Description. You will also want to look at the `ad
 After you change those entries and reset, you will now see your new entries take effect. Remember, if you make
 changes within the site those settings **will not** be saved when you reset unless they are stored in this file.
 
-#### Sidebar: How do I look at my data? Where is it?
+### Sidebar: How do I look at my data? Where is it?
 When in development mode Meteor uses its own copy of Mongo and will use the port that your dev server is running on +1. You can use [RoboMongo](https://robomongo.org/) or similar GUI's to see your data. Or alternately you run run `meteor mongo` while your application is running and query your data via the command line.
-
 
 If you look at the `Shops` collection in the database you can see that it pretty much looks exactly like the JSON files you have. This makes it relatively easy to make a change in the admin, look at the changed record in the db, and then replicate that change in the JSON, saving your change for all eternity. (or you can use the export method that we talk about next, but knowing where things are in the Shops collection can be fairly valuable when developing)
 
@@ -581,9 +596,9 @@ This entry will look like this (placed after the `autoEnable: true` entry):
       workflow: "coreWorkflow"
     }
   ],
-  ```
+```
 
-  The `route` entry is the URL that will match the users URL. (for how to include parameters in the route, please see the RC documentation or the FlowRouter documentation) The `name` is the string by which you will refer to this route in other parts of the application. The `template` is the template that will be rendered when the route is visited, and the `workflow` defines which workflow this will be attached to. In our case, there is no real workflow around an about page so we use the default "coreWorkflow".
+The `route` entry is the URL that will match the users URL. (for how to include parameters in the route, please see the RC documentation or the FlowRouter documentation) The `name` is the string by which you will refer to this route in other parts of the application. The `template` is the template that will be rendered when the route is visited, and the `workflow` defines which workflow this will be attached to. In our case, there is no real workflow around an about page so we use the default "coreWorkflow".
 
 To allow users to our new Route we need to give them permissions. Since we are good with everyone viewing our About page  we will add this permission to our "defaultRoles" and "defaultVisitorRoles" (the roles available when a new user is created). We do this by modifying our "Shops.json" file and addting it to the list so that it looks like this
 
@@ -718,7 +733,7 @@ We want to make this change after everything else has been set up (we want to ma
 Hooks.Events.add("afterCoreInit", () => {
 modifyCheckoutWorkflow();
 });
-  ```
+```
 
 Our function call is just a call out to modify the record in the collection using standard Mongo syntax:
 
