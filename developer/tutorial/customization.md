@@ -539,7 +539,6 @@ import "/imports/plugins/custom/beesknees/register";
 
 This should be the last of these global imports that we need to add. Generally the only imports you need to add to the main.js files are one import for client, one for the registry and one for server.
 
-
 Now let's look at the data we moved over. There are four files there `Shops.json`, `Products.json`, `Shipping.json` and `Tags.json`. Primarily we are going to be concerned with Shops and Products but these are not the only types of data you can import. If you want to import other data types please consult the main documentation under "Import".
 
 Let's look at the Shops file. There is a lot of stuff there and a lot of it you won't want to change (unless you have revolutionary opinions about how many provinces Canada has, etc.). But there are some critical pieces to change.
@@ -554,6 +553,7 @@ After you change those entries and reset, you will now see your new entries take
 changes within the site those settings **will not** be saved when you reset unless they are stored in this file.
 
 ### Sidebar: How do I look at my data? Where is it?
+
 When in development mode Meteor uses its own copy of Mongo and will use the port that your dev server is running on +1. You can use [RoboMongo](https://robomongo.org/) or similar GUI's to see your data. Or alternately you run run `meteor mongo` while your application is running and query your data via the command line.
 
 If you look at the `Shops` collection in the database you can see that it pretty much looks exactly like the JSON files you have. This makes it relatively easy to make a change in the admin, look at the changed record in the db, and then replicate that change in the JSON, saving your change for all eternity. (or you can use the export method that we talk about next, but knowing where things are in the Shops collection can be fairly valuable when developing)
