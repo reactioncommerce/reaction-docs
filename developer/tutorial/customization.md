@@ -47,7 +47,7 @@ Essentially a Reaction Commerce plugin is just a "module". Going forward Meteor 
 
 For the purposes of our tutorial I am going to assume you are working from a fresh checkout of Reaction.
 
-Start off by creating a directory within the `import/plugins/custom` directory of RC. We will be calling our plugin `beesknees`. Within that directory you will want to create `client` and `server` directories.
+Start off by creating a directory within the `imports/plugins/custom` directory of RC. We will be calling our plugin `beesknees`. Within that directory you will want to create `client` and `server` directories.
 
 
 You may, at this point want to also `git init` so you can start tracking your new package with source control.
