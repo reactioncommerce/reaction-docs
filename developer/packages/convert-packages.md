@@ -26,12 +26,15 @@ import { Meteor } from "meteor/meteor";
 import { Session } from "meteor/session";
 import { Template } from "meteor/templating";
 import { check, Match } from "meteor/check";
+import { Tracker } from "meteor/tracker";
+import { Mongo } from "meteor/mongo";
 ```
 
 ## Third Party Packages
 
 ```
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
+import { AutoForm } from "meteor/aldeed:autoform";
 ```
 
 ## Reaction Imports
