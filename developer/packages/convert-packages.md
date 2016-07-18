@@ -19,7 +19,7 @@ The easiest thing to miss is an import. If something is not working go and doubl
 
 Here is a list of common things you will want to import so that you don't need to look them up. I will keep adding to these as I come across them.
 
-## Meteor Imports 
+## Meteor Imports
 
 ```
 import { Meteor } from "meteor/meteor";
@@ -27,15 +27,17 @@ import { Session } from "meteor/session";
 import { Template } from "meteor/templating";
 import { check, Match } from "meteor/check";
 ```
+
 ## Third Party Packages
+
 ```
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
 ```
 
 ## Reaction Imports
+
 ```
 import { Reaction, Logger } from "/client/api"; // on client
 import { Reaction, Logger } from "/server/api"; // on server
 import { CollectionName, AnotherCollection } from "/lib/collections";
-
-````
+```
