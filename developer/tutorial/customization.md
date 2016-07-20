@@ -58,7 +58,7 @@ Let's create a `styles` directory under client and create a `main.less` file. No
 
 So since we are going to inherit styles into our plugin we don't want them inserted twice so we will comment-out the import in `client/main.js`
 
-```
+``` javascript
 // import "/imports/themes/default";
 ```
 
@@ -68,7 +68,7 @@ So first to our `main.less` we need to import all the bootstrap styles. This use
 
 _(If at this point you are asking yourself "Can I use {insert name of other CSS/HTML framework}?" the answer is Yes and No. While you can import any CSS you like, all of the templates use BootStrap-style HTML so it would also involve changing every template in the entire application. But also note that you don't need to import all of the Reaction styles. You could, for example, just leave the dashboard section and substitute your own CSS)_
 
-```
+``` css
 @import "{}/node_modules/bootstrap/less/variables.less";
 @import "{}/node_modules/bootstrap/less/mixins.less";
 
@@ -122,7 +122,7 @@ _(If at this point you are asking yourself "Can I use {insert name of other CSS/
 
 Now we need to import all the default styles from the default Reaction theme.
 
-```
+``` css
 // -----------------------------------------------------------------------------
 // Reaction Core theme files
 //
@@ -204,28 +204,18 @@ Now we need to import all the default styles from the default Reaction theme.
 
 Because the `plugins` folder is inside the `imports` folder your code will have no effect until it is imported. So we need to add an `index.js` file and the root of the `client` directory that imports our `main.less`. This index files let's us keep the import clean. The contents of that file are:
 
-```
+``` javascript
 import "./styles/main.less";
 import "bootstrap/dist/js/npm.js";
 ```
 
-Now we want to go back to our `/client/main.js` file and add in the import for our `client` directory. You would add a line that looks like:
-
-```
-/**
- * Custom Plugins
- */
-
-import "/imports/plugins/custom/beesknees/client";
-```
-
-Adding this import will essentially "activate" your plugin.
+When you add this file the plugin loader will find your plugin and add the appropriate imports. This will essentially "activate" your plugin.
 
 If you haven't been running Reaction in the background, you may want to do this now as Meteor will read and compile your file and tell you about any errors you have.
 
 Now we can get down to the business of customizing the look of our store. Let's create a new file in `client/styles` called `base.less` and add a really simple change.
 
-```
+``` css
 div.rui.navbar {
   background-color: #ffc835;
 }
@@ -241,20 +231,20 @@ a.rui.tag.link {
 
 Now we need to add importing that file into our `main.less` (at the bottom, order matters) like this:
 
-```
+``` css
 @import "base.less";
 ```
 
 If we want to override Bootstrap variables we can add another file called `variables.less` and add this change:
 
-```
-// Example: Override less variable override
+``` css
+/* Example: Override less variable override */
 @navbar-default-bg: #61462f;
 ```
 
 and then also import that file in our `main.less`
 
-```
+``` javascript
 @import "variables.less";
 ```
 
@@ -274,7 +264,7 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 Reaction Commerce uses one primary layout as the master or default called `coreLayout`. This layout is just another Blaze template. The code in this template is pretty minimal and you can see contains very little HTML. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accomodate our "one-page-checkout" we need to.
 
-```
+``` html
 <template name="coreLayout">
   {{#if hasDashboardAccess}}
     {{> coreAdminLayout}}
@@ -310,14 +300,16 @@ __Note__: If you just want to override the homepage and leave everything else al
 
 First let's create our `defaults.js` with our custom layout. You will place this file in the `client` folder in your plugin. The `defaults.js` just looks like this:
 
-```
-DEFAULT_LAYOUT = "coreLayoutBeesknees";
-DEFAULT_WORKFLOW = "coreWorkflow";
+``` javascript
+import { Session } from "meteor/session";
+
+Session.set("DEFAULT_LAYOUT", "coreLayoutBeesknees");
+Session.set("DEFAULT_WORKFLOW", "coreWorkflow");
 ```
 
 In order for this file to take affect, we need to also import it. So we add it to our `index.js` in your `client` directory.
 
-```
+``` javascript
 import "./defaults";
 ```
 
@@ -325,7 +317,7 @@ We also need to add our layout to the registry. The registry is an area in the d
 
 To do that we need to create a new file called `register.js` and add it to the root of our plugin. Here is our starting point:
 
-```
+``` javascript
 import { Reaction } from "/server/api";
 
 Reaction.registerPackage({
@@ -340,7 +332,7 @@ Reaction.registerPackage({
 
 To the `registry` key we are going to add a `layout` entry that looks like this:
 
-```
+``` html
     layout: [{
       layout: "coreLayoutBeesknees",
       workflow: "coreWorkflow",
@@ -366,17 +358,6 @@ specified which template we would use for a "notFound". When we get to the routi
 One important thing to understand is that at any point in time when RC goes to render a route/page it's going to
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step. It is essentially the "default" workflow when you hit the home page.
 
-Now to make this file active, we need to add an import to the `main.js` in the root `server` directory.
-
-```
-/**
- * Custom Plugins
- */
-import "/imports/plugins/custom/beesknees/register";
-```
-
-Because we have made changes to the registry, you must now `./reaction reset` for your changes to take affect.
-
 ## Customizing Templates
 
 If you have been following along exactly with this tutorial you may have noticed what we have accomplished so far, we have broken the site. Why? Because the layout we specified cannot be found. So let's add it now.
@@ -385,20 +366,20 @@ Create a directory under `client` called `templates` and then under that a direc
 
 Now let's create a file called `core.html` and add our template tags like this:
 
-```
+``` html
 <template name="coreLayoutBeesknees">
 </template>
 ```
 
 To make this template part of the project we need to import it, so we add it to the `index.js` at the root of the `client` directory (where we imported the LESS files). We add this line
 
-```
+``` javscript
 import "./templates";
 ```
 
 Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. *Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out*. So in `client/templates/index.js` we add
 
-```
+``` javascript
 import "./layouts/core.html";
 ```
 
@@ -406,7 +387,7 @@ import "./layouts/core.html";
 
 Ok, still a blank site because we have nothing in our layout. Let's add back in our main section for now (between the beginning and ending `<template>` tags:
 
-```
+``` html
   <main role="main" id="main">
     <span id="layout-alerts">{{> inlineAlerts}}</span>
     {{#if hasPermission 'guest'}}
@@ -421,7 +402,7 @@ Ok, still a blank site because we have nothing in our layout. Let's add back in 
 
 _If you want to restore the entire original layout including the header then add this section above the main section_
 
-```
+``` html
 <nav class="reaction-navigation-header">
   <!-- begin layoutHeader -->
   {{> Template.dynamic template=layoutHeader}}
@@ -435,7 +416,7 @@ _If you want to restore the entire original layout including the header then add
 
 See that line that says:
 
-```
+``` html
 {{> Template.dynamic template=template}}
 ```
 
@@ -467,7 +448,7 @@ Oh, and let's not forget to import these files in our `index.js`.
 
 (Note, this list might change as we try to make this example store more custom)
 
-```
+``` javascript
 // products
 import "./products/productGrid/content.html";
 import "./products/productGrid/content.js";
@@ -503,37 +484,36 @@ The sample data files are located at `private/data` in the repo. To use them you
 
 Startup hook are already built into the project to load these four files on startup. But what if you wanted to load additional files (Discounts or Taxes for example)? You can hook into the Reaction Commerce start-up process by using the `Hooks` object in the API. We don't have any additional data to load right now but let's create a `load.js` file in our `server` directory and add this code. You can see that we just add a callback to be executed after the "onCoreInit" event is fired. This can be pretty much any arbitrary code you want.
 
-```
+``` javascript
 import { Packages, Shops, Products, Tags } from "/lib/collections";
 import { Hooks, Reaction, Logger } from "/server/api";
 
 /**
  * Hook to setup core additional imports during Reaction init (shops process first)
  */
-if (Hooks) {
-  Hooks.Events.add("onCoreInit", () => {
-    Logger.info("======> Initialize using Bees Knees Data");
+Hooks.Events.add("onCoreInit", () => {
+Logger.info("======> Initialize using Bees Knees Data");
     // Reaction.Import.fixture().process(Assets.getText("private/data/Discounts.json"), ["name"], Reaction.Import.shop);
-    Reaction.Import.flush();
-  });
-}
+Reaction.Import.flush();
+});
+
 ```
 
 Now we want to add an `index.js` to our server directory and import our `load.js`. That file should just look like
 
-```
+``` javascript
 import "./load";
 ```
 
 And we want to add the import to the `/server/main.js` again. So we add the line
 
-```
+``` javascript
 import "/imports/plugins/custom/beesknees/server";
 ```
 
 Right next to the line
 
-```
+``` javascript
 import "/imports/plugins/custom/beesknees/register";
 ```
 
@@ -587,7 +567,7 @@ So the first thing we want to do is add the route in the Registry which we do by
 
 This entry will look like this (placed after the `autoEnable: true` entry):
 
-```
+``` javascript
   registry: [
     {
       route: "/about",
@@ -602,7 +582,7 @@ The `route` entry is the URL that will match the users URL. (for how to include 
 
 To allow users to our new Route we need to give them permissions. Since we are good with everyone viewing our About page  we will add this permission to our "defaultRoles" and "defaultVisitorRoles" (the roles available when a new user is created). We do this by modifying our "Shops.json" file and addting it to the list so that it looks like this
 
-```
+``` javascript
 "defaultVisitorRole": [
   "anonymous",
   "guest",
@@ -635,7 +615,7 @@ Reaction Commerce currently has a relatively simple workflow system. Workflows a
 
 Login:
 
-```
+``` javascript
 {
     "template" : "checkoutLogin",
     "label" : "Login",
@@ -653,7 +633,7 @@ Login:
 
 Address Book:
 
-```
+``` javascript
 {
     "template" : "checkoutAddressBook",
     "label" : "Shipping Billing",
@@ -671,7 +651,7 @@ Address Book:
 
 Shipping Options:
 
-```
+``` javscript
 {
     "template" : "coreCheckoutShipping",
     "label" : "Shipping Options",
@@ -689,7 +669,7 @@ Shipping Options:
 
 Review:
 
-```
+``` javscript
 {
     "template" : "checkoutReview",
     "label" : "Review Payment",
@@ -707,7 +687,7 @@ Review:
 
 and Completion:
 
-```
+``` javascript
 {
     "template" : "checkoutPayment",
     "label" : "Complete",
@@ -729,15 +709,15 @@ So to solidy our change we are going to have our changes to the database done in
 
 We want to make this change after everything else has been set up (we want to make sure those records are there before we try to modify them) so we are going to add our function on to the `afterCoreInit` event. So our call (below the function for importing fixture data) is:
 
-```
+``` javascript
 Hooks.Events.add("afterCoreInit", () => {
-modifyCheckoutWorkflow();
+    modifyCheckoutWorkflow();
 });
 ```
 
 Our function call is just a call out to modify the record in the collection using standard Mongo syntax:
 
-```
+``` javascript
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
   Packages.update({
@@ -777,7 +757,7 @@ Removing fields from a Schema is relatively straight-ahead in that we just need 
 
 For example if you wanted to remove the `note` field from the `Account` schema you would create a `lib` directory (because schemas are used on both client and serve) in the beesknees package and create a file called `schemas.js`. In that you would make a copy of the Account schema, remove the `note` field and then add this line
 
-```
+``` javascript
 import { Accounts } from "lib/collections";
 import { Accounts as AccountsSchema } from "lib/collections/schemas";
 Accounts.attachSchema(AccountsSchema, {replace: true});
