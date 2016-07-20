@@ -358,8 +358,6 @@ specified which template we would use for a "notFound". When we get to the routi
 One important thing to understand is that at any point in time when RC goes to render a route/page it's going to
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step. It is essentially the "default" workflow when you hit the home page.
 
-Because we have made changes to the registry, you must now `./reaction reset` for your changes to take affect.
-
 ## Customizing Templates
 
 If you have been following along exactly with this tutorial you may have noticed what we have accomplished so far, we have broken the site. Why? Because the layout we specified cannot be found. So let's add it now.
