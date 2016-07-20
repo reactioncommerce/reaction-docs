@@ -117,6 +117,12 @@
         "docPath": "developer/tutorial/customization.md"
     }, {
         "class": "guide-nav-item",
+        "alias": "converting",
+        "label": "Converting Packages to Plugins",
+        "repo": "reaction-docs",
+        "docPath": "developer/packages/convert-packages.md"
+    }, {
+        "class": "guide-nav-item",
         "alias": "architecture",
         "label": "Architecture",
         "repo": "reaction-docs",
