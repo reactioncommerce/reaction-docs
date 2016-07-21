@@ -1,5 +1,6 @@
 # Registry
-The `Reaction Registry` is used to add settings, routes,  and permissions for Reaction specific packages.
+
+The `Reaction Registry` is used to add settings, routes, and permissions for Reaction specific packages.
 
 A `registry` object can be any combination of properties, with `provides` and `name` being the only required elements.
 
@@ -7,12 +8,14 @@ _Note: The registry is currently refreshed only on update/deleting the package r
 
 You may filter, or define using any of the optional registry properties:
 
-Example package  registry from `` `reaction-product-variants`` package.
+Example package registry from `reaction-product-variants` plugin module `/imports/plugins/included/product-variant`.
 
-**package**
+**registerPackage**
 
-```
-ReactionCore.registerPackage({
+```javascript
+import { Reaction } from "/server/api";
+
+Reaction.registerPackage({
   label: "Products",
   name: "reaction-product-variant",
   icon: "fa fa-cubes",
@@ -23,7 +26,13 @@ ReactionCore.registerPackage({
     template: "productDetail",
     workflow: "coreProductWorkflow"
   }, {
-    route: "/tag/:slug",
+    label: "Product Settings",
+    provides: "settings",
+    route: "/product/:handle/:variantId?",
+    container: "product",
+    template: "productDetailForm"
+  }, {
+    route: "/tag/:slug?",
     name: "tag",
     template: "products",
     workflow: "coreProductWorkflow"
@@ -61,7 +70,7 @@ ReactionCore.registerPackage({
 });
 ```
 
- Layout definition can be added to registry, as well as layout workflow definitions.
+Layout definition can be added to registry, as well as layout workflow definitions.
 
 <u>Layouts defined here need to also exist in the Shops.layout collection to enable them.</u>
 
@@ -105,6 +114,7 @@ The `container` group alike for presentation _example: used to connect settings 
 The `provides` property is a "placement" value, loading it as `dynamic template` where the other conditions match a request from the `reactionApps` helper.
 
 The following `provides` values are defined in reaction-core:
+
 - paymentMethod
 - shippingMethod
 - settings

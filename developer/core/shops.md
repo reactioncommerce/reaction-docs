@@ -3,7 +3,7 @@ Reaction Core provides a single tenant shop.
 
 For other implementations, see: [#357](https://github.com/reactioncommerce/reaction/issues/357)
 
-The default shop installation data is loaded from [reaction-sample-data](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-sample-data).
+The default shop installation data is loaded from `/private/data/Shops.json`.
 
 ## Methods
 ### shop/createShop

@@ -1,12 +1,14 @@
 # Orders
 ## Order Methods
-All order related Meteor methods can be found in [/reaction-core/server/methods/orders.js](https://github.com/reactioncommerce/reaction-core/server/methods/orders.js)
+The core plugin module `imports/plugins/core/orders` contains all order related Meteor methods.
 
 ### orders/inventoryAdjust
 Called when the customer places an order. It's triggered by entering a credit card that that is not declined and clicking the check out button. The function loops through each Product in an order and adjusts the quantity for that product variant.
 
 ```javascript
-  ReactionCore.Collections.Products.update({
+  import { Products } from "/lib/collections";
+  
+  Products.update({
     "_id": product.productId,
     "variants._id": product.variants._id
   }, {
@@ -16,10 +18,10 @@ Called when the customer places an order. It's triggered by entering a credit ca
 ```
 
 ### orders/addOrderEmail
-Called when a customer has checked out as a guest, then adds an email within the order confirmation page. This also adds an email field to `ReactionCore.Collections.Orders.email`
+Called when a customer has checked out as a guest, then adds an email within the order confirmation page. This also adds an email field to `Reaction.Collections.Orders.email`
 
 ### orders/updateHistory
-Called when any Order event occurs. The first occurance is when a user clicks on the newly created order, but also called  when the **begin** button is clicked or tracking number added etc. It extends the history object with additional fields to `ReactionCore.Collections.Orders.history`
+Called when any Order event occurs. The first occurrence is when a user clicks on the newly created order, but also called  when the **begin** button is clicked or tracking number added etc. It extends the history object with additional fields to `Reaction.Collections.Orders.history`
 
 ```javascript
     "history": {
@@ -34,7 +36,7 @@ Called when any Order event occurs. The first occurance is when a user clicks on
 Called when a tracking number has been entered and the **Add** button was clicked. This also triggers `addTracking` and `updateHistory`. This method verifies the order and tracking, then calls addTracking and updateHistory and updates the workflow/pushOrderWorkflow status.
 
 ### orders/addTracking
-Called when a tracking number has been entered and the **Add** button has been clicked.  This updates `ReactionCore.Collections.Orders.shipping.shipmentMethod.tracking`
+Called when a tracking number has been entered and the **Add** button has been clicked.  This updates `Reaction.Collections.Orders.shipping.shipmentMethod.tracking`
 
 ### orders/documentPrepare
 Called when the **Download PDF** button is clicked or when the Adjustment _Approved_ button is clicked. This also calls updateHistory and updated that shipment is being prepared.
@@ -43,12 +45,15 @@ Called when the **Download PDF** button is clicked or when the Adjustment _Appro
 This method calls the `processPayments` and also updates the workflow status.
 
 ### orders/processPayments
-Determines the payment method and hits the payment API to capture the payment. If successful it updates `ReactionCore.Collections.Orders.payment.paymentMethod.transactionId` else it throws an error :
+Determines the payment method and hits the payment API to capture the payment. If successful it updates `Reaction.Collections.Orders.payment.paymentMethod.transactionId` else it throws an error :
 
 ```javascript
+import { Orders } from "/lib/collections";
+import { Logger } from "server/api";
+
 if (result.capture) {
   transactionId = paymentMethod.transactionId;
-  ReactionCore.Collections.Orders.update({
+  Orders.update({
     "_id": orderId,
     "payment.paymentMethod.transactionId": transactionId
   }, {
@@ -60,7 +65,7 @@ if (result.capture) {
   });
 
 } else {
-  ReactionCore.Events.warn("Failed to capture transaction.", order, paymentMethod.transactionId);
+  Logger.warn("Failed to capture transaction.", order, paymentMethod.transactionId);
   throw new Meteor.Error("Failed to capture transaction");
 }
 ```
@@ -78,7 +83,9 @@ Updates the workflow status that the shipment is being packed.
 Updates the order with a reference to the specific doc created for shipping and label.
 
 ```javascript
-ReactionCore.Collections.Orders.update(orderId, {
+import { Orders } from "/lib/collections";
+
+Orders.update(orderId, {
       $addToSet: {
         documents: {
           docId: docId,
@@ -92,7 +99,9 @@ ReactionCore.Collections.Orders.update(orderId, {
 This adds an item to the Orders.shipping.items array.
 
 ```javascript
-ReactionCore.Collections.Orders.update({
+import { Orders } from "/lib/collections";
+
+Orders.update({
       "_id": orderId,
       "shipping._id": shipmentId
     }, {
@@ -109,7 +118,9 @@ This updates the items that are being associatated with a specific shipping id.
 This method removed the shipment information from an order. It sets shipment object to null.
 
 ```javascript
-ReactionCore.Collections.Orders.update(orderId, {
+import { Orders } from "/lib/collections";
+
+Orders.update(orderId, {
       $pull: {
         shipments: null
       }

@@ -1,5 +1,6 @@
 # Accounts
-The [reaction-accounts](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-accounts) package extends Meteor [accounts](http://guide.meteor.com/accounts.html) with Reaction specific UI and behavior.
+Reaction extends [Meteor Account](http://docs.meteor.com/api/accounts.html) functionality in `client/modules/accounts` with Reaction specific UI and behavior.
+
 - _Accounts_ collection
 - dropdown accounts ui
 - inline accounts ui
@@ -14,6 +15,8 @@ Add new addresses to an account
 ##### Example
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/addressBookAdd", address, accountUserId);
 ```
 
@@ -32,6 +35,8 @@ type          | String        | "shipping" or "billing" address type
 ##### Example - (Server)
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/addressBookUpdate", address, accountUserId, type);
 ```
 
@@ -52,6 +57,8 @@ Meteor.call("accounts/addressBookUpdate", address, accountUserId, type);
 ```
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Template.updateAddressBook.events({
   "submit form"(event, instance) {
     const address = {
@@ -76,6 +83,8 @@ Remove existing address in user's profile
 ##### Example
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/addressBookRemove", addressId, accountUserId);
 ```
 
@@ -85,6 +94,8 @@ Invite new administrative users
 ##### Example
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/inviteShopMember", shopId, email, name);
 ```
 
@@ -94,6 +105,8 @@ Send a welcome email to consumers
 ##### Example
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/sendWelcomeEmail", shopId, userId);
 ```
 
@@ -103,6 +116,8 @@ Add user permissions.
 ##### Example
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/addUserPermissions", userId, permissions, group);
 ```
 
@@ -123,6 +138,8 @@ Remove user permissions.
 ##### Example
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/removeUserPermissions", userId, permissions, group);
 ```
 
@@ -132,5 +149,7 @@ Set user permissions.
 ##### Example
 
 ```js
+import { Meteor } from "meteor/meteor";
+
 Meteor.call("accounts/setUserPermissions", userId, permissions, group);
 ```

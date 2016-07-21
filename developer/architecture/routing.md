@@ -1,20 +1,28 @@
 # Routing
 
-Reaction implements the routing functionality provided by [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr) for routing in the `reaction-router` package.
+Reaction implements the routing functionality provided by [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr).
 
-> More Flow Router documentation is on the [kadirahq/flow-router GitHub repository](https://github.com/kadirahq/flow-router).
+More Flow Router documentation is on the [kadirahq/flow-router GitHub repository](https://github.com/kadirahq/flow-router).
 
-The Reaction Flow Router instance is exported as `ReactionRouter`
+The Reaction Router instance is exported as `Reaction.Router`.
 
-## Defining Routes
+```javascript
+import { Router } from "/client/api";
 
-While you can use the Flow Router API, `ReactionRouter.route()` to directly add routes, `reaction-router` integrates routing with permissions, and helps to future proof against changes to the routing layer. Our recommended approach is to define an entry in the **Package Registry**.
+const urlParam = Router.getQueryParam("urlParam");
+```
+
+## Route Definition
+
+While you can use the Flow Router API, and `Reaction.route()` to directly add routes to the routing table. The routing methods exported from `/client/modules/router` integrate routing with permissions, and help to future proof against changes to the routing layer.
+
+Our recommended approach is to define routing entries in the **Package Registry**.
 
 ### Registry Routing
 
 Routes are very simple and based on the syntax of [path-to-regexp](https://github.com/pillarjs/path-to-regexp) which is used in both [Express](http://expressjs.com/) and `iron:router`.
 
-The **Reaction package registry** entries define routes that can be used with the Flow Router API. You can also pass local functions to the registry.
+The **Reaction package registry** entries define routes that can be used with the Router API. You can also pass local functions to the registry.
 
 ```javascript
   registry: [{
@@ -29,10 +37,9 @@ When there are multiple shops in Reaction, we'll automatically prefix a url safe
 
 **Multi-shop prefixed urls structure**
 
-```
-//host/store: Reaction Test/product/title: Example Product/
-//localhost:3000/reaction-test/product/example-product
-```
+> //host/store: Reaction Test/product/title: Example Product/
+
+**//localhost:3000/reaction-test/product/example-product**
 
 To define a route in the registry that does not add a prefix you can define the route in the registry _without a leading "/"_.
 
@@ -64,7 +71,14 @@ defaultVisitorRole =  ["anonymous", "guest", "product", "tag", "index", "cart/ch
 
 The package registry route entries are collectively added to the Flow Router routing table upon startup.
 
-To view the client routing table
+You can view these routes for debugging. Add to a file in `custom` a global export of the Router.
+
+```javascript
+import { Router } from "/client/modules/router";
+ReactionRouter = Router;
+```
+
+To view the client routing table in the browser console, you can now use the exported Router global.
 
 ```javascript
 console.table(ReactionRouter._routesMap);
@@ -78,44 +92,48 @@ console.table(ReactionRouter._routes);
 
 ## API
 
-The [Flow Router API](https://github.com/kadirahq/flow-router#api) that ReactionRouter implements is a rich API to help you to navigate the router and reactively get information from the router.
+The [Flow Router API](https://github.com/kadirahq/flow-router#api) that Router implements is a rich API to help you to navigate the router and reactively get information from the router.
 
-### ReactionRouter.getParam(paramName);
+### Router.getParam(paramName);
 
 Reactive function which you can use to get a parameter from the URL.
 
 ```javascript
+import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app
 
-const appId = ReactionRouter.getParam("appId");
+const appId = Router.getParam("appId");
 console.log(appId); // prints "this-is-my-app"
 ```
 
-### ReactionRouter.getQueryParam(queryStringKey);
+### Router.getQueryParam(queryStringKey);
 
 Reactive function which you can use to get a value from the queryString.
 
 ```javascript
+import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app?show=yes&color=red
 
-const color = ReactionRouter.getQueryParam("color");
+const color = Router.getQueryParam("color");
 console.log(color); // prints "red"
 ```
 
-### ReactionRouter.path(pathDef, params, queryParams)
+### Router.path(pathDef, params, queryParams)
 
 Generate a path from a path definition. Both `params` and `queryParams` are optional.
 
 Special characters in `params` and `queryParams` will be URL encoded.
 
 ```javascript
+import { Router } from "/client/api";
+
 const pathDef = "/blog/:cat/:id";
 const params = {cat: "met eor", id: "abc"};
 const queryParams = {show: "y+e=s", color: "black"};
 
-const path = ReactionRouter.path(pathDef, params, queryParams);
+const path = Router.path(pathDef, params, queryParams);
 console.log(path); // prints "/blog/met%20eor/abc?show=y%2Be%3Ds&color=black"
 ```
 
@@ -123,10 +141,12 @@ If there are no params or queryParams, this will simply return the pathDef as it
 
 #### Using Route name instead of the pathDef
 
-You can also use the route's name instead of the pathDef. Then, ReactionRouter will pick the pathDef from the given route. See the following example:
+You can also use the route's name instead of the pathDef. Then, Router will pick the pathDef from the given route. See the following example:
 
 ```javascript
-ReactionRouter.route("/blog/:cat/:id", {
+import { Router } from "/client/api";
+
+Router.route("/blog/:cat/:id", {
     name: "blogPostRoute",
     action: function(params) {
         //...
@@ -136,69 +156,77 @@ ReactionRouter.route("/blog/:cat/:id", {
 const params = {cat: "meteor", id: "abc"};
 const queryParams = {show: "yes", color: "black"};
 
-const path = ReactionRouter.path("blogPostRoute", params, queryParams);
+const path = Router.path("blogPostRoute", params, queryParams);
 console.log(path); // prints "/blog/meteor/abc?show=yes&color=black"
 ```
 
-### ReactionRouter.go(pathDef, params, queryParams);
+### Router.go(pathDef, params, queryParams);
 
-This will get the path via `ReactionRouter.path` based on the arguments and re-route to that path.
+This will get the path via `Router.path` based on the arguments and re-route to that path.
 
-You can call `ReactionRouter.go` like this as well:
+You can call `Router.go` like this as well:
 
 ```javascript
-ReactionRouter.go("/blog");
+import { Router } from "/client/api";
+
+Router.go("/blog");
 ```
 
-### ReactionRouter.url(pathDef, params, queryParams)
+### Router.url(pathDef, params, queryParams)
 
-Just like `ReactionRouter.path`, but gives the absolute url. (Uses `Meteor.absoluteUrl` behind the scenes.)
+Just like `Router.path`, but gives the absolute url. (Uses `Meteor.absoluteUrl` behind the scenes.)
 
-### ReactionRouter.setParams(newParams)
+### Router.setParams(newParams)
 
 This will change the current params with the newParams and re-route to the new path.
 
 ```javascript
+import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app?show=yes&color=red
 
-ReactionRouter.setParams({appId: "new-id"});
+Router.setParams({appId: "new-id"});
 // Then the user will be redirected to the following path
 //      /apps/new-id?show=yes&color=red
 ```
 
-### ReactionRouter.setQueryParams(newQueryParams)
+### Router.setQueryParams(newQueryParams)
 
-Just like `ReactionRouter.setParams`, but for queryString params.
+Just like `Router.setParams`, but for queryString params.
 
 To remove a query param set it to `null` like below:
 
 ```javascript
-ReactionRouter.setQueryParams({paramToRemove: null});
+import { Router } from "/client/api";
+
+Router.setQueryParams({paramToRemove: null});
 ```
 
-### ReactionRouter.getRouteName()
+### Router.getRouteName()
 
 To get the name of the route reactively.
 
 ```javascript
+import { Router } from "/client/api";
+
 Tracker.autorun(function() {
-  const routeName = ReactionRouter.getRouteName();
+  const routeName = Router.getRouteName();
   console.log("Current route name is: ", routeName);
 });
 ```
 
-### ReactionRouter.current()
+### Router.current()
 
-Get the current state of the router. **This API is not reactive**. If you need to watch the changes in the path simply use `ReactionRouter.watchPathChange()`.
+Get the current state of the router. **This API is not reactive**. If you need to watch the changes in the path simply use `Router.watchPathChange()`.
 
 This gives an object like this:
 
 ```javascript
+import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app?show=yes&color=red
 
-const current = ReactionRouter.current();
+const current = Router.current();
 console.log(current);
 
 // prints following object

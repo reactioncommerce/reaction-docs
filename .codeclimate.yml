@@ -12,6 +12,8 @@ engines:
         enabled: false
       MD036:
         enabled: false
+      MD026:
+        enabled: false
   shellcheck:
     enabled: true
   fixme:

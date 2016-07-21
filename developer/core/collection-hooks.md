@@ -7,8 +7,8 @@ Collection hooks are provided by the `matb33:collection-hooks` Meteor package.
 
 Detailed documentation can be found on the package repo: [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
 
-```
-var test = new Mongo.Collection("test");
+```js
+const test = new Mongo.Collection("test");
 
 # example before insert of test collection
 test.before.insert(function (userId, doc) {

@@ -1,12 +1,15 @@
 # Shipping
-Partial implementation, please review current Github Issues and the [reaction-shipping](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-shipping) package.
+Partial implementation, please review current Github Issues.
 
-> Only flat-rate per order rules are currently implemented.
+The included plugin `imports/plugins/included/shipping` provides a shipping module structure. 
+
+Currently `reaction-shipping` only provides flat-rate per order rules. All other rules will be added, and contributions are welcome.
 
 The Schema and collections are setup to support the following rules, which need to be written.
 
 ## Methods:
-- **flat rate - line item**
+- **flat rate - per order**
+- flat rate - line item
 - flat rate - order value over/under
 - carrier - line item calculated / weight
 - carrier - bundled box, dimensions + weight

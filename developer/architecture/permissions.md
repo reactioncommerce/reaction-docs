@@ -1,11 +1,12 @@
 # Permissions
 [alanning:roles](https://github.com/alanning/meteor-roles) package provides Reaction permissions support.
 
+## Packages
 **Permissions are grouped by `shopId`.**
 
 Package specific roles can be defined in `register.js`, by adding custom permissions to registry entries with:
 
-```
+```js
       permissions: [
         {
           label: "Custom Permission"
@@ -16,6 +17,38 @@ Package specific roles can be defined in `register.js`, by adding custom permiss
 
 Permission of the current route and user are compared against the package route by default, adding specific permissions to the registry entry is optional.
 
+For using shop permissions in some packages you must add it into register directive. If we add this package then permissions will be available in Shop Accounts Settings.
+
+Another example:
+
+```js
+import { Reaction } from "/server/api";
+
+Reaction.registerPackage({
+  label: "Dashboard",
+  name: "reaction-dashboard",
+  icon: "fa fa-th",
+  autoEnable: true,
+  settings: {
+    name: "Dashboard"
+  },
+  registry: [{
+    provides: "dashboard",
+    workflow: "coreDashboardWorkflow",
+    template: "dashboardPackages",
+    name: "dashboardPackages",
+    label: "Core",
+    description: "Reaction core shop configuration",
+    icon: "fa fa-th",
+    priority: 0,
+    container: "core",
+    permissions: [{
+      label: "Dashboard",
+      permission: "dashboard"
+    }]
+   });
+```
+
 ## Owner
 The initial setup user was added to the shops 'owner' permission group with the 'owner' permission.
 
@@ -23,23 +56,45 @@ Users with "owner" role are full-permission, app-wide users.
 
 **To check if user has owner access:**
 
-```
+```js
     # client / server
-    ReactionCore.hasOwnerAccess()
+    import { Logger, Reaction } from "/server/api";
+    
+    if ( Reaction.hasOwnerAccess() ) {
+    	Logger.info("The Reaction user has Owner Access");
+    }
+```
 
+`/client/modules/core/helpers/templates.js` exports the `hasOwnerAccess` helper.
+
+
+```html
     # template
     {{#if hasOwnerAccess}}
+    	<strong>This has owner access</strong>
+    {{/if}}
 ```
 
 ## Admin
 Users with "admin" role are full-permission, site-wide users.<br>**To check if user has admin access:**
 
+```js
+    # client / server
+    import { Logger, Reaction } from "/server/api";
+    
+    if ( Reaction.hasAdminAccess() ) {
+    	Logger.info("The Reaction user has Admin Access");
+    }
 ```
-  # client / server
-  ReactionCore.hasAdminAccess()
 
-  # template
-  {{#if hasAdminAccess}}
+`/client/modules/core/helpers/templates.js` exports the `hasAdminAccess` helper.
+
+
+```html
+    # template
+    {{#if hasAdminAccess}}
+    	<strong>This has admin access</strong>
+    {{/if}}
 ```
 
 ## Dashboard
@@ -47,46 +102,52 @@ Users with "dashboard" role are limited-permission, site-wide users.
 
 **To check if user has Dashboard access:**
 
+```js
+    # client / server
+    import { Logger, Reaction } from "/server/api";
+    
+    if ( Reaction.hasDashboardAccess() ) {
+    	Logger.info("The Reaction user has Owner Access");
+    }
 ```
-  # client / server
-  ReactionCore.hasDashboardAccess()
 
-  # template
-  {{#if hasDashboardAccess}}
+`/client/modules/core/helpers/templates.js` exports the `hasDashboardAccess` helper.
+
+
+```html
+    # template
+    {{#if hasDashboardrAccess}}
+    	<strong>This has dashboard access</strong>
+    {{/if}}
 ```
-
 To check if user has some specific permissions:
 
 on Client: for current user, where "permissions" is string or ['string']
 
-```
-ReactionCore.hasPermission(permissions)
-```
+## hasPermission
 
-on Server: for some shop (current if not defined) and some userId (current if not defined), where "permissions" is string or ['string']
-
-```
-ReactionCore.hasPermission(permissions, shop, userId)
-```
-
-in templates:
-
-```
-{{#if hasPermission permissions}}{{/if}}
+```js
+	# client / server
+	import { Logger, Reaction } from "/server/api";
+	const permissions = ["guest", "profile"];
+	Reaction.hasPermission(permissions)
 ```
 
-For using shop permissions in some packages you must add it into register directive.<br>If we add this package then permissions will be available in Shop Accounts Settings.
+Server for some shop (current if not defined) and some userId (current if not defined), where "permissions" is string or ['string']
 
-Another example:
+```js
+# client / server
+import { Logger, Reaction } from "/server/api";
 
+Reaction.hasPermission(permissions, shop, userId)
 ```
-ReactionCore.registerPackage
- name: 'reaction-commerce-orders'
- provides: ['orderManager']
- permissions: [
-   {
-     label: "Orders"
-     permission: "dashboard/orders"
-   }
- ]
+
+## hasPermission helper
+
+Helpers in template in templates:
+
+```html
+{{#if hasPermission permissions}}
+	<strong> has permission </strong>
+{{/if}}
 ```
