@@ -3,11 +3,8 @@ Reaction Commerce is a modern, open source commerce platform for businesses. It 
 
 Reaction is built using Javascript and the [Meteor](https://meteor.com) framework on the [Node](https://nodejs.org) runtime and the npm package ecosystem. It is both an open source solution and a managed Platform as a Service (PaaS) that is available via [reactioncommerce.com](https://reactioncommerce.com).
 
-## Docs Overview
-- The **Introduction** section of our documentation provides an overview of the features of Reaction, and it will answer questions about how to use Reaction as a shop owner.
-- The  **Developer** sections of our docs that are meant to help a developer or designer quickly start using the platform locally, where they can contribute changes to the project, or fork the project and modify to suit any requirement. 
-- The **Customization Guide** is a step-by-step tutorial through making some of the most common customizations.
+We welcome [contributions](https://reactioncommerce.com/contributors), ideas, feedback, and questions via [GitHub Issues](https://github.com/reactioncommerce/reaction/issues?state=open). For general discussion and support, check out our [chat room](https://gitter.im/reactioncommerce/reaction).
 
-The Reaction documentation source is located in the [reactioncommerce/reaction-docs](https://github.com/reactioncommerce/reaction-docs) repository, while this documentation site is a Meteor application [reactioncommerce/redoc](https://github.com/reactioncommerce/redoc).
+Reaction Commerce is headquartered in Santa Monica, CA. We're a [full-time team](https://reactioncommerce.com/about), backed by top-tier venture firms and angel investors, and we're growing.  
 
-We welcome [contributions](https://reactioncommerce.com/contributors), and ideas, feedback and questions via [GitHub Issues](https://github.com/reactioncommerce/reaction/issues?state=open). For general discussion and support, check out our [chat room](https://gitter.im/reactioncommerce/reaction).
+Special note about our docs: The Reaction documentation source is located in the [reactioncommerce/reaction-docs](https://github.com/reactioncommerce/reaction-docs) repository, while this documentation site is a Meteor application [reactioncommerce/redoc](https://github.com/reactioncommerce/redoc).

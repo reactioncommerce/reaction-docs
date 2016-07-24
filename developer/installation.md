@@ -1,22 +1,22 @@
 # Installation
 
-Developers using **Windows** should review the [Windows specific installation requirements for Meteor and Reaction](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
-
 To install and run Reaction locally:
 
 ```bash
-curl https://install.meteor.com | /bin/sh
-git clone https://github.com/reactioncommerce/reaction.git
+# install CLI
+npm install -g reaction-cli
+
+# clone Reaction, install NPM dependencies
+reaction init
+
+# move into the new app directory
 cd reaction
-reaction pull
+
+# start Reaction
 reaction
+# or
+reaction run
 ```
-
-The `master` branch contains the latest published releases, and also should work with current packages from the [Meteor package manager](https://atmospherejs.com/).
-
-When using the `master` branch with development packages and versions of published packages (versus local packages), you may get some package compatibility warnings. You can use `--allow-incompatible-update` to resolve this.
-
-See the [package documentation](/developer/packages/packages.md) for details on working with the `development` branch, and using local package dependencies. You can clone or create new packages in `reaction/packages` for local package development.
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
 
@@ -24,20 +24,36 @@ Sample data is loaded on a new installation from [`reactioncommerce:reaction-sam
 
 Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
 
+Developers using **Windows** should review the [Windows specific installation requirements for Meteor and Reaction](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
+
 ## reaction
+
 To start Reaction, run the `reaction` command
 
 ```
-./reaction
+reaction
 ```
 
-`/reaction` runs a script that executes `meteor`.
+`reaction` appends some commands to the default `meteor` command, it adds `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
 
- It appends `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
+`reaction -h` will give you help for the `reaction` command.
 
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
-![](/assets/guide-installation-default-user.png)
+```
+reaction -h
+reaction <command> [options]
 
+Commands:
+  init    Create a new Reaction app (will create a new folder)
+  run     Start Reaction in development mode
+  debug   Start Reaction in debug mode
+  test    Run integration or unit tests
+  pull    Pull Reaction updates from Github and install NPM packages
+  update  Update Atmosphere and NPM packages
+  up      Update Atmosphere and NPM packages
+  reset   Reset the database and (optionally) delete build files
+```
+
+_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ ![](/assets/guide-installation-default-user.png)
 
 Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
 
@@ -48,31 +64,25 @@ This command also allows [Meteor command line options](http://docs.meteor.com/#/
 ## reaction pull
 
 ```bash
-./reaction pull
+reaction pull
 ```
 
-You can just use `git pull`, but `reaction pull` will run `bin/clone-packages.sh`, a script that pulls all local packages as well as Reaction. It's the easiest way to make sure you're working with the complete developer package set.
-
-```bash
-cd reaction
-./reaction pull
-./reaction
-```
-
-You can also use `meteor upgrade` to upgrade to the latest Atmosphere published packages.
+You could just use `git pull`, but `reaction pull` will update npm modules and other dependencies.
 
 ## reaction reset
-To reset the Reaction database, and optionally removes bower packages.
 
-This will give you a fresh test dataset from [`reactioncommerce:reaction-sample-data`](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-sample-data).
+Resets the Reaction database, updates npm modules, and optionally removes `node_modules` before updating.
+
+This will give you a fresh test dataset from `private/data`.
 
 ```
-./reaction reset
+reaction reset
 ```
 
-See the [package development documentation](/developer/packages/packages.md)  and the [settings and import documentation](/developer/core/import.md) for detailed instructions on modifying initial fixture data.
+See the [package development documentation](/developer/packages/packages.md) and the [settings and import documentation](/developer/core/import.md) for detailed instructions on modifying initial fixture data.
 
 ## meteor
+
 You can use any [meteor command line](http://docs.meteor.com/#/full/commandline) methods as well.
 
 ```sh
