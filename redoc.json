@@ -117,12 +117,6 @@
         "docPath": "developer/tutorial/customization.md"
     }, {
         "class": "guide-nav-item",
-        "alias": "converting",
-        "label": "Converting Packages to Plugins",
-        "repo": "reaction-docs",
-        "docPath": "developer/packages/convert-packages.md"
-    }, {
-        "class": "guide-nav-item",
         "alias": "architecture",
         "label": "Architecture",
         "repo": "reaction-docs",
@@ -229,12 +223,6 @@
         "label": "Creating a Theme",
         "repo": "reaction-docs",
         "docPath": "developer/themes/theming.md"
-    }, {
-        "class": "guide-sub-nav-item",
-        "alias": "styling-a-theme",
-        "label": "Overriding Styles",
-        "repo": "reaction-docs",
-        "docPath": "developer/themes/styling.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "templates",
@@ -370,7 +358,7 @@
     }, {
         "class": "guide-nav-item",
         "alias": "packages",
-        "label": "Packages",
+        "label": "Plugins",
         "repo": "reaction-docs",
         "docPath": "developer/packages/packages.md"
     }, {
@@ -379,6 +367,12 @@
         "label": "Registry",
         "repo": "reaction-docs",
         "docPath": "developer/packages/registry.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "converting",
+        "label": "Converting Packages to Plugins",
+        "repo": "reaction-docs",
+        "docPath": "developer/packages/convert-packages.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "permissions",

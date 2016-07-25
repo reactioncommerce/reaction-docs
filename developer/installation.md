@@ -20,7 +20,7 @@ reaction run
 
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
 
-Sample data is loaded on a new installation from [`reactioncommerce:reaction-sample-data`](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-sample-data).
+Sample data is loaded on a new installation from `private/data`.
 
 Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
 
@@ -59,7 +59,7 @@ Browse to [http://localhost:3000](https://localhost:3000) and you should see Rea
 
 To terminate `reaction` use `CTRL-c`.
 
-This command also allows [Meteor command line options](http://docs.meteor.com/#/full/meteorhelp).
+The `reaction` command line also accepts [Meteor command line options](http://docs.meteor.com/#/full/meteorhelp).
 
 ## reaction pull
 
