@@ -4,7 +4,7 @@
 
 We've provided an example theme that you can use a starting point for your own themes.
 
-https://github.com/reactioncommerce/reaction-example-theme
+Get the [Reaction Example Theme](https://github.com/reactioncommerce/reaction-example-theme).
 
 
 ## Theme contents
@@ -47,7 +47,7 @@ You can override variables of the default theme simple by defining the variables
 ```
 // Import the main.less file from the base reaction theme
 // {} means start from the root of meteor instance
-// you can also include CSS from node_modules by doing {}/node_modules/<path_to_module_css>
+// you can also include CSS from node_modules by doing {}/node_modules/path_to_module_css
 @import "{}/imports/plugins/included/default-theme/client/styles/main.less";
 
 // Override any variables from the default theme
