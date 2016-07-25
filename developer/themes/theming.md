@@ -29,6 +29,7 @@ client/index.js **(Required)** - Entry point of all client side plugins, like th
 From this file you can import your LESS or CSS files and they will be processed and included when the app is built.
 
 ```
+// Import CSS
 import "./styles/main.less";
 ```
 
@@ -49,8 +50,7 @@ You can override variables of the default theme simple by defining the variables
 // you can also include CSS from node_modules by doing {}/node_modules/<path_to_module_css>
 @import "{}/imports/plugins/included/default-theme/client/styles/main.less";
 
-// Override any variables
-
+// Override any variables from the default theme
 @navbar-default-bg: #ff0000;
 
 ```
