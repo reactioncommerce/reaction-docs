@@ -1,123 +1,58 @@
-# Creating Your Own Theme Package
+# Creating a Theme
 
-## Step 1: Let's start with a template
+## Starting point
 
-Make a copy of the folder `packages/my-custom-theme-template` and call it `my-custom-theme`.
+We've provided an example theme that you can use a starting point for your own themes.
 
-Your packages directory should now look like the following:
+https://github.com/reactioncommerce/reaction-example-theme
+
+
+## Theme contents
+
+Every theme requires a specific structure to be properly registered as a Reaction theme.
+
+register.js **(Required)** - Registers a reaction plugin allowing it to be included automatically.
+
 ```
-reaction
-  packages
-    my-custom-theme
-    my-custom-theme-template
-```
+import { Reaction } from "/server/api";
 
-### Step 1.1
+Reaction.registerPackage({
+  // Name of the theme for presentation purposes
+  label: "Example Theme",
 
-Open `packages/my-custom-theme/package.js` and change `my:custom-theme-template` to `my:custom-theme`.
-
-The top of your `package.js` file should now look like the following:
-```
-Package.describe({
-  // Name of your package
-  name: "my:custom-theme",
-
-  // Brief summary or title of your package
-  summary: "My Custom Theme",
-
-  // Version number of your theme package
-  version: "0.1.0"
+  // Name of your theme to uniquely identify it from other themes
+  name: "reaction-example-theme"
 });
-
-.... Rest of file omitted for brevity.
 ```
 
-
-## Step 2: Enable your new theme
-
-Open `.meteor/packages` and look for the following near the bottom of the file.
+client/index.js **(Required)** - Entry point of all client side plugins, like themes and templates.
+From this file you can import your LESS or CSS files and they will be processed and included when the app is built.
 
 ```
-# Themes
-reactioncommerce:default-theme
-#my:custom-theme
+import "./styles/main.less";
 ```
 
-### Step 2.1
-Disable `reactioncommerce:default-theme` by **adding** a hashmark `#` in front of the line.
+> You may store your CSS anywhere within your plugin. For the example theme we've placed CSS in the directory `client/styles`.
 
-### Step 2.2
-Enable `my:custom-theme` by **removing** the hashmark `#` in front of the line and save the file.
+## Install theme
 
-The result of your modifications to `.meteor/packages` should look like the following:
+Themes are installed in `imports/plugins/custom/`. Themes are auto included and their load order is currently based on their order in the `custom` directory. Keep this in mind if you decide to have multiple themes in the `custom` directory as they may conflict with each other.
+
+## Overriding variables and styles
+
+You can override variables of the default theme simple by defining the variables after importing the base theme.
+
+**client/styles/main.less**
 ```
-# Themes
-#reactioncommerce:default-theme
-my:custom-theme
-```
+// Import the main.less file from the base reaction theme
+// {} means start from the root of meteor instance
+// you can also include CSS from node_modules by doing {}/node_modules/<path_to_module_css>
+@import "{}/imports/plugins/included/default-theme/client/styles/main.less";
 
-With `reactioncommerce:default-theme` disabled, and `my:custom-theme` now enabled, we can start customizing the theme.
+// Override any variables
 
-## Step 3 (Easy): Customizing your new theme
+@navbar-default-bg: #ff0000;
 
-Open `packages/my-custom-theme/main.less`
-- This file represents all of the style imports for your theme. This includes css, images, templates, scripts and so on.
-- Notice that styles can be imported from other packages. In this case from `reactioncommerce:core-theme`.
-
-Open `packages/my-custom-theme/package.js`
-- This file is a manifest of all the files your custom theme package uses.
-- Files **MUST** be included here otherwise they will not be available for use in your theme.
-
-Open `packages/my-custom-theme/styles/variables.less`
-- **This file is provided for your convenience.**
-- Add your new variables and variable overrides here.
-- This is the best place to override default `bootstrap` and default `reactioncommerce:core-theme` variables.
-
-Open `packages/my-custom-theme/styles/base.less`
-- **This file is provided for your convenience.**
-- Add any styles here.
-
-## Step 4 (Advanced): Adding more files to your theme
-
-Add a new file in `packages/my-custom-theme/styles`.
-
-For this example we'll make the file `packages/my-custom-theme/styles/my-new-file.less`.
-
-### Step 4.1: Add your file to the package.js
-
-Open `packages/my-custom-theme/package.js`.
-
-And add the following under the section `** ADD YOUR CUSTOM STYLES HERE **`
-```
-api.addFiles("styles/my-new-file.less", "client", {isImport: true});
 ```
 
-### Step 4.2: Add your new file to main.less
-
-Open `packages/my-custom-theme/main.less`.
-
-And add the following to the bottom of the file:
-```
-@import "styles/my-new-file.less";
-```
-
-After following the above steps, you should now file for adding more custom styles.
-
-## Step 5 (Advanced): Change your theme name
-
-You'll have to change the name in 3 places.
-
-1. Change the folder name from `my-custom-theme` to your new theme name.
-2. Open `packages/<new theme name>/package.js` and change `my:custom-theme` to your new theme name.
-3. Open `.meteor/packages` and replace `my:custom-theme` with your new theme name.
-
-**NOTE:** Meteor package names generally follow this format `namespace:package-name`; where by the `:` separates the namespace, usually your name or organization name, followed by the package name.
-
-**NOTE**
-There are many ways to go about building a theme, this is a representation of one of those methods. If you've got a good handle on how meteor and its packages work, feel free to use the method you're most comfortable with.
-
-
-## Alternate HTML/CSS Frameworks
-We've developed with Bootstrap, as it's the most common UI framework, however there are other great frameworks such as Zurb's Foundation, and other pre-processors like `Sass` or `Stylus`. By using the **Creating Reusable Theme Packages** method above, you can implement any of the different css frameworks and preprocessors for your own custom theme.
-
-Let us know if you want to get your hands dirty on this, and we'll be excited to help.
+> In LESS variables are considered constants, and are processed first, from top to bottom of all included LESS files. That means you can override variables after they've already been declared and the last instance takes effect.
