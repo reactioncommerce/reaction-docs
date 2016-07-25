@@ -1,8 +1,9 @@
 # Configuration
 
-Reaction uses `/private/settings/reaction.json` for the configuration of Reaction packages and  [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
+Reaction uses `/private/settings/reaction.json` for the configuration of Reaction packages and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
-## Meteor settings
+## Meteor Settings
+
 You can use custom [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) by copying `settings/dev.settings.json` to `settings/settings.json`
 
 For convenience, the initial Reaction administrator can be configured here.
@@ -12,7 +13,6 @@ For convenience, the initial Reaction administrator can be configured here.
 ```
 {
   "ROOT_URL": "",
-  "MONGO_URL": "",
   "MAIL_URL": "",
   "reaction": {
     "REACTION_USER": "<username>",
@@ -23,7 +23,7 @@ For convenience, the initial Reaction administrator can be configured here.
 }
 ```
 
- Creating `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `./reaction` command to start Reaction.
+Creating `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `./reaction` command to start Reaction.
 
 `./reaction` is the equivalent of `meteor --settings settings/<your-settings>.json`
 
@@ -45,9 +45,15 @@ export REACTION_EMAIL="<login email>"
 
 _Note: Environment variables will override variables set in settings.json_
 
+You can also assign these variables before the command.
+
+```bash
+MONGO_URL=mongodb://xxxxxxxxxxxxxxxxxxxxxxxxxxx reaction
+```
+
 #### ROOT_URL
 
-_Export `ROOT_URL` and [packages/reaction-core/registry.js](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/registry.js) will update the domain in the `shops` collection to match the domain from `ROOT_URL`._ This lets you use alternate domains, or enforce SSL on a fresh installation.  An empty ROOT_URL will just default to _localhost_.
+_Export `ROOT_URL` and [packages/reaction-core/registry.js](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/registry.js) will update the domain in the `shops` collection to match the domain from `ROOT_URL`._ This lets you use alternate domains, or enforce SSL on a fresh installation. An empty ROOT_URL will just default to _localhost_.
 
 #### MAIL_URL
 
@@ -65,14 +71,14 @@ Accepts `true`,`false` or a [Bunyan](https://github.com/trentm/node-bunyan) logg
 
 Reaction installs sample data, translations, and other fixture defaults from `/private/data/` and `/private/data/i18n` using the `Reaction.Import` class.
 
- - Products.json
- - Shipping.json
- - Shops.json
- - Tags.json
+- Products.json
+- Shipping.json
+- Shops.json
+- Tags.json
 
 You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
 
-*Note:  the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method (except when used in packages).*
+_Note: the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method (except when used in packages)._
 
 ## Importing Data
 
@@ -82,7 +88,7 @@ See: [import.md](/developer/core/import.md) for documentation on `Reaction.Impor
 
 _Example import of shipping records_
 
-```js
+```javascript
 import { Meteor} from "meteor/meteor";
 import { Reaction } from "/server/api";
 
@@ -92,9 +98,9 @@ Meteor.startup(function () {
 });
 ```
 
-## Package Settings
+## Reaction Configuration
 
-Reaction packages configuration and [settings](http://docs.meteor.com/api/core.html#Meteor-settings) are loaded on startup from `/private/settings/reaction.json`
+Reaction application configuration is loaded on startup from `/private/settings/reaction.json`
 
 **/private/settings/reaction.json**
 
@@ -192,15 +198,15 @@ Reaction packages configuration and [settings](http://docs.meteor.com/api/core.h
 ]
 ```
 
-*Note:  Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload.*
+_Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload._
 
 ### loadSettings
 
-```js
+```javascript
 // server side secure import of settings
 import { ReactionRegister } from "/server/api";
 
 ReactionRegistry.loadSettings(Assets.getText("settings/reaction.json"));
 ```
 
-This `ReactionRegistry.loadSettings` method is made available in `server/api/core/index.js`.  This is the method that loads Reaction package data on startup. This method can be used in custom packages as well.
+This `ReactionRegistry.loadSettings` method is made available in `server/api/core/index.js`. This is the method that loads Reaction package data on startup. This method can be used in custom packages as well.
