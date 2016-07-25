@@ -231,12 +231,6 @@
         "docPath": "developer/themes/theming.md"
     }, {
         "class": "guide-sub-nav-item",
-        "alias": "styling-a-theme",
-        "label": "Overriding Styles",
-        "repo": "reaction-docs",
-        "docPath": "developer/themes/styling.md"
-    }, {
-        "class": "guide-sub-nav-item",
         "alias": "templates",
         "label": "Templates",
         "repo": "reaction-docs",
