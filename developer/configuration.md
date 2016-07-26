@@ -23,9 +23,9 @@ For convenience, the initial Reaction administrator can be configured here.
 }
 ```
 
-Creating `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `./reaction` command to start Reaction.
+Creating a `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `reaction` command to start Reaction.
 
-`./reaction` is the equivalent of `meteor --settings settings/<your-settings>.json`
+When the [`reaction-cli`](https://www.npmjs.com/package/reaction-cli) npm package is installed, `reaction` is the equivalent of `meteor --raw-logs --settings settings/<your-settings>.json`
 
 ### Environment variables
 
@@ -204,9 +204,9 @@ _Note: Where `name` is Reaction package name, the `settings` object will update 
 
 ```javascript
 // server side secure import of settings
-import { ReactionRegister } from "/server/api";
+import { LoadSettings } from "/server/api";
 
-ReactionRegistry.loadSettings(Assets.getText("settings/reaction.json"));
+LoadSettings(Assets.getText("settings/reaction.json"));
 ```
 
-This `ReactionRegistry.loadSettings` method is made available in `server/api/core/index.js`. This is the method that loads Reaction package data on startup. This method can be used in custom packages as well.
+This `LoadSettings` method is made available in `server/api/core/index.js`. This is the method that Reaction uses to load package data on startup. This method can be used in custom plugins as well.
