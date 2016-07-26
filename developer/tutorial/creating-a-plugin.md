@@ -36,11 +36,11 @@ and how to deal with importing [CSS](https://guide.meteor.com/build-tool.html#cs
 
 For the purposes of our tutorial I am going to assume you are working from a fresh checkout of Reaction.
 
+The reference files for this tutorial are available [here](https://github.com/reactioncommerce/reaction-example-plugin)
+
 Start off by creating a directory within the `imports/plugins/custom` directory of RC. We will be calling our plugin `beesknees`. Within that directory you will want to create `client` and `server` directories.
 
-
 You may, at this point want to also `git init` so you can start tracking your new package with source control.
-
 
 ## Using Custom Layouts
 
@@ -125,7 +125,7 @@ To the `registry` key we are going to add a `layout` entry that looks like this:
 ``` html
     layout: [{
       layout: "coreLayoutBeesknees",
-      workflow: "coreWorkflow",
+      workflow: "coreProductWorkflow",
       collection: "Products",
       theme: "default",
       enabled: true,
@@ -147,6 +147,10 @@ specified which template we would use for a "notFound". When we get to the routi
 
 One important thing to understand is that at any point in time when RC goes to render a route/page it's going to
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step. It is essentially the "default" workflow when you hit the home page.
+
+Also note that we have other parts that we could substitute without
+changing our layout. For example we change point our header or footer to
+a custom template by changing the values for "layoutHeader" or "layoutFooter".
 
 ## Customizing Templates
 
@@ -212,25 +216,18 @@ See that line that says:
 
 You may remember that when we created our layout entry there was a variable called `template` that was set to `products`. So when we add back in that main section it's rendering the template called "products" in that main section. That's why once you put that section back in you will suddenly get the list of products appearing again.
 
-Now what if you don't want to show the `products` template there but show your own template with your own unique way of displaying products? Well you have two choices:
+Now what if you don't want to show the `products` template there but
+show your own template with your own unique way of displaying products?
+You just need to change the entry in the layout record to point to your
+template. This completely decouples your template from the original
+template. 
 
-1. **Create your template and use `Template.mytemplate.replace("products")`**
-
-Do this if you are just changing the HTML of the template and not the behavior. This will save you from having to recreate a lot of the default behavior just because you want to massage the HTML a little.
-
-See the [Template Extensions Repo](https://github.com/aldeed/meteor-template-extension) for more information
-
-1. **Change the entry in the layout record to point to your template.**
-
-This is the preferred method and completely decouples your template from the original template. If you are essentially creating a new way of displaying products you should defintely do this as the way `Template.replaces` intermingles original and replacement templates and can get confusing.
-
-So let's go and create our template first and then we will point our new layout at it.
+So let's go and create our template first and then we will point our new
+layout at it.
 
 Create a directory under `client/templates` called `products` and there create a file called `productsLanding.html` and a file called `productsLanding.js`
 
 _For the purposes of this tutorial we are just copying over the original template files from the `product-variant` plugin. You, of course, are creating a brand new, innovative way of displaying products._
-
-To make this work you will need to copy over all the templates in the `products` directory from the `beesknees` repo.
 
 If you look at these templates you will see templates and sub-templates. Basically if you want use the default you can just references back to the orignal template by name, or you can change the name and create your own template. All templates go into a single global namespace and must be unique.
 
@@ -240,14 +237,6 @@ Oh, and let's not forget to import these files in our `index.js`.
 
 ``` javascript
 // products
-import "./products/productGrid/content.html";
-import "./products/productGrid/content.js";
-import "./products/productGrid/controls.html";
-import "./products/productGrid/controls.js";
-import "./products/productGrid/item.html";
-import "./products/productGrid/notice.html";
-import "./products/productGrid/productGrid.html";
-import "./products/productGrid/productGrid.js";
 import "./products/productsLanding.html";
 import "./products/productsLanding";
 
