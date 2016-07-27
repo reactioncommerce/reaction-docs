@@ -43,8 +43,7 @@ label to whatever name you are using. You can pretty much just change
 
 ## The Schema
 
-The main "secret sauce" here is using the
-[AutoForm](https://atmospherejs.com/aldeed/autoform) along with the
+The main "secret sauce" here is using the [AutoForm](https://atmospherejs.com/aldeed/autoform) along with the
 [Simple Schema](https://atmospherejs.com/aldeed/simple-schema) package.
 This allows you to declare the schema you want to insert against and
 have your form and validations (mostly) built for you. If you look in
@@ -128,8 +127,7 @@ and `refunds`.
  different payment models. You should read your merchant agreement and
  the documentation to get the specifics but typically the
  **authorize** stage will do a check of the customer's payment method
- (credit or debit card) and allocate that amount to you
- **but no funds have been transferred**.
+ (credit or debit card) and allocate that amount to you **but no funds have been transferred**.
  
  To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount.
  Typically an autorization will expire after a set number of days. Usually you cannot capture more than you authorize
