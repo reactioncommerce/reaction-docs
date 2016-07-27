@@ -88,17 +88,21 @@ own name and modify which values you capture (for most Credit Card methods you c
 
 ### Routing
 
-Two new routs are created in the `register.js`, one for payment and one for settings. If your 
-method is a typical server-side method, you should not need to add any additional routes, just modify 
-the existing route for the dashboard to reflect the name of your package. If you need to implement a 
-client-side package (for example where you go to a provider and get a token that gets saved) you can 
-look at the PayPal express implementation which adds more routes for storing the token.
+Two new routes are created in the `register.js`, one for payment and one
+for settings. If your method is a typical server-side method, you should
+not need to add any additional routes, just modify the existing route
+for the dashboard to reflect the name of your package. If you need to
+implement a client-side package (for example where you go to a provider
+and get a token that gets saved) you can look at the PayPal express
+implementation which adds more routes for storing the token.
 
 ### Methods
 
-In the lib directory you need to modify/implement the methods provided here. In this file mostly what you are doing
-is just providing a way for the client to call the server side methods. If you method does not require any parameters
-you may not need the `accountOptions` method but most payment methods should implement `authorize`, `capture`, `refund`,
+In the lib directory you need to modify/implement the methods provided
+here.In this file mostly what you are doing is just providing a way for
+the client to call the server side methods. If you method does not
+require any parameters you may not need the `accountOptions` method but
+most payment methods should implement `authorize`, `capture`, `refund`,
 and `refunds`.
 
  * **authorize**
