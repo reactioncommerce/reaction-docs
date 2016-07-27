@@ -1,6 +1,6 @@
-## Creating a Custom Payment Provider for Reaction Commerce
+# Creating a Custom Payment Provider for Reaction Commerce
 
-### What is a "Payment Provider"
+## What is a "Payment Provider"
 
 Payment Providers are companies that provide a gateway between eCommerce software customer payment. In
 the U.S. that largely means credit cards but it can also mean something like a Paypal account or in
@@ -15,16 +15,17 @@ signing up for a payment provider, secondly to provide a template for creating p
 Note that while charging and capturing should work as expected, refunds are not
 recorded since Reaction expects refunds to be recorded by the Payment Gateway.
 
-### Introduction
+## Introduction
 
 Payment Providers are implemented as "plugins". Reaction Commerce plugins are just Meteor modules with some additional
 configuration.
 
-### Getting Started
+## Getting Started
 
-Start off by copying the `example-paymentmthod` package into the `imports/plugins/custom` folder. You will need to add
-imports to the `main.js` file in both the `client` and `server` directories. If you wish you can 
-remove imports for the Example Payment Method.
+Start off by copying the `example-paymentmthod` package into the
+`imports/plugins/custom` folder. You will need to add imports to the
+`main.js` file in both the `client` and `server` directories. If you
+wish you can remove imports for the Example Payment Method.
 
 The first task is to choose a simple, single-word indentifer for your payment method. You will 
 use this over and over and having it simple and consistent will make it easier to keep your 
@@ -36,12 +37,15 @@ You can pretty much just change "example" whereever it is used to whatever ident
 
 ## The Schema
 
-The main "secret sauce" here is using the [AutoForm](https://atmospherejs.com/aldeed/autoform) along with 
-the [Simple Schema](https://atmospherejs.com/aldeed/simple-schema) package. This allows you to declare 
-the schema you want to insert against and have your form and validations (mostly) built for you. If you 
-look in `import/plugins/included/example-paymentmethod/lib/collections/schemas/example.js` you can see there 
-are two schemas declared, `ExamplePackageConfig` which is the data we want to input in settings and `ExamplePayment` 
-which is the data we submit when submitting a payment.
+The main "secret sauce" here is using the
+[AutoForm](https://atmospherejs.com/aldeed/autoform) along with the
+[Simple Schema](https://atmospherejs.com/aldeed/simple-schema) package.
+This allows you to declare the schema you want to insert against and
+have your form and validations (mostly) built for you. If you look in
+`import/plugins/included/example-paymentmethod/lib/collections/schemas/example.js`
+you can see there are two schemas declared, `ExamplePackageConfig` which
+is the data we want to input in settings and `ExamplePayment` which is
+the data we submit when submitting a payment.
 
 ## Templates
 
@@ -53,7 +57,7 @@ with this form gathers up the data from the form and calls a cllient-side versio
 on the client. If you have modified the schemas as mentioned above, you will also need to modify the forms accordingly.
 
 
-### Checkout
+## Checkout
 
 In this project the payment form is implemented in `templates/cart/checkout/payment/methods/generic`.
 The HTML template is just a standard Credit Card entry form with standard validation. You probably will want 
@@ -62,11 +66,11 @@ You may want to change how some elements such as `storedCard` are implemented ba
 although the default will probably work for most people. You have to change all the references to `example` or`ExamplePayment` to whatever your payment method is called. Most importantly in the section where the `paymentMethod` object is created to be stored in the db you must change the `processor` and `method` values. _(This should probably be changed
 in the future to derive this value from the package)_
 
-### Client Methods
+## Client Methods
 
 Just the one method is called from the client-side: `authorize`, and that method is just a stub that calls the server-side method.
 
-### Dashboard
+## Dashboard
 
 It is likely that your payment method has some parameters that need to be customized and should not be stored in code.
 Typically this includes usernames, passwords, API keys, etc. The template provided at `template/settings` provides a f
