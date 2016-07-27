@@ -64,15 +64,19 @@ the data from the form and calls a cllient-side version of the
 that it can be imported on the client. If you have modified the schemas
 as mentioned above, you will also need to modify the forms accordingly.
 
-
 ## Checkout
 
 In this project the payment form is implemented in `templates/cart/checkout/payment/methods/generic`.
 The HTML template is just a standard Credit Card entry form with standard validation.
-You probably will want to look at the code in `Autoform.hooks` because here is where the `authorize` function is called. 
-You may want to change how some elements such as `storedCard` are implemented based on your needs, 
-although the default will probably work for most people. You have to change all the references to `example` or`ExamplePayment` to whatever your payment method is called. Most importantly in the section where the `paymentMethod` object is created to be stored in the db you must change the `processor` and `method` values. _(This should probably be changed
-in the future to derive this value from the package)_
+You probably will want to look at the code in `Autoform.hooks` because
+here is where the `authorize` function is called. You may want to change
+how some elements such as `storedCard` are implemented based on your needs,
+although the default will probably work for most people. You have to
+change all the references to `example` or`ExamplePayment` to whatever
+your payment method is called. Most importantly in the section where
+the `paymentMethod` object is created to be stored in the db you must
+change the `processor` and `method` values. _(This should probably be
+changed in the future to derive this value from the package)_
 
 ## Client Methods
 
@@ -94,7 +98,7 @@ here.
 
 In `paymentmethod/lib/collections/schemas/` you will want to change
 the PackageConfig schema to include any settings you added to the
-dashboard form. In addition you will want to modify the 
+dashboard form. In addition you will want to modify the
 `ExamplePayment` schema to have your own name and modify which values
 you capture (for most Credit Card methods you can probably leave it
 the same).
