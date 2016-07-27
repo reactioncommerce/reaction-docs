@@ -2,23 +2,27 @@
 
 ## What is a "Payment Provider"
 
-Payment Providers are companies that provide a gateway between eCommerce software customer payment. In
-the U.S. that largely means credit cards but it can also mean something like a Paypal account or in
-other parts of the world it could mean cards linked to Kiosks or even BitCoin. Reaction doesn't really
-care what you do here, you could even not collect money at all it just puts that step as part of the workflow
-and then records the results.
+Payment Providers are companies that provide a gateway between eCommerce
+software customer payment. In the U.S. that largely means credit cards
+but it can also mean something like a Paypal account or in other parts
+of the world it could mean cards linked to Kiosks or even BitCoin.
+Reaction doesn't really care what you do here, you could even not
+collect money at all it just puts that step as part of the workflow and
+then records the results.
 
-Included with the default version of Reaction Commerce is the Example Payment provider. 
-This plugin has two purposes. First to allow you to put through orders in your local dev system without
-signing up for a payment provider, secondly to provide a template for creating plugins for new Payment Providers.
+Included with the default version of Reaction Commerce is the Example
+Payment provider. This plugin has two purposes. First to allow you to
+put through orders in your local dev system without signing up for a
+payment provider, secondly to provide a template for creating plugins
+for new Payment Providers.
 
 Note that while charging and capturing should work as expected, refunds are not
 recorded since Reaction expects refunds to be recorded by the Payment Gateway.
 
 ## Introduction
 
-Payment Providers are implemented as "plugins". Reaction Commerce plugins are just Meteor modules with some additional
-configuration.
+Payment Providers are implemented as "plugins". Reaction Commerce
+plugins are just Meteor modules with some additional configuration.
 
 ## Getting Started
 
@@ -27,13 +31,15 @@ Start off by copying the `example-paymentmthod` package into the
 `main.js` file in both the `client` and `server` directories. If you
 wish you can remove imports for the Example Payment Method.
 
-The first task is to choose a simple, single-word indentifer for your payment method. You will 
-use this over and over and having it simple and consistent will make it easier to keep your 
-package free of bugs. In this project we have chosen the clever name of `example`.
+The first task is to choose a simple, single-word indentifer for your
+payment method. You will use this over and over and having it simple and
+consistent will make it easier to keep your package free of bugs. In
+this project we have chosen the clever name of `example`.
 
-Then you will want to modify the `register.js` file to reflect your payment provider. 
-Specifically you will need to at minimum change the label to whatever name you are using. 
-You can pretty much just change "example" whereever it is used to whatever identifier you are using.
+Then you will want to modify the `register.js` file to reflect your
+payment provider. Specifically you will need to at minimum change the
+label to whatever name you are using. You can pretty much just change
+"example" whereever it is used to whatever identifier you are using.
 
 ## The Schema
 
@@ -49,19 +55,21 @@ the data we submit when submitting a payment.
 
 ## Templates
 
-There are two basic elements that must be created, the payment forms and the settings panel. 
-Like all Meteor projects you place all your client code in the `client` directory. 
-This form basically displays a standard credit card entry form. The JS file associated 
-with this form gathers up the data from the form and calls a cllient-side version of the 
-`authorize` method. That method is placed on the `Example` object so that it can be imported 
-on the client. If you have modified the schemas as mentioned above, you will also need to modify the forms accordingly.
+There are two basic elements that must be created, the payment forms and
+the settings panel. Like all Meteor projects you place all your client
+code in the `client` directory. This form basically displays a standard
+credit card entry form. The JS file associated with this form gathers up
+the data from the form and calls a cllient-side version of the
+`authorize` method. That method is placed on the `Example` object so
+that it can be imported on the client. If you have modified the schemas
+as mentioned above, you will also need to modify the forms accordingly.
 
 
 ## Checkout
 
 In this project the payment form is implemented in `templates/cart/checkout/payment/methods/generic`.
-The HTML template is just a standard Credit Card entry form with standard validation. You probably will want 
-to look at the code in `Autoform.hooks` because here is where the `authorize` function is called. 
+The HTML template is just a standard Credit Card entry form with standard validation.
+You probably will want to look at the code in `Autoform.hooks` because here is where the `authorize` function is called. 
 You may want to change how some elements such as `storedCard` are implemented based on your needs, 
 although the default will probably work for most people. You have to change all the references to `example` or`ExamplePayment` to whatever your payment method is called. Most importantly in the section where the `paymentMethod` object is created to be stored in the db you must change the `processor` and `method` values. _(This should probably be changed
 in the future to derive this value from the package)_
@@ -72,19 +80,24 @@ Just the one method is called from the client-side: `authorize`, and that method
 
 ## Dashboard
 
-It is likely that your payment method has some parameters that need to be customized and should not be stored in code.
-Typically this includes usernames, passwords, API keys, etc. The template provided at `template/settings` provides a f
-orm for entering in this information. The provided form just takes one parameter, an API key (which of course
-is not needed or used). You can add any additional parameters required here.
+It is likely that your payment method has some parameters that need to
+be customized and should not be stored in code. Typically this includes
+usernames, passwords, API keys, etc. The template provided at
+`template/settings` provides a form for entering in this information.
+The provided form just takes one parameter, an API key (which of course
+is not needed or used). You can add any additional parameters required
+here.
 
 ## Server-side
 
 ### Collections
 
-In `paymentmethod/lib/collections/schemas/` you will want to change the PackageConfig schema to include any settings
-you added to the dashboard form. In addition you will want to modify the `ExamplePayment` schema to have your 
-own name and modify which values you capture (for most Credit Card methods you can probably leave it the same).
-
+In `paymentmethod/lib/collections/schemas/` you will want to change
+the PackageConfig schema to include any settings you added to the
+dashboard form. In addition you will want to modify the 
+`ExamplePayment` schema to have your own name and modify which values
+you capture (for most Credit Card methods you can probably leave it
+the same).
 
 ### Routing
 
@@ -107,9 +120,11 @@ and `refunds`.
 
  * **authorize**
 
- Most credit-card processors have a two-step process to allow for different payment models. You should read 
- your merchant agreement and the documentation to get the specifics but typically the **authorize** stage 
- will do a check of the customer's payment method (credit or debit card) and allocate that amount to you 
+ Most credit-card processors have a two-step process to allow for
+ different payment models. You should read your merchant agreement and
+ the documentation to get the specifics but typically the
+ **authorize** stage will do a check of the customer's payment method
+ (credit or debit card) and allocate that amount to you
  **but no funds have been transferred**.
  
  To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount.
