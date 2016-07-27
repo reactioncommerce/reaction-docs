@@ -1,14 +1,4 @@
-# Customizing Reaction Commerce with PlugIns
-
-## Purpose
-
-This tutorial is intended to walk through most aspects of building a custom store, starting from simple appearance tweaks, through changing the behavior of the checkout and finally adding custom schemas.
-
-**_Note_**: While this tutorial focuses on creating a custom plugin, for many appearance tweaks you don't need to go to this level of detail.
-
-## Following this tutorial
-
-All the files created/modifed in this tutorial are in the [Bee's Knees](https://github.com/zenweasel/beesknees) repo. You can use these files as a reference if you get stuck, however I recommend that you start from scratch with your own blank plugin. Most of the code you might want to copy and paste into your new package is included here in the body of the tutorial for just that purpose. Just basically substitute your own store name whereever you see Bee's Knees.
+# Creating a Reaction Commerce PlugIn
 
 ### Background
 
@@ -29,228 +19,28 @@ The advantages of creating a plugin are:
 1. Upgrading is as simple as just pulling in the latest changes from the repo, or installing a new version and dropping your plugin in.
 1. Allows you to break your modifications into modules for better organization.
 
-### Our Store
-
-We are building a store for a fictional children's clothes manufacturer: Bee's Knees. BK manufactures children's clothes with an emphasis on natural materials and original designs. Their brand emphasizes bright, bold colors and an "earthy" aestetic.
-
-#### The changes
-
-Besides changing obvious things like colors and fonts, BK has told us that they want the checkout process to be a simple as possible so they want a "one-page-checkout". Also they want the customers to be able to enter the names and ages of their children and store them in the database so that they can send out age-specific sales emails at a later point. They want to change the way the Product Grid and Product Details pages look as well.
 
 ## Creating Our Plugin
 
 ### What is a Reaction Commerce Plugin?
 
-Essentially a Reaction Commerce plugin is just a "module". Going forward Meteor is moving away from their own proprietary package format and towards [ES6 modules](http://exploringjs.com/es6/ch_modules.html). In order to future-proof RC we have adapted this approach as well. It also removes some of the "magic" where a ton of globals were inserted. It adds a little more boilerplate but makes up for it in clarity. Before moving forward you should have a good understanding of how [imports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) and [exports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export) work, and how to deal with importing [CSS](https://guide.meteor.com/build-tool.html#css-importing) and HTML files.
+Essentially a Reaction Commerce plugin is just a "module". Going forward Meteor is moving away from their own proprietary
+package format and towards [ES6 modules](http://exploringjs.com/es6/ch_modules.html). In order to future-proof RC we have 
+adapted this approach as well. It also removes some of the "magic" where a ton of globals were inserted.
+It adds a little more boilerplate but makes up for it in clarity. Before moving forward you should have a 
+good understanding of how [imports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) and 
+[exports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export) work, 
+and how to deal with importing [CSS](https://guide.meteor.com/build-tool.html#css-importing) and HTML files.
 
-### Adding custom CSS
+### Adding our files
 
 For the purposes of our tutorial I am going to assume you are working from a fresh checkout of Reaction.
 
+The reference files for this tutorial are available [here](https://github.com/reactioncommerce/reaction-example-plugin)
+
 Start off by creating a directory within the `imports/plugins/custom` directory of RC. We will be calling our plugin `beesknees`. Within that directory you will want to create `client` and `server` directories.
 
-
 You may, at this point want to also `git init` so you can start tracking your new package with source control.
-
-Now this package effectively does nothing until we start adding some files so let's start off with some CSS files to start making our store look the way we want it to look.
-
-Let's create a `styles` directory under client and create a `main.less` file. Now if wanted to start from a complete blank "canvas" we could just add CSS here but for the purposes of this tutorial we are going to be using bootstrap and also rely on our default theme. In real life however you don't need to do this, you can pick and choose what parts you want to import. But even if you import then, you can of course override them.
-
-So since we are going to inherit styles into our plugin we don't want them inserted twice so we will comment-out the import in `client/main.js`
-
-``` javascript
-// import "/imports/themes/default";
-```
-
-(if you, like me, like to see things happen as you make changes and are currently running the Reaction app, once you comment out that line you should be left with a completely unstyled site.)
-
-So first to our `main.less` we need to import all the bootstrap styles. This uses a specific syntax for importing NPM-installed modules.
-
-_(If at this point you are asking yourself "Can I use {insert name of other CSS/HTML framework}?" the answer is Yes and No. While you can import any CSS you like, all of the templates use BootStrap-style HTML so it would also involve changing every template in the entire application. But also note that you don't need to import all of the Reaction styles. You could, for example, just leave the dashboard section and substitute your own CSS)_
-
-``` css
-@import "{}/node_modules/bootstrap/less/variables.less";
-@import "{}/node_modules/bootstrap/less/mixins.less";
-
-// Reset and dependencies
-@import "{}/node_modules/bootstrap/less/normalize.less";
-@import "{}/node_modules/bootstrap/less/print.less";
-@import "{}/node_modules/bootstrap/less/glyphicons.less";
-
-// Core CSS
-@import "{}/node_modules/bootstrap/less/scaffolding.less";
-@import "{}/node_modules/bootstrap/less/type.less";
-@import "{}/node_modules/bootstrap/less/code.less";
-@import "{}/node_modules/bootstrap/less/grid.less";
-@import "{}/node_modules/bootstrap/less/tables.less";
-@import "{}/node_modules/bootstrap/less/forms.less";
-@import "{}/node_modules/bootstrap/less/buttons.less";
-
-// Components
-@import "{}/node_modules/bootstrap/less/component-animations.less";
-@import "{}/node_modules/bootstrap/less/dropdowns.less";
-@import "{}/node_modules/bootstrap/less/button-groups.less";
-@import "{}/node_modules/bootstrap/less/input-groups.less";
-@import "{}/node_modules/bootstrap/less/navs.less";
-@import "{}/node_modules/bootstrap/less/navbar.less";
-@import "{}/node_modules/bootstrap/less/breadcrumbs.less";
-@import "{}/node_modules/bootstrap/less/pagination.less";
-@import "{}/node_modules/bootstrap/less/pager.less";
-@import "{}/node_modules/bootstrap/less/labels.less";
-@import "{}/node_modules/bootstrap/less/badges.less";
-@import "{}/node_modules/bootstrap/less/jumbotron.less";
-@import "{}/node_modules/bootstrap/less/thumbnails.less";
-@import "{}/node_modules/bootstrap/less/alerts.less";
-@import "{}/node_modules/bootstrap/less/progress-bars.less";
-@import "{}/node_modules/bootstrap/less/media.less";
-@import "{}/node_modules/bootstrap/less/list-group.less";
-@import "{}/node_modules/bootstrap/less/panels.less";
-@import "{}/node_modules/bootstrap/less/responsive-embed.less";
-@import "{}/node_modules/bootstrap/less/wells.less";
-@import "{}/node_modules/bootstrap/less/close.less";
-
-// Components w/ JavaScript
-@import "{}/node_modules/bootstrap/less/modals.less";
-// @import "{}/node_modules/bootstrap/less/tooltip.less";
-@import "{}/node_modules/bootstrap/less/popovers.less";
-@import "{}/node_modules/bootstrap/less/carousel.less";
-
-// Utility classes
-@import "{}/node_modules/bootstrap/less/utilities.less";
-@import "{}/node_modules/bootstrap/less/responsive-utilities.less";
-```
-
-Now we need to import all the default styles from the default Reaction theme.
-
-``` css
-// -----------------------------------------------------------------------------
-// Reaction Core theme files
-//
-
-// Base Styles
-@import "/imports/themes/default/styles/alerts.less";
-@import "/imports/themes/default/styles/brand.less";
-@import "/imports/themes/default/styles/button.less";
-@import "/imports/themes/default/styles/buttonGroup.less";
-@import "/imports/themes/default/styles/cardGroup.less";
-@import "/imports/themes/default/styles/cards.less";
-@import "/imports/themes/default/styles/fonts.less";
-@import "/imports/themes/default/styles/items.less";
-@import "/imports/themes/default/styles/media.less";
-@import "/imports/themes/default/styles/metadata.less";
-@import "/imports/themes/default/styles/navbar.less";
-@import "/imports/themes/default/styles/popover.less";
-@import "/imports/themes/default/styles/select.less";
-@import "/imports/themes/default/styles/separator.less";
-@import "/imports/themes/default/styles/tagGroup.less";
-@import "/imports/themes/default/styles/tagNav.less";
-@import "/imports/themes/default/styles/tags.less";
-@import "/imports/themes/default/styles/tagTree.less";
-@import "/imports/themes/default/styles/textfield.less";
-@import "/imports/themes/default/styles/themeEditor.less";
-@import "/imports/themes/default/styles/tooltip.less";
-@import "/imports/themes/default/styles/tooltip.less";
-@import "/imports/themes/default/styles/base.less";
-@import "/imports/themes/default/styles/dropdowns.less";
-@import "/imports/themes/default/styles/forms.less";
-@import "/imports/themes/default/styles/grid.less";
-@import "/imports/themes/default/styles/mixins.less";
-@import "/imports/themes/default/styles/navs.less";
-@import "/imports/themes/default/styles/panels.less";
-@import "/imports/themes/default/styles/popovers.less";
-@import "/imports/themes/default/styles/variables.less";
-@import "/imports/themes/default/styles/spinner.less";
-
-// Accounts
-@import "/imports/themes/default/styles/accounts/accounts.less";
-@import "/imports/themes/default/styles/accounts/inline.less";
-
-// Cart
-@import "/imports/themes/default/styles/cart/cartDrawer.less";
-@import "/imports/themes/default/styles/cart/cartItems.less";
-@import "/imports/themes/default/styles/cart/cartSubTotals.less";
-@import "/imports/themes/default/styles/cart/cartIcon.less";
-@import "/imports/themes/default/styles/cart/addressBook.less";
-@import "/imports/themes/default/styles/cart/checkout.less";
-@import "/imports/themes/default/styles/cart/progressBar.less";
-
-// Dashboard
-@import "/imports/themes/default/styles/dashboard/dashboard.less";
-@import "/imports/themes/default/styles/dashboard/console.less";
-@import "/imports/themes/default/styles/dashboard/orders.less";
-@import "/imports/themes/default/styles/dashboard/package.less";
-@import "/imports/themes/default/styles/dashboard/accounts.less";
-@import "/imports/themes/default/styles/dashboard/settings.less";
-@import "/imports/themes/default/styles/dashboard/widget.less";
-
-// Layout
-@import "/imports/themes/default/styles/layout/layout.less";
-@import "/imports/themes/default/styles/layout/footer.less";
-@import "/imports/themes/default/styles/layout/header.less";
-@import "/imports/themes/default/styles/layout/tags.less";
-
-@import "/imports/themes/default/styles/products/products.less";
-@import "/imports/themes/default/styles/products/attributes.less";
-@import "/imports/themes/default/styles/products/productImageGallery.less";
-@import "/imports/themes/default/styles/products/productDetail.less";
-@import "/imports/themes/default/styles/products/tags.less";
-@import "/imports/themes/default/styles/products/variant.less";
-@import "/imports/themes/default/styles/products/childVariant.less";
-@import "/imports/themes/default/styles/products/variantForm.less";
-@import "/imports/themes/default/styles/products/variantList.less";
-@import "/imports/themes/default/styles/products/productGrid.less";
-@import "/imports/themes/default/styles/products/productList.less";
-```
-
-Because the `plugins` folder is inside the `imports` folder your code will have no effect until it is imported. So we need to add an `index.js` file and the root of the `client` directory that imports our `main.less`. This index files let's us keep the import clean. The contents of that file are:
-
-``` javascript
-import "./styles/main.less";
-import "bootstrap/dist/js/npm.js";
-```
-
-When you add this file the plugin loader will find your plugin and add the appropriate imports. This will essentially "activate" your plugin.
-
-If you haven't been running Reaction in the background, you may want to do this now as Meteor will read and compile your file and tell you about any errors you have.
-
-Now we can get down to the business of customizing the look of our store. Let's create a new file in `client/styles` called `base.less` and add a really simple change.
-
-``` css
-div.rui.navbar {
-  background-color: #ffc835;
-}
-
-a.rui.tag.link {
-  color: #4c3000;
-}
-
-.title {
-  color: #4c3000;
-}
-```
-
-Now we need to add importing that file into our `main.less` (at the bottom, order matters) like this:
-
-``` css
-@import "base.less";
-```
-
-If we want to override Bootstrap variables we can add another file called `variables.less` and add this change:
-
-``` css
-/* Example: Override less variable override */
-@navbar-default-bg: #61462f;
-```
-
-and then also import that file in our `main.less`
-
-``` javascript
-@import "variables.less";
-```
-
-Obviously you will want to do much, much more than change a couple of colors. But you can override or add new styles here to change the store to your liking. And if all has worked well, you should see the White and Purple colors of the stock Reaction theme change to Yellow and Brown (because Bees).
-
-If you came to this point in the tutorial and thought "How does that differ from a theme?" the short answer is, it doesn't. We just want to do more than what a theme does so we built a plugin.
 
 ## Using Custom Layouts
 
@@ -335,7 +125,7 @@ To the `registry` key we are going to add a `layout` entry that looks like this:
 ``` html
     layout: [{
       layout: "coreLayoutBeesknees",
-      workflow: "coreWorkflow",
+      workflow: "coreProductWorkflow",
       collection: "Products",
       theme: "default",
       enabled: true,
@@ -357,6 +147,10 @@ specified which template we would use for a "notFound". When we get to the routi
 
 One important thing to understand is that at any point in time when RC goes to render a route/page it's going to
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step. It is essentially the "default" workflow when you hit the home page.
+
+Also note that we have other parts that we could substitute without
+changing our layout. For example we change point our header or footer to
+a custom template by changing the values for "layoutHeader" or "layoutFooter".
 
 ## Customizing Templates
 
@@ -422,25 +216,18 @@ See that line that says:
 
 You may remember that when we created our layout entry there was a variable called `template` that was set to `products`. So when we add back in that main section it's rendering the template called "products" in that main section. That's why once you put that section back in you will suddenly get the list of products appearing again.
 
-Now what if you don't want to show the `products` template there but show your own template with your own unique way of displaying products? Well you have two choices:
+Now what if you don't want to show the `products` template there but
+show your own template with your own unique way of displaying products?
+You just need to change the entry in the layout record to point to your
+template. This completely decouples your template from the original
+template. 
 
-1. **Create your template and use `Template.mytemplate.replace("products")`**
-
-Do this if you are just changing the HTML of the template and not the behavior. This will save you from having to recreate a lot of the default behavior just because you want to massage the HTML a little.
-
-See the [Template Extensions Repo](https://github.com/aldeed/meteor-template-extension) for more information
-
-1. **Change the entry in the layout record to point to your template.**
-
-This is the preferred method and completely decouples your template from the original template. If you are essentially creating a new way of displaying products you should defintely do this as the way `Template.replaces` intermingles original and replacement templates and can get confusing.
-
-So let's go and create our template first and then we will point our new layout at it.
+So let's go and create our template first and then we will point our new
+layout at it.
 
 Create a directory under `client/templates` called `products` and there create a file called `productsLanding.html` and a file called `productsLanding.js`
 
 _For the purposes of this tutorial we are just copying over the original template files from the `product-variant` plugin. You, of course, are creating a brand new, innovative way of displaying products._
-
-To make this work you will need to copy over all the templates in the `products` directory from the `beesknees` repo.
 
 If you look at these templates you will see templates and sub-templates. Basically if you want use the default you can just references back to the orignal template by name, or you can change the name and create your own template. All templates go into a single global namespace and must be unique.
 
@@ -450,14 +237,6 @@ Oh, and let's not forget to import these files in our `index.js`.
 
 ``` javascript
 // products
-import "./products/productGrid/content.html";
-import "./products/productGrid/content.js";
-import "./products/productGrid/controls.html";
-import "./products/productGrid/controls.js";
-import "./products/productGrid/item.html";
-import "./products/productGrid/notice.html";
-import "./products/productGrid/productGrid.html";
-import "./products/productGrid/productGrid.js";
 import "./products/productsLanding.html";
 import "./products/productsLanding";
 
@@ -504,20 +283,6 @@ Now we want to add an `index.js` to our server directory and import our `load.js
 ``` javascript
 import "./load";
 ```
-
-And we want to add the import to the `/server/main.js` again. So we add the line
-
-``` javascript
-import "/imports/plugins/custom/beesknees/server";
-```
-
-Right next to the line
-
-``` javascript
-import "/imports/plugins/custom/beesknees/register";
-```
-
-This should be the last of these global imports that we need to add. Generally the only imports you need to add to the main.js files are one import for client, one for the registry and one for server.
 
 Now let's look at the data we moved over. There are four files there `Shops.json`, `Products.json`, `Shipping.json` and `Tags.json`. Primarily we are going to be concerned with Shops and Products but these are not the only types of data you can import. If you want to import other data types please consult the main documentation under "Import".
 
