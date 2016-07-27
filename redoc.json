@@ -114,7 +114,7 @@
         "alias": "tutorial",
         "label": "Customization Guide",
         "repo": "reaction-docs",
-        "docPath": "developer/tutorial/customization.md"
+        "docPath": "developer/tutorial/introduction.md"
     }, {
         "class": "guide-nav-item",
         "alias": "architecture",
