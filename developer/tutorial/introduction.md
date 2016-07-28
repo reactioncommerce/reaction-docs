@@ -3,7 +3,7 @@
 ## Purpose
 
 This tutorial is in two parts, the first parts focuses on creating a custom "theme" which is how you can modify
-the appearance of Reaction without changing of the original files. The second part deals with creating a custom
+the appearance of Reaction without changing any of the original files. The second part deals with creating a custom
 "plugin" which allows you extend the functionality or create completely new functionality.
 
 ### What's the difference between a theme and plugin?
