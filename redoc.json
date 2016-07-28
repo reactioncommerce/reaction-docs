@@ -118,7 +118,7 @@
     }, {
         "class": "guide-sub-nav-item",
         "alias": "creating-a-plugin",
-        "label": "Creating a Plugin Tutorial",
+        "label": "Creating a Plugin",
         "repo": "reaction-docs",
         "docPath": "developer/tutorial/creating-a-plugin.md"
     }, {
