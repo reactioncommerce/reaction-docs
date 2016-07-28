@@ -222,7 +222,7 @@
         "alias": "creating-a-theme-package",
         "label": "Creating a Theme",
         "repo": "reaction-docs",
-        "docPath": "developer/themes/theming.md"
+        "docPath": "developer/tutorial/creating-a-theme.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "templates",
