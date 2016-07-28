@@ -116,6 +116,18 @@
         "repo": "reaction-docs",
         "docPath": "developer/tutorial/introduction.md"
     }, {
+        "class": "guide-sub-nav-item",
+        "alias": "creating-a-plugin",
+        "label": "Creating a Plugin Tutorial",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/creating-a-plugin.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "creating-a-payment-provider",
+        "label": "Creating a Payment Provider",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/creating-a-payment-provider-plugin.md"
+    }, {
         "class": "guide-nav-item",
         "alias": "architecture",
         "label": "Architecture",
