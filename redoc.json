@@ -117,6 +117,12 @@
         "docPath": "developer/tutorial/introduction.md"
     }, {
         "class": "guide-sub-nav-item",
+        "alias": "creating-a-theme",
+        "label": "Creating a Theme",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/creating-a-theme.md"
+    }, {
+        "class": "guide-sub-nav-item",
         "alias": "creating-a-plugin",
         "label": "Creating a Plugin",
         "repo": "reaction-docs",
