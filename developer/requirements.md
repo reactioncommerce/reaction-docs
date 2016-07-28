@@ -2,22 +2,22 @@
 
 ## macOS
 
-- We suggest installation of [Xcode](https://developer.apple.com/xcode/downloads/)
+- To install the required build tools, Mac users must install [Xcode](https://developer.apple.com/xcode/downloads/)
 
   ```
   xcode-select --install
   ```
 
-- [Node.js](https://nodejs.org/) with npm.
+- [Node.js](https://nodejs.org/) >=4.x.x (with NPM)
 
 - `ImageMagick` - _Optional_
 
 ## Linux
 
-- [Node.js](https://nodejs.org/) with npm.
+- [Node.js](https://nodejs.org/) >=4.x.x (with NPM)
 - `graphicsmagick` - _Optional_
 
-### Ubuntu
+### Ubuntu/Debian
 
 ```
 apt-get update
@@ -29,13 +29,11 @@ apt-get install -y --no-install-recommends curl ca-certificates bzip2 git build-
 
 Windows installation has a few more requirements:
 
-- [Node.js](https://nodejs.org/) with NPM
-- Win32 OpenSSL ([windows installer](https://slproweb.com/products/Win32OpenSSL.html))
-- Visual Studio 2008 redistributable
+- [Node.js](https://nodejs.org/) >=4.x.x (with NPM)
+- Win32 OpenSSL ([windows installer](https://slproweb.com/products/Win32OpenSSL.html)) (See [npm-node-aes-gcm/README.md](https://github.com/meteor/meteor/blob/devel/packages/non-core/npm-node-aes-gcm/README.md))
+- [Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)
 - Git + msysGit ([git-for-windows/git](https://github.com/git-for-windows/git/releases))
 - ImageMagick
-
-Install OpenSSL per [npm-node-aes-gcm/README.md](https://github.com/meteor/meteor/blob/devel/packages/non-core/npm-node-aes-gcm/README.md).
 
 If you want to use shell scripts under Windows, create file named `meteor` inside `%localappdata%\.meteor` with following contents:
 
@@ -60,18 +58,14 @@ reaction reset
 
 When using a production build or a standalone [MongoDB](https://www.mongodb.org/) server, make sure you are using **version 3.2** or better.
 
-You can connect to the local Meteor / MongoDB instance on the `Meteor port + 1`. No credentials required in development.
+You can connect to the local Meteor / MongoDB instance on the `Meteor port + 1` (e.g. if Meteor port is 3000, MongoDB port is 3001). No credentials required for Mongo in development.
 
 ## Troubleshooting
 
 ### env: node: No such file or directory
 
-Caused by a broken node, NPM installation. Reinstall Node.js with NPM (or when packaged separately, reinstall them both).
+Caused by a broken Node/NPM installation. Reinstall [Node.js](https://nodejs.org/) with NPM (or when packaged separately, reinstall them both).
 
 ### Windows OpenSSL errors prevent startup
 
 Install OpenSSL per: <https://github.com/meteor/meteor/blob/devel/packages/non-core/npm-node-aes-gcm/README.md>
-
-### Windows bower install errors
-
-We use Bower to install some core dependencies. To use Bower on Windows, you must install msysgit. See: <https://github.com/bower/bower/tree/master#windows-users>
