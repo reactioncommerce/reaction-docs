@@ -43,7 +43,7 @@ This example would load the `customHomePageTemplate` template, instead of the `c
 
 ### Example layout from checkout
 
-Layouts can work in conjunction with [workflows](developer/architecture/workflow.md).  Here is an example of the layout defined in the `/imports/plugins/core/checkout` module.
+Layouts can work in conjunction with [workflows](/developer/architecture/workflow.md).  Here is an example of the layout defined in the `/imports/plugins/core/checkout` module.
 
 ```javascript
   layout: [{
