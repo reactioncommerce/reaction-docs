@@ -278,10 +278,10 @@ Reaction.Import.flush();
 
 ```
 
-Now we want to add an `index.js` to our server directory and import our `load.js`. That file should just look like
+Now we want to add an `index.js` to our server directory and import our `init.js`. That file should just look like
 
 ``` javascript
-import "./load";
+import "./init";
 ```
 
 Now let's look at the data we moved over. There are four files there `Shops.json`, `Products.json`, `Shipping.json` and `Tags.json`. Primarily we are going to be concerned with Shops and Products but these are not the only types of data you can import. If you want to import other data types please consult the main documentation under "Import".
@@ -345,29 +345,32 @@ This entry will look like this (placed after the `autoEnable: true` entry):
 
 The `route` entry is the URL that will match the users URL. (for how to include parameters in the route, please see the RC documentation or the FlowRouter documentation) The `name` is the string by which you will refer to this route in other parts of the application. The `template` is the template that will be rendered when the route is visited, and the `workflow` defines which workflow this will be attached to. In our case, there is no real workflow around an about page so we use the default "coreWorkflow".
 
-To allow users to our new Route we need to give them permissions. Since we are good with everyone viewing our About page  we will add this permission to our "defaultRoles" and "defaultVisitorRoles" (the roles available when a new user is created). We do this by modifying our "Shops.json" file and addting it to the list so that it looks like this
+To allow users to our new Route we need to give them permissions. Since we are good with everyone viewing our About page  we will add this permission to our "defaultRoles" and "defaultVisitorRoles" (the roles available when a new user is created).
+To do this we are going to add some code to our `init.js` file to add the new routes to the roles. That function looks like this:
 
 ``` javascript
-"defaultVisitorRole": [
-  "anonymous",
-  "guest",
-  "product",
-  "tag",
-  "index",
-  "cart/checkout",
-  "cart/completed",
-  "about"
-],
-"defaultRoles": [
-  "account/profile",
-  "guest",
-  "product",
-  "tag",
-  "index",
-  "cart/checkout",
-  "cart/completed",
-  "about"
-    ]
+function addRolesToVisitors() {
+  // Add the about permission to all default roles since it's available to all
+  Logger.info("::: Adding about route permissions to default roles")
+  const shop = Shops.findOne(Reaction.getShopId());
+  Shops.update(shop._id, {
+      $addToSet: { "defaultVisitorRole": "about"}
+    }
+  );
+  Shops.update(shop._id, {
+    $addToSet: { "defaultRole": "about"}
+  });
+}
+```
+Then let's add another Hook Event to call that code.
+
+``` javascript
+/**
+ * Hook to make additional configuration changes
+ */
+Hooks.Events.add("afterCoreInit", () => {
+  addRolesToVisitors();
+});
 ```
 
 Now, as usual you will need to reset for this change to take affect. In addition, changes to defaultRoles/defaultVisitorRoles do **not** change existing users, so you will need to clear your cache or use Private/Incognito mode so that a new user is created.
@@ -472,10 +475,12 @@ To change this workflow you simple need to modify these records. In our example 
 
 So to solidy our change we are going to have our changes to the database done in our `load.js` script so that these changes are made when the store is bootstrapped.
 
-We want to make this change after everything else has been set up (we want to make sure those records are there before we try to modify them) so we are going to add our function on to the `afterCoreInit` event. So our call (below the function for importing fixture data) is:
+We want to make this change after everything else has been set up (we want to make sure those records are there before we try to modify them) so we are going to add our function on to the `afterCoreInit` event.
+So we just call out function from the Hook Event we created earlier
 
 ``` javascript
 Hooks.Events.add("afterCoreInit", () => {
+    addRolesToVisitors();
     modifyCheckoutWorkflow();
 });
 ```
