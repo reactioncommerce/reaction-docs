@@ -115,7 +115,7 @@ implementation which adds more routes for storing the token.
 ### Methods
 
 In the lib directory you need to modify/implement the methods provided
-here.In this file mostly what you are doing is just providing a way for
+here. In this file mostly what you are doing is just providing a way for
 the client to call the server side methods. If you method does not
 require any parameters you may not need the `accountOptions` method but
 most payment methods should implement `authorize`, `capture`, `refund`,
