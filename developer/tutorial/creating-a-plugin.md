@@ -362,6 +362,7 @@ function addRolesToVisitors() {
   });
 }
 ```
+
 Then let's add another Hook Event to call that code.
 
 ``` javascript
