@@ -30,7 +30,7 @@ To edit the navigation tags of your shop, click on the “Add Tag” button in t
 
 To create a new navigation tag, type your keyword into the empty “Add Tag” box, and hit enter to save. Previously created tags may be auto suggested for you. Be sure your product tag corresponds with a navigation tag, otherwise your product page will be empty.
 
-/admin-top-navigation-add.png "Reaction Commerce navigation bar")
+![](/admin-top-navigation-add.png "Reaction Commerce navigation bar")
 
 To delete a navigation tag, click the grey “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
 
