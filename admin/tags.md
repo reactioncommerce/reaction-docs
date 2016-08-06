@@ -1,39 +1,39 @@
 # Tags and Navigation
 
-Tags are the way to classify and group your products. Tags on Reaction Commerce are similar to hashtags on social media sites in that they are a way to easily search a grouping of related items. Tags make it possible to group products, and then a search on that tag returns all the products that contain it. This is what we refer to as a “Hashtag Taxonomy.” 
+Tags provide an easy way to classify and search for product items by group. This is what we refer to as a hashtag taxonomy.
 
-On Reaction, there are two types of tags: Product Tags and Navigation Tags. You can think of Product Tags as a list of keywords that help shoppers find what they’re looking for. Navigation Tags are more like category headings.
+Reaction features two types of tags: product tags and navigation tags. Product tags help customers find what they’re looking for, while navigation tags organize these keywords by category.
 
 ## Product Tags
 
-To assign a tag to a product, login as an admin, and click on a product to go to a product detail page. Below the images section is the “Tags” section.
+To assign a tag to a product, go to the product detail page by clicking on the product. Tags will then be located below the images section.
 
 ![](/assets/admin-products-tags.png "Reaction Commerce tags and navigation")
 
-To create a new tag, click on the “Add tags” box and type in your tag. Hit Enter on your keyboard to save the tag. For example, if the product is a t-shirt you might want to add Tags like: Mens, Short sleeve, Cotton, Crew neck, etc. 
+To create a new tag, click on the “Add Tags” box, type in your tag, and hit enter to save. If the item is a t-shirt, you might want to tag it with relevant keywords, like short sleeve, cotton, crewneck, etc. 
 
-To delete a tag, click the grey “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag").)
+To delete a tag, click the gray “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag").)
 
-To rearrange tags, click on the 3 horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tags")), and drag and drop the tag where you want it.
+To rearrange the order of a tag, click on the three horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tags")), and simply drag and drop.
 
 ### Hashtag URLs
 
-The flag icon in each tag automatically creates a URL for that product based on that tag. By clicking on the flag outline, it changes to a solid flag, and the URL for your product changes from an automated URL of nonsensical characters to a URL containing just the words from that tag.
+The flag icon in each tag creates a product link based on that tag. Clicking on the flag generates a URL for your product containing just the words from that tag.
 
-While this functionality may seem uneventful at the moment, we have big plans. Eventually, Hashtag URLs will allow you to glean important information about the popularity and social weight of your products, like how often it’s shared on social networks, how popular it is compared to similar products, whether it’s trending and, if so, where in the world it’s trending, and more. With this information, you’ll be able to better target your marketing efforts. 
+Eventually, hashtag URLs will allow you to glean important metrics regarding your products, like its social reach, how it compares to similar products, geolocation-based data, and much more. With this information, you’ll be able to better target your marketing efforts. 
 
 ## Navigation Tags
 
-To edit the top Navigation Tags of your shop, login as an admin, and click on the “Add Tag” button in the top navigation bar of your shop.
+To edit the navigation tags of your shop, click on the “Add Tag” button in the top navigation bar of your shop.
 
 ![](/assets/admin-top-navigation.png "Reaction Commerce Navigation")
 
-To create a new Navigation Tag, click inside the empty “Add tag” box, type in your tag, and hit enter or tab on your keyboard to save the tag. If you created tags for your products, you will notice that as you type, previously created tags are auto suggested for you. You will likely want to make sure that at least one of your Product Tags corresponds to a Navigation Tag so that when a shopper clicks on the Navigation Tags that appear in your shop’s top navigation, they will discover your products by category. If you create a Navigation Tag that doesn’t have any products with that corresponding tag, then that Navigation Tag will be empty when your shoppers click on it.
+To create a new navigation tag, type your keyword into the empty “Add Tag” box, and hit enter to save. Previously created tags may be auto suggested for you. Be sure your product tag corresponds with a navigation tag, otherwise your product page will be empty.
 
-![](/assets/admin-top-navigation-add.png "Reaction Commerce navigation bar")
+/admin-top-navigation-add.png "Reaction Commerce navigation bar")
 
-To delete a Navigation Tag, click the grey “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
+To delete a navigation tag, click the grey “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
 
-To rearrange Navigation Tags, click on the 3 horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tag")), and drag and drop the tag where you want it. 
+To rearrange navigation tags, click on the 3 horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tag")), and drag and drop the tag where you want it. 
 
-When you finish updating your navigation, click anywhere on your shop outside of the top nav bar to close out of the editing interface.
+When you finish updating your navigation, click anywhere outside of the top nav bar to stop editing.
