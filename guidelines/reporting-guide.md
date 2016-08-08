@@ -22,7 +22,7 @@ In your report please include:
 
 * Any other information you believe we should have.
 
-### What happens after you file a report?
+## What happens after you file a report?
 
 You will receive an email from the Reaction Code of Conduct Committee acknowledging receipt immediately. We promise to acknowledge receipt within 24 hours (and will aim for much quicker than that).
 
@@ -58,6 +58,6 @@ Once we've determined our final action, we'll contact the original reporter to l
 
 Finally, the Reaction Commerce Conduct Committee will make a report on the situation and may choose to submit a public report of the incident.
 
-### Appealing
+## Appealing
 
 Only permanent resolutions (such as bans) may be appealed. To appeal a decision of the working group, contact Reaction Commerce at [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com) with your appeal and the Team will review the case.
