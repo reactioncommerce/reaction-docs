@@ -32,9 +32,9 @@ To remove an entire product, simply login and click the Delete icon (![](/assets
 ![](/assets/guide-products-removeproduct.png "Reaction Commerce remove product")
 
 ## Product Variants
-Product variants allow you to create different versions of the same base product. Assign different pricing, weight, quantity, and other key information, like multiple colors of the same shirt. 
+Product variants allow you to create different versions of the same base product. Assign different pricing, weight, quantity, and other key information, like multiple colors of the same shirt.
 
-Every product is filled with one variant. To create more, click the edit icon next to the first variant, or double click anywhere on the variant bar. 
+Every product is filled with one variant. To create more, click the edit icon next to the first variant, or double click anywhere on the variant bar.
 
 ![](/assets/guide-products-openvariant.png "Reaction Commerce product variants")
 
@@ -49,13 +49,13 @@ To remove a variant, open it and simply click the delete button.
 ![](/assets/guide-products-removevariant.png "Reaction Commerce delete variant")
 
 # Variants Options
-Variant options provide a second layer of customization within each variant. Feature shirts in multiple colors, as well as multiple size options for each color. You can use this flexible structure to customize your products however you like. 
+Variant options provide a second layer of customization within each variant. Feature shirts in multiple colors, as well as multiple size options for each color. You can use this flexible structure to customize your products however you like.
 
 To add options to a variant, click on the “Variant Options” button to the left of the “Clone” button.
 
 ![](/assets/guide-products-addvariantoption.png "Reaction Commerce add variant option")
 
-Each option allows you to customize name, price, quantity, and a set of images. To add media from the gallery, simply highlight an option. 
+Each option allows you to customize name, price, quantity, and a set of images. To add media from the gallery, simply highlight an option.
 
 ![](/assets/guide-products-editvariantoption.png "Reaction Commerce edit variant option")
 
@@ -66,20 +66,20 @@ To add images to the gallery, click on a variant, and drag and drop files from y
 
 ![](/assets/guide-products-dropmedia.png "Reaction Commerce drag and drop image")
 
-You may also upload images using the "Drop file to upload” button. 
+You may also upload images using the "Drop file to upload” button.
 
 Once you have images/videos added to your gallery, simply drag and drop to change their position.
 
 ![](/assets/guide-products-dragmedia.png "Reaction Commerce drag and drop image")
 
 ## Product Grid
-By default, products are displayed in a grid layout. When logged in as an admin, you may drag and drop products to reorder them. 
+By default, products are displayed in a grid layout. When logged in as an admin, you may drag and drop products to reorder them.
 
 ![](/assets/guide-products-gridorder.png "Reaction Commerce drag and drop merchandising")
 
-Your product images come in 3 default sizes. To increase or decrease the size of your product image, click on the + icon and cycle through the available sizes. 
+Your product images come in 3 default sizes. To increase or decrease the size of your product image, click on the + icon and cycle through the available sizes.
 ![](/assets/guide-products-grid-layout.png "Reaction Commerce product grid layout")
 
 You may arrange products based on how you manage your tags. Manage the display order of your products based on the order of your tags in your navigation.
 
-NOTE: When new products are added, they are given the top position by default. 
+NOTE: When new products are added, they are given the top position by default.
