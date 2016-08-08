@@ -66,5 +66,4 @@ The working group will never publicly discuss the issue; all public statements w
 
 In the event of any conflict of interest a working group member must immediately notify the other members, and recuse themselves if necessary.
 
-
 *Editor's note: The Reaction community doesn't exist in one place, and most of the time we're spread out across the world and interact online. This makes trying to define and enforce community standards a different type of challenge. This document is adapted from the [Django Code of Conduct](https://www.djangoproject.com/conduct/), the [Ada Initiative template](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Responding_to_reports) and the [PyCon 2013 Procedure for Handling Harassment Incidents](https://us.pycon.org/2013/about/code-of-conduct/harassment-incidents/), but changed to reflect the nature of our community. It is our expectation that this will be a living document and change as we grow to understand how to meet this challenge and best serve our community and ideals.*
