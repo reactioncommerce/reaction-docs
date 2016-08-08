@@ -475,5 +475,53 @@
         "label": "Heroku",
         "repo": "reaction-docs",
         "docPath": "developer/deploying/heroku.md"
+    }, {
+        "class": "guide-nav-item",
+        "alias": "guidelines",
+        "label": "Community guidelines",
+        "repo": "reaction-docs",
+        "docPath": "guidelines/guidelines.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "code-of-conduct",
+        "label": "Code of Conduct",
+        "repo": "reaction-docs",
+        "docPath": "guidelines/code-of-conduct.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "diversity-statement",
+        "label": "Diversity Statement",
+        "repo": "reaction-docs",
+        "docPath": "guidelines/diversity-statement.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "reporting-guide",
+        "label": "Reporting Guide",
+        "repo": "reaction-docs",
+        "docPath": "guidelines/reporting-guide.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "enforcement",
+        "label": "Enforcement",
+        "repo": "reaction-docs",
+        "docPath": "guidelins/enforcement.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "code-of-conduct-committee",
+        "label": "Code of Conduct Committee",
+        "repo": "reaction-docs",
+        "docPath": "guidelines/code-of-conduct-committee.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "faqs",
+        "label": "FAQs",
+        "repo": "reaction-docs",
+        "docPath": "guidelines/faqs.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "changes",
+        "label": "Changes",
+        "repo": "reaction-docs",
+        "docPath": "guidelines/changes.md"
     }]
 }
