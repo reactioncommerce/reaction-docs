@@ -8,7 +8,7 @@ We welcome you.
 
 We welcome people of any gender identity or expression, race, skin color, ethnicity, age, size, nationality, sexual orientation, ability level, neurotype, religion, elder status, family structure, culture, subculture, political opinion, education level, identity, and self-identification. We welcome activists, artists, bloggers, crafters, coders, wannabe-coders, designers, entrepreneurs, documentation writers, journalists, sys-admins, teachers, ordinary people, extraordinary people, and everyone in between.
 
-We welcome you. You may wear a baby sling, hijab, a kippah, leather, an XXXL t-shirt, a pentacle, a political badge, a rainbow, a rosary, tattoos, or something we can only dream of. You may carry a guitar or walking cane or a 15 year old laptop. Conservative or liberal, libertarian or socialist — we believe it's possible for people of all viewpoints and persuasions to come together and learn from each other. We believe in the broad spectrum of individual and collective experience and in the inherent dignity of all people. We believe that amazing things happen when people from different worlds and worldviews approach each other to create a conversation.
+We welcome you. You may wear a baby sling, hijab, a kippah, leather, an XXXL t-shirt, a pentacle, a political badge, a rainbow, a rosary, tattoos, or something we can only dream of. You may carry a guitar or walking cane or a 15 year old laptop. Conservative or liberal, libertarian or socialist — we believe it's possible for people of all viewpoints and persuasions to come together and learn from each other. We believe in the broad spectrum of individual and collective experience and in the inherent dignity of all people. We believe that amazing things happen when people from different worlds and world-views approach each other to create a conversation.
 
 We get excited about web development — from professional to amateur, from giant projects to simple apps, from the coder who's been doing this since the day Reaction Commerce was conceived in Santa Monica, CA to the newbie who just started studying Reaction Commerce today.
 
@@ -24,6 +24,6 @@ We work with Reaction Commerce, and we invite everyone to contribute, to the cor
 
 Come build the future of commerce with us.
 
-## **Questions?**
+## Questions?
 
 If you have questions, feel free to [contact us](mailto:hello@reactioncommerce.com).

@@ -32,7 +32,7 @@ Any event that we fund will have some sort of anti- harassment policy in place. 
 
 ### What happens if someone violates the Code of Conduct?
 
-Our intent is that the anyone in the community can stand up for this code, and direct people who're unaware to this document. If that doesn't work, or if you need more help, you can contact [conduct@reactioncommercet.com](mailto:conduct@reactioncommercet.com). For more details please see our Reporting Guidelines.
+Our intent is that the anyone in the community can stand up for this code, and direct people who're unaware to this document. If that doesn't work, or if you need more help, you can contact [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com). For more details please see our Reporting Guidelines.
 
 ### Why do we need a Code of Conduct? Everyone knows not to be a jerk.
 

@@ -6,7 +6,7 @@ This is the enforcement manual followed by Reaction Commerce's Code of Conduct C
 
 **The Code of Conduct Committee**
 
-All responses to reports of conduct violations will be managed by a Code of Conduct Committee ("the committee").
+All responses to reports of conduct violations will be managed by a [Code of Conduct Committee](/guidelines/code-of-conduct-committee.md) ("the committee").
 
 The Reaction Commerce Board of Directors ("the board") will establish this committee, comprised of at least three members. One member will be designated chair of the group and will be responsible for all reports back to the board. The board will review membership on a regular basis.
 
@@ -58,15 +58,13 @@ The working group must agree on a resolution by consensus. If the group cannot r
 
 Once a resolution is agreed upon, but before it is enacted, the working group will contact the original reporter and any other affected parties and explain the proposed resolution. The working group will ask if this resolution is acceptable, and must note feedback for the record. However, the working group is not required to act on this feedback.
 
-Finally the working group will make a report for the Reaction Commerce board (as well as the Reaction Commerce core team in the event of an ongoing resolution, such as a ban).
+Finally, the working group will make a report for the Reaction Commerce board (as well as the Reaction Commerce core team in the event of an ongoing resolution, such as a ban).
 
 The working group will never publicly discuss the issue; all public statements will be made by the Reaction Commerce board.
 
-Conflicts of Interest
+**Conflicts of Interest**
 
 In the event of any conflict of interest a working group member must immediately notify the other members, and recuse themselves if necessary.
 
-* * *
 
-
-*Editor's note: The Reaction community doesn't exist in one place, and most of the time we're spread out across the world and interact online. This makes trying to define and enforce community standards a different type of challenge. This document is adapted from the **[Django Code of Conduc*t](https://www.djangoproject.com/conduct/)*, the **[Ada Initiative templat*e](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Responding_to_reports)* and the **[PyCon 2013 Procedure for Handling Harassment Incident*s](https://us.pycon.org/2013/about/code-of-conduct/harassment-incidents/)*, but changed to reflect the nature of our community. It is our expectation that this will be a living document and change as we grow to understand how to meet this challenge and best serve our community and ideals.*
+*Editor's note: The Reaction community doesn't exist in one place, and most of the time we're spread out across the world and interact online. This makes trying to define and enforce community standards a different type of challenge. This document is adapted from the [Django Code of Conduct](https://www.djangoproject.com/conduct/), the [Ada Initiative template](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Responding_to_reports) and the [PyCon 2013 Procedure for Handling Harassment Incidents](https://us.pycon.org/2013/about/code-of-conduct/harassment-incidents/), but changed to reflect the nature of our community. It is our expectation that this will be a living document and change as we grow to understand how to meet this challenge and best serve our community and ideals.*
