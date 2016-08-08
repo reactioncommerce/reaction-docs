@@ -52,5 +52,5 @@ You can override variables of the default theme simple by defining the variables
 // Override any variables from the default theme
 @navbar-default-bg: #ff0000;
 ```
-
+ 
 > In LESS variables are considered constants, and are processed first, from top to bottom of all included LESS files. That means you can override variables after they've already been declared and the last instance takes effect.
