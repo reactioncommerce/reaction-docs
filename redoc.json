@@ -513,7 +513,7 @@
         "docPath": "guidelines/code-of-conduct-committee.md"
     }, {
         "class": "guide-sub-nav-item",
-        "alias": "faqs",
+        "alias": "guideline-faqs",
         "label": "FAQs",
         "repo": "reaction-docs",
         "docPath": "guidelines/faqs.md"
