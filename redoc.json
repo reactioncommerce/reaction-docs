@@ -504,7 +504,7 @@
         "alias": "enforcement",
         "label": "Enforcement",
         "repo": "reaction-docs",
-        "docPath": "guidelins/enforcement.md"
+        "docPath": "guidelines/enforcement.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "code-of-conduct-committee",
