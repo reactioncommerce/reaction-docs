@@ -10,7 +10,7 @@ We want to keep the Reaction community awesome, growing and collaborative. We ne
 
 * **Keep it legal:** Basically, don't get us in trouble. Share only content that you own, do not share private or sensitive information, and don't break the law.
 
-* **Stay on topic: **Make sure that you are posting to the correct channel and avoid off-topic discussions. Remember when you update an issue or respond to an email you are potentially sending to a large number of people. Please consider this before you update. Also remember that nobody likes spam.
+* **Stay on topic:** Make sure that you are posting to the correct channel and avoid off-topic discussions. Remember when you update an issue or respond to an email you are potentially sending to a large number of people. Please consider this before you update. Also remember that nobody likes spam.
 
 * **Don't send email (or Twitter, Facebook, LinkedIn) to the core team:** There's no need to send email to the Core Team to ask them to investigate an issue or to take a look at a pull request. Instead of sending an email, GitHub mentions should be used to ping the Core Team members to review a pull request, a proposal or an issue. If you aren’t sure about something, you can ask in our [chat room](https://gitter.im/reactioncommerce/reaction).
 
