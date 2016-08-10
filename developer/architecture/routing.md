@@ -1,22 +1,23 @@
 # Routing
 
-Reaction implements the routing functionality provided by [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr).
+Reaction Router extends the routing functionality provided by [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr).  The basics of FlowRouter are covered in the [FlowRouter documentation](https://github.com/kadirahq/flow-router), but you can most likely find everything you need to use Reaction Router on this page.
 
-More Flow Router documentation is on the [kadirahq/flow-router GitHub repository](https://github.com/kadirahq/flow-router).
+## Usage
 
-The Reaction Router instance is exported as `Reaction.Router`.
+Reaction Router is exported as `Router` from `"/client/api"`.
 
 ```javascript
 import { Router } from "/client/api";
 
+// Example: use a FlowRouter method to get a URL query param
 const urlParam = Router.getQueryParam("urlParam");
 ```
 
 ## Route Definition
 
-While you can use the Flow Router API, and `Reaction.route()` to directly add routes to the routing table. The routing methods exported from `/client/modules/router` integrate routing with permissions, and help to future proof against changes to the routing layer.
+While you _can_ use the [Flow Router API](https://github.com/kadirahq/flow-router/tree/ssr) to directly add routes to the app, we recommend that you use the Reaction Router API. Reaction Router extends FlowRouter to integrate route permissions, make routing configurable by plugins (via the package registry), and to help future proof against changes to the routing layer (like possibly switching away from FlowRouter in the future).  
 
-Our recommended approach is to define routing entries in the **Package Registry**.
+Our recommended approach to define routes is to use the **Package Registry**.
 
 ### Registry Routing
 
@@ -71,10 +72,12 @@ defaultVisitorRole =  ["anonymous", "guest", "product", "tag", "index", "cart/ch
 
 The package registry route entries are collectively added to the Flow Router routing table upon startup.
 
-You can view these routes for debugging. Add to a file in `custom` a global export of the Router.
+You can view these routes for debugging. Add to a file in `custom` and create a global export of the Router that you can use in your browser console.
 
 ```javascript
-import { Router } from "/client/modules/router";
+import { Router } from "/client/api";
+
+// create a global
 ReactionRouter = Router;
 ```
 
@@ -92,7 +95,7 @@ console.table(ReactionRouter._routes);
 
 ## API
 
-The [Flow Router API](https://github.com/kadirahq/flow-router#api) that Router implements is a rich API to help you to navigate the router and reactively get information from the router.
+The Reaction Router API provides many useful methods to help you to navigate the router and reactively get information about routes.
 
 ### Router.getParam(paramName);
 
@@ -264,4 +267,84 @@ A Blaze template helper that will return an absolute path for a named route.
 
 ```javascript
   {{urlFor "name"}}
+```
+
+## Route Hooks
+
+The `Router.Hooks` namespace provides a router-agnostic API for registering functions to be called either on specific routes or on _every_ route.  Like FlowRouter, there are hooks for `onEnter` and `onExit` and the callback functions are passed the same `context` object to optionally do something with.
+
+### API
+
+```js
+import { Router } from '/client/api';
+
+// Register a hook on a specific route
+// (can be called as many times as needed to add more than one callback)
+Router.Hooks.onEnter(routeName, callback);
+Router.Hooks.onExit(routeName, callback);
+
+// Register a hook on every route
+// (can be called as many times as needed to add more than one callback)
+Router.Hooks.onEnter(callback);
+Router.Hooks.onExit(callback);
+
+// Get all registered hooks for a specific route (returns array)
+Router.Hooks.get("onEnter", routeName);
+Router.Hooks.get("onExit", routeName);
+
+// Get all registered hooks that run on every route (returns array)
+Router.Hooks.get("onEnter", "GLOBAL");
+Router.Hooks.get("onExit", "GLOBAL");
+
+// Run all registered hooks for a specific route
+// (context object is optional)
+Router.Hooks.run("onEnter", routeName, context);
+Router.Hooks.run("onExit", routeName, context);
+
+// Run all registered global hooks
+// (context object is optional)
+Router.Hooks.run("onEnter", "GLOBAL", context);
+Router.Hooks.run("onExit", "GLOBAL", context);
+```
+
+That's the whole Route Hooks API, but most users will only need to register new hooks (onEnter, onExit) because running all of the hooks is already taken care of in Reaction Router.
+
+### Example Hooks
+#### Import
+```js
+import { Router } from '/client/api';
+```
+#### Route-specific Hooks
+```js
+// create a function to do something on the product detail page
+function logSomeStuff() {
+  console.log("We're arriving at the product page!");
+}
+// add that to the product detail page onEnter hook
+Router.Hooks.onEnter("product", logSomeStuff);
+```
+#### Global Route Hooks (every route)
+```js
+// create a pageview tracking function
+function trackPages() {
+  analytics.page();
+}
+// track page views on every route
+Router.Hooks.onEnter(trackPages);
+
+// or combined into one line...
+Router.Hooks.onEnter(() => analytics.page());
+```
+#### Using route context in your hook
+The same context object from FlowRouter is available to every callback
+```js
+function logSomeContext(context) {
+  console.log("The current route details...");
+  console.log("Params: ", context.params);
+  console.log("Query Params: ", context.queryParams);
+  console.log("Path: ", context.path);
+  console.log("The route object: ", context.route);
+}
+// log out route details on every route
+Router.Hooks.onEnter(logSomeContext);
 ```
