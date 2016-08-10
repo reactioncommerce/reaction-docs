@@ -1,6 +1,8 @@
 # Themes
 The default Reaction theme (core-theme) uses [Bootstrap 3](https://getbootstrap.com/css/#less) and the [Less](https://lesscss.org) preprocessor to build the theme.
 
+If you want to learn how to make a theme, see our [Creating a Theme](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-theme) documentation.
+
 ## Mixins
 
 ### Core Theme Bootstrap RTL (Right to Left)

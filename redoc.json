@@ -237,12 +237,6 @@
         "docPath": "developer/themes/themes.md"
     }, {
         "class": "guide-sub-nav-item",
-        "alias": "creating-a-theme-package",
-        "label": "Creating a Theme",
-        "repo": "reaction-docs",
-        "docPath": "developer/tutorial/creating-a-theme.md"
-    }, {
-        "class": "guide-sub-nav-item",
         "alias": "templates",
         "label": "Templates",
         "repo": "reaction-docs",
