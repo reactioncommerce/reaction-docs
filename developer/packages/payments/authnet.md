@@ -1,3 +1,65 @@
+# Authorize.net
+Authorize.net Payment Platform integration for Reaction Commerce
+Documentation is available at [https://developer.authorize.net/api/reference/index.html](https://developer.authorize.net/api/reference/index.html)
+
+
+## Configuration
+Configuration can be performed by Administrators in the Reaction Dashboard.
+
+It can also be done in `private/settings/reaction.json` by adding (or updating) the following configuration details (remember to fill in the blanks):
+
+```
+{
+  "name": "reaction-auth-net",
+  "enabled": true,
+  "settings": {
+    "api_id": "",
+    "transaction_key": ""
+  }
+}
+```
+
+## Accepted Payment methods
+Payment Methods.
+
+Actual support will vary by country.
+
+Based on the accepted payment methods, the RCP default schema for for Credit Card numbers will allow between 12 - 19 numbers. This can be changed in the file `/imports/plugins/included/rcp/lib/collections/schemas/package.js`
+
+## Transactions
+- authorize
+> This is where info on authorization goes
+
+- capture
+> This is where info on capturing goes
+
+- refund
+> This is where info on refunds goes
+
+- refunds (list)
+> This is where info on authorization goes
+
+
+## Testing Tips and Tricks
+Luhn generator
+24 hour window
+etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # PayPal Payflow & PayPal Express
 PayPal Payments for Reaction Commerce.
 

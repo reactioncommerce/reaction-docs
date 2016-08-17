@@ -1,3 +1,38 @@
+# Braintree
+Braintree Payment Platform integration for Reaction Commerce
+Documentation is available at [https://developers.braintreepayments.com/](https://developers.braintreepayments.com/)
+
+
+## Configuration
+Configuration can be performed by Administrators in the Reaction Dashboard.
+
+It can also be done in `private/settings/reaction.json` by adding (or updating) the following configuration details (remember to fill in the blanks):
+
+```
+{
+  "name": "reaction-braintree",
+  "enabled": true,
+  "settings": {
+    "merchant_id": "",
+    "public_key": "",
+    "private_key": ""
+  }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Converting your Reaction Package to a Reaction Plugin
 
 Converting a package is largely about moving files into different places and creating some `index.js` files. Here are step-by-step instructions.

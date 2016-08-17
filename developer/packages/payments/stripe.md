@@ -1,3 +1,31 @@
+# Stripe
+Stripe Payment Platform integration for Reaction Commerce
+Documentation is available at [https://stripe.com/docs/api](https://stripe.com/docs/api)
+
+
+## Configuration
+Configuration can be performed by Administrators in the Reaction Dashboard.
+
+It can also be done in `private/settings/reaction.json` by adding (or updating) the following configuration details (remember to fill in the blanks):
+
+```
+{
+  "name": "reaction-stripe",
+  "enabled": true,
+  "settings": {
+    "api_key": ""
+  }
+}
+```
+
+
+
+
+
+
+
+
+
 # PayPal Payflow & PayPal Express
 PayPal Payments for Reaction Commerce.
 
@@ -72,7 +100,7 @@ refunds
 This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 
 
-Accepted Cards: 
+Accepted Cards:
 
 
 - authorize
