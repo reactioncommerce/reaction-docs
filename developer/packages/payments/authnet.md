@@ -26,17 +26,18 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 
 _Actual payment method support will vary by country._
 
-Based on the accepted payment methods, the Authorize.net default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/authnet/lib/collections/schemas/package.js` depending on your needs.
+Based on the accepted payment methods, Authorize.net's default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/authnet/lib/collections/schemas/package.js` depending on your needs.
 
 ## Transactions
 - authorize
-> This is where info on authorization goes
+> Authorizations are held for 30 days. If the payment is not captured in this time period, the funds will be released.
 
 - capture
 > This is where info on capturing goes
 
 - refund
-> *Refunds are not supported*
+> **Refunds are not supported**
+
 > Authorize.net requires the expiration date and last four digits of the credit card to process refunds. This does not comply with Reaction's policy to not store data that is not compatible with PCI compliance. Refunds can still be processed directly through the [Authorize.net dashboard](https://account.authorize.net/).
 
 - refunds (list)

@@ -34,7 +34,7 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 
 _Actual payment method support will vary by country._
 
-Based on the accepted payment methods, the Authorize.net default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/paypal/lib/collections/schemas/package.js` depending on your needs.
+Based on the accepted payment methods, PayPal's default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/paypal/lib/collections/schemas/package.js` depending on your needs.
 
 ## Transactions
 - authorize

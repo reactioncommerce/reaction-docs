@@ -21,11 +21,11 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 
 ## Accepted Payment Methods
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
-- Signature Debit Cards
+- Signature Debit Cards displaying the Visa® or MasterCard® logo
 
 _Actual payment method support will vary by country._
 
-Based on the accepted payment methods, the Authorize.net default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/stripe/lib/collections/schemas/package.js` depending on your needs.
+Based on the accepted payment methods, Stripe's default schema for credit card numbers will allow between 13 - 16 numbers. This can be changed in `/imports/plugins/included/stripe/lib/collections/schemas/package.js` depending on your needs.
 
 ## Transactions
 - authorize
