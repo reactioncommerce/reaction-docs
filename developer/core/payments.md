@@ -14,7 +14,8 @@ Most Reaction payment packages can support these transaction types. They all do 
 
 
 - capture
-> A capture is a transaction performed against a previously authorized transaction, and it tells the payment processor to transfer the actual funds. Most payment providers allow for a capture amount to be equal to or less than the authorization amount. Some payment processors allow you to authorize and capture in one step, which is why the authorize method takes a transactionType parameter. In a typical hard-goods shipment scenario, a capture will be performed at time of shipment.
+> - capture
+A capture is a transaction performed against a previously authorized transaction, and it tells the payment processor to transfer the actual funds. Most payment providers allow for a capture amount to be equal to or less than the authorization amount. Some payment processors allow you to authorize and capture in one step, which is why the authorize method takes a transactionType parameter. In a typical hard-goods shipment scenario, a capture will be performed at time of shipment.
 
 - refund
 > This method is self-explanatory. Most payment processors will only allow refunds to be performed on captured payments, not on authorized payments.
