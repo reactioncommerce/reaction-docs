@@ -20,12 +20,45 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 ```
 
 ## Accepted Payment Methods
--All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
--Signature Debit Cards
+- All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
+- Signature Debit Cards
 
 _Actual payment method support will vary by country._
 
 Based on the accepted payment methods, the Authorize.net default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/stripe/lib/collections/schemas/package.js` depending on your needs.
+
+## Transactions
+- authorize
+> This is where info on authorization goes
+
+- capture
+> This is where info on capturing goes
+
+- refund
+> This is where info on refunds goes
+
+- refunds (list)
+> This is where info on authorization goes
+
+
+## Testing
+- Credit card number : `4242424242424242`
+- Expiration date: Any date in the future
+- CVV2: Any 3 numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
