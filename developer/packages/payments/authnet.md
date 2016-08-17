@@ -24,8 +24,8 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
 
 Signature Debit Cards
--All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
--Signature Debit Cards
+- All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
+- Signature Debit Cards
 
 _Actual payment method support will vary by country._
 
