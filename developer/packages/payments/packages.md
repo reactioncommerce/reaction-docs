@@ -1,5 +1,6 @@
 # Name of Payment Platform
 RCP Payment Platform integration for Reaction Commerce
+
 Documentation is available at [http://thewebsite.com](http://thewebsite.com)
 
 
@@ -27,12 +28,14 @@ Can also be configured in `private/settings/reaction.json` by adding the followi
 }
 ```
 
-## Accepted Payment methods
-Payment Methods.
+## Accepted Payment Methods
+All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
 
-Actual support will vary by country.
+Signature Debit Cards
 
-Based on the accepted payment methods, the RCP default schema for for Credit Card numbers will allow between 12 - 19 numbers. This can be changed in the file `/imports/plugins/included/rcp/lib/collections/schemas/package.js`
+_Actual payment method support will vary by country._
+
+Based on the accepted payment methods, the Authorize.net default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in the file `/imports/plugins/included/rcp/lib/collections/schemas/package.js` depending on your needs.
 
 ## Transactions
 - authorize

@@ -1,5 +1,6 @@
 # Authorize.net
 Authorize.net Payment Platform integration for Reaction Commerce
+
 Documentation is available at [https://developer.authorize.net/api/reference/index.html](https://developer.authorize.net/api/reference/index.html)
 
 
@@ -19,12 +20,14 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 }
 ```
 
-## Accepted Payment methods
-Payment Methods.
+## Accepted Payment Methods
+All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
 
-Actual support will vary by country.
+Signature Debit Cards
 
-Based on the accepted payment methods, the RCP default schema for for Credit Card numbers will allow between 12 - 19 numbers. This can be changed in the file `/imports/plugins/included/rcp/lib/collections/schemas/package.js`
+_Actual payment method support will vary by country._
+
+Based on the accepted payment methods, the Authorize.net default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in the file `/imports/plugins/included/authnet/lib/collections/schemas/package.js` depending on your needs.
 
 ## Transactions
 - authorize
@@ -34,10 +37,11 @@ Based on the accepted payment methods, the RCP default schema for for Credit Car
 > This is where info on capturing goes
 
 - refund
-> This is where info on refunds goes
+> *Refunds are not supported*
+> Authorize.net requires the expiration date and last four digits of the credit card to process refunds. This does not comply with Reaction's policy to not store data that is not compatible with PCI compliance. Refunds can still be processed directly through the [Authorize.net dashboard](https://account.authorize.net/).
 
 - refunds (list)
-> This is where info on authorization goes
+> *Refunds are not supported*
 
 
 ## Testing Tips and Tricks
