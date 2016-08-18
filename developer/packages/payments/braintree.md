@@ -31,10 +31,10 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 
 ## Transactions
 - authorize
-> Authorization holding times differ depending on the method of payment: American Express (7 days), Visa & Mastercard (10 days), and all other methods (30 days). If the payment is not captured in this time period, the funds will be released.
+> Authorization holding times differ depending on the method of payment: American Express® (7 days), Visa® & MasterCard® (10 days), and all other methods (30 days). If the payment is not captured in this time period, the funds will be released.
 
 - capture
-> Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement.
+> Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures take up to 24 hours to process, and no other actions on this transaction cannot occur during this time period.
 >     
 > *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
@@ -42,7 +42,7 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 > Refunds are allowed up to 100% of the captured amount, in one of more separate refund transactions.
 
 - refunds (list)
-> A list off all refunds, proecess throught Reaction or the Braintree UI.
+> A list off all refunds, processed through Reaction or the Braintree UI.
 
 
 ## Testing
