@@ -4,7 +4,6 @@ Braintree Payment Platform integration for Reaction Commerce
 
 Documentation is available at [https://developers.braintreepayments.com/](https://developers.braintreepayments.com/)
 
-
 ## Configuration
 
 Configuration can be performed by Administrators in the Reaction Dashboard.
@@ -53,8 +52,8 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 
 > A list of all refunds, processed through Reaction or the Braintree UI.
 
-
 ## Testing
+
 - Credit card number : `4242424242424242`
 
 - Expiration date: Any date in the future

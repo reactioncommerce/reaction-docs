@@ -4,7 +4,6 @@ PayPal Payment Platform integration for Reaction Commerce
 
 Payflow Pro is supported via the PayPal-Node-SDK ([http://paypal.github.io/PayPal-node-SDK/](http://paypal.github.io/PayPal-node-SDK/)) while Express uses the NVP (Name/Value Pair) API via raw HTTP ([https://developer.paypal.com/docs/classic/api/#ec](https://developer.paypal.com/docs/classic/api/#ec))
 
-
 ## Configuration
 
 Configuration can be performed by Administrators in the Reaction Dashboard.
@@ -62,7 +61,6 @@ Based on the accepted payment methods, PayPal's default schema for credit card n
 - refunds (list)
 
 > A list of all refunds, processed through Reaction or the PayPal UI.
-
 
 ## Testing
 

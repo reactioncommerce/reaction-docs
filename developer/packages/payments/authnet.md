@@ -4,7 +4,6 @@ Authorize.net Payment Platform integration for Reaction Commerce
 
 Documentation is available at [https://developer.authorize.net/api/reference/index.html](https://developer.authorize.net/api/reference/index.html)
 
-
 ## Configuration
 
 Configuration can be performed by Administrators in the Reaction Dashboard.
@@ -52,7 +51,6 @@ Authorize.net requires the expiration date and last four digits of the credit ca
 - refunds (list)
 
 > **Refunds are not supported**
-
 
 ## Testing
 

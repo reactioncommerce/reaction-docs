@@ -4,7 +4,6 @@ Stripe Payment Platform integration for Reaction Commerce
 
 Documentation is available at [https://stripe.com/docs/api](https://stripe.com/docs/api)
 
-
 ## Configuration
 
 Configuration can be performed by Administrators in the Reaction Dashboard.
@@ -52,7 +51,6 @@ Based on the accepted payment methods, Stripe's default schema for credit card n
 - refunds (list)
 
 > A list of all refunds or discounts, processed through Reaction or the Stripe UI.
-
 
 ## Testing
 
