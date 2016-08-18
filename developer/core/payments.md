@@ -3,18 +3,24 @@ Payment methods are one of the most common packages that developers need to crea
 
 The [reaction-paymentmethod](https://github.com/reactioncommerce/reaction-paymentmethod) package and documentation was created to try and make this process as easy as possible for developers new to Reaction. It should be used as a guide in making all payment methods as consistent as possible so that they are usable by the largest number of users.
 
+Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](/payment-packages-authnet), [Braintree](/payment-packages-braintree), [Paypal Express](/payment-packages-paypal#paypal-express), [Paypal Payflow](/payment-packages-payflow), and [Stripe](/payment-packages-stripe).
+
 ## Transactions
-Most Reaction payment packages can support these transaction types.
+Most Reaction payment packages can support these transaction types. They all do things a little differently, so please be sure to read each individual payment packages docs.
+
 - authorize
 
-> Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the authorize stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you but no funds have been transferred. To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount. Typically an autorization will expire after a set number of days. Usually you cannot capture more than you authorize but you can capture less and leave the balance still captured or release the balance. In a typical hard-goods shipment scenario, an authorize will be performed at time of order, then when the actual good are shipped a capture is performed.
-  - capture
+> Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the authorize stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you. To the consumer it looks like the charge has already gone through, and their balance is reduced by the allocated amount, however no funds will actually be transferred. Typically an authorization will expire after a set number of days, and you will need to re-authorize in order to perform a capture. In a typical hard-goods shipment scenario, an authorize will be performed at time of order.
 
-> As noted before, this will operate against a previously performed authorization and tell the payment processor to transfer the actual funds. Some payment processors allow you to authorize and capture in one step which is why the authorize method takes a transactionType parameter.
-  - refund
+- capture
 
-> This method is probably self-explanatory, and is just a wrapper for whatever method your payment provider has for processing refunds.
-  - refunds
+> A capture is a transaction performed against a previously authorized transaction, and it tells the payment processor to transfer the actual funds. Most payment providers allow for a capture amount to be equal to or less than the authorization amount (i.e. giving a discount post-authorization, but pre-capture). Some payment processors allow you to authorize and capture in one step, which is why the authorize method takes a transactionType parameter. In a typical hard-goods shipment scenario, a capture will be performed at time of shipment.
+
+- refund
+
+> This method is self-explanatory. Most payment processors will only allow refunds to be performed on captured payments, not on authorized payments.
+
+- refunds (list)
 
 > This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 
