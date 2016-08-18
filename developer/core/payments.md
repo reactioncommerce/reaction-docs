@@ -5,14 +5,12 @@ The [reaction-paymentmethod](https://github.com/reactioncommerce/reaction-paymen
 
 Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](/payment-packages-authnet), [Braintree](/payment-packages-braintree), [Paypal Express](/payment-packages-paypal#paypal-express), [Paypal Payflow](/payment-packages-payflow), and [Stripe](/payment-packages-stripe).
 
-
 ## Transactions
 Most Reaction payment packages can support these transaction types. They all do things a little differently, so please be sure to read each individual payment packages docs.
 
 - authorize
 
 > Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the authorize stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you. To the consumer it looks like the charge has already gone through, and their balance is reduced by the allocated amount, however no funds will actually be transferred. Typically an authorization will expire after a set number of days, and you will need to re-authorize in order to perform a capture. In a typical hard-goods shipment scenario, an authorize will be performed at time of order.
-
 
 - capture
 
