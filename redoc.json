@@ -405,12 +405,6 @@
         "docPath": "developer/packages/including.md"
     }, {
         "class": "guide-sub-sub-nav-item",
-        "alias": "payment-packages",
-        "label": "Payment Packages",
-        "repo": "reaction-docs",
-        "docPath": "developer/packages/payments/packages.md"
-    }, {
-        "class": "guide-sub-sub-nav-item",
         "alias": "payment-packages-authnet",
         "label": "Payments - Authorize.net",
         "repo": "reaction-docs",
