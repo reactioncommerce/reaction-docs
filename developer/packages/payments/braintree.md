@@ -31,16 +31,18 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 
 ## Transactions
 - authorize
-> This is where info on authorization goes
+> Authorization holding times differ depending on the method of payment: American Express (7 days), Visa & Mastercard (10 days), and all other methods (30 days). If the payment is not captured in this time period, the funds will be released.
 
 - capture
-> This is where info on capturing goes
+> Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement.
+>     
+> *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
 - refund
-> This is where info on refunds goes
+> Refunds are allowed up to 100% of the captured amount, in one of more separate refund transactions.
 
 - refunds (list)
-> This is where info on authorization goes
+> A list off all refunds, proecess throught Reaction or the Braintree UI.
 
 
 ## Testing
@@ -48,71 +50,11 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 - Expiration date: Any date in the future
 - CVV2: Any 3 numbers
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Converting your Reaction Package to a Reaction Plugin
-
-Converting a package is largely about moving files into different places and creating some `index.js` files. Here are step-by-step instructions.
-
-1. You don't need your `package.js` any longer. Most of what was done here is done in imports.
-1. Move your `register.js` up from the server folder into the root of your plugin.
-1. _(optional)_ Move everything possible out of `common` folder into either `client` or `server`. This is going to make managing your imports either. Schemas still need to stay here but we are trying to standardize on using `lib`. Generally the only thing that truly needs to be available on both client and server are collections and schemas.
-1. Add relevant imports to all your files. (there is a note with a few common ones at the bottom of this doc). This includes simple things like `import { Meteor } from "meteor/meteor"` and `import { Template } from "meteor/templating"`.
-1. Change most references to `ReactionCore` to `Reaction` with the exception of logger calls which should be changed to just `Logger` (and imported).
-1. Collections can either be referenced as `Reaction.Collections.{CollectionName}` or imported from "/lib/collections" depending on what style you prefer. We've tried to make most things available from the `Reaction` namespace but referencing it that way can get tiresome.
-1. Add `index.js` files in the root of your `client` and `server` directories and import all the relevant files (including HTML and CSS files). See [this section](https://guide.meteor.com/build-tool.html#css-importing) of the Meteor Guide on how to import CSS files.
-1. If you depend on NPM packages you no longer need the `NPM.depends` syntax, you can just install them using `meteor npm install --save` and add them to your `package.json` file. Then you can just import them directly where you need them.  See [The Meteor Guide section on using NPM Package](https://guide.meteor.com/using-npm-packages.html) if you run into anything you don't understand.
-1. If you get confused or lost you can look at the `included` and `core` plugins. You can also look at the `development` branch of my [repo for the Customization Guide](https://github.com/zenweasel/beesknees)
-
-## Lessons Learned
-
-The easiest thing to miss is an import. If something is not working go and double-check that you have imported that file.
-
-Here is a list of common things you will want to import so that you don't need to look them up. I will keep adding to these as I come across them.
-
-## Meteor Imports
+Braintree takes up to 24 hours to perform the capture process of a payment. Refunds are not allowed to be initiated until after the payment is fully processed. For testing purposes, Braintree allows you to bypass the 24 hour waiting period by adding the following code at the end of the `gateway.transaction.submitForSettlement` function in `imports/plugins/included/braintree/server/methods/braintreeApi.js`:
 
 ```
-import { Meteor } from "meteor/meteor";
-import { Session } from "meteor/session";
-import { Template } from "meteor/templating";
-import { check, Match } from "meteor/check";
-import { Tracker } from "meteor/tracker";
-import { Mongo } from "meteor/mongo";
-```
-
-## Third Party Packages
-
-```
-import { SimpleSchema } from "meteor/aldeed:simple-schema";
-import { AutoForm } from "meteor/aldeed:autoform";
-```
-
-## Reaction Imports
-
-```
-import { Reaction, Logger } from "/client/api"; // on client
-import { Reaction, Logger } from "/server/api"; // on server
-import { CollectionName, AnotherCollection } from "/lib/collections";
+gateway.testing.settle(transactionId, function (err, settleResult) {
+  settleResult.success;
+  settleResult.transaction.status;
+});
 ```

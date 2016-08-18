@@ -33,8 +33,9 @@ Based on the accepted payment methods, Authorize.net's default schema for credit
 > Authorizations are held for 30 days. If the payment is not captured in this time period, the funds will be released.
 
 - capture
-> Captures of an authorized charge can be made in any amount equal to or less than the orignal authorization.
-
+> Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement.
+>   
+> *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
 - refund
 > **Refunds are not supported**   
