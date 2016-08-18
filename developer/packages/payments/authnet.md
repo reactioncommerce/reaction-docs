@@ -51,7 +51,7 @@ Authorize.net requires the expiration date and last four digits of the credit ca
 
 - refunds (list)
 
-> **Refunds are not supported**  
+> **Refunds are not supported**
 
 
 ## Testing
