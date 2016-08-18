@@ -69,6 +69,12 @@
         "docPath": "admin/shipping.md"
     }, {
         "class": "guide-sub-nav-item",
+        "alias": "taxes",
+        "label": "Tax Calculations",
+        "repo": "reaction-docs",
+        "docPath": "admin/taxes.md"
+    }, {
+        "class": "guide-sub-nav-item",
         "alias": "faqs",
         "label": "FAQs",
         "repo": "reaction-docs",
