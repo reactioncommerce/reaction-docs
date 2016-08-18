@@ -40,12 +40,12 @@ Based on the accepted payment methods, Authorize.net's default schema for credit
 - capture
 
 > Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures are immediate.
->   // eslint-disable-line no-trailing-spaces no-multiple-space-blockquote
+>   
 > *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
 - refund
 
-> **Refunds are not supported**   // eslint-disable-line no-trailing-spaces
+> **Refunds are not supported**   
 Authorize.net requires the expiration date and last four digits of the credit card to process refunds. This does not comply with Reaction's policy to not store data that is not compatible with PCI compliance. Refunds can still be processed directly through the [Authorize.net dashboard](https://account.authorize.net/).
 
 - refunds (list)
