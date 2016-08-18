@@ -33,15 +33,15 @@ Based on the accepted payment methods, Authorize.net's default schema for credit
 > Authorizations are held for 30 days. If the payment is not captured in this time period, the funds will be released.
 
 - capture
-> This is where info on capturing goes
+> Captures of an authorized charge can be made in any amount equal to or less than the orignal authorization.
+
 
 - refund
-> **Refunds are not supported**
-
-> Authorize.net requires the expiration date and last four digits of the credit card to process refunds. This does not comply with Reaction's policy to not store data that is not compatible with PCI compliance. Refunds can still be processed directly through the [Authorize.net dashboard](https://account.authorize.net/).
+> **Refunds are not supported**   
+Authorize.net requires the expiration date and last four digits of the credit card to process refunds. This does not comply with Reaction's policy to not store data that is not compatible with PCI compliance. Refunds can still be processed directly through the [Authorize.net dashboard](https://account.authorize.net/).
 
 - refunds (list)
-> *Refunds are not supported*
+> **Refunds are not supported**  
 
 
 ## Testing
