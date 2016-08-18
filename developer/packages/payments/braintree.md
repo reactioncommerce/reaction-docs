@@ -42,7 +42,7 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 > Refunds are allowed up to 100% of the captured amount, in one of more separate refund transactions.
 
 - refunds (list)
-> A list off all refunds, processed through Reaction or the Braintree UI.
+> A list of all refunds, processed through Reaction or the Braintree UI.
 
 
 ## Testing

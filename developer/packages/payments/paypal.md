@@ -53,7 +53,7 @@ Based on the accepted payment methods, PayPal's default schema for credit card n
 > Refunds are allowed up to 100% of the captured amount, in one of more separate refund transactions.
 
 - refunds (list)
-> A list off all refunds, processed through Reaction or the PayPal UI.
+> A list of all refunds, processed through Reaction or the PayPal UI.
 
 
 ## Testing

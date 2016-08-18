@@ -19,6 +19,8 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 }
 ```
 
+Note: this package automatically converts the total charge amount into smallest currency units as is required by Stripe before the API call is made.
+
 ## Accepted Payment Methods
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
 - Signature Debit Cards displaying the Visa® or MasterCard® logo
@@ -29,129 +31,21 @@ Based on the accepted payment methods, Stripe's default schema for credit card n
 
 ## Transactions
 - authorize
-> This is where info on authorization goes
+> Authorizations are held for 7 days. If the payment is not captured in this time period, the funds will be released.
 
 - capture
-> This is where info on capturing goes
+> Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Captures are immediate. Stripe will always capture the full amount of the authorization, and then immediately apply a refund if your capture is for an amount less than that. Customers may see the full amount and a refund on their statements, or a single charge of the lesser amount, depending on the bank the payment is processed through.
+>     
+> *If a customer is given a 100% discount prior to capturing, the charge will still follow the process listed above, a full charge of the authorized amount, followed by an immediate discount of 100%. Because of this process, you will see your discount listed in both the "discount" and "refunds list" section of your admin panel. Your `Adjusted Total` will only account for the discount, so you are not seeing a discount applied twice.*
 
 - refund
-> This is where info on refunds goes
+> Refunds are allowed up to 100% of the captured amount, in one of more separate refund transactions.
 
 - refunds (list)
-> This is where info on authorization goes
+> A list of all refunds or discounts, processed through Reaction or the Stripe UI.
 
 
 ## Testing
 - Credit card number : `4242424242424242`
 - Expiration date: Any date in the future
 - CVV2: Any 3 numbers
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# PayPal Payflow & PayPal Express
-PayPal Payments for Reaction Commerce.
-
-## Installation
-
-```bash
-meteor add reactioncommerce:reaction-paypal
-```
-
-Pull requests are celebrated, feedback encouraged.
-
-Supports checkout payments with either, or both `Express Checkout` and `PayFlow Pro` payment methods.
-
-Payflow Payment Gateway handles all major credit and debit cards inline. [https://www.paypal.com/webapps/mpp/payflow-payment-gateway](https://www.paypal.com/webapps/mpp/payflow-payment-gateway) while "Express Checkout" is a modal paypal form.  Neither solution has users leaving your checkout process.
-
-## Payflow Pro
-[https://www.paypal.com/us/webapps/mpp/product-selection](https://www.paypal.com/us/webapps/mpp/product-selection)
-
-Payflow Pro is supported via the PayPal-Node-SDK ([http://paypal.github.io/PayPal-node-SDK/](http://paypal.github.io/PayPal-node-SDK/)) while Express uses the NVP (Name/Value Pair) API via raw HTTP ([https://developer.paypal.com/docs/classic/api/#ec](https://developer.paypal.com/docs/classic/api/#ec))
-
-## Express
-Express is a hybrid checkout method that allows users to pay with their PayPal account without entering payment details on your site. Thus it is implemented slightly different than other more traditional server-side only methods.
-
-**Note about refunding amounts in more than one currency**
-
-If you need to refund an order that was placed in another currency than your default currency, before you do this the first time you need to log into your merchant panel and "Accept" the payment. There it will ask you if you want to convert the payment or leave it as a balance in the new currency. You must have a balance in the currency you wish to refund so leave this payment as a balance. You will need to do this once for every currency you wish to accept. This applies to both Express and PayFlow Pro methods. If you do not do this the refund will be refused and will not process.
-
-> **International Payments** Make sure you check the PayPal documentation for which countries are supported. Express Checkout supports more countries than PayFlow.
-
-## Configuration
-Configuration by Administrators in the Reaction Dashboard.
-
-Can also be configured in `private/settings/reaction.json` by adding the following configuration details:
-
-```
-{
-  "name": "reaction-paypal",
-  "enabled": true,
-  "settings": {
-    "express_enabled": true,
-    "express_mode": false,
-    "merchantId": "",
-    "username": "",
-    "password": "",
-    "signature": "",
-    "payflow_enabled": true,
-    "payflow_mode": false,
-    "client_id": "",
-    "client_secret": ""
-  }
-}
-```
-
-
-Stripe DOES NOT accept Maestro
-
-Refunds
-
-
-
-
-
-
-
-authorize
-Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the authorize stage will do a check of the customer’s payment method (credit or debit card) and allocate that amount to you but no funds have been transferred. To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount. Typically an autorization will expire after a set number of days. Usually you cannot capture more than you authorize but you can capture less and leave the balance still captured or release the balance. In a typical hard-goods shipment scenario, an authorize will be performed at time of order, then when the actual good are shipped a capture is performed.
-capture
-As noted before, this will operate against a previously performed authorization and tell the payment processor to transfer the actual funds. Some payment processors allow you to authorize and capture in one step which is why the authorize method takes a transactionType parameter.
-refund
-This method is probably self-explanatory, and is just a wrapper for whatever method your payment provider has for processing refunds.
-refunds
-This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
-
-
-Accepted Cards:
-
-
-- authorize
-
-> Authorizatoins with Stripe work in the tradisional way laid out in the main Payment document
-
-- capture
-
-> Capturing a payment with Stripe works a little differently than other providers, in that any amount less than the initial authorization - say you give a 25% discount - is treated as a refund, rather than a lesser capture of the authorization. Each bank may treat this differently, but in the Stripe backend, you will see a capture of the full amount of the authorizaion, followed by a refund of the difference.
-
-- refund
-> Refunds processing is available immeidiately. Refunds with Stripe work in the traditional way laid out in the payment document, with teh only exception being that and difference in the authorization and captureing is displayed as a refund.
