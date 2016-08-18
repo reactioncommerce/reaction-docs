@@ -40,7 +40,7 @@ Based on the accepted payment methods, Authorize.net's default schema for credit
 - capture
 
 > Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures are immediate.
->   // eslint-disable-line no-trailing-spaces
+>   // eslint-disable-line no-trailing-spaces no-multiple-space-blockquote
 > *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
 - refund
