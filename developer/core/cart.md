@@ -1,5 +1,7 @@
 # Cart
+
 ## Cart Workflow
+
 `sessionId` should be unique for each new client (moz vs firefox, mobile vs desktop etc), but not unique in the same browser instance (tabs).
 
 When an **anonymous** user visits, they get a `sessionId`, this a generated server side, and stored in the browser localStorage, so that combined with their **anonymous** user account identifies them within the tab/browser/window session. The presence of a unique sessionId tells us not to create another user account for an **anonymous** user.  The same sessionId should never be used by the server for any two sessions, as it comes from the client.. it's only set on the server side in the initial _subscription to `Sessions`_.
@@ -15,7 +17,9 @@ When this `authenticated` user logs out of the site, the `publication` is update
 If the existing registered `guest` user adds items to an `anonymous` cart session, and then logs in,  the `anonymous` cart will be merged to their existing cart and new items added, existing items will additional quantity will get incremented. This is true from any browser/session.
 
 ## [Cart Methods](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/methods/cart.js)
+
 ### cart/mergeCart
+
 Merge matching sessionId cart into specified userId cart
 
 ```js
@@ -23,6 +27,7 @@ Meteor.call("cart/mergeCart", cartId);
 ```
 
 ### cart/createCart
+
 Create and return new cart for current user (optional: createForUserId)
 
 ```js
@@ -30,6 +35,7 @@ Meteor.call("cart/createCart", createForUserId);
 ```
 
 ### cart/addToCart
+
 Add items to a user cart
 
 ```js
@@ -51,6 +57,7 @@ Add items to a user cart
 ```
 
 ### cart/removeFromCart
+
 Removes or adjust quantity of a variant from the cart
 
 ```js
@@ -58,6 +65,7 @@ Meteor.call("cart/removeFromCart", itemId, quantity);
 ```
 
 ### cart/copyCartToOrder
+
 Transforms cart document to order.
 
 ```js
@@ -77,6 +85,7 @@ Meteor.call("cart/copyCartToOrder", cartId);
 ```
 
 ### cart/setShipmentMethod
+
 Saves shipment method as order default
 
 ```js
@@ -84,6 +93,7 @@ Meteor.call("cart/setShipmentMethod", cartId, method);
 ```
 
 ### cart/setShipmentAddress
+
 Adds addressBook object to cart shipping
 
 ```js
@@ -91,6 +101,7 @@ Meteor.call("cart/setShipmentAddress", cartId, address);
 ```
 
 ### cart/setPaymentAddress
+
 Adds addressBook object to cart payments
 
 ```js
@@ -98,6 +109,7 @@ Meteor.call("cart/setPaymentAddress", cartId, address);
 ```
 
 ### cart/unsetAddresses
+
 Removes address from cart.
 
 ```js

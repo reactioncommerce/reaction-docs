@@ -1,7 +1,9 @@
 # Permissions
+
 [alanning:roles](https://github.com/alanning/meteor-roles) package provides Reaction permissions support.
 
 ## Packages
+
 **Permissions are grouped by `shopId`.**
 
 Package specific roles can be defined in `register.js`, by adding custom permissions to registry entries with:
@@ -50,6 +52,7 @@ Reaction.registerPackage({
 ```
 
 ## Owner
+
 The initial setup user was added to the shops 'owner' permission group with the 'owner' permission.
 
 Users with "owner" role are full-permission, app-wide users.
@@ -67,7 +70,6 @@ Users with "owner" role are full-permission, app-wide users.
 
 `/client/modules/core/helpers/templates.js` exports the `hasOwnerAccess` helper.
 
-
 ```html
     # template
     {{#if hasOwnerAccess}}
@@ -76,6 +78,7 @@ Users with "owner" role are full-permission, app-wide users.
 ```
 
 ## Admin
+
 Users with "admin" role are full-permission, site-wide users.<br>**To check if user has admin access:**
 
 ```js
@@ -89,7 +92,6 @@ Users with "admin" role are full-permission, site-wide users.<br>**To check if u
 
 `/client/modules/core/helpers/templates.js` exports the `hasAdminAccess` helper.
 
-
 ```html
     # template
     {{#if hasAdminAccess}}
@@ -98,6 +100,7 @@ Users with "admin" role are full-permission, site-wide users.<br>**To check if u
 ```
 
 ## Dashboard
+
 Users with "dashboard" role are limited-permission, site-wide users.
 
 **To check if user has Dashboard access:**
@@ -113,13 +116,13 @@ Users with "dashboard" role are limited-permission, site-wide users.
 
 `/client/modules/core/helpers/templates.js` exports the `hasDashboardAccess` helper.
 
-
 ```html
     # template
     {{#if hasDashboardrAccess}}
     	<strong>This has dashboard access</strong>
     {{/if}}
 ```
+
 To check if user has some specific permissions:
 
 on Client: for current user, where "permissions" is string or ['string']

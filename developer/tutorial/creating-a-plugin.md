@@ -7,7 +7,7 @@
 When you start to work with Reaction Commerce (and with many other open-source eCommerce packages) you have two paths to go down. The first is to simple fork the package and make the changes you want. The advantages of this are:
 
 1. Changes are often simpler to make and understand. If you want to change the look of a template, you just change it.
-1. You can make changes that the core package may not allow you to make
+2. You can make changes that the core package may not allow you to make
 
 However the disadvantage of this approach is that upgrading to newer releases of the software become more and more difficult. Depending on how complex your changes are, at some point it may become literally impossible to integrate your changes with updated software and you may end up rewriting your modifications again to be able to update.
 
@@ -16,20 +16,19 @@ It's possible that you believe that you never will need to upgrade. RC gives you
 The advantages of creating a plugin are:
 
 1. All of your changes are in one place and it's easy to see what's been modified and what is "stock". This also allows you to easily segment out what is "private" from what can be public or open-source.
-1. Upgrading is as simple as just pulling in the latest changes from the repo, or installing a new version and dropping your plugin in.
-1. Allows you to break your modifications into modules for better organization.
-
+2. Upgrading is as simple as just pulling in the latest changes from the repo, or installing a new version and dropping your plugin in.
+3. Allows you to break your modifications into modules for better organization.
 
 ## Creating Our Plugin
 
 ### What is a Reaction Commerce Plugin?
 
 Essentially a Reaction Commerce plugin is just a "module". Going forward Meteor is moving away from their own proprietary
-package format and towards [ES6 modules](http://exploringjs.com/es6/ch_modules.html). In order to future-proof RC we have 
+package format and towards [ES6 modules](http://exploringjs.com/es6/ch_modules.html). In order to future-proof RC we have
 adapted this approach as well. It also removes some of the "magic" where a ton of globals were inserted.
-It adds a little more boilerplate but makes up for it in clarity. Before moving forward you should have a 
-good understanding of how [imports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) and 
-[exports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export) work, 
+It adds a little more boilerplate but makes up for it in clarity. Before moving forward you should have a
+good understanding of how [imports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) and
+[exports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export) work,
 and how to deal with importing [CSS](https://guide.meteor.com/build-tool.html#css-importing) and HTML files.
 
 ### Adding our files
@@ -54,7 +53,7 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 Reaction Commerce uses one primary layout as the master or default called `coreLayout`. This layout is just another Blaze template. The code in this template is pretty minimal and you can see contains very little HTML. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accomodate our "one-page-checkout" we need to.
 
-``` html
+```html
 <template name="coreLayout">
   {{#if hasDashboardAccess}}
     {{> coreAdminLayout}}
@@ -90,7 +89,7 @@ __Note__: If you just want to override the homepage and leave everything else al
 
 First let's create our `defaults.js` with our custom layout. You will place this file in the `client` folder in your plugin. The `defaults.js` just looks like this:
 
-``` javascript
+```js
 import { Session } from "meteor/session";
 
 Session.set("DEFAULT_LAYOUT", "coreLayoutBeesknees");
@@ -99,7 +98,7 @@ Session.set("DEFAULT_WORKFLOW", "coreWorkflow");
 
 In order for this file to take affect, we need to also import it. So we add it to our `index.js` in your `client` directory.
 
-``` javascript
+```js
 import "./defaults";
 ```
 
@@ -107,7 +106,7 @@ We also need to add our layout to the registry. The registry is an area in the d
 
 To do that we need to create a new file called `register.js` and add it to the root of our plugin. Here is our starting point:
 
-``` javascript
+```js
 import { Reaction } from "/server/api";
 
 Reaction.registerPackage({
@@ -122,7 +121,7 @@ Reaction.registerPackage({
 
 To the `registry` key we are going to add a `layout` entry that looks like this:
 
-``` html
+```html
     layout: [{
       layout: "coreLayoutBeesknees",
       workflow: "coreProductWorkflow",
@@ -160,20 +159,20 @@ Create a directory under `client` called `templates` and then under that a direc
 
 Now let's create a file called `core.html` and add our template tags like this:
 
-``` html
+```html
 <template name="coreLayoutBeesknees">
 </template>
 ```
 
 To make this template part of the project we need to import it, so we add it to the `index.js` at the root of the `client` directory (where we imported the LESS files). We add this line
 
-``` javscript
+```js
 import "./templates";
 ```
 
-Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. *Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out*. So in `client/templates/index.js` we add
+Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. _Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out_. So in `client/templates/index.js` we add
 
-``` javascript
+```js
 import "./layouts/core.html";
 ```
 
@@ -181,7 +180,7 @@ import "./layouts/core.html";
 
 Ok, still a blank site because we have nothing in our layout. Let's add back in our main section for now (between the beginning and ending `<template>` tags:
 
-``` html
+```html
   <main role="main" id="main">
     <span id="layout-alerts">{{> inlineAlerts}}</span>
     {{#if hasPermission 'guest'}}
@@ -196,7 +195,7 @@ Ok, still a blank site because we have nothing in our layout. Let's add back in 
 
 _If you want to restore the entire original layout including the header then add this section above the main section_
 
-``` html
+```html
 <nav class="reaction-navigation-header">
   <!-- begin layoutHeader -->
   {{> Template.dynamic template=layoutHeader}}
@@ -210,7 +209,7 @@ _If you want to restore the entire original layout including the header then add
 
 See that line that says:
 
-``` html
+```html
 {{> Template.dynamic template=template}}
 ```
 
@@ -220,7 +219,7 @@ Now what if you don't want to show the `products` template there but
 show your own template with your own unique way of displaying products?
 You just need to change the entry in the layout record to point to your
 template. This completely decouples your template from the original
-template. 
+template.
 
 So let's go and create our template first and then we will point our new
 layout at it.
@@ -235,19 +234,18 @@ Oh, and let's not forget to import these files in our `index.js`.
 
 (Note, this list might change as we try to make this example store more custom)
 
-``` javascript
+```js
 // products
 import "./products/productsLanding.html";
 import "./products/productsLanding";
-
 ```
 
 Now we need to change the entry in our layout record in our `register.js` file. Just change the entry that says
-"template" to be "productsLanding" (no need for the .html) Again this will require a `./reaction reset` to take effect.
+"template" to be "productsLanding" (no need for the .html) Again this will require a `reaction reset` to take effect.
 
 ## Adding Fixtures
 
-As we have been going through this tutorial you may have noticed that we keep having to `./reaction reset` which clears
+As we have been going through this tutorial you may have noticed that we keep having to `reaction reset` which clears
 out all your data in the database.
 
 If you are just learning and playing with the sample data this is fine. But if you want to start customizing your store
@@ -263,7 +261,7 @@ The sample data files are located at `private/data` in the repo. To use them you
 
 Startup hook are already built into the project to load these four files on startup. But what if you wanted to load additional files (Discounts or Taxes for example)? You can hook into the Reaction Commerce start-up process by using the `Hooks` object in the API. We don't have any additional data to load right now but let's create a `load.js` file in our `server` directory and add this code. You can see that we just add a callback to be executed after the "onCoreInit" event is fired. This can be pretty much any arbitrary code you want.
 
-``` javascript
+```js
 import { Packages, Shops, Products, Tags } from "/lib/collections";
 import { Hooks, Reaction, Logger } from "/server/api";
 
@@ -275,12 +273,11 @@ Logger.info("======> Initialize using Bees Knees Data");
     // Reaction.Import.fixture().process(Assets.getText("private/data/Discounts.json"), ["name"], Reaction.Import.shop);
 Reaction.Import.flush();
 });
-
 ```
 
 Now we want to add an `index.js` to our server directory and import our `init.js`. That file should just look like
 
-``` javascript
+```js
 import "./init";
 ```
 
@@ -311,14 +308,13 @@ To do this we are going to use the `mongoexport` utility which is only installed
 
 You will need to run the export utility against the running Mongo version for your local shop. The Meteor Mongo always defaults to the port you are running Mongo on +1. If you used the default port of 3000, then your Mongo is running on port 3001 so your command to export the `Products` collection would be:
 
-```
+```sh
 mongoexport --db meteor --collection Products --port 3001 --jsonArray --pretty > Products.json
 ```
 
 Note that while MongoDB is not a relational database, things like Products and Shops are tied to each via their unique ID's. So it's good to be conscious of that when exporting things. For example, all products are tied to a Shop and if you don't have a Shop with that ID the import will not work.
 
 Now you should have your fixtures ready to go. Remember that they need to be placed in the `private/data` directory at the root of the project to be imported automatically.
-
 
 ## Adding Custom Pages/Routes
 
@@ -332,7 +328,7 @@ So the first thing we want to do is add the route in the Registry which we do by
 
 This entry will look like this (placed after the `autoEnable: true` entry):
 
-``` javascript
+```js
   registry: [
     {
       route: "/about",
@@ -348,7 +344,7 @@ The `route` entry is the URL that will match the users URL. (for how to include 
 To allow users to our new Route we need to give them permissions. Since we are good with everyone viewing our About page  we will add this permission to our "defaultRoles" and "defaultVisitorRoles" (the roles available when a new user is created).
 To do this we are going to add some code to our `init.js` file to add the new routes to the roles. That function looks like this:
 
-``` javascript
+```js
 function addRolesToVisitors() {
   // Add the about permission to all default roles since it's available to all
   Logger.info("::: Adding about route permissions to default roles")
@@ -365,7 +361,7 @@ function addRolesToVisitors() {
 
 Then let's add another Hook Event to call that code.
 
-``` javascript
+```js
 /**
  * Hook to make additional configuration changes
  */
@@ -384,7 +380,7 @@ Reaction Commerce currently has a relatively simple workflow system. Workflows a
 
 Login:
 
-``` javascript
+```json
 {
     "template" : "checkoutLogin",
     "label" : "Login",
@@ -402,7 +398,7 @@ Login:
 
 Address Book:
 
-``` javascript
+```json
 {
     "template" : "checkoutAddressBook",
     "label" : "Shipping Billing",
@@ -420,7 +416,7 @@ Address Book:
 
 Shipping Options:
 
-``` javscript
+```json
 {
     "template" : "coreCheckoutShipping",
     "label" : "Shipping Options",
@@ -438,7 +434,7 @@ Shipping Options:
 
 Review:
 
-``` javscript
+```json
 {
     "template" : "checkoutReview",
     "label" : "Review Payment",
@@ -456,7 +452,7 @@ Review:
 
 and Completion:
 
-``` javascript
+```json
 {
     "template" : "checkoutPayment",
     "label" : "Complete",
@@ -479,7 +475,7 @@ So to solidy our change we are going to have our changes to the database done in
 We want to make this change after everything else has been set up (we want to make sure those records are there before we try to modify them) so we are going to add our function on to the `afterCoreInit` event.
 So we just call out function from the Hook Event we created earlier
 
-``` javascript
+```js
 Hooks.Events.add("afterCoreInit", () => {
     addRolesToVisitors();
     modifyCheckoutWorkflow();
@@ -488,7 +484,7 @@ Hooks.Events.add("afterCoreInit", () => {
 
 Our function call is just a call out to modify the record in the collection using standard Mongo syntax:
 
-``` javascript
+```js
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
   Packages.update({
@@ -509,12 +505,11 @@ function modifyCheckoutWorkflow() {
 
 Now of course we will need to create our template and add that file to our imports but I am leaving that up to you since we have covered it a few times now. The template is available in the BeesKnees repo if you want to take a look at it. You will notice that there is nothing special about this command, we are just directly modifying the MongoDb.
 
-Once we `./reaction reset` and begin again we can look in the db and see that our changes have taken effect. And if we put something in our cart and checkout, we should see the change to the checkout flow.
-
+Once we `reaction reset` and begin again we can look in the db and see that our changes have taken effect. And if we put something in our cart and checkout, we should see the change to the checkout flow.
 
 ## Customizing Schemas
 
-_If will be easier to understand this section of the tutorial if you have read and understood the [Schemas](http://guide.meteor.com/collections.html#schemas_) section of the Meteor Guide_
+_If will be easier to understand this section of the tutorial if you have read and understood the [Schemas](http://guide.meteor.com/collections.html#schemas) section of the Meteor Guide_
 
 While Mongo is a "schemaless" database that does not mean schemas are a bad idea. In fact they are a great idea and so Reaction Commerce uses a package called [Simple Schema](https://atmospherejs.com/aldeed/simple-schema) to build and enforce schemas. This package is recommended in the Meteor Guide and we recommend it's use as well.
 
@@ -528,7 +523,7 @@ Removing fields from a Schema is relatively straight-ahead in that we just need 
 
 For example if you wanted to remove the `note` field from the `Account` schema you would create a `lib` directory (because schemas are used on both client and serve) in the beesknees package and create a file called `schemas.js`. In that you would make a copy of the Account schema, remove the `note` field and then add this line
 
-``` javascript
+```js
 import { Accounts } from "lib/collections";
 import { Accounts as AccountsSchema } from "lib/collections/schemas";
 Accounts.attachSchema(AccountsSchema, {replace: true});

@@ -1,14 +1,15 @@
 # Vagrant
+
 Install [Vagrant](https://www.vagrantup.com/downloads.html)
 
-```
+```sh
 vagrant init hashicorp/precise32
 vagrant up
 ```
 
 Setup vagrant port forwarding, edit Vagrantfile and uncomment the config.vm.network and edit ports
 
-```
+```sh
 config.vm.network "forwarded_port", guest: 3000, host: 3001
 ```
 
@@ -16,7 +17,7 @@ This example will allow you to access the Reaction/Meteor server on port localho
 
 # Ubuntu
 
-```bash
+```sh
 sudo apt-get update
 sudo apt-get install -y python-software-properties python g++ make
 sudo add-apt-repository ppa:chris-lea/node.js

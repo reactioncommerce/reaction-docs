@@ -10,7 +10,7 @@ Configuration can be performed by Administrators in the Reaction Dashboard.
 
 It can also be done in `private/settings/reaction.json` by adding (or updating) the following configuration details (remember to fill in the blanks):
 
-```
+```json
 {
   "name": "reaction-paypal",
   "enabled": true,
@@ -51,8 +51,8 @@ Based on the accepted payment methods, PayPal's default schema for credit card n
 - capture
 
 > Captures of an authorized charge can be made in any amount equal to, less than, or up to 115% of the original authorization (not to exceed $75 more than the authorization), unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures are immediate.
->     
-> *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
+>
+> _If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`._
 
 - refund
 

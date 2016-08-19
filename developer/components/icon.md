@@ -4,48 +4,51 @@ The icon components give you a simple way to use the available icon sets in Reac
 
 ### Properties
 
-Property                       | Type     | Description
------------------------------- | -------- | -----------------------------------------------------------------------------
-icon                           | String   | name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon
+| Property | Type   | Description                                                              |
+| -------- | ------ | ------------------------------------------------------------------------ |
+| icon     | String | name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon |
 
 ##### Example (Client) (Blaze)
 
 ###### Basic Usage
 
-```
-import { icon } from "meteor/reactioncommerce:reaction-ui"
+```js
+import { icon } from "meteor/reactioncommerce:reaction-ui";
 
 Template.myTemplate.helpers({
   iconComponent() {
-    return icon
+    return icon;
   }
 })
 ```
 
-```
+```handlebars
 <template name="myTemplate">
   <div class="iconContainer">
     {{> React component=iconComponent icon="clock"}}
   </div>
 </template>
 ```
+
 ##### Example (Client) (React)
 
 ###### Basic Usage
+
 In this example we display a clock icon. The base icon pack for Reaction is font awesome. The namespace `fa fa-` are automatically applied for you.
 
-```
+```html
 <icon icon="clock" />
 ```
 
 The above is equivalent to the following:
 
-```
+```html
 <icon icon="fa fa-clock" />
 ```
 
 ###### In React Component
-```
+
+```jsx
 import { icon } from "meteor/reactioncommerce:reaction-ui"
 
 class MyComponent extends React.Component {
@@ -55,7 +58,7 @@ class MyComponent extends React.Component {
         {"Things in my component"}
         <icon icon="clock" />
       <div>
-    )
+    );
   }
 }
 ```

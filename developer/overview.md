@@ -34,8 +34,8 @@ Integration testing is implemented using the[ `meteor --test` with Mocha](https:
 
 Tests can be run from the command line:
 
-```bash
-./reaction test
+```sh
+reaction test
 ```
 
 More details can be found in [testing.md](testing.md).
@@ -57,7 +57,7 @@ Of course, [in progress](https://github.com/reactioncommerce/reaction/labels/in%
 ## Releases
 
 We will publish releases, and merge `development` into `master` as quickly as tests are all passing.
- 
+
 No pull requests to `master` will be accepted.
 
 `master` should always be a stable branch, but with a rapid merge cycle from `development`.  The [release](https://github.com/reactioncommerce/reaction/releases) and published packages will be tagged for minor release or higher, and sometimes for special case patches.
@@ -72,7 +72,7 @@ Please cleanup your PR into as few commits as possible (single is good).
 
 In your branch:
 
-```bash
+```sh
 git rebase -i origin/development
 ```
 
@@ -80,13 +80,13 @@ In the editor that opens, replace the words "pick" with "squash" next to the com
 
 If you need to edit the commit message later you can use
 
-```bash
+```sh
  git commit --amend
 ```
 
 You can now `push` your branch to GitHub. If you've already published this branch, you should create a new branch, or use `--force` (rewrites history)
 
-```bash
+```sh
 git push --force
 ```
 

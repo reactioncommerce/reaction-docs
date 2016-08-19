@@ -26,17 +26,21 @@ you will want to read the plugin tutorial. If you want to do both, well then you
 [Themeing Tutorial](/developer/tutorial/creating-a-theme.md)
 
 ### How do I add routes?
-### How do I change the layout?
-### How do I change what templates are used or add my own custom templates?
-### How do I customize schemas?
-### How do I load custom data for products, etc?
-### How do I change the checkout workflow?
-### How do I modify a schema?
 
+### How do I change the layout?
+
+### How do I change what templates are used or add my own custom templates?
+
+### How do I customize schemas?
+
+### How do I load custom data for products, etc?
+
+### How do I change the checkout workflow?
+
+### How do I modify a schema?
 
 [Plugin Tutorial](/developer/tutorial/creating-a-plugin.md)
 
 ### How do I create a custom payment-provider package?
 
 [Creating a Payment Provider Plugin](/developer/tutorial/creating-a-payment-provider-plugin.md)
-

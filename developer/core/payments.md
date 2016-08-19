@@ -1,4 +1,5 @@
 # Payments
+
 Payment methods are one of the most common packages that developers need to create, especially when migrating from another platform.
 
 The [reaction-paymentmethod](https://github.com/reactioncommerce/reaction-paymentmethod) package and documentation was created to try and make this process as easy as possible for developers new to Reaction. It should be used as a guide in making all payment methods as consistent as possible so that they are usable by the largest number of users.
@@ -6,6 +7,7 @@ The [reaction-paymentmethod](https://github.com/reactioncommerce/reaction-paymen
 Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](/payment-packages-authnet), [Braintree](/payment-packages-braintree), [Paypal Express](/payment-packages-paypal#paypal-express), [Paypal Payflow](/payment-packages-payflow), and [Stripe](/payment-packages-stripe).
 
 ## Transactions
+
 Most Reaction payment packages can support these transaction types. They all do things a little differently, so please be sure to read each individual payment packages docs.
 
 - authorize
@@ -25,6 +27,7 @@ Most Reaction payment packages can support these transaction types. They all do 
 > This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 
 ## Hooks
+
 Payments trigger order completion by using a `method hook` in `server/methods/core/hooks/cart.js`.
 
 ```js
@@ -63,11 +66,12 @@ MethodHooks.after("cart/submitPayment", function (options) {
   }
   return result;
 });
-
 ```
 
 ## Methods
+
 ### cart/submitPayment (server, client)
+
 Saves a submitted payment to cart, triggers workflow and adds "paymentSubmitted" to cart workflow
 
 _Note: this method also has a client stub, that forwards to cartCompleted._
@@ -79,6 +83,7 @@ Meteor.call("cart/submitPayment", paymentMethod);
 ```
 
 ### payments/paymentMethod (server)
+
 Adds payment to an order.
 
 ```js

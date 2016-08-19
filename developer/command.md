@@ -1,20 +1,22 @@
 # Command line
 
 ## reaction run
+
 To start Reaction, run the `reaction` command
 
-```
+```js
 reaction
 ```
 
-This command runs a script that executes `meteor`. You can use any [Meteor command line option](http://docs.meteor.com/#/full/meteorhelp). 
+This command runs a script that executes `meteor`. You can use any [Meteor command line option](http://docs.meteor.com/#/full/meteorhelp).
 
 Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running (sample data same as on demo site)
 
 ## reaction reset
+
 To reset the Reaction database, and optionally clear development packages. This will give you a fresh test dataset from `reactioncommerce:reaction-sample-data`.
 
-```
+```sh
 reaction reset
 ```
 
@@ -22,13 +24,13 @@ See the [package development documentation](developer/packages/packages.md)  and
 
 ## reaction pull
 
-```bash
+```sh
 reaction pull
 ```
 
 You can just use `git pull`, but `reaction pull` will run a script that pulls all local packages as well as Reaction. It's the easiest way to make sure you're working with the complete developer package set.
 
-```bash
+```sh
 cd reaction
 reaction pull
 reaction
@@ -37,16 +39,18 @@ reaction
 You can also use `meteor upgrade` to upgrade to the latest Atmosphere published Meteor packages.
 
 ## reaction test
-```
+
+```sh
 reaction test
 ```
+
 Reaction server integration tests in the console.
 
 ## meteor
 
 Full Meteor command line documentation can be found here: http://docs.meteor.com/#/full/commandline
 
-```
+```sh
 meteor —settings settings/settings.json
 ```
 
@@ -73,4 +77,3 @@ Meteor command line options:
 	                   the current versions, if required to satisfy all package
 	                   version constraints.
 	  --test           [Experimental] Run Velocity tests using phantomjs and exit.
-

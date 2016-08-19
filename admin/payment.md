@@ -10,10 +10,10 @@ From the Dashboard, locate the payment package you want to enable. Click the plu
 
 Reaction supports the following payment packages:
 
- * [PayPal](https://github.com/reactioncommerce/reaction-paypal)
- * [Braintree](https://github.com/reactioncommerce/reaction-braintree)
- * [Stripe](https://github.com/reactioncommerce/reaction-stripe)
- * [Authorize.Net](https://github.com/taylorsmithgg/reaction-auth-net)
+- [PayPal](https://github.com/reactioncommerce/reaction-paypal)
+- [Braintree](https://github.com/reactioncommerce/reaction-braintree)
+- [Stripe](https://github.com/reactioncommerce/reaction-stripe)
+- [Authorize.Net](https://github.com/taylorsmithgg/reaction-auth-net)
 
 To enable a payment method, click on the plus icon. Once enabled, click on the cog wheel icon to configure your account settings for that payment method.
 

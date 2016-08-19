@@ -17,5 +17,3 @@ To edit an existing provider, edit a rate, or to enable or disable a provider, c
 ![](/assets/admin-basic-shipping-edit-provider.png "Reaction Commerce basic shipping")
 
 Reaction gives you the ability to set shipping rules by location and also lets you provide shipping and delivery estimates in the "Matching Locales" box. In addition, you can have a shipping rate apply to specific shopping cart dollar amount ranges via the "Matching Cart Ranges" box.
-
-

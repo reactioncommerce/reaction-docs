@@ -1,4 +1,5 @@
 # Image Handling
+
 We are using [CollectionFs](https://github.com/CollectionFS/Meteor-CollectionFS)  for file uploading handling.  There is a [CFS GraphicsMagick](https://github.com/CollectionFS/Meteor-cfs-graphicsmagick) package that handles resizing images when they are uploaded.
 
 Media collections are defined in `/lib/collections/collectionFS.js`.

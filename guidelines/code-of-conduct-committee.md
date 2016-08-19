@@ -10,11 +10,11 @@ The Code of Conduct Committee deals with violations in the Reaction Commerce Cod
 
 Committee Members:
 
-* **Chair:** TBD
+- **Chair:** TBD
 
-* TBD
+- TBD
 
-* TBD
+- TBD
 
 You can contact [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com). For more details, please see the Reporting Guidelines.
 
