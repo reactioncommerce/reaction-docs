@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "remark-lint": {
+      "list-item-indent": "space",
+      "heading-increment": false,
+      "maximum-line-length": false,
+      "no-emphasis-as-heading": false,
+      "no-heading-punctuation": false,
+      "no-literal-urls": false
+    }
+  }
+}
