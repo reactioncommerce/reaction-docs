@@ -40,7 +40,7 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 
 - capture
 
-> Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures take up to 24 hours to process, and no other actions on this transaction cannot occur during this time period.
+> Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures take up to 24 hours to process, and no other actions on this transaction can occur during this time period.
 >     
 > *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
