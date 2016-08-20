@@ -15,7 +15,7 @@ reaction test
 Tests can be run from the command line:
 
 ```bash
-SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:mocha"
+SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:mocha
 ```
 
 ## Acceptance Testing
