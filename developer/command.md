@@ -56,24 +56,26 @@ meteor —settings settings/settings.json
 
 Meteor command line options:
 
-	  --port, -p       Port to listen on (instead of the default 3000). Also
-	                   uses port N+1 and a port specified by --app-port.
-	                   Specify as --port=host:port to bind to a specific interface.
-	  --debug-port     Specify a port to enable server-side debugging. The
-	                   server will be paused at startup, waiting for incoming
-	                   connections from debugger clients on the specified port.
-	  --mobile-server  Location where mobile builds connect to the Meteor server.
-	                   Defaults to your local IP and the port that the Meteor
-	                   server binds to. Can include a URL scheme (for
-	                   example, --mobile-server=https://example.com:443).
-	  --production     Simulate production mode. Minify and bundle CSS and JS files.
-	  --raw-logs       Run without parsing logs from stdout and stderr.
-	  --settings       Set optional data for Meteor.settings on the server.
-	  --release        Specify the release of Meteor to use.
-	  --verbose        Print all output from builds logs.
-	  --no-lint        Don't run linters used by the app on every rebuild.
-	  --allow-incompatible-update   Allow packages in your project to be upgraded or
-	                   downgraded to versions that are potentially incompatible with
-	                   the current versions, if required to satisfy all package
-	                   version constraints.
-	  --test           [Experimental] Run Velocity tests using phantomjs and exit.
+```sh
+  --port, -p       Port to listen on (instead of the default 3000). Also
+                   uses port N+1 and a port specified by --app-port.
+                   Specify as --port=host:port to bind to a specific interface.
+  --debug-port     Specify a port to enable server-side debugging. The
+                   server will be paused at startup, waiting for incoming
+                   connections from debugger clients on the specified port.
+  --mobile-server  Location where mobile builds connect to the Meteor server.
+                   Defaults to your local IP and the port that the Meteor
+                   server binds to. Can include a URL scheme (for
+                   example, --mobile-server=https://example.com:443).
+  --production     Simulate production mode. Minify and bundle CSS and JS files.
+  --raw-logs       Run without parsing logs from stdout and stderr.
+  --settings       Set optional data for Meteor.settings on the server.
+  --release        Specify the release of Meteor to use.
+  --verbose        Print all output from builds logs.
+  --no-lint        Don't run linters used by the app on every rebuild.
+  --allow-incompatible-update   Allow packages in your project to be upgraded or
+                   downgraded to versions that are potentially incompatible with
+                   the current versions, if required to satisfy all package
+                   version constraints.
+  --test           [Experimental] Run Velocity tests using phantomjs and exit.
+```

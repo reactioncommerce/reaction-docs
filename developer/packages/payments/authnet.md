@@ -24,7 +24,6 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 ## Accepted Payment Methods
 
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
-
 - Signature Debit Cards
 
 _Actual payment method support will vary by country._
@@ -55,7 +54,5 @@ Based on the accepted payment methods, Authorize.net's default schema for credit
 ## Testing
 
 - Credit card number : `4242424242424242`
-
 - Expiration date: Any date in the future
-
 - CVV2: Any 3 numbers

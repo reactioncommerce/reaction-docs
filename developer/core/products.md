@@ -11,16 +11,15 @@ The createProduct method creates a new product with an empty variant. All produc
 Usage:
 
 ```js
-        Meteor.call("products/createProduct", (error, productId) => {
-            if (error) {
-              throw new Meteor.Error("createProduct error", error);
-            } else if (productId) {
-		   # do something on successful callback
-		}
-       });
+Meteor.call("products/createProduct", (error, productId) => {
+  if (error) {
+    throw new Meteor.Error("create-product-error", error);
+  }
+  // do something on successful callback
+});
 ```
 
-`products/createProduct` returns the insert callback from the newly created product. As with all [meteor inserts](https://docs.meteor.com/#insert), this callback includes an error object as the first argument and, if no error, the _id of the new document as the second.
+`products/createProduct` returns the insert callback from the newly created product. As with all [meteor inserts](https://docs.meteor.com/#insert), this callback includes an error object as the first argument and, if no error, the \_id of the new document as the second.
 
 ### products/cloneProduct
 
@@ -30,11 +29,11 @@ Usage:
 
 ```js
 Meteor.call("products/cloneProduct", products, function (error, result) {
-	// callback processing
+  // callback processing
 });
 ```
 
-cloneProduct takes a product object (the one you want to clone) and returns the insert callback from the newly created clone. As with all [meteor inserts](https://docs.meteor.com/#insert), this callback includes an error object as the first argument and, if no error, the _id of the new document as the second.
+cloneProduct takes a product object (the one you want to clone) and returns the insert callback from the newly created clone. As with all [meteor inserts](https://docs.meteor.com/#insert), this callback includes an error object as the first argument and, if no error, the \_id of the new document as the second.
 
 _Note: In the future we are going to implement an inheritance product that maintains relationships with the cloned product tree_
 
@@ -46,11 +45,11 @@ Usage:
 
 ```js
 Meteor.call("products/deleteProduct", productIds, function (error, result) {
-	// callback processing
+  // callback processing
 });
 ```
 
-deleteProduct takes a product _id and returns an error object as well as a result, which is true if the removal was successful or false if not.
+deleteProduct takes a product \_id and returns an error object as well as a result, which is true if the removal was successful or false if not.
 
 ### products/updateProductField
 
@@ -73,8 +72,7 @@ Usage:
 ```js
 import { ReactionProduct } from "/lib/api";
 
-Meteor.call("products/removeProductTag", ReactionProduct.selectedProductId(),
-      this._id);
+Meteor.call("products/removeProductTag", ReactionProduct.selectedProductId(), this._id);
 ```
 
 `products/updateProductTags` will insert if given only tagName and will update existing if given tagName and tagId.
@@ -87,9 +85,9 @@ Usage:
 
 ```js
 Meteor.call("products/removeProductTag", productId, tag._id, function (error) {
-	if (error) {
-		Alerts.toast("Tag already exists, duplicate add failed.","error");
-	 }
+  if (error) {
+    Alerts.toast("Tag already exists, duplicate add failed.", "error");
+   }
  });
 ```
 
@@ -105,13 +103,10 @@ Usage:
 import { ReactionProduct } from "/lib/api";
 import { Reaction } from "/client/api";
 
-Meteor.call("products/setHandleTag", ReactionProduct.selectedProductId(), this._id,
-      function (error, result) {
-        if (result) {
-          return Reaction.Router.go("product", {
-            handle: result
-          });
-	}
+Meteor.call("products/setHandleTag", ReactionProduct.selectedProductId(), this._id, (error, result) => {
+  if (!error) {
+    Reaction.Router.go("product", { handle: result });
+  }
 });
 ```
 

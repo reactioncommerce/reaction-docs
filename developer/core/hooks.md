@@ -2,7 +2,7 @@
 
 [ReactionCore method hooks](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/methods/hooks/hooks.js) allow you to interact with a ReactionCore method **before** and **after** the method is called. You can pass either a single method name and hook function or pass a dictionary of `Object.<string, hook>` like you were setting up original Meteor methods.
 
-The method hooks utilized in ReactionCore are based on [Workpop/meteor-method-hooks ](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
+The method hooks utilized in ReactionCore are based on [Workpop/meteor-method-hooks](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
 
 ReactionCore hooks are called in the following order:
 
@@ -22,7 +22,7 @@ There are four properties that are accessible within the ReactionCore method hoo
 
 2) `error` - if the method executed returned an error, else will be undefined.
 
-3) `arguments` - An array of the argument passed into the method. This can be accessed via options.arguments[0]
+3) `arguments` - An array of the argument passed into the method. This can be accessed via `options.arguments[0]`
 
 4) `hooksProcessed` - A counter of how many times the method has been modified.
 

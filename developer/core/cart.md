@@ -8,7 +8,7 @@ When an **anonymous** user visits, they get a `sessionId`, this a generated serv
 
 It this same user visits on another device, browser or anonymous session they will get a new **anonymous** `userId` and `sessionId`.
 
-When a visitor registers with a password or authentication service (FB,GH,etc),  they are **anonymous** before they register.  We then create a _new_ user and account.  If the user is `authenticated`, and has a `sessionId` that matches previous carts with the same sessionId, we then merge matching `sessionId` carts into the newly created cart.  (and we _<u>should_ </u>remove the existing **anonymous** cart, user, account).
+When a visitor registers with a password or authentication service (FB,GH,etc),  they are **anonymous** before they register.  We then create a _new_ user and account.  If the user is `authenticated`, and has a `sessionId` that matches previous carts with the same sessionId, we then merge matching `sessionId` carts into the newly created cart.  (and we _should_ remove the existing **anonymous** cart, user, account).
 
 We identify an `authenticated` user  in `Roles` as a `guest` without the `anonymous` role.
 

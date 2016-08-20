@@ -67,9 +67,7 @@ Based on the accepted payment methods, PayPal's default schema for credit card n
 ### PayFlow
 
 - Credit card number : Any valid Luhn mod10 number
-
 - Expiration date: Any date in the future
-
 - CVV2: Any 3 numbers
 
 ### Express

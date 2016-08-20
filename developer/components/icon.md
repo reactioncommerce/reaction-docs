@@ -32,7 +32,7 @@ Template.myTemplate.helpers({
 
 ##### Example (Client) (React)
 
-###### Basic Usage
+###### Basic
 
 In this example we display a clock icon. The base icon pack for Reaction is font awesome. The namespace `fa fa-` are automatically applied for you.
 
@@ -46,7 +46,7 @@ The above is equivalent to the following:
 <icon icon="fa fa-clock" />
 ```
 
-###### In React Component
+###### React Component
 
 ```jsx
 import { icon } from "meteor/reactioncommerce:reaction-ui"

@@ -4,8 +4,9 @@ Meteor and Reaction store data in `collections`.
 Collections are declared in a common location with [Mongo.Collection](http://docs.meteor.com/api/collections.html).
 
 ```js
-	import { Mongo } from "meteor/mongo"
-	SupportChats = new Mongo.Collection("supportchats");
+import { Mongo } from "meteor/mongo"
+
+SupportChats = new Mongo.Collection("supportchats");
 ```
 
 Collections provide the following methods.

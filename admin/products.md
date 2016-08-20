@@ -53,7 +53,7 @@ To remove a variant, open it and simply click the delete button.
 
 ![](/assets/guide-products-removevariant.png "Reaction Commerce delete variant")
 
-# Variants Options
+## Variants Options
 
 Variant options provide a second layer of customization within each variant. Feature shirts in multiple colors, as well as multiple size options for each color. You can use this flexible structure to customize your products however you like.
 

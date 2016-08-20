@@ -54,7 +54,5 @@ Based on the accepted payment methods, Stripe's default schema for credit card n
 ## Testing
 
 - Credit card number : `4242424242424242`
-
 - Expiration date: Any date in the future
-
 - CVV2: Any 3 numbers

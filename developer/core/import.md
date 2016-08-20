@@ -12,15 +12,22 @@ Meteor.startup(function () {
 });
 ```
 
-## Contents
+## Contents  
 
 - [Architecture](#architecture)
-- [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
+
+  - [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
+
 - [Choosing a suitable key](#choosing-a-suitable-key)
+
 - [Importing from files](#importing-from-files)
+
 - [Automatic collection detection](#automatic-collection-detection)
+
 - [Image uploader](#image-uploader)
+
 - [Reference](#reference)
+
   - [`Reaction.Import.flush`](#flush)
   - [`Reaction.Import.fixture`](#fixture)
   - [`Reaction.Import.object`](#object)

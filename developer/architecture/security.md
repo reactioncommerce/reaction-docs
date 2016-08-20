@@ -13,7 +13,7 @@ Community tested Meteor packages that enforce security rules are installed as re
  Allow, deny rules implemented using the [ongoworks/security](https://github.com/ongoworks/meteor-security) package.
 
 > Most Meteor developers should be familiar with the standard allow and deny functions that can be used to secure database operations that originate on the client. But most developers handle security by simply defining a few allow functions. This may work in most cases, but many people don't realize that only one allow function needs to return true and then the rest of them aren't even called. If you use a lot of community packages in your app, there is the possibility that one of them will add an allow function that returns true for a perfectly good reason, but if you are not aware of it, you may not even realize that your allow function is never being called, and your security logic is not being applied.
-
+>
 > **This package takes allow functions out of the equation and handles all security through deny functions, which are guaranteed to be called.**
 
 ## Argument Validation

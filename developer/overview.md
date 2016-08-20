@@ -30,7 +30,7 @@ More options and use examples at [logging.md](logging.md).
 
 ### Testing
 
-Integration testing is implemented using the[ `meteor --test` with Mocha](https://guide.meteor.com/testing.html) .
+Integration testing is implemented using the[`meteor --test` with Mocha](https://guide.meteor.com/testing.html) 
 
 Tests can be run from the command line:
 

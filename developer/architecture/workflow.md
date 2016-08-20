@@ -16,7 +16,7 @@ A workflow is similar to `package.registry` entries,  but  `package.layout` entr
 - to disable a workflow template remove audience roles
 - routes could be dynamically generated from registry
 
-<u>_The default workflow configuration components are configured in the following manner:_</u>
+_The default workflow configuration components are configured in the following manner:_
 
 ## Shops Collection
 

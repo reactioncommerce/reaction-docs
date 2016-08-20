@@ -21,6 +21,7 @@ Yes. You can host a Reaction shop on any host/virtual machine container that sup
 Yes. We have [internationalization support](/developer/architecture/i18n.md) for numerous languages, and we support currency conversion and localized currency formats.
 
 ## What is the pricing/licensing model?
+
 Reaction is currently free, and there will always be a free, open source version available. Eventually, we will offer premium plans with tiered pricing structures on the reactioncommerce.com platform. Our code is licensed under the GPL v3 license. The Terms & Conditions for shops hosted on our reactioncommerce.com platform can be found at [https://reactioncommerce.com/legal](https://reactioncommerce.com/legal).
 
 ## Is MongoDB/NoSQL best suited for ecommerce?
@@ -45,7 +46,7 @@ Regardless, if it's Docker or other Virtual Machine (VM) containers, the idea is
 
 You can find step-by-step instructions for becoming a contributor here: [//blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/).
 
-## The Reaction platform is reliant on JavaScript to run. Does that have a negative impact on SEO?
+## Reaction is reliant on JavaScript to run. Does that negatively impact on SEO?
 
 [Google now indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 

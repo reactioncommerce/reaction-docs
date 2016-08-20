@@ -9,12 +9,12 @@
 Package specific roles can be defined in `register.js`, by adding custom permissions to registry entries with:
 
 ```js
-      permissions: [
-        {
-          label: "Custom Permission"
-          permission: "custom/permission"
-        }
-      ]
+  permissions: [
+    {
+      label: "Custom Permission"
+      permission: "custom/permission"
+    }
+  ]
 ```
 
 Permission of the current route and user are compared against the package route by default, adding specific permissions to the registry entry is optional.
@@ -62,9 +62,9 @@ Users with "owner" role are full-permission, app-wide users.
 ```js
     # client / server
     import { Logger, Reaction } from "/server/api";
-    
+
     if ( Reaction.hasOwnerAccess() ) {
-    	Logger.info("The Reaction user has Owner Access");
+      Logger.info("The Reaction user has Owner Access");
     }
 ```
 
@@ -73,30 +73,32 @@ Users with "owner" role are full-permission, app-wide users.
 ```html
     # template
     {{#if hasOwnerAccess}}
-    	<strong>This has owner access</strong>
+      <strong>This has owner access</strong>
     {{/if}}
 ```
 
 ## Admin
 
-Users with "admin" role are full-permission, site-wide users.<br>**To check if user has admin access:**
+Users with "admin" role are full-permission, site-wide users.
+
+**To check if user has admin access:**
 
 ```js
-    # client / server
-    import { Logger, Reaction } from "/server/api";
-    
-    if ( Reaction.hasAdminAccess() ) {
-    	Logger.info("The Reaction user has Admin Access");
-    }
+// client / server
+import { Logger, Reaction } from "/server/api";
+
+if (Reaction.hasAdminAccess()) {
+  Logger.info("The Reaction user has Admin Access");
+}
 ```
 
 `/client/modules/core/helpers/templates.js` exports the `hasAdminAccess` helper.
 
-```html
-    # template
-    {{#if hasAdminAccess}}
-    	<strong>This has admin access</strong>
-    {{/if}}
+```handlebars
+<!-- template -->
+{{#if hasAdminAccess}}
+  <strong>This has admin access</strong>
+{{/if}}
 ```
 
 ## Dashboard
@@ -106,43 +108,52 @@ Users with "dashboard" role are limited-permission, site-wide users.
 **To check if user has Dashboard access:**
 
 ```js
-    # client / server
-    import { Logger, Reaction } from "/server/api";
-    
-    if ( Reaction.hasDashboardAccess() ) {
-    	Logger.info("The Reaction user has Owner Access");
-    }
+// client
+import { Logger, Reaction } from "/client/api";
+// server
+import { Logger, Reaction } from "/server/api";
+
+if (Reaction.hasDashboardAccess()) {
+  Logger.info("The Reaction user has Owner Access");
+}
 ```
 
 `/client/modules/core/helpers/templates.js` exports the `hasDashboardAccess` helper.
 
-```html
-    # template
-    {{#if hasDashboardrAccess}}
-    	<strong>This has dashboard access</strong>
-    {{/if}}
+```handlebars
+{{#if hasDashboardAccess}}
+  <strong>This has dashboard access</strong>
+{{/if}}
 ```
 
 To check if user has some specific permissions:
 
-on Client: for current user, where "permissions" is string or ['string']
-
 ## hasPermission
 
+Client
+
 ```js
-	# client / server
-	import { Logger, Reaction } from "/server/api";
-	const permissions = ["guest", "profile"];
-	Reaction.hasPermission(permissions)
+// client
+import { Reaction } from "/client/api";
+
+// can be a String or Array of strings
+const permissions = ["guest", "profile"];
+
+Reaction.hasPermission(permissions);
 ```
 
-Server for some shop (current if not defined) and some userId (current if not defined), where "permissions" is string or ['string']
+Server
+
+Uses the current shop and current user if either is not defined
 
 ```js
-# client / server
-import { Logger, Reaction } from "/server/api";
+// server
+import { Reaction } from "/server/api";
 
-Reaction.hasPermission(permissions, shop, userId)
+// can be a String or Array of strings
+const permissions = ["guest", "profile"];
+
+Reaction.hasPermission(permissions, shop, userId);
 ```
 
 ## hasPermission helper
@@ -151,6 +162,6 @@ Helpers in template in templates:
 
 ```html
 {{#if hasPermission permissions}}
-	<strong> has permission </strong>
+  <strong> has permission </strong>
 {{/if}}
 ```

@@ -8,7 +8,7 @@ If you don't have one already sign up for a [Heroku](https://signup.heroku.com/l
 
 Install the Heroku Toolbelt based on your OS [here](https://toolbelt.heroku.com/) and follow the heroku login instructions on the page.
 
-# Reaction
+## Reaction
 
 Install a copy of reaction commerce.
 
