@@ -24,9 +24,9 @@ Step 2) Next step is to update the Firefox geckodriver for Selenium 3.
 
 Download the latest geckodriver from <https://github.com/mozilla/geckodriver/releases>.
 
-Make sure Firefox isn't running before updating. If on a Mac run: `geckodriver -b /Applications/Firefox.app/Contents/MacOS/firefox-bin`
+Make sure Firefox isn't running before updating. If on a Mac run: `./geckodriver -b /Applications/Firefox.app/Contents/MacOS/firefox-bin`
 
-Linux: `geckodriver -b /usr/bin/firefox`
+Linux: `./geckodriver -b /usr/bin/firefox`
 
 Step 3) Install Java. That can be found <http://www.oracle.com/technetwork/java/javase/downloads/index.html>.
 
