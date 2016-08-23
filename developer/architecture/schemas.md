@@ -14,47 +14,47 @@ Reaction.Collections are defined in the common code of `lib/collections`, where 
 
 Schemas should be imported to use
 
-```javascript
+```js
 import * as Schemas from "/lib/collections/schemas";
 ```
 
 or an individual schema definition
 
-```javascript
+```js
 import { PackageConfig } from "/lib/collections/schemas/registry";
 ```
 
 ### Reaction Schemas
 
-[Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/development/lib/collections/schemas) | *
---------------------------------------------------------------------------------------------------------- | -----------------
-Email                                                                                                     | Address
-Accounts                                                                                                  | CartItem
-CartItem                                                                                                  | CartItems
-Cart                                                                                                      | DiscountType
-DiscountRules                                                                                             | Discounts
-Layout                                                                                                    | OrderItem
-OrderTransaction                                                                                          | Order
-Permissions                                                                                               | Workflow
-PackageConfig                                                                                             | CorePackageConfig
-PaymentMethod                                                                                             | Invoice
-Payment                                                                                                   | VariantMedia
-ProductPosition                                                                                           | ProductVariant
-Product                                                                                                   | ShippingMethod
-ShipmentQuote                                                                                             | ShipmentItem
-ShippingParcel                                                                                            | Shipment
-ShippingProvider                                                                                          | Shipping
-CustomEmailSettings                                                                                       | Metafield
-Currency                                                                                                  | Locale
-Shop                                                                                                      | Tag
-TaxRates                                                                                                  | Taxes
-Templates                                                                                                 | Translation
+| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/development/lib/collections/schemas) | *                |
+| --------------------------------------------------------------------------------------------------------- | ----------------- |
+| Email                                                                                                     | Address           |
+| Accounts                                                                                                  | CartItem          |
+| CartItem                                                                                                  | CartItems         |
+| Cart                                                                                                      | DiscountType      |
+| DiscountRules                                                                                             | Discounts         |
+| Layout                                                                                                    | OrderItem         |
+| OrderTransaction                                                                                          | Order             |
+| Permissions                                                                                               | Workflow          |
+| PackageConfig                                                                                             | CorePackageConfig |
+| PaymentMethod                                                                                             | Invoice           |
+| Payment                                                                                                   | VariantMedia      |
+| ProductPosition                                                                                           | ProductVariant    |
+| Product                                                                                                   | ShippingMethod    |
+| ShipmentQuote                                                                                             | ShipmentItem      |
+| ShippingParcel                                                                                            | Shipment          |
+| ShippingProvider                                                                                          | Shipping          |
+| CustomEmailSettings                                                                                       | Metafield         |
+| Currency                                                                                                  | Locale            |
+| Shop                                                                                                      | Tag               |
+| TaxRates                                                                                                  | Taxes             |
+| Templates                                                                                                 | Translation       |
 
 ### Autovalue
 
 Reaction provides Autovalue helpers in `/lib/collections/helpers.js`.
 
-```javascript
+```js
 /**
  * Example Schema with Autovalue
  */
@@ -95,7 +95,7 @@ Used for schema injection autoValue of a random id.
 
 #### Schema Definition
 
-```javascript
+```js
 /**
  * workflow schema for attaching to collection where
  * PackageWorkflow is controlling view flow
@@ -119,7 +119,7 @@ export const Workflow = new SimpleSchema({
 
 This example extends the `Schemas.PackageConfig` and adds new properties to the schema.
 
-```javascript
+```js
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
 import { PackageConfig } from "/lib/collections/schemas/registry";
 
@@ -146,13 +146,13 @@ To work with multi-schema you need to specify the selector. You can do this by s
 
 If object contains selector (it should because selector should be required)
 
-```javascript
+```js
 MyCollection.simpleSchema(object);
 ```
 
 And if object doesn't:
 
-```javascript
+```js
 MyCollection.simpleSchema(object, { selector: { field: 'value' } });
 ```
 
@@ -162,7 +162,7 @@ In `/lib/collections/schemas/products.js`, we attach two different schemas to th
 
 The multiple schemas are attached to the collection with a **selector option**.
 
-```javascript
+```js
 Reaction.Collections.Products.attachSchema(Reaction.Schemas.Product,
   { selector: { type: "simple" } });
 Reaction.Collections.Products.attachSchema(Reaction.Schemas.ProductVariant,
@@ -173,7 +173,7 @@ However, now whenever we update a document in the `Products` collection, we need
 
 Applies a schema where `price` is a **Number**:
 
-```javascript
+```js
 Reaction.Collections.Products.update("SMr4rhDFnYvFMtDTX", {
   $set: {
     price: 10
@@ -187,7 +187,7 @@ Reaction.Collections.Products.update("SMr4rhDFnYvFMtDTX", {
 
 Applies a schema where `price` is an **Object**:
 
-```javascript
+```js
 Reaction.Collections.Products.update("BCTMZ6HTxFSppJESk", {
   $set: {
     price: {
@@ -211,7 +211,7 @@ Updates where the _selector is not provided must have the selector in the update
 
 Provide selector in **query**
 
-```javascript
+```js
 Reaction.Collections.Products.update(
   {
     title: "This is a product", type: "simple"
@@ -223,7 +223,7 @@ Reaction.Collections.Products.update(
 
 Provide selector in **update** statement:
 
-```javascript
+```js
 Reaction.Collections.Products.update(
   { title: "Product One" },
   { $set: {
@@ -235,7 +235,7 @@ Reaction.Collections.Products.update(
 
 Provide selector as an **option**
 
-```javascript
+```js
 Reaction.Collections.Products.update(
   { title: "Product One", type: "simple" },
   { $set: {
@@ -249,12 +249,12 @@ Reaction.Collections.Products.update(
 
 Provide the schema selector in the insert object:
 
-```javascript
+```js
 Reaction.Collections.Products.insert({ title: "This is a product", type: "simple"});
 ```
 
 Provide the schema selector as **options**
 
-```javascript
+```js
 Reaction.Collections.Products.insert({ title: "This is a product" }, { selector: { type: "simple" } });
 ```

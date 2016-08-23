@@ -1,7 +1,9 @@
 # Packages
+
 Reaction packages can be **npm** packages, local plugins, or Atmosphere packages that define a Reaction Registry using `Reaction.registerPackage`.
 
 ## imports/plugins
+
 The `imports/plugins` folder contain plugin modules for Reaction.
 
 - core (required core modules)
@@ -11,16 +13,16 @@ The `imports/plugins` folder contain plugin modules for Reaction.
 The plugins in the `imports` folder will not be [bundled by Meteor](https://guide.meteor.com/structure.html#structuring-imports) unless the modules are imported.
 
 The Meteor build system will only bundle and include that file if it is referenced from another file using an import (also called “lazy evaluation or loading”).
-  
+
 ## Reaction.registerPackage
+
 The `Reaction.registerPackage` method describes a Meteor package to other Reaction packages.
 
 Note: The registry entries load does not overwrite existing package entries in the `Packages` collection. However, if there is a package settings object, these entries will be refreshed on change. You'll need to either clear the `Packages` collection, or do a `meteor reset` to re-write other changes to a package registry entry.
 
 Integrate packages with Reaction by creating a **server/register.js** and add to the Registry:
 
-
-```javascript
+```js
 import { Reaction } from "/server/api";
 
 Reaction.registerPackage({

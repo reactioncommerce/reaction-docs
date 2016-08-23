@@ -1,7 +1,9 @@
 # Features
+
 Our [Features page](https://reactioncommerce.com/features) highlights many of the existing and upcoming features of Reaction.
 
 ## Products
+
 - Add/edit products inline, same view as user sees
 - Drag and drop product grid for easy merchandising
 - Clone existing products to create new ones
@@ -16,17 +18,20 @@ Our [Features page](https://reactioncommerce.com/features) highlights many of th
 - Integrated custom product social media messaging (FB,Twitter,Pinterest,Google+)
 
 ## Images
+
 - Drag and drop images
 
 ### Integrated file management
-- Drag and drop image uploader
-  - Drag and drop image upload from desktop
+
+- Drag and drop image upload from desktop
 
 ## Accounts
+
 - Social authentication and account creation methods built in using Meteor packages
 - Administrator role/package based invitation access
 
 ## Cart and Checkout
+
 - One page checkout
 - IP address location determines initial address
 - Geolocation address pre-populates city, state, country
@@ -36,7 +41,9 @@ Our [Features page](https://reactioncommerce.com/features) highlights many of th
 - Multiple payment gateway options
 
 ## Analytics
+
 - Integrated tracking framework for easy integration to any analytics system
 
 ## Mail
+
 - Send transactional emails through any provider, configurable settings

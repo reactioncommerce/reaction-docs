@@ -1,0 +1,17 @@
+{
+  "plugins": {
+    "remark-lint": {
+      "heading-increment": false,
+      "list-item-indent": "space",
+      "maximum-heading-length": 80,
+      "maximum-line-length": false,
+      "no-duplicate-headings": false,
+      "no-emphasis-as-heading": false,
+      "no-file-name-irregular-characters": "\\.a-zA-Z0-9-_",
+      "no-heading-punctuation": false,
+      "no-literal-urls": false,
+      "no-multiple-toplevel-headings": false,
+      "table-pipe-alignment": false
+    }
+  }
+}

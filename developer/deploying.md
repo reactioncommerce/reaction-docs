@@ -1,5 +1,7 @@
 # Deploying
+
 Reaction can be deployed as a [standard Meteor application](http://guide.meteor.com/deployment.html).
+
 - [Galaxy (Meteor)](deploying/galaxy.md)
 - [Meteor Up](deploying/mup.md)
 - [Docker and AWS](deploying/docker.md)

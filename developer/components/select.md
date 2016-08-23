@@ -2,11 +2,11 @@
 
 Dropdown, radio or checkbox select component
 
-|Property|Type|Description
-|-|-|-
-options|Array| An array of objects that have an `value`, and `label property`.
-type|String| **Optional** `radio`, `checkbox`, `select` (default)
-onSelect|function| Function callback for change event.
+| Property | Type     | Description                                                     |
+| -------- | -------- | --------------------------------------------------------------- |
+| options  | Array    | An array of objects that have an `value`, and `label property`. |
+| type     | String   | **Optional** `radio`, `checkbox`, `select` (default)            |
+| onSelect | function | Function callback for change event.                             |
 
 ## Examples
 
