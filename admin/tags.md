@@ -10,7 +10,7 @@ To assign a tag to a product, go to the product detail page by clicking on the p
 
 ![](/assets/admin-products-tags.png "Reaction Commerce tags and navigation")
 
-To create a new tag, click on the “Add Tags” box, type in your tag, and hit enter to save. If the item is a t-shirt, for instance, you might want to tag it with relevant keywords, like short sleeve, cotton, crewneck, etc. 
+To create a new tag, click on the “Add Tags” box, type in your tag, and hit enter to save. If the item is a t-shirt, for instance, you might want to tag it with relevant keywords, like short sleeve, cotton, crewneck, etc.
 
 To delete a tag, click on the gray “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
 
@@ -34,6 +34,6 @@ To create a new navigation tag, type your keyword into the empty “Add Tag” b
 
 To delete a navigation tag, click the gray “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
 
-To rearrange navigation tags, click on the 3 horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tag")). Drag and drop the tags in whichever order you like. 
+To rearrange navigation tags, click on the 3 horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tag")). Drag and drop the tags in whichever order you like.
 
-When you're finished, click anywhere outside of the top nav bar, and you're done! 
+When you're finished, click anywhere outside of the top nav bar, and you're done!
