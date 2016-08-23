@@ -30,7 +30,7 @@ With Reaction Commerce, there aren't any admin panels. Your product view is the 
 ![](/assets/guide-products-editproduct.png "Reaction Commerce edit product")
 
 ## Removing Products
-To remove an entire product, login and click the "Delete" icon (![](/assets/guide-icon-delete.png "Reaction Commerce delete product")) in the grid view. Looking to remove single variants? Learn more in the Product Variants section. 
+To remove an entire product, login and click the "Delete" icon (![](/assets/guide-icon-delete.png "Reaction Commerce delete product")) in the grid view. Looking to remove single variants? Learn more in the Product Variants section.
 
 ![](/assets/guide-products-removeproduct.png "Reaction Commerce remove product")
 
