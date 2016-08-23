@@ -13,7 +13,7 @@ icon                           | String   | name of [font awesome](https://forta
 ###### Basic Usage
 
 ```
-import { Icon } from "/imports/plugins/core/ui/client/components"
+import { Icon } from "/imports/plugins/core/ui/client/components";
 
 Template.myTemplate.helpers({
   IconComponent() {
