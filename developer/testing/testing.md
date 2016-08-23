@@ -20,17 +20,21 @@ Shortcut for running the test suite:
 
 Step 1) To get started with Acceptance Testing first you must download Selenium Standalone Server .jar which can be found <http://goo.gl/2lZ46z>.
 
-Step 2) Next step is to update the Firefox geckodriver for Selenium 3.
+Step 2) Next step is to install chromedriver which can be found <https://sites.google.com/a/chromium.org/chromedriver/>
 
-Download the latest geckodriver from <https://github.com/mozilla/geckodriver/releases>.
+For Linux place chromedriver in `/usr/bin/`.
 
-Make sure Firefox isn't running before updating. If on a Mac run: `./geckodriver -b /Applications/Firefox.app/Contents/MacOS/firefox-bin`
+For Mac:
 
-Linux: `./geckodriver -b /usr/bin/firefox`
+1) Place chromedriver anywhere
+
+2) Run `sudo vi /etc/paths`
+
+3) Add chromedriver path
 
 Step 3) Install Java. That can be found <http://www.oracle.com/technetwork/java/javase/downloads/index.html>.
 
-Step 4) Run Selenium Server:
+Step 4) Run Selenium Server (NOTE: your selenium version might differ):
 
 ```
 java -jar selenium-server-standalone-3.0.0-beta2.jar
@@ -56,7 +60,7 @@ Currently the test runner for acceptance testing is located in:
 wdio.conf.js
 ```
 
-By default, acceptance tests use the Firefox browser. You should see an instance of Firefox appear and run through the tests.
+By default, acceptance tests use the Google Chrome browser. You should see an instance of Chrome appear and run through the tests.
 
 Dealing with failing tests... If a test fails, a screenshot of the failed test step will be generated in:
 
