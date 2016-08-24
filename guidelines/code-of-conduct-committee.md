@@ -2,7 +2,7 @@
 
 All Community Guidelines content is licensed under a [Creative Commons Attribution](https://creativecommons.org/licenses/by/3.0/) license.
 
-Reaction Commerce is now creating a committee to handle specific tasks related to our Code of Conduct. The Committee will be finalized and announced here by August 24, 2016.
+Reaction Commerce has created a committee to handle specific tasks related to our Code of Conduct.
 
 **Code of Conduct Committee**
 
@@ -10,11 +10,11 @@ The Code of Conduct Committee deals with violations in the Reaction Commerce Cod
 
 Committee Members:
 
-- **Chair:** TBD
-- TBD
-- TBD
+- **Chair:** Sara Hicks, [GitHub](https://github.com/saralouhicks)
+- Brent Hoover, [GitHub](https://github.com/zenweasel)
+- Spencer Norman, [GitHub](https://github.com/spencern)
 
-You can contact [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com). For more details, please see the Reporting Guidelines.
+You can contact [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com). For more details, please see the [Reporting Guidelines](/guidelines/reporting-guide.md).
 
 **Code of Conduct Violation Reports**
 
