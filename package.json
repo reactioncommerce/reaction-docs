@@ -1,0 +1,27 @@
+{
+  "name": "reaction-docs",
+  "version": "0.15.0",
+  "description": "Documentation for Reaction Commerce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reactioncommerce/reaction-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reactioncommerce/reaction-docs/issues"
+  },
+  "keywords": [
+    "Reaction Commerce",
+    "Reaction"
+  ],
+  "author": "hello@reactioncommerce.com",
+  "license": "MIT",
+  "scripts": {
+    "lint": "remark .",
+    "lint-fix": "remark . -o"
+  },
+  "devDependencies": {
+    "eslint": "^3.3.1",
+    "remark-cli": "^1.0.0",
+    "remark-lint": "^4.2.0"
+  }
+}
