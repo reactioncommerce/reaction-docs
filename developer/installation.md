@@ -2,7 +2,7 @@
 
 To install and run Reaction locally:
 
-```bash
+```sh
 # install CLI
 npm install -g reaction-cli
 
@@ -30,7 +30,7 @@ Developers using **Windows** should review the [Windows specific installation re
 
 To start Reaction, run the `reaction` command
 
-```
+```sh
 reaction
 ```
 
@@ -38,7 +38,7 @@ reaction
 
 `reaction -h` will give you help for the `reaction` command.
 
-```
+```sh
 reaction -h
 reaction <command> [options]
 
@@ -63,7 +63,7 @@ The `reaction` command line also accepts [Meteor command line options](http://do
 
 ## reaction pull
 
-```bash
+```sh
 reaction pull
 ```
 
@@ -75,7 +75,7 @@ Resets the Reaction database, updates npm modules, and optionally removes `node_
 
 This will give you a fresh test dataset from `private/data`.
 
-```
+```sh
 reaction reset
 ```
 

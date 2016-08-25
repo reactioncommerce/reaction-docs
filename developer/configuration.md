@@ -10,7 +10,7 @@ For convenience, the initial Reaction administrator can be configured here.
 
 **_settings/settings.json_**
 
-```
+```json
 {
   "ROOT_URL": "",
   "MAIL_URL": "",
@@ -33,7 +33,7 @@ You can also use `environment` variables for settings, useful for headless and a
 
 The `REACTION_EMAIL`, `REACTION_USER`, `REACTION_AUTH` environment variables will configure the default administrator account. These variables and `isDebug` are the only _Reaction specific_ variables used from settings.json.
 
-```bash
+```sh
 export ROOT_URL=""
 export MONGO_URL="<your mongodb connect string>"
 export MAIL_URL="<smtp connection string>"
@@ -47,8 +47,8 @@ _Note: Environment variables will override variables set in settings.json_
 
 You can also assign these variables before the command.
 
-```bash
-MONGO_URL=mongodb://xxxxxxxxxxxxxxxxxxxxxxxxxxx reaction
+```sh
+MONGO_URL=mongodb://xxxxxxxx reaction
 ```
 
 #### ROOT_URL
@@ -88,7 +88,7 @@ See: [import.md](/developer/core/import.md) for documentation on `Reaction.Impor
 
 _Example import of shipping records_
 
-```javascript
+```js
 import { Meteor} from "meteor/meteor";
 import { Reaction } from "/server/api";
 
@@ -202,7 +202,7 @@ _Note: Where `name` is Reaction package name, the `settings` object will update 
 
 ### loadSettings
 
-```javascript
+```js
 // server side secure import of settings
 import { LoadSettings } from "/server/api";
 

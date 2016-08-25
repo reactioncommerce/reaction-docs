@@ -6,9 +6,9 @@
 {{/card}}
 ```
 
-Property                       | Type     | Description
------------------------------- | -------- | -----------------------------------------------------------------------------
-[controls](#controls)          | Array    | Array of button Props. [see button component](#button)
+| Property              | Type  | Description                                            |
+| --------------------- | ----- | ------------------------------------------------------ |
+| [controls](#controls) | Array | Array of button Props. [see button component](#button) |
 
 ## Examples
 

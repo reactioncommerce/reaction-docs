@@ -12,15 +12,22 @@ Meteor.startup(function () {
 });
 ```
 
-## Contents
+## Contents  
 
 - [Architecture](#architecture)
-- [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
+
+  - [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
+
 - [Choosing a suitable key](#choosing-a-suitable-key)
+
 - [Importing from files](#importing-from-files)
+
 - [Automatic collection detection](#automatic-collection-detection)
+
 - [Image uploader](#image-uploader)
+
 - [Reference](#reference)
+
   - [`Reaction.Import.flush`](#flush)
   - [`Reaction.Import.fixture`](#fixture)
   - [`Reaction.Import.object`](#object)
@@ -35,6 +42,7 @@ Meteor.startup(function () {
 ## Architecture
 
 `Reaction.Import` is structured around an import buffer. This buffer is used to support fast bulk updates and inserts by sending all the queries at once to the database server. The import buffer can be filled with a number of shop entities. Currently supported are:
+
 - Shops
 - Packages
 - Translations
@@ -45,7 +53,7 @@ Meteor.startup(function () {
 
 All the import functions have a similar signature:
 
-```javascript
+```js
 import { Reaction } from "/server/api";
 
 Reaction.Import.entity = function (key, value [, ...]) { ... }
@@ -59,7 +67,7 @@ When importing entities which need to be referenced by other entities it is reco
 
 By default documents are inserted with the MongoDB `$set` modifier. This however poses a problem when importing data which only needs to be imported if it's not already present in the database, ignoring changes made to the document after it was imported. To accomodate such situations, `Reaction.Import` provides the `fixture()` modifier method. This method modifies `Reaction.Import` to use the `$setOnInsert` modifier when sending documents to the database. It can be used as follows:
 
-```javascript
+```js
 import { Reaction } from "/server/api";
 
 Reaction.Import.fixture().process(...);
@@ -77,8 +85,7 @@ When importing a document together with some documents referencing it, try to us
 
 The package includes a helper function, [`Reaction.Import.process`](#process), which accepts json arrays. It can be used to populate the database, importing some products might be as easy as:
 
-```javascript
-
+```js
 Reaction.Import.process(Assets.getText(file), ['title'], Reaction.Import.product);
 ```
 
@@ -101,17 +108,17 @@ Executes `Reaction.Import.commit(collection)`
 
 Tell `Reaction.Import` to use the `$setOnInsert` modifier when sending documents to MongoDB.
 
-### `Reaction.Import.object(collection, key, value)` 
+### `Reaction.Import.object(collection, key, value)`
 
 Import a document with an associated key into a designated collection. Keep in mind that the other import methods specific to a certain collection usually only wrap this method, but can potentially extend it with extra logic. As an example, `Reaction.Import.shop()` also loads translations associated with a given shop.
 
-### `Reaction.Import.process(json, key, callback)` 
+### `Reaction.Import.process(json, key, callback)`
 
 Processes a json array with a given callback. The `key` argument should be used to pass an array containing the fields to be used as the import key.
 
 The callback should accept two parameters: a key and the data to be imported. Usually this will be one of the `Reaction.Import` entity import functions, although a custom callback can be used as well. A custom callback can, for example, be used to pass the parent key when importing products/variants.
 
-### `Reaction.Import.identify(value)` 
+### `Reaction.Import.identify(value)`
 
 Tries to associate a MongoDB collection with a certain document. Throws an error if it fails to do so or if results are ambiguous.
 
@@ -119,7 +126,7 @@ Tries to associate a MongoDB collection with a certain document. Throws an error
 
 Try to import any document with an associated key, using `Reaction.Import.identify()` to determine the collection.
 
-### `Reaction.Import.indication(field, collection, probability)` 
+### `Reaction.Import.indication(field, collection, probability)`
 
 Allow packages to extend the auto collection detection facility of `Reaction.Import`. It is used to add a certain field as an indication that the document belongs to a certain collection. The probability should be a number between zero and one, where one is the strongest possible indication.
 
@@ -127,7 +134,7 @@ Allow packages to extend the auto collection detection facility of `Reaction.Imp
 
 As explained above, for importing tags it might be interesting to provide a suitable `_id` as the key:
 
-```javascript
+```js
 import { Reaction } from "/server/api";
 let tag;
 ...
@@ -140,7 +147,7 @@ We can now directly use the `tag` value as a value in the `hashtags` array in th
 
 The product import provides an extra optional argument `parent` to accomodate for the product hierarchy structure planned for reaction. Currently this extra argument is used to import a variant where `key` identifies the variant and `parent` identifies the product. When called with two arguments the function will import a product. An example:
 
-```javascript
+```js
 import { Reaction } from "/server/api";
 
 const title, description, tag, ean, price;

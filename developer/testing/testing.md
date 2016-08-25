@@ -2,7 +2,9 @@
 
 Integration testing is implemented using the[`meteor --test` with Mocha](https://guide.meteor.com/testing.html) .
 
-Tests can be run from the command line:
+## Integration Testing
+
+Integration testing is implemented using the [`meteor --test` with Mocha](https://guide.meteor.com/testing.html) .
 
 ```bash
 SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:mocha"
@@ -13,7 +15,13 @@ Tests can be written and ran at both the application level, and for individual p
 Shortcut for running the test suite:
 
 ```bash
-./reaction test
+reaction test
+```
+
+Tests can be run from the command line:
+
+```bash
+SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:mocha
 ```
 
 ## Acceptance Testing
@@ -22,7 +30,7 @@ Step 1) To get started with Acceptance Testing first you must download Selenium 
 
 Place Selenium Server in your home directory. Really, it can live anywhere.
 
-Step 2) Next step is to install chromedriver.
+Step 2) Next step is to install chromedriver. To get started with Acceptance Testing, first you must download [Selenium Standalone Server .jar](http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar).
 
 For Linux: Download chromedriver which can be found <https://sites.google.com/a/chromium.org/chromedriver/>. Place chromedriver in `/usr/bin/`.
 
@@ -42,11 +50,7 @@ Step 5) In order to run some of the tests, it is required you create a guest use
 tests/acceptance-tests/config/user-data.yml
 ```
 
-In acceptance testing, the idea is to simulate a users experience to validate functionality on the front end. Some test scripts simulate real user login and
-
-do stuff functionality. The credentials put in this file are safe and cannot be accessed from the outside world. Just remember not to commit credentials
-
-when creating pull requests.
+In acceptance testing, the idea is to simulate a users experience to validate functionality on the front end. Some test scripts simulate real user login and test functionality. The credentials put in this file are safe and cannot be accessed from the outside world. Just remember not to commit credentials when creating pull requests.
 
 Step 6) Execute acceptance tests:
 
@@ -60,7 +64,7 @@ Currently the test runner for acceptance testing is located in:
 wdio.conf.js
 ```
 
-Let's break down whats happening in 'wdio.conf.js'. --PLEASE READ BEFORE CONTINUING--
+Let's break down whats happening in `wdio.conf.js`. --PLEASE READ BEFORE CONTINUING--
 
 At the top of the file you will see a specs array. Like: `specs: []` Herein lies the paths to all the test files as such:
 
@@ -95,5 +99,5 @@ This should be renamed if you are running tests against a qa/staging environment
 is disabled. To enable uncomment the following line and replace with a path of your choosing:
 
 ```
-/tests/acceptance-tests/errorShots/*.png
+tests/acceptance-tests/errorShots/*.png
 ```
