@@ -52,7 +52,7 @@ tests/acceptance-tests/config/user-data.yml
 
 In acceptance testing, the idea is to simulate a users experience to validate functionality on the front end. Some test scripts simulate real user login and test functionality. The credentials put in this file are safe and cannot be accessed from the outside world. Just remember not to commit credentials when creating pull requests.
 
-Step 6) Execute acceptance tests:
+Step 6) Before running tests, make sure you have an instance of Reaction running. Then run the following command:
 
 ```
 ./node_modules/.bin/wdio wdio.conf.js
