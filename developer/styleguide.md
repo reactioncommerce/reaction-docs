@@ -37,7 +37,7 @@ apm install editorconfig atom-beautify linter linter-eslint linter-markdown lint
 
 ### Lint
 
-Installed as a [npm](https://www.npmjs.com/) dependency in development mode, Reaction provides `eslint` v3 with the `babel-eslint`
+Installed as a [npm](https://www.npmjs.com/) development dependencies, Reaction provides `eslint` v3.x with the `babel-eslint` package.
 
 In the Reaction app root, we have a Reaction `eslint` configuration.
 
@@ -47,7 +47,7 @@ For more details, see the [ESLint Getting Started Guide](http://eslint.org/docs/
 
 #### Markdown
 
-In our markdown documentation, we use [remark-lint](https://github.com/wooorm/remark-lint) to ensure consistent Markdown styling.
+In our Markdown documentation, we use [remark-lint](https://github.com/wooorm/remark-lint) to ensure consistent Markdown styling.
 
 
 ### Pull Requests
