@@ -1,58 +1,66 @@
 # Testing
 
-## Integration Testing
+## Unit Tests
 
-Integration testing is implemented using the [`meteor --test` with Mocha](https://guide.meteor.com/testing.html) .
+Unit testing is implemented using [Mocha](mochajs) and [`meteor --test`](https://guide.meteor.com/testing.html).
 
 Tests can be written and ran at both the application level, and for individual packages.
 
-Shortcut for running the test suite:
+Shortcut for running the unit test suite:
 
-```bash
+```sh
 reaction test
 ```
 
 Tests can be run from the command line:
 
-```bash
+```sh
 SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:mocha
 ```
 
-## Acceptance Testing
+## Acceptance Tests
 
-To get started with Acceptance Testing first you must download [Selenium Standalone Server](http://goo.gl/2lZ46z) .jar.
+In acceptance testing, the idea is to simulate a users experience to validate functionality on the front end. Some test scripts simulate real user login and test functionality.
+
+### Setup
+To get started with Acceptance Testing first you must install the latest [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+and download [Selenium Standalone Server](http://goo.gl/2lZ46z).
 
 Place Selenium Server in your home directory.
 
-```bash
+```sh
 mv ~/Downloads/selenium-server-standalone-* ~/
 ```
 
-**Install chromedriver.**
+**Install [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/).**
 
-**Linux:** Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/).
+**Linux**
 
-```bash
+Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/).
+
+```sh
 sudo mv ~/Downloads/chromedriver /usr/bin/
 ```
 
-**Mac:**
+**macOS**
 
-```bash
+Install manually or using `brew`.
+
+```sh
 brew install chromedriver
 ```
 
-Install the latest [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Run Selenium Server (**NOTE:** your selenium version might differ):
 
-```bash
+```sh
 java -jar selenium-server-standalone-3.0.0-beta2.jar
 ```
 
+### Run
 In order to run some of the tests, it is required you create a guest user and have admin user credentials. These credentials are placed in:
 
-```bash
+```sh
 tests/acceptance-tests/config/user-data.yml
 ```
 
@@ -63,11 +71,11 @@ guest_email: your_guest@domain.com
 guest_pw: guestpassword
 ```
 
-In acceptance testing, the idea is to simulate a users experience to validate functionality on the front end. Some test scripts simulate real user login and test functionality. The credentials put in this file are safe and cannot be accessed from the outside world. Just remember not to commit credentials when creating pull requests.
+_The credentials put in this file are safe and cannot be accessed from the outside world. Just remember not to commit credentials when creating pull requests._
 
 **_Start Reaction Application_**
 
-```bash
+```sh
 reaction
 ```
 
@@ -77,29 +85,33 @@ reaction
 ./node_modules/.bin/wdio wdio.conf.js
 ```
 
-## Test Runner
+### Test Runner
 
-```
+[WebdriverIO](http://webdriver.io/guide/testrunner/gettingstarted.html) provides our test runner.
+
+The Reaction WebdriverIO configuration file is already provided, so you can start your integration tests by calling:
+
+```sh
 wdio.conf.js
 ```
 
-## Quick Walkthrough
+#### Quick Walkthrough
 
 At the top of the file you will see a specs array.
 
-```javascript
+```js
 specs: []
 ```
 
 Herein lies the paths to all the test files:
 
-```javascript
+```js
 specs: [ "./tests/acceptance-tests/test/specs/logged-in-authorizenet-checkout.app-test.js" ]
 ```
 
 This allows for adding tests you would like to run, or not run. Handy for debugging, when all you want to do is run one test. Or, you may want to run all the tests:
 
-```javascript
+```js
 specs: [ "./tests/acceptance-tests/test/specs/**/*.js" ]
 ```
 
@@ -113,7 +125,7 @@ Over time we will broaden our support to include: PhantomJS, IE/Edge, Firefox, S
 
 Add **base_url** to:
 
-```bash
+```sh
 tests/acceptance-tests/config/settings.yml
 ```
 
@@ -127,6 +139,6 @@ This should be renamed if you are running tests against a qa/staging environment
 
 **screenshotPath** is for capturing screenshots upon a failure and which directory to put those images in. By default this feature is disabled. To enable, uncomment the following line and replace with a path of your choosing:
 
-```javascript
+```js
 screenshotPath: "./tests/acceptance-tests/errorShots/",
 ```
