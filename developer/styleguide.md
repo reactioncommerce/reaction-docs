@@ -41,7 +41,7 @@ Installed as a [npm](https://www.npmjs.com/) development dependencies, Reaction 
 
 In the Reaction app root, we have a Reaction `eslint` configuration.
 
-* `.eslintrc` - [http://eslint.org/](https://eslint.org/)
+`.eslintrc` - [http://eslint.org/](https://eslint.org/)
 
 For more details, see the [ESLint Getting Started Guide](http://eslint.org/docs/user-guide/getting-started).
 
@@ -49,15 +49,13 @@ For more details, see the [ESLint Getting Started Guide](http://eslint.org/docs/
 
 In our Markdown documentation, we use [remark-lint](https://github.com/wooorm/remark-lint) to ensure consistent Markdown styling.
 
-
 ### Pull Requests
 
 Pull request branches are evaluated using [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) for insecure dependencies and code quality.
 
-
-- must pass a Linting check and _no errors_ are accepted.
-- must pass a Dependency check and no priority packages are accepted.
-- must pass `reaction test`
+* must pass a Linting check and _no errors_ are accepted.
+* must pass a Dependency check and no priority packages are accepted.
+* must pass `reaction test`
 
 In many cases, documentation updates can be required as well.
 
