@@ -1,16 +1,16 @@
 # Order processing
 
-To view and process orders, login as an admin and click on your avatar in the upper right corner of your shop. From the dropdown menu, select Orders. Or, select the Orders icon from the right side of your screen.
+To view and process orders, login as an admin and click on your avatar in the upper right corner of your shop. From the dropdown menu, select "Orders." Or, select the "Orders" icon on the right side of the dashboard.
 
 ![](/assets/admin-dashboard-navigation.png "Reaction Commerce Dashboard")
 
-You can also access your Orders by navigating to your Dashboard and clicking on the "Orders" card on the Dashboard page.
+You can also access your orders by clicking on the "Orders" card on your dashboard.
 
 ![](/assets/admin-dashboard.png "Reaction Commerce Dashboard")
 
-From the Orders screen, you will see each of your orders arranged by stage. As you complete the required steps for each stage, the order will move along the pipeline.
+Once you've accessed your orders, you'll see your orders arranged by stage. As you complete the required steps for each stage, the order will move along the pipeline.
 
-This is what your Orders page looks like without any Orders.
+Here is what your orders page looks like without any orders:
 ![](/assets/admin-orders.png "Reaction Commerce Orders")
 
-Note: We will be adding details here about how to process individual orders, including refunds and credits.
+We will be adding details on how to process individual orders, refunds, and credits at a later date. Check back here for more info. 
