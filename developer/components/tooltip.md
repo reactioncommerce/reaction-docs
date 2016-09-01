@@ -6,20 +6,21 @@ Tooltips are provided by [tooltip](http://github.hubspot.com/tooltip/docs/welcom
 
 This example represents manual usage of the tooltip component.
 
-```
+```js
 Template.button.onRendered(function () {
   const element = this.$(".js-my-element")[0];
 
   this.createTooltip = () => {
 
-      if (this.tooltip) {
-        this.tooltip.destroy();
-      }
-      this.tooltip = new Tooltip({
-        target: element,
-        position: "top left",
-        content: "Tooltip content"
-      });
+    if (this.tooltip) {
+      this.tooltip.destroy();
+    }
+
+    this.tooltip = new Tooltip({
+      target: element,
+      position: "top left",
+      content: "Tooltip content"
+    });
 
   };
 });

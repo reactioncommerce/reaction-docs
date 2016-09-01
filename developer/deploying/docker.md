@@ -3,9 +3,11 @@
 We think [Docker](https://www.docker.com) is one of the easiest ways to deploy modern apps and it's currently the recommended approach if you're hosting your own Reaction Commerce shop.  If you aren't using a customized version of Reaction, there are only a few steps to get up and running and you don't even need to know much about Docker to do it.  However, if you have your own customized version of Reaction that you'd like to deploy, there are only a few extra steps.  Let's get started!
 
 ### Install
+
 First, you should install the Docker Toolbox from [https://www.docker.com/products/docker-toolbox](https://www.docker.com/products/docker-toolbox). This will install all of the Docker tools that you'll need for the rest of this section.
 
 As described by Docker:
+
 - **[Docker Engine](https://docs.docker.com/engine/understanding-docker/)** provides the core functions you need to create Docker images and run Docker containers.
 - **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
 - **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.

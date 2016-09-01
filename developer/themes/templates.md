@@ -1,23 +1,25 @@
 # Templates
+
 Reaction Templates are primarily Blaze Templates, but Meteor supports React and other templating libraries.
 
 To learn more about Meteor, Spacebars, and Blaze templates: [http://guide.meteor.com/blaze.html](http://guide.meteor.com/blaze.html)
 
 ## Extending templates
+
 Reaction includes the [meteor-template-extension](https://github.com/aldeed/meteor-template-extension) package which provides functionality for extending Meteor templates.
 
 To extend and customize the html for any reaction/meteor template, add a template extension map to `client/templates.js`
 
-```javascript
+```js
 # extending core with template extensions
 Template.my_custom_template.replaces("core_template_name");
 ```
 
 then create a template (probably a copy of the one you are extending).
 
-```
+```handlebars
 <template name="my_custom_template">
-    <h1>This will be used instead of the core template!</h1>
+  <h1>This will be used instead of the core template!</h1>
 </template>
 ```
 

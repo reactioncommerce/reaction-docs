@@ -2,14 +2,8 @@
 
 ## macOS
 
-- To install the required build tools, Mac users must install [Xcode](https://developer.apple.com/xcode/downloads/)
-
-  ```
-  xcode-select --install
-  ```
-
+- To install the required build tools, Mac users must install [Xcode](https://developer.apple.com/xcode/downloads/), then run `xcode-select --install`
 - [Node.js](https://nodejs.org/) >=4.x.x (with NPM)
-
 - `ImageMagick` - _Optional_
 
 ## Linux
@@ -19,7 +13,7 @@
 
 ### Ubuntu/Debian
 
-```
+```sh
 apt-get update
 
 apt-get install -y --no-install-recommends curl ca-certificates bzip2 git build-essential python graphicsmagick
@@ -37,7 +31,7 @@ Windows installation has a few more requirements:
 
 If you want to use shell scripts under Windows, create file named `meteor` inside `%localappdata%\.meteor` with following contents:
 
-```
+```sh
 !/bin/sh
 cmd //c "$0.bat" "$@"
 ```
@@ -46,10 +40,9 @@ Run shell scripts from `Git Bash`.
 
 For example:
 
-```bash
+```sh
 cd reaction
 .reaction/scripts/clone-packages.sh
-reaction reset
 ```
 
 ## MongoDB

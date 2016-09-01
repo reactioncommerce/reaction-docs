@@ -1,4 +1,5 @@
 # Community Authors
+
 Thanks to these authors whose packages and contributions we use in Reaction.
 
 Eric Dobbertin [Autoform](https://github.com/aldeed/meteor-autoform)   [Collection2](https://github.com/aldeed/meteor-collection2)  [Simple Schema](https://github.com/aldeed/meteor-simple-schema)
