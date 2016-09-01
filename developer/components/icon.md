@@ -47,6 +47,7 @@ The above is equivalent to the following:
 ```
 
 ###### In React Component
+
 ```
 import React, { Component } from "react";
 import { Icon } from "/imports/plugins/core/ui/client/components";
