@@ -23,6 +23,7 @@ SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:moch
 In acceptance testing, the idea is to simulate a users experience to validate functionality on the front end. Some test scripts simulate real user login and test functionality.
 
 ### Setup
+
 To get started with Acceptance Testing first you must install the latest [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 and download [Selenium Standalone Server](http://goo.gl/2lZ46z).
 
@@ -50,7 +51,6 @@ Install manually or using `brew`.
 brew install chromedriver
 ```
 
-
 Run Selenium Server (**NOTE:** your selenium version might differ):
 
 ```sh
@@ -58,6 +58,7 @@ java -jar selenium-server-standalone-3.0.0-beta2.jar
 ```
 
 ### Run
+
 In order to run some of the tests, it is required you create a guest user and have admin user credentials. These credentials are placed in:
 
 ```sh
@@ -81,7 +82,7 @@ reaction
 
 **Run tests:**
 
-```
+```sh
 ./node_modules/.bin/wdio wdio.conf.js
 ```
 
