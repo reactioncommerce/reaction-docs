@@ -36,6 +36,7 @@ Make sure you check the PayPal documentation for which countries are supported. 
 ## Accepted Payment Methods
 
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
+
 - Signature Debit Cards
 
 _Actual payment method support will vary by country._
