@@ -46,17 +46,10 @@ The above is equivalent to the following:
 <icon icon="fa fa-clock" />
 ```
 
-<<<<<<< HEAD
-###### React Component
-
-```jsx
-import { icon } from "meteor/reactioncommerce:reaction-ui"
-=======
 ###### In React Component
 ```
 import React, { Component } from "react";
 import { Icon } from "/imports/plugins/core/ui/client/components";
->>>>>>> mikemurray-icon-docs
 
 class MyComponent extends Component {
   render() {
