@@ -434,6 +434,12 @@
         "repo": "reaction-docs",
         "docPath": "developer/packages/payments/stripe.md"
     }, {
+        "class": "guide-sub-sub-nav-item",
+        "alias": "packages-search",
+        "label": "Search",
+        "repo": "reaction-docs",
+        "docPath": "developer/packages/search.md"
+    }, {
         "class": "guide-nav-item",
         "alias": "testing-reaction",
         "label": "Testing",
