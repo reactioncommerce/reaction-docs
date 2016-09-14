@@ -20,6 +20,4 @@ Click on the row or edit icon to configure rates:
 
 ![](/assets/admin-basic-shipping-edit-provider.png "Reaction Commerce basic shipping")
 
-
-
 To delete a rate, click the trash icon.
