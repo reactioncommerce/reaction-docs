@@ -1,10 +1,28 @@
-# Factories
+# Fixtures/Factories
 
-The [reaction-factories](https://github.com/reactioncommerce/reaction-factories) package supplies `Factory` and `faker` with additional methods for testing Reaction packages.
+Reaction comes with a set of prebuilt Factories and functions for creating data to write your tests.
+
+Whenever you want to use one of the Factories you need to import them like this:
+
+```js
+import Fixtures from "/server/imports/fixtures";
+````
+
+And then at the top of your test file, ready them by executing:
+
+````js
+Fixtures();
+````
+
+There are also the following functions/builders that can be imported directly.
+
+`addProduct` which will create a new product and return that product to you: `import { addProduct } from "/server/imports/fixtures/products";`
+`getShop` which will either get the existing shop of create a new one and return it to you: `import { getShop } from "/server/imports/fixtures/shops";`
+`getUser` which either return an existing user or create one if it doesn't exist: `import { getUser } from "/server/imports/fixrtures/users;`
 
 ## Factory
 
-The following factories are predefined:
+The following factories are predefined. The appropriate object is created by executing `Factory.create("nameOfFactory");`
 
 - `cart` creates cart with 2 items
 
@@ -16,7 +34,7 @@ The following factories are predefined:
 
 - `authorizedApprovedPaypalOrder` defines order factory which generates an authorized, apporved, paypal order
 
-- `shop` creates shop. But we recommend to use `faker` for shop creation
+- `shop` creates shop.
 
 - `user` creates user without `roles`
 
