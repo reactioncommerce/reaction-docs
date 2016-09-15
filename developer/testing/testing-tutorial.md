@@ -48,7 +48,7 @@ describe.only("Product-To-Hank", function () {
 });
 ```
  
-This is the basics of a Mocha (and many other testing libraries) using what is called "BDD" syntax. When the test
+This is the basics of a Mocha (and many other testing libraries) using what is called "[BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)" syntax. When the test
 is run it is supposed to describe (hance the name) what is being tested. So when the test we have written is run
 the output would say "Product-To-Hank. Calling product-to-hank should change product title to Hank". Then when this
 test passes or fails it will give you a pretty good idea what is happening. Writing these descriptions well is a big
@@ -91,7 +91,6 @@ this:
 
 ````js
 import { expect } from "meteor/practicalmeteor:chai";
-import { Products } from "/lib/collections";
 
  
 describe.only("Product-To-Hank", function () { 
@@ -180,7 +179,6 @@ export function setProductToHank(productId) {
      }); 
   }
   throw new Meteor.error("product-not-found", "Product does not exist");
-
 }
 ```
 
@@ -259,7 +257,7 @@ Meteor.methods({
 in a Meteor method, but we also want to check the argument when the function is called directly.)
 
 So now we need to write a test that checks that the function throws an error when we are not a user with the correct permissions.
-So for that we are going to use the `sinon` library. This library provides what are called "stubs" and "spies".
+So for that we are going to use the [`sinon`](http://sinonjs.org/docs/) library. This library provides what are called "stubs" and "spies".
 It is beyond the scope of this document to describe these in general but you should see how we use them to test Reaction code
 with this example.
 
@@ -303,7 +301,7 @@ describe.only("Product-To-Hank", function () {
  });
 ````
 
-So we as mentioned, the first line "stubs" our the role check to always return false. Then we execute the method
+So as we have mentioned, the first line "stubs" our the role check to always return false. Then we execute the method
 (it doesn't matter what product ID we use since it shouldn't get that far) and we expect it to throw an
 access denied error. Since we have stubbed out the role check, after we are done with our test we need to
 `restore` the method back to it's original state so that other code executes as normal.
