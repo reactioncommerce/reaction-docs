@@ -23,7 +23,7 @@ backend that creates this same publication will be utilized by the front-end pac
 
 ## search-mongo plugin
 
-This package implements the server-side elements of search. This package was a 
+This package implements the server-side elements of search. This package was a
 compromise between more sophisticated engines like Elastic Search that require
 more maintenance and setup and trying to create a package that will meet the needs
 of most developers.
@@ -36,7 +36,7 @@ coming shortly).
 To do so it leverages Mongo's own built-in [full-text search](https://docs.mongodb.com/manual/reference/operator/query/text/)
 capabilities which provides more intelligent matching algorithims than just plain text searches and
 gives a "weight" based on the quality of the match. It also allows admins to customize
-which fields they include and what ranking they are given through the admin 
+which fields they include and what ranking they are given through the admin
 interface.
 
 In addition it will create dedicated search collections which allows the search
