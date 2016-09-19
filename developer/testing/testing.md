@@ -208,6 +208,17 @@ npm run test-browserstack
 
 ### Reporter
 
+To enable Allure reporting results set `allure: true` in:
+
+```sh
+test/acceptance-tests/config/test-suite-config.yml
+```
+
+```yml
+# Test reporter
+allure: true
+```
+
 After a test run has completed a `allure-results` directory is created.
 
 Viewing the results of your tests:
@@ -223,3 +234,9 @@ cd && allure report open
 ```
 
 The report will then be open in a browser window.
+
+To remove test report files run:
+
+```sh
+npm run del-report
+```
