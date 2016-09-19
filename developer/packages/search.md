@@ -66,6 +66,12 @@ in the future.
 
 The `ui-search` package implements the client-side elements of search - a UI interface, and a subscription to the SearchResults publication created by the search-mongo package.
 
+To subscribe to the SearchResults publication, you must provide the collection you wish to search (currently only `products`, `accounts` & `orders` are coming soon), the search term (`searchQuery`), and optionally the `facets` you wish to filter by.
+
+Typing in the input field updates the search term by changing the `searchQuery` variable. Updates are sent on every keypress. Clicking on a tag adds that tags `_id` into an array, referred to in the code as `facets`. Clicking a second time removes the tag from the array.
+
+`this.subscribe("SearchResults", "products", searchQuery, facets);`
+
 Aside from the search icon in Reaction's default navigation bar, all of search is contained inside a full-screen modal window, which appears on-click of the referenced search icon.
 
 Search is performed in a keyword and filter manner: users will use the traditional input field to search for a keyword, and once results are found, they will be displayed, with all tags associated with the returned products displayed directly below the input.
@@ -73,5 +79,6 @@ Search is performed in a keyword and filter manner: users will use the tradition
 Clicking a tag will filter the results, returning results that both 1) meet the initial keyword and 2) have the associated tag attached. The more tags clicked, the more filters applied, and (most likely) the fewer the results shown.
 
 ![Search](http://new.tinygrab.com/219da34c650d895cda3e11a013403370cedb854b3f.png)
+
 
 The UI purposely mimics our existing product-grid templates. CSS class names are identical to those in our product-grid, however all styling is applied completely separate from the traditional product-grid, using the LESS inside of `/imports/plugins/included/default-theme/client/styles/search/results.less`, which is wrapped in an encompassing `.search-modal` wrapper. Changing any styling on the traditional product-grid should not affect the search grid, and vice versa.
