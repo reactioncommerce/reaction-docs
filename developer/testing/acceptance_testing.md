@@ -14,10 +14,8 @@ Each test assumes this environment unless otherwise stated
 1. Ran `reaction reset`
 2. Products are created from the `reaction-sample-data` package
 3. All orders are processed with the Generic Payment method unless otherwise stated
-4. The developer console is open to monitor for client-side errors. A successful
-test implies that no errors are shown here
-5. Server logs are monitored. (the console when running locally) A successful test 
-implies that no errors are shown here.
+4. The developer console is open to monitor for client-side errors. A successful test implies that no errors are shown here
+5. Server logs are monitored. (the console when running locally) A successful test implies that no errors are shown here.
 6. Tests are performed using U.S. currency and English unless specified
 
 ### 1A - Place an order for a single product as an anonymous user
@@ -133,6 +131,6 @@ the Paypal documentation for more details)
 1. Log in as the admin
 2. Click on "Dashboard" in right hand column
 3. Click on the gear icon
-6. Enter API Client ID
-9. Click on "Update"
-10. Perform either test 1A or 2A but substitute Stripe for Generic Payment Method
+4. Enter API Client ID
+5. Click on "Update"
+6. Perform either test 1A or 2A but substitute Stripe for Generic Payment Method

@@ -6,7 +6,7 @@ Reaction Router extends the routing functionality provided by [kadira:flow-route
 
 Reaction Router is exported as `Router` from `"/client/api"`.
 
-```javascript
+```js
 import { Router } from "/client/api";
 
 // Example: use a FlowRouter method to get a URL query param
@@ -25,7 +25,7 @@ Routes are very simple and based on the syntax of [path-to-regexp](https://githu
 
 The **Reaction package registry** entries define routes that can be used with the Router API. You can also pass local functions to the registry.
 
-```javascript
+```js
   registry: [{
     route: "/product/:handle/:variantId?",
     name: "product",
@@ -44,7 +44,7 @@ When there are multiple shops in Reaction, we'll automatically prefix a url safe
 
 To define a route in the registry that does not add a prefix you can define the route in the registry _without a leading "/"_.
 
-```javascript
+```js
   registry: [{
     route: "about",
     name: "about",
@@ -64,7 +64,7 @@ _Default permissions are not added automatically, as there will be a UI componen
 
 `Accounts.onCreateUser` adds default roles need for products, profiles, and checkout routes automatically if none are defined for the Shop.
 
-```javascript
+```js
 defaultVisitorRole =  ["anonymous", "guest", "product", "tag", "index", "cart/checkout", "cart/completed"];
 ```
 
@@ -74,7 +74,7 @@ The package registry route entries are collectively added to the Flow Router rou
 
 You can view these routes for debugging. Add to a file in `custom` and create a global export of the Router that you can use in your browser console.
 
-```javascript
+```js
 import { Router } from "/client/api";
 
 // create a global
@@ -83,13 +83,13 @@ ReactionRouter = Router;
 
 To view the client routing table in the browser console, you can now use the exported Router global.
 
-```javascript
+```js
 console.table(ReactionRouter._routesMap);
 ```
 
 or all defined routes
 
-```javascript
+```js
 console.table(ReactionRouter._routes);
 ```
 
@@ -101,7 +101,7 @@ The Reaction Router API provides many useful methods to help you to navigate the
 
 Reactive function which you can use to get a parameter from the URL.
 
-```javascript
+```js
 import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app
@@ -114,7 +114,7 @@ console.log(appId); // prints "this-is-my-app"
 
 Reactive function which you can use to get a value from the queryString.
 
-```javascript
+```js
 import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app?show=yes&color=red
@@ -129,7 +129,7 @@ Generate a path from a path definition. Both `params` and `queryParams` are opti
 
 Special characters in `params` and `queryParams` will be URL encoded.
 
-```javascript
+```js
 import { Router } from "/client/api";
 
 const pathDef = "/blog/:cat/:id";
@@ -146,7 +146,7 @@ If there are no params or queryParams, this will simply return the pathDef as it
 
 You can also use the route's name instead of the pathDef. Then, Router will pick the pathDef from the given route. See the following example:
 
-```javascript
+```js
 import { Router } from "/client/api";
 
 Router.route("/blog/:cat/:id", {
@@ -169,7 +169,7 @@ This will get the path via `Router.path` based on the arguments and re-route to 
 
 You can call `Router.go` like this as well:
 
-```javascript
+```js
 import { Router } from "/client/api";
 
 Router.go("/blog");
@@ -183,7 +183,7 @@ Just like `Router.path`, but gives the absolute url. (Uses `Meteor.absoluteUrl` 
 
 This will change the current params with the newParams and re-route to the new path.
 
-```javascript
+```js
 import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app?show=yes&color=red
@@ -199,7 +199,7 @@ Just like `Router.setParams`, but for queryString params.
 
 To remove a query param set it to `null` like below:
 
-```javascript
+```js
 import { Router } from "/client/api";
 
 Router.setQueryParams({paramToRemove: null});
@@ -209,7 +209,7 @@ Router.setQueryParams({paramToRemove: null});
 
 To get the name of the route reactively.
 
-```javascript
+```js
 import { Router } from "/client/api";
 
 Tracker.autorun(function() {
@@ -224,7 +224,7 @@ Get the current state of the router. **This API is not reactive**. If you need t
 
 This gives an object like this:
 
-```javascript
+```js
 import { Router } from "/client/api";
 // route def: /apps/:appId
 // url: /apps/this-is-my-app?show=yes&color=red
@@ -247,7 +247,7 @@ console.log(current);
 
 A Blaze template helper that returns the named route's path and accepts params.
 
-```javascript
+```js
 <template name="">
     {{pathFor 'product' handle=product.handle variantId=variants._id}}
 </template>
@@ -257,7 +257,7 @@ A Blaze template helper that returns the named route's path and accepts params.
 
 A Blaze template helper to return "active" when on current route path.
 
-```javascript
+```js
   {{active "name"}}
 ```
 
@@ -265,7 +265,7 @@ A Blaze template helper to return "active" when on current route path.
 
 A Blaze template helper that will return an absolute path for a named route.
 
-```javascript
+```js
   {{urlFor "name"}}
 ```
 
@@ -310,11 +310,15 @@ Router.Hooks.run("onExit", "GLOBAL", context);
 That's the whole Route Hooks API, but most users will only need to register new hooks (onEnter, onExit) because running all of the hooks is already taken care of in Reaction Router.
 
 ### Example Hooks
+
 #### Import
+
 ```js
 import { Router } from '/client/api';
 ```
+
 #### Route-specific Hooks
+
 ```js
 // create a function to do something on the product detail page
 function logSomeStuff() {
@@ -323,7 +327,9 @@ function logSomeStuff() {
 // add that to the product detail page onEnter hook
 Router.Hooks.onEnter("product", logSomeStuff);
 ```
+
 #### Global Route Hooks (every route)
+
 ```js
 // create a pageview tracking function
 function trackPages() {
@@ -335,8 +341,11 @@ Router.Hooks.onEnter(trackPages);
 // or combined into one line...
 Router.Hooks.onEnter(() => analytics.page());
 ```
+
 #### Using route context in your hook
+
 The same context object from FlowRouter is available to every callback
+
 ```js
 function logSomeContext(context) {
   console.log("The current route details...");

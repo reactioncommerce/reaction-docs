@@ -1,4 +1,5 @@
 # Apps / Packages
+
 Reaction apps are the heart of Reaction. You can increase the power of your shop by adding and configuring additional Reaction apps.
 
 To access the apps and packages available in your shop, login as an admin and navigate to your Dashboard. From the Dashboard screen, you can enable an app by clicking on the plus icon located on the app's card.

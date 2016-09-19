@@ -12,7 +12,7 @@ Example package registry from `reaction-product-variants` plugin module `/import
 
 **registerPackage**
 
-```javascript
+```js
 import { Reaction } from "/server/api";
 
 Reaction.registerPackage({
@@ -72,9 +72,9 @@ Reaction.registerPackage({
 
 Layout definition can be added to registry, as well as layout workflow definitions.
 
-<u>Layouts defined here need to also exist in the Shops.layout collection to enable them.</u>
+Layouts defined here need to also exist in the Shops.layout collection to enable them.
 
-```
+```js
 layout: [{
   layout: "coreLayout",
   workflow: "coreWorkflow",
@@ -93,7 +93,7 @@ layout: [{
 
 A layout template definition that will be used for the `coreLayout` layout in the `coreCartWorkflow` workflows:
 
-```
+```js
 layout: [
   {
     template: "checkoutLogin",
@@ -124,34 +124,34 @@ The following `provides` values are defined in reaction-core:
 
 To add a new `settings` link to the app card:
 
-```
-    # settings
-    {
-      route: "/dashboard/package/settings"
-      provides: 'settings'
-      icon: "fa fa-user-plus"
-    }
+```js
+// settings
+{
+  route: "/dashboard/package/settings"
+  provides: 'settings'
+  icon: "fa fa-user-plus"
+}
 ```
 
 To add a new `userAccountDropdown` link to the Accounts menu:
 
-```
-    # settings
-    {
-      route: "/link"
-      provides: 'userAccountDropdown'
-      icon: "fa fa-user-plus"
-    }
+```js
+// settings
+{
+  route: "/link"
+  provides: 'userAccountDropdown'
+  icon: "fa fa-user-plus"
+}
 ```
 
 From templates, you can create additional dynamic template `provides` using the `reactionApps` helper to load registry objects.
 
-```html
-  {{#each reactionApps provides="settings" name=packageName group=group}}
-    <a href="{{pathFor name}}" class="pkg-settings" title="{{i18n 'app.settings' 'Settings'}}">
-      <i class="{{orElse icon 'fa fa-cog fa-2x fa-fw'}}"></i>
-    </a>
-  {{/each}}
+```handlebars
+{{#each reactionApps provides="settings" name=packageName group=group}}
+  <a href="{{pathFor name}}" class="pkg-settings" title="{{i18n 'app.settings' 'Settings'}}">
+    <i class="{{orElse icon 'fa fa-cog fa-2x fa-fw'}}"></i>
+  </a>
+{{/each}}
 ```
 
 You can also extend or replace any core template using [template extensions](https://github.com/aldeed/meteor-template-extension/).

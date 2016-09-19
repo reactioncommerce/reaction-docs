@@ -12,20 +12,20 @@ Layouts are meant to be created using the Package Registry, once they are define
 
 If you need to change the default layout values initial set in `/client/config/defaults.js`, you can customize the layout creating a file like `custom/client/defaults.js` and setting a [Meteor Session](http://docs.meteor.com/api/session.html) variable for `DEFAULT_LAYOUT`.
 
-```javascript
+```js
 import { Session } from "meteor/session";
 
 Session.set("DEFAULT_LAYOUT", "coreLayout");
 Session.set("DEFAULT_WORKFLOW", "coreWorkflow");
 ```
 
-This is only a suggested location. You'll need to create the file and it will be automatically loaded by Meteor. We've added a `.gitignore` and `index.js` as placeholders. 
+This is only a suggested location. You'll need to create the file and it will be automatically loaded by Meteor. We've added a `.gitignore` and `index.js` as placeholders.
 
 ## Changing the index page layout
 
 For convenience, the home page structure can be overridden with `INDEX_OPTIONS`.
 
-```javascript
+```js
 import { Session } from "meteor/session";
 
 Session.set("INDEX_OPTIONS", {
@@ -40,12 +40,11 @@ Session.set("INDEX_OPTIONS", {
 
 This example would load the `customHomePageTemplate` template, instead of the `coreLayout` default template of `products`.
 
-
 ### Example layout from checkout
 
 Layouts can work in conjunction with [workflows](/developer/architecture/workflow.md).  Here is an example of the layout defined in the `/imports/plugins/core/checkout` module.
 
-```javascript
+```js
   layout: [{
     layout: "coreLayout",
     workflow: "coreCartWorkflow",
@@ -105,11 +104,11 @@ Layouts can work in conjunction with [workflows](/developer/architecture/workflo
   }]
 });
 ```
+
 ## Default layout placement
 
 Layouts work in conjunction with two helpers.  The `reactionTemplate` and `reactionApps` helpers loop through matching workflow and layout elements to render in specific locations.  
 
 Here's a diagram of the default layout.
-
 
 ![CoreLayout](/assets/developer-registry-layout.png)

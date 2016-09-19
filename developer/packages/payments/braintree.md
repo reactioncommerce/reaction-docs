@@ -10,7 +10,7 @@ Configuration can be performed by Administrators in the Reaction Dashboard.
 
 It can also be done in `private/settings/reaction.json` by adding (or updating) the following configuration details (remember to fill in the blanks):
 
-```
+```json
 {
   "name": "reaction-braintree",
   "enabled": true,
@@ -25,7 +25,6 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 ## Accepted Payment Methods
 
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
-
 - Signature Debit Cards
 
 _Actual payment method support will vary by country._
@@ -41,7 +40,7 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 - capture
 
 > Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures take up to 24 hours to process, and no other actions on this transaction can occur during this time period.
->     
+>
 > *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
 - refund
@@ -55,14 +54,12 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 ## Testing
 
 - Credit card number : `4242424242424242`
-
 - Expiration date: Any date in the future
-
 - CVV2: Any 3 numbers
 
 Braintree takes up to 24 hours to perform the capture process of a payment. Refunds are not allowed to be initiated until after the payment is fully processed. For testing purposes, Braintree allows you to bypass the 24 hour waiting period by adding the following code at the end of the `gateway.transaction.submitForSettlement` function in `imports/plugins/included/braintree/server/methods/braintreeApi.js`:
 
-```
+```js
 gateway.testing.settle(transactionId, function (err, settleResult) {
   settleResult.success;
   settleResult.transaction.status;

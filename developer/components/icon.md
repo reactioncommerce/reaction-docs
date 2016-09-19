@@ -4,58 +4,62 @@ The icon components give you a simple way to use the available icon sets in Reac
 
 ### Properties
 
-Property                       | Type     | Description
------------------------------- | -------- | -----------------------------------------------------------------------------
-icon                           | String   | name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon
+| Property | Type   | Description                                                              |
+| -------- | ------ | ------------------------------------------------------------------------ |
+| icon     | String | name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon |
 
 ##### Example (Client) (Blaze)
 
 ###### Basic Usage
 
 ```
-import { icon } from "meteor/reactioncommerce:reaction-ui"
+import { Icon } from "/imports/plugins/core/ui/client/components";
 
 Template.myTemplate.helpers({
-  iconComponent() {
-    return icon
+  IconComponent() {
+    return Icon;
   }
-})
+});
 ```
 
-```
+```handlebars
 <template name="myTemplate">
   <div class="iconContainer">
-    {{> React component=iconComponent icon="clock"}}
+    {{> React component=IconComponent icon="clock"}}
   </div>
 </template>
 ```
+
 ##### Example (Client) (React)
 
-###### Basic Usage
+###### Basic
+
 In this example we display a clock icon. The base icon pack for Reaction is font awesome. The namespace `fa fa-` are automatically applied for you.
 
-```
+```html
 <icon icon="clock" />
 ```
 
 The above is equivalent to the following:
 
-```
+```html
 <icon icon="fa fa-clock" />
 ```
 
 ###### In React Component
-```
-import { icon } from "meteor/reactioncommerce:reaction-ui"
 
-class MyComponent extends React.Component {
+```
+import React, { Component } from "react";
+import { Icon } from "/imports/plugins/core/ui/client/components";
+
+class MyComponent extends Component {
   render() {
     return (
       <div>
         {"Things in my component"}
-        <icon icon="clock" />
+        <Icon icon="clock" />
       <div>
-    )
+    );
   }
 }
 ```
