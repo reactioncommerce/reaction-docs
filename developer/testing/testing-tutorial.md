@@ -1,14 +1,11 @@
 # Writing tests
-
 ## Types of tests
+Currently our test suite consists of two types of tests: **Integration** (what Meteor calls "full app")
+and **Acceptance** tests. Here are the major differences:
 
-Currently our test suite consists of two types of tests: Integration (what Meteor calls "full app")
-and Acceptance tests. Here are the major differences:
-
--   Integration tests run server-side and test server-side functionality aginst the entire app running. All
+- **Integration**  tests run server-side and test server-side functionality against the entire app running. All
 parts of the app are loaded before the tests are run but the app is not available during testing.
-
--   Acceptance tests (also called "Black Box" tests) test RC functionality from the client-side and
+- **Acceptance** tests (also called "Black Box" tests) test RC functionality from the client-side and
 attempt to test functionality "as a user". These require special tools to be able to remotely control
 a browser.
 
@@ -23,7 +20,7 @@ to write a test and the better the test will be.
 
 So for the purpose of this tutorial we will write a new feature called "Change product to Hank".
 This creates a new API point where someone with the correct permissions can change the name of
-any product to "Hank".  If we were writing a user story it would read something like "As an admin, I want to be
+any product to "Hank". If we were writing a user story it would read something like "As an admin, I want to be
 to change the title of a product to Hank". (we will allow that this feature may have limited value,
 but it works well for the example).
 
@@ -54,25 +51,21 @@ test passes or fails it will give you a pretty good idea what is happening. Writ
 step in making sure your tests are valuable. If someone changes some other part of the code and your test starts failing,
 they should be able to ascertain right away what is failing (and hopefully why).
 
-We also have added in the "chai" library which is a set of what is called "expectations". This helps define in as
-plain as english as possible what we expected to happen when we ran our test.
+We also have added in the [Chai](http://chaijs.com/) library which is a set of what is called "expectations". This helps define in as
+plain English as possible what we expected to happen when we ran our test.
 
-So our test is way too easy-going. All it requires is that true is true. So let's have it set it's expectations
+So our test is way too easy-going. All it requires is that `true` is `true`. So let's have it set it's expectations
 a little higher and have it expect that the product title should be "Hank". So we change the expect line to read.
 
 ```js
-
-expect(product.title).to.equal("Hank")`;
+expect(product.title).to.equal("Hank");
 ```
 
-The nice thing about reading this is that is that you can read the line outloud and it would make sense to someone
-who didn't know anything about your implementation. Of course, if we run this test now, we won't get a failure
-(what we currently want) we would get an error (what we don't want). And that's because for starter we don't have a product.
+The nice thing about reading this is that is that you can read the line out loud and it would make sense to someone who didn't know anything about your implementation. Of course, if we run this test now, we won't get a failure (what we currently want) we would get an error (what we don't want). And that's because we don't have a product.
 
 So let's create a product. But do we do that? Well we will use something called a "Fixture".
 
-Reaction Commerce has sets of prebuilt fixtures for common testing tasks so that we don't repeat a lot of boilerplate code
-building up common types. So firstly we need to import the fixtures.
+Reaction Commerce has sets of prebuilt fixtures for common testing tasks so that we don't repeat a lot of boilerplate code building up common types. So firstly we need to import the fixtures.
 
 ```js
 import Fixtures from "/server/imports/fixtures";
@@ -85,12 +78,10 @@ our fixtures, so we add on a line right after all the imports.
 Fixtures();
 ```
 
-Now we have our fixtures available to us. So we can create a product in our test. Let's add those lines so it looks like
-this:
+Now we have our fixtures available to us. So we can create a product in our test. Let's add those lines so it looks like this:
 
 ```js
 import { expect } from "meteor/practicalmeteor:chai";
-
 
 describe.only("Product-To-Hank", function () {
     describe("Calling product-to-hank", function () {
@@ -114,7 +105,6 @@ That new function should just look like:
 ```js
 import { check } from "meteor/check";
 
-
 export function setProductToHank(productId) {
   check(productId, String);
 }
@@ -125,15 +115,13 @@ And that's all for now.
 Notice how we put `describe.only` in our first block? That means we want to only run *this* test when
 we run the suite. So now you should be able run `reaction test` and see our tests fail.
 
-It should tell you what it expected and what it actually got. For this test it would have
-expected "Hank" and got some random Product title instead (the Product fixture add a random product title).
+It should tell you what it expected and what it actually got. For this test it would have expected "Hank" and got some random Product title instead (the Product fixture add a random product title).
 
 >Part of writing good tests is being able to see the success in good failures.
 
 Now our test fails. So let's finish our method so that it satisfies our criteria.
 
 ```js
-
 import { check } from "meteor/check";
 import { Products } from "/lib/collections";
 
@@ -181,9 +169,7 @@ export function setProductToHank(productId) {
 }
 ```
 
-So what we did there was just check if we could pull the Product from the db and if we
-can't, throw an error. So now we will write a second test that verifies we get that
-error when we the product does not exist.
+So what we did there was just check if we could pull the Product from the db and if we can't, throw an error. So now we will write a second test that verifies we get that error when we the product does not exist.
 
 ```js
 import { expect } from "meteor/practicalmeteor:chai";
@@ -207,14 +193,11 @@ describe.only("Product-To-Hank", function () {
  });
 ```
 
-Here we pass the function to the `expect` function and tell it to expect the function to throw
-a particular type of error. In this case a Meteor error that contains the string
-"Product does not exist".
+Here we pass the function to the `expect` function and tell it to expect the function to throw a particular type of error. In this case a Meteor error that contains the string _"Product does not exist"_.
 
 Now we should have two passing tests.
 
-Next we want to make sure that this functionality is only available to users who have the "createProduct" permission.
-Now this check is only valid in the context of a logged in user (as opposed to being called from server code). So we are going to create a wrapper as a `Meteor.method` and do the check there. This will involve a little more magic.
+Next we want to make sure that this functionality is only available to users who have the "createProduct" permission. Now this check is only valid in the context of a logged in user (as opposed to being called from server code). So we are going to create a wrapper as a `Meteor.method` and do the check there. This will involve a little more magic.
 
 First let's add our `Meteor.method` wrapper in our file.
 
@@ -253,28 +236,23 @@ Meteor.methods({
 (Note that we have to do the `check` twice because `audit-argument-checks` will complain if we don't do a check
 in a Meteor method, but we also want to check the argument when the function is called directly.)
 
-So now we need to write a test that checks that the function throws an error when we are not a user with the correct permissions.
-So for that we are going to use the [`sinon`](http://sinonjs.org/docs/) library. This library provides what are called "stubs" and "spies".
+So now we need to write a test that checks that the function throws an error when we are not a user with the correct permissions. So for that we are going to use the [`sinon`](http://sinonjs.org/docs/) library. This library provides what are called "stubs" and "spies".
 
-It is beyond the scope of this document to describe these in general but you should see how we use them to test Reaction code
-with this example.
+It is beyond the scope of this document to describe these in general but you should see how we use them to test Reaction code with this example.
 
-For this test we are going to create a "stub", that is, we will substitute our own function for a function that's going
-to get called during the test. That stub will look like this:
+For this test we are going to create a "stub", that is, we will substitute our own function for a function that's going to get called during the test. That stub will look like this:
 
 ```js
 const roleStub = sinon.stub(Roles, "userIsInRole", () => false);
 ```
 
-What this code does is replace the code `Roles.userIsInRole` with our own function that always returns false. So our new test
-will look like this:
+What this code does is replace the code `Roles.userIsInRole` with our own function that always returns false. So our new test will look like this:
 
  ```js
 import { expect } from "meteor/practicalmeteor:chai";
 import { sinon } from "meteor/practicalmeteor:sinon";
 import { Products } from "/lib/collections";
 import { setProductToHank } from "./products";
-
 
 describe.only("Product-To-Hank", function () {
     describe("Calling product-to-hank", function () {
@@ -299,8 +277,7 @@ describe.only("Product-To-Hank", function () {
  });
 ```
 
-So as we have mentioned, the first line "stubs" our the role check to always return false. Then we execute the method
-(it doesn't matter what product ID we use since it shouldn't get that far) and we expect it to throw an
+So as we have mentioned, the first line "stubs" our the role check to always return false. Then we execute the method (it doesn't matter what product ID we use since it shouldn't get that far) and we expect it to throw an
 access denied error. Since we have stubbed out the role check, after we are done with our test we need to
 `restore` the method back to it's original state so that other code executes as normal.
 
