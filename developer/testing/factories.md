@@ -6,13 +6,13 @@ Whenever you want to use one of the Factories you need to import them like this:
 
 ```js
 import Fixtures from "/server/imports/fixtures";
-````
+```
 
 And then at the top of your test file, ready them by executing:
 
-````js
+```js
 Fixtures();
-````
+```
 
 There are also the following functions/builders that can be imported directly.
 
