@@ -230,7 +230,7 @@ npm run create-report
 This compiles the report into your `$HOME` directory as `allure-report`.
 
 ```sh
-cd && allure report open
+npm run open-report
 ```
 
 The report will then be open in a browser window.
