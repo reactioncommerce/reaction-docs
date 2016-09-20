@@ -175,15 +175,6 @@ smoke_test: true
 
 By default all but `smoke_test` will be set to `false` (off). Setting to `true` will enable that suite of tests.
 
-**_Configure BrowserStack:_**
-
-Add your BrowserStack credentials in `~/.bash_profile`.
-
-```sh
-export BROWSERSTACK_USERNAME="your_username"
-export BROWSERSTACK_ACCESS_KEY="your_api_key"
-```
-
 ### Run
 
 **_Start Reaction Application_**
@@ -198,6 +189,21 @@ Running tests locally:
 
 ```sh
 npm run test-local
+```
+
+#### BrowserStack
+
+![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
+
+We use [BrowserStack](https://www.browserstack.com) for automated acceptance testing.
+
+**_Configure BrowserStack:_**
+
+Add your BrowserStack credentials in `~/.bash_profile`.
+
+```sh
+export BROWSERSTACK_USERNAME="your_username"
+export BROWSERSTACK_ACCESS_KEY="your_api_key"
 ```
 
 Running tests on BrowserStack:
