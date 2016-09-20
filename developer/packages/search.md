@@ -80,5 +80,4 @@ Clicking a tag will filter the results, returning results that both 1) meet the 
 
 ![Search](http://new.tinygrab.com/219da34c650d895cda3e11a013403370cedb854b3f.png)
 
-
 The UI purposely mimics our existing product-grid templates. CSS class names are identical to those in our product-grid, however all styling is applied completely separate from the traditional product-grid, using the LESS inside of `/imports/plugins/included/default-theme/client/styles/search/results.less`, which is wrapped in an encompassing `.search-modal` wrapper. Changing any styling on the traditional product-grid should not affect the search grid, and vice versa.
