@@ -1,12 +1,11 @@
 # Testing
 
-## Unit Tests
+## Integration Tests
 
-Unit testing is implemented using [Mocha](mochajs) and [`meteor --test`](https://guide.meteor.com/testing.html).
+Integration testing is implemented using [Mocha](https://mochajs.org/#installation) and [`meteor --test`](https://guide.meteor.com/testing.html).
 
-Tests can be written and ran at both the application level, and for individual packages.
 
-Shortcut for running the unit test suite:
+Shortcut for running the test suite:
 
 ```sh
 reaction test
@@ -15,8 +14,10 @@ reaction test
 Tests can be run from the command line:
 
 ```sh
-SERVER_TEST_REPORTER="dot" meteor test --full-app --driver-package dispatch:mocha
+SERVER_TEST_REPORTER="dot" meteor test --full-app --once --driver-package dispatch:mocha
 ```
+
+For more detailed explanation see the tutorial for writing tests for Reaction
 
 ## Acceptance Tests
 
@@ -141,5 +142,5 @@ This should be renamed if you are running tests against a qa/staging environment
 **screenshotPath** is for capturing screenshots upon a failure and which directory to put those images in. By default this feature is disabled. To enable, uncomment the following line and replace with a path of your choosing:
 
 ```js
-screenshotPath: "./tests/acceptance-tests/errorShots/",
+screenshotPath: "./tests/acceptance-tests/errorShots/"
 ```
