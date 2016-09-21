@@ -383,8 +383,17 @@
         "label": "Select",
         "docPath": "developer/components/select.md"
     }, {
+        "label": "Tags",
+        "docPath": "developer/components/tags.md"
+    }, {
+        "label": "Textfield",
+        "docPath": "developer/components/textfield.md"
+    }, {
         "label": "Tooltip",
         "docPath": "developer/components/tooltip.md"
+    }, {
+        "label": "Translation",
+        "docPath": "developer/components/translation.md"
     }, {
         "label": "Upload",
         "docPath": "developer/components/upload.md"
