@@ -78,6 +78,6 @@ Search is performed in a keyword and filter manner: users will use the tradition
 
 Clicking a tag will filter the results, returning results that both 1) meet the initial keyword and 2) have the associated tag attached. The more tags clicked, the more filters applied, and (most likely) the fewer the results shown.
 
-![Search](http://new.tinygrab.com/219da34c650d895cda3e11a013403370cedb854b3f.png)
+![Search](/assets/developer-search-ui.png)
 
 The UI purposely mimics our existing product-grid templates. CSS class names are identical to those in our product-grid, however all styling is applied completely separate from the traditional product-grid, using the LESS inside of `/imports/plugins/included/default-theme/client/styles/search/results.less`, which is wrapped in an encompassing `.search-modal` wrapper. Changing any styling on the traditional product-grid should not affect the search grid, and vice versa.
