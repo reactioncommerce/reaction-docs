@@ -111,6 +111,12 @@
         "docPath": "developer/configuration.md"
     }, {
         "class": "guide-sub-nav-item",
+        "alias": "email-api",
+        "label": "Email",
+        "repo": "reaction-docs",
+        "docPath": "developer/email.md"
+    }, {
+        "class": "guide-sub-nav-item",
         "alias": "styleguide",
         "label": "Style Guide",
         "repo": "reaction-docs",
