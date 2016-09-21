@@ -356,14 +356,29 @@
         "repo": "reaction-docs",
         "docPath": "developer/components/README.md"
     }, {
+        "label": "Alerts",
+        "docPath": "developer/components/alerts.md"
+    }, {
         "label": "Button",
         "docPath": "developer/components/button.md"
     }, {
         "label": "Cards",
         "docPath": "developer/components/cards.md"
     }, {
+        "label": "Checkbox",
+        "docPath": "developer/components/checkbox.md"
+    }, {
+        "label": "Divider",
+        "docPath": "developer/components/divider.md"
+    }, {
         "label": "Icon",
         "docPath": "developer/components/icon.md"
+    }, {
+        "label": "Media",
+        "docPath": "developer/components/media.md"
+    }, {
+        "label": "Metadata",
+        "docPath": "developer/components/metadata.md"
     }, {
         "label": "Select",
         "docPath": "developer/components/select.md"
