@@ -70,7 +70,6 @@ In general we use hyphens (-) and camelCase for folder names, and camelCase alon
 **Good**
 
 - Folder names for packages must contain only lowercased alpha numeric characteras and may be hypneated if joining more then one word
-
 - Folder names all normal directries must start with a lowercased letter and may camel cased if joining more then one word
 
 ```
