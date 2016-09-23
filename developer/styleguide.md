@@ -60,3 +60,64 @@ Pull request branches are evaluated using [BitHound](https://www.bithound.io/git
 In many cases, documentation updates can be required as well.
 
 Pull requests are submitted to a peer code review process before acceptance.
+
+### File Naming Conventions
+
+In general we use hyphens (-) and camelCase for folder names, and camelCase alone for file names. Underscores are not to be used for file or folder names unless expressly required.
+
+#### Folder Names
+
+**Good**
+
+- Folder names for packages must contain only lowercased alpha numeric characteras and may be hypneated if joining more then one word
+
+- Folder names all normal directries must start with a lowercased letter and may camel cased if joining more then one word
+
+```
+// Packages in /imports/plugins/core
+ui-grid/
+example-paymentmethod/
+social/
+taxes-avalara/
+
+// All other folder names eveywhere
+addressBook/
+
+```
+
+**Bad**
+
+- Package name should contain hyphens to make it easier to read.
+- Underscores are not to be used unless expressly required.
+
+```
+reactionpackagename/
+address_book/
+```
+
+#### File Names
+
+**Good**
+
+- File names must start with a lowercased letter and may be cammelcased if joining more then one word.
+- File names may contain multiple (.) characters as needed
+```
+settingsContainer.js
+publishContainer.js
+addressBook.js
+bootstrap.rtl.js
+index.js
+
+// This is an exception as it's part of Meteor's naming convention
+addressBook.app-test.js
+```
+
+**Bad**
+
+- Hyphens and underscores are not to be used unless expressly requred; such is the case with Meteor for `*.app-test.js` files.
+
+```
+settings_container.js
+publish-container.js
+address_book.js
+```
