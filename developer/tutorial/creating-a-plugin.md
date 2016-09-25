@@ -521,7 +521,7 @@ In eCommerce it's very important to ensure that your checkout flow is as simple 
 
 Removing fields from a Schema is relatively straight-ahead in that we just need to replace an entire Schema with a copy of that schema with the unnecsssary fields removed and specifying a replace parameter.
 
-For example if you wanted to remove the `note` field from the `Account` schema you would create a `lib` directory (because schemas are used on both client and serve) in the beesknees package and create a file called `schemas.js`. In that you would make a copy of the Account schema, remove the `note` field and then add this line
+For example if you wanted to remove the `note` field from the `Account` schema you would create a `lib` directory (because schemas are used on both client and server) in the beesknees package and create a file called `schemas.js`. In that you would make a copy of the Account schema, remove the `note` field and then add this line
 
 ```js
 import { Accounts } from "lib/collections";
