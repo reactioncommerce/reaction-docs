@@ -524,9 +524,9 @@ Removing fields from a Schema is relatively straight-ahead in that we just need 
 For example if you wanted to remove the `note` field from the `Account` schema you would create a `lib` directory (because schemas are used on both client and serve) in the beesknees package and create a file called `schemas.js`. In that you would make a copy of the Account schema, remove the `note` field and then add this line
 
 ```js
-import { Accounts } from "lib/collections";
-import { Accounts as AccountsSchema } from "lib/collections/schemas";
+import { Accounts } from "/lib/collections";
+import { Accounts as AccountsSchema } from "/lib/collections/schemas";
 Accounts.attachSchema(AccountsSchema, {replace: true});
 ```
 
-Because our package is loaded last (because we imported it last), even though there is already an Accounts schema, our definition will override the built-in one and both forms and database inserts will use our custom one. In order for this schema to be loaded however, you will need to add imports in the `main.js` files for both `client` and `server`.
+Because our package is loaded last (because we imported it last), even though there is already an Accounts schema, our definition will override the built-in one and both forms and database inserts will use our custom one. In order for this schema to be loaded however, you will need to add imports in the `index.js` files for both your plugin's `client` and `server`.
