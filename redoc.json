@@ -45,6 +45,12 @@
         "docPath": "admin/dashboard.md"
     }, {
         "class": "guide-sub-nav-item",
+        "alias": "email",
+        "label": "Email",
+        "repo": "reaction-docs",
+        "docPath": "admin/email.md"
+    }, {
+        "class": "guide-sub-nav-item",
         "alias": "tags",
         "label": "Navigation Tags",
         "repo": "reaction-docs",
@@ -103,6 +109,12 @@
         "label": "Configuration",
         "repo": "reaction-docs",
         "docPath": "developer/configuration.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "email-api",
+        "label": "Email",
+        "repo": "reaction-docs",
+        "docPath": "developer/email.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "styleguide",
