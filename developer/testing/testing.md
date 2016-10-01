@@ -62,16 +62,16 @@ java -jar selenium-server-standalone-3.0.0-beta2.jar
 **Debian**
 
 ```sh
-$ sudo apt-add-repository ppa:yandex-qatools/allure-framework
-$ sudo apt-get update
-$ sudo apt-get install allure-commandline
+sudo apt-add-repository ppa:yandex-qatools/allure-framework
+sudo apt-get update
+sudo apt-get install allure-commandline
 ```
 
 **macOS**
 
 ```sh
-$ brew tap qatools/formulas
-$ brew install allure-commandline
+brew tap qatools/formulas
+brew install allure-commandline
 ```
 
 ### Configuration
