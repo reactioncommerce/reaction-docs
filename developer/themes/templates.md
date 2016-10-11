@@ -11,7 +11,7 @@ Reaction includes the [meteor-template-extension](https://github.com/aldeed/mete
 To extend and customize the html for any reaction/meteor template, add a template extension map to `client/templates.js`
 
 ```js
-# extending core with template extensions
+// extending core with template extensions
 Template.my_custom_template.replaces("core_template_name");
 ```
 
