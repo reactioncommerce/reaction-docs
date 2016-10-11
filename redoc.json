@@ -114,7 +114,7 @@
         "alias": "email-api",
         "label": "Email",
         "repo": "reaction-docs",
-        "docPath": "developer/email.md"
+        "docPath": "developer/core/email.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "styleguide",
