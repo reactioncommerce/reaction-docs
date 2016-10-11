@@ -1,6 +1,6 @@
 # SEO and Metadata
 
-Basic meta tag data is inserted by the `ReactionRouter.DocHead.init` method which uses [kadira:dochead](https://github.com/kadirahq/meteor-dochead) package to manipulate `document.head`.
+Basic meta tag data is inserted by the `Router.DocHead.init` method which uses [kadira:dochead](https://github.com/kadirahq/meteor-dochead) package to manipulate `document.head`.
 
 Add additional meta objects using `DocHead`, which is added by the Reaction Router.
 
