@@ -114,7 +114,7 @@
         "alias": "email-api",
         "label": "Email",
         "repo": "reaction-docs",
-        "docPath": "developer/email.md"
+        "docPath": "developer/core/email.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "styleguide",
@@ -422,37 +422,37 @@
         "repo": "reaction-docs",
         "docPath": "developer/architecture/layout.md"
     }, {
-        "class": "guide-sub-sub-nav-item",
+        "class": "guide-sub-nav-item",
         "alias": "including",
         "label": "Priority",
         "repo": "reaction-docs",
         "docPath": "developer/packages/including.md"
     }, {
-        "class": "guide-sub-sub-nav-item",
+        "class": "guide-sub-nav-item",
         "alias": "payment-packages-authnet",
         "label": "Payments - Authorize.net",
         "repo": "reaction-docs",
         "docPath": "developer/packages/payments/authnet.md"
     }, {
-        "class": "guide-sub-sub-nav-item",
+        "class": "guide-sub-nav-item",
         "alias": "payment-packages-braintree",
         "label": "Payments - Braintree",
         "repo": "reaction-docs",
         "docPath": "developer/packages/payments/braintree.md"
     }, {
-        "class": "guide-sub-sub-nav-item",
+        "class": "guide-sub-nav-item",
         "alias": "payment-packages-paypal",
         "label": "Payments - PayPal",
         "repo": "reaction-docs",
         "docPath": "developer/packages/payments/paypal.md"
     }, {
-        "class": "guide-sub-sub-nav-item",
+        "class": "guide-sub-nav-item",
         "alias": "payment-packages-stripe",
         "label": "Payments - Stripe",
         "repo": "reaction-docs",
         "docPath": "developer/packages/payments/stripe.md"
     }, {
-        "class": "guide-sub-sub-nav-item",
+        "class": "guide-sub-nav-item",
         "alias": "packages-search",
         "label": "Search",
         "repo": "reaction-docs",
