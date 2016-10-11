@@ -1,53 +1,45 @@
 # Frequently Asked Questions
 
-## Is Reaction production ready?
+## Is Reaction live and ready for production? Can I start selling now?
 
-We're currently in our Beta release. Our [Features page](https://reactioncommerce.com/features) outlines what we have in store for our Beta and future releases. Production readiness will depend on your individual use case and requirements.
+It depends! We do have a few shops in production, but your individual requirements may vary. We're currently in our Beta release, so we're still rolling out features with each new release. For more info, check out our [Features page](https://reactioncommerce.com/features) roadmap, or our [project board](https://waffle.io/reactioncommerce/reaction).
 
-## What's your roadmap for Reaction?
+## How do I sign up for an account, login to my dashboard, and set up my domain?
 
-Our [Features page](https://reactioncommerce.com/features) outlines our roadmap and plans for Reaction. And here's our [project board](https://waffle.io/reactioncommerce/reaction).
+Currently, Reaction is only available locally via GitHub. In early 2017, we'll be launching the Beta release of our hosted platform, which will allow anyone to set up shop via our intuitive dashboard. Our custom hosting solution, which runs on Docker, will support domains, SSL, and more. Our vision is to allow anyone to customize, extend, and deploy his or her Reaction shop directly from on our platform.
 
-## Do you offer hosted shops?
+## I already have a hosting solution. Can I host a Reaction shop anywhere I want?
 
-Yes, we will offer hosted shops with the Beta release of our Platform as a Service (PaaS) in early 2016. Our Paas will give anyone the ability to launch Reaction shops. This will be an Early Access Beta Release of our PaaS solution for launching clusters of Docker-ized Reaction shops on a custom solution that we're developing that supports custom SSL certificates and domain names. Our vision is that you'll be able to customize and extend, and then deploy your Reaction shops directly and conveniently on our platform.
-
-## Is it possible for me to host a Reaction shop anywhere I want?
-
-Yes. You can host a Reaction shop on any host/virtual machine container that supports Meteor/Node.js and MongoDB. Our code is fully open source on GitHub at [github.com/reactioncommerce/reaction](https://github.com/reactioncommerce/reaction).
+Yep! You can host a Reaction shop on any host or virtual machine container that supports Node.js, Meteor, and MongoDB. Our code is fully open source and available via [GitHub](https://github.com/reactioncommerce/reaction).
 
 ## Do you support multiple languages?
 
-Yes. We have [internationalization support](/developer/architecture/i18n.md) for numerous languages, and we support currency conversion and localized currency formats.
+We do! We have [internationalization support](/developer/architecture/i18n.md) for dozens of languages, including right-to-left formats! We also support currency conversion and localized currency formats.
 
-## What is the pricing/licensing model?
+## What's your pricing model?
 
-Reaction is currently free, and there will always be a free, open source version available. Eventually, we will offer premium plans with tiered pricing structures on the reactioncommerce.com platform. Our code is licensed under the GPL v3 license. The Terms & Conditions for shops hosted on our reactioncommerce.com platform can be found at [https://reactioncommerce.com/legal](https://reactioncommerce.com/legal).
+Reaction is free. Our code, which is licensed under the GPL v3 license, will always be free and available to the open source community. In early 2017, we'll be launching our hosted platform, which will come at a tiered premium price. If you'd like to learn more, check out our hosted service's [Terms & Conditions](https://reactioncommerce.com/legal/terms).
 
 ## Is MongoDB/NoSQL best suited for ecommerce?
 
-We think so! We believe that the common SQL schema for legacy ecommerce platforms isn't just unnecessary; it's overkill. By rethinking the way the database is architected, there are numerous benefits of Mongo/NoSQL -- from speed to simplified code.
+We think so! We believe that the common SQL schema for legacy ecommerce platforms isn't just unnecessary— it's overkill! There are numerous benefits to Mongo/NoSQL, from speed to simplified code to the customizable schema.
 
-We enforce all of the typical joins, cascades, schemas, validation, etc., with functionality that we have included (collections, schemas, hooks, helpers). But instead of trying to join a bunch of stuff together, we simply have an object that is a product. There are huge advantages to this approach, such as speed + easy code + the schema can be easily modified to accommodate any data requirements. This is unlike legacy platforms and their use of the entity - attribute - value lookup that is so complex and slow. In fact, legacy platforms have tried to architect their way around these very real limitations of SQL that NoSQL easily handles (using EAV). By using NoSQL, we remove the very complex layer of looking up and joining attributes, and also the complexity of adding new field/values. (You just do it to the main object, and that's going to persist throughout the life of the object.)  We also don't have to deal with the continuous translation of database structure to a code object.
+Legacy platforms use the entity-attribute-value lookup that is so complex and slow, and they also try to architect their way around their SQL limitations. By using NoSQL, we remove the very complex layer of looking up and joining attributes, and also the complexity of adding new field/values. We also don't have to deal with the continuous translation of database structure to a code object.
 
-In reality, in our use, the DB is just the persistent storage of the JavaScript objects. For example, a product is a collection of variants (objects) like blue, green, etc., and are each their own object contained within a "product" object.
-
-In localization (l10n), this can also mean different pricing, taxes, etc., for different regions, so pricing is at the variant level not at the product level.  This is even true with just one language when you have "Blue XXL" being more expensive than "Green XL."
+The DB acts as the persistent storage of JavaScript objects. For example, a t-shirt product might be a collection of variants, like blue, green, or red, and are each their own object contained within an object. This also applies to different pricing and taxes for different regions, so pricing is at the variant level, not at the product level. This is even true with just one language when you have "Blue XXL" being more expensive than "Green XL."
 
 ## Have you tested Reaction on large shops with thousands of products?
 
-We've done general performance testing and will be doing thorough testing as part of our Beta release.
+We're always testing! During our Alpha release, we performed extensive tests, deploying shops at scale, and reviewing several database scaling options. We've done performance testing that mimics high-volume shops, and as a part of our Beta release, we will continue to test, test, test.
 
-We're building everything to be "ephemeral" in nature, so "cloud" scaling is the idea from the get-go. We believe scaling won't be the same set of issues as with legacy platforms where you have to jump through a ton of hoops to get rid of the dependancies on the server (file system, sessions, etc.).
+Because we provide cloud scaling, your site should scale without any issues, whether you're hosting on Docker or other Virtual Machine containers. The database can be a bottleneck, but with sharding and lots of other solutions, we think that it's an easy problem to resolve. In fact, that's why we created Launchdock, a side project for server-side/Docker launching, which you may learn more about [here](https://github.com/reactioncommerce/launchdock).  
 
-Regardless, if it's Docker or other Virtual Machine (VM) containers, the idea is that the storefront itself should scale without issues. The bottleneck does become the database, but with sharding and lots of other solutions, we think that it's an easier problem to solve. We created Launch Dock as our project for the server-side/Docker launching. During our Alpha release, we did extensive tests deploying shops at scale and reviewing and testing different database scaling options.
+## Reaction is an open source project. How can I get involved?
 
-## Reaction is an open source project, how can I get involved?
+We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
 
-You can find step-by-step instructions for becoming a contributor here: [//blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/).
+## Reaction runs on JavaScript. Does this have a negative impact on SEO?
 
-## Reaction is reliant on JavaScript to run. Does that negatively impact on SEO?
+Nope! [Google indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
-[Google now indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
-
-Additionally, Reaction uses the Meteor spiderable package, which uses PhantomJS to render the static page version for search engines. You can read more about the Meteor spiderable package [here](https://www.meteorpedia.com/read/spiderable/) and [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package). We currently have this disabled by default, as we are still heavily in development, but if a site needed spiderable, all that you need to do to enable is 'meteor add spiderable'.
+Additionally, Reaction uses the Meteor spiderable package, which renders a search engine-friendly static page version of your shop using PhantomJS. You can read more about it [here](https://www.meteorpedia.com/read/spiderable/) and [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package).

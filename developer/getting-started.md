@@ -1,8 +1,6 @@
 # Getting Started with Reaction
 
-Reaction is developed with the Meteor framework. Reaction also liberally uses NPM packages, and tooling.
-
-Before getting started, here's some resources worth reviewing:
+Reaction is powered by the Meteor framework and uses npm packages, as well as tooling. For more info, check out the following handy-dandy resource guides:
 
 - [Meteor Guide](http://guide.meteor.com/)
 - [Meteor Docs](http://docs.meteor.com/#/basic/)
@@ -12,15 +10,13 @@ Before getting started, here's some resources worth reviewing:
 
 ## Customization Guide
 
-If you are creating a custom store with Reaction you probably want to start with the
-[customization guide](/developer/tutorial/customization.md) which walks you through many of the common customizations that
-you may require and how to create your own custom package to store them.
+Looking to customize your store? Check out our [customization guide](/developer/tutorial/customization.md) for a walkthrough, as well as examples on how to create your own custom packages.
 
 ## Local Plugins
 
-A number of plugin modules are imported in the `reaction` local `/imports/plugins` folder. In this documentation, these local packages are commonly referred to as "Core" packages or as local plugin modules.
+A number of plugin modules are imported in the `reaction` local `/imports/plugins` folder. We will refer to these local packages as "Core" packages, or as local plugin modules.
 
-Some of the Reaction plugin modules that are included.
+Below are some of the Reaction plugin modules that are included:
 
 - reaction-accounts
 - reaction-analytics
@@ -38,24 +34,24 @@ Some of the Reaction plugin modules that are included.
 
 ### Packages
 
-We recommend importing local plugins or [**npm**](https://www.npmjs.com/) packages as the preferred way of extending Reaction functionality. 
+The preferred method of extending Reaction functionality is to import local plugins or [**npm**](https://www.npmjs.com/) packages.
 
-[Atmosphere](https://atmospherejs.com/) is the legacy Meteor package registry, and Reaction can install Meteor packages from Atmosphere.
+Reaction is also able to install Meteor packages from [Atmosphere](https://atmospherejs.com/), Meteor's legacy package registry.
 
-You can create or [use community packages](https://guide.meteor.com/atmosphere-vs-npm.html) to add customized functionality to Reaction.
+To further customize your experience, you can create or use community packages from npm and Atmosphere. For more info, [click here](https://guide.meteor.com/atmosphere-vs-npm.html).
 
 ## Roadmap
 
-For a high level review our roadmap, take a look at our features page [Reaction Vision](https://reactioncommerce.com/features)
+View our features roadmap by visiting our [Features page](https://reactioncommerce.com/features).
 
-For grouping of development channels by feature see [GitHub project milestones](https://github.com/reactioncommerce/reaction/milestones)
+You may review our progress per project by visiting our [Milestones](https://github.com/reactioncommerce/reaction/milestones) page on Github.
 
-Perhaps the best overall view, is our [Waffle board](https://waffle.io/reactioncommerce/reaction). This project board includes additional project progress for Reaction Commerce beyond just the Core.
+For a fully comprehensive view of our progress, be sure to check out our [Waffle board](https://waffle.io/reactioncommerce/reaction).
 
 ## Issues
 
-For development tasks/issues please use the [Reaction project issues of GItHub](https://github.com/reactioncommerce/reaction/issues?state=open). We're keeping this as the central issue tracking for all [reactioncommerce:*](https://github.com/reactioncommerce/) packages.
+To assign tasks or issues, please visit our project's [Issues](https://github.com/reactioncommerce/reaction/issues?state=open) page, where we track issues for all [reactioncommerce:*](https://github.com/reactioncommerce/) packages.
 
 ### Other Resources
 
-[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Got a question, comment, or suggestion? Check out our [![Gitter chat room](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge).

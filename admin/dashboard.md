@@ -1,41 +1,45 @@
 # Dashboard
 
-The Dashboard is your commerce shop's central mainframe. It's where you manage your orders, add or remove products, install apps, and change your account settings. It's where the magic happens, more or less.
+The Dashboard is your online store's central mainframe. It's where you manage your orders, add or remove products, install apps, and change your account settings. It's where the magic happens, more or less.
 
-To access your Dashboard, simply click on the blue Reaction logo icon, located on the very top right of the page. You can also click on your username, and select the Dashboard link from the dropdown menu.
+To access your Dashboard, simply click on the blue Reaction logo icon, located on the very top right of the page.
 
-![](/assets/admin-dashboard-navigation.png "Reaction Commerce Dashboard")
+![](/assets/admin-dashboard-first-visit-2.png "Reaction Commerce Dashboard")
 
-Once you're in, you'll find a selection of nifty Dashboard features:
+Once you're in, you'll find a selection of nifty Dashboard features. To make configurations, simply click on the arrow icon, which will take you to a new page, or the cogwheel icon, which will pull up right sidebar options.
 
-![](/assets/admin-dashboard.png "Reaction Commerce Dashboard")
+![](/assets/admin-dashboard-first-visit.png "Reaction Commerce Dashboard")
 
 ## Core
 
-View and modify your global shop settings by clicking the cogwheel icon on the right. Once you're in, you'll find the following options:
+- Settings - Configure your shop's name, address, payment methods, and other settings.
+- Orders - Review and process orders. For more info, visit the [Orders](https://reactioncommerce.com/docs/master/orders) section.
+- Shipping - Set up and manage your shipping and handling rates.
+- Accounts - Add, edit, and remove permissions for each of your shop members.
+- Email - Manage your mail setup and view email logs.
+- Search - Configure your store's search settings.
+- Catalog - Enable or disable your product catalog view.
+- Taxes - Enable custom taxes, Avalara, and TaxCloud.
 
-- General: Here is where you edit your general info (name, email, site description), as well as upload new shop logos.
-- Address: Change your shipping, billing, and company address.
-- Mail: Set up and configure email.
-- Localization: Set the default timezone, currency, location, and measurement units.
-- Options: Enable or disable guest checkout.
+## Utilities
 
-## Orders
+- Routing - Coming soon.
+- i18n - Configure language, timezone, and currency.
+- Connect - Coming soon.
+- Inventory - Coming soon.
 
-Review, manage, and process orders. For more info, visit the [Orders](https://reactioncommerce.com/docs/master/orders) section.
+![](/assets/admin-dashboard-page-4.png "Reaction Commerce Dashboard")
 
-## Accounts
+## Appearance
 
-Here is where you manage admin roles across your account.
+- Layout - Coming soon.
+- Themes - Customize the look and feel of your dashboard.
 
-## Inventory
+## Payment Providers
 
-Pretty self-explanatory, but this is where you manage product inventory. Learn more about [Inventory](https://reactioncommerce.com/docs/master/inventory).
+Manage your checkout's payment providers. To enable a payment provider, click on the plus icon on the right-hand side of the card. To configure your provider settings, simply click on the cogwheel icon.
 
-## Basic Shipping
+## Connect
 
-Add, edit, and remove flat-rate shipping rules for your shop. For more info on shipping rules, read about [Basic Shipping](https://reactioncommerce.com/docs/master/shipping).
-
-## Other Apps
-
-Configure and integrate 3rd-party apps, such as Google Analytics, social platforms, and PayPal. To install an app, click the green plus icon. To uninstall an app, click the checkmark icon. Once enabled, click the cogwheel icon to view your settings.
+- Social - Link your shop up to Facebook, Twitter, Pinterest, or Google+.
+- Analytics - Coming soon.
