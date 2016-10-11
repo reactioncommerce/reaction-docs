@@ -2,7 +2,7 @@
 
 We've partnered up with Avalara and TaxCloud, two of the top tax management services, to bring custom tax and sales tax calculations to all shop owners.
 
-To enable custom taxes, or to link to your Avalara or TaxCloud account, simply click on the cogwheel icon on the "Taxes" card and toggle each feature on or off.   
+To enable custom taxes, or to link to your Avalara or TaxCloud account, simply click on the cogwheel icon on the "Taxes" card and toggle each feature on or off.
 
 ## Custom Rates
 
@@ -10,13 +10,13 @@ Reaction gives you the ability to assign different tax rates to different region
 
 ![](/assets/admin-dashboard-taxes.png "Custom Tax Rate Configuration")
 
-You may customize your rates by region via the following:  
+You may customize your rates by region via the following:
 
 - Country
 - State / Region
 - Zip code
 
-Enter your rate as a percentage into the "Rate" field. Then, click "Save Changes," and your new custom rate should show up at the top. You may use the search box to filter your results.  
+Enter your rate as a percentage into the "Rate" field. Then, click "Save Changes," and your new custom rate should show up at the top. You may use the search box to filter your results.
 
 Please note that if you delete a custom rate from the dashboard, shopping carts that already have the tax included will still have it.
 

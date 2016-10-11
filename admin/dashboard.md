@@ -24,7 +24,7 @@ Once you're in, you'll find a selection of nifty Dashboard features. To make con
 ## Utilities
 
 - Routing - Coming soon.
-- i18n - Configure language, timezone, and currency.  
+- i18n - Configure language, timezone, and currency.
 - Connect - Coming soon.
 - Inventory - Coming soon.
 
@@ -33,13 +33,13 @@ Once you're in, you'll find a selection of nifty Dashboard features. To make con
 ## Appearance
 
 - Layout - Coming soon.
-- Themes - Customize the look and feel of your dashboard.   
+- Themes - Customize the look and feel of your dashboard.
 
-##Payment Providers
+## Payment Providers
 
 Manage your checkout's payment providers. To enable a payment provider, click on the plus icon on the right-hand side of the card. To configure your provider settings, simply click on the cogwheel icon.
 
-##Connect
+## Connect
 
 - Social - Link your shop up to Facebook, Twitter, Pinterest, or Google+.
-- Analytics - Coming soon.  
+- Analytics - Coming soon.
