@@ -4,14 +4,14 @@ Tags are used on Products, and are cross referenced to provide navigation data s
 
 ## Tag Methods
 
-### tags/updateHeaderTags
+### shop/updateHeaderTags
 
-The `tags/updateHeaderTags` method inserts or updates navigation tags taking into account hierarchy.
+The `shop/updateHeaderTags` method inserts or updates navigation tags taking into account hierarchy.
 
 Usage:
 
 ```js
-Meteor.call("tags/updateHeaderTags", tagName, tagId, currentTagId);
+Meteor.call("shop/updateHeaderTags", tagName, tagId, currentTagId);
 ```
 
-If given only `tagName`, `tags/updateHeaderTags` will insert a new top level tag. If given `tagName` and `tagId`, `tags/updateHeaderTags` will update an existing tag. Adding `currentTagId` will give parental hierarchy.
+If given only `tagName`, `shop/updateHeaderTags` will insert a new top level tag. If given `tagName` and `tagId`, `shop/updateHeaderTags` will update an existing tag. Adding `currentTagId` will give parental hierarchy.

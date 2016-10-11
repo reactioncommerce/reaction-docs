@@ -12,20 +12,20 @@ The icon components give you a simple way to use the available icon sets in Reac
 
 ###### Basic Usage
 
-```js
-import { icon } from "meteor/reactioncommerce:reaction-ui";
+```
+import { Icon } from "/imports/plugins/core/ui/client/components";
 
 Template.myTemplate.helpers({
-  iconComponent() {
-    return icon;
+  IconComponent() {
+    return Icon;
   }
-})
+});
 ```
 
 ```handlebars
 <template name="myTemplate">
   <div class="iconContainer">
-    {{> React component=iconComponent icon="clock"}}
+    {{> React component=IconComponent icon="clock"}}
   </div>
 </template>
 ```
@@ -46,17 +46,18 @@ The above is equivalent to the following:
 <icon icon="fa fa-clock" />
 ```
 
-###### React Component
+###### In React Component
 
-```jsx
-import { icon } from "meteor/reactioncommerce:reaction-ui"
+```
+import React, { Component } from "react";
+import { Icon } from "/imports/plugins/core/ui/client/components";
 
-class MyComponent extends React.Component {
+class MyComponent extends Component {
   render() {
     return (
       <div>
         {"Things in my component"}
-        <icon icon="clock" />
+        <Icon icon="clock" />
       <div>
     );
   }
