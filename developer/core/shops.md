@@ -54,7 +54,7 @@ On submit OpenExchangeRatesForm handler, updates Package registry.
  * that's why we update autoform type to "method-update"
  * @param {Object} modifier - the modifier object generated from the form values
  * @param {String} _id - the _id of the document being updated
- * @fires ReactionCore.Collections.Packages#update
+ * @fires Reaction.Collections.Packages#update
  * @todo This method fires Packages collection, so maybe someday it could be
  * @returns {undefined}
  * moved to another file

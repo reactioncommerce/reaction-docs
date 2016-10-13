@@ -121,24 +121,24 @@ Reaction.registerPackage({
 
 To the `registry` key we are going to add a `layout` entry that looks like this:
 
-```html
-    layout: [{
-      layout: "coreLayoutBeesknees",
-      workflow: "coreProductWorkflow",
-      collection: "Products",
-      theme: "default",
-      enabled: true,
-      structure: {
-        template: "products",
-        layoutHeader: "layoutHeader",
-        layoutFooter: "layoutFooter",
-        notFound: "productNotFound",
-        dashboardHeader: "",
-        dashboardControls: "dashboardControls",
-        dashboardHeaderControls: "",
-        adminControlsFooter: "adminControlsFooter"
-      }
-    }]
+```js
+layout: [{
+  layout: "coreLayoutBeesknees",
+  workflow: "coreProductWorkflow",
+  collection: "Products",
+  theme: "default",
+  enabled: true,
+  structure: {
+    template: "products",
+    layoutHeader: "layoutHeader",
+    layoutFooter: "layoutFooter",
+    notFound: "productNotFound",
+    dashboardHeader: "",
+    dashboardControls: "dashboardControls",
+    dashboardHeaderControls: "",
+    adminControlsFooter: "adminControlsFooter"
+  }
+}]
 ```
 
 You can see we specified several things there. The most important thing was the "layout" record, which refers to the new layout template we will create in the next chapter. We also specify which templates do we want for the header and footer (we are just keeping the default for now), and what's the main template that we render and that's `products`. We also
@@ -262,16 +262,14 @@ The sample data files are located at `private/data` in the repo. To use them you
 Startup hook are already built into the project to load these four files on startup. But what if you wanted to load additional files (Discounts or Taxes for example)? You can hook into the Reaction Commerce start-up process by using the `Hooks` object in the API. We don't have any additional data to load right now but let's create a `load.js` file in our `server` directory and add this code. You can see that we just add a callback to be executed after the "onCoreInit" event is fired. This can be pretty much any arbitrary code you want.
 
 ```js
-import { Packages, Shops, Products, Tags } from "/lib/collections";
 import { Hooks, Reaction, Logger } from "/server/api";
 
 /**
  * Hook to setup core additional imports during Reaction init (shops process first)
  */
 Hooks.Events.add("onCoreInit", () => {
-Logger.info("======> Initialize using Bees Knees Data");
-    // Reaction.Import.fixture().process(Assets.getText("private/data/Discounts.json"), ["name"], Reaction.Import.shop);
-Reaction.Import.flush();
+  Logger.info("======> Initialize using Bees Knees Data");
+  Reaction.Import.flush();
 });
 ```
 
@@ -524,9 +522,9 @@ Removing fields from a Schema is relatively straight-ahead in that we just need 
 For example if you wanted to remove the `note` field from the `Account` schema you would create a `lib` directory (because schemas are used on both client and serve) in the beesknees package and create a file called `schemas.js`. In that you would make a copy of the Account schema, remove the `note` field and then add this line
 
 ```js
-import { Accounts } from "lib/collections";
-import { Accounts as AccountsSchema } from "lib/collections/schemas";
+import { Accounts } from "/lib/collections";
+import { Accounts as AccountsSchema } from "/lib/collections/schemas";
 Accounts.attachSchema(AccountsSchema, {replace: true});
 ```
 
-Because our package is loaded last (because we imported it last), even though there is already an Accounts schema, our definition will override the built-in one and both forms and database inserts will use our custom one. In order for this schema to be loaded however, you will need to add imports in the `main.js` files for both `client` and `server`.
+Because our package is loaded last (because we imported it last), even though there is already an Accounts schema, our definition will override the built-in one and both forms and database inserts will use our custom one. In order for this schema to be loaded however, you will need to add imports in the `index.js` files for both your plugin's `client` and `server`.

@@ -17,12 +17,15 @@ The Upload component provides you an interface to uploading files into reaction 
 ```
 
 ```js
-const Media = ReactionCore.Collections.Media;
+import { Meteor } from "meteor/meteor";
+import { Template } from "meteor/templating";
+import { Reaction } from "/client/api";
+import { Media } from "/lib/collections";
 
 Template.myTemplate.helpers({
   handleFileUpload() {
     const userId = Meteor.userId();
-    const shopId = ReactionCore.getShopId();
+    const shopId = Reaction.getShopId();
 
     return (files) => {
       for (let file of files) {
