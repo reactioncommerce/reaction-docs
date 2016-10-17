@@ -31,7 +31,7 @@ export default MyReactComponent;
 
 ## Props
 
-### Card
+## Card
 
 No Props, used as a wrapper for `CardHeader`, `CardTitle`, and `CardBody`
 
@@ -57,7 +57,7 @@ title        | String | Title for card header
 
 No Props, use as wrapper for card content
 
-# Cards (Blaze)
+## Cards (Blaze)
 
 ```html
 {{#card}}
@@ -69,9 +69,9 @@ Property              | Type  | Description
 --------------------- | ----- | ------------------------------------------------------
 [controls](#controls) | Array | Array of button Props. [see button component](#button)
 
-## Examples
+### Examples
 
-### controls
+#### controls
 
 ```javascript
 Template.myTemplate.helpers({
