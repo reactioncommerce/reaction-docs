@@ -63,31 +63,31 @@ Pull requests are submitted to a peer code review process before acceptance.
 
 ### File Naming Conventions
 
-In general we use hyphens (-) and camelCase for folder names, and camelCase alone for file names. Underscores are not to be used for file or folder names unless expressly required.
+In general we use hyphens (-) and camelCase for folder names, and camelCase alone for file names. Underscores are not to be used for file or folder names unless expressly required.  Be aware that not all operating systems are case sensitive, so it's not ok to have two files named the same with differing case.
 
 #### Folder Names
 
 **Good**
 
-- Folder names for packages must contain only lowercased alpha numeric characteras and may be hypneated if joining more then one word
-- Folder names all normal directries must start with a lowercased letter and may camel cased if joining more then one word
+* Folder names for packages must contain only lowercased alpha numeric characters and may be hyphenated if joining more than one word
+* Folder names all normal directories must start with a lowercased letter and may camel cased if joining more than one word
 
 ```
-// Packages in /imports/plugins/core
+// Packages in /imports/plugins
 ui-grid/
 example-paymentmethod/
 social/
 taxes-avalara/
 
-// All other folder names eveywhere
+// All other folder names everywhere
 addressBook/
 
 ```
 
 **Bad**
 
-- Package name should contain hyphens to make it easier to read.
-- Underscores are not to be used unless expressly required.
+* Package name should contain hyphens to make it easier to read.
+* Underscores are not to be used unless expressly required.
 
 ```
 reactionpackagename/
@@ -98,8 +98,9 @@ address_book/
 
 **Good**
 
-- File names must start with a lowercased letter and may be cammelcased if joining more then one word.
-- File names may contain multiple (.) characters as needed
+* File names must start with a lowercased letter and may be camel cased if joining more than one word.
+* File names may contain multiple (.) characters as needed
+
 ```
 settingsContainer.js
 publishContainer.js
@@ -113,7 +114,7 @@ addressBook.app-test.js
 
 **Bad**
 
-- Hyphens and underscores are not to be used unless expressly requred; such is the case with Meteor for `*.app-test.js` files.
+* Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files.
 
 ```
 settings_container.js
