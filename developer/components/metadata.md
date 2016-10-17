@@ -8,7 +8,7 @@ Horizontal divider with the ability to display a text label.
 import { Metadata, Metafield } from "/imports/plugins/core/ui/client/components";
 ```
 
-## Usage Example
+### Usage Example
 
 ```javascript
 import React from "react";
@@ -32,7 +32,7 @@ const MyReactComponent = (props) => {
 export default MyReactComponent;
 ```
 
-## Props
+### Props
 
 Property     | Type          | Description
 ------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ onMetaChange | Function      | On metafield change via input. callback signature
 onMetaRemove | Function      | Metafield remove callback. callback signature `(event, metafield, index) => {}`
 onMetaSave   | Function      | Metafield save callback. callback signature `(event, metafield, index) => {}` index may be `undefined` if its is new.
 
-# Media
+## Media
 
 ```javascript
 import React from "react";
@@ -65,7 +65,7 @@ const MyReactComponent = () => {
 export default MyReactComponent;
 ```
 
-## Props
+### Props
 
 Property              | Type   | Description
 --------------------- | ------ | -----------

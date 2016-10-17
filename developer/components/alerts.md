@@ -1,14 +1,14 @@
 # Alerts
 
 ## Import
-```js
+
+```javascript
 import { Alerts, Alert } from "/imports/plugins/core/ui/client/components";
 ```
 
-
 ## Usage Example
 
-```js
+```javascript
 import React from "react";
 import { Alerts } from "/imports/plugins/core/ui/client/components";
 
@@ -31,7 +31,6 @@ const MyReactComponent = () => {
 export default MyReactComponent;
 ```
 
-
 | Property                     | Type     | Description                                                   |
 | ---------------------------- | -------- | ------------------------------------------------------------- |
 | [alerts](#propalerts)            | Array[Object]   | An Array of alert objects                                 |
@@ -52,7 +51,7 @@ const alertArray = [
 
 ### Example
 
-```js
+```javascript
 import { Alerts } from "/imports/plugins/core/ui/client/components";
 
 const alertArray = [

@@ -12,7 +12,7 @@ The icon components give you a simple way to use the available icon sets in Reac
 
 ###### Basic Usage
 
-```
+```javascript
 import { Icon } from "/imports/plugins/core/ui/client/components";
 
 Template.myTemplate.helpers({

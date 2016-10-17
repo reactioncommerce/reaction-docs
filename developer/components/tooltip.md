@@ -6,7 +6,7 @@
 import { Tooltip } from "/imports/plugins/core/ui/client/components";
 ```
 
-## Usage Example
+### Usage Example
 
 ```javascript
 import React, { Component } from "react";
@@ -50,7 +50,7 @@ class MyReactComponent extends Component {
 export default MyReactComponent;
 ```
 
-## Props
+### Props
 
 Property       | Type                   | Description
 -------------- | ---------------------- | --------------------------------
@@ -58,11 +58,11 @@ attachment     | String                 | Attachment to wrapped component,
 children       | Node (React Component) | Child to attach tooltip to
 tooltipContent | Node (React Component) | Content for tooltip
 
-# Tooltip (Blaze)
+## Tooltip (Blaze)
 
 Tooltips are provided by [tooltip](http://github.hubspot.com/tooltip/docs/welcome/). If you are using `reaction-ui` components then tooltips will be available to you on components such as [Button](#button).
 
-## Examples
+### Examples
 
 This example represents manual usage of the tooltip component.
 

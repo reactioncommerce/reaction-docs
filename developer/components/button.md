@@ -76,7 +76,7 @@ You can also use the standard way of attaching events to the button.
 {{> button label="My Label" className="js-button"}}
 ```
 
-```js
+```javascript
 Template.myTemplate.events({
   "click .js-button"(event, instance) {
     Alerts.alert("Button was clicked");

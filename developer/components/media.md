@@ -8,7 +8,7 @@ Horizontal divider with the ability to display a text label.
 import { MediaGallery, Media } from "/imports/plugins/core/ui/client/components";
 ```
 
-## Usage Example
+### Usage Example
 
 ```javascript
 import React from "react";
@@ -26,7 +26,7 @@ const MyReactComponent = (props) => {
 export default MyReactComponent;
 ```
 
-## Props
+### Props
 
 Property      | Type          | Description
 ------------- | ------------- | -----------------------------------------------------------------------------
@@ -36,7 +36,7 @@ onDrop        | Function      | Dropzone drop event. callback signature `(files)
 onMove        | Function      | React DnD drag move event. callback signature `(moveIndex, hoverIndex) => {}`
 onRemoveMedia | Function      | Remove media callback. callback signature `(media) => {}`
 
-# Media
+## Media
 
 ```javascript
 import React from "react";
@@ -54,7 +54,7 @@ const MyReactComponent = () => {
 export default MyReactComponent;
 ```
 
-## Props
+### Props
 
 Property          | Type          | Description
 ----------------- | ------------- | --------------------------------------------------------------------------------
