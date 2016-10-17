@@ -8,7 +8,7 @@ You may also access your orders via the "Orders" card, located under the Core se
 
 ![](/assets/admin-dashboard-first-visit.png "Reaction Commerce Dashboard")
 
-# Processing an Order
+## Processing an Order
 
 Here's what your your order page looks like when your shop receives an incoming order:
 ![](/assets/admin-orders-page.png "Reaction Commerce Orders")
