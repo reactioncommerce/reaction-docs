@@ -100,3 +100,6 @@ Account search will search by `Name`, `Phone`, and `Email`. Clicking on `Manage`
 
 ### Order Search
 Order search will search by `Order ID`, `Name`, and `Email`. Clicking on the order ID will close the search modal and redirect to the dashboards `Orders` panel for that particular order.
+
+#### Sortable Table
+The Account and Order search results both display in a sortable table, which is a React component wrapped around an npm module called `Taco Table`. We've tried to keep Taco Table as minimalistic as possible, however it is easily expandable. You can find docs in their [GitHub Repo](https://github.com/pbeshai/react-taco-table).
