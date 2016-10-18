@@ -81,6 +81,7 @@ Typing in the input field updates the search term by changing the `searchQuery` 
 Aside from the search icon in Reaction's default navigation bar, all of search is contained inside a full-screen modal window, which appears on-click of the referenced search icon.
 
 ### Product Search
+
 By default, product search will search `Title`, `Description`, `Details` and `Vendor`. These options can be changed in the `Search Settings` dashboard.
 
 Clicking on a tag adds that tags `_id` into an array, referred to in the code as `facets`. Clicking a second time removes the tag from the array.
@@ -96,10 +97,13 @@ Clicking a tag will filter the results, returning results that both 1) meet the 
 The product UI purposely mimics our existing product-grid templates. CSS class names are identical to those in our product-grid, however all styling is applied completely separate from the traditional product-grid, using the LESS inside of `/imports/plugins/included/default-theme/client/styles/search/results.less`, which is wrapped in an encompassing `.search-modal` wrapper. Changing any styling on the traditional product-grid should not affect the search grid, and vice versa.
 
 ### Account Search
+
 Account search will search by `Name`, `Phone`, and `Email`. Clicking on `Manage` will close the search modal and redirect to the dashboards `Account` settings for that particular user.
 
 ### Order Search
+
 Order search will search by `Order ID`, `Name`, and `Email`. Clicking on the order ID will close the search modal and redirect to the dashboards `Orders` panel for that particular order.
 
 #### Sortable Table
+
 The Account and Order search results both display in a sortable table, which is a React component wrapped around an npm module called `Taco Table`. We've tried to keep Taco Table as minimalistic as possible, however it is easily expandable. You can find docs in their [GitHub Repo](https://github.com/pbeshai/react-taco-table).
