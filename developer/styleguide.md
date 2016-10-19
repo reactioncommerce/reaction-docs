@@ -114,7 +114,7 @@ addressBook.app-test.js
 
 **Bad**
 
-* Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files.
+* Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files. Or for migration files to make the filename more readable.
 
 ```
 settings_container.js
