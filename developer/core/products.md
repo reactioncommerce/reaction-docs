@@ -86,7 +86,7 @@ Usage:
 ```js
 Meteor.call("products/removeProductTag", productId, tag._id, function (error) {
   if (error) {
-    Alerts.toast("Tag already exists, duplicate add failed.", "error");
+    Alerts.toast(i18next.t("productDetail.tagExists"), "error");
    }
  });
 ```
