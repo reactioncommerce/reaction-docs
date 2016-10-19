@@ -1,10 +1,10 @@
 # Hooks
 
-[ReactionCore method hooks](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/methods/hooks/hooks.js) allow you to interact with a ReactionCore method **before** and **after** the method is called. You can pass either a single method name and hook function or pass a dictionary of `Object.<string, hook>` like you were setting up original Meteor methods.
+[Reaction method hooks](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/methods/hooks/hooks.js) allow you to interact with a Reaction method **before** and **after** the method is called. You can pass either a single method name and hook function or pass a dictionary of `Object.<string, hook>` like you were setting up original Meteor methods.
 
-The method hooks utilized in ReactionCore are based on [Workpop/meteor-method-hooks](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
+The method hooks utilized in Reaction are based on [Workpop/meteor-method-hooks](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
 
-ReactionCore hooks are called in the following order:
+Reaction hooks are called in the following order:
 
 1) **Before** hooks `before` and `beforeMethods`
 
@@ -16,7 +16,7 @@ ReactionCore hooks are called in the following order:
 
 ## Components of the Reaction Hook
 
-There are four properties that are accessible within the ReactionCore method hooks options parameter:
+There are four properties that are accessible within the Reaction method hooks options parameter:
 
 1) `result` - the result of the method you called _note in before hooks, this will be undefined_
 
@@ -78,7 +78,7 @@ MethodHooks.after('orders/orderCompleted', function (options) {
 // hooksProcessed: 0
 
 // You can also pass a dictionary of Object.<String, Hook> like typical Meteor.methods.
-// The two functions available are `ReactionCore.MethodHooks.beforeMethods` and `ReactionCore.MethodHooks.afterMethods`.
+// The two functions available are `Reaction.MethodHooks.beforeMethods` and `Reaction.MethodHooks.afterMethods`.
 //
 // Original example method: "cart/addToCart": function (cartId, productId, variantData, quantity)
 //

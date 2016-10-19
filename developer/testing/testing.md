@@ -25,8 +25,7 @@ In acceptance testing, the idea is to simulate a users experience to validate fu
 
 ### Setup
 
-To get started with Acceptance Testing first you must install the latest [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-and download [Selenium Standalone Server](http://goo.gl/2lZ46z).
+To get started with Acceptance Testing first you must install the latest [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and download [Selenium Standalone Server](http://goo.gl/2lZ46z).
 
 Place Selenium Server in your home directory.
 
@@ -58,22 +57,126 @@ Run Selenium Server (**NOTE:** your selenium version might differ):
 java -jar selenium-server-standalone-3.0.0-beta2.jar
 ```
 
-### Run
+**Test Reporter:**
 
-In order to run some of the tests, it is required you create a guest user and have admin user credentials. These credentials are placed in:
+**Debian**
+
+```sh
+sudo apt-add-repository ppa:yandex-qatools/allure-framework
+sudo apt-get update
+sudo apt-get install allure-commandline
+```
+
+**macOS**
+
+```sh
+brew tap qatools/formulas
+brew install allure-commandline
+```
+
+### Configuration
+
+**_Test Settings:_**
+
+```sh
+tests/acceptance-tests/config/settings.yml
+```
+
+```yaml
+base_url: http://localhost:3000
+
+browser: chrome
+
+# browserstack additional capabilities
+browser_version: "52.0"
+os: Windows
+os_version: "10"
+resolution: "1920x1080"
+```
+
+`browser`: Which browser you would like to run the tests against.
+
+If you decide to use a third party test runner. Their browser capabilities can be placed here.
+
+**_Configure User Data:_**
 
 ```sh
 tests/acceptance-tests/config/user-data.yml
 ```
 
 ```yaml
-admin_email: your_admin@domain.com
+admin_email: testing@reactioncommerce.com
 admin_pw: password123
-guest_email: your_guest@domain.com
-guest_pw: guestpassword
+
+guest_pw: password123
+
+# shop address
+country: US
+name: Lewis Hamilton
+address1: 2110 Main Street.
+postal: 90405
+city: Santa Monica
+region: CA
+phone: 555-555-5555
+
+# payment info
+card_holder: Nico Roseberg
+visa: 4242424242424242
+paypal_visa: 4111111111111111
+stripe_visa: 4000000000000077
+exp_month: 1
+exp_year: 2020
+cvv: 123
 ```
 
-_The credentials put in this file are safe and cannot be accessed from the outside world. Just remember not to commit credentials when creating pull requests._
+For ease of use make sure the admin email and password match what you have in your `settings.json`, or in `~/.bash_profile`.
+
+If none are set..
+
+Open:
+
+```sh
+~/.bash_profile
+```
+
+Add the following lines.
+
+```sh
+export REACTION_USER="admin"
+export REACTION_AUTH="0r61DHmH"
+export REACTION_EMAIL="prwtfizd@localhost"
+```
+
+```sh
+source ~/.bash_profile
+```
+
+**_Configure Test Suite:_**
+
+```sh
+test/acceptance-tests/config/test-suite-config.yml
+```
+
+```yaml
+# Enable and disable different suites of tests
+
+# Payment Processor specific tests
+braintree: false
+stripe: false
+authnet: false
+paypal: false
+example: false
+
+# Admin functionality
+permissions: false
+
+# Regression suites
+smoke_test: true
+```
+
+By default all but `smoke_test` will be set to `false` (off). Setting to `true` will enable that suite of tests.
+
+### Run
 
 **_Start Reaction Application_**
 
@@ -83,64 +186,68 @@ reaction
 
 **Run tests:**
 
-```sh
-./node_modules/.bin/wdio wdio.conf.js
-```
-
-### Test Runner
-
-[WebdriverIO](http://webdriver.io/guide/testrunner/gettingstarted.html) provides our test runner.
-
-The Reaction WebdriverIO configuration file is already provided, so you can start your integration tests by calling:
+Running tests locally:
 
 ```sh
-wdio.conf.js
+npm run test-local
 ```
 
-#### Quick Walkthrough
+#### BrowserStack
 
-At the top of the file you will see a specs array.
+![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
-```js
-specs: []
-```
+We use [BrowserStack](https://www.browserstack.com) for automated acceptance testing.
 
-Herein lies the paths to all the test files:
+**_Configure BrowserStack:_**
 
-```js
-specs: [ "./tests/acceptance-tests/test/specs/logged-in-authorizenet-checkout.app-test.js" ]
-```
-
-This allows for adding tests you would like to run, or not run. Handy for debugging, when all you want to do is run one test. Or, you may want to run all the tests:
-
-```js
-specs: [ "./tests/acceptance-tests/test/specs/**/*.js" ]
-```
-
-**maxInstances** indicates how many instances of a browser you would like run at a single time. This is set at **1** by default.
-
-Now while having **maxInstances: 10** might sound like a good idea - hey all tests will run faster. Running 10 instances of Google Chrome on your laptop might not be ideal, unless a dedicated instance is used. Also, application load will need to be taken into consideration, especially if running a local instance of Reaction.
-
-**browserName** allows you to choose the browser of your choosing. The caveat - each browser type requires it's own driver install. With the current release of Selenium 3 we will only be supporting Google Chrome for the interim.
-
-Over time we will broaden our support to include: PhantomJS, IE/Edge, Firefox, Safari and Opera
-
-Add **base_url** to:
+Add your BrowserStack credentials in `~/.bash_profile`.
 
 ```sh
-tests/acceptance-tests/config/settings.yml
+export BROWSERSTACK_USERNAME="your_username"
+export BROWSERSTACK_ACCESS_KEY="your_api_key"
 ```
 
-```yaml
-base_url: http://localhost:3000
+Running tests on BrowserStack:
+
+```sh
+npm run test-browserstack
 ```
 
-By default this will be `http://localhost:3000`.
+### Reporter
 
-This should be renamed if you are running tests against a qa/staging environment.
+To enable Allure reporting results set `allure: true` in:
 
-**screenshotPath** is for capturing screenshots upon a failure and which directory to put those images in. By default this feature is disabled. To enable, uncomment the following line and replace with a path of your choosing:
+```sh
+test/acceptance-tests/config/test-suite-config.yml
+```
+
+```yml
+# Test reporter
+allure: true
+```
+
+After a test run has completed a `allure-results` directory is created.
+
+Viewing the results of your tests:
+
+```sh
+npm run create-report
+```
+
+This compiles the report into your `$HOME` directory as `allure-report`.
+
+```sh
+npm run open-report
+```
 
 ```js
 screenshotPath: "./tests/acceptance-tests/errorShots/"
+```
+
+The report will then be open in a browser window.
+
+To remove test report files run:
+
+```sh
+npm run del-report
 ```

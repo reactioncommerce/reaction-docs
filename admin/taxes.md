@@ -1,27 +1,35 @@
 # Taxes
 
-Reaction provides custom rate taxes, and sales tax lookups from tax plugins.
+We've partnered up with Avalara and TaxCloud, two of the top tax management services, to bring custom tax and sales tax calculations to all shop owners.
+
+To enable custom taxes, or to link to your Avalara or TaxCloud account, simply click on the cogwheel icon on the "Taxes" card and toggle each feature on or off.
 
 ## Custom Rates
 
+Reaction gives you the ability to assign different tax rates to different regions around the world. To get started, simply click on the round plus button:
+
 ![](/assets/admin-dashboard-taxes.png "Custom Tax Rate Configuration")
 
-Custom tax rates can be defined for region, postal, country.
+You may customize your rates by region via the following:
 
-Deleting a rate from the custom taxes will not remove the tax from carts where the tax rate has already been calculated.
+- Country
+- State / Region
+- Zip code
 
-If a tax service is enabled as well, and finds a matching rate it will supercede any matching custom rates.
+Enter your rate as a percentage into the "Rate" field. Then, click "Save Changes," and your new custom rate should show up at the top. You may use the search box to filter your results.
+
+Please note that if you delete a custom rate from the dashboard, shopping carts that already have the tax included will still have it.
+
+If you use Avalara or TaxCloud to find a matching rate, that rate will override any predefined custom rates.
 
 ## Avalara
 
 ![](/assets/admin-dashboard-taxes-avalara.png "Avalara Configuration")
 
-[Avalara](https://www.avalara.com/) provides real time rate calculations and automatic return filing.
-
-AvaTax provides Sales Tax, Value Added Tax (VAT) and Goods & Services Tax (GST) calculations for over 140 countries.
+[Avalara](https://www.avalara.com/) provides real-time rate calculations for sales tax, value-added tax (VAT), and goods & services tax (GST) across over 140 countries, as well as automatic tax return filing. If you have an Avalara account, you may link it to your shop by entering your login ID.
 
 ## TaxCloud
 
 ![](/assets/admin-dashboard-taxes-taxcloud.png "TaxCloud Configuration")
 
-[TaxCloud](https://taxcloud.net/) provides free sales tax calculations for every address in the United States. TaxCloud keeps track of sales tax and makes it easy to comply with sales tax laws.
+[TaxCloud](https://taxcloud.net/) tracks and provides free sales tax calculations for every address in the United States. If you have a TaxCloud account (which is free!), you may link it to your shop by entering your login ID.

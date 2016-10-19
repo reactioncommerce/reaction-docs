@@ -1,23 +1,25 @@
-# Basic Shipping
+# Shipping
 
-Basic shipping provides flat rate + handling fees for a user's cart.
-
-To create flat rate shipping rules, login to your dashboard and click the Shipping app card.
+To manage your shipping rates, click on the arrow icon of the "Shipping" card, located on the right-hand side of the card.
 
 ![](/assets/admin-dashboard.png "Reaction Commerce Dashboard")
 
-Click the cogwheel icon to edit your shipping rules. From the Shipping page, you can add or edit flat rate shipping rules for your shop. By default, Reaction has three basic flat rate shipping rules: free, standard, or priority.
+Your online store comes with three default shipping methods: free, standard, and priority. To edit any of these rates, click on the corresponding cogwheel icon. To delete a rate, click on the trash can icon.
 
-![](/assets/admin-basic-shipping.png "Reaction Commerce Basic Shipping")
+![](/assets/admin-basic-shipping.png "Reaction Commerce Shipping")
 
-To add a new provider, click the ""Add Provider" plus icon on right side of the screen.
+To add a new shipping method, click the plus icon, located on the top-right of the blue table header.
 
-![](/assets/admin-basic-shipping-add-provider.png "Reaction Commerce basic shipping")
+![](/assets/admin-basic-shipping-edit-provider.png "Reaction Commerce Shipping")
 
-To enable, edit, or disable an existing provider or rate, click the cogwheel icon for the feature you wish to edit.
+You'll be prompted to fill out the following:
 
-Click on the row or edit icon to configure rates:
+- Method Name: Edit the name of your method.
+- Cost: The cost, as a shop owner, to ship this item.
+- Public Label: How your rate name appears to your customers.
+- Handling: Any handling fees you might want to include.
+- Rate: The actual price you're charging your customer.
 
-![](/assets/admin-basic-shipping-edit-provider.png "Reaction Commerce basic shipping")
+To add your own custom flat rate, simply click on the cogwheel icon, located on the right-hand side of the nav table.
 
-To delete a rate, click the trash icon.
+![](/assets/admin-basic-shipping-add-provider.png "Reaction Commerce Shipping")
