@@ -28,12 +28,10 @@ compromise between more sophisticated engines like Elastic Search that require
 more maintenance and setup and trying to create a package that will meet the needs
 of most developers.
 
-The focus of this package is on Product search as we believe that's what most
-developers want the most, however both Account and Order search were also implemented
-here but there is currently no front-end implementation (although it should be
-coming shortly).
+This package tries to provide a comprehensive product search, while also providing a
+relatively simple search API for orders and accounts.
 
-To do so it leverages Mongo's own built-in [full-text search](https://docs.mongodb.com/manual/reference/operator/query/text/)
+For product search this package leverages Mongo's own built-in [full-text search](https://docs.mongodb.com/manual/reference/operator/query/text/)
 capabilities which provides more intelligent matching algorithms than just plain text searches and
 gives a "weight" based on the quality of the match. It also allows admins to customize
 which fields they include and what ranking they are given through the admin
@@ -53,6 +51,16 @@ in the background using Job Queues and hooks. In some cases changing the configu
 of the Product search may require rebuilding it, but this is also handled automatically
 in the background.
 
+The OrderSearch and AccountSearch collections are similar indexes of this data,
+however the search function is simpler. The Order search looks up orders by
+ID, email address, phone, or billing/shipping name. The Account search looks up accounts by
+phone, email, or first or last name.
+
+Account search is restricted to users who have the `reaction-accounts` permission. Order
+search is restricted to users to users with `order` permissions. Users who don't
+have these rights will not be able to search and will not see the options available in the
+search box.
+
 ### Transformations
 
 This is something that will be expanded on later, but this allows you to write
@@ -66,13 +74,19 @@ in the future.
 
 The `ui-search` package implements the client-side elements of search - a UI interface, and a subscription to the SearchResults publication created by the search-mongo package.
 
-To subscribe to the SearchResults publication, you must provide the collection you wish to search (currently only `products`, `accounts` & `orders` are coming soon), the search term (`searchQuery`), and optionally the `facets` you wish to filter by.
+To subscribe to the SearchResults publication, you must provide the collection you wish to search, the search term (`searchQuery`), and optionally the `facets` you wish to filter by.
 
-Typing in the input field updates the search term by changing the `searchQuery` variable. Updates are sent on every keypress. Clicking on a tag adds that tags `_id` into an array, referred to in the code as `facets`. Clicking a second time removes the tag from the array.
-
-`this.subscribe("SearchResults", "products", searchQuery, facets);`
+Typing in the input field updates the search term by changing the `searchQuery` variable. Updates are sent on every keypress.
 
 Aside from the search icon in Reaction's default navigation bar, all of search is contained inside a full-screen modal window, which appears on-click of the referenced search icon.
+
+### Product Search
+
+By default, product search will search `Title`, `Description`, `Details` and `Vendor`. These options can be changed in the `Search Settings` dashboard.
+
+Clicking on a tag adds that tags `_id` into an array, referred to in the code as `facets`. Clicking a second time removes the tag from the array.
+
+`this.subscribe("SearchResults", "products", searchQuery, facets);`
 
 Search is performed in a keyword and filter manner: users will use the traditional input field to search for a keyword, and once results are found, they will be displayed, with all tags associated with the returned products displayed directly below the input.
 
@@ -80,4 +94,16 @@ Clicking a tag will filter the results, returning results that both 1) meet the 
 
 ![Search](/assets/developer-search-ui.png)
 
-The UI purposely mimics our existing product-grid templates. CSS class names are identical to those in our product-grid, however all styling is applied completely separate from the traditional product-grid, using the LESS inside of `/imports/plugins/included/default-theme/client/styles/search/results.less`, which is wrapped in an encompassing `.search-modal` wrapper. Changing any styling on the traditional product-grid should not affect the search grid, and vice versa.
+The product UI purposely mimics our existing product-grid templates. CSS class names are identical to those in our product-grid, however all styling is applied completely separate from the traditional product-grid, using the LESS inside of `/imports/plugins/included/default-theme/client/styles/search/results.less`, which is wrapped in an encompassing `.search-modal` wrapper. Changing any styling on the traditional product-grid should not affect the search grid, and vice versa.
+
+### Account Search
+
+Account search will search by `Name`, `Phone`, and `Email`. Clicking on `Manage` will close the search modal and redirect to the dashboards `Account` settings for that particular user.
+
+### Order Search
+
+Order search will search by `Order ID`, `Name`, and `Email`. Clicking on the order ID will close the search modal and redirect to the dashboards `Orders` panel for that particular order.
+
+#### Sortable Table
+
+The Account and Order search results both display in a sortable table, which is a React component wrapped around an npm module called `Taco Table`. We've tried to keep Taco Table as minimalistic as possible, however it is easily expandable. You can find docs in their [GitHub Repo](https://github.com/pbeshai/react-taco-table).
