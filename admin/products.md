@@ -76,6 +76,10 @@ NOTE: When new products are added, they are given the top position by default.
 
 ## Removing Products
 
-To remove an entire product, login and click the "Delete" icon (![](/assets/guide-icon-delete.png "Reaction delete product")) in the grid view. If you're looking to remove single variants, check out the Product Variants section.
+To remove an entire product from your inventory, login to your product view and click on the pencil icon.
 
-![](/assets/guide-products-removeproduct.png "Reaction remove product")
+![](/assets/admin-product-view.png "Reaction remove product")
+
+From there, click on the red trash can icon to remove the entire product.
+
+![](/assets/admin-product-settings-remove.png "Reaction remove product")
