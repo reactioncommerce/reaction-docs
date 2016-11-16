@@ -61,4 +61,4 @@ Caused by a broken Node/NPM installation. Reinstall [Node.js](https://nodejs.org
 
 ### Windows OpenSSL errors prevent startup
 
-Install OpenSSL per: <https://github.com/meteor/meteor/blob/devel/packages/non-core/npm-node-aes-gcm/README.md>
+Install OpenSSL per: <https://github.com/meteor/meteor/tree/release-1.4.0.2/packages/non-core/npm-node-aes-gcm/README.md>
