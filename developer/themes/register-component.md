@@ -1,4 +1,4 @@
-# Customization of Email Templates
+# Register Components
 
 ## Register a new React Component
 
