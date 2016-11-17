@@ -249,6 +249,30 @@
         "docPath": "developer/architecture/jobcontrol.md"
     }, {
         "class": "guide-nav-item",
+        "alias": "appearance",
+        "label": "Appearance",
+        "repo": "reaction-docs",
+        "docPath": "developer/themes/themes.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "register-template",
+        "label": "Create Custom Templates",
+        "repo": "reaction-docs",
+        "docPath": "developer/themes/register-template.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "register-component",
+        "label": "Create Custom Components",
+        "repo": "reaction-docs",
+        "docPath": "developer/themes/register-component.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "register-email",
+        "label": "Customize Email Templates",
+        "repo": "reaction-docs",
+        "docPath": "developer/themes/register-email.md"
+    }, {
+        "class": "guide-sub-nav-item",
         "alias": "themes",
         "label": "Themes",
         "repo": "reaction-docs",
@@ -256,7 +280,7 @@
     }, {
         "class": "guide-sub-nav-item",
         "alias": "templates",
-        "label": "Templates",
+        "label": "Extend Blaze Templates",
         "repo": "reaction-docs",
         "docPath": "developer/themes/templates.md"
     }, {
