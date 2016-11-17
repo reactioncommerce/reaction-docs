@@ -3,7 +3,8 @@
 If you have been following along exactly with this tutorial you may have noticed what we have accomplished so far,
 we have broken the site. Why? Because the layout we specified cannot be found. So let's add it now.
 
-Create a directory under `client` called `templates` and then under that a directory called `layouts`. (_Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)_)
+Create a directory under `client` called `templates` and then under that a directory called `layouts`.
+(_Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)_)
 
 Now let's create a file called `core.html` and add our template tags like this:
 
@@ -96,4 +97,8 @@ When the site is rendered now, it should be rendering the home page with the `pr
 
 Next: [Fixtures](/developers/tutorial/plugin-fixtures-5)
 
+## Read More
 
+[Blaze Templates](http://blazejs.org/api/blaze.html)
+
+[Blaze Layout Manager](https://github.com/kadirahq/blaze-layout)

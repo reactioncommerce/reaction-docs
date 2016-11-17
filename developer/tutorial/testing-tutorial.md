@@ -1,6 +1,7 @@
 # Writing tests
 
 ## Types of tests
+
 Currently our test suite consists of two types of tests: **Integration** (what Meteor calls "full app")
 and **Acceptance** tests. Here are the major differences:
 
@@ -195,7 +196,8 @@ describe.only("Product-To-Hank", function () {
  });
 ```
 
-Here we pass the function to the `expect` function and tell it to expect the function to throw a particular type of error. In this case a Meteor error that contains the string _"Product does not exist"_.
+Here we pass the function to the `expect` function and tell it to expect the function to throw a particular type of error.
+In this case a Meteor error that contains the string _"Product does not exist"_.
 
 Now we should have two passing tests.
 

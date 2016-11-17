@@ -132,6 +132,6 @@ a custom template by changing the values for "layoutHeader" or "layoutFooter".
 
 Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4)
 
-### Read More
+## Read More
 
 [Layouts](/developer/architecture/layout) 

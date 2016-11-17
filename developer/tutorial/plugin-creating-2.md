@@ -42,7 +42,7 @@ It's important to understand that Registry entries are added upon first start, b
 exist, so to have registry changes take effect you must either `reaction reset -n` or remove that entry directly from
 the `Packages` collection.
 
-Next [Using Layouts](/developer/tutorial/plugin-layouts-3)
+Next: [Using Layouts](/developer/tutorial/plugin-layouts-3)
 
 ## Read More:
 

@@ -7,9 +7,9 @@
 The concepts in this tutorial are mostly Reaction-specific and don't get into some of the more difficult-to-grasp (but cool)
 elements of Meteor such as pub/sub or reactivity. But to understand what is happening you should probably have the following:
 
- * A basic understanding of Javascript
- * A basic understanding of HTML
- * Either some experience using a template engine like Handlebars, Django Templates or ERB or have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation.
+* A basic understanding of Javascript
+* A basic understanding of HTML
+* Either some experience using a template engine like Handlebars, Django Templates or ERB or have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation.
  
 ### What are some of the best tools when developing for Reaction?
 
@@ -42,9 +42,10 @@ While we have tried in every case to leverage Meteor/Javascript standards, Meteo
 functionality to an application, so we have created our own standard which is implemented through our command-line tool.
 
 This tool scans the plugin directories for files and checks for three things:
-  * a `client` directory
-  * a `server` directory
-  * a `register.js` at the root of the plugin.
+
+* a `client` directory
+* a `server` directory
+* a `register.js` at the root of the plugin.
   
 When it finds those elements it will dynamically add imports so that this code is loaded when the app is launched.
 If you add or remove plugins you need to stop and restart the app for it to rescan, it's not done with every rebuild to 
@@ -58,4 +59,4 @@ attempt is made to make functionality as modular as possible so that that things
 more than one plugin, possibly keeping things like CSS and the like in one plugin and other more backend functionality
 in another. Whatever makes the most sense to you.
 
-Next [Creating a plugin](/developer/tutorial/plugin-creating-2)
+Next: [Creating a plugin](/developer/tutorial/plugin-creating-2)
