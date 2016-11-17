@@ -68,7 +68,7 @@ do **not** change existing users, so you will need to clear your cache or use Pr
 It's common to want to write code to do something when a url visits a certain route for such things as site tracking/metric.
 You can do this with a Route "hook".
 
-We can do this using the `Hooks` API provided by Reaction. For any route you can add an arbitrary callback. (Note that 
+We can do this using the `Hooks` API provided by Reaction. For any route you can add an arbitrary callback. (Note that
 routing is done on the client-side, so it needs to be added there). So are going to add a new `init.js` file in our `client`
 directory and add the import to it in the `index.js`. Then we can add this code:
 
