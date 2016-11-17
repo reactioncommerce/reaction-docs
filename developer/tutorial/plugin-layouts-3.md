@@ -134,4 +134,4 @@ Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4
 
 ## Read More
 
-[Layouts](/developer/architecture/layout) 
+[Layouts](/developer/architecture/layout)

@@ -41,6 +41,7 @@ server folder. And in that folder let's create an `en.json` file and add this to
     }
 }]
 ```
+
 What we've done there is added our "beesknees" namespace (that's what `ns` stands for) and then put our keys in there, with
 a navbar key so that as we expand oru plugin we have room to grow.
 

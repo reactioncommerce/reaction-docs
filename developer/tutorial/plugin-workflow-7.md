@@ -144,7 +144,7 @@ something in our cart and checkout, we should see the change to the checkout flo
 
 Next: [Schemas](/developer/tutorial/plugin-schemas-8)
 
-### Read More
+## Read More
 
 [Workflow](/developer/architecture/workflow)
 
