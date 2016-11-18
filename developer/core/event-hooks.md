@@ -26,7 +26,6 @@ and a constant to be passed to every callback (e.g. for a user-related event, it
 
 An async version of the above method (only works on the server-side)
 
-
 ## Events currently defined in Reaction Commerce
 
 * onCoreInit - When initalization of Reaction starts
@@ -35,5 +34,4 @@ An async version of the above method (only works on the server-side)
 * afterCreateDefaultAdminUser - After default admin user is created (user is passed to all callbacks)
 * onJobServerStart - When the job server has started
 * onLogin - On user login. All Hooks must accept and return an options object
-* onImport{CollectionName} - Fired for each collection that gets imported. Gets passed the option to be imported and
-and expects that object to be returned, so imported objects can be modified by hooks.
+* onImport{CollectionName} - Fired for each collection that gets imported. Gets passed the option to be imported and expects that object to be returned, so imported objects can be modified by hooks.
