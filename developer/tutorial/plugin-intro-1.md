@@ -11,14 +11,6 @@ elements of Meteor such as pub/sub or reactivity. But to understand what is happ
 * A basic understanding of HTML
 * Either some experience using a template engine like Handlebars, Django Templates or ERB or have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation.
 
-### What are some of the best tools when developing for Reaction?
-
-Most of the Reaction teams uses [Atom](https://atom.io/) and we have a section in the [style guide](/developer/styleguide)
-on how to customize it for working with Reaction. Also [RoboMongo](https://robomongo.org/) is a great tool for looking at
-your local database. Using and understanding the Meteor commands like `meteor shell` are also very handy. There are also
-a couple of Chrome extensions that allow you to inspect MiniMongo and Blaze templates. A search for MiniMongo or Meteor
-should help you find them.
-
 ### Pros and Cons of creating a custom plugin
 
 When you start to work with Reaction Commerce (and with many other open-source eCommerce packages) you have two paths to go down. The first is to simple fork the package and make the changes you want. The advantages of this are:

@@ -18,8 +18,16 @@ Yes, plugins can do everything a theme can do.
 ### Where do I start?
 
 This depends on what you want to do. If you want to largely change the look and feel of the application and not the way
-it functions you will want to read the themeing tutorial. If you want to change functionality like add new routes
-you will want to read the plugin tutorial. If you want to do both, well then you need to read both.
+it functions you can read just the themeing tutorial but generally we would recommend that anybody doing development
+with Reaction should read the entire plugin tutorial since most development with Reaction will take place within plugins.
+
+### What are some of the best tools when developing for Reaction?
+
+Most of the Reaction teams uses [Atom](https://atom.io/) and we have a section in the [style guide](/developer/styleguide)
+on how to customize it for working with Reaction. Also [RoboMongo](https://robomongo.org/) is a great tool for looking at
+your local database. Using and understanding the Meteor commands like `meteor shell` are also very handy. There are also
+a couple of Chrome extensions that allow you to inspect MiniMongo and Blaze templates. A search for MiniMongo or Meteor
+should help you find them.
 
 ### How do I create a custom theme?
 
@@ -49,6 +57,7 @@ you will want to read the plugin tutorial. If you want to do both, well then you
 
 [Workflow](/developer/tutorial/plugin-workflow-7)
 
+Or, the plugin tutorial is intended to be read from beginning to end. You can start here
 
 [Plugin Tutorial](/developer/tutorial/creating-a-plugin.md)
 
