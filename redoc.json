@@ -141,10 +141,70 @@
         "docPath": "developer/tutorial/creating-a-theme.md"
     }, {
         "class": "guide-sub-nav-item",
-        "alias": "creating-a-plugin",
-        "label": "Creating a Plugin",
+        "alias": "plugin-intro-1",
+        "label": "Introduction",
         "repo": "reaction-docs",
-        "docPath": "developer/tutorial/creating-a-plugin.md"
+        "docPath": "developer/tutorial/plugin-intro-1.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-creating-2",
+        "label": "Creating your plugin",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-creating-2.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-layouts-3",
+        "label": "Layouts",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-layouts-3.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-customizing-templates-4",
+        "label": "Customizing Templates",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-customizing-templates-4.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-fixtures-5",
+        "label": "Fixtures",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-fixtures-5.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-routes-6",
+        "label": "Routes",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-routes-6.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-workflow-7",
+        "label": "Workflow",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-workflow-7.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-schemas-8",
+        "label": "Schemas",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-schemas-8.md"
+    },  {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-i18n-9",
+        "label": "i18n",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-i18n-9.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-complete-10",
+        "label": "Completing your plugin",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-complete-10.md"
+    }, {
+        "class": "guide-sub-nav-item",
+        "alias": "plugin-customizing-templates-4",
+        "label": "Customizing Templates",
+        "repo": "reaction-docs",
+        "docPath": "developer/tutorial/plugin-customizing-templates-4.md"
     }, {
         "class": "guide-sub-nav-item",
         "alias": "creating-a-payment-provider",
