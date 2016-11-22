@@ -31,15 +31,19 @@ An async version of the above method (only works on the server-side)
 Let's say we wanted to create our own event for "onCreateUser". We would call the `run` method when the event occurred.
 
 ```js
+import { Hooks } from "/server/api"
+
 Accounts.onCreateUser(function(options, user) {
   // add a hook to alter the user object or do something with its data
-  user = ReactionCore.Hooks.Events.run("onCreateUser", user, options);
+  user = Hooks.Events.run("onCreateUser", user, options);
 });
 ```
 
 Now you can pass any amount of functions into that hook from anywhere else in the app
 
 ```js
+import { Hooks } from "/server/api"
+
 // create a callback to run
 function logUserEmail(user) {
   console.log("User being created with email: " + user.emails[0].address);
@@ -49,7 +53,7 @@ function logUserEmail(user) {
 }
 
 // add your callback to the hooks array created above
-ReactionCore.Hooks.Events.add("onCreateUser", logUserEmail);
+Hooks.Events.add("onCreateUser", logUserEmail);
 ```
 
 ## Events currently defined in Reaction Commerce
