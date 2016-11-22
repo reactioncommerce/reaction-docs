@@ -1,12 +1,12 @@
 # Event Hooks
 
 Event hooks is a simple API that allows you to attach arbitrary callbacks to any particular event that you define. You simply
-decide what your events is and then add callbacks to it from anywhere in the code, and then run all callbacks when that event
+decide what your events are and then add callbacks to it from anywhere in the code, and then run all callbacks when that event
 is fired. The canonical example is `onCoreInit`/`afterCoreInit` event hooks that runs code either during Reaction's
 startup sequence, or after it has completed. (the on/after is just a naming convention, but we suggest that code extending
 this code utilize this same convention)
 
-The API has the folliwing methods
+The API has the following methods
 
 `Hooks.Event.add(name, callback)`
 
@@ -26,9 +26,35 @@ and a constant to be passed to every callback (e.g. for a user-related event, it
 
 An async version of the above method (only works on the server-side)
 
+## Example usage
+
+Let's say we wanted to create our own event for "onCreateUser". We would call the `run` method when the event occurred.
+
+```js
+Accounts.onCreateUser(function(options, user) {
+  // add a hook to alter the user object or do something with its data
+  user = ReactionCore.Hooks.Events.run("onCreateUser", user, options);
+});
+```
+
+Now you can pass any amount of functions into that hook from anywhere else in the app
+
+```js
+// create a callback to run
+function logUserEmail(user) {
+  console.log("User being created with email: " + user.emails[0].address);
+  // do whatever with the user doc and then return it 
+  // to the next callback
+  return user;
+}
+
+// add your callback to the hooks array created above
+ReactionCore.Hooks.Events.add("onCreateUser", logUserEmail);
+```
+
 ## Events currently defined in Reaction Commerce
 
-* onCoreInit - When initalization of Reaction starts
+* onCoreInit - When initialization of Reaction starts
 * afterCoreInit - When initialization of Reaction has completed
 * beforeCreateDefaultAdminUser - Before the default admin user is created (all callbacks must take and return an options object)
 * afterCreateDefaultAdminUser - After default admin user is created (user is passed to all callbacks)
