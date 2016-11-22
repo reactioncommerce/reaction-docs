@@ -47,7 +47,7 @@ import { Hooks } from "/server/api"
 // create a callback to run
 function logUserEmail(user) {
   console.log("User being created with email: " + user.emails[0].address);
-  // do whatever with the user doc and then return it 
+  // do whatever with the user doc and then return it
   // to the next callback
   return user;
 }
