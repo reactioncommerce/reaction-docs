@@ -143,7 +143,7 @@ As mentioned above, Bunyan is capable of sending your logs to a variety of servi
 
 By default, Reaction sends logs to the console, but we also support sending to [Loggly](https://www.loggly.com/) and [Slack](https://slack.com/).
 
-#### Loggly
+### Loggly
 
 Default level: `DEBUG`
 
