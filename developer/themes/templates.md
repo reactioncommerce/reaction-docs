@@ -2,7 +2,7 @@
 
 Reaction Templates are primarily Blaze Templates, but Meteor supports React and other templating libraries.
 
-To learn more about Meteor, Spacebars, and Blaze templates: [http://guide.meteor.com/blaze.html](http://guide.meteor.com/blaze.html)
+To learn more about Meteor, Spacebars, and Blaze templates: [http://blazejs.org/guide/introduction.html](http://blazejs.org/guide/introduction.html)
 
 ## Extending templates
 
