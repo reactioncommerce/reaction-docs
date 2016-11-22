@@ -561,18 +561,6 @@
     "docPath": "developer/deploying.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "deploying-on-launchdock",
-    "label": "Launchdock",
-    "repo": "reaction-docs",
-    "docPath": "developer/deploying/launchdock.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-with-mup",
-    "label": "Mup",
-    "repo": "reaction-docs",
-    "docPath": "developer/deploying/mup.md"
-  }, {
-    "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-on-galaxy",
     "label": "Galaxy",
     "repo": "reaction-docs",
