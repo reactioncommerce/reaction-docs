@@ -10,11 +10,13 @@ At the moment revision control is merely used to stage a single upcoming update.
 
 Make changes to the product as you would normally.
 
-In the following example, we update the title of the product from `Basic Reaction Product` to `Reaction Product`. Notice now that `Publish Changes` button is now lit up green. This indicates that there are changes to publish.
+In the following example, we update the title of the product from `Basic Reaction Product` to `Reaction Product`. Notice that the `Publish Changes` button is now enabled (bright green). This indicates that there are changes to publish.
+
+Clicking the `Publish Changes` button will make all the changes made to the product visible to customers.
 
 ![](/assets/admin-product-revision-publish.png "Publish Product Draft")
 
-Clicking the publish changes button will make all the changes made to the product visible to customers.
+A message will pop up in the lower left corner of your screen notifying you of the status of your published changes. If successful, your changes will then be visible to customers, if the product is publicly visible.
 
 ![](/assets/admin-product-revision-publish-success.png "Publish Product Success")
 
