@@ -27,7 +27,7 @@ plugins are just Meteor modules with some additional configuration.
 ## Getting Started
 
 Start off by copying the `example-paymentmthod` package into the
-`imports/plugins/custom` folder. You will need to add imports to the
+`imports/plugins/included` folder. You will need to add imports to the
 `main.js` file in both the `client` and `server` directories. If you
 wish you can remove imports for the Example Payment Method.
 
