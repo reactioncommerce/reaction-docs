@@ -153,7 +153,7 @@ The `products/createVariant` method initializes an empty variant template for a 
 Usage:
 
 ```js
-Meteor.call("updateMetaFields", productId;)
+Meteor.call("products/createVariant", productId;)
 ```
 
 ### products/cloneVariant
