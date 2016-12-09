@@ -5,30 +5,6 @@
         "label": "Reaction",
         "description": "Reaction Commerce Guide",
         "default": true
-    }, {
-        "org": "reactioncommerce",
-        "class": "guide-sub-nav-item",
-        "repo": "reaction-braintree",
-        "label": "Braintree",
-        "docPath": "README.md"
-    }, {
-        "class": "guide-sub-nav-item",
-        "org": "reactioncommerce",
-        "repo": "reaction-paypal",
-        "label": "Paypal",
-        "docPath": "README.md"
-    }, {
-        "class": "guide-sub-nav-item",
-        "org": "reactioncommerce",
-        "repo": "reaction-stripe",
-        "label": "Stripe",
-        "docPath": "README.md"
-    }, {
-        "class": "guide-sub-nav-item",
-        "org": "reactioncommerce",
-        "repo": "reaction-auth-net",
-        "label": "Auth.Net",
-        "docPath": "README.md"
     }],
     "tocData": [{
         "class": "guide-nav-item",
