@@ -10,6 +10,7 @@ To enable prerender for your app set the following environment variables
 PRERENDER_TOKEN: YOURTOKEN
 PRERENDER_HOST: example.com
 ```
+
 You can find your `PRERENDER_TOKEN` on your [prerender.io account page](https://prerender.io/account)
 
 Your `PRERENDER_HOST` should be the domain your app is using (e.g. `example.com` or `www.example.com`)
@@ -29,7 +30,7 @@ For the product grid, we set `window.prerenderReady = false` at the top of our o
 Template.products.onCreated(function () {
   // We're not ready to capture prerendered page until products have loaded
   window.prerenderReady = false;
-  
+
   this.autorun(() => {
     const productsSubscription = this.subscribe("Products", scrollLimit, queryParams);
 
