@@ -284,6 +284,12 @@
         "repo": "reaction-docs",
         "docPath": "developer/architecture/jobcontrol.md"
     }, {
+        "class": "guide-sub-nav-item",
+        "alias": "prerender",
+        "label": "Prerender",
+        "repo": "reaction-docs",
+        "docPath": "developer/architecture/prerender.md"
+    }, {
         "class": "guide-nav-item",
         "alias": "themes",
         "label": "Themes",
