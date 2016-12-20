@@ -17,11 +17,11 @@ Your `PRERENDER_HOST` should be the domain your app is using (e.g. `example.com`
 ## Customization
 
 ### Delaying capture of a page
-[By default](https://prerender.io/documentation/best-practices) prerender attempts to determine when a page is done loading by counting requests in flight. 
+
+[By default](https://prerender.io/documentation/best-practices) prerender attempts to determine when a page is done loading by counting requests in flight.
 > We try our very best to detect when a page is done loading by counting the number of requests in flight and saving the page when the number of requests in flight reaches zero (after a slight delay). You can tell us when your pages are ready so that we can be more accurate.
 
-If you need to set a page's readiness more specifically, you can use 
-`window.prerenderReady`. We've done this on the [product grid](https://github.com/reactioncommerce/reaction/blob/development/imports/plugins/included/product-variant/client/templates/products/products.js) already and you can use that as an example if you need to set readiness for other templates.
+If you need to set a page's readiness more specifically, you can use `window.prerenderReady`. We've done this on the [product grid](https://github.com/reactioncommerce/reaction/blob/development/imports/plugins/included/product-variant/client/templates/products/products.js) already and you can use that as an example if you need to set readiness for other templates.
 
 For the product grid, we set `window.prerenderReady = false` at the top of our onCreated function and then in our autorun block, we wait until the products subscription is ready to set `window.prerenderReady = true`
 
@@ -36,7 +36,7 @@ Template.products.onCreated(function () {
     // Once our products subscription is ready, we are ready to capture
     if (productsSubscription.ready()) {
       window.prerenderReady = true;
-    }    
+    }
   })
 });
 ```
@@ -44,13 +44,16 @@ Template.products.onCreated(function () {
 More details can be found in the [Prerender Best Practices Documentation](https://prerender.io/documentation/best-practices)
 
 ### Setting HTTP Status Codes
-Prerender has a special meta tag that must be used to send a response other than `200` to the crawler. 
+
+Prerender has a special meta tag that must be used to send a response other than `200` to the crawler.
 For example, the meta tag to return a `404` to the crawler should look like this.
+
 ```html
 <meta name="prerender-status-code" content="404">
 ```
 
 We use the following pattern to insert this meta tag into the `notFound` template
+
 ```js
 Template.notFound.onCreated(function () {
   document.getElementsByTagName("head")[0].insertAdjacentHTML("beforeend", "<meta name='prerender-status-code' content='404'>");
