@@ -12,15 +12,15 @@ Reaction is built with [Meteor](https://meteor.com) and requires [Node.js](https
 
 <https://nodejs.org>
 
+**Build Tools**
+
+Install [Xcode](https://developer.apple.com/xcode/downloads/), then run `xcode-select --install`
+
 **Meteor**
 
 ```sh
 curl https://install.meteor.com/ | sh
 ```
-
-**Build Tools**
-
-Install [Xcode](https://developer.apple.com/xcode/downloads/), then run `xcode-select --install`
 
 **Homebrew**
 
