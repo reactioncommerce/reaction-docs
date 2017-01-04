@@ -19,7 +19,6 @@ Reaction.registerTemplate({
 
 ## Get Template
 
-
 ```js
 import { getTemplateByName } from "/server/api/templates";
 
