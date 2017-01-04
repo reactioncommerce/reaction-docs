@@ -27,6 +27,7 @@ Windows installation has a few more requirements:
 - Win32 OpenSSL ([windows installer](https://slproweb.com/products/Win32OpenSSL.html)) (See [npm-node-aes-gcm/README.md](https://github.com/meteor/meteor/blob/devel/packages/non-core/npm-node-aes-gcm/README.md))
 - [Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)
 - Git + msysGit ([git-for-windows/git](https://github.com/git-for-windows/git/releases))
+- [Meteor](https://install.meteor.com/windows)
 - ImageMagick
 
 If you want to use shell scripts under Windows, create file named `meteor` inside `%localappdata%\.meteor` with following contents:
