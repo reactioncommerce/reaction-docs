@@ -1,9 +1,8 @@
 # Revision Control
 
-# How revision control works
+## How revision control works
 
 When changes are made to a product, a collection hook in `/imports/plugins/core/revisions/server/startup.js` is fired and diverts most changes bound for the `Products` collection to a document in the `Revisions` collection.
-
 
 ## Schema
 
@@ -16,7 +15,6 @@ documentId: Reference Document Id
 documentData: Reference Document Data
 diff: Object Diff
 ```
-
 
 ```
 {
