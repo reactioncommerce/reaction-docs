@@ -116,7 +116,9 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
     "name": "reaction-paypal",
     "enabled": true,
     "settings": {
-      "express_enabled": true,
+      "express": {
+        enabled: true
+      },
       "express_mode": false,
       "merchantId": "",
       "username": "",
