@@ -10,13 +10,16 @@ The Templates are then available to be customized inside your Dashboard.
 
 **Editable fields:**
 
-`Title`: A user friendly name so you know what email you are editing  
-`Subject`: The email subject line. Blaze variables are allowed, granted they are passed to the SSR function ([see Developer Docs](/developer/themes/register-email.md)).  
+`Title`: A user friendly name so you know what email you are editing
+
+`Subject`: The email subject line. Blaze variables are allowed, granted they are passed to the SSR function ([see Developer Docs](/developer/themes/register-email.md)).
+
 `HTML`: The main content of the email. Blaze variables are allowed, granted they are passed to the SSR function ([see Developer Docs](/developer/themes/register-email.md)).
 
 **Non-editable fields:**
 
-`Name`: Function name that is used to trigger an email sent  
+`Name`: Function name that is used to trigger an email sent
+
 `Language`: Language of the email. Currently, only the shop default is available.
 
 ![](/assets/admin-email-templates-editing.png "Edit Email Templates")
