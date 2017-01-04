@@ -20,7 +20,6 @@ A message will pop up in the lower left corner of your screen notifying you of t
 
 ![](/assets/admin-product-revision-publish-success.png "Publish Product Success")
 
-
 ## Enable / Disable Revision Control
 
 In the dashboard under `Catalog`, you may turn revision control `on`, or `off`.
