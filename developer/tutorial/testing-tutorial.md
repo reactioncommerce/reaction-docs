@@ -1,13 +1,14 @@
 # Writing tests
 
 ## Types of tests
+
 Currently our test suite consists of two types of tests: **Integration** (what Meteor calls "full app")
 and **Acceptance** tests. Here are the major differences:
 
-- **Integration** tests run server-side and test server-side functionality against the entire app running. All
+**Integration** tests run server-side and test server-side functionality against the entire app running. All
 parts of the app are loaded before the tests are run but the app is not available during testing.
 
-- **Acceptance** tests (also called "Black Box" tests) test RC functionality from the client-side and
+**Acceptance** tests (also called "Black Box" tests) test RC functionality from the client-side and
 attempt to test functionality "as a user". These require special tools to be able to remotely control
 a browser.
 
@@ -195,7 +196,8 @@ describe.only("Product-To-Hank", function () {
  });
 ```
 
-Here we pass the function to the `expect` function and tell it to expect the function to throw a particular type of error. In this case a Meteor error that contains the string _"Product does not exist"_.
+Here we pass the function to the `expect` function and tell it to expect the function to throw a particular type of error.
+In this case a Meteor error that contains the string _"Product does not exist"_.
 
 Now we should have two passing tests.
 

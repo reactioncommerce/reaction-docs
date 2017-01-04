@@ -39,7 +39,7 @@ heroku addons:create mongolab
 Now we'll need to add the buildpack that'll let Meteor play nice with Heroku
 
 ```sh
-heroku buildpacks:set https://github.com/AdmitHub/meteor-buildpack-horse.git
+heroku buildpacks:set https://github.com/swrdfish/meteor-buildpack-horse.git
 ```
 
 Finally
