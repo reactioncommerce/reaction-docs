@@ -440,8 +440,14 @@
         "label": "Metadata",
         "docPath": "developer/components/metadata.md"
     }, {
+        "label": "MultiSelect",
+        "docPath": "developer/components/multi-select.md"
+    }, {
         "label": "Select",
         "docPath": "developer/components/select.md"
+    }, {
+        "label": "Slider",
+        "docPath": "developer/components/slider.md"
     }, {
         "label": "Tags",
         "docPath": "developer/components/tags.md"
