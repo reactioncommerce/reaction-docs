@@ -152,6 +152,3 @@ From templates, you can create additional dynamic template `provides` using the 
     <i class="{{orElse icon 'fa fa-cog fa-2x fa-fw'}}"></i>
   </a>
 {{/each}}
-```
-
-You can also extend or replace any core template using [template extensions](https://github.com/aldeed/meteor-template-extension/).

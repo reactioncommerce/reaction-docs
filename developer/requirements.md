@@ -51,7 +51,7 @@ cd reaction
 
 When using a production build or a standalone [MongoDB](https://www.mongodb.org/) server, make sure you are using **version 3.2** or better.
 
-You can connect to the local Meteor / MongoDB instance on the `Meteor port + 1` (e.g. if Meteor port is 3000, MongoDB port is 3001). No credentials required for Mongo in development.
+You can connect to the local Meteor / MongoDB instance on the `Meteor port + 1` (e.g. if Meteor port is 3000, MongoDB port is 3001). No credentials required for Mongo in development. The default database for development is `meteor`.
 
 ## Troubleshooting
 
@@ -62,3 +62,14 @@ Caused by a broken Node/NPM installation. Reinstall [Node.js](https://nodejs.org
 ### Windows OpenSSL errors prevent startup
 
 Install OpenSSL per: <https://github.com/meteor/meteor/tree/release-1.4.0.2/packages/non-core/npm-node-aes-gcm/README.md>
+
+### Error: “EMFILE, too many open files”
+```sh
+echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
+echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -w kern.maxfiles=65536
+sudo sysctl -w kern.maxfilesperproc=65536
+ulimit -n 65536 65536
+```
+
+See: http://stackoverflow.com/a/27982223
