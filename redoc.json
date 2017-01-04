@@ -284,6 +284,12 @@
     "repo": "reaction-docs",
     "docPath": "developer/architecture/jobcontrol.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "prerender",
+    "label": "Prerender",
+    "repo": "reaction-docs",
+    "docPath": "developer/architecture/prerender.md"
+  }, {
     "class": "guide-nav-item",
     "alias": "themes",
     "label": "Themes",
@@ -559,6 +565,18 @@
     "label": "Deploying",
     "repo": "reaction-docs",
     "docPath": "developer/deploying.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "deploying-on-launchdock",
+    "label": "Launchdock",
+    "repo": "reaction-docs",
+    "docPath": "developer/deploying/launchdock.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "deploying-reaction-with-mup",
+    "label": "Mup",
+    "repo": "reaction-docs",
+    "docPath": "developer/deploying/mup.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-on-galaxy",
