@@ -27,7 +27,7 @@ Creating a `settings.json` will prevent the default `dev.settings.json` from bei
 
 Once you have edited the **_settings/settings.json_** you will need to run:
 ```sh
-reaction reset && rc 
+reaction reset && reaction 
 ```
 To reset the database.
 
