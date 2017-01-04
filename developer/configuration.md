@@ -26,11 +26,12 @@ For convenience, the initial Reaction administrator can be configured here.
 Creating a `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `reaction` command to start Reaction.
 
 Once you have edited the **_settings/settings.json_** you will need to run:
-```sh
-reaction reset && reaction 
-```
-To reset the database.
 
+```sh
+reaction reset && reaction
+```
+
+To reset the database.
 
 When the [`reaction-cli`](https://www.npmjs.com/package/reaction-cli) npm package is installed, `reaction` is the equivalent of `meteor --raw-logs --settings settings/<your-settings>.json`
 
