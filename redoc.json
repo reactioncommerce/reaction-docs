@@ -39,6 +39,12 @@
     "docPath": "admin/products.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "admin-revisions",
+    "label": "Revision Control",
+    "repo": "reaction-docs",
+    "docPath": "admin/revisions.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "orders",
     "label": "Order Processing",
     "repo": "reaction-docs",
@@ -439,6 +445,12 @@
     "label": "Module Import Cheatsheet",
     "repo": "reaction-docs",
     "docPath": "developer/module-cheatsheet.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "revision-api",
+    "label": "Revisions",
+    "repo": "reaction-docs",
+    "docPath": "developer/revisions.md"
   }, {
     "class": "guide-nav-item",
     "alias": "components",
