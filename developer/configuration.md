@@ -62,6 +62,14 @@ For convenience, the initial Reaction administrator can be configured here.
 
 Creating a `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `reaction` command to start Reaction.
 
+Once you have edited the **_settings/settings.json_** you will need to run:
+
+```sh
+reaction reset && reaction
+```
+
+To reset the database.
+
 **_settings/settings.json_**
 
 ```json
@@ -117,7 +125,7 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
     "enabled": true,
     "settings": {
       "express": {
-        enabled: true
+        "enabled": true
       },
       "express_mode": false,
       "merchantId": "",
