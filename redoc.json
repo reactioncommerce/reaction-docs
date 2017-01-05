@@ -39,6 +39,12 @@
     "docPath": "admin/products.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "admin-revisions",
+    "label": "Revision Control",
+    "repo": "reaction-docs",
+    "docPath": "admin/revisions.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "orders",
     "label": "Order Processing",
     "repo": "reaction-docs",
@@ -243,8 +249,8 @@
     "docPath": "developer/architecture/metadata.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "i18n",
-    "label": "i18n and RTL",
+    "alias": "internationalization",
+    "label": "Internationalization",
     "repo": "reaction-docs",
     "docPath": "developer/architecture/i18n.md"
   }, {
@@ -290,6 +296,30 @@
     "repo": "reaction-docs",
     "docPath": "developer/architecture/jobcontrol.md"
   }, {
+    "class": "guide-nav-item",
+    "alias": "appearance",
+    "label": "Appearance",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/themes.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "register-template",
+    "label": "Create Custom Templates",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/register-template.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "register-component",
+    "label": "Create Custom Components",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/register-component.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "register-email",
+    "label": "Customize Email Templates",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/register-email.md"
+  }, {
     "class": "guide-sub-nav-item",
     "alias": "prerender",
     "label": "Prerender",
@@ -304,7 +334,7 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "templates",
-    "label": "Templates",
+    "label": "Extend Blaze Templates",
     "repo": "reaction-docs",
     "docPath": "developer/themes/templates.md"
   }, {
@@ -337,6 +367,12 @@
     "label": "Analytics",
     "repo": "reaction-docs",
     "docPath": "developer/core/analytics.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "i18n",
+    "label": "i18n and RTL",
+    "repo": "reaction-docs",
+    "docPath": "developer/core/i18n.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "reaction-shops",
@@ -415,6 +451,12 @@
     "label": "Module Import Cheatsheet",
     "repo": "reaction-docs",
     "docPath": "developer/module-cheatsheet.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "revision-api",
+    "label": "Revisions",
+    "repo": "reaction-docs",
+    "docPath": "developer/revisions.md"
   }, {
     "class": "guide-nav-item",
     "alias": "components",

@@ -15,8 +15,10 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
   "name": "reaction-paypal",
   "enabled": true,
   "settings": {
-    "express_enabled": true,
-    "express_mode": false,
+    "express": {
+      enabled: true // public
+    },
+    "express_mode": false, //private
     "merchantId": "",
     "username": "",
     "password": "",

@@ -150,7 +150,7 @@ import moment from "moment-timezone";
 import { Meteor } from "meteor/meteor";
 import { ReactiveVar } from "meteor/reactive-var";
 import { Template } from "meteor/templating";
-import { check } from "meteor/check";
+import { Match, check } from "meteor/check";
 import { Tracker } from "meteor/tracker";
 
 // Make a valid attempt to avoid using session
