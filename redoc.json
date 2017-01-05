@@ -63,6 +63,12 @@
     "docPath": "admin/taxes.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "discounts",
+    "label": "Discounts",
+    "repo": "reaction-docs",
+    "docPath": "admin/discounts.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "faqs",
     "label": "FAQs",
     "repo": "reaction-docs",
