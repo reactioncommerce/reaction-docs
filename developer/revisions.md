@@ -2,7 +2,7 @@
 
 ## How revision control works
 
-When changes are made to a product, a collection hook in `/imports/plugins/core/revisions/server/startup.js` is fired and diverts most changes bound for the `Products` collection to a document in the `Revisions` collection.
+When changes are made to a product, a collection hook in `/imports/plugins/core/revisions/server/hooks.js` is fired and diverts most changes bound for the `Products` collection to a document in the `Revisions` collection.
 
 ## Schema
 
