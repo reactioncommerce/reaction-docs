@@ -37,7 +37,7 @@ apm install editorconfig atom-beautify linter linter-eslint linter-markdown lint
 
 ### Lint
 
-Installed as a [npm](https://www.npmjs.com/) development dependencies, Reaction provides `eslint` v3.x with the `babel-eslint` package.
+Reaction installs the `eslint` v3.x packages _eslint_, _eslint-plugin-react_, _babel-eslint_ from [npm](https://www.npmjs.com/) as development dependencies.
 
 In the Reaction app root, we have a Reaction `eslint` configuration.
 
