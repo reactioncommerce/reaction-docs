@@ -10,7 +10,6 @@ The publish bar contains controls relevant to the current inline view.
 
 The action view contains all of your administration actions, whether that be shop configuration or fulfilling orders.
 
-
 ### Usage
 
 ```js
@@ -119,6 +118,7 @@ Reaction.popActionViewDetail();
 ```
 
 ### Get ActionView - (DetailView)
+
 ```js
 /**
  * Get the current detail view from the ActionView - detail view navigation stack
