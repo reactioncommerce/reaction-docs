@@ -3,6 +3,7 @@
 The administration views includes the `Publish Bar` at top of your screen and the `Action View`.
 
 ## Publish Bar
+
 The publish bar contains controls relevant to the current inline view.
 
 ## Action View
@@ -33,6 +34,7 @@ const viewData = {
 ```
 
 ### Show ActionView - (MasterView)
+
 ```js
 /**
  * Opens action view and sets master view
@@ -43,6 +45,7 @@ Reaction.showActionView(viewData);
 ```
 
 ### Set ActionView - (MasterView)
+
 ```js
 /**
  * Set the master view of the ActionView. This action will reset the navigation stack
@@ -53,6 +56,7 @@ Reaction.setActionView(viewData);
 ```
 
 ### Push Action View - (MasterView)
+
 ```js
 /**
  * Push a new master view into the ActionView navigation stack.

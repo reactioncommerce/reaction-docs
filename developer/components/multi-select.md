@@ -8,6 +8,7 @@ import { MultiSelect } from "/imports/plugins/core/ui/client/components";
 ```
 
 ## Usage Example
+
 ```js
 
 import { MultiSelect } from "/imports/plugins/core/ui/client/components";
