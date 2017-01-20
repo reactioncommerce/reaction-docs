@@ -37,6 +37,8 @@ import "./styles/main.less";
 
 Themes are installed in `imports/plugins/custom/`. Themes are auto included and their load order is currently based on their order in the `custom` directory. Keep this in mind if you decide to have multiple themes in the `custom` directory as they may conflict with each other.
 
+PLEASE NOTE: In order for your theme plugin to be loaded the first time, you will need to stop and restart your Reaction instance to trigger the plugin loader.
+
 ## Overriding variables and styles
 
 You can override variables of the default theme simple by defining the variables after importing the base theme.
