@@ -27,6 +27,11 @@ Template.myTemplate.helpers({
         return (values, handle, unencoded, tap, positions) => {
           console.log("slider changed", values);
         };
+      },
+      onSlide: () => {
+        return (values, handle, unencoded, tap, positions) => {
+          console.log("slider is being changed", values);
+        };
       }
     };
   }
@@ -42,7 +47,8 @@ Template.myTemplate.helpers({
         margin=options.margin
         connect=options.connect
         step=options.step
-        onChange=options.onChange}}
+        onChange=options.onChange
+        onSlide=options.onSlide}}
     </div>
   {{/let}}
 </template>
