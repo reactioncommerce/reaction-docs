@@ -80,16 +80,3 @@ reaction reset
 ```
 
 See the [package development documentation](/developer/packages/packages.md) and the [settings and import documentation](/developer/core/import.md) for detailed instructions on modifying initial fixture data.
-
-## meteor
-
-You can use any [meteor command line](http://docs.meteor.com/#/full/commandline) methods as well.
-
-```sh
-curl https://install.meteor.com/ | sh
-git clone https://github.com/reactioncommerce/reaction.git
-cd reaction
-git pull
-meteor reset
-meteor --raw-logs --settings settings/dev.settings.json
-```
