@@ -37,6 +37,7 @@ Template.myTemplate.helpers({
   }
 });
 ```
+
 ```html
 <template name="myTemplate">
   {{#let options=sliderOptions}}

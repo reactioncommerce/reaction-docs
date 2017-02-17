@@ -351,6 +351,12 @@
     "docPath": "developer/core/core.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "admin-views",
+    "label": "Admin Views",
+    "repo": "reaction-docs",
+    "docPath": "developer/core/admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "reaction-user-accounts",
     "label": "Accounts",
     "repo": "reaction-docs",
