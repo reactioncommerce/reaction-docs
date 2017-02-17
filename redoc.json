@@ -351,6 +351,12 @@
     "docPath": "developer/core/core.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "admin-views",
+    "label": "Admin Views",
+    "repo": "reaction-docs",
+    "docPath": "developer/core/admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "reaction-user-accounts",
     "label": "Accounts",
     "repo": "reaction-docs",
@@ -494,8 +500,14 @@
     "label": "Metadata",
     "docPath": "developer/components/metadata.md"
   }, {
+    "label": "MultiSelect",
+    "docPath": "developer/components/multi-select.md"
+  }, {
     "label": "Select",
     "docPath": "developer/components/select.md"
+  }, {
+    "label": "Slider",
+    "docPath": "developer/components/slider.md"
   }, {
     "label": "Tags",
     "docPath": "developer/components/tags.md"
