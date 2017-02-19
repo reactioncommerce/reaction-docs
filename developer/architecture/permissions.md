@@ -165,3 +165,5 @@ Helpers in template in templates:
   <strong> has permission </strong>
 {{/if}}
 ```
+
+`/client/modules/core/helpers/permissions.js` exports the `hasPermission` helper.
