@@ -38,7 +38,7 @@ docker-machine create \
   reaction-host
 ```
 
-That command is fairly self-explanatory.  The name at the end (`reaction-host`) can be anything you want.  That's just a name for the machine that you will use to reference it with future commands.  
+That command is fairly self-explanatory.  The name at the end (`reaction-host`) can be anything you want.  That's just a name for the machine that you will use to reference it with future commands.
 
 Also note that the above command will create your server in the `nyc3` region by default.  If you'd like to change this, you can use the `--digitalocean-region` flag to set a different region.  Or you can set the `DIGITALOCEAN_REGION` environment variable to set a different default region to be used for all `docker-machine` commands.
 
