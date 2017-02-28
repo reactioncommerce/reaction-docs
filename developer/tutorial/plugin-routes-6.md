@@ -44,7 +44,7 @@ function addRolesToVisitors() {
     }
   );
   Shops.update(shop._id, {
-    $addToSet: { "defaultRole": "about"}
+    $addToSet: { "defaultRoles": "about"}
   });
 }
 ```
