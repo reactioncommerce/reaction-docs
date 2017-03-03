@@ -12,10 +12,8 @@ Default layouts for the product detail page are registered in in the `product-de
 
 ```javascript
 // File is shortened for example
-//
 export default function blocks() {
   return [
-
     // Header block (Full Width)
     {
       type: "block",
@@ -53,7 +51,6 @@ export default function blocks() {
 
 ```javascript
 // File is shortened for example
-
 import { Reaction } from "/server/api";
 import SimpleLayout from "../lib/layout/simple";
 
@@ -125,7 +122,7 @@ registerComponent({
   component: MyComponent
 });
 
-// Export component incase you want to use it in other places in the App
+// Export component if you also want to use it in other places in the App
 export default MyComponent;
 ```
 
@@ -133,7 +130,7 @@ Your basic configuration for this component might look like this.
 
 ```js
 {
-  // Name of componet registered
+  // Name of component registered
   component: "ProductField",
   // Example, you can set permissions components that are DIRECT children of a block
   // Permissions for admin users
@@ -155,6 +152,8 @@ Your basic configuration for this component might look like this.
 ```
 
 ### Register Layout Template
+
+Registering a template will add your template configuration to the `Templates` collection in Reaction. This will also show a new template option in the `Templates` dropdown in the Product Admin.
 
 ```js
 // Register the template for use with the product detail page
@@ -189,7 +188,36 @@ Reaction.registerTemplate({
 
 With all of this together we can register our template for use on the PDP page.
 
-```javascript
+**Client**
+
+In a file on the client, create your React component, and register it.
+
+```js
+import React, { Component } from "react";
+import { registerComponent } from "/imports/plugins/core/layout/lib/components";
+
+// Create your component
+class MyPriceComponent extends Component {
+  render() {
+    return (
+      <h2>{this.props.myOwnCustomProp} - {this.props.priceRange}</h2>
+    );
+  }
+}
+
+// Register component for ReactionLayout via Reaction.registerTemplate()
+registerComponent({
+  name: "MyPriceComponent",
+  component: MyPriceComponent
+});
+
+```
+
+**Server**
+
+In a file on the server, create your template layout, and register it.
+
+```js
 import { Reaction } from "/server/api";
 
 const templateLayout = [
@@ -202,7 +230,7 @@ const templateLayout = [
     permissions: ["admin"], // Permissions for staff
     audience: ["guest", "anonymous"], // Permissions for customers
     children: [
-      // Title
+      // Title (Built-in Component of reaction-product-detail-simple)
       {
         component: "ProductField",
         // Example, you can set permissions components that are children of a block
@@ -218,14 +246,24 @@ const templateLayout = [
           }
         }
       },
-    }
+      // My Price
+      {
+        component: "MyPriceComponent",
+        // Example, you can set permissions components that are children of a block
+        permissions: ["admin"],
+        audience: ["guest", "anonymous"],
+        props: {
+          myOwnCustomProp: "Super!!"
+        }
+      }
+    ]
   }
 ];
 
 // Register the template for use with the product detail page
 Reaction.registerTemplate({
-  name: "productDetailSimple",
-  title: "Product Detail Simple Layout",
+  name: "productDetailSimpleTitleOnly",
+  title: "PDP Title Only",
   type: "react",
   templateFor: ["pdp"],
   permissions: ["admin", "owner"],
@@ -236,7 +274,7 @@ Reaction.registerTemplate({
 
 ## Data Fetching & Container Components
 
-Every component receives a set props automatically.
+Every component receives a set of props automatically.
 
 Property           | Type         | Description
 ------------------ | ------------ | ---------------------------------------------------
