@@ -29,7 +29,7 @@ const viewData = {
   // - "dashboard" - relegates li to "Actions" portion of Dashboard, and by default provides larger view if there is space
   // - "settings" - relegates li to "Settings" portion of Dashboard, and by default provides smaller view
   provides: "dashboard" | "settings"
-  
+
   // Additional Options
   // - "meta.actionView.dashboardSize - provides the ability to change dashboardSize by default
   // - "sm" - dashboard width of 400px
