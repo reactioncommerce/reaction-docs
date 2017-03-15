@@ -500,6 +500,9 @@
     "label": "Icon",
     "docPath": "developer/components/icon.md"
   }, {
+    "label": "Lists",
+    "docPath": "developer/components/lists.md"
+  }, {
     "label": "Media",
     "docPath": "developer/components/media.md"
   }, {
