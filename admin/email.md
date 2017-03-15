@@ -8,7 +8,7 @@ Once logged in as a shop admin, you can find the email settings under the Action
 
 ![](/assets/admin-dashboard-panel-home.png "Email Configuration")
 
-##### Email Dashboard
+### Email Dashboard
 
 ![](/assets/admin-email-logs.png "Email Settings")
 
