@@ -387,6 +387,12 @@
     "docPath": "developer/core/shops.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "reaction-product-detail",
+    "label": "Product Detail",
+    "repo": "reaction-docs",
+    "docPath": "developer/core/product-detail.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "reaction-products",
     "label": "Products",
     "repo": "reaction-docs",
@@ -493,6 +499,9 @@
   }, {
     "label": "Icon",
     "docPath": "developer/components/icon.md"
+  }, {
+    "label": "Lists",
+    "docPath": "developer/components/lists.md"
   }, {
     "label": "Media",
     "docPath": "developer/components/media.md"
