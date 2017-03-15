@@ -8,31 +8,27 @@ Reaction features two types of tags: product tags and navigation tags. Product t
 
 To assign a tag to a product, go to the product detail page by clicking on the product. Tags will then be located below the images section.
 
-![](/assets/admin-products-tags.png "Reaction Commerce tags and navigation")
+![](/assets/admin-product-details-tag.png "Reaction Commerce tags and navigation")
 
-To create a new tag, click on the “Add Tags” box, type in your tag, and hit enter to save. If the item is a t-shirt, for instance, you might want to tag it with relevant keywords, like short sleeve, cotton, crewneck, etc.
+To create a new tag, click on the pencil icon, type in your tag, and hit enter to save. If the item is a t-shirt, for instance, you might want to tag it with relevant keywords, like short sleeve, cotton, crewneck, etc.
 
-To delete a tag, click on the gray “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
+To delete a tag, click on the gray x:
 
-To rearrange the order of a tag, click on the three horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tags")), and simply drag and drop.
+![](/assets/admin-product-delete-tags.png "Reaction Commerce delete tag")
 
-### Hashtag URLs
-
-To create a product link, click on the flag icon for each tag. It'll generates a URL for your product relevant to that tag.
-
-Hashtag URLs will allow you to gather key performance metrics on your products: social reach, how this item compares to other products in your store, location-based data, and much more. Better data will enable you to better market to your customers.
+To rearrange the order of a tag, click on the three horizontal lines icon, and simply drag and drop.
 
 ## Navigation Tags
 
 To edit your shop's navigation tags, click on the “Add Tag” button in the top nav bar.
 
-![](/assets/admin-top-navigation.png "Reaction Commerce Navigation")
+![](/assets/admin-homepage-nav-tag-1.png "Reaction Commerce Navigation")
 
-To create a new navigation tag, type your keyword into the empty “Add Tag” box and hit enter to save. Previously created tags may be autosuggested for you. Be sure your product tag corresponds with a navigation tag. Otherwise, your product page will be empty!
+To create a new navigation tag, type your keyword into the “Add Tag” box and hit enter. Previously created tags may be auto-suggested for you. Be sure your product tag corresponds with a navigation tag. Otherwise, your product page will be empty.
 
-![](/assets/admin-top-navigation-add.png "Reaction Commerce navigation bar")
+![](/assets/admin-homepage-nav-tag-2.png "Reaction Commerce navigation bar")
 
-To delete a navigation tag, click the gray “x” icon (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
+To delete a navigation tag, click the gray “x” (![](/assets/guide-icon-deletetag.png "Reaction Commerce delete tag")).
 
 To rearrange navigation tags, click on the 3 horizontal lines icon (![](/assets/guide-icon-movetag.png "Reaction Commerce move tag")). Drag and drop the tags in whichever order you like.
 
