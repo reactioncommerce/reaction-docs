@@ -26,10 +26,13 @@ If you use Avalara or TaxCloud to find a matching rate, that rate will override 
 
 ![](/assets/admin-dashboard-taxes-avalara.png "Avalara Configuration")
 
-[Avalara](https://www.avalara.com/) provides real-time rate calculations for sales tax, value-added tax (VAT), and goods & services tax (GST) across over 140 countries, as well as automatic tax return filing. If you have an Avalara account, you may link it to your shop by entering your login ID.
+[Avalara](https://www.avalara.com/) provides real-time rate calculations for sales tax, value-added tax (VAT),
+and goods & services tax (GST) across over 140 countries, as well as automatic tax return filing.
+If you have an Avalara account, see the docs for the [Avalara tax plugin](/developer/packages/taxes/avalara.md) for detailed configuration instructions
 
 ## TaxCloud
 
 ![](/assets/admin-dashboard-taxes-taxcloud.png "TaxCloud Configuration")
 
-[TaxCloud](https://taxcloud.net/) tracks and provides free sales tax calculations for every address in the United States. If you have a TaxCloud account (which is free!), you may link it to your shop by entering your login ID.
+[TaxCloud](https://taxcloud.net/) tracks and provides free sales tax calculations for every address in the United States.
+If you have a TaxCloud account (which is free!), you may link it to your shop by entering your login ID.
