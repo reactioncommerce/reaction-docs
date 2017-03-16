@@ -601,7 +601,7 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "taxes-packages-taxcloud",
-    "label": "Taxes - Avalara",
+    "label": "Taxes - TaxCloud",
     "repo": "reaction-docs",
     "docPath": "developer/packages/taxes/taxcloud.md"
   }, {
