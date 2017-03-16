@@ -39,7 +39,10 @@ The company code you created in the Avalara administrator panel. (this is a requ
 
 #### Shipping Tax Code
 
-This is the tax code you want to record Shipping under. By default in Reaction, shipping is not Taxable.
+This is the tax code you want to record Shipping under. By default in Reaction, shipping is not Taxable. While
+this code is not technically required to report taxes, it is required to report taxes on shipping correctly
+so we require it here. You can use the code `NT` (Non-Taxable) if you don't have a specific code you 
+wish to use.
 
 #### Address Validation
 
