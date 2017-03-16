@@ -83,8 +83,13 @@ long you want to store these logs. Logs older than this period will be automatic
 
 #### Commit Documents
 
-This option allows you to send your documents with the commit flag turns off. This essentially turns off Tax reporting 
+This option allows you to send your documents with the commit flag turns off. This essentially turns off Tax reporting
 (but not Tax calculation)
+
+#### Test Credentials
+
+This button allows you to confirm if the values you've entered in the form fields are correct. It makes a test API call
+to Avalara with your credentials, and reports if a successful connection was established.
 
 ### Selecting Tax Codes
 
@@ -93,4 +98,10 @@ that has been pre-populated with Tax Codes from Avalara. You can also enter any 
 that will be used when the transaction is sent to Avalara.
 
 ![avalara-tax-code-dropdown](/assets/avalara-tax-code-dropdown.png)
+
+### Setting Tax Exemptions
+
+You can set `Tax Exemption No` and `Customer Usage Type` for individual accounts under the Accounts Management Screen.
+
+![avalara-tax-exempt-settings](/assets/avalara-tax-exempt.png)
 
