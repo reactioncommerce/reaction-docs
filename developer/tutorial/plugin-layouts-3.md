@@ -43,7 +43,7 @@ Reaction Commerce uses one primary layout as the master or default called `coreL
 A common mistake that people make is that they see `Template.dynamic template=layoutHeader` and assume they can change
 the name of the template there. In this context `layoutHeader` is **not** the name of the template but the name of the **variable**
 that contains the template. Changing the name here will break this functionality. It's confusing because the name of the variable
-and the name of the template here are the same so it's an easy mistake to me.
+and the name of the template here are the same so it's an easy mistake to make.
 
 In order to change our default layout, we need add a record to the **registry** for our package. We also need to add a special `defaults.js` that will add some global options.
 
