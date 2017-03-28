@@ -153,8 +153,8 @@ a custom template by changing the values for "layoutHeader" or "layoutFooter".
 (as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
  used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
 
-Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4)
+Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4.md)
 
 ## Read More
 
-[Layouts](/developer/architecture/layout)
+[Layouts](/developer/architecture/layout.md)

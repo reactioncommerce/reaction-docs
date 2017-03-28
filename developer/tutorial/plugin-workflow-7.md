@@ -142,10 +142,10 @@ You will notice that there is nothing special about this command, we are just di
 Once we `reaction reset` and begin again we can look in the db and see that our changes have taken effect. And if we put
 something in our cart and checkout, we should see the change to the checkout flow.
 
-Next: [Schemas](/developer/tutorial/plugin-schemas-8)
+Next: [Schemas](/developer/tutorial/plugin-schemas-8.md)
 
 ## Read More
 
-[Workflow](/developer/architecture/workflow)
+[Workflow](/developer/architecture/workflow.md)
 
 [Meteor Collections](http://docs.meteor.com/api/collections.html)
