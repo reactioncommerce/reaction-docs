@@ -48,7 +48,7 @@ describe.only("Product-To-Hank", function () {
 ```
 
 This is the basics of a Mocha (and many other testing libraries) using what is called "[BDD](https://en.wikipedia.org/wiki/Behavior-driven_development)" syntax. When the test
-is run it is supposed to describe (hance the name) what is being tested. So when the test we have written is run
+is run it is supposed to describe (hence the name) what is being tested. So when the test we have written is run
 the output would say "Product-To-Hank. Calling product-to-hank should change product title to Hank". Then when this
 test passes or fails it will give you a pretty good idea what is happening. Writing these descriptions well is a big
 step in making sure your tests are valuable. If someone changes some other part of the code and your test starts failing,
