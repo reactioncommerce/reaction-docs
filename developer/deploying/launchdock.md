@@ -1,3 +1,0 @@
-# Launchdock
-
-Coming soon.
