@@ -34,7 +34,7 @@ Accounts.attachSchema(myAccountSchema);
 
 ## Removing Fields from a Schema
 
-In eCommerce it's very important to ensure that your checkout flow is as simple as possible (but no simpler) so that customers
+In ecommerce it's very important to ensure that your checkout flow is as simple as possible (but no simpler) so that customers
 experience is as easy as possible. And different types of stores may have different types of data that they collect and store.
 For example, a store that sells downloads has no need to collect a shipping address.
 
