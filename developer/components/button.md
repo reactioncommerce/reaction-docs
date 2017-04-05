@@ -25,6 +25,8 @@ class MyReactComponent extends Component
 export default MyReactComponent;
 ```
 
+## Props
+
 Property             | Type                      | Description
 -------------------- | ------------------------- | ---------------------------
 active               | Boolean                   | Active state. true / false

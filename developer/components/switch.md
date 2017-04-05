@@ -2,13 +2,13 @@
 
 ## Import
 
-```js
+```javascript
 import { Switch } from "/imports/plugins/core/ui/client/components";
 ```
 
 ## Usage Example
 
-```js
+```javascript
 import React, { Component } from "react";
 import { Switch } from "/imports/plugins/core/ui/client/components";
 
@@ -43,5 +43,15 @@ class MyReactComponent extends Component {
 };
 
 export default MyReactComponent;
-
 ```
+
+## Props
+
+Property       | Type     | Description
+-------------- | -------- | ----------------------------------------------------------------------------------
+checked        | Boolean  | Switch is toggled on true / false
+i18nKeyLabel   | String   | i18n key for switch label
+i18nKeyOnLabel | String   | i18n key for switch label when switch is `checked` or `on`
+name           | String   | name of card for callback convenience
+onChange       | Function | Callback when switch changes<br>(event, isChecked, name, componentInstance) => {}
+onLabel        | String   | Toggle on label
