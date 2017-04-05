@@ -9,48 +9,34 @@ import { Slider } from "/imports/plugins/core/ui/client/components";
 ## Usage Example
 
 ```js
+import React, { Component, PropTypes } from "react";
 import { Slider } from "/imports/plugins/core/ui/client/components";
 
-Template.myTemplate.helpers({
-  Slider() {
-    return Slider;
-  },
-
-  sliderOptions() {
-    return {
-      range: { min: 0, max: 5000 },
-      start: [0, 2000],
-      margin: 50,
-      connect: true,
-      step: 50,
-      onChange: () => {
-        return (values, handle, unencoded, tap, positions) => {
-          console.log("slider changed", values);
-        };
-      },
-      onSlide: () => {
-        return (values, handle, unencoded, tap, positions) => {
-          console.log("slider is being changed", values);
-        };
-      }
+class MyComponent extends Component {
+  handleChange: (values, handle, unencoded, tap, positions) => {
+      console.log("slider changed", values);
     };
   }
-});
-```
 
-```html
-<template name="myTemplate">
-  {{#let options=sliderOptions}}
-    <div class="slider">
-      {{> React component=Slider
-        range=options.range
-        start=options.start
-        margin=options.margin
-        connect=options.connect
-        step=options.step
-        onChange=options.onChange
-        onSlide=options.onSlide}}
-    </div>
-  {{/let}}
-</template>
+  handleSlide: (values, handle, unencoded, tap, positions) => {
+      console.log("slider is being changed", values);
+    };
+  }
+
+  render() {
+    return (
+      <Slider
+        range={{ min: 0, max: 5000 }}
+        start={[0, 2000]}
+        margin={50}
+        connect={true}
+        step={50}
+        onChange={this.handleChange}
+        onSlide={this.handleSlide}
+      />
+    );
+  }
+}
+
+export default MyComponent;
 ```

@@ -515,8 +515,14 @@
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
+    "label": "Settings Card",
+    "docPath": "developer/components/settings-card.md"
+  }, {
     "label": "Slider",
     "docPath": "developer/components/slider.md"
+  }, {
+    "label": "Switch",
+    "docPath": "developer/components/switch.md"
   }, {
     "label": "Tags",
     "docPath": "developer/components/tags.md"
