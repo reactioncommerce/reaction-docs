@@ -512,6 +512,9 @@
     "label": "MultiSelect",
     "docPath": "developer/components/multi-select.md"
   }, {
+    "label": "Popover",
+    "docPath": "developer/components/popover.md"
+  }, {
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
