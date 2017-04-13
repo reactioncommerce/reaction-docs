@@ -11,7 +11,3 @@ We recommend you deploy with at least **2GB of memory** for Node and Reaction to
 - [Docker and AWS](deploying/docker.md)
 - [Heroku](deploying/heroku.md)
 - [Galaxy (MDG)](deploying/galaxy.md)
-
-## Launchdock
-
-[Launchdock](https://github.com/reactioncommerce/launchdock) is an open source, multi-tenant orchestration platform from the Reaction Core team. Launchdock supports custom domains, SSL certificate creation and clustered scaling deployments of Docker containers, with some added functionality to act as a Reaction authority for creation of new tenant deployments.
