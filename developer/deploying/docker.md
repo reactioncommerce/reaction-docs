@@ -12,7 +12,7 @@ As described by Docker:
 - **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
 - **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.
 
-The following documentation only aims to show you how to setup a production deployment of Reaction Commerce.  If you would like to learn more about the basics of Docker and how it might be useful for your development workflow, we strongly encourage reading Docker's [Getting Started docs](https://docs.docker.com/) and going through some of their [beginner tutorials](https://training.docker.com/self-paced-training).
+The following documentation only aims to show you how to setup a production deployment of Reaction Commerce.  If you would like to learn more about the basics of Docker and how it might be useful for your development workflow, we strongly encourage reading Docker's [Getting Started docs](https://docs.docker.com/) and going through some of their [beginner tutorials](https://docs.docker.com/learn/).
 
 Ok, let's do this!
 

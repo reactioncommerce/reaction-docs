@@ -7,7 +7,7 @@ Reaction Commerce uses the [FlowRouter package](https://github.com/kadirahq/flow
 
 But we are going to keep it at its most simple and just add a single new route which will be available to anybody. Bee's
 Knees wants to add the ubiquitous "About" page to their site and wants to show essentially a static page there.
-(Managment of static pages is coming in upcoming version of RC but this still makes an excellent simple example).
+(Management of static pages is coming in upcoming version of RC but this still makes an excellent simple example).
 
 So the first thing we want to do is add the route in the Registry which we do by adding an entry in the `registry` key in
 our `register.js` file.

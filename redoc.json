@@ -594,6 +594,18 @@
     "docPath": "developer/packages/payments/stripe.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "taxes-packages-avalara",
+    "label": "Taxes - Avalara",
+    "repo": "reaction-docs",
+    "docPath": "developer/packages/taxes/avalara.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "taxes-packages-taxcloud",
+    "label": "Taxes - TaxCloud",
+    "repo": "reaction-docs",
+    "docPath": "developer/packages/taxes/taxcloud.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "packages-search",
     "label": "Search",
     "repo": "reaction-docs",

@@ -32,8 +32,6 @@ The DB acts as the persistent storage of JavaScript objects. For example, a t-sh
 
 We're always testing! During our Alpha release, we performed extensive tests, deploying shops at scale, and reviewing several database scaling options. We've done performance testing that mimics high-volume shops, and as a part of our Beta release, we will continue to test, test, test.
 
-Because we provide cloud scaling, your site should scale without any issues, whether you're hosting on Docker or other Virtual Machine containers. The database can be a bottleneck, but with sharding and lots of other solutions, we think that it's an easy problem to resolve. 
-
 ## Reaction is an open source project. How can I get involved?
 
 We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
