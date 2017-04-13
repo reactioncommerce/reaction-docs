@@ -9,8 +9,8 @@ The process is simple and just involves these steps:
 1. Create keys for these strings and the default text
 1. Add some bootstrap code to load these translations into the db
 
-For the purposes of our tutorial we haven't really added any functionlity we can translate, so let's add a little code
-to our "debug" HTML we added to the core layout that gives us some info about the currect layout and workflow.
+For the purposes of our tutorial we haven't really added any functionality we can translate, so let's add a little code
+to our "debug" HTML we added to the core layout that gives us some info about the current layout and workflow.
 
 So to our `core.html` let's all these lines right after the `main` section
 
@@ -43,7 +43,7 @@ server folder. And in that folder let's create an `en.json` file and add this to
 ```
 
 What we've done there is added our "beesknees" namespace (that's what `ns` stands for) and then put our keys in there, with
-a navbar key so that as we expand oru plugin we have room to grow.
+a navbar key so that as we expand our plugin we have room to grow.
 
 Now we need to load that file into the translations. So let's create another file in the `i18n` directory called `index.js`
 and add this code.
@@ -73,7 +73,7 @@ for the "Main Layout"
 
 When you stop and restart the translations will be loaded. Now of course it won't look any different because we only
 have English loaded and even if you switch languages you still only have English, but if you added another translation there
-those strings would show the translated version. This allows you to add new language suport by just adding additional JSON
+those strings would show the translated version. This allows you to add new language support by just adding additional JSON
 files and calling `loadTranslations` on them.
 
 Next: [Final Thoughts](/developer/tutorial/plugin-complete-10)

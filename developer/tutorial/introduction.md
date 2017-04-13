@@ -9,7 +9,7 @@ the appearance of Reaction without changing any of the original files. The secon
 ### What's the difference between a theme and plugin?
 
 In terms of layout structure how Meteor sees them, nothing. Themes are just a subset of plugins that only focus on
-modifying the appearance and UX of Reaction. 
+modifying the appearance and UX of Reaction.
 
 ### Can I combine appearance and backend changes?
 
@@ -18,7 +18,7 @@ Yes, plugins can do everything a theme can do.
 ### Where do I start?
 
 This depends on what you want to do. If you want to largely change the look and feel of the application and not the way
-it functions you can read just the themeing tutorial but generally we would recommend that anybody doing development
+it functions you can read just the theming tutorial but generally we would recommend that anybody doing development
 with Reaction should read the entire plugin tutorial since most development with Reaction will take place within plugins.
 
 ### What are some of the best tools when developing for Reaction?
@@ -31,7 +31,7 @@ should help you find them.
 
 ### How do I create a custom theme?
 
-[Themeing Tutorial](/developer/tutorial/creating-a-theme.md)
+[Theming Tutorial](/developer/tutorial/creating-a-theme.md)
 
 ### How do I add routes?
 

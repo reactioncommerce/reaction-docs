@@ -12,7 +12,7 @@ Meteor.startup(function () {
 });
 ```
 
-## Contents  
+## Contents
 
 - [Architecture](#architecture)
 
@@ -65,7 +65,7 @@ When importing entities which need to be referenced by other entities it is reco
 
 ### Batch inserts and fixture data
 
-By default documents are inserted with the MongoDB `$set` modifier. This however poses a problem when importing data which only needs to be imported if it's not already present in the database, ignoring changes made to the document after it was imported. To accomodate such situations, `Reaction.Import` provides the `fixture()` modifier method. This method modifies `Reaction.Import` to use the `$setOnInsert` modifier when sending documents to the database. It can be used as follows:
+By default documents are inserted with the MongoDB `$set` modifier. This however poses a problem when importing data which only needs to be imported if it's not already present in the database, ignoring changes made to the document after it was imported. To accommodate such situations, `Reaction.Import` provides the `fixture()` modifier method. This method modifies `Reaction.Import` to use the `$setOnInsert` modifier when sending documents to the database. It can be used as follows:
 
 ```js
 import { Reaction } from "/server/api";
@@ -91,7 +91,7 @@ Reaction.Import.process(Assets.getText(file), ['title'], Reaction.Import.product
 
 ### Automatic collection detection
 
-The `Reaction.Import.identify()` method is provided to determine the collection associated with a document. It is internally called by `Reaction.Import.load()` which tries to load any document thorwn at it. These methods are mainly intented to be used with `Reaction.Import.process()`, allowing json arrays mixing data from multiple collections to be imported.
+The `Reaction.Import.identify()` method is provided to determine the collection associated with a document. It is internally called by `Reaction.Import.load()` which tries to load any document thrown at it. These methods are mainly intended to be used with `Reaction.Import.process()`, allowing json arrays mixing data from multiple collections to be imported.
 
 ## Image uploader
 

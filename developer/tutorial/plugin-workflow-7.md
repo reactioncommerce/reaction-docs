@@ -99,7 +99,7 @@ and Completion:
 To change this workflow you simple need to modify these records. In our example we are going to change the template for
 the Review step to a custom one (which will actually look just mostly like the original, but you can imagine that you could do a lot more.)
 
-So to solidy our change we are going to have our changes to the database done in our `init.js` script so that these changes are made when the store is bootstrapped.
+So to solidify our change we are going to have our changes to the database done in our `init.js` script so that these changes are made when the store is bootstrapped.
 
 We want to make this change after everything else has been set up (we want to make sure those records are there before
 we try to modify them) so we are going to add our function on to the `afterCoreInit` event.
