@@ -1,5 +1,6 @@
 # Popover
 
+
 A component that included a button to displays a popover with provided children.
 
 ## Import
@@ -10,11 +11,13 @@ import { Popover } from "/imports/plugins/core/ui/client/components";
 
 ## Usage Example
 
+
 ### Popover with default arrow button
 
 ```javascript
 import React, { Component } from "react";
 import { Popover } from "/imports/plugins/core/ui/client/components";
+
 
 class MyReactComponent extends Component {
   state = {
@@ -25,10 +28,12 @@ class MyReactComponent extends Component {
     this.setState({
       value: value
     });
+
   }
 
   render() {
     return (
+
       <Popover
         buttonElement={
           <
@@ -79,6 +84,7 @@ class MyReactComponent extends Component {
 };
 
 export default MyReactComponent;
+
 ```
 
 ## Props
@@ -91,3 +97,4 @@ children           | Node     | Popover contents
 onChange           | Function | Show the arrow for the actual popover
 showDropdownButton | Boolean  | Shows a dropdown button adjacent the `buttonElement` as a button group
 targetAttachment   | String   | Default value `"top left""`
+
