@@ -1,98 +1,59 @@
 # Buttons
 
-```handlebars
-{{> button
-  label="My Label"
-  i18nKeyLabel="path.to.translation"
-  icon="plus"
-  className="j"
-  onClick=(function)
-}}
-```
-
-| Property                     | Type     | Description                                                   |
-| ---------------------------- | -------- | ------------------------------------------------------------- |
-| [label](#label)              | String   | Button text (alias for title)                                 |
-| [title](#title)              | String   | Button text                                                   |
-| [i18nKeyLabel](#i18KeyLabel) | String   | i18nKey path                                                  |
-| [className](#className)      | String   | Additional CSS Class names                                    |
-| [status](#status)            | String   | default **(default)** \| info \| danger \| success \| warning |
-| [type](#type)                | String   | button **(default)** \| submit                                |
-| [onClick](#onClick)          | Function | function reference from template helper                       |
-
-## Label
-
-```handlebars
-{{> button label="Add Product"}}
-```
-
-```handlebars
-{{> button title="Add Product"}}
-```
-
-## Translating label
-
-i18n key for translation. If provided with `label`, then `label` will be used as the default if the i18n key is not found.
-
-```handlebars
-{{> button title="Add Product" i18nKeyLabel="app.addProduct"}}
-```
-
-## Using an icon
-
-name of icon. We use font awesome as our default font. [fontawesome](fontawesome.io)
-
-```handlebars
-{{ button label="Add Product" icon="clock"}}
-```
-
-```handlebars
-{{> button label="Add Product" icon="fa fa-clock"}}
-```
-
-## Click events
-
-On click events represents a user clicking, or taping on a button that then triggers this event.
-
-```js
-Template.myTemplate.helpers({
-  handleButtonClick(event) {
-    return () => {
-      console.log("Button was clicked");
-    }
-  }
-});
-```
-
-```handlebars
-{{> button label="Add Product" onClick=handleButtonClick}}
-```
-
-## Custom events
-
-You can also use the standard way of attaching events to the button.
-
-```handlebars
-{{> button label="My Label" className="js-button"}}
-```
+## Import
 
 ```javascript
-Template.myTemplate.events({
-  "click .js-button"(event, instance) {
-    Alerts.alert("Button was clicked");
-  }
-});
+import { Button } from "/imports/plugins/core/ui/client/components";
 ```
 
-## Using the HTML version
+## Usage Example
 
-```html
-<button
-  type="button"
-  class="rui btn btn-default"
-  data-event-action="eventAction">
-  <div class="contents">
-    <!-- text, icons and other thing go in here -->
-  </div>
-</button>
+```javascript
+import React, { Component } from "react";
+import { Button } from "/imports/plugins/core/ui/client/components";
+
+class MyReactComponent extends Component
+  return (
+    <Button
+      i18nKeyLabel="some.key"
+      label="My Button"
+      onClick={this.handleClick}
+    />
+  )
+};
+
+export default MyReactComponent;
 ```
+
+## Props
+
+Property             | Type                      | Description
+-------------------- | ------------------------- | ---------------------------
+active               | Boolean                   | Active state. true / false
+bezelStyle           | String                    | "flat", "solid", "outline")
+children             | Component                 | React child nodes
+className            | String, Object            | "class-name", or { "class-name": true }
+containerStyle       | Object                    | Style object to apply to Button container
+disabled             | Boolean                   | Disabled state. true / false
+eventAction          | String                    | adds HTML attribute `data-event-action=""` to button element
+i18nKeyLabel         | String                    | i18n key for button label (shows in button)
+i18nKeyTitle         | String                    | i18n key for button title attribute
+i18nKeyToggleOnLabel | String                    | i18n key `on` label for a toggle button
+i18nKeyTooltip       | String                    | i18n key for button tooltip
+icon                 | String                    | Font awesome icon name. e.g. `fa fa-star`
+iconAfter            | Boolean                   | Moves icon behind button label if `true`. default: `false`
+label                | String                    | Button label
+onClick              | Function                  | Callback on click.<br>(event, value) => {}
+onIcon               | String                    | Icon for the toggle button `on` state
+onToggle             | Function                  | Callback when button is toggles.<br>(event, value) => {}<br>if value is not set as a prop, true/false is returned instead
+onValue              | Any                       | Value for button toggle `on` state. Passed to the `onToggle` callback.
+primary              | Boolean                   | Primary state. true / false
+status               | String                    | Sets button state with a string. `primary | success | info | warning | danger | link | cta | default`
+tagName              | String                    | Specify the name of the HTML tag. Default: `button`. A tag name of `a` will also set the `href=#` by default
+title                | String                    | Title attribute, use label for actual button text
+toggle               | Boolean                   | Allow button to be toggled
+toggleOn             | Boolean                   | Button is toggled `on`
+toggleOnLabel        | String                    | Label when button is toggled `on`
+tooltip              | String, Object, Component | Button tooltip
+tooltipPosition      | String                    | Tooltip position. Default `bottom center`
+value                | Any                       | Value to use for `onClick` and `onToggle` callbacks. Value is used for the `off` state when toggling a button

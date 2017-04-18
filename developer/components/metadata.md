@@ -67,15 +67,15 @@ export default MyReactComponent;
 
 ### Props
 
-Property              | Type   | Description
---------------------- | ------ | -----------
-blank                 | Boolean   | Shows submit buttons if `true`, shows delete button when `false`
-detailInfoPlaceholder | Function   | Detail info input placeholder (value)
-detailNamePlaceholder | Function   | Detail name input placeholder (key)
-i18nKeyDetailInfo     | Function   | Detail info i18n placeholder (value)
-i18nKeyDetailName     | Function   | Detail name i18n placeholder (value)
-index                 | Number | Index in array
-metafield             | Object | `{key: "", value: ""}`
-onBlur                | Function   | On input blur. callback signature `(event, metafield, index) => {}`
-onChange              | Function   | On input change. callback signature `(event, metafield, index) => {}`
-onRemove              | Function    | On remove metafield. callback signature `(event, metafield, index) => {}`
+Property              | Type     | Description
+--------------------- | -------- | -------------------------------------------------------------------------
+blank                 | Boolean  | Shows submit buttons if `true`, shows delete button when `false`
+detailInfoPlaceholder | Function | Detail info input placeholder (value)
+detailNamePlaceholder | Function | Detail name input placeholder (key)
+i18nKeyDetailInfo     | Function | Detail info i18n placeholder (value)
+i18nKeyDetailName     | Function | Detail name i18n placeholder (value)
+index                 | Number   | Index in array
+metafield             | Object   | `{key: "", value: ""}`
+onBlur                | Function | On input blur. callback signature `(event, metafield, index) => {}`
+onChange              | Function | On input change. callback signature `(event, metafield, index) => {}`
+onRemove              | Function | On remove metafield. callback signature `(event, metafield, index) => {}`
