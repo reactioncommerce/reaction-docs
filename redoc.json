@@ -497,6 +497,9 @@
     "label": "Divider",
     "docPath": "developer/components/divider.md"
   }, {
+    "label": "DropDown Menu",
+    "docPath": "developer/components/dropDownMenu.md"
+  }, {
     "label": "Icon",
     "docPath": "developer/components/icon.md"
   }, {
@@ -505,6 +508,9 @@
   }, {
     "label": "Media",
     "docPath": "developer/components/media.md"
+  }, {
+    "label": "Menu",
+    "docPath": "developer/components/menu.md"
   }, {
     "label": "Metadata",
     "docPath": "developer/components/metadata.md"
@@ -518,8 +524,8 @@
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
-    "label": "Settings Card",
-    "docPath": "developer/components/settings-card.md"
+    "label": "Popover",
+    "docPath": "developer/components/popover.md"
   }, {
     "label": "Slider",
     "docPath": "developer/components/slider.md"
