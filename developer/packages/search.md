@@ -1,6 +1,6 @@
 # Search
 
-Search is an important part of any eCommerce solution as studies have found that
+Search is an important part of any ecommerce solution as studies have found that
 40-50% of users will completely bypass traditional navigation and head straight
 to search.
 
