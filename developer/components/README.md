@@ -4,7 +4,7 @@ Reaction UI components using Blaze and React.
 
 ## Component StyleGuide
 
-Below is a basic example of how a component should look. Components should be reusable without any dependencies on Meteor, database, session, trackers, composeWithTracker or redux connect if possible. There are a few exceptions, however fetching from the database is best served from a higher order component component.
+Below is a basic example of how a component should look. Components should be reusable without any dependencies on Meteor, database, session, trackers, composeWithTracker or redux connect if possible. There are a few exceptions, however, fetching from the database is best served from a higher order component.
 
 ```js
 import React, { Component, PropTypes } from "react";
