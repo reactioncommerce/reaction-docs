@@ -497,6 +497,9 @@
     "label": "Divider",
     "docPath": "developer/components/divider.md"
   }, {
+    "label": "DropDown Menu",
+    "docPath": "developer/components/dropDownMenu.md"
+  }, {
     "label": "Icon",
     "docPath": "developer/components/icon.md"
   }, {
@@ -506,17 +509,29 @@
     "label": "Media",
     "docPath": "developer/components/media.md"
   }, {
+    "label": "Menu",
+    "docPath": "developer/components/menu.md"
+  }, {
     "label": "Metadata",
     "docPath": "developer/components/metadata.md"
   }, {
     "label": "MultiSelect",
     "docPath": "developer/components/multi-select.md"
   }, {
+    "label": "Popover",
+    "docPath": "developer/components/popover.md"
+  }, {
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
+    "label": "Popover",
+    "docPath": "developer/components/popover.md"
+  }, {
     "label": "Slider",
     "docPath": "developer/components/slider.md"
+  }, {
+    "label": "Switch",
+    "docPath": "developer/components/switch.md"
   }, {
     "label": "Tags",
     "docPath": "developer/components/tags.md"
@@ -646,12 +661,6 @@
     "label": "Deploying",
     "repo": "reaction-docs",
     "docPath": "developer/deploying.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "deploying-on-launchdock",
-    "label": "Launchdock",
-    "repo": "reaction-docs",
-    "docPath": "developer/deploying/launchdock.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-with-mup",

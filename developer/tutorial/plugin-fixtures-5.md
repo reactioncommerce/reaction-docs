@@ -9,7 +9,7 @@ creating products you probably don't want to reset your data and lose your work.
 creating "fixtures".
 
 When we create fixtures we are going to create JSON files that contain the "static" data that makes up your site
-(as opposed to things like orders). This is usually really helpful when developing as you may want to dramtically
+(as opposed to things like orders). This is usually really helpful when developing as you may want to dramatically
 change the way some things are stored in the database but don't want to start over with the stock data.
 
 The sample data files are located at `private/data` in the example repo. To use them you need to copy them to the `private/data`

@@ -2,48 +2,40 @@
 
 ## Import
 
-```js
-
+```javascript
 import { MultiSelect } from "/imports/plugins/core/ui/client/components";
 ```
 
 ## Usage Example
 
-```js
-
+```javascript
+import React, { Component } from "react";
 import { MultiSelect } from "/imports/plugins/core/ui/client/components";
 
-Template.myTemplate.helpers({
-  MultiSelect() {
-    return MultiSelect;
-  },
-
-  multiSelectOptions() {
-    return {
-      name: "multiselect",
-      options: [{value: 'one', label: 'One'},{value:'two',label:'Two'},{value:'three',label:'Three'}],
-      placeholder: "Please choose",
-      value: [],
-      onChange: () => {
-        return (values) => {
-          console.log("Values are ", values);
-        };
-      }
-    };
+class MyComponent extends Component {
+  onChange = (values) => {
+    console.log("Values are ", values);
   }
-});
+
+  render() {
+    return (
+      <MultiSelect
+        options: [
+          {value: "one", label: "One"},
+          {value: "two", label: "Two"},
+          {value: "three",label: "Three"}
+        ],
+        placeholder={"Please choose"}
+        value={this.props.value}
+        onChange={this.onChange}
+      />
+    );
+  }
+}
 ```
 
-```html
+## Props
 
-<template name="myTemplate">
-  {{#let options=multiSelectOptions}}
-    <div>{{> React component=MultiSelect
-      options=options.options
-      placeholder=options.placeholder
-      name=options.name
-      value=options.value
-      onChange=options.onChange}}</div>
-  {{/let}}
-</template>
-```
+Property | Type   | Description
+-------- | ------ | ------------------------------------------------------------------------
+icon     | String | name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon
