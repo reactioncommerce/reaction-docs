@@ -13,7 +13,7 @@ Once you're in, you'll find a selection of nifty Dashboard features. To make con
 ## Core
 
 - Settings - Configure your shop's name, address, payment methods, and other settings.
-- Orders - Review and process orders. For more info, visit the [Orders](https://reactioncommerce.com/docs/master/orders) section.
+- Orders - Review and process orders. For more info, visit the [Orders](https://docs.reactioncommerce.com/reaction-docs/master/orders) section.
 - Shipping - Set up and manage your shipping and handling rates.
 - Accounts - Add, edit, and remove permissions for each of your shop members.
 - Email - Manage your mail setup and view email logs.
