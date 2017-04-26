@@ -132,7 +132,7 @@ changing our layout. For example we change point our header or footer to
 a custom template by changing the values for "layoutHeader" or "layoutFooter".
 2. There is a `priority` field on layout objects (with a default value) of `999`. When RC goes to render a route/page
 (as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
- used. Lower values override the default.
+ used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
 
 Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4)
 
