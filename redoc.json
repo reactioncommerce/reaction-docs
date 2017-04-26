@@ -524,6 +524,9 @@
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
+    "label": "Settings Card",
+    "docPath": "developer/components/settings-card.md"
+  }, {
     "label": "Popover",
     "docPath": "developer/components/popover.md"
   }, {
@@ -688,7 +691,6 @@
   }, {
     "class": "guide-nav-item",
     "alias": "guidelines",
-    "label": "Community guidelines",
     "repo": "reaction-docs",
     "docPath": "guidelines/guidelines.md"
   }, {
