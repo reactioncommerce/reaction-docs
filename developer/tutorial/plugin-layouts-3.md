@@ -126,9 +126,13 @@ One important thing to understand is that at any point in time when RC goes to r
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step.
 It is essentially the "default" workflow when you hit the home page.
 
-Also note that we have other parts that we could substitute without
+Also note that:
+1. We have other parts that we could substitute without
 changing our layout. For example we change point our header or footer to
 a custom template by changing the values for "layoutHeader" or "layoutFooter".
+2. There is a `priority` field on layout objects (with a default value) of `999`. When RC goes to render a route/page
+(as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
+ used. Lower values override the default.
 
 Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4)
 
