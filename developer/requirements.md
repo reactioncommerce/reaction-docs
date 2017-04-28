@@ -2,9 +2,18 @@
 
 Reaction is built with [Meteor](https://meteor.com) and requires [Node.js](https://nodejs.org/) (v4 or higher). See the instructions for your operating system below.
 
-- [macOS](#macos)
-- [Linux](#linux)
-- [Windows](#windows)
+-   [macOS](#macos)
+-   [Linux](#linux)
+-   [Windows](#windows)
+
+If you have node and npm already installed, install the [reaction-cli](https://www.npmjs.com/package/reaction-cli) from [npm](https://www.npmjs.com/).
+
+```sh
+# install CLI
+npm install -g reaction-cli
+```
+
+`reaction -h` provides a list of commands.
 
 ## macOS
 
@@ -15,6 +24,30 @@ Reaction is built with [Meteor](https://meteor.com) and requires [Node.js](https
 **Build Tools**
 
 Install [Xcode](https://developer.apple.com/xcode/downloads/), then run `xcode-select --install`
+
+**File Limits**
+
+The Meteor development environment requires significantly more available files than are configured in macOS by default.
+
+Without updating the available file limits you may see an error.
+
+    Error: EMFILE: too many open files, scandir '/Users/you/Documents/reaction/xxxx'
+        at Error (native)
+        at Object.fs.readdirSync (fs.js:808:18)
+        at Object.wrapper (/tools/fs/files.js:1586:35)
+        at readDirectory
+
+See: <http://stackoverflow.com/a/27982223>
+
+Increase your file limits with these `terminal` commands.
+
+```sh
+echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
+echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -w kern.maxfiles=65536
+sudo sysctl -w kern.maxfilesperproc=65536
+ulimit -n 65536 65536
+```
 
 **Meteor**
 
@@ -36,7 +69,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install git
 ```
 
-**ImageMagick** _Optional_
+**ImageMagick**
+
+ImageMagick installation is optional, but is highly recommended, as it is used for image resizing on upload.
 
 ```sh
 brew install imagemagick
@@ -88,7 +123,9 @@ npm install -g windows-build-tools
 
 <https://www.meteor.com/install>
 
-**ImageMagick** _Optional_
+**ImageMagick**
+
+ImageMagick installation is optional, but is highly recommended, as it is used for image resizing on upload.
 
 <https://www.imagemagick.org/script/binary-releases.php#windows>
 
@@ -96,15 +133,10 @@ npm install -g windows-build-tools
 
 [MongoDB](https://www.mongodb.org/) is bundled with the Meteor development environment, so you don't need to install it manually for local development. When the development server is running, you can connect to the local MongoDB instance on the port that is one higher than the port Meteor is running on (e.g. if Meteor is running on port 3000, MongoDB will be on port 3001). No credentials are required to connect to Mongo while running in development.
 
-When using a production build or a standalone [MongoDB](https://www.mongodb.org/) server, make sure you are using **version 3.2** or higher.
+No database is bundled with production deployments, so when using a production build or a standalone [MongoDB](https://www.mongodb.org/) server, make sure you are using **version 3.2** or higher.
 
-### Error: “EMFILE, too many open files”
+Database connections can be defined as an environment variable.
+
 ```sh
-echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
-echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
-sudo sysctl -w kern.maxfiles=65536
-sudo sysctl -w kern.maxfilesperproc=65536
-ulimit -n 65536 65536
+MONGO_URL=mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
 ```
-
-See: http://stackoverflow.com/a/27982223
