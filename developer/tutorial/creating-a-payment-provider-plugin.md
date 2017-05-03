@@ -2,7 +2,7 @@
 
 ## What is a "Payment Provider"
 
-Payment Providers are companies that provide a gateway between eCommerce
+Payment Providers are companies that provide a gateway between ecommerce
 software customer payment. In the U.S. that largely means credit cards
 but it can also mean something like a Paypal account or in other parts
 of the world it could mean cards linked to Kiosks or even BitCoin.
@@ -26,12 +26,12 @@ plugins are just Meteor modules with some additional configuration.
 
 ## Getting Started
 
-Start off by copying the `example-paymentmthod` package into the
+Start off by copying the `payments-example` package into the
 `imports/plugins/custom` folder. You will need to add imports to the
 `main.js` file in both the `client` and `server` directories. If you
 wish you can remove imports for the Example Payment Method.
 
-The first task is to choose a simple, single-word indentifer for your
+The first task is to choose a simple, single-word identifier for your
 payment method. You will use this over and over and having it simple and
 consistent will make it easier to keep your package free of bugs. In
 this project we have chosen the clever name of `example`.
@@ -39,7 +39,7 @@ this project we have chosen the clever name of `example`.
 Then you will want to modify the `register.js` file to reflect your
 payment provider. Specifically you will need to at minimum change the
 label to whatever name you are using. You can pretty much just change
-"example" whereever it is used to whatever identifier you are using.
+"example" wherever it is used to whatever identifier you are using.
 
 ## The Schema
 
@@ -47,21 +47,26 @@ The main "secret sauce" here is using the [AutoForm](https://atmospherejs.com/al
 [Simple Schema](https://atmospherejs.com/aldeed/simple-schema) package.
 This allows you to declare the schema you want to insert against and
 have your form and validations (mostly) built for you. If you look in
-`import/plugins/included/example-paymentmethod/lib/collections/schemas/example.js`
+`import/plugins/included/payments-example/lib/collections/schemas/example.js`
 you can see there are two schemas declared, `ExamplePackageConfig` which
 is the data we want to input in settings and `ExamplePayment` which is
 the data we submit when submitting a payment.
 
-## Templates
+## Templates and React Components
 
 There are two basic elements that must be created, the payment forms and
 the settings panel. Like all Meteor projects you place all your client
-code in the `client` directory. This form basically displays a standard
+code in the `client` directory. For the payment form, it basically displays a standard
 credit card entry form. The JS file associated with this form gathers up
-the data from the form and calls a cllient-side version of the
+the data from the form and calls a client-side version of the
 `authorize` method. That method is placed on the `Example` object so
 that it can be imported on the client. If you have modified the schemas
-as mentioned above, you will also need to modify the forms accordingly.
+as mentioned above, you will also need to modify the form accordingly.
+The settings panel on the other hand is implemented using React as opposed to the Blaze
+templates. The `component` folder contains the display, which is a simple form that defines an
+input field for an `API Key`. The `container` folder contains all the logic for the
+component, it takes the data provided in the component and makes the call to the server-side
+`update` method that updates the Example Payment Method to contain an API Key.
 
 ## Checkout
 
@@ -143,7 +148,7 @@ This method should query for a list of refunds and these refunds will show up in
 
 Here you need to provide the server-side implementations of the four methods listed above. The naming is a little
 different in that each method must have the name of the provider (the one you selected above) in the method name.
-Authorize is a little different in that it is called "Submit", so it's name would be "yourProviderSubmmit". The rest
+Authorize is a little different in that it is called "Submit", so it's name would be "yourProviderSubmit". The rest
 of the method names are just "yourProvider/methodname". The code should be pretty self-explanatory here.
 
 The tricky part is making sure that the necessary data is return in the `results`. Each step except for `authorize`

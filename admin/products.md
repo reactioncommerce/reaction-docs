@@ -4,13 +4,13 @@ What you see, the customer sees. Create, edit, and remove products inline. It’
 
 ## Creating Products
 
-To create a product, login to your dashboard and click on the plus (+) icon, located on the right. Then, click the "Add Product" button.
+To create a product, login to your dashboard and click on the plus (+), located on the top right.
 
-![](/assets/admin-add-products.png "Add Product with Reaction Commerce")
+![](/assets/admin-dashboard-panel-home.png "Add Product with Reaction Commerce")
 
 You’ll be taken to your product page, where you'll have the ability to change your product's photo, price, and description, all in real-time.
 
-![](/assets/admin-product-page.png "Reaction's Product Page")
+![](/assets/admin-product-details-page.png "Reaction's Product Page")
 
 You may edit your product title, subtitle, vendor name, and product description by clicking on each section and typing into the field. To upload a product photo, drop a file into the grey square on the left, or simply click "Drop files to upload."
 
@@ -18,9 +18,9 @@ If your shop is connected to social, you may customize your product's social sha
 
 You may also add product tags by clicking on the plus (+) button, located under the "Tags" section.
 
-![](/assets/admin-product-page-2.png "Reaction's Product Page")
+![](/assets/admin-product-details-tag.png "Reaction's Product Page")
 
-PLEASE NOTE: Your product page will not be live until you hit the Publish button, located on the bottom-right hand side of your dashboard:
+PLEASE NOTE: Your product page will not be live until you hit the Publish button, located on the top-right of your navigation bar:
 
 ![](/assets/admin-product-publish.png "Reaction's Product Page")
 
@@ -30,7 +30,7 @@ Assign prices, item weight, quantity, colors, and other properties to your produ
 
 Every product comes filled with one variant. To create more, click the pencil icon, located under the Options section.
 
-![](/assets/admin-product-variants.png "Reaction Product Variants")
+![](/assets/admin-product-variant.png "Reaction Product Variants")
 
 Here's what all the variants mean:
 
@@ -50,7 +50,7 @@ To add options to a variant, click on the plus (+) button to the right of the �
 
 Each option allows you to customize the option name, label, price, and quantity, as well as add a set of images.
 
-![](/assets/admin-product-variant-options.png "Reaction Product Variant Options")
+![](/assets/admin-product-variant-2.png "Reaction Product Variant Options")
 
 ## Product Media
 
@@ -62,13 +62,13 @@ Currently, only image file types are supported, but support for video, Google Dr
 
 Once you have images added to your gallery, simply drag and drop to change their position.
 
-![](/assets/admin-product-media.png "Reaction Commerce Product Mediae")
+![](/assets/admin-product-variant-3.png "Reaction Commerce Product Mediae")
 
 ## Product Grid
 
 By default, products are displayed in a grid layout. When logged in as an admin, you may drag and drop products to reorder them.
 
-![](/assets/admin-product-grid-drag-drop.png "Reaction Commerce Drag and Drop Merchandising")
+![](/assets/admin-product-grid.png "Reaction Commerce Drag and Drop Merchandising")
 
 You may also arrange products based on how you manage your tags. Manage the display order of your products based on the order of your tags in your navigation.
 
@@ -76,6 +76,6 @@ NOTE: When new products are added, they are given the top position by default.
 
 ## Removing Products
 
-To remove an entire product, login and click the "Delete" icon (![](/assets/guide-icon-delete.png "Reaction delete product")) in the grid view. If you're looking to remove single variants, check out the Product Variants section.
+To remove an entire product from your inventory, login to your product view and click on the trash can. Select yes to archive.
 
-![](/assets/guide-products-removeproduct.png "Reaction remove product")
+![](/assets/admin-product-delete.png "Reaction remove product")

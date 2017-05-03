@@ -18,7 +18,7 @@ There are also the following functions/builders that can be imported directly.
 
 `addProduct` which will create a new product and return that product to you: `import { addProduct } from "/server/imports/fixtures/products";`
 `getShop` which will either get the existing shop of create a new one and return it to you: `import { getShop } from "/server/imports/fixtures/shops";`
-`getUser` which either return an existing user or create one if it doesn't exist: `import { getUser } from "/server/imports/fixrtures/users;`
+`getUser` which either return an existing user or create one if it doesn't exist: `import { getUser } from "/server/imports/fixtures/users;`
 
 ## Factory
 

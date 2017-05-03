@@ -32,8 +32,6 @@ The DB acts as the persistent storage of JavaScript objects. For example, a t-sh
 
 We're always testing! During our Alpha release, we performed extensive tests, deploying shops at scale, and reviewing several database scaling options. We've done performance testing that mimics high-volume shops, and as a part of our Beta release, we will continue to test, test, test.
 
-Because we provide cloud scaling, your site should scale without any issues, whether you're hosting on Docker or other Virtual Machine containers. The database can be a bottleneck, but with sharding and lots of other solutions, we think that it's an easy problem to resolve. In fact, that's why we created Launchdock, a side project for server-side/Docker launching, which you may learn more about [here](https://github.com/reactioncommerce/launchdock).  
-
 ## Reaction is an open source project. How can I get involved?
 
 We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
@@ -42,4 +40,4 @@ We're always open to contributions from our community. To learn more about becom
 
 Nope! [Google indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
-Additionally, Reaction uses the Meteor spiderable package, which renders a search engine-friendly static page version of your shop using PhantomJS. You can read more about it [here](https://www.meteorpedia.com/read/spiderable/) and [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package).
+Additionally, Reaction uses the Meteor spiderable package, which renders a search engine-friendly static page version of your shop using PhantomJS. You can read more about it [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package).
