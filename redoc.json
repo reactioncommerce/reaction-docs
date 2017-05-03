@@ -663,28 +663,16 @@
     "docPath": "developer/deploying.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-with-mup",
-    "label": "Mup",
+    "alias": "deploying-reaction-using-docker",
+    "label": "Docker (Recommended)",
     "repo": "reaction-docs",
-    "docPath": "developer/deploying/mup.md"
+    "docPath": "developer/deploying/docker.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-on-galaxy",
     "label": "Galaxy",
     "repo": "reaction-docs",
     "docPath": "developer/deploying/galaxy.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-using-docker",
-    "label": "Docker",
-    "repo": "reaction-docs",
-    "docPath": "developer/deploying/docker.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-using-heroku",
-    "label": "Heroku",
-    "repo": "reaction-docs",
-    "docPath": "developer/deploying/heroku.md"
   }, {
     "class": "guide-nav-item",
     "alias": "guidelines",

@@ -9,5 +9,4 @@ The Reaction core team recommends using Docker for deploying Reaction.
 We recommend you deploy with at least **2GB of memory** for Node and Reaction to run well.
 
 - [Docker and AWS](deploying/docker.md)
-- [Heroku](deploying/heroku.md)
 - [Galaxy (MDG)](deploying/galaxy.md)
