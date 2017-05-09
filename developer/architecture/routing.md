@@ -1,6 +1,6 @@
 # Routing
 
-Reaction Router extends the routing functionality provided by [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr).  The basics of FlowRouter are covered in the [FlowRouter documentation](https://github.com/kadirahq/flow-router), but you can most likely find everything you need to use Reaction Router on this page.
+Reaction Router extends the routing functionality provided by [React Router](https://github.com/ReactTraining/react-router).  The basics of React Router are covered in the [React Router documentation](https://reacttraining.com/react-router/), but you can most likely find everything you need to use Reaction Router on this page.
 
 ## Usage
 
@@ -9,19 +9,19 @@ Reaction Router is exported as `Router` from `"/client/api"`.
 ```js
 import { Router } from "/client/api";
 
-// Example: use a FlowRouter method to get a URL query param
+// Example: use a Reaction Router method to get a URL query param
 const urlParam = Router.getQueryParam("urlParam");
 ```
 
 ## Route Definition
 
-While you _can_ use the [Flow Router API](https://github.com/kadirahq/flow-router/tree/ssr) to directly add routes to the app, we recommend that you use the Reaction Router API. Reaction Router extends FlowRouter to integrate route permissions, make routing configurable by plugins (via the package registry), and to help future proof against changes to the routing layer (like possibly switching away from FlowRouter in the future).  
+While you _can_ use the [React Router API](https://reacttraining.com/react-router/). to directly add routes to the app, we recommend that you use the Reaction Router API. Reaction Router extends React Router to integrate route permissions, make routing configurable by plugins (via the package registry), and to help future proof against changes to the routing layer.  
 
 Our recommended approach to define routes is to use the **Package Registry**.
 
 ### Registry Routing
 
-Routes are very simple and based on the syntax of [path-to-regexp](https://github.com/pillarjs/path-to-regexp) which is used in both [Express](http://expressjs.com/) and `iron:router`.
+Routes are very simple and based on the syntax of [path-to-regexp](https://github.com/pillarjs/path-to-regexp) which is used in both [Express](http://expressjs.com/) and [React Router](https://reacttraining.com/react-router/).
 
 The **Reaction package registry** entries define routes that can be used with the Router API. You can also pass local functions to the registry.
 
@@ -70,7 +70,7 @@ defaultVisitorRole =  ["anonymous", "guest", "product", "tag", "index", "cart/ch
 
 ### Route Table
 
-The package registry route entries are collectively added to the Flow Router routing table upon startup.
+The package registry route entries are collectively added to the Reaction Router routing table upon startup.
 
 You can view these routes for debugging. Add to a file in `custom` and create a global export of the Router that you can use in your browser console.
 
@@ -271,7 +271,7 @@ A Blaze template helper that will return an absolute path for a named route.
 
 ## Route Hooks
 
-The `Router.Hooks` namespace provides a router-agnostic API for registering functions to be called either on specific routes or on _every_ route.  Like FlowRouter, there are hooks for `onEnter` and `onExit` and the callback functions are passed the same `context` object to optionally do something with.
+The `Router.Hooks` namespace provides a router-agnostic API for registering functions to be called either on specific routes or on _every_ route.  There are hooks for `onEnter` and `onExit` and the callback functions are passed the same `context` object to optionally do something with.
 
 ### API
 
@@ -344,7 +344,7 @@ Router.Hooks.onEnter(() => analytics.page());
 
 #### Using route context in your hook
 
-The same context object from FlowRouter is available to every callback
+The context object from Reaction Router is available to every callback
 
 ```js
 function logSomeContext(context) {

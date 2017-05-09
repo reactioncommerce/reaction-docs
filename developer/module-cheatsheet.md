@@ -156,10 +156,3 @@ import { Tracker } from "meteor/tracker";
 // Make a valid attempt to avoid using session
 import { Session } from "meteor/session";
 ```
-
-### Atmosphere packages
-
-```javascript
-import { FlowRouter as Router } from "meteor/kadira:flow-router-ssr";
-import { BlazeLayout } from "meteor/kadira:blaze-layout";
-```
