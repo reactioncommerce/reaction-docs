@@ -8,42 +8,50 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 ### How Reaction uses layouts
 
-Reaction Commerce uses one primary layout as the master or default called `coreLayout`. This layout is just another Blaze template. The code in this template is pretty minimal and you can see contains very little HTML. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
+Reaction Commerce uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
 
-```html
-<template name="coreLayout">
-  {{#if hasDashboardAccess}}
-    {{> coreAdminLayout}}
-  {{else}}
-    <nav class="reaction-navigation-header">
-      <!-- begin layoutHeader -->
-      {{> Template.dynamic template=layoutHeader}}
-      <!-- end layoutHeader -->
-    </nav>
+```js
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import { CartDrawer, Content, Header } from "/imports/plugins/core/layout/client/components";
+import { registerComponent } from "/imports/plugins/core/layout/lib/components";
 
-    <nav class="reaction-cart-drawer">
-      {{>cartDrawer}}
-    </nav>
+class CoreLayout extends Component {
+  static propTypes = {
+    actionViewIsOpen: PropTypes.bool,
+    data: PropTypes.object,
+    structure: PropTypes.object
+  }
 
-    <main role="main" id="main">
-      <span id="layout-alerts">{{> inlineAlerts}}</span>
-      {{#if hasPermission 'guest'}}
-        <!-- begin template region -->
-        {{> Template.dynamic template=template}}
-        <!-- end template region -->
-      {{/if}}
+  render() {
+    const pageClassName = classnames({
+      "page": true,
+      "show-settings": this.props.actionViewIsOpen
+    });
 
-      <footer class="reaction-navigation-footer footer-default">{{> Template.dynamic template=layoutFooter}}</footer>
-    </main>
+    return (
+      <div className={pageClassName} id="reactionAppContainer">
+        <Header template={this.props.structure.layoutHeader} />
+        <CartDrawer />
+        <Content template={this.props.structure.template} />
+      </div>
+    );
+  }
+}
 
-  {{/if}}
-</template>
+registerComponent({
+  name: "coreLayout",
+  component: CoreLayout
+});
+
+export default CoreLayout;
 ```
 
-A common mistake that people make is that they see `Template.dynamic template=layoutHeader` and assume they can change
+<!-- A common mistake that people make is that they see `Template.dynamic template=layoutHeader` and assume they can change
 the name of the template there. In this context `layoutHeader` is **not** the name of the template but the name of the **variable**
 that contains the template. Changing the name here will break this functionality. It's confusing because the name of the variable
-and the name of the template here are the same so it's an easy mistake to make.
+and the name of the template here are the same so it's an easy mistake to make. -->
 
 In order to change our default layout, we need add a record to the **registry** for our package. We also need to add a special `defaults.js` that will add some global options.
 
