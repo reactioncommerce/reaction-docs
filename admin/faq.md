@@ -1,9 +1,5 @@
 # Frequently Asked Questions
 
-## Is Reaction live and ready for production? Can I start selling now?
-
-It depends! We do have a few shops in production, but your individual requirements may vary. We're currently in our Beta release, so we're still rolling out features with each new release. For more info, check out our [Features page](https://reactioncommerce.com/features) roadmap, or our [project board](https://waffle.io/reactioncommerce/reaction).
-
 ## How do I sign up for an account, login to my dashboard, and set up my domain?
 
 Currently, Reaction is only available locally via GitHub. In early 2017, we'll be launching the Beta release of our hosted platform, which will allow anyone to set up shop via our intuitive dashboard. Our custom hosting solution, which runs on Docker, will support domains, SSL, and more. Our vision is to allow anyone to customize, extend, and deploy his or her Reaction shop directly from on our platform.
@@ -41,3 +37,5 @@ We're always open to contributions from our community. To learn more about becom
 Nope! [Google indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
 Additionally, Reaction uses the Meteor spiderable package, which renders a search engine-friendly static page version of your shop using PhantomJS. You can read more about it [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package).
+
+In our upcoming roadmap, we'll be finishing the process of migrating over the React SSR for all components.
