@@ -31,7 +31,7 @@ The Meteor development environment requires significantly more available files t
 
 Without updating the available file limits you may see an error.
 
-    Error: EMFILE: too many open files, scandir '/Users/you/Documents/reaction/xxxx'
+    Error: ENFILE: too many open files, scandir '/Users/you/Documents/reaction/xxxx'
         at Error (native)
         at Object.fs.readdirSync (fs.js:808:18)
         at Object.wrapper (/tools/fs/files.js:1586:35)
