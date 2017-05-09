@@ -326,12 +326,6 @@
     "repo": "reaction-docs",
     "docPath": "developer/themes/register-email.md"
   }, {
-    "class": "guide-sub-nav-item",
-    "alias": "prerender",
-    "label": "Prerender",
-    "repo": "reaction-docs",
-    "docPath": "developer/architecture/prerender.md"
-  }, {
     "class": "guide-nav-item",
     "alias": "themes",
     "label": "Themes",
@@ -670,6 +664,12 @@
     "label": "Deploying",
     "repo": "reaction-docs",
     "docPath": "developer/deploying.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "prerender",
+    "label": "Prerender",
+    "repo": "reaction-docs",
+    "docPath": "developer/architecture/prerender.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-using-docker",
