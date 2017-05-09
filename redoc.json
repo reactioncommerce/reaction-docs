@@ -189,12 +189,6 @@
     "docPath": "developer/tutorial/plugin-complete-10.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "plugin-customizing-templates-4",
-    "label": "Customizing Templates",
-    "repo": "reaction-docs",
-    "docPath": "developer/tutorial/plugin-customizing-templates-4.md"
-  }, {
-    "class": "guide-sub-nav-item",
     "alias": "creating-a-payment-provider",
     "label": "Creating a Payment Provider",
     "repo": "reaction-docs",
