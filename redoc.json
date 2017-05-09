@@ -111,6 +111,12 @@
     "docPath": "developer/styleguide.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "community-channels",
+    "label": "Community",
+    "repo": "reaction-docs",
+    "docPath": "developer/community.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "contributing-to-reaction",
     "label": "Contributing",
     "repo": "reaction-docs",
