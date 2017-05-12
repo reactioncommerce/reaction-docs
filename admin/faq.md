@@ -32,10 +32,14 @@ We're always testing! During our Alpha release, we performed extensive tests, de
 
 We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
 
-## Reaction runs on JavaScript. Does this have a negative impact on SEO?
+## Reaction is all JavaScript. Does this have a negative impact on SEO?
 
 Nope! [Google indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
-Additionally, Reaction uses the Meteor spiderable package, which renders a search engine-friendly static page version of your shop using PhantomJS. You can read more about it [here](https://www.eventedmind.com/feed/meteor-the-spiderable-package).
+Additionally, Reaction can use a [modified version](https://github.com/ongoworks/spiderable) of the Meteor spiderable package, which renders a search engine-friendly static page version of your shop using PhantomJS.
 
-In our upcoming roadmap, we'll be finishing the process of migrating over the React SSR for all components.
+It's worth noting that the spiderable package is slotted for deprecation. The reasons for this include:
+
+-   Google has deprecated the AJAX crawling specification that the spiderable package is based on
+-   Search engine crawlers (like Google's) have gotten much better at dealing with JavaScript/AJAX based applications, without the need for any special handling
+-   There are now several better options for SEO goodness, like pre-rendering services (e.g. Prerender.io - which is included in Reaction and can easily be setup), server-side rendering techniques, etc.
