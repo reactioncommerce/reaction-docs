@@ -14,10 +14,11 @@ Reaction Commerce uses one primary layout as the master or default called `coreL
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import { CartDrawer, Content, Header } from "/imports/plugins/core/layout/client/components";
+import Blaze from "meteor/gadicc:blaze-react-component";
+import { Template } from "meteor/templating";
 import { registerComponent } from "/imports/plugins/core/layout/lib/components";
 
-class CoreLayout extends Component {
+class CoreLayoutBeesknees extends Component {
   static propTypes = {
     actionViewIsOpen: PropTypes.bool,
     data: PropTypes.object,
@@ -25,6 +26,7 @@ class CoreLayout extends Component {
   }
 
   render() {
+    const { layoutHeader, layoutFooter, template } = this.props.structure || {};
     const pageClassName = classnames({
       "page": true,
       "show-settings": this.props.actionViewIsOpen
@@ -32,20 +34,34 @@ class CoreLayout extends Component {
 
     return (
       <div className={pageClassName} id="reactionAppContainer">
-        <Header template={this.props.structure.layoutHeader} />
-        <CartDrawer />
-        <Content template={this.props.structure.template} />
+        { Template[layoutHeader] &&
+          <Blaze template={layoutHeader} className="reaction-navigation-header" />
+        }
+
+        <Blaze template="cartDrawer" className="reaction-cart-drawer" />
+
+        { Template[template] &&
+          <main>
+            <Blaze template={template} />
+          </main>
+        }
+
+        { Template[layoutFooter] &&
+          <Blaze template={layoutFooter} className="reaction-navigation-footer footer-default" />
+        }
       </div>
     );
   }
 }
 
+// Register component for it to be usable
 registerComponent({
-  name: "coreLayout",
-  component: CoreLayout
+  name: "coreLayoutBeesknees",
+  component: CoreLayoutBeesknees
 });
 
-export default CoreLayout;
+export default CoreLayoutBeesknees;
+
 ```
 
 <!-- A common mistake that people make is that they see `Template.dynamic template=layoutHeader` and assume they can change
