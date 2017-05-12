@@ -1,6 +1,10 @@
 # Deploying
 
-## Docker
+Reaction is an open source platform, and you can run Reaction anywhere just like regular Node.js or Meteor applications. Operating Meteor apps correctly, so that your apps work for everyone, can be tricky if you are managing your infrastructure manually. This is why we recommend running production Reaction deployments on the [Reaction Commerce managed platform](https://reactioncommerce.com/features#get-a-demo).
+
+If you are looking to deploy Reaction manually, head on over to the [Meteor deployment documentation](https://guide.meteor.com/deployment.html) for an excellent, detailed tutorial.
+
+## Images
 
 Docker images are pushed when Reaction successfully builds and passes all tests on the `master` or `development` branches. These images are released on [Reaction Commerce Docker Hub](https://hub.docker.com/u/reactioncommerce/). There are two images available: [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - the latest `development` image and [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/), the `master` image.
 
@@ -25,7 +29,7 @@ You can [read the entire guide for the Meteor build system](https://guide.meteor
 
 ### Meteor build system
 
-The Meteor build system is the actual command line tool that you get when you install Meteor. You run it by typing the `reaction` command in your terminal, possibly followed by a set of arguments. Read the [docs about the command line tool](http://docs.meteor.com/#/full/commandline) or type `reaction help` in your terminal to learn about all of the commands.
+The Meteor build system is the actual command line tool that you get when you install Meteor. You run it by typing the `reaction` command in your terminal, possibly followed by a set of arguments. Read the [docs about the command line tool](https://github.com/reactioncommerce/reaction-cli) or type `reaction help` in your terminal to learn about all of the commands.
 
 #### What does it do?
 
