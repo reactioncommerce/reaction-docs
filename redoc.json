@@ -673,15 +673,15 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-using-docker",
-    "label": "Docker (Recommended)",
+    "label": "Docker",
     "repo": "reaction-docs",
     "docPath": "developer/deploying/docker.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-on-galaxy",
-    "label": "Galaxy",
+    "alias": "deploying-reaction-on-managed",
+    "label": "Managed",
     "repo": "reaction-docs",
-    "docPath": "developer/deploying/galaxy.md"
+    "docPath": "developer/deploying/launchdock.md"
   }, {
     "class": "guide-nav-item",
     "alias": "guidelines",
