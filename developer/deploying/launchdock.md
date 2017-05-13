@@ -1,10 +1,12 @@
 # Managed
 
-Reaction Commerce offers managed deployments for Reaction. The `reaction-cli` package incorporates functionality for teams to deploy to Reaction to multiple environments.
+Reaction Commerce offers managed deployments for Reaction. The `reaction-cli` incorporates functionality for any team to deploy Reaction to multiple environments.
 
-## reaction deploy
+`Launchdock` is the name of our registration gateway for the managed platform.
 
-As a user of the Reaction managed platform, you'll receive an email with a registration token.
+## reaction register
+
+As a user of the Reaction managed platform, you'll receive an email with a `Launchdock` registration token.
 
 **Register as a platform user**
 
@@ -33,6 +35,8 @@ ssh-add -K ~/.ssh/<private key created above>
 reaction keys add ~/.ssh/<keyname>.pub
 ```
 
+## reaction create
+
 **Create an app from a prebuilt image**
 
 ```sh
@@ -51,7 +55,14 @@ reaction apps create --name <appname>
 reaction deploy --name <appname>
 ```
 
-### Example
+## reaction deploy
+
+```sh
+# Push your custom code and start a build
+reaction deploy --name <appname>
+```
+
+**Example deployment**
 
 An example deployment with a custom smtp server and preconfigured settings deploying the latest Reaction image from Docker Hub.
 
