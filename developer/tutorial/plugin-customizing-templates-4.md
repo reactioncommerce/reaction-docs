@@ -3,7 +3,7 @@
 If you have been following along exactly with this tutorial you may have noticed what we have accomplished so far,
 we have broken the site. Why? Because the layout we specified cannot be found. So let's add it now.
 
-Create the following directory strucutre under the `client` directory.
+Create the following directory structure under the `client` directory.
 (_Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)_)
 
 ```sh
