@@ -8,7 +8,7 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 ### How Reaction uses layouts
 
-Reaction Commerce uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
+Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
 
 ```js
 import React, { Component } from "react";
@@ -63,11 +63,6 @@ registerComponent({
 export default CoreLayoutBeesknees;
 
 ```
-
-<!-- A common mistake that people make is that they see `Template.dynamic template=layoutHeader` and assume they can change
-the name of the template there. In this context `layoutHeader` is **not** the name of the template but the name of the **variable**
-that contains the template. Changing the name here will break this functionality. It's confusing because the name of the variable
-and the name of the template here are the same so it's an easy mistake to make. -->
 
 In order to change our default layout, we need add a record to the **registry** for our package. We also need to add a special `defaults.js` that will add some global options.
 
