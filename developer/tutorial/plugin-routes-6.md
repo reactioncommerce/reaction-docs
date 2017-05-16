@@ -3,7 +3,7 @@
 In any web framework, "routes" are one of the core elements of what happens on a website. Certainly rendering content
 when a user hits a particular URL is a majority of what happens in web development.
 
-Reaction Commerce uses the [FlowRouter package](https://github.com/kadirahq/flow-router) for it's routing and discussing all the specifics of how this works is beyond the scope of this document. However, to add simple routes it's not necessary to understand that much about FlowRouter. One important element to understand is that Reaction Commerce stores all it's Routes in the "Registry" in the database, which allows packages to dynamically add routes along with their functionality, and even override or remove existing routers. For more in-depth coverage of Routing you will want to consult the main Reaction Commerce docs, but one thing to understand is that a customized version of FlowRouter is available globally as `Reaction.Router`.
+Reaction uses [React Router](https://reacttraining.com/react-router/) for it's routing and discussing all the specifics of how this works is beyond the scope of this document. However, to add simple routes it's not necessary to understand that much about React Router. One important element to understand is that Reaction stores all it's Routes in the "Registry" in the database, which allows packages to dynamically add routes along with their functionality, and even override or remove existing routers. For more in-depth coverage of Routing you will want to consult the main Reaction docs, but one thing to understand is that a customized version of React Router is available globally as `Reaction.Router`.
 
 But we are going to keep it at its most simple and just add a single new route which will be available to anybody. Bee's
 Knees wants to add the ubiquitous "About" page to their site and wants to show essentially a static page there.
@@ -25,7 +25,7 @@ This entry will look like this (placed after the `autoEnable: true` entry):
   ],
 ```
 
-The `route` entry is the URL that will match the users URL. (for how to include parameters in the route, please see the RC documentation or the FlowRouter documentation)
+The `route` entry is the URL that will match the users URL. (for how to include parameters in the route, please see the RC documentation or the React Router documentation)
 The `name` is the string by which you will refer to this route in other parts of the application. The `template` is the
 template that will be rendered when the route is visited, and the `workflow` defines which workflow this will be attached to.
 In our case, there is no real workflow around an about page so we use the default "coreWorkflow".

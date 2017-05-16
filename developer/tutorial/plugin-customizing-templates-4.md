@@ -3,63 +3,103 @@
 If you have been following along exactly with this tutorial you may have noticed what we have accomplished so far,
 we have broken the site. Why? Because the layout we specified cannot be found. So let's add it now.
 
-Create a directory under `client` called `templates` and then under that a directory called `layouts`.
+Create the following directory structure under the `client` directory.
 (_Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)_)
 
-Now let's create a file called `core.html` and add our template tags like this:
-
-```html
-<template name="coreLayoutBeesknees">
-</template>
+```sh
+client/
+└─┬index.js
+  └─┬templates/
+    └─┬layouts/
+      └─core.js
 ```
+
+**client/index.js**
 
 To make this template part of the project we need to import it, so we add it to the `index.js` at the root of the `client` directory (where we imported the LESS files). We add this line
 
 ```js
-import "./templates";
+// client/index.js
+import "./components";
 ```
+
+**client/templates/index.js**
 
 Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. _Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out_. So in `client/templates/index.js` we add
 
 ```js
-import "./layouts/core.html";
+// client/templates/index.js
+import "./layouts/core.js";
 ```
 
-(Could you just import this file directly into `client/index.js`? Yes. This is just my style.)
+**client/templates/layouts/core.js**
 
-Ok, still a blank site because we have nothing in our layout. Let's add back in our main section for now (between the beginning and ending `<template>` tags:
+Add the following to `core.js` to get the standard layout.
 
-```html
-  <main role="main" id="main">
-    <span id="layout-alerts">{{> inlineAlerts}}</span>
-    {{#if hasPermission 'guest'}}
-      <!-- begin template region -->
-      {{> Template.dynamic template=template}}
-      <!-- end template region -->
-    {{/if}}
+```js
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import Blaze from "meteor/gadicc:blaze-react-component";
+import { Template } from "meteor/templating";
+import { registerComponent } from "/imports/plugins/core/layout/lib/components";
 
-    <footer class="reaction-navigation-footer footer-default">{{> Template.dynamic template=layoutFooter}}</footer>
-  </main>
-```
+class CoreLayoutBeesknees extends Component {
+  static propTypes = {
+    actionViewIsOpen: PropTypes.bool,
+    data: PropTypes.object,
+    structure: PropTypes.object
+  }
 
-_If you want to restore the entire original layout including the header then add this section above the main section_
+  render() {
+    const { layoutHeader, layoutFooter, template } = this.props.structure || {};
+    const pageClassName = classnames({
+      "page": true,
+      "show-settings": this.props.actionViewIsOpen
+    });
 
-```html
-<nav class="reaction-navigation-header">
-  <!-- begin layoutHeader -->
-  {{> Template.dynamic template=layoutHeader}}
-  <!-- end layoutHeader -->
-</nav>
+    return (
+      <div className={pageClassName} id="reactionAppContainer">
+        { Template[layoutHeader] &&
+          <Blaze template={layoutHeader} className="reaction-navigation-header" />
+        }
 
-<nav class="reaction-cart-drawer">
-  {{>cartDrawer}}
-</nav>
+        <Blaze template="cartDrawer" className="reaction-cart-drawer" />
+
+        { Template[template] &&
+          <main>
+            <div className="rui beesknees">
+              <div className="bkdebug"><em>{"Bee's Knees layout"}</em></div>
+              <div className="bkdebug"><em>{"layoutHeader template:"}</em> {this.props.structure.layoutHeader}</div>
+              <div className="bkdebug"><em>{"layoutFooter template:"}</em> {this.props.structure.layoutFooter}</div>
+              <div className="bkdebug"><em>{"Main Template:"}</em> {this.props.structure.template}</div>
+            </div>
+            <Blaze template={template} />
+          </main>
+        }
+
+        { Template[layoutFooter] &&
+          <Blaze template={layoutFooter} className="reaction-navigation-footer footer-default" />
+        }
+      </div>
+    );
+  }
+}
+
+// Register component for it to be usable
+registerComponent({
+  name: "coreLayoutBeesknees",
+  component: CoreLayoutBeesknees
+});
+
+export default CoreLayoutBeesknees;
+
 ```
 
 See that line that says:
 
-```html
-{{> Template.dynamic template=template}}
+```js
+<Blaze template={template} />
 ```
 
 You may remember that when we created our layout entry there was a variable called `template` that was set to `products`.
@@ -78,7 +118,7 @@ Create a directory under `client/templates` called `products` and there create a
 
 _For the purposes of this tutorial we are just copying over the original template files from the `product-variant` plugin. You, of course, are creating a brand new, innovative way of displaying products._
 
-If you look at these templates you will see templates and sub-templates. Basically if you want use the default you can just references back to the orignal template by name, or you can change the name and create your own template. All templates go into a single global namespace and must be unique.
+If you look at these templates you will see templates and sub-templates. Basically if you want use the default you can just references back to the original template by name, or you can change the name and create your own template. All templates go into a single global namespace and must be unique.
 
 Oh, and let's not forget to import these files in our `index.js`.
 
@@ -99,6 +139,4 @@ Next: [Fixtures](/developers/tutorial/plugin-fixtures-5)
 
 ## Read More
 
-[Blaze Templates](http://blazejs.org/api/blaze.html)
-
-[Blaze Layout Manager](https://github.com/kadirahq/blaze-layout)
+[React](https://facebook.github.io/react/)
