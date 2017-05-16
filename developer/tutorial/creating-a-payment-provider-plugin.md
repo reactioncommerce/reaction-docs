@@ -1,16 +1,16 @@
-# Creating a Custom Payment Provider for Reaction Commerce
+# Creating a Custom Payment Provider
 
 ## What is a "Payment Provider"
 
 Payment Providers are companies that provide a gateway between ecommerce
 software customer payment. In the U.S. that largely means credit cards
-but it can also mean something like a Paypal account or in other parts
+but it can also mean something like a PayPal account or in other parts
 of the world it could mean cards linked to Kiosks or even BitCoin.
 Reaction doesn't really care what you do here, you could even not
 collect money at all it just puts that step as part of the workflow and
 then records the results.
 
-Included with the default version of Reaction Commerce is the Example
+Included with the default version of Reaction is the Example
 Payment provider. This plugin has two purposes. First to allow you to
 put through orders in your local dev system without signing up for a
 payment provider, secondly to provide a template for creating plugins
@@ -21,7 +21,7 @@ recorded since Reaction expects refunds to be recorded by the Payment Gateway.
 
 ## Introduction
 
-Payment Providers are implemented as "plugins". Reaction Commerce
+Payment Providers are implemented as "plugins". Reaction
 plugins are just Meteor modules with some additional configuration.
 
 ## Getting Started
@@ -126,21 +126,21 @@ require any parameters you may not need the `accountOptions` method but
 most payment methods should implement `authorize`, `capture`, `refund`,
 and `refunds`.
 
-- **authorize**
+-   **authorize**
 
 Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the **authorize** stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you **but no funds have been transferred**.
 
 To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount. Typically an autorization will expire after a set number of days. Usually you cannot capture more than you authorize but you can capture less and leave the balance still captured or release the balance. In a typical hard-goods shipment scenario an authorize will be performed at time of order then when the actual good are shipped a capture is performed.
 
-- **capture**
+-   **capture**
 
 As noted before, this will operate against a previously performed authorization and tell the payment processor to transfer the actual funds. Some payment processors allow you to authorize and capture in one step which is why the `authorize` method takes a `transactionType` parameter.
 
-- **refund**
+-   **refund**
 
 This method is probably self-explanatory, and is just a wrapper for whatever method your payment provider has for processing refunds.
 
-- **refunds**
+-   **refunds**
 
 This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 
@@ -176,7 +176,7 @@ files.
 Writing tests for code that is just a wrapper around third-party code is problematic. You don't want to test your
 providers code, but you want meaningful tests.
 
-The solution that we at Reaction Commerce have come up with is to create a wrapper around the third-party code. While
+The solution that we at Reaction have come up with is to create a wrapper around the third-party code. While
 this adds a little more complexity it allows you to seamlessly stub/mock out this library so that you aren't testing
 code that you have no control over and it prevents your test code from making calls out to a third party service every
 time you run your test. These tests won't take the place of actually testing your code from end to end (i.e. trying
