@@ -8,42 +8,61 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 ### How Reaction uses layouts
 
-Reaction Commerce uses one primary layout as the master or default called `coreLayout`. This layout is just another Blaze template. The code in this template is pretty minimal and you can see contains very little HTML. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
+Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
 
-```html
-<template name="coreLayout">
-  {{#if hasDashboardAccess}}
-    {{> coreAdminLayout}}
-  {{else}}
-    <nav class="reaction-navigation-header">
-      <!-- begin layoutHeader -->
-      {{> Template.dynamic template=layoutHeader}}
-      <!-- end layoutHeader -->
-    </nav>
+```js
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
+import Blaze from "meteor/gadicc:blaze-react-component";
+import { Template } from "meteor/templating";
+import { registerComponent } from "/imports/plugins/core/layout/lib/components";
 
-    <nav class="reaction-cart-drawer">
-      {{>cartDrawer}}
-    </nav>
+class CoreLayoutBeesknees extends Component {
+  static propTypes = {
+    actionViewIsOpen: PropTypes.bool,
+    data: PropTypes.object,
+    structure: PropTypes.object
+  }
 
-    <main role="main" id="main">
-      <span id="layout-alerts">{{> inlineAlerts}}</span>
-      {{#if hasPermission 'guest'}}
-        <!-- begin template region -->
-        {{> Template.dynamic template=template}}
-        <!-- end template region -->
-      {{/if}}
+  render() {
+    const { layoutHeader, layoutFooter, template } = this.props.structure || {};
+    const pageClassName = classnames({
+      "page": true,
+      "show-settings": this.props.actionViewIsOpen
+    });
 
-      <footer class="reaction-navigation-footer footer-default">{{> Template.dynamic template=layoutFooter}}</footer>
-    </main>
+    return (
+      <div className={pageClassName} id="reactionAppContainer">
+        { Template[layoutHeader] &&
+          <Blaze template={layoutHeader} className="reaction-navigation-header" />
+        }
 
-  {{/if}}
-</template>
+        <Blaze template="cartDrawer" className="reaction-cart-drawer" />
+
+        { Template[template] &&
+          <main>
+            <Blaze template={template} />
+          </main>
+        }
+
+        { Template[layoutFooter] &&
+          <Blaze template={layoutFooter} className="reaction-navigation-footer footer-default" />
+        }
+      </div>
+    );
+  }
+}
+
+// Register component for it to be usable
+registerComponent({
+  name: "coreLayoutBeesknees",
+  component: CoreLayoutBeesknees
+});
+
+export default CoreLayoutBeesknees;
+
 ```
-
-A common mistake that people make is that they see `Template.dynamic template=layoutHeader` and assume they can change
-the name of the template there. In this context `layoutHeader` is **not** the name of the template but the name of the **variable**
-that contains the template. Changing the name here will break this functionality. It's confusing because the name of the variable
-and the name of the template here are the same so it's an easy mistake to me.
 
 In order to change our default layout, we need add a record to the **registry** for our package. We also need to add a special `defaults.js` that will add some global options.
 
@@ -126,9 +145,13 @@ One important thing to understand is that at any point in time when RC goes to r
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step.
 It is essentially the "default" workflow when you hit the home page.
 
-Also note that we have other parts that we could substitute without
+Also note that:
+1. We have other parts that we could substitute without
 changing our layout. For example we change point our header or footer to
 a custom template by changing the values for "layoutHeader" or "layoutFooter".
+2. There is a `priority` field on layout objects (with a default value) of `999`. When RC goes to render a route/page
+(as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
+ used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
 
 Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4)
 

@@ -1,5 +1,2 @@
-# Meteor Up
-
-[Meteor Up](https://github.com/kadirahq/meteor-up) "**mup**" is a command line tool to deploy Meteor applications. It requires some simple configuration using `mup.json` and `settings.json`
-
-> Meteor Up (mup for short) is a command line tool that allows you to deploy any Meteor app to your own server. It supports only Debian/Ubuntu flavors and Open Solaris.
+# Mup (Meteor Up)
+**We do not support mup as a deployment method for Reaction Commerce. We recommend deploying using [Docker](https://docs.reactioncommerce.com/reaction-docs/master/deploying-reaction-using-docker)**

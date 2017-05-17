@@ -10,12 +10,11 @@ You'll find a selection of dashboard features, broken down into two sections, Ac
 
 ## Actions
 
-- Orders - Review and process orders. For more info, visit the [Orders](https://reactioncommerce.com/docs/master/orders) section.
-- Email - Manage your mail setup and view email logs.
+- Orders - Review and process orders. For more info, visit the [Orders](https://docs.reactioncommerce.com/reaction-docs/master/orders) section.
 - Accounts - Add, edit, and remove permissions for each of your shop members.
 
 ## Settings
-
+- Settings - Configure your shop's name, address, payment methods, and other settings.
 - Catalog - Enable or disable your product catalog view.
 - Localization and i18n - Configure language, timezone, and currency.
 - Payment - Manage payment methods and add discount codes.
@@ -25,6 +24,7 @@ You'll find a selection of dashboard features, broken down into two sections, Ac
 - Search - Configure your store's search settings.
 - SMS Notifications - Enable SMS notifications.
 - Social - Set your shop's Facebook, Twitter, Pinterest, and Google Plus accounts.
+- Email - Manage your mail setup and view email logs.
 - Login services - Enable or disable customer login via social media.
 - Template - Customize your email's messaging and look and feel.
 

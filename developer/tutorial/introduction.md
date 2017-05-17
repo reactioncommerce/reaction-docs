@@ -1,4 +1,4 @@
-# Customizing Reaction Commerce with Themes and Plugins
+# Customizing with Themes and Plugins
 
 ## Purpose
 

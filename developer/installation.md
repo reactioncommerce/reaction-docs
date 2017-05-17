@@ -1,6 +1,8 @@
 # Installation
 
-To install and run Reaction locally:
+Review and install the [Reaction requirements.](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
+
+To install and run Reaction locally in development mode:
 
 ```sh
 # install CLI
@@ -11,30 +13,32 @@ reaction init
 
 # move into the new app directory
 cd reaction
-
-# start Reaction
-reaction
-# or
-reaction run
 ```
-
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
-
-Sample data is loaded on a new installation from `private/data`.
-
-Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
-
-Developers using **Windows** should review the [Windows specific installation requirements for Meteor and Reaction](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
 
 ## reaction
 
 To start Reaction, run the `reaction` command
 
 ```sh
+# start Reaction
 reaction
+# or
+reaction run
 ```
 
+_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ ![](/assets/guide-installation-default-user.png)
+
+Sample data is loaded on a new installation from `private/data`. This can take some time depending on your system.
+
+Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
+
+To terminate `reaction` use `CTRL-c`.
+
+The `reaction` command line also accepts [Meteor command line options](http://docs.meteor.com/#/full/meteorhelp).
+
 `reaction` appends some commands to the default `meteor` command, it adds `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
+
+### reaction --help
 
 `reaction -h` will give you help for the `reaction` command.
 
@@ -43,23 +47,32 @@ reaction -h
 reaction <command> [options]
 
 Commands:
-  init    Create a new Reaction app (will create a new folder)
-  run     Start Reaction in development mode
-  debug   Start Reaction in debug mode
-  test    Run integration or unit tests
-  pull    Pull Reaction updates from Github and install NPM packages
-  update  Update Atmosphere and NPM packages
-  up      Update Atmosphere and NPM packages
-  reset   Reset the database and (optionally) delete build files
+  init      Create a new Reaction app (will create a new folder)
+  config    Get/set config values
+  run       Start Reaction in development mode
+  debug     Start Reaction in debug mode
+  test      Run integration or unit tests
+  pull      Pull Reaction updates from Github and install NPM packages
+  update    Update Atmosphere and NPM packages
+  up        Update Atmosphere and NPM packages
+  reset     Reset the database and (optionally) delete build files
+  plugins   Manage your Reaction plugins
+  styles    Manage your Reaction styles (css, less, stylus, scss)
+  build     Build a production Docker image
+  register  Register an account with Reaction
+  login     Login to Reaction
+  whoami    Check which account you are logged in as
+  keys      Manage your SSH keys
+  apps      Manage your apps deployments
+  deploy    Deploy an app
+  env       Manage environment variables for an app deployment
+  domains   Add a custom domain name to a deployment
+  open      Open an app deployment in your browser
+
+Options:
+  -v, --version  Show version number
+  -h, --help     Show help
 ```
-
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ ![](/assets/guide-installation-default-user.png)
-
-Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
-
-To terminate `reaction` use `CTRL-c`.
-
-The `reaction` command line also accepts [Meteor command line options](http://docs.meteor.com/#/full/meteorhelp).
 
 ## reaction pull
 

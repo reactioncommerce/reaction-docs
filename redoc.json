@@ -111,6 +111,12 @@
     "docPath": "developer/styleguide.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "community-channels",
+    "label": "Community",
+    "repo": "reaction-docs",
+    "docPath": "developer/community.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "contributing-to-reaction",
     "label": "Contributing",
     "repo": "reaction-docs",
@@ -187,12 +193,6 @@
     "label": "Completing your plugin",
     "repo": "reaction-docs",
     "docPath": "developer/tutorial/plugin-complete-10.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "plugin-customizing-templates-4",
-    "label": "Customizing Templates",
-    "repo": "reaction-docs",
-    "docPath": "developer/tutorial/plugin-customizing-templates-4.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "creating-a-payment-provider",
@@ -319,12 +319,6 @@
     "label": "Customize Email Templates",
     "repo": "reaction-docs",
     "docPath": "developer/themes/register-email.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "prerender",
-    "label": "Prerender",
-    "repo": "reaction-docs",
-    "docPath": "developer/architecture/prerender.md"
   }, {
     "class": "guide-nav-item",
     "alias": "themes",
@@ -524,6 +518,9 @@
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
+    "label": "Settings Card",
+    "docPath": "developer/components/settings-card.md"
+  }, {
     "label": "Popover",
     "docPath": "developer/components/popover.md"
   }, {
@@ -663,16 +660,10 @@
     "docPath": "developer/deploying.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-with-mup",
-    "label": "Mup",
+    "alias": "prerender",
+    "label": "Prerender",
     "repo": "reaction-docs",
-    "docPath": "developer/deploying/mup.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-on-galaxy",
-    "label": "Galaxy",
-    "repo": "reaction-docs",
-    "docPath": "developer/deploying/galaxy.md"
+    "docPath": "developer/architecture/prerender.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-using-docker",
@@ -681,14 +672,13 @@
     "docPath": "developer/deploying/docker.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-using-heroku",
-    "label": "Heroku",
+    "alias": "deploying-reaction-on-managed",
+    "label": "Managed",
     "repo": "reaction-docs",
-    "docPath": "developer/deploying/heroku.md"
+    "docPath": "developer/deploying/launchdock.md"
   }, {
     "class": "guide-nav-item",
     "alias": "guidelines",
-    "label": "Community guidelines",
     "repo": "reaction-docs",
     "docPath": "guidelines/guidelines.md"
   }, {

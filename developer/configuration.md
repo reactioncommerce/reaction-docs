@@ -12,7 +12,7 @@ Environment variables take priority over variables set in _settings.json_.
 
 You can also assign these variables before the `reaction` command.
 
-### REACTION_
+### REACTION\_
 
 The `REACTION_EMAIL`, `REACTION_USER`, `REACTION_AUTH` environment variables will configure the default administrator account.
 
@@ -39,20 +39,22 @@ Set the Reaction [logging level](/developer/architecture/logging.md). Defaults t
 Provide a [standard connection string for mongoDB](https://docs.mongodb.com/manual/reference/connection-string/).
 
 ```sh
-
 MONGO_URL=mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
-
 ```
 
 During development, mongoDB is installed and running locally, and can be accessed on the port above the http port.  Use [RoboMongo](https://robomongo.org/) and create a connection to `localhost:3001`, or `meteor mongo` on the CLI to access the local mongoDB instance. The default database is `meteor`.
 
 ### ROOT_URL
 
-_Export `ROOT_URL` and [packages/reaction-core/registry.js](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/registry.js) will update the domain in the `shops` collection to match the domain from `ROOT_URL`._ This lets you use alternate domains, or enforce SSL on a fresh installation. An empty ROOT_URL will just default to _localhost_.
+Export `ROOT_URL` and Reaction will update the domain in the `Shops` collection to match the domain from `ROOT_URL`. This lets you use alternate domains, or enforce SSL on a fresh installation. An empty `ROOT_URL` will just default to `localhost`.
 
 ### MAIL_URL
 
-To send email you should pre-configure the administrative SMTP email server. [env MAIL_URL variable](https://docs.meteor.com/api/email.html#Email-send).  The Reaction dashboard provides a UI for quick configuration of the email server as well.
+To send email you should pre-configure the administrative SMTP email server from `reaction.json` or using [env MAIL_URL variables](https://docs.meteor.com/api/email.html#Email-send).
+
+Reaction supports sending mail over SMTP; the `MAIL_URL` environment variable should be of the form `smtp://USERNAME:PASSWORD@HOST:PORT`.
+
+The Email dashboard provides a UI for quick configuration of the email server as well.
 
 ## Settings
 
@@ -193,15 +195,14 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
 
 _Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload._
 
-
 ## Default Data
 
 Reaction installs sample data, translations, and other fixture defaults from `/private/data/` and `/private/data/i18n` using the `Reaction.Import` class.
 
-- Products.json
-- Shipping.json
-- Shops.json
-- Tags.json
+-   Products.json
+-   Shipping.json
+-   Shops.json
+-   Tags.json
 
 You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
 
@@ -224,7 +225,6 @@ Meteor.startup(function () {
   Reaction.Import.flush();
 });
 ```
-
 
 ### loadSettings
 

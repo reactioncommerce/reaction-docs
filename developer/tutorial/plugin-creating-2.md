@@ -1,8 +1,8 @@
 # Creating Our Plugin
 
-## What is a Reaction Commerce Plugin?
+## What is a Reaction plugin?
 
-Essentially a Reaction Commerce plugin is just a "module". Going forward Meteor is moving away from their own proprietary
+Essentially a Reaction plugin is just a "module". Going forward Meteor is moving away from their own proprietary
 package format and towards [ES6 modules](http://exploringjs.com/es6/ch_modules.html). In order to future-proof RC we have
 adapted this approach as well. It also removes some of the "magic" that created global Meteor elements.
 It adds a little more boilerplate but makes up for it in clarity. Before moving forward you should have a
@@ -35,7 +35,6 @@ Reaction.registerPackage({
   icon: "fa fa-vine",
   autoEnable: true
 });
-
 ```
 
 It's important to understand that Registry entries are added upon first start, but they don't get reloaded if they already
