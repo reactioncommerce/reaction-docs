@@ -13,6 +13,8 @@ You'll find a selection of dashboard features, broken down into two sections, Ac
 - Orders - Review and process orders. For more info, visit the [Orders](https://docs.reactioncommerce.com/reaction-docs/master/orders) section.
 - Accounts - Add, edit, and remove permissions for each of your shop members.
 
+![Account Permission Screen](admin-dashboard-account-permission-screen.png)
+
 ## Settings
 - Settings - Configure your shop's name, address, payment methods, and other settings.
 - Catalog - Enable or disable your product catalog view.
