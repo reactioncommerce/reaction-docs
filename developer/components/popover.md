@@ -33,12 +33,7 @@ class MyReactComponent extends Component {
 
   render() {
     return (
-
-      <Popover
-        buttonElement={
-          <
-        }
-      >
+      <Popover>
         {"My Popover"}
       </Popover>
     )
