@@ -45,7 +45,7 @@ class MyReactComponent extends Component {
           selectLabel="Public"
           value="private"
         />
-      </Menu>
+      </DropDownMenu>
     )
   }
 };
