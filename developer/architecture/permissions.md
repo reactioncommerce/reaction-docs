@@ -52,7 +52,7 @@ Reaction.registerPackage({
 ```
 At the point where Packages are published in the app, each registry item permissions are collected and put on the
 package registry [(source)](https://github.com/reactioncommerce/reaction/blob/master/server/publications/collections/packages.js#L31-L56).
-Based on these permissions, restriction to certain functionalities can then be granted or prevented depending on user roles.
+Based on these permissions, we can enable or disable functionality depending on user roles.
 
 ## Owner
 
@@ -172,7 +172,7 @@ Helpers in template in templates:
 `/client/modules/core/helpers/permissions.js` exports the `hasPermission` helper.
 
 ## Reaction.Apps()
-This core helper method gets all package apps that matches the filter passed in. You can use as in the example below to
+This core helper method gets all package apps that match the filter passed in. You can use this as in the example below to
 get all enabled packages for payments.
 
 ```js
