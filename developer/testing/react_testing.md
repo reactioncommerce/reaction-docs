@@ -29,24 +29,41 @@ Enzyme has the capability to shallow render our components. When a component is 
 Getting started with enzyme: 
 
 ```
-import React from "react";
-import { shallow } from "enzyme";
+  import React from "react";
+  import Custom from "../Custom";
 
-describe("Shallow render component", () => {
-  it("asserts component is called at least once", () => {
-    const component = shallow(
-      <OrderSummary
-        dateFormat={dateFormat}
-        tracking={tracking}
-        profileShippingAddress={profileShippingAddress}
-        shipmentStatus={shipmentStatus}
-        printableLabels={printableLabels}
-        order={order}
-      />
-    );
-  }); 
-})
+  class Buzz extends React.Component {
+    render() {
+      return (
+        <div>
+          <Custom />
+          <div className="fizz"> Lorem ipsum ... </div>
+        </div>
+      );
+    }
+  }
 ```
+
+```
+  import React from "react";
+  import { shallow } from "enzyme";
+  import Buzz from "./Buzz";
+
+  describe("Shallow render component", () => {
+    it("asserts component is called at least once", () => {
+      const wrapper = shallow(<Buzz />);
+      expect(wrapper.find(Custom).length).toEqual(1);
+      expect(wrapper.find(".fizz").length).toEqual(1);    
+    }); 
+  })
+```
+
+*Steps 1*: Shallow render a component
+
+
+*Steps 2*: Traverse the shallow DOM searching for expected elements e.g. `div`, `li`, `a` ... tags
+
+*Steps 3*: Use methods provided by enzyme wrapper to make assertions. Find methods in the enzyme [docs](http://airbnb.io/enzyme/docs/api/shallow.html#shallow-rendering-api).
 
 ### Jest
 
@@ -61,17 +78,16 @@ These tests easily break but on the flip side are easy to update. Everytime you 
 Example snapshot: 
 
 ```
-  const component = shallow(
-    <OrderSummary
-      dateFormat={dateFormat}
-      tracking={tracking}
-      profileShippingAddress={profileShippingAddress}
-      shipmentStatus={shipmentStatus}
-      printableLabels={printableLabels}
-      order={order}
-    />
-  );
-
-  const tree = shallowToJSON(component);
-  expect(tree).toMatchSnapshot();
+  import React from "react";
+  import { shallow } from "enzyme";
+  import shallowToJSON from "enzyme-to-json";
+  import Buzz from "./Buzz";
+  
+  describe("Shallow render component", () => {
+    it("Buzz snapshot example", () => {
+      const component = shallow(<Buzz />);
+      const tree = shallowToJSON(component);
+      expect(tree).toMatchSnapshot();
+    }); 
+  })
 ```
