@@ -8,6 +8,20 @@ Reaction has testing set up for react components. Frameworks in place for these 
   
 The purpose of this section is to showcase how to write a few tests for components using the frameworks mentioned above.
 
+## Running tests
+
+To run tests:
+
+```sh
+  npm test
+```
+
+To update snapshots (must have jest installed globally on local machine): 
+
+```sh
+  jest -u
+```
+
 ## Unit Testing
 
 For every component we test **presentaion** and expected **behaviour**.
@@ -28,7 +42,7 @@ Enzyme has the capability to shallow render our components. When a component is 
 
 Getting started with enzyme: 
 
-```
+```js
   import React from "react";
   import Custom from "../Custom";
 
@@ -44,7 +58,7 @@ Getting started with enzyme:
   }
 ```
 
-```
+```js
   import React from "react";
   import { shallow } from "enzyme";
   import Buzz from "./Buzz";
@@ -77,7 +91,7 @@ These tests easily break but on the flip side are easy to update. Everytime you 
 
 Example snapshot: 
 
-```
+```js
   import React from "react";
   import { shallow } from "enzyme";
   import shallowToJSON from "enzyme-to-json";
