@@ -16,11 +16,20 @@ To run tests:
   npm test
 ```
 
-To update snapshots (must have jest installed globally on local machine): 
+To update snapshots (must have Jest installed globally on local machine): 
 
 ```sh
   jest -u
 ```
+
+With Jest installed locally you can run a bunch of other useful options. Find these options [here](https://facebook.github.io/jest/docs/cli.html).
+
+## Creating tests
+
+To create tests, create a file with the extension `*.test.js` or `*.spec.js`. When `npm test` is run no special instructions are needed for Jest to recognize the test files.
+
+Jest utilizes the **Jasmine assertion library** therefore the syntax of the tests will be very familiar to developers who've used Jasmine before.
+
 
 ## Unit Testing
 
@@ -105,3 +114,43 @@ Example snapshot:
     }); 
   })
 ```
+
+**Mocking**
+
+Jest has its own mocking capability. This will come in handy when testing modules that depend on other modules.
+
+You generate a Jest mock by:
+
+```js
+  const myMockFunc = jest.fn()
+```
+
+This mock function can be invocked as any other function, by default, it won't have a value.
+
+```js
+  console.log(myMockFunc) //undefined
+```
+
+Jest mock functions keep track of invocations. There are methods that you could use to inspect what happened when a component is rendered.
+
+For example: 
+You could check how many times a mock function was called.
+
+```js
+  const exampleFunction = jest.fn();
+  console.log(exampleFunction.mock.calls.length); // 0
+
+  exampleFunction("Buzz");
+  console.log(exampleFunction.mock.calls.length); // 1
+
+  exampleFunction("Fizz");
+  console.log(exampleFunction.mock.calls.length); // 2
+```
+
+Jest also has a mock generator for entire modules. We do this by calling the following method:
+
+```js
+  jest.mock("./exampleModule");
+```
+
+It will look into the `exampleModule` and notice that, for example, exampleModule exports an object with a method called `fruits()`. It then creates a fake object with a fruits() method thats a mock function. This fake exampleModule is then used everywhere in the tests as opposed to the real exampleModule.
