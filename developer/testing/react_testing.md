@@ -44,7 +44,7 @@ Assertions made include:
 
 **Shallow Rendering**
 
-Enzyme has the capability to shallow render our components. When a component is shallow rendered it is rendered only one level deep. Also it does not render to the actual DOM, it maintains a virtual representation of the DOM. So if the render function of your component contains children, those children wont actually be rendered. Instead the virtual DOM representation will contain references to unrendered child components.
+Enzyme has the capability to shallow render our components. When a component is shallow rendered it is rendered only one level deep. Also it does not render to the actual DOM, it maintains a virtual representation of the DOM. So if the render function of your component contains children, those children won't actually be rendered. Instead the virtual DOM representation will contain references to unrendered child components.
 
 - Allows us to test components in isolation, i.e. test parent components without worrying about children.
 - Its fast because there isn't much interaction with the actual DOM.
