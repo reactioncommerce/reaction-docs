@@ -636,6 +636,12 @@
     "docPath": "developer/testing/acceptance_testing.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "react-testing",
+    "label": "React Testing",
+    "repo": "reaction-docs",
+    "docPath": "developer/testing/react_testing.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "using-factories-for-testing",
     "label": "Factories",
     "repo": "reaction-docs",
