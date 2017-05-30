@@ -154,3 +154,5 @@ Jest also has a mock generator for entire modules. We do this by calling the fol
 ```
 
 It will look into the `exampleModule` and notice that, for example, exampleModule exports an object with a method called `fruits()`. It then creates a fake object with a fruits() method thats a mock function. This fake exampleModule is then used everywhere in the tests as opposed to the real exampleModule.
+
+For further mock implementations go through Jest mocking [docs](https://facebook.github.io/jest/docs/en/mock-function-api.html#content).
