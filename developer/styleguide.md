@@ -8,7 +8,8 @@ A couple of notable Reaction specific style rules:
 * Well spaced function
 * 160 character line length
 * `import` order
-  * npm packages
+  * React npm packages (`React`, `prop-types`, etc...)
+  * other npm packages
   * meteor core packages
   * meteor (Atmosphere) packages
   * local app files
