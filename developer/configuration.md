@@ -2,7 +2,7 @@
 
 Reaction can be configured on startup with a combination of environment variables, `settings/settings.json`, and default data files that provide package and shop pre-configuration.
 
-Reaction uses `/private/settings/reaction.json` for the configuration of Reaction packages and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
+Reaction uses `private/settings/reaction.json` for the configuration of Reaction packages and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
 ## Environment
 
