@@ -59,7 +59,9 @@ Property   | Type                    | Description
 ---------- | ----------------------- | ----------------------------------------------
 attachment | String                  | default value: `"top"`
 children   | Node                    | Menu items, preferably `MenuItem`
+className  | String, Object          | Custom class names can be a string, or object `{"class-name": true}`
 onChange   | Function                | Input change. `(event, value, menuItem) => {}`
+style      | Object                  | Custom style for menu
 value      | String, Boolean, Number | A `String`, `Boolean`, or `Number` value
 
 # Menu Item Props
@@ -74,6 +76,7 @@ eventAction          | String         | Adds `data-event-action="yourAction"` at
 i18nKeyLabel         | String         | Key for i18n translation for label
 i18nKeySelectedLabel | String         | Key for i18n translation for selected label (implementation required)
 icon                 | String         | Name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon
+iconStyle            | Object         | Custom style for icons displayed 
 label                | String         | Label for menu item
 onClick              | Function       | On menu item click. `(event, value, menuItem) => {}`
 selectionLabel       | String         | Selected label for menu button (implementation required)
