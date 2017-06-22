@@ -2,7 +2,7 @@
 
 To manage your shipping rates, click on the Shipping section, located on the right-hand sidebar.
 
-![](/assets/admin-dashboard.png "Reaction Commerce Dashboard")
+![](/assets/admin-dashboard-panel.png "Reaction Commerce Dashboard")
 
 Your store comes with three default shipping methods: free, standard, and priority. To edit any of these rates, click on the corresponding cogwheel icon. To delete a rate, click on the trash can icon.
 
