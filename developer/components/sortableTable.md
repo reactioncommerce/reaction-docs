@@ -15,35 +15,30 @@ import { SortableTable } from "/imports/plugins/core/ui/client/components";
 
 class MyReactComponent extends Component {
   render() {
-    const filteredFields = ["data.to", "updated", "data.subject", "status"];
-    const noDataMessage = i18next.t("admin.logs.noEmails");
+    const noDataMessage = i18next.t("admin.table.noDataMessage");
 
-    // helper adds a class to every grid row
-    const customRowMetaData = {
-      bodyCssClassName: () =>  {
-        return "email-grid-row";
-      }
-    };
-
-    // add i18n handling to headers
+    // add i18n handling to headers, and push other info to columns meta
+    const filteredFields = ["field1", "data.field2", "data.data2.subfield3", "field4"];
     const customColumnMetadata = [];
     filteredFields.forEach(function (field) {
       let colWidth = undefined;
       let colStyle = undefined;
       let colClassName = undefined;
 
-      if (field === "status") {
+      if (field === "data.data2.subfield3") {
         colWidth = 70;
         colStyle = { textAlign: "center" };
-        colClassName = "email-log-status";
+        colClassName = "subfield-special-class";
       }
 
       // https://react-table.js.org/#/story/cell-renderers-custom-components
       const columnMeta = {
         accessor: field,
         Header: i18next.t(`admin.logs.headers.${field}`),
+        // Cell is an optional field, that is extendable with Components.
+        // If not provided, it will default to provide the original field data
         Cell: row => (
-          <EmailTableColumn row={row} />
+          <ColumnCustomComponent row={row} />
         ),
         className: colClassName,
         width: colWidth,
@@ -58,12 +53,8 @@ class MyReactComponent extends Component {
         collection={MeteorCollection}
         columnMetadata={columnMetadata}
         matchingResultsCount="publication-count"
-        publication="MeteorPublication"
-
-
-        showFilter={true}
-        rowMetadata={customRowMetaData}
         noDataMessage={noDataMessage}
+        publication="MeteorPublication"
       />
     );
   }
@@ -92,4 +83,4 @@ publication          | String                    | provides publication to get M
 query                | Object                    | provides query for publication filtering
 transform            | Function                  | transform of collection for grid results
 
-While these are the props we use in each table, there are more props available at All available props: https://github.com/tannerlinsley/react-table#props
+SortableTable is a wrapper around ReactTable. If you'd like to extend the table further, more props are available on the [ReactTable GitHub page]( https://github.com/tannerlinsley/react-table#props).
