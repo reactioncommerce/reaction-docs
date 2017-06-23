@@ -31,4 +31,4 @@ Hit the green "Shipped" button to notify your customer of their order status thr
 
 Your order is now complete!
 
-![](/assets/admin-admin-dashboard-order-fulfillment-6.png "Reaction Commerce Orders")
+![](/assets/admin-dashboard-order-fulfillment-6.png "Reaction Commerce Orders")
