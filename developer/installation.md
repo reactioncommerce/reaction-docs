@@ -1,5 +1,7 @@
 # Installation
 
+[![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
+
 Review and install the [Reaction requirements.](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
 
 To install and run Reaction locally in development mode:
@@ -26,7 +28,9 @@ reaction
 reaction run
 ```
 
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ ![](/assets/guide-installation-default-user.png)
+_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
+
+![](/assets/guide-installation-default-user.png)
 
 Sample data is loaded on a new installation from `private/data`. This can take some time depending on your system.
 
