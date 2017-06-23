@@ -479,6 +479,9 @@
     "label": "Alerts",
     "docPath": "developer/components/alerts.md"
   }, {
+    "label": "Badge",
+    "docPath": "developer/components/badge.md"
+  }, {
     "label": "Button",
     "docPath": "developer/components/button.md"
   }, {
@@ -487,6 +490,9 @@
   }, {
     "label": "Checkbox",
     "docPath": "developer/components/checkbox.md"
+  }, {
+    "label": "Click To Copy",
+    "docPath": "developer/components/clickToCopy.md"
   }, {
     "label": "Divider",
     "docPath": "developer/components/divider.md"
