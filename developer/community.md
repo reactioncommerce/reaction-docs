@@ -30,6 +30,6 @@ Chat channels and meetings are open to all.
 | Components          | @mikemurray @kieckhafer | [reactioncommerce/components](https://gitter.im/reactioncommerce/components)       | Every 2 weeks on Tuesday 3PM Pacific      |
 | Deployment          | @jshimko                | [reactioncommerce/deployment](https://gitter.im/reactioncommerce/deployment)       | Every 2 weeks on Thursday 10AM Eastern    |
 | Design              | @rymorgan               | [reactioncommerce/design](https://gitter.im/reactioncommerce/design)               | Every 2 weeks on Wednesday 3PM Pacific    |
-| Documentation       | @sophiehe               | [reactioncommerce/documentation](https://gitter.im/reactioncommerce/documentation) | Monthly on the Fourth Tuesday 3PM Pacific |
+| Documentation       | @machikoyasuda               | [reactioncommerce/documentation](https://gitter.im/reactioncommerce/documentation) | Monthly on the Fourth Tuesday 3:30PM Pacific |
 | Marketplace         | @spencern               | [reactioncommerce/marketplace](https://gitter.im/reactioncommerce/marketplace)     | Every 2 weeks on Wednesday 7AM Pacific    |
 | Plugins             | @zenweasel @impactmass  | [reactioncommerce/plugins](https://gitter.im/reactioncommerce/plugins)             | Every 2 weeks on Tuesday 1 PM Pacific     |
