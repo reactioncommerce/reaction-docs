@@ -16,6 +16,9 @@ You'll find a selection of dashboard features, broken down into two sections, Ac
 ![Account Permission Screen](/assets/admin-dashboard-account-permission-screen.png)
 
 ## Settings
+
+![](/assets/admin-dashboard-panel.png "Reaction Commerce Dashboard")
+
 - Settings - Configure your shop's name, address, payment methods, and other settings.
 - Catalog - Enable or disable your product catalog view.
 - Localization and i18n - Configure language, timezone, and currency.
@@ -29,5 +32,3 @@ You'll find a selection of dashboard features, broken down into two sections, Ac
 - Email - Manage your mail setup and view email logs.
 - Login services - Enable or disable customer login via social media.
 - Template - Customize your email's messaging and look and feel.
-
-![](/assets/admin-dashboard-page-4.png "Reaction Commerce Dashboard")
