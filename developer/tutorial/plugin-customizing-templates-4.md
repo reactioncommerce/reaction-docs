@@ -139,10 +139,4 @@ Next: [Fixtures](/developers/tutorial/plugin-fixtures-5.md)
 
 ## Read More
 
-<<<<<<< HEAD
 [React](https://facebook.github.io/react/)
-=======
-[Blaze Templates](http://blazejs.org/api/blaze.html.md)
-
-[Blaze Layout Manager](https://github.com/kadirahq/blaze-layout.md)
->>>>>>> Fix hperlinks
