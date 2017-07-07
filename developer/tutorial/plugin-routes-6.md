@@ -86,10 +86,10 @@ Router.Hooks.onEnter("product", logSomeStuff);
 Now every time the user enters the "product" route, the function `logSomeStuff` will run. If you want to see a list
 of routes currently loaded on the client you type `ReactionRouter._routes` in the browser console.
 
-Next [Workflow](/developer/tutorial/plugin-workflow-7)
+Next [Workflow](/developer/tutorial/plugin-workflow-7.md)
 
 Read More
 
-[Routing](/developer/architecture/routing)
+[Routing](/developer/architecture/routing.md)
 
-[Hooks](/developer/core/hooks)
+[Hooks](/developer/core/hooks.md)

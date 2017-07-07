@@ -56,11 +56,11 @@ definition will override the built-in one and both forms and database inserts wi
 In order for this schema to be loaded however, you will need to add imports in the `index.js` files for both your
 plugin's `client` and `server`.
 
-Next: [Adding i18n](/developer/tutorial/plugin-i18n-9)
+Next: [Adding i18n](/developer/tutorial/plugin-i18n-9.md)
 
 ## Read More
 
-[Reaction Schemas](/developer/architecture/schemas)
+[Reaction Schemas](/developer/architecture/schemas.md)
 
 [Simple Schema](https://atmospherejs.com/aldeed/simple-schema)
 

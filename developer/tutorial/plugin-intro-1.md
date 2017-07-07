@@ -51,4 +51,4 @@ attempt is made to make functionality as modular as possible so that that things
 more than one plugin, possibly keeping things like CSS and the like in one plugin and other more backend functionality
 in another. Whatever makes the most sense to you.
 
-Next: [Creating a plugin](/developer/tutorial/plugin-creating-2)
+Next: [Creating a plugin](/developer/tutorial/plugin-creating-2.md)

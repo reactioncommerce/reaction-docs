@@ -35,27 +35,27 @@ should help you find them.
 
 ### How do I add routes?
 
-[Adding Custom Routes](/developer/tutorial/plugin-routes-6)
+[Adding Custom Routes](/developer/tutorial/plugin-routes-6.md)
 
 ### How do I change the layout?
 
-[Layouts](/developer/tutorial/plugin-layouts-3)
+[Layouts](/developer/tutorial/plugin-layouts-3.md)
 
 ### How do I change what templates are used or add my own custom templates?
 
-[Customizing Templates](/developer/tutorial/plugin-customizing-templates-4)
+[Customizing Templates](/developer/tutorial/plugin-customizing-templates-4.md)
 
 ### How do I customize schemas?
 
-[Schemas](/developer/tutorial/plugin-schemas-8)
+[Schemas](/developer/tutorial/plugin-schemas-8.md)
 
 ### How do I load custom data for products, etc?
 
-[Fixtures](/developer/tutorial/plugin-fixtures-5)
+[Fixtures](/developer/tutorial/plugin-fixtures-5.md)
 
 ### How do I change the checkout workflow?
 
-[Workflow](/developer/tutorial/plugin-workflow-7)
+[Workflow](/developer/tutorial/plugin-workflow-7.md)
 
 Or, the plugin tutorial is intended to be read from beginning to end. You can start here
 
