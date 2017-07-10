@@ -10,12 +10,12 @@ chat and on our forums.
 If you want to get even further into Reaction Commerce there are two additional tutorials that cover specific topics. The
 first is for if you want to add a specific payment provider that we do not currently support
 
-[Creating a Payment Provider Plugin](/developer/tutorial/creating-a-payment-provider-plugin)
+[Creating a Payment Provider Plugin](/developer/tutorial/creating-a-payment-provider-plugin.md)
 
 The second is an indepth-tutorial into how to write tests in Reaction Commerce and how to overcome some of the common
 challenges with testing.
 
-[Testing Tutorial](/developer/tutorial/testing-tutorial)
+[Testing Tutorial](/developer/tutorial/testing-tutorial.md)
 
 ## Getting Help
 

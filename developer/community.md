@@ -32,4 +32,4 @@ Chat channels and meetings are open to all.
 | Design              | @rymorgan               | [reactioncommerce/design](https://gitter.im/reactioncommerce/design)               | Every 2 weeks on Wednesday 3PM Pacific    |
 | Documentation       | @machikoyasuda               | [reactioncommerce/documentation](https://gitter.im/reactioncommerce/documentation) | Monthly on the Fourth Tuesday 3:30PM Pacific |
 | Marketplace         | @spencern               | [reactioncommerce/marketplace](https://gitter.im/reactioncommerce/marketplace)     | Every 2 weeks on Wednesday 7AM Pacific    |
-| Plugins             | @zenweasel @impactmass  | [reactioncommerce/plugins](https://gitter.im/reactioncommerce/plugins)             | Every 2 weeks on Tuesday 1 PM Pacific     |
+
