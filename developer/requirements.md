@@ -93,6 +93,18 @@ apt-get update
 apt-get install -y --no-install-recommends build-essential bzip2 curl ca-certificates git graphicsmagick python
 ```
 
+```sh
+# CentOS/RHEL
+
+# build tools
+yum groupinstall "Development Tools"
+
+# add "Extra Packages for Enterprise Linux" repository for GraphicsMagick
+yum install epel-release
+
+yum install GraphicsMagick
+```
+
 **Meteor**
 
 ```sh
