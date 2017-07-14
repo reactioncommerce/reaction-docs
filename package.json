@@ -20,7 +20,7 @@
     "lint-fix": "remark . -o"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
+    "eslint": "^4.2.0",
     "remark-cli": "^3.0.0",
     "remark-lint": "^6.0.0"
   }
