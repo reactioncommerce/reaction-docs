@@ -1,5 +1,7 @@
 # Shipping
 
+[![Tutorial: How To Configure Shipping in Reaction](/assets/guide-shipping-video-screenshot.png)](https://www.youtube.com/watch?v=fiR_kV1GBdg)
+
 To manage your shipping rates, click on the Shipping section, located on the right-hand sidebar.
 
 ![](/assets/admin-dashboard-panel.png "Reaction Commerce Dashboard")
