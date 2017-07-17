@@ -1,6 +1,6 @@
 # Installation
 
-[]![](/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
+[![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
 
 Review and install the [Reaction requirements.](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
 

@@ -76,10 +76,10 @@ have English loaded and even if you switch languages you still only have English
 those strings would show the translated version. This allows you to add new language support by just adding additional JSON
 files and calling `loadTranslations` on them.
 
-Next: [Final Thoughts](/developer/tutorial/plugin-complete-10)
+Next: [Final Thoughts](/developer/tutorial/plugin-complete-10.md)
 
 ## Read More
 
-[i18n](/developer/architecture/i18n)
+[i18n](/developer/architecture/i18n.md)
 
 [18next](http://i18next.com/)

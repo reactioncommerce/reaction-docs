@@ -69,7 +69,7 @@ you don't have a Shop with that ID the import will not work.
 Now you should have your fixtures ready to go. Remember that they need to be placed in the `private/data` directory
 at the root of the project to be imported automatically.
 
-Next: [Creating Custom Routes](/developer/tutorial/plugin-routes-6)
+Next: [Creating Custom Routes](/developer/tutorial/plugin-routes-6.md)
 
 ## Read More
 
