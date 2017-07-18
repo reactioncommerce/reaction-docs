@@ -1,5 +1,6 @@
 # Requirements
 
+<<<<<<< HEAD
 Reaction is built using [Meteor](https://meteor.com) and requires [Node.js](https://nodejs.org/) (v4 or higher).
 
 We recommend at least **2GB of memory** for Node and Reaction to run well.
@@ -9,16 +10,22 @@ We recommend at least **2GB of memory** for Node and Reaction to run well.
 ### Node.js and npm
 
 <https://nodejs.org>
+=======
+Reaction is built with [Meteor](https://meteor.com) and requires [Node](https://nodejs.org/), version 4.0 and higher. See the instructions installing the requirements for your operating system below.
 
-If you have node and npm already installed, install the [reaction-cli](https://www.npmjs.com/package/reaction-cli) from [npm](https://www.npmjs.com/).
+-   [OS X](#os)
+-   [Linux](#linux)
+-   [Windows](#windows)
+>>>>>>> update requirements for writing style
+
+If you have Node and npm already installed, install the [reaction-cli](https://www.npmjs.com/package/reaction-cli) with:
 
 ```sh
-# install CLI
 npm install -g reaction-cli
 ```
 
-`reaction -h` provides a list of commands.
 
+<<<<<<< HEAD
 ### Meteor
 
 `reaction-cli` will prompt you to install Meteor, if you have not already installed it.
@@ -28,16 +35,28 @@ curl https://install.meteor.com/ | sh
 ```
 
 ### Build Tools
+=======
+Check the list of commands with:
+```sh
+reaction -h
+```
+
+## OS X
+
+**Node**
+
+Follow the recommended installation instructions from [Node](https://nodejs.org).
+>>>>>>> update requirements for writing style
 
 **macOS**
 
-Install [Xcode](https://developer.apple.com/xcode/downloads/), then run `xcode-select --install`
+Install [XCode](https://developer.apple.com/xcode/downloads/) and then run `xcode-select --install`
 
 **File Limits**
 
-The Meteor development environment requires significantly more available files than are configured in macOS by default.
+The Meteor development environment requires significantly more available files than are configured in Mac by default.
 
-Without updating the available file limits you may see an error.
+Without updating the available file limits you may see this error:
 
     Error: ENFILE: too many open files, scandir '/Users/you/Documents/reaction/xxxx'
         at Error (native)
@@ -47,7 +66,7 @@ Without updating the available file limits you may see an error.
 
 See: <http://stackoverflow.com/a/27982223>
 
-Increase your file limits with these `terminal` commands.
+Increase your file limits with:
 
 ```sh
 echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
@@ -71,7 +90,25 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install git
 ```
 
+<<<<<<< HEAD
 ### Linux
+=======
+**ImageMagick (optional)**
+
+ImageMagick installation is optional, but is highly recommended for image resizing on upload.
+
+```sh
+brew install imagemagick
+```
+
+## Linux
+
+**Node.js**
+
+Follow the recommended installation instructions from [Node](https://nodejs.org).
+
+**Build Tools**
+>>>>>>> update requirements for writing style
 
 ```sh
 # Ubuntu/Debian
@@ -89,11 +126,19 @@ yum groupinstall "Development Tools"
 yum install epel-release  GraphicsMagick
 ```
 
+<<<<<<< HEAD
 ### Windows
+=======
+## Windows
+
+**Node.js**
+
+Follow the recommended installation instructions from [Node](https://nodejs.org).
+>>>>>>> update requirements for writing style
 
 **Windows Build Tools 2015**
 
-<https://github.com/felixrieseberg/windows-build-tools>
+Install [Window-Build-Tools](https://github.com/felixrieseberg/windows-build-tools) with:
 
 ```sh
 # requires admin privileges to install, open a command prompt as an Administrator
@@ -103,17 +148,30 @@ npm install -g windows-build-tools
 
 **Git**
 
-<https://github.com/git-for-windows/git/releases>
+Install [Git](https://github.com/git-for-windows/git/releases)
 
+<<<<<<< HEAD
 ## Optional
 
 ### ImageMagick
+=======
+**Meteor**
 
-ImageMagick installation is optional, but is highly recommended, as it is used for image resizing on upload.
+Install [Meteor](https://www.meteor.com/install)
 
+**ImageMagick (optional)**
+
+ImageMagick installation is optional, but is highly recommended for image resizing on upload.
+>>>>>>> update requirements for writing style
+
+Install [ImageMagick](https://www.imagemagick.org/script/binary-releases.php#windows)
+
+<<<<<<< HEAD
 **Windows**
 
 <https://www.imagemagick.org/script/binary-releases.php#windows>
+=======
+>>>>>>> update requirements for writing style
 
 **macOS**
 
@@ -140,7 +198,7 @@ Installing a local native compiled version of `bcrypt` is optional, but may yiel
 
 No database is bundled with production deployments, so when using a production build or a standalone [MongoDB](https://www.mongodb.org/) server, make sure you are using **version 3.2** or higher.
 
-Database connections can be defined as an environment variable.
+Database connections can be defined as an environment variable:
 
 ```sh
 MONGO_URL=mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
