@@ -1,13 +1,11 @@
-# Style Guide
+# Code Style Guide
 
-Our rules are similar to AirBnB or Meteor rules, although we have tweaked them a little with what is working best for us.
-
-A couple of notable Reaction specific style rules:
+Reaction's code style guides are similar to AirBnB or Meteor's rules, although we have a few notable differences:
 
 * Double-quoted strings
 * Well-spaced functions
 * 160 character line-length
-* `import` order
+* Place `import`s in the following order:
   * React npm packages (`React`, `prop-types`, etc...)
   * other npm packages
   * Meteor core packages
@@ -16,60 +14,37 @@ A couple of notable Reaction specific style rules:
 
 Read more about [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines
 
-## Editor Configuration
+## Configuring your editor
 
-In the Reaction app root, we have Reaction specific configuration files that can be used with most editors with the appropriate tools installed.
+At Reaction, we use [Atom](http://atom.io) with [Atom Linter](https://atom.io/users/AtomLinter) packages that support the linting and code formatting rules configured with Reaction: [ESLint](https://eslint.org/), [JS Beautifier](https://jsbeautifier.org/) and [EditorConfig](https://editorconfig.org/).
 
-* [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - [http://eslint.org/](https://eslint.org/)
-* [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - [http://jsbeautifier.org/](https://jsbeautifier.org/)
-* [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - [http://editorconfig.org/](https://editorconfig.org/)
-
-These configurations also include additional rules supporting [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and [React](https://github.com/facebook/react).
-
-### Atom
-
-We've been using GitHub's open source code editor, [Atom](https://atom.io/), for some time now and recommend it.
-
-Use this command to set up Atom with the [linting packages](https://atom.io/users/AtomLinter) that we use for Reaction:
+If you use Atom, you can install all the recommended linting tools by running:
 
 ```sh
 apm install editorconfig atom-beautify linter linter-eslint linter-markdown linter-jsonlint linter-docker
 ```
 
-### Lint
+You can find all the rules for these tools in their respective configuration files:
+* [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - for linting rules for [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and [React](https://github.com/facebook/react)
+* [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - for reformatting JavaScript files
+* [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - for general editor configuration
 
-Reaction installs [`eslint`](https://eslint.org/), [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react) and [`babel-eslint`](https://github.com/babel/babel-eslint) from [npm](https://www.npmjs.com/) as development dependencies for JavaScript linting.
 
-For more details, see the [ESLint Getting Started Guide](http://eslint.org/docs/user-guide/getting-started) and check the Reaction [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) configuration file for the linting options and rules.
 
-### Markdown
+## Naming things
 
-In our documentation, we use [`remark-lint`](https://github.com/wooorm/remark-lint) to ensure consistent Markdown styling.
+In general, use hyphens (`-`) and camelCase for names of folders, and camelCase for names of files. Don't use underscores (`_`).
 
-### Pull requests
+Not all operating systems are case sensitive, so make sure to avoid having two files named the same with differing case.
 
-Pull request branches are evaluated using [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) for insecure dependencies and code quality.
+#### Naming folders and plugins
 
-* must pass a linting check - _no errors_ are accepted.
-* must pass a dependency check and no priority packages are accepted.
-* must pass `reaction test`
-
-In many cases, documentation updates can be required as well.
-
-Pull requests are submitted to a peer code review process before acceptance.
-
-### Naming files and folders
-
-In general we use hyphens (-) and camelCase for folder names, and camelCase alone for file names. Do not use underscores (_) for file or folder names, unless expressly required. Be aware that not all operating systems are case sensitive, so make sure to avoid having two files named the same with differing case.
-
-#### Folder names
-
-**Good**
+**Do**
 
 * Start with a lowercase letter
 * Use alphanumeric characters
-* For plugins: Use hyphens to join more than one word
-* For all other folders: Use camelcase to join more than one word
+* For plugins: Use hyphens to concatenate
+* For all other folders: Use camelcase to concatenate
 
 ```
 // Plugins in /imports/plugins
@@ -85,9 +60,9 @@ addressBook/
 
 ```
 
-**Bad**
+**Don't**
 
-* Do not use underscores
+* Don't use underscores
 * Do use hyphens to make names easier to read
 
 ```
@@ -95,14 +70,14 @@ reactionpackagename/
 address_book/
 ```
 
-#### File names
+#### Naming files
 
-**Good**
+**Do**
 
 * Start with a lowercase letter
 * Use alphanumeric characters
-* Use camelcase to join more than one word
-* Use multiple (.) characters as needed
+* Use camelcase to concatenate
+* Use multiple (`.`) characters as needed
 
 ```
 index.js
@@ -114,13 +89,27 @@ bootstrap.rtl.js
 addressBook.app-test.js
 ```
 
-**Bad**
+**Don't**
 
-* Do not use hyphens (-) and underscores (_) unless expressly required
-* Exception: Meteor's migration and testing filenames for `*.app-test.js` files. 
+* Don't use hyphens (`-`) and underscores (`_`) unless explicitly required.
+* Exception: Meteor's migration and testing filenames, like `*.app-test.js`
 
 ```
 settings_container.js
 publish-container.js
 address_book.js
 ```
+
+
+## Submitting pull requests
+
+First of all, thank you for contributing to Reaction! We use  [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) to check all incoming pull requests for insecure dependencies and code quality.
+
+
+* must pass all linting rules
+* must pass a dependency check and no priority packages are accepted.
+* must pass `reaction test`
+
+In many cases, documentation updates can be required as well.
+
+Pull requests are submitted to a peer code review process before acceptance.
