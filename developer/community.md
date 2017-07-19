@@ -23,9 +23,9 @@ Specific features in progress are found grouped on the [Reaction repository's mi
 Reaction projects can have both @core leads as well as community leads.
 Chat channels and meetings are open to all. Here's our [Reaction Community Google Calendar](http://getrxn.io/2rcCal) with all of the meetings and Reaction Action events.
 
-| Name                | Leads                   | Gitter Channel                                                                     | [Schedule](http://getrxn.io/2rcCal)       |
+| Name                | Leads                   | Gitter Channel                                                                     | Schedule       |
 | ------------------- | ----------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------- |
-| Connectors, Catalog | @aaronjudd @jshimko     | [reactioncommerce/catalog](https://gitter.im/reactioncommerce/catalog)             | Every 2 weeks on Wednesday 2PM Pacific    |
+| Connectors, Catalog | @aaronjudd @jshimko     | [reactioncommerce/connectors](https://gitter.im/reactioncommerce/connectors)             | Every 2 weeks on Wednesday 2PM Pacific    |
 | Core                | @aaronjudd              | [reactioncommerce/core](https://gitter.im/reactioncommerce/core)                   | Every 2 weeks on Wednesday 2PM Pacific    |
 | Components          | @mikemurray @kieckhafer | [reactioncommerce/components](https://gitter.im/reactioncommerce/components)       | Every 2 weeks on Tuesday 3PM Pacific      |
 | Deployment          | @jshimko                | [reactioncommerce/deployment](https://gitter.im/reactioncommerce/deployment)       | Every 2 weeks on Thursday 10AM Eastern    |
