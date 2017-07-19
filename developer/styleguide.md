@@ -6,11 +6,11 @@ Reaction's code style guides are similar to AirBnB or Meteor's rules, although w
 * Well-spaced functions
 * 160 character line-length
 * Place `import`s in the following order:
-  * React npm packages (`React`, `prop-types`, etc...)
-  * other npm packages
-  * Meteor core packages
-  * Meteor (Atmosphere) packages
-  * local app files
+  1. React npm packages (`React`, `prop-types`, etc...)
+  2. other npm packages
+  3. Meteor core packages
+  4. Meteor (Atmosphere) packages
+  5. local app files
 
 Read more about [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines
 
