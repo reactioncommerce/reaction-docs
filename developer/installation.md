@@ -23,44 +23,40 @@ Meteor NPM: 4.6.1
 Reaction CLI: 0.11.0
 ```
 
-## Starting `reaction`
+## Creating your first `reaction` project
 
-Now you're ready to start your Reaction project.
+Now you're ready to run Reaction locally.
 
 ```sh
 # Create a new Reaction app and install dependencies
-$ reaction init
+$ reaction init my-store
 
 # Change directory to your app
-$ cd reaction
+$ cd my-store
 
 # start Reaction
-$ reaction run
+$ reaction
 ```
 
 The initial installation loads sample data from `private/data`. It might take a while.
 
 Once you see `App running at:` in the console, point your browser to  [http://localhost:3000](https://localhost:3000).
 
-Congrats! You have your first Reaction shop running locally.
+Congrats 🎉   You now have your first Reaction project running locally.
 
-To stop running `reaction`, use <kbd>CTRL</kbd>+<kbd>c</kbd>.
-
-💡 **Tip!** Use `reaction` or `rc` as a shortcut for `reaction run`
+💡 **Tip!** Use `reaction` or `rc` as a shortcut for `reaction run`. Stop running with <kbd>CTRL</kbd>+<kbd>c</kbd>.
 
 ## What's next?
 
-#### Save the admin user credentials
+#### Save the admin user password
 
 Reaction creates an initial admin user. Remember to keep the email and password printed in the console to test admin features:
 
-![](/assets/guide-installation-default-user.png)
+![](/assets/reaction-guide-installation-default-user.png)
 
 #### Create a settings.json
 
-Reaction provides you a `settings/dev.settings.json` file  and is configured to use that file by default.
-
-To configure your own settings, create a `settings/settings.json`.
+Reaction provides you a [`settings/dev.settings.json`](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json) file, which is configured by default. Add your own settings to this file and rename the file to `settings/settings.json`.
 
 #### And more:
 See the [package development documentation](/developer/packages/packages.md) and the [settings and import documentation](/developer/core/import.md) for detailed instructions on modifying initial fixture data.
