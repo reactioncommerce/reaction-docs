@@ -12,7 +12,7 @@ When successful, Docker images are also pushed to [Docker Hub](https://hub.docke
 
 Automated duplication, security, style review using Code Climate.
 
-Follows project `eslint` and [style guide](/developer/styleguide.md) guide.
+Follows project `eslint` and [Reaction style guide](/developer/styleguide.md).
 
 ## Code Review
 
