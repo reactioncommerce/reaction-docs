@@ -135,7 +135,8 @@ import { Translatable } from "/imports/plugins/core/ui/client/providers";
 ### React
 
 ```javascript
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 ```
 
 ### Utils
