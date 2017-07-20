@@ -11,7 +11,8 @@ import { Slider } from "/imports/plugins/core/ui/client/components";
 ## Usage Example
 
 ```javascript
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Slider } from "/imports/plugins/core/ui/client/components";
 
 class MyComponent extends Component {
@@ -45,14 +46,14 @@ export default MyComponent;
 
 ## Props
 
-Property | Type     | Description
--------- | -------- | --------------------------------------------------------------------------------------
-range    | Object   | `{ min: Number, max: Number }`
-start    | Array    | Start point for handles
-margin   | Number   | Margin between handles
-connect  | Boolean  | Display a colored bar between the handles
-step     | Number   | Amount to move handles when dragging
-onChange | Function | Callback when slider changed<br>`(values, handle, unencoded, tap, positions) => {}`
-onSlide  | Function | Callback when slider is changing<br>`(values, handle, unencoded, tap, positions) => {}`
+| Property | Type     | Description                                                                             |
+| -------- | -------- | --------------------------------------------------------------------------------------- |
+| range    | Object   | `{ min: Number, max: Number }`                                                          |
+| start    | Array    | Start point for handles                                                                 |
+| margin   | Number   | Margin between handles                                                                  |
+| connect  | Boolean  | Display a colored bar between the handles                                               |
+| step     | Number   | Amount to move handles when dragging                                                    |
+| onChange | Function | Callback when slider changed<br>`(values, handle, unencoded, tap, positions) => {}`     |
+| onSlide  | Function | Callback when slider is changing<br>`(values, handle, unencoded, tap, positions) => {}` |
 
 More props at <https://refreshless.com/nouislider/>
