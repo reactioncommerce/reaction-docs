@@ -106,7 +106,7 @@ class MyCustomDropdown extends React.Component {
 replaceComponent("MainDropdown", MyCustomDropdown);
 ```
 
-You can also add additional HOC's when replacing a UI component. The final wrapped component will inherit the original HOC's and also add your new HOC(s) in addition. For example, we can add the `withIsAdmin` HOC to our custom dropdown:
+You can also add additional HOC's when replacing a UI component. The final wrapped component will inherit the original HOC's and also add your new HOC(s). For example, we can add the `withIsAdmin` HOC to our custom dropdown:
 
 ```js
 const MyCustomDropdown = ({ currentUser, isAdmin }) => (
