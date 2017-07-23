@@ -124,11 +124,11 @@ const MyCustomDropdown = ({ currentUser, isAdmin }) => (
 replaceComponent("MainDropdown", MyCustomDropdown, withIsAdmin);
 ```
 
-As you can see above, the `withCurrentUser` HOC was inherited from the original dropdown and we've added the `withIsAdmin` to it.
+As you can see above, the `withCurrentUser` HOC was inherited from the original dropdown and we've added the `withIsAdmin` HOC to it.
 
 ## Extending Components
 
-For components that are defined as ES6 classes, you can optionally `extend` the original component instead of completely replacing it. This will let you choose which class methods you actually need to replace, while inheriting the ones that you don't overwrite in your new component.
+For components that are defined as ES6 classes, you can optionally `extend` the original component instead of completely replacing it. This will let you choose which class methods you actually need to replace while inheriting the ones that you don't overwrite in your new component.
 
 In order to retrieve the original UI component that you want to extend, we use the `getRawComponent` method:
 
@@ -150,7 +150,7 @@ class MyCustomDropdown extends MainDropdown {
 replaceComponent("MainDropdown", MyCustomDropdown);
 ```
 
-In the example above, all of the original class methods and state handlers that exist in the `MainDropdown` class will still be available and the only customization will be on the methods that you specifically define (the `render()` method in this example). This is extremely helpful if you only want to change one small detail about complex component, but you don't want to have to rewrite the entire thing from scratch.
+In the example above, all of the original class methods and state handlers that exist in the `MainDropdown` class will still be available and the only customization will be on the methods that you specifically define (the `render()` method in this example). This is extremely helpful if you only want to change one small detail about a complex component, but you don't want to have to rewrite the entire component from scratch.
 
 # API
 
