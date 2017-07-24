@@ -2,6 +2,8 @@
 
 Most of the React components in the Reaction UI can be replaced or extended with the API outlined here. This allows anyone to create a custom plugin that can easily change the look of the UI and/or extend its functionality without having to edit core Reaction code.
 
+[See Full API docs below](#api).
+
 ## Using Reaction Components
 
 A large percentage of the React components in the Reaction UI have been registered and can be imported into your own components like this:
