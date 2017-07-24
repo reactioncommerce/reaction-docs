@@ -357,9 +357,7 @@ const MyComponent = (props) => (
   </div>
 );
 
-const MyComponentWithHOCs = copyHOCs("SomeComponent");
-
-registerComponent("MyComponent", MyComponentWithHOCs)
+const MyComponentWithHOCs = copyHOCs("SomeExistingComponent", MyComponent)
 ```
 
 ### loadRegisteredComponents()
