@@ -312,14 +312,14 @@ class MyCustomNavbar extends NavBar {
 
 ### registerHOC()
 
-It is generally recommended that you register any higher order components at the same time you register your presentational components, but this method exists so that you have the option to only register a HOC and leave the UI component alone. Not that this _adds_ your HOC's and does **not** replace the existing ones.
+It is generally recommended that you register any higher order components at the same time you register your presentational components, but this method exists so that you have the option to only register a HOC and leave the UI component alone. Note that this _adds_ your HOC's and does **not** replace the existing ones.
 
 Considering that a HOC injects things on props, this method will not be likely be useful for most cases (since you have to update the UI component to use the new props). However, one valid use case for this is render highjacking. For example, you might add a HOC that decides whether to render the child component based on conditions outside of the component. In that case, the UI component doesn't need to do anything with props.
 
 ```js
 import { registerHOC } from "@reactioncommerce/reaction-components";
 
-function withConditionalRender() {
+function withConditionalRender(component) {
   // some logic that decides whether to render the child component
 }
 
