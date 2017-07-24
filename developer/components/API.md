@@ -154,6 +154,218 @@ In the example above, all of the original class methods and state handlers that 
 
 # API
 
-Below is the full API for the Reaction components system.
+Below is the full API for the Reaction components system. Each of these items can be imported from `@reactioncommerce/reaction-components`.
 
-...
+- [`Components`](#components)
+- [`ComponentsTable`](#componentstable)
+- [`registerComponent()`](#registercomponent)
+- [`replaceComponent()`](#replacecomponent)
+- [`getComponent()`](#getcomponent)
+- [`getRawComponent()`](#getrawcomponent)
+- [`registerHOC()`](#registerhoc)
+- [`getHOCs()`](#gethocs)
+- [`copyHOCs()`](#copyhocs)
+- [`loadRegisteredComponents()`](#loadregisteredcomponents)
+
+### Components
+
+This is the main `Components` object where all of the wrapped registered components finally end up. You use this to import and add a component to the UI.
+
+```js
+import { Components } from "@reactioncommerce/reaction-components";
+
+class MyCustomComponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <Components.Button>
+          Click!
+        </Components.Button>
+      </div>
+    )
+  }
+}
+
+// or if you prefer...
+
+const { Button } = Components;
+
+class MyCustomComponent extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button>
+          Click!
+        </Button>
+      </div>
+    )
+  }
+}
+```
+
+### ComponentsTable
+
+This is where all of the separate pieces of a component are stored. You will likely never need to access this object directly because the methods below provide a way to access every item in the object in a simple way.
+
+The structure of a single component in the table looks like this:
+
+```js
+ComponentsTable.MyComponent = {
+   name: "MyComponent",
+   hocs: [fn1, fn2],
+   rawComponent: MyComponent
+}
+```
+
+Again, this is just for reference, use the methods below to get/set whatever you need from that table.
+
+### registerComponent()
+
+```js
+import { registerComponent } from "@reactioncommerce/reaction-components";
+
+const MyComponent = (props) => (
+  <div>
+    stuff...
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent);
+```
+
+or the same thing, but with a few HOC's
+
+```js
+import { registerComponent, withCurrentUser, withIsAdmin } from "@reactioncommerce/reaction-components";
+
+const MyComponent = ({ currentUser, isAdmin }) => (
+  <div>
+    ID: {currentUser._id}
+    name: {currentUser.name}
+    {isAdmin &&
+      <div>
+        Top Secret Stuff!
+      </div>
+    }
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent, [
+  withCurrentUser,
+  withIsAdmin
+]);
+```
+
+### replaceComponent()
+
+```js
+import { replaceComponent } from "@reactioncommerce/reaction-components";
+
+const MyCustomComponent = (props) => (
+  <div>
+    custom stuff...
+  </div>
+);
+
+replaceComponent("MyComponent", MyCustomComponent);
+```
+
+### getComponent()
+
+This is functionally equivalent to importing `Components` like we did above and using `<Components.SomeName>` to use a component. The obvious tradeoff is you can only get one component at a time.
+
+```js
+import { getComponent } from "@reactioncommerce/reaction-components";
+
+const Button = getComponent("Button");
+
+const MyComponent = (props) => (
+  <div>
+    <Button>
+      Click!
+    </Button>
+  </div>
+);
+```
+
+### getRawComponent()
+
+This gets the plain UI/presentational component without any HOC's wrapping it. The use case for this is when the original component is an ES6 class and you want to extend it instead of replacing it. See [extending components](#extending-components) above.
+
+```js
+import { getRawComponent } from "@reactioncommerce/reaction-components";
+
+const NavBar = getRawComponent("NavBar");
+
+class MyCustomNavbar extends NavBar {
+  render() {
+    return (
+      <div>
+        customized render method...
+      </div>
+    )
+  }
+}
+```
+
+### registerHOC()
+
+It is generally recommended that you register any higher order components at the same time you register your presentational components, but this method exists so that you have the option to only register a HOC and leave the UI component alone. Not that this _adds_ your HOC's and does **not** replace the existing ones.
+
+Considering that a HOC injects things on props, this method will not be likely be useful for most cases (since you have to update the UI component to use the new props). However, one valid use case for this is render highjacking. For example, you might add a HOC that decides whether to render the child component based on conditions outside of the component. In that case, the UI component doesn't need to do anything with props.
+
+```js
+import { registerHOC } from "@reactioncommerce/reaction-components";
+
+function withConditionalRender() {
+  // some logic that decides whether to render the child component
+}
+
+registerHOC("SomeComponent", withConditionalRender);
+```
+
+### getHOCs()
+
+This gets the array of higher order components from an existing component. One possible use case it to use a set of HOC's on another component. However, depending on your use case, `copyHOCs` (see below) may be a better fit.
+
+```js
+import { getHOCs, registerComponent } from "@reactioncommerce/reaction-components";
+
+const SomeComponentHOCs = getHOCs("SomeComponent");
+
+const MyComponent = (props) => (
+  <div>
+    ...
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent, SomeComponentHOCs)
+```
+
+### copyHOCs()
+
+Similar to `getHOCs` above, except this takes the higher order components from another component and wraps a new component that you provide.
+
+```js
+import { copyHOCs, registerComponent } from "@reactioncommerce/reaction-components";
+
+const MyComponent = (props) => (
+  <div>
+    ...
+  </div>
+);
+
+const MyComponentWithHOCs = copyHOCs("SomeComponent");
+
+registerComponent("MyComponent", MyComponentWithHOCs)
+```
+
+### loadRegisteredComponents()
+
+Used to wrap/load all registered components on app startup. This generally should be run right before the router assembles the app tree so that all components are available for the UI. This is run by Reaction internally, so no third parties should ever need to use it.
+
+```js
+import { loadRegisteredComponents } from "@reactioncommerce/reaction-components";
+
+Meteor.startup(() => loadRegisteredComponents());
+```
