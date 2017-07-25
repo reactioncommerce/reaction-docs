@@ -1,8 +1,12 @@
 # UI Components
 
-Reaction UI components using Blaze and React.
+Reaction UI components use Blaze and React.
 
-## Component StyleGuide
+## Reaction Components API
+
+Most of the React components can be replaced or extended using our API. Learn more about our [Reaction Components API](/developer/components/API.md).
+
+## Component Style Guide
 
 Below is a basic example of how a component should look. Components should be reusable without any dependencies on Meteor, database, session, trackers, composeWithTracker or redux connect if possible. There are a few exceptions, however, fetching from the database is best served from a higher order component.
 
