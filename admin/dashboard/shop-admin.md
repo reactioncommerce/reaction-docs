@@ -1,0 +1,12 @@
+# Shop settings
+
+Click on the **Shop** icon to manage the following shop settings:
+
+- **Shop name** - Change shop name
+- **Shop email** - Change shop email
+- **Description** - Add shop description
+- **Keywords** - Add shop keywords
+- **Shop address** - Set default shipping and billing addresses
+- **Brand logo** - Upload and manage brand logos, displayed in the navigation bar by default
+- **Guest checkout** - Enable or disable Guest checkout
+- **[Open Exchange](https://openexchangerates.org/)** - Integrate currency exchange API

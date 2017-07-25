@@ -140,7 +140,7 @@ const path = Router.path(pathDef, params, queryParams);
 console.log(path); // prints "/blog/met%20eor/abc?show=y%2Be%3Ds&color=black"
 ```
 
-If there are no params or queryParams, this will simply return the pathDef as it is.
+If there are no params or queryParams, this will return the pathDef as it is.
 
 #### Using Route name instead of the pathDef
 
@@ -220,7 +220,7 @@ Tracker.autorun(function() {
 
 ### Router.current()
 
-Get the current state of the router. **This API is not reactive**. If you need to watch the changes in the path simply use `Router.watchPathChange()`.
+Get the current state of the router. **This API is not reactive**. If you need to watch the changes in the path use `Router.watchPathChange()`.
 
 This gives an object like this:
 

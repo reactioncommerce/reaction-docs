@@ -13,66 +13,114 @@
     "repo": "reaction-docs",
     "docPath": "index.md",
     "default": true
-  }, {
-    "class": "guide-sub-nav-item",
+  },{
+    "class": "guide-nav-item",
     "alias": "dashboard",
-    "label": "Dashboard",
+    "label": "Store Operator's Guide",
     "repo": "reaction-docs",
     "docPath": "admin/dashboard.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "login-services",
-    "label": "Login Services",
-    "repo": "reaction-docs",
-    "docPath": "admin/login-services.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "email",
-    "label": "Email",
-    "repo": "reaction-docs",
-    "docPath": "admin/email.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "tags",
-    "label": "Navigation Tags",
-    "repo": "reaction-docs",
-    "docPath": "admin/tags.md"
-  }, {
+  },{
     "class": "guide-sub-nav-item",
     "alias": "products",
-    "label": "Product Management",
+    "label": "Products",
     "repo": "reaction-docs",
     "docPath": "admin/products.md"
-  }, {
+  },{
     "class": "guide-sub-nav-item",
-    "alias": "admin-revisions",
-    "label": "Revision Control",
+    "alias": "navigation-bar-and-grid",
+    "label": "Navigation and Product tags",
     "repo": "reaction-docs",
-    "docPath": "admin/revisions.md"
+    "docPath": "admin/navigation-bar-and-grid.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "orders",
-    "label": "Order Processing",
+    "alias": "orders-admin",
+    "label": "Orders",
     "repo": "reaction-docs",
-    "docPath": "admin/orders.md"
+    "docPath": "admin/dashboard/orders-admin.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "shipping",
-    "label": "Flat Rate Shipping",
+    "alias": "accounts",
+    "label": "Accounts",
     "repo": "reaction-docs",
-    "docPath": "admin/shipping.md"
+    "docPath": "admin/dashboard/accounts.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "taxes",
-    "label": "Tax Calculations",
+    "label": "Login services",
     "repo": "reaction-docs",
-    "docPath": "admin/taxes.md"
+    "alias": "login-services",
+    "docPath": "admin/dashboard/login-services.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "discounts",
+    "label": "Social settings",
+    "repo": "reaction-docs",
+    "alias": "social-settings",
+    "docPath": "admin/dashboard/social-settings.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Shop",
+    "repo": "reaction-docs",
+    "alias": "shop-admin",
+    "docPath": "admin/dashboard/shop-admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Email",
+    "repo": "reaction-docs",
+    "alias": "email-admin",
+    "docPath": "admin/dashboard/email-admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Localization and i18n",
+    "repo": "reaction-docs",
+    "alias": "localization-and-i18n",
+    "docPath": "admin/dashboard/localization-and-i18n.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Payment",
+    "repo": "reaction-docs",
+    "alias": "payment",
+    "docPath": "admin/dashboard/payment.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Catalog",
+    "repo": "reaction-docs",
+    "alias": "catalog",
+    "docPath": "admin/dashboard/catalog.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "tax",
+    "label": "Tax",
+    "repo": "reaction-docs",
+    "docPath": "admin/dashboard/tax.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Template",
+    "repo": "reaction-docs",
+    "alias": "template",
+    "docPath": "admin/dashboard/template.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Search",
+    "repo": "reaction-docs",
+    "alias": "search",
+    "docPath": "admin/dashboard/search.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "SMS Notifications",
+    "repo": "reaction-docs",
+    "alias": "sms-notifications",
+    "docPath": "admin/dashboard/sms-notifications.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Shipping",
+    "repo": "reaction-docs",
+    "alias": "shipping-admin",
+    "docPath": "admin/dashboard/shipping-admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "label": "Discounts",
     "repo": "reaction-docs",
-    "docPath": "admin/discounts.md"
+    "alias": "payments-discounts",
+    "docPath": "admin/dashboard/payments-discounts.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "faqs",

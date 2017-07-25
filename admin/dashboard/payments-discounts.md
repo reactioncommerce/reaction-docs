@@ -1,4 +1,5 @@
 # Discounts
+
 Reaction has support for discount codes and discount rates.  A "code" is a code that can be applied during checkout that applies a discount to the cart subtotal.  A "rate" is a discount that is applied without needing a discount code to be applied.
 
 ## Codes

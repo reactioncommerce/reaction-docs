@@ -1,12 +1,12 @@
 # Search
 
-Find what you're looking for with our search tool, located at the top of your dashboard. To start searching, simply click on the magnifying glass icon.
+Find what you're looking for with our search tool, located at the top of your dashboard. To start searching, click on the magnifying glass icon.
 
 ![](/assets/admin-search-tool.png "Reaction Commerce Dashboard")
 
 You'll have the option of searching by product, account, or orders.
 
-## Search Settings
+## Search settings
 
 To configure your search tool, login to your dashboard and click on the cogwheel icon on the Search card.
 

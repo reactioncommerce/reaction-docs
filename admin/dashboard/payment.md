@@ -1,10 +1,8 @@
-# Payment Processing
+# Payment processing
 
-## Payment Apps
+## Payment apps
 
 To enable a payment provider for your shop, login as a shop admin and navigate to your Dashboard.
-
-![](/assets/admin-dashboard-navigation.png "Reaction Commerce Dashboard")
 
 From the Dashboard, locate the payment package you want to enable. Click the plus icon to turn on particular payment package, and then click the cogwheel icon to enter your settings.
 

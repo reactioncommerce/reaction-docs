@@ -2,11 +2,11 @@
 
 We've partnered up with Avalara and TaxCloud, two of the top tax management services, to bring custom tax and sales tax calculations to all shop owners.
 
-To enable custom taxes, or to link to your Avalara or TaxCloud account, simply click on the cogwheel icon on the "Taxes" card and toggle each feature on or off.
+To enable custom taxes, or to link to your Avalara or TaxCloud account, click on the cogwheel icon on the "Taxes" card and toggle each feature on or off.
 
-## Custom Rates
+## Custom rates
 
-Reaction gives you the ability to assign different tax rates to different regions around the world. To get started, simply click on the round plus button:
+Reaction gives you the ability to assign different tax rates to different regions around the world. To get started, click on the round plus button:
 
 ![](/assets/admin-dashboard-taxes.png "Custom Tax Rate Configuration")
 

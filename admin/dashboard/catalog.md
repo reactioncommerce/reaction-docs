@@ -1,10 +1,4 @@
-# Revision Control
-
-## What is Revision Control?
-
-Revision control in Reaction adds the ability for admin users to review, stage, and revert changes to products. When enabled any changes to a product will be saved as a draft, with the original product remaining unchanged. Upon publishing changes to that draft, the publicly visibly product will then have those changes applied.
-
-At the moment revision control is merely used to stage a single upcoming update.
+# Catalog
 
 ## Making changes to a product
 
@@ -20,7 +14,13 @@ A message will pop up in the lower left corner of your screen notifying you of t
 
 ![](/assets/admin-product-revision-publish-success.png "Publish Product Success")
 
-## Enable / Disable Revision Control
+## What is revision control?
+
+Revision control in Reaction adds the ability for admin users to review, stage, and revert changes to products. When enabled any changes to a product will be saved as a draft, with the original product remaining unchanged. Upon publishing changes to that draft, the publicly visibly product will then have those changes applied.
+
+At the moment revision control is merely used to stage a single upcoming update.
+
+## Enabling and disabling revision control
 
 In the dashboard under `Catalog`, you may turn revision control `on`, or `off`.
 

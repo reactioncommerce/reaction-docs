@@ -1,4 +1,4 @@
-# Shipping
+# Shipping rates
 
 [![Tutorial: How To Configure Shipping in Reaction](/assets/guide-shipping-video-screenshot.png)](https://www.youtube.com/watch?v=fiR_kV1GBdg)
 
@@ -22,4 +22,4 @@ You'll be prompted to fill out the following:
 - Handling: Any handling fees you might want to include.
 - Rate: The actual price you're charging your customer.
 
-To add your own custom flat rate, simply click on the cogwheel icon, located on the right-hand side of the nav table.
+To add your own custom flat rate, click on the cogwheel icon, located on the right-hand side of the nav table.

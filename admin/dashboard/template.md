@@ -1,6 +1,4 @@
-# Templates
-
-## Email Templates
+# Templates for emails
 
 Reaction comes preloaded with email templates that are sent out with various user actions, such as Password Resets, Order Completion, and Shipping Notifications. These Templates are loaded into the `Templates` collection on startup. Details about this process are found in the [Developer Docs](/developer/themes/register-email.md).
 

@@ -14,7 +14,7 @@ We already know that the Reaction community is open, friendly, and welcoming. No
 
 ## What does it mean to "adopt" a Code of Conduct?
 
-For the most part, we don't think it means large changes. We think that the text does a really good job describing the way the Reaction community already conducts itself. We expect that most people will simply continue to behave in the awesome way they have for years.
+For the most part, we don't think it means large changes. We think that the text does a really good job describing the way the Reaction community already conducts itself. We expect that most people will continue to behave in the awesome way they have for years.
 
 However, we do expect that people will abide by the spirit and words of the CoC when in "official" Reaction spaces. This code has been adopted by all members of the Reaction Commerce Team. This code will apply both in community spaces and at any Reaction events.
 

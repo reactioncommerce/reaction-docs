@@ -1,34 +1,44 @@
-# Dashboard
+# Store Operator's Guide
 
-The dashboard is your online store's central mainframe. It's where you manage your orders, add or remove products, install apps, and change your account settings. It's where the magic happens, more or less.
+Welcome to the Reaction Store Operator's Guide! Here you can find everything you need to know to configure your store and manage your orders and products. Click **Sign In** your admin credentials to get started.
 
-To access your dashboard, simply click on the blue Reaction logo icon, located on the very top right of the page.
+## Products and the grid
 
-![](/assets/admin-dashboard-panel-home.png "Reaction Commerce Dashboard")
+Follow these guides to get started with products and the grid:
 
-You'll find a selection of dashboard features, broken down into two sections, Actions and Settings. In the Actions section, you’ll find important tasks that are used on a daily basis. In the Settings section, you’ll find the rest of your shop’s feature settings, which you may access, configure, and customize to your heart’s content.
+- [Grid pages](/admin/navigation-bar-and-grid.md) - Adding navigation links and merchandise products
+- [Product pages](/admin/products.md) - Adding products
 
-## Actions
+## Dashboard
 
-- Orders - Review and process orders. For more info, visit the [Orders](https://docs.reactioncommerce.com/reaction-docs/master/orders) section.
-- Accounts - Add, edit, and remove permissions for each of your shop members.
+The dashboard is where you manage your orders and products and also configure your account settings.
 
-![Account Permission Screen](/assets/admin-dashboard-account-permission-screen.png)
+To access your dashboard sidebar, click on the **Reaction logo icon** on the top right of the page. You'll find a selection of dashboard features, broken down into two sections, **Actions** and **Settings**.
 
-## Settings
+### Actions
 
-![](/assets/admin-dashboard-panel.png "Reaction Commerce Dashboard")
+Under Actions, you can find important tasks that are used on a daily basis:
 
-- Settings - Configure your shop's name, address, payment methods, and other settings.
-- Catalog - Enable or disable your product catalog view.
-- Localization and i18n - Configure language, timezone, and currency.
-- Payment - Manage payment methods and add discount codes.
-- Shipping - Set up and manage your shipping and handling rates.
-- Tax - Enable custom taxes, Avalara, and TaxCloud.
-- Reaction Connect - Coming soon.
-- Search - Configure your store's search settings.
-- SMS Notifications - Enable SMS notifications.
-- Social - Set your shop's Facebook, Twitter, Pinterest, and Google Plus accounts.
-- Email - Manage your mail setup and view email logs.
-- Login services - Enable or disable customer login via social media.
-- Template - Customize your email's messaging and look and feel.
+- [Orders](/admin/dashboard/orders-admin.md) - Process new orders and view completed orders
+- [Accounts](/admin/dashboard/accounts.md) - Add, edit, and remove permissions for each of your shop members
+
+### Settings
+
+Under Settings, you can view the rest of your store's feature settings, which you may access, configure, and customize to your heart’s content:
+
+- [Login services](/admin/dashboard/login-services.md) - Enable or disable customer login via social media
+- [Social settings](/admin/dashboard/social-settings.md) - Set your shop's Facebook, Twitter, Pinterest, and Google Plus accounts
+- [Shop](/admin/dashboard/shop-admin.md) - Configure your shop's name, address, payment methods, and other settings
+- [Email](/admin/dashboard/email-admin.md) - Manage your mail setup and view email logs
+- [Localization and i18n](/admin/dashboard/localization-and-i18n.md) - Configure timezone, languages, and currencies
+- [Payment](/admin/dashboard/payment.md) - Manage payment methods and add discount codes
+- [Catalog](/admin/dashboard/catalog.md) - Enable or disable product revisions
+- [Taxes](/admin/dashboard/tax.md) - Enable custom taxes, Avalara, and TaxCloud
+- [Template](/admin/dashboard/template.md) - Customize your email's messaging and look and feel
+- [Search](/admin/dashboard/search.md) - Configure your store's search settings
+- [SMS Notifications](/admin/dashboard/sms-notifications.md) - Enable SMS notifications
+- [Shipping](/admin/dashboard/shipping-admin.md) - Set up and manage your shipping rates and Shippo integration
+
+## FAQ
+
+Have a question not mentioned here? Check out the [frequently asked questions](/admin/faq.md).

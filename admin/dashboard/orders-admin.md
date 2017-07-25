@@ -4,7 +4,7 @@ To view and process orders, login and click on the Reaction logo. You'll be able
 
 ![](/assets/admin-dashboard-orders.png "Reaction Commerce Dashboard")
 
-## Processing an Order
+## Processing an order
 
 Here's what your your order page looks like when your shop receives an incoming order:
 ![](/assets/admin-dashboard-orders-page.png "Reaction Commerce Orders")
