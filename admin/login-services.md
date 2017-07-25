@@ -2,7 +2,7 @@
 
 You can enable shoppers to register and log into your store with third-party login services, including Facebook and Google. By default, all third-party sign ins are turned off. Enabling a third-party login service will add a button under the login panel.
 
-
+![Adding third-party login services to Reaction](/assets/admin-login-services.png)
 
 ## Facebook
 
