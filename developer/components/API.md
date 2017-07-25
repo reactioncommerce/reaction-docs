@@ -60,7 +60,7 @@ const MyComponent = (props) => (
 registerComponent("MyComponent", MyComponent);
 ```
 
-## Higher Order Components
+## Higher Order Components (HOC's)
 
 To understand how theming works in Reaction, it's important to understand what higher order components (HOC's) are and how they interact with UI (presentational) components. If this is the first time you're hearing about higher order components, we recommend you read some or all of the following items to get familiar with this pattern of writing React components.
 
@@ -158,8 +158,11 @@ In the example above, all of the original class methods and state handlers that 
 
 Below is the full API for the Reaction components system. Each of these items can be imported from `@reactioncommerce/reaction-components`.
 
+#### [Components Objects](#components-objects)
 - [`Components`](#components)
 - [`ComponentsTable`](#componentstable)
+
+#### [Methods](#methods)
 - [`registerComponent()`](#registercomponent)
 - [`replaceComponent()`](#replacecomponent)
 - [`getComponent()`](#getcomponent)
@@ -168,6 +171,15 @@ Below is the full API for the Reaction components system. Each of these items ca
 - [`getHOCs()`](#gethocs)
 - [`copyHOCs()`](#copyhocs)
 - [`loadRegisteredComponents()`](#loadregisteredcomponents)
+
+#### [Higher Order Components](#higher-order-components)
+- [`withCurrentUser`](#withcurrentuser)
+- [`withCurrentAccount`](#withcurrentaccount)
+- [`withIsAdmin`](#withisadmin)
+- [`withIsOwner`](#withisowner)
+- [`composeWithTracker`](#composewithtracker)
+
+## Components Objects
 
 ### Components
 
@@ -220,6 +232,8 @@ ComponentsTable.MyComponent = {
 ```
 
 Again, this is just for reference, use the methods below to get/set whatever you need from that table.
+
+## Methods
 
 ### registerComponent()
 
@@ -368,4 +382,128 @@ Used to wrap/load all registered components on app startup. This generally shoul
 import { loadRegisteredComponents } from "@reactioncommerce/reaction-components";
 
 Meteor.startup(() => loadRegisteredComponents());
+```
+
+## Higher Order Components
+
+### withCurrentUser
+
+Injects the current user object on the `currentUser` prop of the wrapped component. The object is the reactive value of `Meteor.user()` and will update when the user logs in/out or if a field on the user object changes.
+
+```js
+import { registerComponent, withCurrentUser } from "@reactioncommerce/reaction-components";
+
+const MyComponent = ({ currentUser }) => (
+  <div>
+    ID: {currentUser._id}
+    Name: {currentUser.name}
+    ...
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent, withCurrentUser)
+
+export default withCurrentUser(MyComponent);
+```
+
+### withCurrentAccount
+
+This is similar to `withCurrentUser`, except that it injects the current user's Reaction account object on the `currentAccount` prop of the wrapped component. The Reaction account is mostly the same as the Meteor user object except the logic that fetches it will return `null` if the user is anonymous. (Anonymous users are created for every new visitor so that they may check out as a guest without creating an account). The account object is the reactive and will update when the user logs in/out or if a field on the user object changes.
+
+```js
+import { registerComponent, withCurrentAccount } from "@reactioncommerce/reaction-components";
+
+const MyComponent = ({ currentAccount }) => (
+  <div>
+    ID: {currentAccount._id}
+    Name: {currentAccount.name}
+    ...
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent, withCurrentAccount)
+
+export default withCurrentAccount(MyComponent);
+```
+
+### withIsAdmin
+
+Sets a Boolean `isAdmin` prop for the current user. You can use this to conditionally show parts of the UI or change what functionality is available.
+
+```js
+import { registerComponent, withIsAdmin } from "@reactioncommerce/reaction-components";
+
+const MyComponent = ({ isAdmin }) => (
+  <div>
+    {isAdmin ?
+      <div>
+        Top Secret Stuff!
+      </div>
+      :
+      <div>
+        Sorry! This is for admins only!
+      </div>
+    }
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent, withIsAdmin)
+
+export default withIsAdmin(MyComponent);
+```
+
+### withIsOwner
+
+Similar to `isAdmin`, except sets a Boolean `isOwner` prop for the current user. An shop owner is similar to the admin above, but they only have administrative access for the current shop.
+
+```js
+import { registerComponent, withIsOwner } from "@reactioncommerce/reaction-components";
+
+const MyComponent = ({ isOwner }) => (
+  <div>
+    {isOwner ?
+      <div>
+        Welcome to the shop dashboard!
+      </div>
+      :
+      <div>
+        Sorry! This is for shop owners only!
+      </div>
+    }
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent, withIsOwner)
+
+export default withIsOwner(MyComponent);
+```
+
+### composeWithTracker
+
+This HOC requires a special reactive function to retrieve data for a component. Meteor's Tracker library is used to reactively rerun the function whenever data or subscription state within the function changes.
+
+```js
+const MyComponent = ({ products }) => (
+  <div>
+    {products.map((product) => (
+      <div>{product.name}</div>
+      ...
+    ))}
+  </div>
+);
+
+// a reactive data fetching function
+function composer(props, onData) {
+  // will show a spinner component until the subscription is ready
+  if (Meteor.subscribe("Products").ready()) {
+    // fetch products from the database
+    const products = Products.find().fetch();
+    // inject them into the wrapped component on the "products" prop
+    onData(null, { products });
+  }
+}
+
+registerComponent("MyComponent", MyComponent, composeWithTracker(composer));
+
+export default composeWithTracker(composer)(MyComponent);
 ```
