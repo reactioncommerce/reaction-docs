@@ -482,6 +482,12 @@
     "repo": "reaction-docs",
     "docPath": "developer/components/README.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "components-api",
+    "label": "Reaction Components API",
+    "repo": "reaction-docs",
+    "docPath": "developer/components/API.md"
+  }, {
     "label": "Alerts",
     "docPath": "developer/components/alerts.md"
   }, {
