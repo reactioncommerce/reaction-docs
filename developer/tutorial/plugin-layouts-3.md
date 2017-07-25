@@ -88,7 +88,7 @@ We also need to add our layout to the registry via our `register.js`. We are goi
 ```js
 layout: [{
   layout: "coreLayoutBeesknees",
-  workflow: "coreProductWorkflow",
+  workflow: "coreProductGridWorkflow",
   collection: "Products",
   theme: "default",
   enabled: true,
@@ -118,7 +118,7 @@ Reaction.registerPackage({
   autoEnable: true,
   layout: [{
     layout: "coreLayoutBeesknees",
-    workflow: "coreWorkflow",
+    workflow: "coreProductGridWorkflow",
     collection: "Products",
     theme: "default",
     enabled: true,
