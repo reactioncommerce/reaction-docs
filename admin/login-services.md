@@ -1,6 +1,8 @@
 # Login services
 
-By default, all third-party sign ins are turned off. To enable or disable sign ins, toggle each feature on or off in the Login Services dashboard panel.
+You can enable shoppers to register and log into your store with third-party login services, including Facebook and Google. By default, all third-party sign ins are turned off. Enabling a third-party login service will add a button under the login panel.
+
+
 
 ## Facebook
 
@@ -21,7 +23,7 @@ By default, all third-party sign ins are turned off. To enable or disable sign i
 1. Click the **Google Sign In toggle** to open the login panel.
 2. Register your app [Google API Console](https://console.developers.google.com/projectselector/apis/library?pli=1) to get your Client ID and Secret.
 3. Enter your Client ID and Client Secret. Click **Update Settings**.
-4. Sign out of your admin account. Click **Sign In**. You should now see a**`Sign in with Google** button as **Sign In** and **Register** options.
+4. Sign out of your admin account. Click **Sign In**. You should now see a **Sign in with Google** button as **Sign In** and **Register** options.
 
 
 ## Twitter
