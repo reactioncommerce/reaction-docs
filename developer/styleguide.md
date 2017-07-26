@@ -4,15 +4,14 @@ Our rules are similar to AirBnB or Meteor rules, [standard template of ESLint ru
 
 A couple of notable Reaction specific style rules:
 
-* Double quoted strings
-* Well spaced function
-* 160 character line length
-* `import` order
-  * React npm packages (`React`, `prop-types`, etc...)
-  * other npm packages
-  * meteor core packages
-  * meteor (Atmosphere) packages
-  * local app files
+-   Double quoted strings
+-   Well spaced function
+-   160 character line length
+-   `import` order
+    -   npm packages
+    -   meteor core packages
+    -   meteor (Atmosphere) packages
+    -   local app files
 
 Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines that are typical of Meteor projects.
 
@@ -20,9 +19,9 @@ Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additio
 
 In the Reaction app root, we have Reaction specific configuration files that can be used with most editors with the appropriate tools installed.
 
-* `.eslintrc` - [http://eslint.org/](https://eslint.org/)
-* `.jsbeautifyrc` - [http://jsbeautifier.org/](https://jsbeautifier.org/)
-* `.editorconfig` - [http://editorconfig.org/](https://editorconfig.org/)
+-   `.eslintrc` - [http://eslint.org/](https://eslint.org/)
+-   `.jsbeautifyrc` - [http://jsbeautifier.org/](https://jsbeautifier.org/)
+-   `.editorconfig` - [http://editorconfig.org/](https://editorconfig.org/)
 
 These configurations also include additional rules supporting [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and `React`.
 
@@ -38,7 +37,7 @@ apm install editorconfig atom-beautify linter linter-eslint linter-markdown lint
 
 ### Lint
 
-Reaction installs the `eslint` v3.x packages _eslint_, _eslint-plugin-react_, _babel-eslint_ from [npm](https://www.npmjs.com/) as development dependencies.
+Reaction installs the `eslint` packages _eslint_, _eslint-plugin-react_, _babel-eslint_ from [npm](https://www.npmjs.com/) as development dependencies.
 
 In the Reaction app root, we have a Reaction `eslint` configuration.
 
@@ -54,71 +53,109 @@ In our Markdown documentation, we use [remark-lint](https://github.com/wooorm/re
 
 Pull request branches are evaluated using [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) for insecure dependencies and code quality.
 
-* must pass a Linting check and _no errors_ are accepted.
-* must pass a Dependency check and no priority packages are accepted.
-* must pass `reaction test`
+-   must pass a Linting check and _no errors_ are accepted.
+-   must pass a Dependency check and no priority packages are accepted.
+-   must pass `reaction test`
 
 In many cases, documentation updates can be required as well.
 
 Pull requests are submitted to a peer code review process before acceptance.
 
-### File Naming Conventions
+### Naming Conventions
 
-In general we use hyphens (-) and camelCase for folder names, and camelCase alone for file names. Underscores are not to be used for file or folder names unless expressly required.  Be aware that not all operating systems are case sensitive, so it's not ok to have two files named the same with differing case.
+In general we use hyphens (-) for folder names. Underscores are not to be used for file or folder names unless expressly required.  Be aware that not all operating systems are case sensitive, so it's not ok to have two files named the same with differing case. To prevent this, we recommend not using camelCasing when naming folders or files.
 
-#### Folder Names
+As a convention of there are multiple files that make up a functionality, these files should be grouped within a folder. If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the seperator.
 
 **Good**
 
-* Folder names for packages must contain only lowercased alpha numeric characters and may be hyphenated if joining more than one word
-* Folder names all normal directories must start with a lowercased letter and may camel cased if joining more than one word
-
+```sh
+/container/settings.js
+/container/settings.html
+/container/ <more files>
 ```
-// Packages in /imports/plugins
-ui-grid/
-example-paymentmethod/
-social/
-taxes-avalara/
 
-// All other folder names everywhere
-addressBook/
+or
 
+```sh
+/settings-container.js
+/settings-container.html
 ```
 
 **Bad**
 
-* Package name should contain hyphens to make it easier to read.
-* Underscores are not to be used unless expressly required.
-
-```
-reactionpackagename/
-address_book/
-```
-
-#### File Names
-
-**Good**
-
-* File names must start with a lowercased letter and may be camel cased if joining more than one word.
-* File names may contain multiple (.) characters as needed
-
-```
+```sh
+/container/settings-containers.js
+/container/settingsContainer.html
 settingsContainer.js
-publishContainer.js
-addressBook.js
-bootstrap.rtl.js
-index.js
+```
 
-// This is an exception as it's part of Meteor's naming convention
-addressBook.app-test.js
+#### Folders
+
+**Good**
+
+-   Folder names for packages should contain only lowercased alpha numeric characters and are **hyphenated** if joining more than one word
+
+```sh
+    // Packages in /imports/plugins
+    ui-grid/
+    example-paymentmethod/
+    social/
+    taxes-avalara/
 ```
 
 **Bad**
 
-* Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files. Or for migration files to make the filename more readable.
+-   Package name should contain hyphens to make it easier to read.
+-   Underscores are not to be used unless expressly required.
+-   Folder names should not be camelCased.
 
+```sh
+  reactionpackagename/
+  address_book/
 ```
-settings_container.js
-publish-container.js
-address_book.js
+
+#### Files
+
+**Good**
+
+-   File names should contain only lowercased alpha numeric characters and are **hyphenated** if joining more than one word
+-   File names may contain multiple (.) characters as needed
+-   File names can use hyphens but should avoid camelCase naming.
+
+```sh
+  bootstrap.rtl.js
+  index.js
+```
+
+**Bad**
+
+-   Underscores and camelCased are not to be used unless expressly required;
+
+```sh
+  settingsContainer.js
+  publishContainer.js
+  addressBook.js
+  settings_container.js
+  publish-container.js
+  address_book.js
+```
+
+#### Packages
+
+We suggest that package folders follow a `<functionality>-<package-name>` format.
+
+**Good**
+
+```sh
+/imports/plugins/custom/payments-custom-provider
+/imports/plugins/included/shipping-provider
+```
+
+Registry package names should preferably use some organizational namespacing as a prefix.
+
+```js
+reaction-paypal
+reaction-google-analytics
+yourorg-your-package
 ```
