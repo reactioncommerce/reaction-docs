@@ -2,33 +2,14 @@
 
 Welcome to the Reaction community!
 
-This is the starting point for becoming a contributor - improving docs, improving code, and giving talks.
+Reaction is a series of projects that combine the efforts of [community contributors](https://github.com/reactioncommerce/reaction/graphs/contributors) and the core [Reaction Commerce](https://github.com/orgs/reactioncommerce/people) team.
 
-Participating in our Gitter channels and our planning meetings are welcome contributions to Reaction.
+## Chat with the community
 
-If you'd like to contribute code and issues, you'll want to review the [contribution guidelines](contributing.md).
+Ask questions and participate in discussions with Reaction community members from around the world on the [Gitter channels](https://gitter.im/reactioncommerce/) and the [Reaction Commerce forums](https://forums.reactioncommerce.com/).
 
-## Roadmap
+## Chat with the team
 
-Reaction is a series of projects that combine the efforts of [community contributors](https://github.com/orgs/reactioncommerce/outside-collaborators) and core product development from the [@reactioncommerce](https://github.com/orgs/reactioncommerce/people) team.
+- [Reaction Community Calls](http://getrxn.io/2rcCal) - Every other Wednesday at 7AM PST/10AM EST, join the core team for a public Reaction Community Call to discuss the latest hot questions and topics from the community. Subscribe to our [Reaction Community Google Calendar](http://getrxn.io/2rcCal) to RSVP to the next call.
 
-A long-term roadmap and completed features list is on our [features page](https://reactioncommerce.com/features).
-
-You will find these roadmap items defined as projects on the [Reaction repository's project page](https://github.com/reactioncommerce/reaction/projects).
-
-Specific features in progress are found grouped on the [Reaction repository's milestones page](https://github.com/reactioncommerce/reaction/milestones).
-
-## Projects
-
-Reaction projects can have both @core leads as well as community leads.
-Chat channels and meetings are open to all. Here's our [Reaction Community Google Calendar](http://getrxn.io/2rcCal) with all of the meetings and Reaction Action events.
-
-| Name                | Leads                   | Gitter Channel                                                                     | Schedule       |
-| ------------------- | ----------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------- |
-| Connectors, Catalog | @aaronjudd @jshimko     | [reactioncommerce/connectors](https://gitter.im/reactioncommerce/connectors)             | Every 2 weeks on Wednesday 2PM Pacific    |
-| Core                | @aaronjudd              | [reactioncommerce/core](https://gitter.im/reactioncommerce/core)                   | Every 2 weeks on Wednesday 2PM Pacific    |
-| Components          | @mikemurray @kieckhafer | [reactioncommerce/components](https://gitter.im/reactioncommerce/components)       | Every 2 weeks on Tuesday 3PM Pacific      |
-| Deployment          | @jshimko                | [reactioncommerce/deployment](https://gitter.im/reactioncommerce/deployment)       | Every 2 weeks on Thursday 10AM Eastern    |
-| Design              | @rymorgan               | [reactioncommerce/design](https://gitter.im/reactioncommerce/design)               | Every 2 weeks on Wednesday 3PM Pacific    |
-| Documentation       | @machikoyasuda               | [reactioncommerce/documentation](https://gitter.im/reactioncommerce/documentation) | Monthly on the Fourth Tuesday 3:30PM Pacific |
-| Marketplace         | @spencern               | [reactioncommerce/marketplace](https://gitter.im/reactioncommerce/marketplace)     | Every 2 weeks on Wednesday 7AM Pacific    |
+- [Reaction Action](https://www.crowdcast.io/reactioncommerce) - Follow us on [Crowdcast](https://www.crowdcast.io/reactioncommerce) to RSVP for the next Reaction Action.
