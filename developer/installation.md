@@ -2,98 +2,61 @@
 
 [![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
 
-Review and install the [Reaction requirements.](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
+Getting started with Reaction is fast. First, make sure you have all the [ requirements](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
 
-To install and run Reaction locally in development mode:
+Install the latest Reaction release with npm:
 
 ```sh
-# install CLI
-npm install -g reaction-cli
+# Install command-line interface
+$ npm install -g reaction-cli
 
-# clone Reaction, install NPM dependencies
-reaction init
-
-# move into the new app directory
-cd reaction
+# Verify your installation
+$ reaction --version
 ```
 
-## reaction
+You should see an output like:
+```sh
+Node: 7.0.0
+NPM: 5.3.0
+Meteor Node: 4.8.4
+Meteor NPM: 4.6.1
+Reaction CLI: 0.11.0
+```
 
-To start Reaction, run the `reaction` command
+## Creating your first `reaction` project
+
+Now you're ready to run Reaction locally.
 
 ```sh
+# Create a new Reaction app and install dependencies
+$ reaction init my-store
+
+# Change directory to your app
+$ cd my-store
+
 # start Reaction
-reaction
-# or
-reaction run
+$ reaction
 ```
 
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
+The initial installation loads sample data from `private/data`. It might take a while.
 
-![](/assets/guide-installation-default-user.png)
+Once you see `App running at:` in the console, point your browser to  [http://localhost:3000](https://localhost:3000).
 
-Sample data is loaded on a new installation from `private/data`. This can take some time depending on your system.
+Congrats 🎉   You now have your first Reaction project running locally.
 
-Browse to [http://localhost:3000](https://localhost:3000) and you should see Reaction running.
+💡 **Tip!** Use `reaction` or `rc` as a shortcut for `reaction run`. Stop running with <kbd>CTRL</kbd>+<kbd>c</kbd>.
 
-To terminate `reaction` use `CTRL-c`.
+## What's next?
 
-The `reaction` command line also accepts [Meteor command line options](http://docs.meteor.com/#/full/meteorhelp).
+#### Save the admin user password
 
-`reaction` appends some commands to the default `meteor` command, it adds `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
+Reaction creates an initial admin user. Remember to keep the email and password printed in the console to test admin features:
 
-### reaction --help
+![](/assets/reaction-guide-installation-default-user.png)
 
-`reaction -h` will give you help for the `reaction` command.
+#### Create a settings.json
 
-```sh
-reaction -h
-reaction <command> [options]
+Reaction provides you a [`settings/dev.settings.json`](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json) file, which is configured by default. Add your own settings to this file and rename the file to `settings/settings.json`.
 
-Commands:
-  init      Create a new Reaction app (will create a new folder)
-  config    Get/set config values
-  run       Start Reaction in development mode
-  debug     Start Reaction in debug mode
-  test      Run integration or unit tests
-  pull      Pull Reaction updates from Github and install NPM packages
-  update    Update Atmosphere and NPM packages
-  up        Update Atmosphere and NPM packages
-  reset     Reset the database and (optionally) delete build files
-  plugins   Manage your Reaction plugins
-  styles    Manage your Reaction styles (css, less, stylus, scss)
-  build     Build a production Docker image
-  register  Register an account with Reaction
-  login     Login to Reaction
-  whoami    Check which account you are logged in as
-  keys      Manage your SSH keys
-  apps      Manage your apps deployments
-  deploy    Deploy an app
-  env       Manage environment variables for an app deployment
-  domains   Add a custom domain name to a deployment
-  open      Open an app deployment in your browser
-
-Options:
-  -v, --version  Show version number
-  -h, --help     Show help
-```
-
-## reaction pull
-
-```sh
-reaction pull
-```
-
-You could just use `git pull`, but `reaction pull` will update npm modules and other dependencies.
-
-## reaction reset
-
-Resets the Reaction database, updates npm modules, and optionally removes `node_modules` before updating.
-
-This will give you a fresh test dataset from `private/data`.
-
-```sh
-reaction reset
-```
-
+#### And more:
 See the [package development documentation](/developer/packages/packages.md) and the [settings and import documentation](/developer/core/import.md) for detailed instructions on modifying initial fixture data.

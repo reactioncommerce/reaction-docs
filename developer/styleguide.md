@@ -1,124 +1,115 @@
-# Style Guide
+# Code Style Guide
 
-Our rules are similar to AirBnB or Meteor rules, [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), although we have tweaked them a little with what is working best for us.
+Reaction's code style guides are similar to AirBnB or Meteor's rules, although we have a few notable differences:
 
-A couple of notable Reaction specific style rules:
+* Double-quoted strings
+* Well-spaced functions
+* 160 character line-length
+* Place `import`s in the following order:
+  1. React npm packages (`React`, `prop-types`, etc...)
+  2. other npm packages
+  3. Meteor core packages
+  4. Meteor (Atmosphere) packages
+  5. local app files
 
-* Double quoted strings
-* Well spaced function
-* 160 character line length
-* `import` order
-  * React npm packages (`React`, `prop-types`, etc...)
-  * other npm packages
-  * meteor core packages
-  * meteor (Atmosphere) packages
-  * local app files
+Read more about [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines
 
-Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines that are typical of Meteor projects.
+## Configuring your editor
 
-## Editor Configuration
+At Reaction, we use [Atom](http://atom.io) with [Atom Linter](https://atom.io/users/AtomLinter) packages that support the linting and code formatting rules configured with Reaction: [ESLint](https://eslint.org/), [JS Beautifier](https://jsbeautifier.org/) and [EditorConfig](https://editorconfig.org/).
 
-In the Reaction app root, we have Reaction specific configuration files that can be used with most editors with the appropriate tools installed.
-
-* `.eslintrc` - [http://eslint.org/](https://eslint.org/)
-* `.jsbeautifyrc` - [http://jsbeautifier.org/](https://jsbeautifier.org/)
-* `.editorconfig` - [http://editorconfig.org/](https://editorconfig.org/)
-
-These configurations also include additional rules supporting [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and `React`.
-
-### Atom
-
-We've been using the Open Source [Atom](https://atom.io/) editor for some time now and can recommend it.
-
-Setting up Atom is a quick command where we use the shell command `apm` to install the same [Atom linting packages](https://atom.io/users/AtomLinter) as we use for Reaction.
+If you use Atom, you can install all the recommended linting tools by running:
 
 ```sh
 apm install editorconfig atom-beautify linter linter-eslint linter-markdown linter-jsonlint linter-docker
 ```
 
-### Lint
+You can find all the rules for these tools in their respective configuration files:
+* [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - for linting rules for [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and [React](https://github.com/facebook/react)
+* [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - for reformatting JavaScript files
+* [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - for general editor configuration
 
-Reaction installs the `eslint` v3.x packages _eslint_, _eslint-plugin-react_, _babel-eslint_ from [npm](https://www.npmjs.com/) as development dependencies.
 
-In the Reaction app root, we have a Reaction `eslint` configuration.
 
-`.eslintrc` - [http://eslint.org/](https://eslint.org/)
+## Naming things
 
-For more details, see the [ESLint Getting Started Guide](http://eslint.org/docs/user-guide/getting-started).
+In general, use hyphens (`-`) and camelCase for names of folders, and camelCase for names of files. Don't use underscores (`_`).
 
-#### Markdown
+Not all operating systems are case sensitive, so make sure to avoid having two files named the same with differing case.
 
-In our Markdown documentation, we use [remark-lint](https://github.com/wooorm/remark-lint) to ensure consistent Markdown styling.
+#### Naming folders and plugins
 
-### Pull Requests
+**Do**
 
-Pull request branches are evaluated using [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) for insecure dependencies and code quality.
-
-* must pass a Linting check and _no errors_ are accepted.
-* must pass a Dependency check and no priority packages are accepted.
-* must pass `reaction test`
-
-In many cases, documentation updates can be required as well.
-
-Pull requests are submitted to a peer code review process before acceptance.
-
-### File Naming Conventions
-
-In general we use hyphens (-) and camelCase for folder names, and camelCase alone for file names. Underscores are not to be used for file or folder names unless expressly required.  Be aware that not all operating systems are case sensitive, so it's not ok to have two files named the same with differing case.
-
-#### Folder Names
-
-**Good**
-
-* Folder names for packages must contain only lowercased alpha numeric characters and may be hyphenated if joining more than one word
-* Folder names all normal directories must start with a lowercased letter and may camel cased if joining more than one word
+* Start with a lowercase letter
+* Use alphanumeric characters
+* For plugins: Use hyphens to concatenate
+* For all other folders: Use camelcase to concatenate
 
 ```
-// Packages in /imports/plugins
+// Plugins in /imports/plugins
+
 ui-grid/
 example-paymentmethod/
 social/
 taxes-avalara/
 
-// All other folder names everywhere
+// All other folders
+
 addressBook/
 
 ```
 
-**Bad**
+**Don't**
 
-* Package name should contain hyphens to make it easier to read.
-* Underscores are not to be used unless expressly required.
+* Don't use underscores
+* Do use hyphens to make names easier to read
 
 ```
 reactionpackagename/
 address_book/
 ```
 
-#### File Names
+#### Naming files
 
-**Good**
+**Do**
 
-* File names must start with a lowercased letter and may be camel cased if joining more than one word.
-* File names may contain multiple (.) characters as needed
+* Start with a lowercase letter
+* Use alphanumeric characters
+* Use camelcase to concatenate
+* Use multiple (`.`) characters as needed
 
 ```
-settingsContainer.js
-publishContainer.js
+index.js
 addressBook.js
 bootstrap.rtl.js
-index.js
 
-// This is an exception as it's part of Meteor's naming convention
+
+// This hyphen is an exception as it's part of Meteor's naming convention
 addressBook.app-test.js
 ```
 
-**Bad**
+**Don't**
 
-* Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files. Or for migration files to make the filename more readable.
+* Don't use hyphens (`-`) and underscores (`_`) unless explicitly required.
+* Exception: Meteor's migration and testing filenames, like `*.app-test.js`
 
 ```
 settings_container.js
 publish-container.js
 address_book.js
 ```
+
+
+## Submitting pull requests
+
+First of all, thank you for contributing to Reaction! We use  [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) to check all incoming pull requests for insecure dependencies and code quality.
+
+
+* must pass all linting rules
+* must pass a dependency check and no priority packages are accepted.
+* must pass `reaction test`
+
+In many cases, documentation updates can be required as well.
+
+Pull requests are submitted to a peer code review process before acceptance.
