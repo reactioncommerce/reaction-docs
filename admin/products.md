@@ -67,8 +67,6 @@ To add an image gallery to your product, drag and drop files from your computer 
 
 Currently, only image file types are supported, but support for video, Google Drive, Dropbox, and more are in the works. See [Issue #50](https://github.com/reactioncommerce/reaction/issues/50) and [Issue #69](https://github.com/reactioncommerce/reaction/issues/69).
 
-![](/assets/admin-product-variant-options.png "Reaction Commerce Product Variant Options")
-
 Once you have images added to your gallery, drag and drop to change their position.
 
 ![](/assets/admin-product-variant-3.png "Reaction Commerce Product Mediae")

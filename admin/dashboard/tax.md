@@ -6,9 +6,9 @@ To enable custom taxes, or to link to your Avalara or TaxCloud account, click on
 
 ## Custom rates
 
-Reaction gives you the ability to assign different tax rates to different regions around the world. To get started, click on the round plus button:
+![](/assets/admin-dashboard-tax-custom-rates.png "Reaction Dashboard - Custom Tax Rate")
 
-![](/assets/admin-dashboard-taxes.png "Custom Tax Rate Configuration")
+Reaction gives you the ability to assign different tax rates to different regions around the world. To get started, click on the round plus button:
 
 You may customize your rates by region via the following:
 
@@ -24,15 +24,15 @@ If you use [Avalara](https://www.avalara.com/) or [TaxCloud](https://taxcloud.ne
 
 ## Avalara
 
-![](/assets/admin-dashboard-taxes-avalara.png "Avalara Configuration")
+![](/assets/admin-dashboard-tax-avalara.png "Reaction Dashboard - Avalara")
 
 [Avalara](https://www.avalara.com/) provides real-time rate calculations for sales tax, value-added tax (VAT),
 and goods & services tax (GST) across over 140 countries, as well as automatic tax return filing.
-If you have an Avalara account, see the docs for the [Avalara tax plugin](/developer/packages/taxes/avalara.md) for detailed configuration instructions
+If you have an Avalara account, see the docs for the [Avalara tax plugin](/developer/packages/taxes/avalara.md) for detailed configuration instructions.
 
 ## TaxCloud
 
-![](/assets/admin-dashboard-taxes-taxcloud.png "TaxCloud Configuration")
+![](/assets/admin-dashboard-tax-taxcloud.png "Reaction Dashboard - TaxCloud")
 
 [TaxCloud](https://taxcloud.net/) tracks and provides free sales tax calculations for every address in the United States.
 
