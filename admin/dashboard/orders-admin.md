@@ -2,8 +2,6 @@
 
 To view and process orders, login and click on <i class="font-icon fa fa-envelope"></i> **Orders** icon.
 
-![](/assets/admin-dashboard-orders.png "Reaction Commerce Dashboard")
-
 ## Processing an order
 
 Here's what your your order page looks like when your shop receives an incoming order:
