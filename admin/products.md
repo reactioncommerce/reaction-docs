@@ -46,7 +46,7 @@ Every product comes filled with one variant. To create more:
 
 3. Click the **Publish** button on the top right to save Unpublished changes.
 
-# Adding more product variant options
+## Adding more product variant options
 
 Variant options provide a second layer of customization on top of each variant. For instance, in addition to carrying shirts in multiple colors, you may also want to carry multiple size options for each color. Use this flexible structure to customize your products however you like. The sky's the limit!
 
