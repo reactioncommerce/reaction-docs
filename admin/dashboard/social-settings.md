@@ -1,21 +1,34 @@
 # Social settings
 
-To link your social channels to your shop, login to your dashboard and click on the sharing icon.
+Add social media sharing buttons to each product page by linking your store's social settings.
+
+Before getting started, make sure you are logged in as an operator and click the <i class="font-icon fa fa-share-alt"></i> **Social Settings** icon in the Dashboard sidebar.
 
 ![](/assets/admin-dashboard-social.png "Reaction Commerce Dashboard")
 
+To add a social media integration, follow these steps:
+
 ## Facebook
 
-To enable Facebook, check the "Enabled" box on the right-hand side. You'll be prompted to enter your own developer App ID, App Secret, and Profile Page URL. Get your App ID and learn more about Facebook APIs by visiting [Facebook for Developers](https://developers.facebook.com/apps).
+1. Click the **Facebook** toggle button.
+2. Register your app at [Facebook for Developers](https://developers.facebook.com/apps) to get your App ID and Secret.
+3. Enter your App ID and App Secret. Click **Save Changes**.
+4. Enabling this setting adds a Facebook icon and link to share that product on the product page.
 
 ## Twitter
 
-To enable Twitter, check the "Enabled" box on the right-hand side. Enter your Twitter username and link to your profile page in the fields provided.
+1. Click the **Twitter** toggle button.
+2. Enter your Twitter username and link to your profile page. Click **Save Changes**.
+3. Enabling this setting adds a Twitter icon and link to share that product on the product page with your shop's Twitter handle in the message.
 
 ## Pinterest
 
-To enable Pinterest, check the "Enabled" box on the right-hand side. Enter your Pinterest profile page in the field provided.
+1. Click the **Pinterest** toggle button.
+2. Enter your Pinterest profile page. Click **Save Changes**.
+3. Enabling this setting adds a Pinterest icon and link to share that product on the product page.
 
 ## Google+
 
-To enable Google+, check the "Enabled" box on the right-hand side. Enter your Google+ profile page in the field provided.
+1. Click the **Google+** toggle button.
+2. Enter your Google+ profile page. Click **Save Changes**.
+3. Enabling this setting adds a Google+ icon and link to share that product on the product page.
