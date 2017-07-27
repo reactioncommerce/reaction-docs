@@ -1,8 +1,8 @@
 # Taxes
 
-We've partnered up with Avalara and TaxCloud, two of the top tax management services, to bring custom tax and sales tax calculations to all shop owners.
+We've partnered up with [Avalara](https://www.avalara.com/) and [TaxCloud](https://taxcloud.net/), two of the top tax management services, to bring custom tax and sales tax calculations to all shop owners.
 
-To enable custom taxes, or to link to your Avalara or TaxCloud account, click on the cogwheel icon on the "Taxes" card and toggle each feature on or off.
+To enable custom taxes, or to link to your Avalara or TaxCloud account, click on the <i class="rui font-icon fa fa-university"></i> **Tax** card and toggle each feature on or off.
 
 ## Custom rates
 
@@ -13,14 +13,14 @@ Reaction gives you the ability to assign different tax rates to different region
 You may customize your rates by region via the following:
 
 - Country
-- State / Region
+- State / Province / Region
 - Zip code
 
-Enter your rate as a percentage into the "Rate" field. Then, click "Save Changes," and your new custom rate should show up at the top. You may use the search box to filter your results.
+Enter your rate as a percentage into the **Rate** field. Then, click **Save Changes,** and your new custom rate should show up at the top. You may use the search box to filter your results.
 
 Please note that if you delete a custom rate from the dashboard, shopping carts that already have the tax included will still have it.
 
-If you use Avalara or TaxCloud to find a matching rate, that rate will override any predefined custom rates.
+If you use [Avalara](https://www.avalara.com/) or [TaxCloud](https://taxcloud.net/) to find a matching rate, that rate will override any predefined custom rates.
 
 ## Avalara
 
@@ -35,4 +35,5 @@ If you have an Avalara account, see the docs for the [Avalara tax plugin](/devel
 ![](/assets/admin-dashboard-taxes-taxcloud.png "TaxCloud Configuration")
 
 [TaxCloud](https://taxcloud.net/) tracks and provides free sales tax calculations for every address in the United States.
+
 If you have a TaxCloud account (which is free!), you may link it to your shop by entering your login ID.

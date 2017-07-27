@@ -8,14 +8,12 @@ You'll have the option of searching by product, account, or orders.
 
 ## Search settings
 
-To configure your search tool, login to your dashboard and click on the cogwheel icon on the Search card.
-
-![](/assets/admin-search-settings.png "Reaction Commerce Dashboard")
+To configure your search tool, login to your dashboard and click the **Search** <i class="rui font-icon fa fa-search"></i> icon.
 
 Customize how your product search results are displayed by checking or unchecking the following boxes:
 
-- Title
-- Description
-- Page title
-- Details
-- Vendor
+- Include title
+- Include description
+- Include page title
+- Include details
+- Include vendor

@@ -45,9 +45,9 @@
     "docPath": "admin/dashboard/accounts.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "login-services",
     "label": "Login services",
     "repo": "reaction-docs",
-    "alias": "login-services",
     "docPath": "admin/dashboard/login-services.md"
   }, {
     "class": "guide-sub-nav-item",
