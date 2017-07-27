@@ -8,7 +8,7 @@ This guide will cover how to set up your transactional emails with a supported p
 
 ## Configuring your email provider
 
-Once logged in as a shop admin, under **Actions**, click the **Email** icon.
+Once logged in as a shop admin, under **Actions**, click the <i class="font-icon fa fa-envelope"></i> **Email** icon.
 
 ### Using a provider preset
 

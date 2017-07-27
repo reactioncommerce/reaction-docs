@@ -18,7 +18,7 @@ At the moment revision control is merely used to stage a single upcoming update.
 
 ## Enabling and disabling revision control
 
-In the dashboard click <i class="font-icon fa fa-users"></i> **Catalog**, where you may toggle revision control `on`, or `off`.
+In the dashboard click <i class="font-icon fa fa-book"></i> **Catalog**, where you may toggle revision control `on`, or `off`.
 
 Currently, turning off revision will give you the legacy version of the product detail page.
 
