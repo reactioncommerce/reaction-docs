@@ -71,13 +71,13 @@ Let's break down what's going on here...
 
 The first argument (`-d`) means ["detached" mode](https://docs.docker.com/engine/reference/run/#detached-vs-foreground).  This allows your terminal to disconnect from the running container while it continues to run in the background.
 
-Next is `-p 80:3000`.  That simply means that traffic going to port 80 on your Docker host will route to port 3000 on the container (Reaction's default exposed port).  So, in short... `-p host:container` [More info](https://docs.docker.com/engine/reference/run/#expose-incoming-ports).
+Next is `-p 80:3000`.  That means that traffic going to port 80 on your Docker host will route to port 3000 on the container (Reaction's default exposed port).  So, in short... `-p host:container` [More info](https://docs.docker.com/engine/reference/run/#expose-incoming-ports).
 
 The next two lines (`ROOT_URL` and `MONGO_URL`) are standard environment variables that are required by all deployed Meteor apps. `ROOT_URL` should be set to the URL that users will reach your site with and `MONGO_URL` should be the URL of your MongoDB deployment. (Note that you can and should use a `MONGO_OPLOG_URL` if your Mongo deployment is a replica set. [More info about the Mongo Oplog and Meteor](https://themeteorchef.com/snippets/setting-up-mongodb-oplog-tailing/)).
 
 And finally, the last 3 environment variables (`REACTION_EMAIL`, `REACTION_USER`, `REACTION_AUTH`) are for your default admin user in Reaction.  If these variables are set the first time you run Reaction, a new user will be created for you with the email, username, and password you provide.
 
-Now the only thing left to do is point your domain name for your site at the host you created with docker-machine.  To get the IP address of the host, you can simply run:
+Now the only thing left to do is point your domain name for your site at the host you created with docker-machine.  To get the IP address of the host, you can run:
 
 ```sh
 docker-machine ip <machine name>

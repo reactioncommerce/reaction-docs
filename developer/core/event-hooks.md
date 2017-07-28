@@ -10,7 +10,7 @@ The API has the following methods
 
 `Hooks.Event.add(name, callback)`
 
-Here you simply pass in the name of the event and then the callback you wish to be executed.
+Here you pass in the name of the event and then the callback you wish to be executed.
 
 `Hooks.Event.remove(name, callback)`
 
