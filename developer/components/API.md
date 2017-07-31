@@ -64,10 +64,10 @@ registerComponent("MyComponent", MyComponent);
 
 To understand how theming works in Reaction, it's important to understand what higher order components (HOC's) are and how they interact with UI (presentational) components. If this is the first time you're hearing about higher order components, we recommend you read some or all of the following items to get familiar with this pattern of writing React components.
 
--   Official React docs <https://facebook.github.io/react/docs/higher-order-components.html>
--   Higher Order Components in React <https://spin.atomicobject.com/2017/03/02/higher-order-components-in-react/>
--   A Gentle Introduction to React's Higher Order Components <https://www.robinwieruch.de/gentle-introduction-higher-order-components/>
--   Recompose (a handy library of HOC's that we use in Reaction) <https://github.com/acdlite/recompose/blob/master/docs/API.md>
+- Official React docs <https://facebook.github.io/react/docs/higher-order-components.html>
+- Higher Order Components in React <https://spin.atomicobject.com/2017/03/02/higher-order-components-in-react/>
+- A Gentle Introduction to React's Higher Order Components <https://www.robinwieruch.de/gentle-introduction-higher-order-components/>
+- Recompose (a handy library of HOC's that we use in Reaction) <https://github.com/acdlite/recompose/blob/master/docs/API.md>
 
 A higher order component's role is essentially to wrap a another component and pass it props that help it to render what you want in the UI. This could be a list of items from the database, the current user, info about the current route, etc.
 
@@ -160,27 +160,27 @@ Below is the full API for the Reaction components system. Each of these items ca
 
 #### [Components Objects](#components-objects)
 
--   [`Components`](#components)
--   [`ComponentsTable`](#componentstable)
+- [`Components`](#components)
+- [`ComponentsTable`](#componentstable)
 
 #### [Methods](#methods)
 
--   [`registerComponent()`](#registercomponent)
--   [`replaceComponent()`](#replacecomponent)
--   [`getComponent()`](#getcomponent)
--   [`getRawComponent()`](#getrawcomponent)
--   [`registerHOC()`](#registerhoc)
--   [`getHOCs()`](#gethocs)
--   [`copyHOCs()`](#copyhocs)
--   [`loadRegisteredComponents()`](#loadregisteredcomponents)
+- [`registerComponent()`](#registercomponent)
+- [`replaceComponent()`](#replacecomponent)
+- [`getComponent()`](#getcomponent)
+- [`getRawComponent()`](#getrawcomponent)
+- [`registerHOC()`](#registerhoc)
+- [`getHOCs()`](#gethocs)
+- [`copyHOCs()`](#copyhocs)
+- [`loadRegisteredComponents()`](#loadregisteredcomponents)
 
 #### [Higher Order Components](#higher-order-components)
 
--   [`withCurrentUser`](#withcurrentuser)
--   [`withCurrentAccount`](#withcurrentaccount)
--   [`withIsAdmin`](#withisadmin)
--   [`withIsOwner`](#withisowner)
--   [`composeWithTracker`](#composewithtracker)
+- [`withCurrentUser`](#withcurrentuser)
+- [`withCurrentAccount`](#withcurrentaccount)
+- [`withIsAdmin`](#withisadmin)
+- [`withIsOwner`](#withisowner)
+- [`composeWithTracker`](#composewithtracker)
 
 ## Components Objects
 

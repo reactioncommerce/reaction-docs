@@ -48,12 +48,12 @@ When doing custom development and adding more logging to the app, we suggest fol
 
 The log levels in Bunyan are as follows. The level descriptions are best practice opinions.
 
--   "**TRACE**" (10): Logging from external libraries used by your app or very detailed application logging.
--   "**DEBUG**" (20): Anything too verbose to be included in the standard "info" level.
--   "**INFO**" (30): Detail on regular operation.
--   "**WARN**" (40): Detail on something that should probably be looked at by an operator eventually.
--   "**ERROR**" (50): Fatal for a particular event, but the service/app continues servicing other events. An operator should look at this soon.
--   "**FATAL**" (60): The service/app is going to stop or become unusable now. An operator should definitely look into this soon.
+- "**TRACE**" (10): Logging from external libraries used by your app or very detailed application logging.
+- "**DEBUG**" (20): Anything too verbose to be included in the standard "info" level.
+- "**INFO**" (30): Detail on regular operation.
+- "**WARN**" (40): Detail on something that should probably be looked at by an operator eventually.
+- "**ERROR**" (50): Fatal for a particular event, but the service/app continues servicing other events. An operator should look at this soon.
+- "**FATAL**" (60): The service/app is going to stop or become unusable now. An operator should definitely look into this soon.
 
 Suggestions: Use "DEBUG" sparingly. Information that will be useful to debug errors post mortem should usually be included in "info" messages if it's generally relevant or else with the corresponding "error" event. Don't rely on spewing mostly irrelevant debug messages all the time and sifting through them when an error occurs.
 

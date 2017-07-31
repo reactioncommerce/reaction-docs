@@ -199,10 +199,10 @@ _Note: Where `name` is Reaction package name, the `settings` object will update 
 
 Reaction installs sample data, translations, and other fixture defaults from `/private/data/` and `/private/data/i18n` using the `Reaction.Import` class.
 
--   Products.json
--   Shipping.json
--   Shops.json
--   Tags.json
+- Products.json
+- Shipping.json
+- Shops.json
+- Tags.json
 
 You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
 

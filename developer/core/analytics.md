@@ -16,10 +16,10 @@ Example use:
 
 Send event tracking to Google Analytics by adding the following data attribute to any anchor in Reaction:
 
--   data-event-category
--   data-event-action
--   data-event-label
--   data-event-value
+- data-event-category
+- data-event-action
+- data-event-label
+- data-event-value
 
 ## Events Tracked
 
