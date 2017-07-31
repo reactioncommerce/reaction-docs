@@ -14,8 +14,9 @@ Here are is a brief checklist of common items reviewed in every merge.
 -   jsDoc (API documentation)
 
     -   every file should have a summary
-    -   every method should a summary
+    -   every method should have a summary
+    -   links to source documentation where appropriate
 
 -   sufficient inline commenting
     -   explains functionality to someone NOT reading any other docs
-    -   enough detail to assistance full documentation to expand upon
+    -   enough detail so the detailed docs can expand upon comments

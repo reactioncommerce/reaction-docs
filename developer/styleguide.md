@@ -5,8 +5,9 @@ Our rules are similar to AirBnB or Meteor rules, [standard template of ESLint ru
 A couple of notable Reaction specific style rules:
 
 -   Double quoted strings
--   Well spaced function
--   160 character line length
+-   Well spaced functions
+-   Spaces around brackets
+-   120 character line length
 -   `import` order
     -   npm packages
     -   meteor core packages
@@ -65,7 +66,7 @@ Pull requests are submitted to a peer code review process before acceptance.
 
 In general we use hyphens (-) for folder names. Underscores are not to be used for file or folder names unless expressly required.  Be aware that not all operating systems are case sensitive, so it's not ok to have two files named the same with differing case. To prevent this, we recommend not using camelCasing when naming folders or files.
 
-As a convention of there are multiple files that make up a functionality, these files should be grouped within a folder. If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the seperator.
+As a convention, if there are multiple files that provide functionality that is broken down across multiple files, these files should be grouped within a folder. If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the seperator.
 
 **Good**
 
