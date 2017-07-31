@@ -14,4 +14,4 @@ A complete list of changes can always be found on [GitHub](https://github.com/re
 
 August 8, 2016
 
--   Initial release and public call for comments.
+- Initial release and public call for comments.
