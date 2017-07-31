@@ -55,13 +55,13 @@ export default MyReactComponent;
 
 ## Props
 
-Property        | Type                    | Description
---------------- | ----------------------- | ----------------------------------------------------------------------
-attachment      | String                  | default value: `"top"`
-buttonElement   | React Node              | Custom button element (optional) Default is a button with a down arrow
-children        | Node                    | Menu items, preferably `MenuItem`
-className       | String, Object          | Custom class names can be a string, or object `{"class-name": true}`
-menuStyle       | Object                  | Style object to custom style your menu
-onChange        | Function                | Dropdown menu change. `(event, value, menuItem) => {}`
-value           | String, Boolean, Number | A String, Boolean, or Number value
-targetAttachment| String                  | default value: `"top left"`
+| Property         | Type                    | Description                                                            |
+| ---------------- | ----------------------- | ---------------------------------------------------------------------- |
+| attachment       | String                  | default value: `"top"`                                                 |
+| buttonElement    | React Node              | Custom button element (optional) Default is a button with a down arrow |
+| children         | Node                    | Menu items, preferably `MenuItem`                                      |
+| className        | String, Object          | Custom class names can be a string, or object `{"class-name": true}`   |
+| menuStyle        | Object                  | Style object to custom style your menu                                 |
+| onChange         | Function                | Dropdown menu change. `(event, value, menuItem) => {}`                 |
+| value            | String, Boolean, Number | A String, Boolean, or Number value                                     |
+| targetAttachment | String                  | default value: `"top left"`                                            |

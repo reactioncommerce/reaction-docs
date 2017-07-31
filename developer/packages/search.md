@@ -40,7 +40,7 @@ interface.
 In addition it will create dedicated search collections which allows the search
 to operate only on a subset of fields and records. This allows for quick
 searches even on large product recordsets. In our own testing we were able to search
-a product database of more than 50k records and still get <20ms response times. Developers
+a product database of more than 50k records and still get &lt;20ms response times. Developers
 who customize the Product database can add fields here without too much extra code. Simply
 adding them to the settings should work in most cases (in addition you can add
 transformations, see below). Every effort was made to not hardcode these fields into

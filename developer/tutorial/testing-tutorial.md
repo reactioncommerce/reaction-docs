@@ -115,12 +115,12 @@ export function setProductToHank(productId) {
 
 And that's all for now.
 
-Notice how we put `describe.only` in our first block? That means we want to only run *this* test when
+Notice how we put `describe.only` in our first block? That means we want to only run _this_ test when
 we run the suite. So now you should be able run `reaction test` and see our tests fail.
 
 It should tell you what it expected and what it actually got. For this test it would have expected "Hank" and got some random Product title instead (the Product fixture add a random product title).
 
->Part of writing good tests is being able to see the success in good failures.
+> Part of writing good tests is being able to see the success in good failures.
 
 Now our test fails. So let's finish our method so that it satisfies our criteria.
 
@@ -252,33 +252,33 @@ const roleStub = sinon.stub(Roles, "userIsInRole", () => false);
 
 What this code does is replace the code `Roles.userIsInRole` with our own function that always returns false. So our new test will look like this:
 
- ```js
+```js
 import { expect } from "meteor/practicalmeteor:chai";
 import { sinon } from "meteor/practicalmeteor:sinon";
 import { Products } from "/lib/collections";
 import { setProductToHank } from "./products";
 
 describe.only("Product-To-Hank", function () {
-    describe("Calling product-to-hank", function () {
-        it("should change product title to Hank", function () {
-          const product = Factory.create("product");
-          const productId = product._id;
-          setProductToHank(productId);
-          const changeedProduct = Products.findOne(productId);
-          expect(product.title).to.equal("Hank");
-        });
+   describe("Calling product-to-hank", function () {
+       it("should change product title to Hank", function () {
+         const product = Factory.create("product");
+         const productId = product._id;
+         setProductToHank(productId);
+         const changeedProduct = Products.findOne(productId);
+         expect(product.title).to.equal("Hank");
+       });
 
-        it("should throw an error when the product does not exist", function () {
-          expect(setProductToHank("invalidId")).to.throw(Meteor.Error, /Product does not exist/);
-        });
+       it("should throw an error when the product does not exist", function () {
+         expect(setProductToHank("invalidId")).to.throw(Meteor.Error, /Product does not exist/);
+       });
 
-        it("should throw an error when user does not have permission", function () {
-          const roleStub = sinon.stub(Roles, "userIsInRole", () => false);
-          expect(Meteor.call("product/setToHank", "someId")).to.throw(Meteor.Error, /Access Denied/);
-          roleStub.restore();
-        });
-    });
- });
+       it("should throw an error when user does not have permission", function () {
+         const roleStub = sinon.stub(Roles, "userIsInRole", () => false);
+         expect(Meteor.call("product/setToHank", "someId")).to.throw(Meteor.Error, /Access Denied/);
+         roleStub.restore();
+       });
+   });
+});
 ```
 
 So as we have mentioned, the first line "stubs" our the role check to always return false. Then we execute the method (it doesn't matter what product ID we use since it shouldn't get that far) and we expect it to throw an

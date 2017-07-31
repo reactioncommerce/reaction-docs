@@ -39,19 +39,19 @@ No Props, used as a wrapper for `CardHeader`, `CardTitle`, and `CardBody`
 
 Provides a header for the card, also contains the CardTitle component for convenience.
 
-Property     | Type   | Description
------------- | ------ | ------------------------
-i18nKeyTitle | String | Key for i18n translation
-title        | String | Title for card header
+| Property     | Type   | Description              |
+| ------------ | ------ | ------------------------ |
+| i18nKeyTitle | String | Key for i18n translation |
+| title        | String | Title for card header    |
 
 ### CardTitle
 
 Provides a title for the card. In most cased CardHeader will be a better choice.
 
-Property     | Type   | Description
------------- | ------ | ------------------------
-i18nKeyTitle | String | Key for i18n translation
-title        | String | Title for card header
+| Property     | Type   | Description              |
+| ------------ | ------ | ------------------------ |
+| i18nKeyTitle | String | Key for i18n translation |
+| title        | String | Title for card header    |
 
 ### CardBody
 

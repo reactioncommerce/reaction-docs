@@ -50,6 +50,7 @@ Reaction.registerPackage({
     }]
    });
 ```
+
 At the point where Packages are published in the app, each registry item permissions are collected and put on the
 package registry [(source)](https://github.com/reactioncommerce/reaction/blob/master/server/publications/collections/packages.js#L31-L56).
 Based on these permissions, we can enable or disable functionality depending on user roles.
@@ -172,6 +173,7 @@ Helpers in template in templates:
 `/client/modules/core/helpers/permissions.js` exports the `hasPermission` helper.
 
 ## Reaction.Apps()
+
 This core helper method gets all package apps that match the filter passed in. You can use this as in the example below to
 get all enabled packages for payments.
 
@@ -184,6 +186,7 @@ get all enabled packages for payments.
 
 You can also pass in an `audience` field to filter returned apps based on assigned roles for the user.
 [(source)](https://github.com/reactioncommerce/reaction/blob/master/client/modules/core/helpers/apps.js#L106-L127)
+
 ```js
   Reaction.Apps({
     provides: "settings",
@@ -191,4 +194,3 @@ You can also pass in an `audience` field to filter returned apps based on assign
     audience: Roles.getRolesForUser(Meteor.userId(), Reaction.getShopId())
   })
 ```
-

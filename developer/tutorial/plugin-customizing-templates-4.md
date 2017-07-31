@@ -93,7 +93,6 @@ registerComponent({
 });
 
 export default CoreLayoutBeesknees;
-
 ```
 
 See that line that says:

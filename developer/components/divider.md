@@ -29,7 +29,7 @@ export default MyReactComponent;
 
 ## Props
 
-Property     | Type     | Description
------------- | -------- | ------------------------
-i18nKeyLabel | String   | Key for i18n translation
-label        | String   | Text label for checkbox
+| Property     | Type   | Description              |
+| ------------ | ------ | ------------------------ |
+| i18nKeyLabel | String | Key for i18n translation |
+| label        | String | Text label for checkbox  |

@@ -3,9 +3,10 @@
 ## Description
 
 Reaction has testing set up for react components. Frameworks in place for these tests are:
-  - [jest](https://facebook.github.io/jest/)
-  - [enzyme](http://airbnb.io/enzyme/index.html#enzyme)
-  
+
+-   [jest](https://facebook.github.io/jest/)
+-   [enzyme](http://airbnb.io/enzyme/index.html#enzyme)
+
 The purpose of this section is to showcase how to write a few tests for components using the frameworks mentioned above.
 
 ## Running tests
@@ -30,15 +31,15 @@ To create tests, create a file with the extension `*.test.js` or `*.spec.js`. Wh
 
 Jest utilizes the **Jasmine assertion library** therefore the syntax of the tests will be very familiar to developers who've used Jasmine before.
 
-
 ## Unit Testing
 
 For every component we test **presentaion** and expected **behaviour**.
 Assertions made include:
-  - Given a set of inputs (states OR props) assert what a component should output (render).
-  - Given a user action, assert how a component behaves:
-      - It might make a state update.
-      - Call a prop function passed to it by a parent.
+
+-   Given a set of inputs (states OR props) assert what a component should output (render).
+-   Given a user action, assert how a component behaves:
+    -   It might make a state update.
+    -   Call a prop function passed to it by a parent.
 
 ### Enzyme
 
@@ -46,8 +47,8 @@ Assertions made include:
 
 Enzyme has the capability to shallow render our components. When a component is shallow rendered it is rendered only one level deep. Also it does not render to the actual DOM, it maintains a virtual representation of the DOM. So if the render function of your component contains children, those children won't actually be rendered. Instead the virtual DOM representation will contain references to unrendered child components.
 
-- Allows us to test components in isolation, i.e. test parent components without worrying about children.
-- Its fast because there isn't much interaction with the actual DOM.
+-   Allows us to test components in isolation, i.e. test parent components without worrying about children.
+-   Its fast because there isn't much interaction with the actual DOM.
 
 Getting started with enzyme: 
 
@@ -81,12 +82,11 @@ Getting started with enzyme:
   })
 ```
 
-*Steps 1*: Shallow render a component
+_Steps 1_: Shallow render a component
 
+_Steps 2_: Traverse the shallow DOM searching for expected elements e.g. `div`, `li`, `a` ... tags
 
-*Steps 2*: Traverse the shallow DOM searching for expected elements e.g. `div`, `li`, `a` ... tags
-
-*Steps 3*: Use methods provided by enzyme wrapper to make assertions. Find methods in the enzyme [docs](http://airbnb.io/enzyme/docs/api/shallow.html#shallow-rendering-api).
+_Steps 3_: Use methods provided by enzyme wrapper to make assertions. Find methods in the enzyme [docs](http://airbnb.io/enzyme/docs/api/shallow.html#shallow-rendering-api).
 
 ### Jest
 

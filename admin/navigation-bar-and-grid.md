@@ -14,7 +14,6 @@ You may also arrange products based on how you manage your tags. Manage the disp
 
 When new products are added, they are given the top position by default.
 
-
 ## Using navigation tags to add top links
 
 To edit your shop's navigation tags, click on the “Add Tag” button in the top nav bar.
