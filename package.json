@@ -50,11 +50,11 @@
       "remark-lint-no-multiple-toplevel-headings",
       [
         "remark-lint-maximum-line-length",
-        9000
+        false
       ],
       [
         "remark-lint-maximum-heading-length",
-        300
+        180
       ]
     ]
   }
