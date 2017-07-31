@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "eslint": "^4.2.0",
-    "remark-cli": "^3.0.0",
+    "remark-cli": "^4.0.0",
     "remark-lint": "^6.0.0"
   }
 }
