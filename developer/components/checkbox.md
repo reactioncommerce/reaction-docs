@@ -40,9 +40,9 @@ export default MyReactComponent;
 
 ## Props
 
-Property     | Type     | Description
------------- | -------- | ------------------------
-i18nKeyLabel | String   | Key for i18n translation
-checked      | Boolean  | true / false
-onChange     | Function | Change callback params (event, isInputChecked)
-label        | String   | Text label for checkbox
+| Property     | Type     | Description                                    |
+| ------------ | -------- | ---------------------------------------------- |
+| i18nKeyLabel | String   | Key for i18n translation                       |
+| checked      | Boolean  | true / false                                   |
+| onChange     | Function | Change callback params (event, isInputChecked) |
+| label        | String   | Text label for checkbox                        |

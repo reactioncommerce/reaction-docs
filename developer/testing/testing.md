@@ -4,7 +4,6 @@
 
 Integration testing is implemented using [Mocha](https://mochajs.org/#installation) and [`meteor --test`](https://guide.meteor.com/testing.html).
 
-
 Shortcut for running the test suite:
 
 ```sh

@@ -12,7 +12,6 @@ more information and sign up for an account [here](http://developer.avalara.com/
 
 The Avalara configuration screen can be reached from the Tax dashboard panel. Move the slider to the right to enable.
 
-
 ![avalara-tax-panel](/assets/avalara-tax-panel.png)
 
 Once enabled you have a number of options to configure
@@ -107,4 +106,3 @@ that will be used when the transaction is sent to Avalara.
 You can set `Tax Exemption No` and `Customer Usage Type` for individual accounts under the Accounts Management Screen.
 
 ![avalara-tax-exempt-settings](/assets/avalara-tax-exempt.png)
-

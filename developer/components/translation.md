@@ -23,7 +23,7 @@ export default MyReactComponent;
 
 ## Props
 
-Property     | Type   | Description
------------- | ------ | ---------------------------------------------
-defaultValue | String | Default value if no translation can be loaded
-i18nKey      | String | Key for i18n translation
+| Property     | Type   | Description                                   |
+| ------------ | ------ | --------------------------------------------- |
+| defaultValue | String | Default value if no translation can be loaded |
+| i18nKey      | String | Key for i18n translation                      |

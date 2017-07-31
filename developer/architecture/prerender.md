@@ -20,6 +20,7 @@ Your `PRERENDER_HOST` should be the domain your app is using (e.g. `example.com`
 ### Delaying capture of a page
 
 [By default](https://prerender.io/documentation/best-practices) prerender attempts to determine when a page is done loading by counting requests in flight.
+
 > We try our very best to detect when a page is done loading by counting the number of requests in flight and saving the page when the number of requests in flight reaches zero (after a slight delay). You can tell us when your pages are ready so that we can be more accurate.
 
 If you need to set a page's readiness more specifically, you can use `window.prerenderReady`. We've done this on the [product grid](https://github.com/reactioncommerce/reaction/blob/development/imports/plugins/included/product-variant/client/templates/products/products.js) already and you can use that as an example if you need to set readiness for other templates.
