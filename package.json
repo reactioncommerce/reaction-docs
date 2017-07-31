@@ -55,6 +55,10 @@
       [
         "remark-lint-maximum-heading-length",
         180
+      ],
+      [
+        "remark-lint-ordered-list-marker-value",
+        "ordered"
       ]
     ]
   }
