@@ -10,13 +10,13 @@ The Templates are then available to be customized inside your Dashboard.
 
 ## Reaction's transactional emails
 
-- Accounts: Invite Shop Member
-- Accounts: Reset Password
-- Accounts: Verify Password
-- Accounts: Welcome Email
-- Orders: New Order Placed
-- Orders: Order Refunded
-- Orders: Order Shipped
+-   Accounts: Invite Shop Member
+-   Accounts: Reset Password
+-   Accounts: Verify Password
+-   Accounts: Welcome Email
+-   Orders: New Order Placed
+-   Orders: Order Refunded
+-   Orders: Order Shipped
 
 ## Updating email templates
 

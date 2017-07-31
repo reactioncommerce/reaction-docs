@@ -4,15 +4,15 @@ Our rules are similar to AirBnB or Meteor rules, [standard template of ESLint ru
 
 A couple of notable Reaction specific style rules:
 
-- Double quoted strings
-- Well spaced function
-- 160 character line length
-- `import` order
-    - React npm packages (`React`, `prop-types`, etc...)
-    - other npm packages
-    - meteor core packages
-    - meteor (Atmosphere) packages
-    - local app files
+-   Double quoted strings
+-   Well spaced function
+-   160 character line length
+-   `import` order
+    -   React npm packages (`React`, `prop-types`, etc...)
+    -   other npm packages
+    -   meteor core packages
+    -   meteor (Atmosphere) packages
+    -   local app files
 
 Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines that are typical of Meteor projects.
 
@@ -20,9 +20,9 @@ Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additio
 
 In the Reaction app root, we have Reaction specific configuration files that can be used with most editors with the appropriate tools installed.
 
-- `.eslintrc` - [http://eslint.org/](https://eslint.org/)
-- `.jsbeautifyrc` - [http://jsbeautifier.org/](https://jsbeautifier.org/)
-- `.editorconfig` - [http://editorconfig.org/](https://editorconfig.org/)
+-   `.eslintrc` - [http://eslint.org/](https://eslint.org/)
+-   `.jsbeautifyrc` - [http://jsbeautifier.org/](https://jsbeautifier.org/)
+-   `.editorconfig` - [http://editorconfig.org/](https://editorconfig.org/)
 
 These configurations also include additional rules supporting [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and `React`.
 
@@ -54,9 +54,9 @@ In our Markdown documentation, we use [remark-lint](https://github.com/wooorm/re
 
 Pull request branches are evaluated using [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) for insecure dependencies and code quality.
 
-- must pass a Linting check and _no errors_ are accepted.
-- must pass a Dependency check and no priority packages are accepted.
-- must pass `reaction test`
+-   must pass a Linting check and _no errors_ are accepted.
+-   must pass a Dependency check and no priority packages are accepted.
+-   must pass `reaction test`
 
 In many cases, documentation updates can be required as well.
 
@@ -70,8 +70,8 @@ In general we use hyphens (-) and camelCase for folder names, and camelCase alon
 
 **Good**
 
-- Folder names for packages must contain only lowercased alpha numeric characters and may be hyphenated if joining more than one word
-- Folder names all normal directories must start with a lowercased letter and may camel cased if joining more than one word
+-   Folder names for packages must contain only lowercased alpha numeric characters and may be hyphenated if joining more than one word
+-   Folder names all normal directories must start with a lowercased letter and may camel cased if joining more than one word
 
 
     // Packages in /imports/plugins
@@ -85,8 +85,8 @@ In general we use hyphens (-) and camelCase for folder names, and camelCase alon
 
 **Bad**
 
-- Package name should contain hyphens to make it easier to read.
-- Underscores are not to be used unless expressly required.
+-   Package name should contain hyphens to make it easier to read.
+-   Underscores are not to be used unless expressly required.
 
 
     reactionpackagename/
@@ -96,8 +96,8 @@ In general we use hyphens (-) and camelCase for folder names, and camelCase alon
 
 **Good**
 
-- File names must start with a lowercased letter and may be camel cased if joining more than one word.
-- File names may contain multiple (.) characters as needed
+-   File names must start with a lowercased letter and may be camel cased if joining more than one word.
+-   File names may contain multiple (.) characters as needed
 
 
     settingsContainer.js
@@ -111,7 +111,7 @@ In general we use hyphens (-) and camelCase for folder names, and camelCase alon
 
 **Bad**
 
-- Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files. Or for migration files to make the filename more readable.
+-   Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files. Or for migration files to make the filename more readable.
 
 
     settings_container.js

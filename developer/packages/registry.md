@@ -115,12 +115,12 @@ The `provides` property is a "placement" value, loading it as `dynamic template`
 
 The following `provides` values are defined in reaction-core:
 
-- paymentMethod
-- shippingMethod
-- settings
-- shortcut
-- dashboard
-- userAccountDropdown
+-   paymentMethod
+-   shippingMethod
+-   settings
+-   shortcut
+-   dashboard
+-   userAccountDropdown
 
 To add a new `settings` link to the app card:
 

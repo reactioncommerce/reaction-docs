@@ -34,15 +34,15 @@ Every product comes filled with one variant. To create more:
 
 2.  Fill out the following fields in the Edit Variant panel:
 
-- **Label** - A description of your variant, which appears in the drop-down menu under the "Options" section.
-- **Origin Country** - A drop-down menu of countries
-- **Weight** - The weight of your item, which will help determine shipping costs.
-- **MSRP (manufacturer's suggested retail price)** - The suggested retail price of your product.
-- **Price** - The price that you're actually selling your product.
-- **Width, Length, Height, Weight** - The size of your product
-- **Taxable** - Check this box to automatically add tax to this item when purchased. Add Tax Code and Tax Description for more options.
-- **Inventory tracking** - Check this box if you'd like to track this item in your inventory.
-- **Allow Backorder** - Allows customers to backorder the product.
+-   **Label** - A description of your variant, which appears in the drop-down menu under the "Options" section.
+-   **Origin Country** - A drop-down menu of countries
+-   **Weight** - The weight of your item, which will help determine shipping costs.
+-   **MSRP (manufacturer's suggested retail price)** - The suggested retail price of your product.
+-   **Price** - The price that you're actually selling your product.
+-   **Width, Length, Height, Weight** - The size of your product
+-   **Taxable** - Check this box to automatically add tax to this item when purchased. Add Tax Code and Tax Description for more options.
+-   **Inventory tracking** - Check this box if you'd like to track this item in your inventory.
+-   **Allow Backorder** - Allows customers to backorder the product.
 
 3.  Click the **Publish** button on the top right to save Unpublished changes.
 
