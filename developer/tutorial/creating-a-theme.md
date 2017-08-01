@@ -31,7 +31,7 @@ client/index.js **(Required)** - Entry point of all client side plugins, like th
 import "./styles/main.less";
 ```
 
-> You may store your CSS anywhere within your plugin. For the example theme we've placed CSS in the directory `client/styles`.
+>You may store your CSS anywhere within your plugin. For the example theme we've placed CSS in the directory `client/styles`.
 
 ## Install theme
 
@@ -55,4 +55,4 @@ You can override variables of the default theme simple by defining the variables
 @navbar-default-bg: #ff0000;
 ```
 
-> In LESS variables are considered constants, and are processed first, from top to bottom of all included LESS files. That means you can override variables after they've already been declared and the last instance takes effect.
+>In LESS variables are considered constants, and are processed first, from top to bottom of all included LESS files. That means you can override variables after they've already been declared and the last instance takes effect.

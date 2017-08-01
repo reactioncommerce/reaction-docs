@@ -32,9 +32,9 @@ Place Selenium Server in your home directory.
 mv ~/Downloads/selenium-server-standalone-* ~/
 ```
 
-**Install [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/).**
+### Install [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
 
-**Linux**
+#### Linux
 
 Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/).
 
@@ -42,7 +42,7 @@ Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/).
 sudo mv ~/Downloads/chromedriver /usr/bin/
 ```
 
-**macOS**
+#### macOS
 
 Install manually or using `brew`.
 
@@ -56,9 +56,9 @@ Run Selenium Server (**NOTE:** your selenium version might differ):
 java -jar selenium-server-standalone-3.0.0-beta2.jar
 ```
 
-**Test Reporter:**
+### Install Test Reporter
 
-**Debian**
+#### Debian
 
 ```sh
 sudo apt-add-repository ppa:yandex-qatools/allure-framework
@@ -66,7 +66,7 @@ sudo apt-get update
 sudo apt-get install allure-commandline
 ```
 
-**macOS**
+#### macOS
 
 ```sh
 brew tap qatools/formulas
@@ -75,7 +75,7 @@ brew install allure-commandline
 
 ### Configuration
 
-**_Test Settings:_**
+#### Test Settings
 
 ```sh
 tests/acceptance-tests/config/settings.yml
@@ -97,7 +97,7 @@ resolution: "1920x1080"
 
 If you decide to use a third party test runner. Their browser capabilities can be placed here.
 
-**_Configure User Data:_**
+#### Configure User Data
 
 ```sh
 tests/acceptance-tests/config/user-data.yml
@@ -150,7 +150,7 @@ export REACTION_EMAIL="prwtfizd@localhost"
 source ~/.bash_profile
 ```
 
-**_Configure Test Suite:_**
+#### Configure Test Suite
 
 ```sh
 test/acceptance-tests/config/test-suite-config.yml
@@ -177,13 +177,13 @@ By default all but `smoke_test` will be set to `false` (off). Setting to `true` 
 
 ### Run
 
-**_Start Reaction Application_**
+#### Start Reaction Application
 
 ```sh
 reaction
 ```
 
-**Run tests:**
+#### Run tests
 
 Running tests locally:
 
@@ -191,13 +191,13 @@ Running tests locally:
 npm run test-local
 ```
 
-#### BrowserStack
+### Automate with BrowserStack
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
 We use [BrowserStack](https://www.browserstack.com) for automated acceptance testing.
 
-**_Configure BrowserStack:_**
+#### Configure BrowserStack
 
 Add your BrowserStack credentials in `~/.bash_profile`.
 

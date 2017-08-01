@@ -43,6 +43,6 @@ the `Packages` collection.
 
 Next: [Using Layouts](/developer/tutorial/plugin-layouts-3.md)
 
-## Read More:
+## Read more
 
 [Registry](/developer/packages/registry.md)

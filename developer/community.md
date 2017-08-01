@@ -10,6 +10,5 @@ Ask questions and participate in discussions with Reaction community members fro
 
 ## Chat with the team
 
--   [Reaction Community Calls](http://getrxn.io/2rcCal) - Every other Wednesday at 7AM PST/10AM EST, join the core team for a public Reaction Community Call to discuss the latest hot questions and topics from the community. Subscribe to our [Reaction Community Google Calendar](http://getrxn.io/2rcCal) to RSVP to the next call and check out the [agenda](https://docs.google.com/document/d/1PwenrammgQJpQfFoUUJZ96i_JJYCM_4glAjB1_ZzgwA/edit?usp=sharing).
-
--   [Reaction Action](https://www.crowdcast.io/reactioncommerce) - Follow us on [Crowdcast](https://www.crowdcast.io/reactioncommerce) to RSVP for the next Reaction Action.
+- [Reaction Community Calls](http://getrxn.io/2rcCal) - Every other Wednesday at 7AM PST/10AM EST, join the core team for a public Reaction Community Call to discuss the latest hot questions and topics from the community. Subscribe to our [Reaction Community Google Calendar](http://getrxn.io/2rcCal) to RSVP to the next call and check out the [agenda](https://docs.google.com/document/d/1PwenrammgQJpQfFoUUJZ96i_JJYCM_4glAjB1_ZzgwA/edit?usp=sharing).
+- [Reaction Action](https://www.crowdcast.io/reactioncommerce) - Follow us on [Crowdcast](https://www.crowdcast.io/reactioncommerce) to RSVP for the next Reaction Action.

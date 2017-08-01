@@ -1,6 +1,6 @@
 # Using Custom Layouts
 
-_Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation._
+*Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation.*
 
 ## Purpose
 
@@ -145,10 +145,10 @@ determine how to pull the layout record from a key of `layout + workflow`. The `
 It is essentially the "default" workflow when you hit the home page.
 
 Also note that:
-1\. We have other parts that we could substitute without
+1. We have other parts that we could substitute without
 changing our layout. For example we change point our header or footer to
 a custom template by changing the values for "layoutHeader" or "layoutFooter".
-2\. There is a `priority` field on layout objects (with a default value) of `999`. When RC goes to render a route/page
+2. There is a `priority` field on layout objects (with a default value) of `999`. When RC goes to render a route/page
 (as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
  used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
 

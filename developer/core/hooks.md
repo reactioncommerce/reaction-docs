@@ -10,7 +10,7 @@ Reaction hooks are called in the following order:
 
 2) The original method body
 
-3) **After** hooks `after` and `afterMethods` _note these hooks occur regardless of error but you can catch errors within your hook function_
+3) **After** hooks `after` and `afterMethods` *Note: these hooks occur regardless of error but you can catch errors within your hook function*
 
 4) Callbacks, if any.
 
@@ -18,7 +18,7 @@ Reaction hooks are called in the following order:
 
 There are four properties that are accessible within the Reaction method hooks options parameter:
 
-1) `result` - the result of the method you called _note in before hooks, this will be undefined_
+1) `result` - the result of the method you called *Note: in before hooks, this will be undefined*
 
 2) `error` - if the method executed returned an error, else will be undefined.
 
@@ -28,7 +28,7 @@ There are four properties that are accessible within the Reaction method hooks o
 
 ## Example
 
-### Single Method Hook Example:
+### Single Method Hook Example
 
 This example hooks into the `orders/orderCompleted` method which takes one parameter `order` which is an Order object
 

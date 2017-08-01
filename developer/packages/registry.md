@@ -4,7 +4,7 @@ The `Reaction Registry` is used to add settings, routes, and permissions for Rea
 
 A `registry` object can be any combination of properties, with `provides` and `name` being the only required elements.
 
-_Note: The registry is currently refreshed only on update/deleting the package record in the database, or on delete/addition of the package._
+*Note: The registry is currently refreshed only on update/deleting the package record in the database, or on delete/addition of the package.*
 
 You may filter, or define using any of the optional registry properties:
 
@@ -115,12 +115,12 @@ The `provides` property is a "placement" value, loading it as `dynamic template`
 
 The following `provides` values are defined in reaction-core:
 
--   paymentMethod
--   shippingMethod
--   settings
--   shortcut
--   dashboard
--   userAccountDropdown
+- paymentMethod
+- shippingMethod
+- settings
+- shortcut
+- dashboard
+- userAccountDropdown
 
 To add a new `settings` link to the app card:
 

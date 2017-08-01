@@ -21,11 +21,11 @@ It creates product with top-level variant and 2 options.
 
 **Additional custom faker methods added:**
 
--   ReactionFaker.address
--   ReactionFaker.metaField
--   ReactionFaker.productVariant
--   ReactionFaker.cartItem
--   ReactionFaker.order
--   ReactionFaker.shops
--   ReactionFaker.users
--   ReactionFaker.products
+- ReactionFaker.address
+- ReactionFaker.metaField
+- ReactionFaker.productVariant
+- ReactionFaker.cartItem
+- ReactionFaker.order
+- ReactionFaker.shops
+- ReactionFaker.users
+- ReactionFaker.products
