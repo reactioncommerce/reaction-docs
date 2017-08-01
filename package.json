@@ -40,11 +40,14 @@
       "remark-lint",
       "remark-preset-lint-recommended",
       "remark-preset-lint-consistent",
-      "remark-lint-list-item-indent",
       "remark-preset-lint-markdown-style-guide",
       [
         "remark-lint-unordered-list-marker-style",
-        "consistent"
+        "-"
+      ],
+      [
+        "remark-lint-list-item-indent",
+        "space"
       ],
       "remark-lint-list-item-bullet-indent",
       "remark-lint-no-multiple-toplevel-headings",
@@ -59,6 +62,10 @@
       [
         "remark-lint-ordered-list-marker-value",
         "ordered"
+      ],
+      [
+        "remark-lint-no-duplicate-headings",
+        false
       ]
     ]
   }

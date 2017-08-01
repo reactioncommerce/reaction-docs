@@ -8,6 +8,7 @@ When changes are made to a product, a collection hook in `/imports/plugins/core/
 
 See `lib/collections/schemas/revisions.js` for more details.
 
+```js
     _id: Revision Document Id
     workflow: Workflow status
     documentId: Reference Document Id
@@ -82,13 +83,16 @@ See `lib/collections/schemas/revisions.js` for more details.
             }
         ]
     }
+```
 
 ## Helpers
 
 ### Check if revision control is enabled
 
+```js
     import { isRevisionControlEnabled } from "/imports/plugins/core/revisions/lib/api";
 
     if (isRevisionControlEnabled()) {
       // Do something if revision control is enabled
     }
+```

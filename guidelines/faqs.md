@@ -34,7 +34,7 @@ Any event that we fund will have some sort of anti-harassment policy in place. T
 
 Our intent is that the anyone in the community can stand up for this code, and direct people who're unaware to this document. If that doesn't work, or if you need more help, you can contact <mailto:conduct@reactioncommerce.com>. For more details please see our [Reporting Guidelines](/guidelines/reporting-guide.md).
 
-## Why do we need a Code of Conduct? Everyone knows not to be a jerk.
+## Why do we need a Code of Conduct? Everyone knows not to be a jerk
 
 Sadly, not everyone knows this.
 

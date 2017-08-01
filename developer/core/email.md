@@ -8,25 +8,25 @@ All emails that are sent from Reaction are added to a job queue for both logging
 
 All server side email methods (except Meteor methods) are available in the `Reaction.Email` namespace.
 
-#### Reaction.Email.getMailUrl()
+### Reaction.Email.getMailUrl()
 
 If mail is configured, returns an SMTP URL string.
 
 The following settings are checked in the order shown and the first one that is found with all required parts (host, port, user, password) will be used. See [email configuration](/admin/email.md) for more information.
 
--   `MAIL_URL` environment variable
--   `Meteor.settings.MAIL_URL`
--   Mail settings saved in the `core` plugin settings
+- `MAIL_URL` environment variable
+- `Meteor.settings.MAIL_URL`
+- Mail settings saved in the `core` plugin settings
 
-#### Reaction.Email.getMailConfig()
+### Reaction.Email.getMailConfig()
 
 If mail is configured, returns a [Nodemailer](https://github.com/nodemailer/nodemailer) configuration object.
 
 The following settings are checked in the order shown and the first one that is found with all required parts (host, port, user, password) will be used. See [email configuration](/admin/email.md) for more information.
 
--   `MAIL_URL` environment variable
--   `Meteor.settings.MAIL_URL`
--   Mail settings saved in the `core` plugin settings
+- `MAIL_URL` environment variable
+- `Meteor.settings.MAIL_URL`
+- Mail settings saved in the `core` plugin settings
 
 **Example Nodemailer config**
 
@@ -52,7 +52,7 @@ The "direct" config looks like this:
 }
 ```
 
-#### Reaction.Email.send(options)
+### Reaction.Email.send(options)
 
 Adds an email sending job to the queue. Jobs are processed immediately in the order they are added. Failures are retried 5 times, with a 3 minute wait between each try.
 
@@ -60,10 +60,10 @@ Adds an email sending job to the queue. Jobs are processed immediately in the or
 
 (all fields required, email job will fatally fail if any are missing)
 
--   `to` - email address to send to
--   `from` - email address that will appear to have sent the email
--   `subject` - the email subject
--   `html` - the HTML or plain text content of the email
+- `to` - email address to send to
+- `from` - email address that will appear to have sent the email
+- `subject` - the email subject
+- `html` - the HTML or plain text content of the email
 
 #### Reaction.Email.getTemplate(template)
 

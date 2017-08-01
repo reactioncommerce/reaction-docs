@@ -12,8 +12,8 @@ To configure your search tool, login to your dashboard and click the **Search** 
 
 Customize how your product search results are displayed by checking or unchecking the following boxes:
 
--   Include title
--   Include description
--   Include page title
--   Include details
--   Include vendor
+- Include title
+- Include description
+- Include page title
+- Include details
+- Include vendor

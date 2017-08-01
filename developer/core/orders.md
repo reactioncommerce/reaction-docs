@@ -48,7 +48,7 @@ Called when a tracking number has been entered and the **Add** button has been c
 
 ### orders/documentPrepare
 
-Called when the **Download PDF** button is clicked or when the Adjustment _Approved_ button is clicked. This also calls updateHistory and updated that shipment is being prepared.
+Called when the **Download PDF** button is clicked or when the Adjustment *Approved* button is clicked. This also calls updateHistory and updated that shipment is being prepared.
 
 ### orders/processPayment
 

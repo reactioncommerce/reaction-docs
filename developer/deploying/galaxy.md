@@ -10,7 +10,7 @@ meteor deploy --settings settings/<prod-settings>.json <yoursite>.meteor.com
 
  A great service for sharing pre-production prototypes, but doesn't include `imagemagick`.
 
-# Galaxy
+## Galaxy
 
 Production quality AWS deployment from Meteor Development Group with some unique benefits for Meteor applications.
 

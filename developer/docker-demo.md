@@ -2,9 +2,7 @@
 
 Install Docker: <https://www.docker.com/products/docker>
 
-# Go
-
-## Quick Easy
+## Quick & Easy
 
 But on the command line!
 Open Terminal:

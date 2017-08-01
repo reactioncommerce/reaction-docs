@@ -2,31 +2,31 @@
 
 We think [Docker](https://www.docker.com) is one of the easiest ways to deploy modern apps and it's currently the recommended approach if you're hosting your own Reaction Commerce shop.  If you aren't using a customized version of Reaction, there are only a few steps to get up and running and you don't even need to know much about Docker to do it. Let's get started!
 
-### Install
+## Install
 
 First, you should find the [Docker installer for your platform](https://www.docker.com/products/overview). This will install all of the Docker tools that you'll need for the rest of this section.
 
 As described by Docker:
 
--   **[Docker Engine](https://docs.docker.com/engine/understanding-docker/)** provides the core functions you need to create Docker images and run Docker containers.
--   **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
--   **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.
+- **[Docker Engine](https://docs.docker.com/engine/understanding-docker/)** provides the core functions you need to create Docker images and run Docker containers.
+- **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
+- **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.
 
 The following documentation only aims to show you how to setup a production deployment of Reaction Commerce.  If you would like to learn more about the basics of Docker and how it might be useful for your development workflow, we strongly encourage reading Docker's [Getting Started docs](https://docs.docker.com/) and going through some of their [beginner tutorials](https://docs.docker.com/learn/).
 
 Ok, let's do this!
 
-### Deploy
+## Deploy
 
 Since the default Docker install only applies to a local development environment, the rest of these docs will assume you will be running Docker on a remote machine on the public internet so your containers will be accessible to anyone. Aside from the server setup, the process for running containers is identical either way, so you can go through the same steps locally to test your containers before deploying them publicly.
 
 Ok, so step #1 will be to set up a Docker host to deploy to.  To accomplish this, we'll be using [Docker Machine](https://docs.docker.com/machine/overview/) to launch and manage a server on [Digital Ocean](https://digitalocean.com).
 
-#### Docker Machine
+### Docker Machine
 
 Docker Machine has drivers for [most of the major cloud providers](https://docs.docker.com/machine/drivers/).  They each have their own settings, but the process is essentially the same for all of them.  We're going to focus on the Digital Ocean driver because it's one of the easiest to use. Only a few settings are required to start a new server, but see [the Digital Ocean driver docs](https://docs.docker.com/machine/drivers/digital-ocean/) for all of the available options.
 
-Before you start a machine, you'll need to get an API key from your Digital Ocean account.  See "_[How Do I Get My API Credentials?](https://www.digitalocean.com/help/api/)_"
+Before you start a machine, you'll need to get an API key from your Digital Ocean account.  See "*[How Do I Get My API Credentials?](https://www.digitalocean.com/help/api/)*"
 
 Once you have that, you're ready to use Docker Machine to provision a server. To do so, run:
 
@@ -50,7 +50,7 @@ eval "$(docker-machine env reaction-host)"
 
 Now when you run Docker commands, they will be executing on the remote server instead of your local machine.  Ok, let's fire up some Docker containers on your new server!
 
-#### Docker
+### Docker
 
 If you don't have a customized version of Reaction Commerce, you can use our official release builds that are [available on Docker Hub](https://hub.docker.com/r/reactioncommerce/reaction/) as `reactioncommerce/reaction:latest`. The official releases are built by [Circle CI](https://circleci.com/) every time code is merged into [the master branch on Github](https://github.com/reactioncommerce/reaction/tree/master).
 

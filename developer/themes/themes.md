@@ -30,14 +30,14 @@ You should use the RTL mixin instead:
 
 The following RTL Less mixins are available:
 
--   .rtl
--   .ltr
--   .left
--   .right
--   .margin-left
--   .margin-right
--   .padding-left
--   .padding-right
--   .float
--   .clear
--   .text-align
+- .rtl
+- .ltr
+- .left
+- .right
+- .margin-left
+- .margin-right
+- .padding-left
+- .padding-right
+- .float
+- .clear
+- .text-align
