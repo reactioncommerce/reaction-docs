@@ -13,7 +13,7 @@ elements of Meteor such as pub/sub or reactivity. But to understand what is happ
 
 ### Pros and Cons of creating a custom plugin
 
-When you start to work with Reaction Commerce (and with many other open-source ecommerce packages) you have two paths to go down. The first is to simple fork the package and make the changes you want. The advantages of this are:
+When you start to work with Reaction Commerce (and with many other open-source ecommerce packages) you have two paths to go down. The first is to simply fork the package and make the changes you want. The advantages of this are:
 
 1. Changes are often simpler to make and understand. If you want to change the look of a template, you just change it.
 2. You can make changes that the core package may not allow you to make
@@ -45,10 +45,11 @@ avoid thrashing. Custom plugins are always imported last so that they can overri
 
 ## Notes on the Example Plugin
 
-The goal of the example plugin is to show you all the things that you can do with a plugin hopefully covering the things
-people most often want to customize. However, if you look at the way that Reaction Commerce is itself structured every
-attempt is made to make functionality as modular as possible so that that things are easy to understand. So as you build your plugin you may want to consider that you may want to build
-more than one plugin, possibly keeping things like CSS and the like in one plugin and other more backend functionality
-in another. Whatever makes the most sense to you.
+The goal of the example plugin is to show you all the things that you can do with a plugin, hopefully covering the things
+people most often want to customize. However, if you look at the way that Reaction Commerce itself is structured every
+attempt is made to make functionality as modular as possible so that things are easy to understand. So as you build
+your plugin you may want to consider that you may want to build more than one plugin, possibly keeping things like
+CSS and the like in one plugin and other, more backend-focused functionality in another. Whatever makes the most
+sense to you, do.
 
 Next: [Creating a plugin](/developer/tutorial/plugin-creating-2.md)
