@@ -126,9 +126,3 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
         </a>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-xs-12">
-        <div class="view-more"><a href="https://blog.reactioncommerce.com/tag/engineering/">Read All Engineering Posts</a></div>
-    </div>
-</div>
