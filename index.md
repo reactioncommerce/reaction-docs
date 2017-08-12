@@ -20,12 +20,20 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   }
   .article {
     background: rgb(255,251,207);
+    padding: 15px;
+    margin-bottom: 10px;
   }
   .headline {
-    font-weight: 600;
+    font-weight: 600 !important;
+    color: rgb(5,42,78) !important;
+    margin-right: 20px;
   }
   .article:hover {
     background: #ffffff;
+  }
+  .article-link {
+    text-decoration: none;
+    color: rgb(5,42,78) !important;
   }
 </style>
 
@@ -86,34 +94,34 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
 
 <div class="row article-list">
     <div class="col-xs-12">
-        <a href="https://blog.reactioncommerce.com/introduction-to-reactions-architecture/">
+        <a href="https://blog.reactioncommerce.com/introduction-to-reactions-architecture/" class="article-link">
           <div class="article">
-              <div class="headline">An Introduction to Reaction's Architecture</div>
-              <div class="dateline">14 Jun 2017 | Spencer Norman</div>
+              <span class="headline">An Introduction to Reaction's Architecture</div>
+              <span class="dateline">14 Jun 2017 | Spencer Norman</div>
           </div>
         </a>
-        <a href="https://blog.reactioncommerce.com/reaction-architecture-events/">
+        <a href="https://blog.reactioncommerce.com/reaction-architecture-events/" class="article-link">
           <div class="article">
-              <div class="headline">An Introduction to Architecture: Events & Hooks</div>
-              <div class="dateline">20 Jun 2017 | Spencer Norman</div>
+              <span class="headline">An Introduction to Architecture: Events & Hooks</div>
+              <span class="dateline">20 Jun 2017 | Spencer Norman</div>
           </div>
         </a>
-        <a href="https://blog.reactioncommerce.com/reaction-architecture-alerts-notifications-and-emails/">
+        <a href="https://blog.reactioncommerce.com/reaction-architecture-alerts-notifications-and-emails/" class="article-link">
           <div class="article">
-              <div class="headline">An Introduction to Architecture: Alerts, Notifications & Emails</div>
-              <div class="dateline">28 Jun 2017 | Spencer Norman</div>
+              <span class="headline">An Introduction to Architecture: Alerts, Notifications & Emails</div>
+              <span class="dateline">28 Jun 2017 | Spencer Norman</div>
           </div>
         </a>
-        <a href="https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/">
+        <a href="https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/" class="article-link">
           <div class="article">
-              <div class="headline">An Introduction to Architecture: The Registry</div>
-              <div class="dateline">18 Jul 2017 | Spencer Norman</div>
+              <span class="headline">An Introduction to Architecture: The Registry</div>
+              <span class="dateline">18 Jul 2017 | Spencer Norman</div>
           </div>
         </a>
-        <a href="https://blog.reactioncommerce.com/product-grid/">
+        <a href="https://blog.reactioncommerce.com/product-grid/" class="article-link">
           <div class="article">
-              <div class="headline">The Core Commerce Funnel: Product Grid</div>
-              <div class="dateline">28 Jul 2017 | Spencer Norman</div>
+              <span class="headline">The Core Commerce Funnel: Product Grid</div>
+              <span class="dateline">28 Jul 2017 | Spencer Norman</div>
           </div>
         </a>
     </div>
