@@ -7,6 +7,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
     color: rgb(253,130,131) !important;
     font-size: 32px !important;
     font-weight: 600 !important;
+    letter-spacing: 0.6px !important;
   }
   .section-promo {
     border: 3px solid rgb(167,237,255);
@@ -27,6 +28,10 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
     font-weight: 600 !important;
     color: rgb(5,42,78) !important;
     margin-right: 20px;
+    letter-spacing: 0.3px;
+  }
+  .dateline {
+    letter-spacing: 0.3px;
   }
   .article:hover {
     background: #ffffff;
@@ -90,7 +95,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   </div>
 </div>
 
-## Recent Blog Posts
+# Recent Blog Posts
 
 <div class="row article-list">
     <div class="col-xs-12">
