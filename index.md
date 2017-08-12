@@ -5,13 +5,18 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
 <style>
   .accent-color {
     color: rgb(253,130,131) !important;
-    font-weight: 32px !important;
+    font-size: 32px !important;
+    font-weight: 600 !important;
   }
   .section-promo {
     border: 3px solid rgb(167,237,255);
+    margin-bottom: 30px;
   }
   .section-promo a {
     text-decoration: none;
+  }
+  .secton-promo:hover {
+    background: rgb(255,251,207);
   }
 </style>
 
