@@ -18,11 +18,13 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   }
   .secton-promo:hover {
     background: rgb(255,251,207);
+    cursor: pointer;
   }
   .article {
     background: rgb(255,251,207);
     padding: 15px;
     margin-bottom: 10px;
+    cursor: pointer;
   }
   .headline {
     font-weight: 600 !important;
