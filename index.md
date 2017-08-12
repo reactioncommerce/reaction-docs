@@ -18,6 +18,15 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   .secton-promo:hover {
     background: rgb(255,251,207);
   }
+  .article {
+    background: rgb(255,251,207);
+  }
+  .headline {
+    font-weight: 600;
+  }
+  .article:hover {
+    background: #ffffff;
+  }
 </style>
 
 <div class="row">
@@ -71,6 +80,43 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
       </a>
     </div>
   </div>
+</div>
+
+## Recent Blog Posts
+
+<div class="row article-list">
+    <div class="col-xs-12">
+        <a href="https://blog.reactioncommerce.com/introduction-to-reactions-architecture/">
+          <div class="article">
+              <div class="headline">An Introduction to Reaction's Architecture</div>
+              <div class="dateline">14 Jun 2017 | Spencer Norman</div>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/reaction-architecture-events/">
+          <div class="article">
+              <div class="headline">An Introduction to Architecture: Events & Hooks</div>
+              <div class="dateline">20 Jun 2017 | Spencer Norman</div>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/reaction-architecture-alerts-notifications-and-emails/">
+          <div class="article">
+              <div class="headline">An Introduction to Architecture: Alerts, Notifications & Emails</div>
+              <div class="dateline">28 Jun 2017 | Spencer Norman</div>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/">
+          <div class="article">
+              <div class="headline">An Introduction to Architecture: The Registry</div>
+              <div class="dateline">18 Jul 2017 | Spencer Norman</div>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/product-grid/">
+          <div class="article">
+              <div class="headline">The Core Commerce Funnel: Product Grid</div>
+              <div class="dateline">28 Jul 2017 | Spencer Norman</div>
+          </div>
+        </a>
+    </div>
 </div>
 
 <div class="row">
