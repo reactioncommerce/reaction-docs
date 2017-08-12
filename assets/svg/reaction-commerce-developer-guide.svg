@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="109px" viewBox="0 0 79 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Rocket Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dev-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Docs-Landing-Page-" transform="translate(-809.000000, -416.000000)">
+            <g id="User-Guide" transform="translate(361.000000, 385.000000)">
+                <g id="Get-Started" transform="translate(335.000000, 0.000000)">
+                    <g id="Rocket-Copy" transform="translate(115.000000, 34.000000)">
+                        <path d="M37.5,0 C49.2607584,8.42247935 56.6128142,20.3873599 59.5561672,35.8946418 C62.4995203,51.4019236 60.9273528,69.8888291 54.8396649,91.3553582 L20.1603351,91.3553582 C14.126056,69.6074403 12.5538886,51.1205348 15.4438328,35.8946418 C18.3337769,20.6687487 25.6858327,8.70386815 37.5,0 Z" id="Polygon" stroke="#052A4E" stroke-width="4"></path>
+                        <rect id="Rectangle-7" stroke="#052A4E" stroke-width="4" x="23" y="93" width="29" height="11"></rect>
+                        <path d="M13.75,53 C4.58333333,66.9826673 2.28413502e-16,78.649334 0,88 C7,86.5 14.75,86.5 18.5,88" id="Path-2" stroke="#052A4E" stroke-width="4"></path>
+                        <path d="M69.75,53 C60.5833333,66.9826673 56,78.649334 56,88 C63,86.5 70.75,86.5 74.5,88" id="Path-2-Copy" stroke="#052A4E" stroke-width="4" transform="translate(65.250000, 70.500000) scale(-1, 1) translate(-65.250000, -70.500000) "></path>
+                        <circle id="Oval-2-Copy-2" fill="#052A4E" cx="45" cy="56" r="1"></circle>
+                        <circle id="Oval-2-Copy-3" fill="#052A4E" cx="45" cy="45" r="1"></circle>
+                        <circle id="Oval-2-Copy-4" fill="#052A4E" cx="45" cy="34" r="1"></circle>
+                        <rect id="Rectangle-8" stroke="#052A4E" stroke-width="2" x="42" y="31" width="6" height="6"></rect>
+                        <rect id="Rectangle-8-Copy" stroke="#052A4E" stroke-width="2" x="42" y="42" width="6" height="6"></rect>
+                        <rect id="Rectangle-8-Copy-2" stroke="#052A4E" stroke-width="2" x="42" y="53" width="6" height="6"></rect>
+                        <path d="M19,23 L56.0540146,23" id="Line-2" stroke="#052A4E" stroke-width="2" stroke-linecap="square"></path>
+                        <path d="M28.9815248,98 L46,98" id="Line-2-Copy" stroke="#052A4E" stroke-width="2" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
