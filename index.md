@@ -48,7 +48,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   <div class="col-md-4">
     <div class="section-promo">
       <a href="https://docs.reactioncommerce.com/reaction-docs/development/dashboard">
-        <img class="center-block" src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/index/assets/svg/reaction-commerce-store-guide.svg">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-store-guide.svg">
         <h3 class="accent-color text-center">Store Guide</h3>
       </a>
     </div>
@@ -56,7 +56,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   <div class="col-md-4">
     <div class="section-promo">
       <a href="https://docs.reactioncommerce.com/reaction-docs/master/getting-started-developing-with-reaction">
-        <img class="center-block" src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/index/assets/svg/reaction-commerce-developer-guide.svg">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-developer-guide.svg">
         <h3 class="accent-color text-center">Developer Guide</h3>
       </a>
     </div>
@@ -64,7 +64,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   <div class="col-md-4">
     <div class="section-promo">
       <a href="http://gitter.im/reactioncommerce/">
-        <img class="center-block" src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/index/assets/svg/reaction-commerce-chat.svg">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-chat.svg">
         <h3 class="accent-color text-center">Chat</h3>
       </a>
     </div>
@@ -74,7 +74,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   <div class="col-md-4">
     <div class="section-promo">
       <a href="https://reactioncommerce.github.io/reaction-jsdoc/index.html">
-        <img class="center-block" src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/index/assets/svg/reaction-commerce-core-api-guide.svg">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-core-api-guide.svg">
         <h3 class="accent-color text-center">Core API</h3>
       </a>
     </div>
@@ -82,7 +82,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   <div class="col-md-4">
     <div class="section-promo">
       <a href="https://styleguide.reactioncommerce.com/">
-        <img class="center-block" src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/index/assets/svg/reaction-commerce-style-guide.svg">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-style-guide.svg">
         <h3 class="accent-color text-center">Style Guide</h3>
       </a>
     </div>
@@ -90,7 +90,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   <div class="col-md-4">
     <div class="section-promo">
       <a href="https://forums.reactioncommerce.com/">
-        <img class="center-block" src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/index/assets/svg/reaction-commerce-forums.svg">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-forums.svg">
         <h3 class="accent-color text-center">Forum</h3>
       </a>
     </div>
