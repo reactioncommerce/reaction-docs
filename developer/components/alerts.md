@@ -31,23 +31,21 @@ const MyReactComponent = () => {
 export default MyReactComponent;
 ```
 
-| Property                     | Type     | Description                                                   |
-| ---------------------------- | -------- | ------------------------------------------------------------- |
-| [alerts](#propalerts)            | Array[Object]   | An Array of alert objects                                 |
+| Property              | Type          | Description               |
+| --------------------- | ------------- | ------------------------- |
+| [alerts](#propalerts) | Array[Object] | An Array of alert objects |
 
 ## Prop: alerts
 
-```
-const alertArray = [
-  {
-    message: "Something went wrong",
-    mode: "warning",
-    options: {
-      autoHide: 4000
-    }
-  }
-];
-```
+    const alertArray = [
+      {
+        message: "Something went wrong",
+        mode: "warning",
+        options: {
+          autoHide: 4000
+        }
+      }
+    ];
 
 ### Example
 

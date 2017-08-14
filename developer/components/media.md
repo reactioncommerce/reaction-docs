@@ -28,13 +28,13 @@ export default MyReactComponent;
 
 ### Props
 
-Property      | Type          | Description
-------------- | ------------- | -----------------------------------------------------------------------------
-editable      | Boolean       | toggle between an editable and non editable media gallery
-media         | Array[Object] | Array of media objects from CFS
-onDrop        | Function      | Dropzone drop event. callback signature `(files) => {}`
-onMove        | Function      | React DnD drag move event. callback signature `(moveIndex, hoverIndex) => {}`
-onRemoveMedia | Function      | Remove media callback. callback signature `(media) => {}`
+| Property      | Type          | Description                                                                   |
+| ------------- | ------------- | ----------------------------------------------------------------------------- |
+| editable      | Boolean       | toggle between an editable and non editable media gallery                     |
+| media         | Array[Object] | Array of media objects from CFS                                               |
+| onDrop        | Function      | Dropzone drop event. callback signature `(files) => {}`                       |
+| onMove        | Function      | React DnD drag move event. callback signature `(moveIndex, hoverIndex) => {}` |
+| onRemoveMedia | Function      | Remove media callback. callback signature `(media) => {}`                     |
 
 ## Media
 
@@ -56,11 +56,11 @@ export default MyReactComponent;
 
 ### Props
 
-Property          | Type          | Description
------------------ | ------------- | --------------------------------------------------------------------------------
-connectDragSource | Function      | React DnD drag source
-connectDropTarget | Function      | React Dnd drop target
-defaultSource     | String        | Default image if source is not defined. Defaults to `/resources/placeholder.gif`
-editable          | Boolean       | Show edit controls, allow drag and drop sorting.
-onRemoveMedia     | Function      | Remove media callback. callback signature `(media) => {}`
-source            | String, Media | String url for resource, or a CFS file object
+| Property          | Type          | Description                                                                      |
+| ----------------- | ------------- | -------------------------------------------------------------------------------- |
+| connectDragSource | Function      | React DnD drag source                                                            |
+| connectDropTarget | Function      | React Dnd drop target                                                            |
+| defaultSource     | String        | Default image if source is not defined. Defaults to `/resources/placeholder.gif` |
+| editable          | Boolean       | Show edit controls, allow drag and drop sorting.                                 |
+| onRemoveMedia     | Function      | Remove media callback. callback signature `(media) => {}`                        |
+| source            | String, Media | String url for resource, or a CFS file object                                    |

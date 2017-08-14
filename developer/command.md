@@ -48,7 +48,7 @@ Reaction server integration tests in the console.
 
 ## meteor
 
-Full Meteor command line documentation can be found here: http://docs.meteor.com/#/full/commandline
+Full Meteor command line documentation can be found here: <http://docs.meteor.com/#/full/commandline>
 
 ```sh
 meteor —settings settings/settings.json

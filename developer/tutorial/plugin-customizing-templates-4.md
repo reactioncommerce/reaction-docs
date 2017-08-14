@@ -4,7 +4,7 @@ If you have been following along exactly with this tutorial you may have noticed
 we have broken the site. Why? Because the layout we specified cannot be found. So let's add it now.
 
 Create the following directory structure under the `client` directory.
-(_Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)_)
+(*Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)*)
 
 ```sh
 client/
@@ -14,7 +14,7 @@ client/
       └─core.js
 ```
 
-**client/index.js**
+## client/index.js
 
 To make this template part of the project we need to import it, so we add it to the `index.js` at the root of the `client` directory (where we imported the LESS files). We add this line
 
@@ -23,16 +23,16 @@ To make this template part of the project we need to import it, so we add it to 
 import "./components";
 ```
 
-**client/templates/index.js**
+## client/templates/index.js
 
-Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. _Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out_. So in `client/templates/index.js` we add
+Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. *Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out*. So in `client/templates/index.js` we add
 
 ```js
 // client/templates/index.js
 import "./layouts/core.js";
 ```
 
-**client/templates/layouts/core.js**
+## client/templates/layouts/core.js
 
 Add the following to `core.js` to get the standard layout.
 
@@ -93,7 +93,6 @@ registerComponent({
 });
 
 export default CoreLayoutBeesknees;
-
 ```
 
 See that line that says:
@@ -116,7 +115,7 @@ So let's go and create our template first and then we will point our new layout 
 
 Create a directory under `client/templates` called `products` and there create a file called `productsLanding.html` and a file called `productsLanding.js`
 
-_For the purposes of this tutorial we are just copying over the original template files from the `product-variant` plugin. You, of course, are creating a brand new, innovative way of displaying products._
+For the purposes of this tutorial we are just copying over the original template files from the `product-variant` plugin. You, of course, are creating a brand new, innovative way of displaying products.
 
 If you look at these templates you will see templates and sub-templates. Basically if you want use the default you can just references back to the original template by name, or you can change the name and create your own template. All templates go into a single global namespace and must be unique.
 

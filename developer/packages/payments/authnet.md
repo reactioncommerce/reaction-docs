@@ -2,7 +2,7 @@
 
 Authorize.net Payment Platform integration for Reaction Commerce
 
-Documentation is available at [https://developer.authorize.net/api/reference/index.html](https://developer.authorize.net/api/reference/index.html)
+Documentation is available at <https://developer.authorize.net/api/reference/index.html>
 
 ## Configuration
 

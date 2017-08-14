@@ -6,7 +6,7 @@ Reaction uses the [Bunyan](https://github.com/trentm/node-bunyan) logging librar
 
 Most loggers have the concept of log level.  That allows you to filter what is visible in your logs (see available levels and their descriptions below).  The default levels in Reaction are `INFO` on the server and `WARN` on the client.  To override the log level on the server, you can modify `REACTION_LOG_LEVEL` environment variable or set the value in your `settings.json`.  Overriding the log level on the client requires using the `settings.json` approach - specifically in the `public` object (see below).
 
-**Environment Variable**
+### Environment Variable
 
 To set the server log level in development, you can add the environment variable before the `reaction` command when starting the app.
 
@@ -28,7 +28,7 @@ To set it in production (assuming you're using Docker), it would look like this:
 docker run -e REACTION_LOG_LEVEL="DEBUG" ...
 ```
 
-**Meteor Settings**
+### Meteor Settings
 
 ```js
 // settings.json
@@ -59,7 +59,7 @@ Suggestions: Use "DEBUG" sparingly. Information that will be useful to debug err
 
 ## Usage
 
-**Server**
+### Server
 
 Default level: `INFO`
 
@@ -67,7 +67,7 @@ Default level: `INFO`
 import { Logger } from "/server/api";
 ```
 
-**Client**
+### Client
 
 Default level in development: `INFO` (slightly more verbose for development)
 
@@ -77,7 +77,7 @@ Default level in production: `WARN` (only show warnings or worse)
 import { Logger } from "/client/api";
 ```
 
-**Log stuff...**
+### Log stuff
 
 ```js
 /**
@@ -147,7 +147,7 @@ By default, Reaction sends logs to the console, but we also support sending to [
 
 Default level: `DEBUG`
 
-**Environment variables**
+#### Environment variables
 
 ```sh
 # required

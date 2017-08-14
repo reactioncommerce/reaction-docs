@@ -8,7 +8,7 @@ Currently `reaction-shipping` only provides flat-rate per order rules. All other
 
 The Schema and collections are setup to support the following rules, which need to be written.
 
-## Methods:
+## Methods
 
 - **flat rate - per order**
 - flat rate - line item
@@ -18,7 +18,7 @@ The Schema and collections are setup to support the following rules, which need 
 - percentage - line item
 - percentage - order value
 
-## Usages Scenarios:
+## Usages Scenarios
 
 - bundled box dimensions + weight
 - different originations
@@ -37,7 +37,7 @@ The Schema and collections are setup to support the following rules, which need 
 - Estimated Delivery Dates
 - Estimate Shipping Dates
 
-## Order Results:
+## Order Results
 
 - Tracking Code
 - Label PDF

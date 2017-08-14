@@ -40,6 +40,6 @@ Additionally, Reaction can use a [modified version](https://github.com/ongoworks
 
 It's worth noting that the spiderable package is slotted for deprecation. The reasons for this include:
 
--   Google has deprecated the AJAX crawling specification that the spiderable package is based on
--   Search engine crawlers (like Google's) have gotten much better at dealing with JavaScript/AJAX based applications, without the need for any special handling
--   There are now several better options for SEO goodness, like pre-rendering services (e.g. Prerender.io - which is included in Reaction and can easily be setup), server-side rendering techniques, etc.
+- Google has deprecated the AJAX crawling specification that the spiderable package is based on
+- Search engine crawlers (like Google's) have gotten much better at dealing with JavaScript/AJAX based applications, without the need for any special handling
+- There are now several better options for SEO goodness, like pre-rendering services (e.g. Prerender.io - which is included in Reaction and can easily be setup), server-side rendering techniques, etc.
