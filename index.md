@@ -91,7 +91,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
     <div class="section-promo">
       <a href="https://forums.reactioncommerce.com/">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-forums.svg">
-        <h3 class="accent-color text-center">Forum</h3>
+        <h3 class="accent-color text-center">Forums</h3>
       </a>
     </div>
   </div>
