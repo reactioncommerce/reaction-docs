@@ -46,9 +46,9 @@ export default MyReactComponent;
 | icon              | String   | icon name (fontawesome)                                    |
 | isAdmin           | Boolean  | Use admin styles                                           |
 | label             | String   | primary label                                              |
+| listItemClassName | String   | Custom class name                                          |
 | onClick           | Function | Click handler<br> `(event, value) => ()`                   |
 | onSwitchChange    | Function | Switch change handler<br> `(event, isChecked, name) => ()` |
 | switchName        | String   | Name of switch, passed to the `onSwitchChange` callback    |
 | switchOn          | Boolean  | true / false. requires `actionType="switch"`               |
 | value             | Any      | Any value you want, gets passed to the `onClick` callback  |
-| listItemClassName | String   | Custom class name                                          |
