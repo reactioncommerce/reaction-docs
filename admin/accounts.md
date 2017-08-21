@@ -2,7 +2,7 @@
 
 The Accounts section is the place to manage user groups and associated permissions. By default it shows default admin groups (i.e Owner and Shop Managers) and users belonging to each.
 
-![](/assets/admin-dashboard-accounts.png "Accounts Dashboard")
+![](/assets/admin-accounts-dashboard-groups.png "Accounts Dashboard")
 
 your gateway to all things related to your shop members and guests. Here, you may add members, configure merchant access, and customize guest logins.
 
