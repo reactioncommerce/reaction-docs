@@ -1,16 +1,17 @@
 # Accounts
 
-The Accounts section is your gateway to all things related to your shop members and guests. Here, you may add members, configure merchant access, and customize guest logins.
+The Accounts section is the place to manage user groups and associated permissions. By default it shows default admin groups (i.e Owner and Shop Managers) and users belonging to each.
 
-## Add a Shop Member
+![](/assets/admin-dashboard-accounts.png "Accounts Dashboard")
+
+your gateway to all things related to your shop members and guests. Here, you may add members, configure merchant access, and customize guest logins.
+
+## Add an Account to A Group
 
 To add a new member to your shop, click on the "Add User" icon, located on the upper right-hand side of the Accounts card.
-
-![](/assets/admin-dashboard-accounts-add.png "Reaction Commerce Dashboard")
-
 Enter the user's name and email address in the fields below, and an invitation will be sent via email.
 
-![](/assets/admin-accounts-add-member.png "Reaction Commerce Dashboard")
+![](/assets/admin-accounts-dashboard-add-user.png "Reaction Commerce Dashboard")
 
 ## Manage Member Settings
 
