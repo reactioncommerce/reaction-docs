@@ -24,10 +24,5 @@ To add an account to a group, user the "Add Admin User" on the right section. En
 
 ## Manage Groups
 
-To configure member permissions, click on the arrow icon, located at the bottom right-hand side of the Accounts card. Then, hit the Manage button.
+Shop Owners and users with permission to the Accounts dashboard can create new groups under the "Edit Groups" section. After creating a group, it becomes available in the "Add Admin User" section, for adding users to the group. You can also add or remove permissions from a group. The added permissions then reflects on the users under the group.
 
-![](/assets/admin-accounts-wheel.png "Reaction Commerce Dashboard")
-
-Toggle each feature on and off to allow or deny member access. If a feature is turned off, it will not be visible on that member's dashboard.
-
-![](/assets/admin-accounts-manage.png "Reaction Commerce Dashboard")
