@@ -2,18 +2,22 @@
 
 The Accounts section is your gateway to all things related to your shop members and guests. Here, you may add members, configure merchant access, and customize guest logins.
 
-Before getting started, make sure you are logged in as an operator and click the <i class="font-icon fa fa-users"></i> **Accounts** icon in the Dashboard sidebar.
+## Add a Shop Member
 
-## Add shop members
+To add a new member to your shop, click on the "Add User" icon, located on the upper right-hand side of the Accounts card.
 
-![](/assets/admin-accounts-add-member.png "Reaction Commerce Dashboard - Add a shop team member")
+![](/assets/admin-dashboard-accounts-add.png "Reaction Commerce Dashboard")
 
-Enter the user's **Name** and **Email** in the fields below, and click **Send invitation**.
+Enter the user's name and email address in the fields below, and an invitation will be sent via email.
 
-Make sure to set up [email](/admin/dashboard/email-admin.md) before inviting shop team members.
+![](/assets/admin-accounts-add-member.png "Reaction Commerce Dashboard")
 
-## Manage shop member permissions
+## Manage Member Settings
 
-![](/assets/admin-accounts-manage.png "Reaction Commerce Dashboard - Manage shop team member permissions")
+To configure member permissions, click on the arrow icon, located at the bottom right-hand side of the Accounts card. Then, hit the Manage button.
 
-Click **Manage** next to the member's name. Toggle each feature on and off to allow or deny member access. If a feature is turned off, it will not be visible on that member's dashboard.
+![](/assets/admin-accounts-wheel.png "Reaction Commerce Dashboard")
+
+Toggle each feature on and off to allow or deny member access. If a feature is turned off, it will not be visible on that member's dashboard.
+
+![](/assets/admin-accounts-manage.png "Reaction Commerce Dashboard")
