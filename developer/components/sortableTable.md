@@ -67,8 +67,8 @@ class MyComponent extends Component {
 
 ## Props
 
-| Property | Type   | Description                                                              | Notes |
-| -------- | ------ | ------------------------------------------------------------------------ |
+| Property             | Type     | Description                                                                  | Notes |
+| --------             | ------   | ---------------------------------------------------------------------------- |       |
 | collection           | Object   | collection to get data from                                                  | Use in conjunction with `publication`, or use `data` in place of `collection` + `publication` |
 | columnMetadata       | Array    | provides filtered columns with i18n headers                                  | |
             | data     | Array    | provides array of objects to be used in place of publication data (optional) | Use in place of `collection` + `publication` |
