@@ -1,19 +1,23 @@
 # SortableTable
 
+The SortableTable component gives you a sortable, filterable, extendable data table.
+
+SortableTable is built with [ReactTable](https://react-table.js.org/#/story/readm). See their docs if you'd like to extend it further.
+
 ## Import
+SortableTable is available as via `registerComponent`. See the [Reaction Components API Docs](https://docs.reactioncommerce.com/reaction-docs/master/components-api) for more info.
 
 ```javascript
-import { SortableTable } from "/imports/plugins/core/ui/client/components";
+import { Components } from "@reactioncommerce/reaction-components";
 ```
 
-## Usage Example
+## Example
 
 ```javascript
 import React, { Component } from "react";
-import { SortableTable } from "/imports/plugins/core/ui/client/components";
+import { Components } from "@reactioncommerce/reaction-components";
 
-
-class MyReactComponent extends Component {
+class MyComponent extends Component {
   render() {
     const noDataMessage = i18next.t("admin.table.noDataMessage");
 
@@ -47,40 +51,38 @@ class MyReactComponent extends Component {
       customColumnMetadata.push(columnMeta);
     });
 
-
     return (
-      <SortableTable
-        collection={MeteorCollection}
-        columnMetadata={columnMetadata}
-        matchingResultsCount="publication-count"
-        noDataMessage={noDataMessage}
-        publication="MeteorPublication"
-      />
+      <div>
+        <Components.SortableTable
+          columnMetadata={columnMetadata}
+          data={arrayOfData}
+          filterType={"table"}
+          noDataMessage={noDataMessage}
+        />
+      <div>
     );
   }
 }
-
-export default MyReactComponent;
 ```
 
 ## Props
 
-Property             | Type                      | Description
--------------------- | ------------------------- | ---------------------------
-collection           | Object                    | collection to get data from (Required)
-columnMetadata       | Object                    | provides filtered columns with i18n headers, data accessor, and styles (Required)
-defaultPageSize      | Number                    | how many results per page (Default: 10)
-filterType           | Boolean                   | filter by table, column, both, or none (Default: table)
-filteredFields       | Array                     | legacy to provide filtered columns to griddle, use columnMetadata instead (Possibly not needed?)
-isFilterable         | Boolean                   | show / hide column filter (Default: false; however, this is deceiving, as we use `filterType` instead to enable / disable filters)
-isResizeable         | Boolean                   | allow resizing of table columns (Default: true)
-isSortable           | Boolean                   | allow column sorting (Default: true)
-matchingResultsCount | String                    | provides Count publication to get count from (Possibly not needed?)
-minRows              | Number                    | minimum amount of rows to display in table (Default: 0)
-noDataMessage        | String                    | text to display when no data is available (Default: "No results found")
-onRowClick           | Function                  | provides function / action when clicking on row
-publication          | String                    | provides publication to get Meteor data from (Required)
-query                | Object                    | provides query for publication filtering
-transform            | Function                  | transform of collection for grid results
-
-SortableTable is a wrapper around ReactTable. If you'd like to extend the table further, more props are available on the [ReactTable GitHub page]( https://github.com/tannerlinsley/react-table#props).
+| Property | Type   | Description                                                              | Notes |
+| -------- | ------ | ------------------------------------------------------------------------ |
+| collection     | Object | collection to get data from | Use in conjunction with `publication`, or use `data` in place of `collection` + `publication` |
+| columnMetadata     | Array | provides filtered columns with i18n headers | |
+| data     | Array | provides array of objects to be used in place of publication data (optional) | Use in place of `collection` + `publication` |
+| defaultPageSize      | Number | how many results per page | |
+| filterType      | String | filter by table, column, or both | |
+| filteredFields      | Array | filteredFields provides filtered columns, use columnMetadata instead | |
+| isFilterable     | Bool | show / hide column filter | |
+| isResizeable     | Bool | allow resizing of table columns | |
+| isSortable     | Bool | allow column sorting | |
+| matchingResultsCount     | String | provides Count publication to get count from | |
+| minRows     | Number | minimum amount of rows to display in table | |
+| noDataMessage     | String | text to display when no data is available | |
+| onRowClick     | Function | provides function / action when clicking on row | |
+| publication     | String | provides publication to get Meteor data from | Use in conjunction with `collection`, or use `data` in place of `collection` + `publication` |
+| query     | Object | provides query for publication filtering | |
+| selectedRows     | Array | provides selected rows in the table | |
+| transform     | Function | transform of collection for grid results | |
