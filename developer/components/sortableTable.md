@@ -67,22 +67,22 @@ class MyComponent extends Component {
 
 ## Props
 
-| Property             | Type     | Description                                                                  | Notes |
-| --------             | ------   | ---------------------------------------------------------------------------- |       |
-| collection           | Object   | collection to get data from                                                  | Use in conjunction with `publication`, or use `data` in place of `collection` + `publication` |
-| columnMetadata       | Array    | provides filtered columns with i18n headers                                  | |
-            | data     | Array    | provides array of objects to be used in place of publication data (optional) | Use in place of `collection` + `publication` |
-| defaultPageSize      | Number   | how many results per page                                                    | |
-| filterType           | String   | filter by table, column, or both                                             | |
-| filteredFields       | Array    | filteredFields provides filtered columns, use columnMetadata instead         | |
-| isFilterable         | Bool     | show / hide column filter                                                    | |
-| isResizeable         | Bool     | allow resizing of table columns                                              | |
-| isSortable           | Bool     | allow column sorting                                                         | |
-| matchingResultsCount | String   | provides Count publication to get count from                                 | |
-| minRows              | Number   | minimum amount of rows to display in table                                   | |
-| noDataMessage        | String   | text to display when no data is available                                    | |
-| onRowClick           | Function | provides function / action when clicking on row                              | |
-| publication          | String   | provides publication to get Meteor data from                                 | Use in conjunction with `collection`, or use `data` in place of `collection` + `publication` |
-| query                | Object   | provides query for publication filtering                                     | |
-| selectedRows         | Array    | provides selected rows in the table                                          | |
-| transform            | Function | transform of collection for grid results                                     | |
+| Property | Type | Description | Notes | 
+| -------- | ------ | ---------| ----- |
+| collection | Object | collection to get data from | Use in conjunction with publication, or use data in place of collection + publication | 
+| columnMetadata | Array | provides filtered columns with i18n headers | |
+| data | Array | provides array of objects to be used in place of publication data (optional) | Use in place of collection + publication |
+| defaultPageSize | Number | how many results per page | |
+| filterType | String | filter by table, column, or both |  |
+| filteredFields | Array | filteredFields provides filtered columns, use columnMetadata instead | |
+| isFilterable | Bool | show / hide column filter | |
+| isResizeable | Bool | allow resizing of table columns | |
+| isSortable | Bool | allow column sorting | |
+| matchingResultsCount | String | provides Count publication to get count from |
+| minRows | Number | minimum amount of rows to display in table | |
+| noDataMessage | String | text to display when no data is available | |
+| onRowClick | Function | provides function / action when clicking on row | |
+| publication | String | provides publication to get Meteor data from | Use in conjunction with collection, or use data in place of collection + publication | 
+| query | Object | provides query for publication filtering | |
+| selectedRows | Array | provides selected rows in the table | |
+| transform | Function | transform of collection for grid results | |
