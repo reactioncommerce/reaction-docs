@@ -1,11 +1,32 @@
 # Core
 
-Reaction Core provides a core set of methods and templates for creating, connecting, and managing user carts, sessions, products, checkout and orders for Reaction Commerce.
+Reaction is a Meteor application that imports a core group of plugins providing functionality for creating, connecting, and managing:
 
-## Roadmap
+-   user profiles
+-   user sessions
+-   cart and checkout
+-   products, variants
+-   tag taxonomy
+-   inventory events
+-   payments
+-   tax methods
+-   shipping methods
+-   checkout
+-   order fulfilment
+-   notifications
+-   logging
+-   localization
+-   internationalization
+-   permissions
+-   react components
 
-For a high level review our roadmap, take a look at the features page [Reaction Vision](http://reactioncommerce.com/features)
+The core plugins are extended with additional included, but optional plugins that provide specific functionality such as:
 
-For grouping of development channels by feature see project milestones: <https://github.com/reactioncommerce/reaction/milestones>
+-   payment providers
+-   shipping providers
+-   tax providers
+-   connectors
+-   analytics
+-   inventory handling
 
-And finally for the kanban-esque, hardcore real time progress view, take a look our [waffle board](https://waffle.io/reactioncommerce/reaction)
+Custom plugins can be added to replace or extend any included plugin.

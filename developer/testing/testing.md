@@ -188,6 +188,7 @@ reaction
 Running tests locally:
 
 ```sh
+npm install browserstack-local
 npm run test-local
 ```
 
