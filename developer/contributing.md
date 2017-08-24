@@ -25,10 +25,10 @@ Let us know how we can make the contribution process easier. We want to find the
 
 ## Pull Requests
 
-[Create a pull request](https://help.github.com/articles/creating-a-pull-request/) to propose and collaborate on changes to Reaction. These changes are proposed in a PR branch, and are reviewed before merge acceptance into `development` for release.
+[Create a pull request](https://help.github.com/articles/creating-a-pull-request/) to propose and collaborate on changes to Reaction. These changes are proposed in a PR branch, and are reviewed before merge acceptance into `master` for release.
 
-- Should reference an issue if one exists, or provide detailed information on the goal of the PR.
-- Should pass CI / Tests. New functionality should include new tests.
-- Should passing a linter code review and follow Reaction style guidelines.
-- Contributors should review the CLA.
-- Code reviewed before merge acceptance.
+-   Should reference an issue if one exists, or provide detailed information on the goal of the PR.
+-   Should pass CI / Tests. New functionality should include new tests.
+-   Should passing a linter code review and follow Reaction style guidelines.
+-   Contributors should review the CLA.
+-   Code reviewed before merge acceptance.
