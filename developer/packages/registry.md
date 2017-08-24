@@ -4,7 +4,7 @@ The `Reaction Registry` is used to add settings, routes, and permissions for Rea
 
 A `registry` object can be any combination of properties, with `provides` and `name` being the only required elements.
 
-_Note: The registry is currently refreshed only on update/deleting the package record in the database, or on delete/addition of the package._
+*Note: The registry is currently refreshed only on update/deleting the package record in the database, or on delete/addition of the package.*
 
 You may filter, or define using any of the optional registry properties:
 
@@ -152,3 +152,4 @@ From templates, you can create additional dynamic template `provides` using the 
     <i class="{{orElse icon 'fa fa-cog fa-2x fa-fw'}}"></i>
   </a>
 {{/each}}
+```

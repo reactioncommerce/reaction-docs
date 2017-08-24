@@ -2,7 +2,7 @@
 
 Reaction Templates are primarily Blaze Templates, but Meteor supports React and other templating libraries.
 
-To learn more about Meteor, Spacebars, and Blaze templates: [http://blazejs.org/guide/introduction.html](http://blazejs.org/guide/introduction.html)
+To learn more about Meteor, Spacebars, and Blaze templates: <http://blazejs.org/guide/introduction.html>
 
 ## Extending templates
 
@@ -25,4 +25,4 @@ then create a template (probably a copy of the one you are extending).
 
 While you can always organize your templates however you wish, [we suggest](/developer/styleguide.md) you mirror the existing structure. For example, if you are extending the template located in `reaction/imports/plugins/included/product-variant/client/templates/products/products.html` then you would mirror that by creating your new template at `reaction/client/templates/products/myTemplate.html`
 
-_The template helpers, events, etc. from the original are still accessible and used in the new extended template._
+*The template helpers, events, etc. from the original are still accessible and used in the new extended template.*

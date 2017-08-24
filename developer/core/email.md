@@ -8,7 +8,7 @@ All emails that are sent from Reaction are added to a job queue for both logging
 
 All server side email methods (except Meteor methods) are available in the `Reaction.Email` namespace.
 
-#### Reaction.Email.getMailUrl()
+### Reaction.Email.getMailUrl()
 
 If mail is configured, returns an SMTP URL string.
 
@@ -18,7 +18,7 @@ The following settings are checked in the order shown and the first one that is 
 - `Meteor.settings.MAIL_URL`
 - Mail settings saved in the `core` plugin settings
 
-#### Reaction.Email.getMailConfig()
+### Reaction.Email.getMailConfig()
 
 If mail is configured, returns a [Nodemailer](https://github.com/nodemailer/nodemailer) configuration object.
 
@@ -52,7 +52,7 @@ The "direct" config looks like this:
 }
 ```
 
-#### Reaction.Email.send(options)
+### Reaction.Email.send(options)
 
 Adds an email sending job to the queue. Jobs are processed immediately in the order they are added. Failures are retried 5 times, with a 3 minute wait between each try.
 

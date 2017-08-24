@@ -2,7 +2,7 @@
 
 All Community Guidelines content is licensed under a [Creative Commons Attribution](https://creativecommons.org/licenses/by/3.0/) license.
 
-If you believe someone is violating the Code of Conduct we ask that you report it to the Reaction Commerce Team by emailing [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com). All reports will be kept confidential. In some cases we may determine that a public statement will need to be made. If that's the case, the identities of all victims and reporters will remain confidential unless those individuals instruct us otherwise.
+If you believe someone is violating the Code of Conduct we ask that you report it to the Reaction Commerce Team by emailing <mailto:conduct@reactioncommerce.com>. All reports will be kept confidential. In some cases we may determine that a public statement will need to be made. If that's the case, the identities of all victims and reporters will remain confidential unless those individuals instruct us otherwise.
 
 If you believe anyone is in physical danger, please notify appropriate law enforcement first. If you are unsure what law enforcement agency is appropriate, please include this in your report and we will attempt to notify them.
 
@@ -46,4 +46,4 @@ Finally, the Reaction Commerce Conduct Committee will make a report on the situa
 
 ## Appealing
 
-Only permanent resolutions (such as bans) may be appealed. To appeal a decision of the working group, contact Reaction Commerce at [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com) with your appeal and the Team will review the case.
+Only permanent resolutions (such as bans) may be appealed. To appeal a decision of the working group, contact Reaction Commerce at <mailto:conduct@reactioncommerce.com> with your appeal and the Team will review the case.

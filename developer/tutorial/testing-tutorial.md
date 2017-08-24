@@ -197,7 +197,7 @@ describe.only("Product-To-Hank", function () {
 ```
 
 Here we pass the function to the `expect` function and tell it to expect the function to throw a particular type of error.
-In this case a Meteor error that contains the string _"Product does not exist"_.
+In this case a Meteor error that contains the string: `Product does not exist`.
 
 Now we should have two passing tests.
 
@@ -252,33 +252,33 @@ const roleStub = sinon.stub(Roles, "userIsInRole", () => false);
 
 What this code does is replace the code `Roles.userIsInRole` with our own function that always returns false. So our new test will look like this:
 
- ```js
+```js
 import { expect } from "meteor/practicalmeteor:chai";
 import { sinon } from "meteor/practicalmeteor:sinon";
 import { Products } from "/lib/collections";
 import { setProductToHank } from "./products";
 
 describe.only("Product-To-Hank", function () {
-    describe("Calling product-to-hank", function () {
-        it("should change product title to Hank", function () {
-          const product = Factory.create("product");
-          const productId = product._id;
-          setProductToHank(productId);
-          const changeedProduct = Products.findOne(productId);
-          expect(product.title).to.equal("Hank");
-        });
+   describe("Calling product-to-hank", function () {
+       it("should change product title to Hank", function () {
+         const product = Factory.create("product");
+         const productId = product._id;
+         setProductToHank(productId);
+         const changeedProduct = Products.findOne(productId);
+         expect(product.title).to.equal("Hank");
+       });
 
-        it("should throw an error when the product does not exist", function () {
-          expect(setProductToHank("invalidId")).to.throw(Meteor.Error, /Product does not exist/);
-        });
+       it("should throw an error when the product does not exist", function () {
+         expect(setProductToHank("invalidId")).to.throw(Meteor.Error, /Product does not exist/);
+       });
 
-        it("should throw an error when user does not have permission", function () {
-          const roleStub = sinon.stub(Roles, "userIsInRole", () => false);
-          expect(Meteor.call("product/setToHank", "someId")).to.throw(Meteor.Error, /Access Denied/);
-          roleStub.restore();
-        });
-    });
- });
+       it("should throw an error when user does not have permission", function () {
+         const roleStub = sinon.stub(Roles, "userIsInRole", () => false);
+         expect(Meteor.call("product/setToHank", "someId")).to.throw(Meteor.Error, /Access Denied/);
+         roleStub.restore();
+       });
+   });
+});
 ```
 
 So as we have mentioned, the first line "stubs" our the role check to always return false. Then we execute the method (it doesn't matter what product ID we use since it shouldn't get that far) and we expect it to throw an

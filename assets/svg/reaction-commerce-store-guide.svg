@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="213px" height="102px" viewBox="0 0 213 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>User Guide</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dev-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Docs-Landing-Page-" transform="translate(-407.000000, -418.000000)" stroke-width="6" stroke="#062A4E">
+            <g id="User-Guide" transform="translate(361.000000, 385.000000)">
+                <g id="Group-2">
+                    <g id="User-Guide" transform="translate(46.000000, 33.000000)">
+                        <g id="Left">
+                            <rect id="Rectangle-3" x="3" y="3" width="101" height="96"></rect>
+                            <path d="M25.3421053,21 L81.6578947,21" id="Line" stroke-linecap="square"></path>
+                            <path d="M25.3421053,40 L81.6578947,40" id="Line-Copy" stroke-linecap="square"></path>
+                            <path d="M25.3421053,58 L81.6578947,58" id="Line-Copy-2" stroke-linecap="square"></path>
+                            <path d="M25.3421053,77 L81.6578947,77" id="Line-Copy-11" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Right" transform="translate(106.000000, 0.000000)">
+                            <rect id="Rectangle-3" x="3" y="3" width="101" height="96"></rect>
+                            <path d="M25.3421053,21 L81.6578947,21" id="Line" stroke-linecap="square"></path>
+                            <path d="M25.3421053,40 L81.6578947,40" id="Line-Copy" stroke-linecap="square"></path>
+                            <path d="M25.3421053,58 L81.6578947,58" id="Line-Copy-2" stroke-linecap="square"></path>
+                            <path d="M25.3421053,77 L81.6578947,77" id="Line-Copy-11" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

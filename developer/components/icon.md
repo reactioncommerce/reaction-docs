@@ -28,6 +28,6 @@ class MyComponent extends Component {
 
 ## Props
 
-Property | Type   | Description
--------- | ------ | ------------------------------------------------------------------------
-icon     | String | name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon
+| Property | Type   | Description                                                              |
+| -------- | ------ | ------------------------------------------------------------------------ |
+| icon     | String | name of [font awesome](https://fortawesome.github.io/Font-Awesome/) icon |

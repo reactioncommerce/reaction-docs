@@ -1,6 +1,6 @@
 # Using Custom Layouts
 
-_Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation._
+*Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation.*
 
 ## Purpose
 
@@ -61,7 +61,6 @@ registerComponent({
 });
 
 export default CoreLayoutBeesknees;
-
 ```
 
 In order to change our default layout, we need add a record to the **registry** for our package. We also need to add a special `defaults.js` that will add some global options.

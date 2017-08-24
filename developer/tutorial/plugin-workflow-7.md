@@ -1,9 +1,9 @@
 # Customizing The Checkout Workflow
 
-_Note: If you are looking to actually change the fields in the checkout flow, you will actually want to look at the
-"Customizing Schemas" chapter. That chapter will explain why_
+*Note: If you are looking to actually change the fields in the checkout flow, you will actually want to look at the
+"Customizing Schemas" chapter. That chapter will explain why*
 
-Reaction Commerce currently has a relatively simple workflow system. Workflows are simply an array of ordered records that point to a template.
+Reaction Commerce currently has a relatively simple workflow system. Workflows are an array of ordered records that point to a template.
 Here is what the checkout workflow looks like in the database. Each a record in the `core/checkout` plugin (in the Packages collection):
 
 Login:

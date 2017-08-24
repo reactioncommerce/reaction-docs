@@ -29,10 +29,10 @@ export default MyReactComponent;
 
 ## Props
 
-Property             | Type                      | Description
--------------------- | ------------------------- | ---------------------------
-copyToClipboard      | String                    | String to copy to clipboard on click (i.e. URL for Order)
-displayText          | String                    | Text displayed to user (e.g. Order ID #)
-i18nKeyTooltip       | String                    | i18n key for tooltip
-tooltip              | String, Object, Component | Tooltip
-tooltipPosition      | String                    | Tooltip position. Default `bottom center`
+| Property        | Type                      | Description                                               |
+| --------------- | ------------------------- | --------------------------------------------------------- |
+| copyToClipboard | String                    | String to copy to clipboard on click (i.e. URL for Order) |
+| displayText     | String                    | Text displayed to user (e.g. Order ID #)                  |
+| i18nKeyTooltip  | String                    | i18n key for tooltip                                      |
+| tooltip         | String, Object, Component | Tooltip                                                   |
+| tooltipPosition | String                    | Tooltip position. Default `bottom center`                 |

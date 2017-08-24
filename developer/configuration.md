@@ -193,20 +193,20 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
 ]
 ```
 
-_Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload._
+*Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload.*
 
 ## Default Data
 
 Reaction installs sample data, translations, and other fixture defaults from `/private/data/` and `/private/data/i18n` using the `Reaction.Import` class.
 
--   Products.json
--   Shipping.json
--   Shops.json
--   Tags.json
+- Products.json
+- Shipping.json
+- Shops.json
+- Tags.json
 
 You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
 
-_Note: the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method (except when used in packages)._
+*Note: the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method (except when used in packages).*
 
 ## Importing Data
 

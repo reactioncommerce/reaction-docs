@@ -14,7 +14,7 @@ Uses [`check`](https://docs.meteor.com/#/full/check) for all `Meteor.method` arg
 
 The [audit-argument-checks](http://docs.meteor.com/#/full/auditargumentchecks) package enforces a requirement for all `Meteor.method` to validate arguments using `check`.
 
-> This package causes Meteor to require that all arguments passed to methods and publish functions are checked. Any method that does not pass each one of its arguments to check will throw an error, which will be logged on the server and which will appear to the client as a 500 Internal server error. This is a simple way to help ensure that your app has complete check coverage.
+>This package causes Meteor to require that all arguments passed to methods and publish functions are checked. Any method that does not pass each one of its arguments to check will throw an error, which will be logged on the server and which will appear to the client as a 500 Internal server error. This is a simple way to help ensure that your app has complete check coverage.
 
 You can remove with `meteor remove audit-argument-checks` if necessary, but pull requests into Reaction must validate using `check` before changes can be merged.
 
@@ -22,7 +22,7 @@ You can remove with `meteor remove audit-argument-checks` if necessary, but pull
 
 The [browser-policy](https://atmospherejs.com/meteor/browser-policy) package provides a default set of policies and methods for managing security-related browser policies. These policies help prevent and mitigate common attacks like cross-site scripting and clickjacking.
 
-> Browser Policy gives us a simple API for specifying a ruleset on top of the Content Security Policy (CSP) standard and the X-Frame-Options HTTP header standard. [-The Meteor Chef](https://themeteorchef.com/snippets/using-the-browser-policy-package/#tmc-takeaways)
+>Browser Policy gives us a simple API for specifying a ruleset on top of the Content Security Policy (CSP) standard and the X-Frame-Options HTTP header standard. [-The Meteor Chef](https://themeteorchef.com/snippets/using-the-browser-policy-package/#tmc-takeaways)
 
 The [browser-policy](https://atmospherejs.com/meteor/browser-policy) package implements some default [Content Security Policy](https://www.w3.org/TR/CSP3/) rules.
 
