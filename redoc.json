@@ -581,11 +581,11 @@
     "label": "Settings Card",
     "docPath": "developer/components/settings-card.md"
   }, {
-    "label": "Popover",
-    "docPath": "developer/components/popover.md"
-  }, {
     "label": "Slider",
     "docPath": "developer/components/slider.md"
+  }, {
+    "label": "Sortable Table",
+    "docPath": "developer/components/sortableTable.md"
   }, {
     "label": "Switch",
     "docPath": "developer/components/switch.md"
