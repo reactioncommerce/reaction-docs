@@ -17,12 +17,14 @@ Anyone from the [Reaction engineering team and invited community collaborators](
     -   MINOR version when you add functionality in a backwards-compatible manner, and
     -   PATCH version when you make backwards-compatible bug fixes.
 
-## Merge Pull Requests
+## Accept Merges
 
--   Create LingoHub Pull Request to update i18n translations to the release branch.
--   Create a Pull request, with title `Release x.x.x` to master.
+-   Approved patches/fixes/features PR's for this release should be merged into the `release-x.x.x` branch.
+-   Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch.
+-   LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of **_i18n imports_** should also be performed before merging the i18n translation PR into the release branch.
+-   Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `master`.
 
-## Release notes
+## Release Notes
 
 -   Create release notes - a summary of all PR and notable changes in the release.
 -   Using <https://github.com/aaronjudd/git-release-notes>, you can run the following from the directory of the repo you are releasing
