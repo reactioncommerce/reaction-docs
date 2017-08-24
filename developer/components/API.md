@@ -484,7 +484,7 @@ export default withIsOwner(MyComponent);
 
 ### withPermissions
 
-Sets a Boolean `hasPermissions` prop to be passed into the wrapped component based on `roles` or `group`. Like the others above, you can use it to conditionally show parts of the UI or change what functionality is available.
+This sets a Boolean `hasPermissions` prop to be passed into the wrapped component based on `roles` or `group`. Like the others above, you can use it to conditionally show parts of the UI or change what functionality is available.
 Default roles used roles = ["guest", "anonymous"]. This is overridden by group, if a group option is passed in. Example is show below without passing any option, and passing roles (commented), and group (commented).
 
 ```js
