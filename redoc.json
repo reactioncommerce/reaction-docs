@@ -13,19 +13,19 @@
     "repo": "reaction-docs",
     "docPath": "index.md",
     "default": true
-  },{
+  }, {
     "class": "guide-nav-item",
     "alias": "dashboard",
     "label": "Store Operator's Guide",
     "repo": "reaction-docs",
     "docPath": "admin/dashboard.md"
-  },{
+  }, {
     "class": "guide-sub-nav-item",
     "alias": "products",
     "label": "Products",
     "repo": "reaction-docs",
     "docPath": "admin/products.md"
-  },{
+  }, {
     "class": "guide-sub-nav-item",
     "alias": "navigation-bar-and-grid",
     "label": "Navigation and Product tags",
@@ -718,6 +718,12 @@
     "label": "CI Builds",
     "repo": "reaction-docs",
     "docPath": "developer/testing/ci.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "release-process",
+    "label": "Release Process",
+    "repo": "reaction-docs",
+    "docPath": "developer/testing/release-process.md"
   }, {
     "class": "guide-nav-item",
     "alias": "deploying",
