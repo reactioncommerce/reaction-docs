@@ -725,6 +725,12 @@
     "repo": "reaction-docs",
     "docPath": "developer/testing/release-process.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "reporting-vulnerabilities",
+    "label": "Report Vulnerabilities",
+    "repo": "reaction-docs",
+    "docPath": "developer/testing/vulnerabilities.md"
+  }, {
     "class": "guide-nav-item",
     "alias": "deploying",
     "label": "Deploying",
