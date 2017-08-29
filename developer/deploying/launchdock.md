@@ -41,7 +41,7 @@ reaction apps create \
 reaction deploy --name <appname> --image myorg/myapp:v1.1.0
 
 # To deploy an updated version of your image,
-# simply run the command again with your new image tag
+# run the command again with your new image tag
 reaction deploy --name <appname> --image myorg/myapp:v1.1.1
 ```
 

@@ -6,7 +6,12 @@ If you are looking to deploy Reaction manually, head on over to the [Meteor depl
 
 ## Containers
 
-Docker images are pushed when Reaction successfully builds and passes all tests on the `master` or `development` branches. These images are released on [Reaction Commerce Docker Hub](https://hub.docker.com/u/reactioncommerce/). There are two images available: [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - the latest `development` image and [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/), the `master` image.
+Docker images are pushed when Reaction successfully builds and passes all tests on the `master` or `release-x.x.x` branches. These images are released on [Reaction Commerce Docker Hub](https://hub.docker.com/u/reactioncommerce/).
+
+There are two Docker images available:
+
+-   [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/) - the latest stable `master` image.
+-   [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - tagged pre-release builds.
 
 All Reaction [configuration options](configuration.md) can be used with these deployment choices.
 

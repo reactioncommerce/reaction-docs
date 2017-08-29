@@ -1,6 +1,5 @@
 # Popover
 
-
 A component that included a button to displays a popover with provided children.
 
 ## Import
@@ -10,7 +9,6 @@ import { Popover } from "/imports/plugins/core/ui/client/components";
 ```
 
 ## Usage Example
-
 
 ### Popover with default arrow button
 
@@ -79,17 +77,15 @@ class MyReactComponent extends Component {
 };
 
 export default MyReactComponent;
-
 ```
 
 ## Props
 
-Property           | Type     | Description
------------------- | -------- | ------------------------------------------------------------------------------------------------------------
-attachment         | String   | Default value: `"bottom left"`
-buttonElement      | Node     | Custom button element (optional). Default is a button with a down arrow. Best to use `<Button />` component.
-children           | Node     | Popover contents
-onChange           | Function | Show the arrow for the actual popover
-showDropdownButton | Boolean  | Shows a dropdown button adjacent the `buttonElement` as a button group
-targetAttachment   | String   | Default value `"top left""`
-
+| Property           | Type     | Description                                                                                                  |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------------------------ |
+| attachment         | String   | Default value: `"bottom left"`                                                                               |
+| buttonElement      | Node     | Custom button element (optional). Default is a button with a down arrow. Best to use `<Button />` component. |
+| children           | Node     | Popover contents                                                                                             |
+| onChange           | Function | Show the arrow for the actual popover                                                                        |
+| showDropdownButton | Boolean  | Shows a dropdown button adjacent the `buttonElement` as a button group                                       |
+| targetAttachment   | String   | Default value `"top left""`                                                                                  |

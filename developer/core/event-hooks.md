@@ -10,7 +10,7 @@ The API has the following methods
 
 `Hooks.Event.add(name, callback)`
 
-Here you simply pass in the name of the event and then the callback you wish to be executed.
+Here you pass in the name of the event and then the callback you wish to be executed.
 
 `Hooks.Event.remove(name, callback)`
 
@@ -26,7 +26,7 @@ and a constant to be passed to every callback (e.g. for a user-related event, it
 
 An async version of the above method (only works on the server-side)
 
-### Example
+## Example
 
 Let's say we wanted to create our own event for "onCreateUser". We would call the `run` method when the event occurred.
 
@@ -60,16 +60,16 @@ Hooks.Events.add("onCreateUser", logUserEmail);
 
 Events that are currently defined in Core are:
 
--   onCoreInit - When initialization of Reaction starts
--   afterCoreInit - When initialization of Reaction has completed
--   beforeCreateDefaultAdminUser - Before the default admin user is created (all callbacks must take and return an options object)
--   afterCreateDefaultAdminUser - After default admin user is created (user is passed to all callbacks)
--   onCreateUser - When a new user is created
--   onLogin - On user login. All Hooks must accept and return an options object
--   onJobServerStart - When the job server has started
--   onImport{CollectionName} - Fired for each collection that gets imported. Gets passed the option to be imported and expects that object to be returned, so imported objects can be modified by hooks
--   onOrderShipmentShipped - When order is shipped
--   onOrderShipmentDelivered - When order status is shipped
--   onOrderPaymentCaptured - When the order payment is processed
--   onOrderRefundCreated - When the order has a refund created.
--   onGetShippingRates - When Cart shipping rates have been requested.
+- onCoreInit - When initialization of Reaction starts
+- afterCoreInit - When initialization of Reaction has completed
+- beforeCreateDefaultAdminUser - Before the default admin user is created (all callbacks must take and return an options object)
+- afterCreateDefaultAdminUser - After default admin user is created (user is passed to all callbacks)
+- onCreateUser - When a new user is created
+- onLogin - On user login. All Hooks must accept and return an options object
+- onJobServerStart - When the job server has started
+- onImport{CollectionName} - Fired for each collection that gets imported. Gets passed the option to be imported and expects that object to be returned, so imported objects can be modified by hooks
+- onOrderShipmentShipped - When order is shipped
+- onOrderShipmentDelivered - When order status is shipped
+- onOrderPaymentCaptured - When the order payment is processed
+- onOrderRefundCreated - When the order has a refund created.
+- onGetShippingRates - When Cart shipping rates have been requested.

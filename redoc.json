@@ -14,65 +14,113 @@
     "docPath": "index.md",
     "default": true
   }, {
-    "class": "guide-sub-nav-item",
+    "class": "guide-nav-item",
     "alias": "dashboard",
-    "label": "Dashboard",
+    "label": "Store Operator's Guide",
     "repo": "reaction-docs",
     "docPath": "admin/dashboard.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "login-services",
-    "label": "Login Services",
-    "repo": "reaction-docs",
-    "docPath": "admin/login-services.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "email",
-    "label": "Email",
-    "repo": "reaction-docs",
-    "docPath": "admin/email.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "tags",
-    "label": "Navigation Tags",
-    "repo": "reaction-docs",
-    "docPath": "admin/tags.md"
-  }, {
-    "class": "guide-sub-nav-item",
     "alias": "products",
-    "label": "Product Management",
+    "label": "Products",
     "repo": "reaction-docs",
     "docPath": "admin/products.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "admin-revisions",
-    "label": "Revision Control",
+    "alias": "navigation-bar-and-grid",
+    "label": "Navigation and Product tags",
     "repo": "reaction-docs",
-    "docPath": "admin/revisions.md"
+    "docPath": "admin/navigation-bar-and-grid.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "orders",
-    "label": "Order Processing",
+    "alias": "orders-admin",
+    "label": "Orders",
     "repo": "reaction-docs",
-    "docPath": "admin/orders.md"
+    "docPath": "admin/dashboard/orders-admin.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "shipping",
-    "label": "Flat Rate Shipping",
+    "alias": "accounts",
+    "label": "Accounts",
     "repo": "reaction-docs",
-    "docPath": "admin/shipping.md"
+    "docPath": "admin/dashboard/accounts.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "taxes",
-    "label": "Tax Calculations",
+    "alias": "login-auth-services",
+    "label": "Login services",
     "repo": "reaction-docs",
-    "docPath": "admin/taxes.md"
+    "docPath": "admin/dashboard/login-auth-services.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "discounts",
+    "label": "Social settings",
+    "repo": "reaction-docs",
+    "alias": "social-settings",
+    "docPath": "admin/dashboard/social-settings.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Shop",
+    "repo": "reaction-docs",
+    "alias": "shop-admin",
+    "docPath": "admin/dashboard/shop-admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Email",
+    "repo": "reaction-docs",
+    "alias": "email-admin",
+    "docPath": "admin/dashboard/email-admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Localization and i18n",
+    "repo": "reaction-docs",
+    "alias": "localization-and-i18n",
+    "docPath": "admin/dashboard/localization-and-i18n.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Payment",
+    "repo": "reaction-docs",
+    "alias": "payment",
+    "docPath": "admin/dashboard/payment.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Catalog",
+    "repo": "reaction-docs",
+    "alias": "catalog",
+    "docPath": "admin/dashboard/catalog.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "tax",
+    "label": "Tax",
+    "repo": "reaction-docs",
+    "docPath": "admin/dashboard/tax.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Template",
+    "repo": "reaction-docs",
+    "alias": "template",
+    "docPath": "admin/dashboard/template.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Search",
+    "repo": "reaction-docs",
+    "alias": "search",
+    "docPath": "admin/dashboard/search.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "SMS Notifications",
+    "repo": "reaction-docs",
+    "alias": "sms-notifications",
+    "docPath": "admin/dashboard/sms-notifications.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "label": "Shipping",
+    "repo": "reaction-docs",
+    "alias": "shipping-admin",
+    "docPath": "admin/dashboard/shipping-admin.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "label": "Discounts",
     "repo": "reaction-docs",
-    "docPath": "admin/discounts.md"
+    "alias": "payments-discounts",
+    "docPath": "admin/dashboard/payments-discounts.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "faqs",
@@ -206,6 +254,42 @@
     "repo": "reaction-docs",
     "docPath": "developer/tutorial/creating-a-payment-provider-plugin.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "appearance",
+    "label": "Themes: Right-to-left",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/themes.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "register-template",
+    "label": "Create Custom Templates",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/register-template.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "register-component",
+    "label": "Create Custom Components",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/register-component.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "register-email",
+    "label": "Customize Email Templates",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/register-email.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "templates",
+    "label": "Extend Blaze Templates",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/templates.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "template-helpers",
+    "label": "Helpers",
+    "repo": "reaction-docs",
+    "docPath": "developer/themes/helpers.md"
+  }, {
     "class": "guide-nav-item",
     "alias": "architecture",
     "label": "Architecture",
@@ -301,48 +385,6 @@
     "label": "Job Control",
     "repo": "reaction-docs",
     "docPath": "developer/architecture/jobcontrol.md"
-  }, {
-    "class": "guide-nav-item",
-    "alias": "appearance",
-    "label": "Appearance",
-    "repo": "reaction-docs",
-    "docPath": "developer/themes/themes.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "register-template",
-    "label": "Create Custom Templates",
-    "repo": "reaction-docs",
-    "docPath": "developer/themes/register-template.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "register-component",
-    "label": "Create Custom Components",
-    "repo": "reaction-docs",
-    "docPath": "developer/themes/register-component.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "register-email",
-    "label": "Customize Email Templates",
-    "repo": "reaction-docs",
-    "docPath": "developer/themes/register-email.md"
-  }, {
-    "class": "guide-nav-item",
-    "alias": "themes",
-    "label": "Themes",
-    "repo": "reaction-docs",
-    "docPath": "developer/themes/themes.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "templates",
-    "label": "Extend Blaze Templates",
-    "repo": "reaction-docs",
-    "docPath": "developer/themes/templates.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "template-helpers",
-    "label": "Helpers",
-    "repo": "reaction-docs",
-    "docPath": "developer/themes/helpers.md"
   }, {
     "class": "guide-nav-item",
     "alias": "reaction-core",
@@ -539,11 +581,11 @@
     "label": "Settings Card",
     "docPath": "developer/components/settings-card.md"
   }, {
-    "label": "Popover",
-    "docPath": "developer/components/popover.md"
-  }, {
     "label": "Slider",
     "docPath": "developer/components/slider.md"
+  }, {
+    "label": "Sortable Table",
+    "docPath": "developer/components/sortableTable.md"
   }, {
     "label": "Switch",
     "docPath": "developer/components/switch.md"
@@ -651,13 +693,13 @@
     "alias": "acceptance-testing",
     "label": "Acceptance Testing",
     "repo": "reaction-docs",
-    "docPath": "developer/testing/acceptance_testing.md"
+    "docPath": "developer/testing/acceptance-testing.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "react-testing",
     "label": "React Testing",
     "repo": "reaction-docs",
-    "docPath": "developer/testing/react_testing.md"
+    "docPath": "developer/testing/react-testing.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "using-factories-for-testing",
@@ -676,6 +718,18 @@
     "label": "CI Builds",
     "repo": "reaction-docs",
     "docPath": "developer/testing/ci.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "release-process",
+    "label": "Release Process",
+    "repo": "reaction-docs",
+    "docPath": "developer/testing/release-process.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "reporting-vulnerabilities",
+    "label": "Report Vulnerabilities",
+    "repo": "reaction-docs",
+    "docPath": "developer/testing/vulnerabilities.md"
   }, {
     "class": "guide-nav-item",
     "alias": "deploying",

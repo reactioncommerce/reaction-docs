@@ -14,7 +14,7 @@ We already know that the Reaction community is open, friendly, and welcoming. No
 
 ## What does it mean to "adopt" a Code of Conduct?
 
-For the most part, we don't think it means large changes. We think that the text does a really good job describing the way the Reaction community already conducts itself. We expect that most people will simply continue to behave in the awesome way they have for years.
+For the most part, we don't think it means large changes. We think that the text does a really good job describing the way the Reaction community already conducts itself. We expect that most people will continue to behave in the awesome way they have for years.
 
 However, we do expect that people will abide by the spirit and words of the CoC when in "official" Reaction spaces. This code has been adopted by all members of the Reaction Commerce Team. This code will apply both in community spaces and at any Reaction events.
 
@@ -32,9 +32,9 @@ Any event that we fund will have some sort of anti-harassment policy in place. T
 
 ## What happens if someone violates the Code of Conduct?
 
-Our intent is that the anyone in the community can stand up for this code, and direct people who're unaware to this document. If that doesn't work, or if you need more help, you can contact [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com). For more details please see our [Reporting Guidelines](/guidelines/reporting-guide.md).
+Our intent is that the anyone in the community can stand up for this code, and direct people who're unaware to this document. If that doesn't work, or if you need more help, you can contact <mailto:conduct@reactioncommerce.com>. For more details please see our [Reporting Guidelines](/guidelines/reporting-guide.md).
 
-## Why do we need a Code of Conduct? Everyone knows not to be a jerk.
+## Why do we need a Code of Conduct? Everyone knows not to be a jerk
 
 Sadly, not everyone knows this.
 

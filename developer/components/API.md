@@ -159,10 +159,12 @@ In the example above, all of the original class methods and state handlers that 
 Below is the full API for the Reaction components system. Each of these items can be imported from `@reactioncommerce/reaction-components`.
 
 #### [Components Objects](#components-objects)
+
 - [`Components`](#components)
 - [`ComponentsTable`](#componentstable)
 
 #### [Methods](#methods)
+
 - [`registerComponent()`](#registercomponent)
 - [`replaceComponent()`](#replacecomponent)
 - [`getComponent()`](#getcomponent)
@@ -173,6 +175,7 @@ Below is the full API for the Reaction components system. Each of these items ca
 - [`loadRegisteredComponents()`](#loadregisteredcomponents)
 
 #### [Higher Order Components](#higher-order-components)
+
 - [`withCurrentUser`](#withcurrentuser)
 - [`withCurrentAccount`](#withcurrentaccount)
 - [`withIsAdmin`](#withisadmin)

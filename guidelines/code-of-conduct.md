@@ -10,7 +10,7 @@ This isn’t an exhaustive list of things that you can’t do. Rather, take it i
 
 This code of conduct applies to all spaces managed by Reaction Commerce. This includes our [development chat room](https://gitter.im/reactioncommerce/reaction), [forums](https://forums.reactioncommerce.com), [blog](https://blog.reactioncommerce.com), mailing lists, [issue tracker](https://github.com/reactioncommerce/reaction/issues), [project board](https://waffle.io/reactioncommerce/reaction), Reaction events and meetups, and any other forums or service created by the core project team which the community uses for communication. In addition, violations of this code outside these spaces may affect a person's ability to participate within them.
 
-If you believe someone is violating the code of conduct, we ask that you report it by emailing [conduct@reactioncommerce.com](mailto:conduct@reactioncommerce.com). For more details, please see our [Reporting Guidelines](/guidelines/reporting-guide.md).
+If you believe someone is violating the code of conduct, we ask that you report it by emailing <mailto:conduct@reactioncommerce.com>. For more details, please see our [Reporting Guidelines](/guidelines/reporting-guide.md).
 
 - **Be friendly and patient.**
 

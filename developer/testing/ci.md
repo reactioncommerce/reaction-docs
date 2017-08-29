@@ -1,23 +1,20 @@
-# CI Builds
+# Continuous Integration
 
-When a Pull Request is made to the Reaction repo, there are four acceptance steps that should pass before we merge into the `development` branch.
+Whenever a Pull Request or merge request is made to the Reaction repo, there are automated acceptance steps that must pass before we merge into the latest `release-x.x.x` or `master` branch.
 
-When successful, Docker images are also pushed to [Docker Hub](https://hub.docker.com/u/reactioncommerce/).
+Automated tests include:
 
-## Continuous Integration
+-   package dependency checks for outdated, insecure packages
+-   code style and lint rules adherance
+-   reaction tests
+-   docker builds on release branches
+-   contributor agreements
 
-[Circle CI](https://circleci.com/gh/reactioncommerce/reaction) runs our tests, with Docker images pushed after a successful test build.
+## Builds
 
-## Lint Review
+Docker images are pushed when Reaction successfully builds and passes all tests on the `master` or `release-x.x.x` branches. These images are released on [Reaction Commerce Docker Hub](https://hub.docker.com/u/reactioncommerce/).
 
-Automated duplication, security, style review using Code Climate.
+There are two Docker images available:
 
-Follows project `eslint` and [Reaction style guide](/developer/styleguide.md).
-
-## Code Review
-
-At least two core team members or collaborators will review Pull requests.
-
-## CLA
-
-Contributor License Agreement acceptance for new collaborators.
+-   [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/) - the latest stable `master` image.
+-   [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - tagged pre-release builds.

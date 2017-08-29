@@ -40,15 +40,15 @@ export default MyReactComponent;
 
 ## Props
 
-Property           | Type           | Description
------------------- | -------------- | -----------------------------------------------------------------------
-align              | String         | One of `left`, `center`, `right` or `justify`
-className          | String, Object | Extra classnames to attach to the input
-i18nKeyLabel       | String         | Label i18n key
-i18nKeyPlaceholder | String         | Input placeholder i18n key
-label              | String         | Label attached to input
-multiline          | Boolean        | True: multiline, autosize textfield. False (default) single line input.
-name               | String         | Input name
-onBlur             | Function       | Input blur callback: `(event, value, fieldName) => {}`
-onChange           | Function       | Input change. `(event, value, fieldName) => {}`
-placeholder        | String         | Input placeholder.
+| Property           | Type           | Description                                                             |
+| ------------------ | -------------- | ----------------------------------------------------------------------- |
+| align              | String         | One of `left`, `center`, `right` or `justify`                           |
+| className          | String, Object | Extra classnames to attach to the input                                 |
+| i18nKeyLabel       | String         | Label i18n key                                                          |
+| i18nKeyPlaceholder | String         | Input placeholder i18n key                                              |
+| label              | String         | Label attached to input                                                 |
+| multiline          | Boolean        | True: multiline, autosize textfield. False (default) single line input. |
+| name               | String         | Input name                                                              |
+| onBlur             | Function       | Input blur callback: `(event, value, fieldName) => {}`                  |
+| onChange           | Function       | Input change. `(event, value, fieldName) => {}`                         |
+| placeholder        | String         | Input placeholder.                                                      |

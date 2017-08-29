@@ -2,7 +2,7 @@
 
 Stripe Payment Platform integration for Reaction Commerce
 
-Documentation is available at [https://stripe.com/docs/api](https://stripe.com/docs/api)
+Documentation is available at <https://stripe.com/docs/api>
 
 ## Configuration
 

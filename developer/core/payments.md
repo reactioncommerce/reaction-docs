@@ -74,7 +74,7 @@ MethodHooks.after("cart/submitPayment", function (options) {
 
 Saves a submitted payment to cart, triggers workflow and adds "paymentSubmitted" to cart workflow
 
-_Note: this method also has a client stub, that forwards to cartCompleted._
+*Note: this method also has a client stub, that forwards to cartCompleted.*
 
 ```js
 import { Meteor } from "meteor/meteor";

@@ -2,10 +2,129 @@
 
 Reaction Commerce is a modern, open source platform for today's premier ecommerce experiences. It is a lightweight, real-time reactive commerce solution that redefines, simplifies, and aligns both the experiences of the user and the vendor.
 
-Reaction is built using Javascript and the [Meteor](https://meteor.com) framework on the [Node](https://nodejs.org) runtime and the npm package ecosystem. It is both an open source solution and a managed Platform as a Service (PaaS), available via [reactioncommerce.com](https://reactioncommerce.com).
+<style>
+  .accent-color {
+    color: rgb(253,130,131) !important;
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.6px !important;
+  }
+  .section-promo {
+    border: 3px solid rgb(167,237,255);
+    margin-bottom: 30px;
+  }
+  .section-promo a {
+    text-decoration: none;
+  }
+  .secton-promo:hover {
+    background: rgb(255,251,207);
+    cursor: pointer;
+  }
+  .article {
+    background: rgb(255,251,207);
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .headline {
+    font-weight: 600 !important;
+    color: rgb(5,42,78) !important;
+    margin-right: 20px;
+    letter-spacing: 0.3px;
+  }
+  .dateline {
+    letter-spacing: 0.3px;
+  }
+  .article:hover {
+    background: #ffffff;
+  }
+  .article-link {
+    text-decoration: none !important;
+    color: rgb(5,42,78) !important;
+  }
+</style>
 
-We welcome questions and feedback via our [forums](https://forums.reactioncommerce.com), as well as [contributions](https://reactioncommerce.com/contributors). For general discussion, feel free to visit our [Gitter Chatroom](https://gitter.im/reactioncommerce/reaction).
+<div class="row">
+  <div class="col-md-4">
+    <div class="section-promo">
+      <a href="https://docs.reactioncommerce.com/reaction-docs/development/dashboard">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-store-guide.svg" height="110">
+        <h3 class="accent-color text-center">Store Guide</h3>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="section-promo">
+      <a href="https://docs.reactioncommerce.com/reaction-docs/master/getting-started-developing-with-reaction">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-developer-guide.svg">
+        <h3 class="accent-color text-center">Developer Guide</h3>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="section-promo">
+      <a href="http://gitter.im/reactioncommerce/">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-chat.svg" height="110">
+        <h3 class="accent-color text-center">Chat</h3>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="section-promo">
+      <a href="https://reactioncommerce.github.io/reaction-jsdoc/index.html">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-core-api-guide.svg">
+        <h3 class="accent-color text-center">Core API</h3>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="section-promo">
+      <a href="https://styleguide.reactioncommerce.com/">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-style-guide.svg">
+        <h3 class="accent-color text-center">Style Guide</h3>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="section-promo">
+      <a href="https://forums.reactioncommerce.com/">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-forums.svg">
+        <h3 class="accent-color text-center">Forums</h3>
+      </a>
+    </div>
+  </div>
+</div>
 
-We're a [full-time team](https://reactioncommerce.com/about) located in sunny Santa Monica, backed by top-tier venture firms and angel investors— and we're growing.
+# Recent Blog Posts
 
-Special note about our docs: This doc site is a Meteor application [reactioncommerce/redoc](https://github.com/reactioncommerce/redoc), while the Reaction documentation source is located in the [reactioncommerce/reaction-docs](https://github.com/reactioncommerce/reaction-docs) repository.
+<div class="row article-list">
+    <div class="col-xs-12">
+        <a href="https://blog.reactioncommerce.com/introduction-to-reactions-architecture/" class="article-link">
+          <div class="article">
+            <span class="headline">An Introduction to Reaction's Architecture</span><span class="dateline">14 Jun 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/reaction-architecture-events/" class="article-link">
+          <div class="article">
+            <span class="headline">An Introduction to Architecture: Events & Hooks</span><span class="dateline">20 Jun 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/reaction-architecture-alerts-notifications-and-emails/" class="article-link">
+          <div class="article">
+            <span class="headline">An Introduction to Architecture: Alerts, Notifications & Emails</span><span class="dateline">28 Jun 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/" class="article-link">
+          <div class="article">
+            <span class="headline">An Introduction to Architecture: The Registry</span><span class="dateline">18 Jul 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/product-grid/" class="article-link">
+          <div class="article">
+            <span class="headline">The Core Commerce Funnel: Product Grid</span><span class="dateline">28 Jul 2017 | Spencer Norman</span>
+          </div>
+        </a>
+    </div>
+</div>

@@ -8,11 +8,12 @@ A couple of notable Reaction specific style rules:
 -   Well spaced functions
 -   Spaces around brackets
 -   120 character line length
--   `import` order
-    -   npm packages
-    -   meteor core packages
-    -   meteor (Atmosphere) packages
-    -   local app files
+- `import` order
+  - React npm packages (`React`, `prop-types`, etc...)
+  - other npm packages
+  - meteor core packages
+  - meteor (Atmosphere) packages
+  - local app files
 
 Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines that are typical of Meteor projects.
 
@@ -120,6 +121,7 @@ settingsContainer.js
 
 **Good**
 
+
 -   File names should contain only lowercased alpha numeric characters and are **hyphenated** if joining more than one word
 -   File names may contain multiple (.) characters as needed
 -   File names can use hyphens but should avoid camelCase naming.
@@ -143,6 +145,7 @@ settingsContainer.js
 ```
 
 #### Packages
+
 
 We suggest that package folders follow a `<functionality>-<package-name>` format.
 

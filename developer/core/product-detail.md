@@ -210,7 +210,6 @@ registerComponent({
   name: "MyPriceComponent",
   component: MyPriceComponent
 });
-
 ```
 
 **Server**
@@ -276,14 +275,14 @@ Reaction.registerTemplate({
 
 Every component receives a set of props automatically.
 
-Property           | Type         | Description
------------------- | ------------ | ---------------------------------------------------
-variants           | String       | Top level variants
-layout             | String       | layout to use for the product detail page
-product            | Object       | The product
-priceRange         | String       | A normalize price range for display
-tags               | Array[Tag]   | An array of tags for the PDP page
-media              | Array[Media] | An array of media items for the PDP page
-editable           | Boolean      | Boolean true / false if the page should be editable
-viewAs             | String       | Viewing this page as "customer" / "administrator"
-hasAdminPermission | Boolean      | If current user has admin permissions
+| Property           | Type         | Description                                         |
+| ------------------ | ------------ | --------------------------------------------------- |
+| variants           | String       | Top level variants                                  |
+| layout             | String       | layout to use for the product detail page           |
+| product            | Object       | The product                                         |
+| priceRange         | String       | A normalize price range for display                 |
+| tags               | Array[Tag]   | An array of tags for the PDP page                   |
+| media              | Array[Media] | An array of media items for the PDP page            |
+| editable           | Boolean      | Boolean true / false if the page should be editable |
+| viewAs             | String       | Viewing this page as "customer" / "administrator"   |
+| hasAdminPermission | Boolean      | If current user has admin permissions               |

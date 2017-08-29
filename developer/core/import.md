@@ -15,7 +15,6 @@ Meteor.startup(function () {
 ## Contents
 
 - [Architecture](#architecture)
-
   - [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
 
 - [Choosing a suitable key](#choosing-a-suitable-key)
@@ -27,7 +26,6 @@ Meteor.startup(function () {
 - [Image uploader](#image-uploader)
 
 - [Reference](#reference)
-
   - [`Reaction.Import.flush`](#flush)
   - [`Reaction.Import.fixture`](#fixture)
   - [`Reaction.Import.object`](#object)

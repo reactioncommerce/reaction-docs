@@ -52,11 +52,11 @@ export default MyReactComponent;
 
 ### Props
 
-Property       | Type                   | Description
--------------- | ---------------------- | --------------------------------
-attachment     | String                 | Attachment to wrapped component,
-children       | Node (React Component) | Child to attach tooltip to
-tooltipContent | Node (React Component) | Content for tooltip
+| Property       | Type                   | Description                      |
+| -------------- | ---------------------- | -------------------------------- |
+| attachment     | String                 | Attachment to wrapped component, |
+| children       | Node (React Component) | Child to attach tooltip to       |
+| tooltipContent | Node (React Component) | Content for tooltip              |
 
 ## Tooltip (Blaze)
 

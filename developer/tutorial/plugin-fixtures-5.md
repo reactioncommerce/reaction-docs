@@ -73,5 +73,4 @@ Next: [Creating Custom Routes](/developer/tutorial/plugin-routes-6.md)
 
 ## Read More
 
-[Mongo Export](https://docs.mongodb.com/manual/reference/program/mongoexport/
-)
+[Mongo Export](https://docs.mongodb.com/manual/reference/program/mongoexport/)

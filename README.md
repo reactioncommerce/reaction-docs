@@ -2,11 +2,11 @@
 
 This repository contains source for Reaction Commerce documentation.
 
-The `master` and `development` branches are both published to <https://docs.reactioncommerce.com>
+All pushed branches are published to <https://docs.reactioncommerce.com>
 
 ## Contributing
 
-Pull requests should be made to the `development` branches.
+Pull requests should be made to the `master` branches.
 
 ### Style
 
@@ -30,12 +30,8 @@ npm run lint-fix
 
 ### Testing
 
-You can view and test your branch live on https://docs.reactioncommerce.com/.
+You can view and test your branch live on <https://docs.reactioncommerce.com/>.
 
-1. Go to https://docs.reactioncommerce.com/
-2. Open browser console and run:
-
-```js
-Meteor.call("redoc/flushDocCache")
-```
-3. Find your branch in the drop-down menu. The URL should change to https://docs.reactioncommerce.com/reaction-docs/your-branch-name/intro and you should be able to see and test your changes here.
+1. Go to <https://docs.reactioncommerce.com/>
+2. Open browser console and run: `Meteor.call("redoc/flushDocCache")`
+3. Find your branch in the drop-down menu. The URL should change to <https://docs.reactioncommerce.com/reaction-docs/your-branch-name/intro> and you should be able to see and test your changes here.
