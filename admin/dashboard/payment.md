@@ -4,10 +4,14 @@
 
 Reaction supports the following payment packages:
 
-- [PayPal Express and PayFlow](https://github.com/reactioncommerce/reaction-paypal)
-- [Braintree](https://github.com/reactioncommerce/reaction-braintree)
-- [Stripe](https://github.com/reactioncommerce/reaction-stripe)
-- [Authorize.Net](https://github.com/taylorsmithgg/reaction-auth-net)
+- PayPal Express
+- Payflow Pro
+- Braintree
+- Stripe
+- Authorize.Net
+
+Also included is the "Example Payment" method, which allows you to checkout, etc. without
+having to sign up for a merchant account.
 
 ## Enable a payment provider
 
