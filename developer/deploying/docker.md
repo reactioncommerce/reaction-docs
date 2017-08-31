@@ -131,33 +131,7 @@ mycustom           latest              d21371bbdba3        2 hours ago  359MB
 
 Now to get your image online so your server can access it.
 
-## Publishing
-
-### Reaction Deploy
-
-You can deploy using reaction:
-
-```sh
-reaction deploy -a mycustom -i mycustom
-```
-
-see the help with:
-
-```sh
-reaction deploy -h
-
-Usage:
-
-  reaction deploy [options]
-
-    Options:
-      --app, -a    The name of the app to deploy (required)
-      --env, -e    Set/update an environment varible before deployment
-      --image, -i  The Docker image to deploy
-```
-
-
-### Docker Hub
+## Publishing on Docker Hub
 
 Log into your dockerhub account:
 
@@ -194,61 +168,4 @@ docker run -d \
   -e REACTION_USER="admin-username" \
   -e REACTION_AUTH="admin-password" \
   mydockerhubuser/mycustom:mytag
-```
-
-## Private Registry
-
-Or you can run your own
-[registry](https://docs.docker.com/registry/deploying/).
-
-Which will change how you
-[login](https://docs.docker.com/engine/reference/commandline/login/),
-[tag](https://docs.docker.com/engine/reference/commandline/tag/),
-and [push](https://docs.docker.com/engine/reference/commandline/push/)
-the image.
-
-## Manually using export/import
-
-Or, if you prefer to do things manually, you can export and compress the image with:
-
-```sh
-docker export mycustom > mycustom.tar && gzip mycustom.tar
-```
-
-then:
-
-```sh
-scp mycustom.tar.gz myuser@myserver.com:/imports/mycustom.tar.gz
-```
-
-lastly, import the docker image on the remote server:
-
-```sh
-docker import /imports/mycustom.tar.gz mycustom:mytag
-```
-
-Refactored into a oneliner to distil it down to the essence for brevity, clarity
-and efficiency as in the above the image is written to disk four times
-1. uncompressed as `mycustom.tar`
-2. then to `mycustom.tar.gz` to compress it
-3. next as `/imports/mycustom.tar.gz` on the server
-4. last when docker imports it into `/var/lib/docker/`
-
-Using pipes through ssh it will be direct into `/var/lib/docker/` without the placeholder files:
-
-```sh
-docker export mycustom | gzip -c | ssh myuser@myserver.com "docker import - mycustom:mytag"
-```
-
-and finally on the server you can run it:
-
-```sh
-docker run -d \
-  -p 80:3000 \
-  -e ROOT_URL="http://<your app url>" \
-  -e MONGO_URL="mongodb://<your mongo url>" \
-  -e REACTION_EMAIL="youradmin@yourdomain.com" \
-  -e REACTION_USER="admin-username" \
-  -e REACTION_AUTH="admin-password" \
-  mycustom:mytag
 ```
