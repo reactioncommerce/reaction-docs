@@ -92,3 +92,80 @@ docker-machine ip reaction-host
 Once you have your host IP, go to your domain name provider and point your domain name at that IP.
 
 That's it.  You're done!  Once your DNS records update, you should then be able to access your deployed Reaction Commerce shop.
+
+## Custom build
+
+Let's customize locally, and build your docker image.
+
+First, you should already have a local reaction folder, if not, look at the
+[installation docs](../installation.md).
+
+After initializing with:
+
+```sh
+reaction init
+```
+
+And running reaction with:
+
+```sh
+reaction
+```
+
+Then add your theming and customizations using the
+[customization guide](../tutorial/introduction.md).
+Now you have a customized Reaction Commerce with all your shiny new npm packages and theming.
+It runs great locally and you have built a local custom image using:
+
+```sh
+reaction build mycustom
+```
+
+Which you can verify with:
+
+```sh
+docker images mycustom
+REPOSITORY         TAG                 IMAGE ID            CREATED     SIZE
+mycustom           latest              d21371bbdba3        2 hours ago  359MB
+```
+
+Now to get your image online so your server can access it.
+
+## Publishing on Docker Hub
+
+Log into your dockerhub account:
+
+```sh
+docker login
+```
+
+Tag your local image:
+
+```sh
+docker tag mycustom dockerhubuser/mycustom:mytag
+```
+
+Push it up to docker hub:
+
+```sh
+docker push dockerhubuser/mycustom:mytag
+```
+
+Pull it on a server:
+
+```sh
+docker pull dockerhubuser/mycustom:mytag
+```
+
+Run it:
+
+```sh
+docker run -d \
+  -p 80:3000 \
+  -e ROOT_URL="http://<your app url>" \
+  -e MONGO_URL="mongodb://<your mongo url>" \
+  -e REACTION_EMAIL="youradmin@yourdomain.com" \
+  -e REACTION_USER="admin-username" \
+  -e REACTION_AUTH="admin-password" \
+  mydockerhubuser/mycustom:mytag
+```
