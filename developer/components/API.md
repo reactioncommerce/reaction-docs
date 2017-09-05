@@ -37,7 +37,7 @@ Most Reaction components are available in the `Components` object that we import
 ```js
 import { replaceComponent } from "@reactioncommerce/reaction-components";
 
-const MyCustomNavbar = (props) => (  
+const MyCustomNavbar = (props) => (
   <nav>custom navbar...</nav>
 );
 
@@ -176,11 +176,20 @@ Below is the full API for the Reaction components system. Each of these items ca
 
 #### [Higher Order Components](#higher-order-components)
 
+<<<<<<< HEAD
 -   [`withCurrentUser`](#withcurrentuser)
 -   [`withCurrentAccount`](#withcurrentaccount)
 -   [`withIsAdmin`](#withisadmin)
 -   [`withIsOwner`](#withisowner)
 -   [`composeWithTracker`](#composewithtracker)
+=======
+- [`withCurrentUser`](#withcurrentuser)
+- [`withCurrentAccount`](#withcurrentaccount)
+- [`withIsAdmin`](#withisadmin)
+- [`withIsOwner`](#withisowner)
+- [`withPermissions`](#withPermissions)
+- [`composeWithTracker`](#composewithtracker)
+>>>>>>> 178ff5f... Accounts Dashboard Screen Update (#261)
 
 ## Components Objects
 
@@ -479,6 +488,31 @@ const MyComponent = ({ isOwner }) => (
 registerComponent("MyComponent", MyComponent, withIsOwner)
 
 export default withIsOwner(MyComponent);
+```
+
+### withPermissions
+
+This sets a Boolean `hasPermissions` prop to be passed into the wrapped component based on `roles` or `group`. Like the others above, you can use it to conditionally show parts of the UI or change what functionality is available.
+Default roles used roles = ["guest", "anonymous"]. This is overridden by group, if a group option is passed in. Example is show below without passing any option, and passing roles (commented), and group (commented).
+
+```js
+import { registerComponent, withPermissions } from "@reactioncommerce/reaction-components";
+
+const MyComponent = ({ hasPermissions }) => (
+  <div>
+    {hasPermissions &&
+      <div>
+        Permission required to show this
+      </div>
+    }
+  </div>
+);
+
+registerComponent("MyComponent", MyComponent, withPermissions())
+// registerComponent("MyComponent", MyComponent, withPermissions({ roles=["accounts", "profile"]))
+// registerComponent("MyComponent", MyComponent, withPermissions({ group="group-slug" }))
+
+export default withPermissions(MyComponent);
 ```
 
 ### composeWithTracker
