@@ -4,7 +4,7 @@ Reaction can be configured on startup with a combination of environment variable
 
 Reaction uses `/private/settings/reaction.json` for the configuration of Reaction packages and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
-## Environment
+## Environmental variables
 
 You can use [environment variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps#how-the-environment-and-environmental-variables-work) for settings, useful for headless and automated vm configuration.
 
@@ -55,6 +55,10 @@ To send email you should pre-configure the administrative SMTP email server from
 Reaction supports sending mail over SMTP; the `MAIL_URL` environment variable should be of the form `smtp://USERNAME:PASSWORD@HOST:PORT`.
 
 The Email dashboard provides a UI for quick configuration of the email server as well.
+
+### SKIP_FIXTURES
+
+Pass in `SKIP_FIXTURES` to `reaction` to prevent overwriting custom Shop data with fixture data from `/private/data/Shops.json`.
 
 ## Settings
 
