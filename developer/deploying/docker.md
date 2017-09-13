@@ -98,7 +98,7 @@ That's it.  You're done!  Once your DNS records update, you should then be able 
 Let's customize locally, and build your docker image.
 
 First, you should already have a local reaction folder, if not, look at the
-[installation docs](../installation.md).
+[installation docs](./installation).
 
 After initializing with:
 
