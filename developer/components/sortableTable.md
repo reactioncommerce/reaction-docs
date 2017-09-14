@@ -59,7 +59,7 @@ class MyComponent extends Component {
           filterType={"table"}
           noDataMessage={noDataMessage}
         />
-      <div>
+      </div>
     );
   }
 }
