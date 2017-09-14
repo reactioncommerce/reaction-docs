@@ -1,12 +1,12 @@
 # Configuration
 
-Reaction can be configured on startup with a combination of environment variables, `settings/settings.json`, and default data files that provide package and shop pre-configuration.
+Reaction can be configured on startup with a combination of environment variables, `settings/settings.json`, and default data files for store pre-configuration.
 
-Reaction uses `/private/settings/reaction.json` for the configuration of Reaction packages and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
+Reaction uses `/private/settings/reaction.json` for the configuration of Reaction and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
 ## Environment variables
 
-You can use [environment variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps#how-the-environment-and-environmental-variables-work) for settings, useful for headless and automated vm configuration.
+You can use [environment variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps#how-the-environment-and-environmental-variables-work) for settings, useful for headless and automated virtual machine configuration.
 
 Environment variables take priority over variables set in _settings.json_.
 
@@ -206,12 +206,12 @@ Reaction installs sample shop data, translations, and other fixture defaults fro
 
 You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
 
-*Note: the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method (except when used in packages).*
+*Note: the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method.*
 
 
 ### Overwrite sample data
 
-If you prefer that running `reaction` does not use sample data, set `SKIP_FIXTURES` to `true` before running `reaction`. You can run `SKIP_FIXTURES=true reaction` or export the variable like below, to set it for the life of that shell session:
+If you prefer to run `reaction` _without_ default sample data, set the `SKIP_FIXTURES` variable to `true`. Run `SKIP_FIXTURES=true reaction` or export the variable to set it for the life of that shell session:
 
 ```
 $ export SKIP_FIXTURES=true
