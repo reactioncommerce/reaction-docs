@@ -88,6 +88,3 @@ To remove an entire product from your inventory:
 
 3. Click the **Publish** button on the top right to save Unpublished changes.
 
-To restore an archived product:
-
-1. Archived products can be restored
