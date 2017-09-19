@@ -23,7 +23,7 @@ with Reaction should read the entire plugin tutorial since most development with
 
 ### What are some of the best tools when developing for Reaction?
 
-Most of the Reaction teams uses [Atom](https://atom.io/) and we have a section in the [style guide](/developer/styleguide)
+Most of the Reaction teams uses [Atom](https://atom.io/) and we have a section in the [style guide](/developer/styleguide.md)
 on how to customize it for working with Reaction. Also [RoboMongo](https://robomongo.org/) is a great tool for looking at
 your local database. Using and understanding the Meteor commands like `meteor shell` are also very handy. There are also
 a couple of Chrome extensions that allow you to inspect MiniMongo and Blaze templates. A search for MiniMongo or Meteor
