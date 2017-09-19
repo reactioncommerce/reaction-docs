@@ -77,7 +77,7 @@ To get back to the product detail and tag editing panel:
 
 Reaction supports discount codes and rates. Read more about discounting products in the [Dashboard's Payment section](/admin/dashboard/payments-discounts.md).
 
-## Archiving and restoring a product
+## Archiving a product
 
 To remove an entire product from your inventory:
 
