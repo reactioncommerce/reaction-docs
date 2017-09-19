@@ -1,60 +1,56 @@
 # Products
 
-What you see, the customer sees. Create, edit, and remove products inline. It’s simple, straight-forward product management.
+What the store operator sees, the customer sees. Create, edit, preview and publish products inline, right on the Product Detail Page (PDP) itself. At any time in Reaction's Product Detail Page and Product Grid pages, click on **Edit Mode** at the top to toggle between the customer view and admin view.
 
 ## Creating a product
 
-![](/assets/admin-dashboard-panel-home.png "Add Product with Reaction Commerce")
+![](/assets/admin-product-details-page.png "Reaction's Product Detail Page (PDP)")
 
 To create a product, login to your dashboard and follow these steps:
 
-1.  Click on the plus <i class="font-icon fa fa-plus"></i>, located on the top right.
+1. Click on the plus <i class="font-icon fa fa-plus"></i>, located on the top right. If you're not already in **Edit Mode**, clicking on the plus will put you in Edit Mode.
 
-2.  You will be taken to an empty product page, like this:
-    ![](/assets/admin-product-details-page.png "Reaction's Product Page")
+2. Now you will be in a Product Detail Page's **Edit Mode**, add product title, subtitle, vendor name, and description by clicking on each section and typing into the field. After typing and editing a field, a golden pencil <i class="font-icon fa fa-pencil"></i> status indicator appears to show that there are unpublished changes that need to be published.
 
-Edit your product title, subtitle, vendor name, and product description by clicking on each section and typing into the field. To upload a product photo, drop a file into the grey square on the left.
+3. To upload a product photo, click on the plus <i class="font-icon fa fa-plus"></i> on the photo placeholder. You can upload multiple photos at a time by selecting more than one. You can also drag and drop multiple photos into the box.
 
-3.  Editing social media sharing and tags from the sidebar: If your shop is connected to social media sharing, you may customize your product's social sharing messaging by clicking on the <i class="font-icon fa fa-pencil"></i> icon on the right of the product pricing.
+4. Editing social media sharing and tags from the sidebar: If your shop is connected to social media sharing, customize your product's social sharing messaging by clicking on the <i class="font-icon fa fa-pencil"></i> icon on the right of the product pricing.
 
-You may also add product tags by clicking on the plus <i class="font-icon fa fa-plus"></i>, located under the "Tags" section.
-
+5. Add product tags by clicking on the plus <i class="font-icon fa fa-plus"></i>, located under the **Tags** card.
 ![](/assets/admin-product-details-tag.png "Reaction's Product Page")
 
-4.  You can change the layout template, product title permalink, subtitle, vendor, description and origin country from the sidebar's top **Product Settings** option.
-5.  Click the **Publish** button on the top right to save Unpublished changes.
+6. You can change the layout template, product title permalink, subtitle, vendor, description and origin country from the sidebar's top **Product Settings** option.
 
-## Configuring your first variant
+7. Click the **Publish** button on the top right to save Unpublished changes, indicated by the golden pencil i class="font-icon fa fa-pencil"> status indicators.
 
-Assign prices, item weight, quantity, colors, and other properties to your product. Product variants allow you to create different versions of the same base product. Perfect for products that come, for example, in multiple colors.
+## Configuring your first Variant
 
-Every product comes filled with one variant. To create more:
+Product Variants allow you to create different versions of the same base product. Perfect for products that come, for example, in multiple colors.
 
-1.  Click the <i class="font-icon fa fa-pencil"></i> icon, located under the Options section.
-2.  Fill out the following fields in the Edit Variant panel:
+Every product comes filled with one default, required variant. To create more:
+1. Click the <i class="font-icon fa fa-pencil"></i> icon, located under the **Options** card.
+2. Fill out the following fields in the **Edit Variant** panel:
+- **Label** - Required. A description of your variant, which appears in the under the **Options** label on the Product Detail Page.
+- **Origin country** - Optional. A drop-down menu of countries.
+- **Weight** - Optional. The weight of your item, which will help determine shipping costs.
+- **MSRP (Manufacturer's suggested retail price)** - Optional. The suggested retail price of your product.
+- **Price** - Required. The price that you are actually selling your product.
+- **Width, Length, Height, Weight** - Optional. The size of your product
+- **Taxable** - Optional. Check this box to automatically add tax to this item when purchased. Add Tax Code and Tax Description for more options.
+- **Inventory tracking** - Optional. Check this box if you'd like to track this item in your inventory.
+- **Warn at** - Optional. Adds the `Limited Supply` badge on the Product Grid when quantity is lower than this number.
+- **Allow Backorder** - Optional. Allows customers to backorder the product.
 
--   **Label** - A description of your variant, which appears in the drop-down menu under the "Options" section.
--   **Origin Country** - A drop-down menu of countries
--   **Weight** - The weight of your item, which will help determine shipping costs.
--   **MSRP (manufacturer's suggested retail price)** - The suggested retail price of your product.
--   **Price** - The price that you're actually selling your product.
--   **Width, Length, Height, Weight** - The size of your product
--   **Taxable** - Check this box to automatically add tax to this item when purchased. Add Tax Code and Tax Description for more options.
--   **Inventory tracking** - Check this box if you'd like to track this item in your inventory.
--   **Allow Backorder** - Allows customers to backorder the product.
+3. Click the **Publish** button on the top right to save Unpublished changes.
 
-3.  Click the **Publish** button on the top right to save Unpublished changes.
+## Adding more product Variant Options
 
-## Adding more product variant options
+Variant Options provide a second layer of customization on top of each variant. For instance, in addition to carrying shirts in multiple colors, you may also want to carry multiple size options for each color. Use this flexible structure to customize your products however you like.
 
-Variant options provide a second layer of customization on top of each variant. For instance, in addition to carrying shirts in multiple colors, you may also want to carry multiple size options for each color. Use this flexible structure to customize your products however you like. The sky's the limit!
-
-![](/assets/admin-product-variant-2.png "Reaction Product Variant Options")
-
-1.  Click on the <i class="font-icon fa fa-plus"></i> button to the right of the **Variant Options** section.
-2.  Customize the option name, label, price, and quantity, as well as add a set of images.
-3.  Keep adding more options by clicking the <i class="font-icon fa fa-plus"></i> button.
-4.  Click the **Publish** button on the top right to save Unpublished changes.
+1. Click on the <i class="font-icon fa fa-plus"></i> button to the right of the **Variant Options** section.
+2. Add the Variant Option's **Label**, **Short Label**, **Quantity** and **Price**. **Label** is displayed in cart, checkout and orders. **Short Label** is displayed on the Product Detail Page. All fields are required.
+3. Keep adding more options by clicking the <i class="font-icon fa fa-plus"></i> button.
+4. Click the **Publish** button on the top right to save Unpublished changes.
 
 ## Adding product images
 
@@ -64,22 +60,31 @@ Currently, only image file types are supported, but support for video, Google Dr
 
 Once you have images added to your gallery, drag and drop to change their position.
 
-![](/assets/admin-product-variant-3.png "Reaction Commerce Product Mediae")
+![](/assets/admin-product-variant-3.png "Reaction Commerce Product Media")
 
-## Adding product tags and details
+## Adding product Tags and Details
 
 To get back to the product detail and tag editing panel:
 
-1.  Click on the <i class="font-icon fa fa-pencil"></i> next to the product price.
-2.  Click **Tags** to add, remove or rearrange product tags. Tags will then be located below the images section.
-3.  Click **Details** to add or remove product details. Details will then be located below the tags section.
+1. Click on the <i class="font-icon fa fa-pencil"></i> next to the product price.
+2. Click **Tags** to add, remove or rearrange product tags. Tags are links displayed below the images section. Clicking on a tag link leads the customer to a page listing all of the products with that tag. Tags can be linked to the top navigation bar.
+3. Click **Details** to add or remove product details. Details are displayed under the Tags section as static text in a table.
 
 ## Discounting products
 
 Reaction supports discount codes and rates. Read more about discounting products in the [Dashboard's Payment section](/admin/dashboard/payments-discounts.md).
 
-## Removing a product
+## Archiving and restoring a product
 
-To remove an entire product from your inventory, login to your product view and click on the **Archive** button <i class="rui font-icon fa fa-archive"></i>. Select yes to archive.
+To remove an entire product from your inventory:
+
+1. Click on the **Archive** button <i class="rui font-icon fa fa-archive"></i>.
+2. Select Archive to confirm.
 
 ![](/assets/admin-product-delete.png "Reaction remove product")
+
+3. Click the **Publish** button on the top right to save Unpublished changes.
+
+To restore an archived product:
+
+1. Archived products can be restored
