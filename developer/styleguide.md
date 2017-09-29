@@ -69,8 +69,7 @@ File names follow the same conventions as folder names, and also allow for names
 
 ### Create strong package names
 
-
-We suggest that package folders follow a `<functionality>-<package-name>` format.
+Name package folders in this format: `<functionality>-<package-name>`
 
 ```sh
 /imports/plugins/custom/payments-custom-provider
@@ -114,9 +113,9 @@ settingsContainer.js
 
 ## JavaScript style recommendations
 
-### Variables
+## Variables
 
-#### Naming variables
+### Naming variables
 
 Variable names should be:
 
@@ -129,22 +128,22 @@ Publication names should:
 
 - Use TitleCase
 
-#### Working with variables
+### Working with variables
 
 - Use `const` except when a variable is being reassigned.
 
 ## Methods
 
-#### Method names should:
+### Method names should:
 - Methods names should use a verb/noun style when possible, e.g. `checkConfiguration` or `addToCart`.
 - Methods that return a single value should be singular.
 - Methods whose main purpose is to return a value should use the get prefix.
 
 - Avoid ternary operators and one-line `if` statements
 
-#### Use parenthesis for clarity
+### Use parenthesis for clarity
 
-- Use parenthesis around all method arguments. 
+- Use parenthesis around all method arguments.
 
 **Don't**
 ```
@@ -164,7 +163,7 @@ thisMethodTakesACallback(arg1, arg2, result => {
   doStuff
 });
 ```
-**Do** 
+**Do**
 
 ```
 thisMethodTakesACallback(arg1, arg2, (result) => {
@@ -173,7 +172,7 @@ thisMethodTakesACallback(arg1, arg2, (result) => {
 ```
 
 
-#### Avoid multi-line shorthand arrow functions
+### Avoid multi-line shorthand arrow functions
 
 If you have to break your arrow function into multiple lines, use curly brackets and a return rather than trying to break the shorthand arrow function into multiple lines.
 
@@ -192,8 +191,7 @@ cartItems.find((item) => {
 })
 ```
 
-
-#### Working with collections
+### Working with collections
 
 Be explicit in querying:
 
@@ -206,7 +204,7 @@ Products.findOne("abc123")
 Products.findOne({ _id: "abc123" })
 ```
 
-#### Using lodash and ES2015
+### Replacing lodash with ES2015
 
 Use native ES6 elements over lodash whenever there is a 1-for-1 replacement. Here are some examples of lodash methods that can be replaced with native elements:
 
@@ -216,4 +214,3 @@ Use native ES6 elements over lodash whenever there is a 1-for-1 replacement. Her
 - Replace `_.each`, `_.forEach`, with  `Array.prototype.forEach`
 - Replace `_.isArray`, with `Array.isArray`
 - Replace `_.extend` with `Object.assign`
-
