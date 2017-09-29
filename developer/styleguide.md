@@ -1,75 +1,95 @@
-# Style Guide
+# Style guide
 
-Our rules are similar to AirBnB or Meteor rules, [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), although we have tweaked them a little with what is working best for us.
+As a community, Reaction follows guidelines for JavaScript style and syntax conventions, along with guidelines for naming variables, methods and filenames.
 
-A couple of notable Reaction specific style rules:
+## Syntax and style conventions
 
--   Double quoted strings
--   Well spaced functions
--   Spaces around brackets
--   120 character line length
+Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) and [Meteor Code Style](https://guide.meteor.com/code-style.html), [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), with a few custom Reaction-specific rules:
+
+- Double-quoted strings
+- Well-spaced functions
+- Spaces around brackets
+- 120 character line-length
 - `import` order
   - React npm packages (`React`, `prop-types`, etc...)
   - other npm packages
-  - meteor core packages
-  - meteor (Atmosphere) packages
+  - Meteor core packages
+  - Meteor (Atmosphere) packages
   - local app files
 
-Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines that are typical of Meteor projects.
+Reaction uses various linting libraries to automate style checking. Find the exact rules in the code:
+- [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
+- [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - [JS Beautifier](jsbeautifier.org) automates code formatting
+- [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
 
-## Editor Configuration
+To see the rules in action, run `eslint .` from the command line or use [ESLint code editor tools](https://eslint.org/docs/user-guide/integrations).
 
-In the Reaction app root, we have Reaction specific configuration files that can be used with most editors with the appropriate tools installed.
+💡 **ProTip!** If you're using [Atom](https://atom.io/), like the Core team, you can install all the necessary tools in one line:  `apm install editorconfig atom-beautify linter linter-eslint linter-markdown linter-jsonlint linter-docker`
 
--   `.eslintrc` - [http://eslint.org/](https://eslint.org/)
--   `.jsbeautifyrc` - [http://jsbeautifier.org/](https://jsbeautifier.org/)
--   `.editorconfig` - [http://editorconfig.org/](https://editorconfig.org/)
+## Naming conventions
 
-These configurations also include additional rules supporting [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and `React`.
+### Avoid camel-casing files and folders
 
-### Atom
+Not all operating systems are case sensitive, so avoid having two files named the same with differing case. Instead of camel-casing, use hyphens. Underscores are not to be used for file or folder names unless expressly required.
 
-We've been using the Open Source [Atom](https://atom.io/) editor for some time now and can recommend it.
+Names of folders should be:
+- Lowercased
+- Alphanumeric characters
+- Hyphenated to join more words
+- Avoid camelCase, undescore_casing
 
-Setting up Atom is a quick command where we use the shell command `apm` to install the same [Atom linting packages](https://atom.io/users/AtomLinter) as we use for Reaction.
+File names follow the same conventions as folder names, and also allow for names to contain multiple (.) characters as needed.
+
+**Do**
 
 ```sh
-apm install editorconfig atom-beautify linter linter-eslint linter-markdown linter-jsonlint linter-docker
+  ui-grid/
+  example-payment-method/
+  social/
 ```
 
-### Lint
+```sh
+  bootstrap.rtl.js
+  index.js
+```
 
-Reaction installs the `eslint` packages _eslint_, _eslint-plugin-react_, _babel-eslint_ from [npm](https://www.npmjs.com/) as development dependencies.
+**Don't**
 
-In the Reaction app root, we have a Reaction `eslint` configuration.
+```sh
+  reactionpackagename/
+  address_book/
+  addressBook/
+```
 
-`.eslintrc` - [http://eslint.org/](https://eslint.org/)
+```sh
+  settingsContainer.js
+  addressBook.js
+  address_book.js
+```
 
-For more details, see the [ESLint Getting Started Guide](http://eslint.org/docs/user-guide/getting-started).
+### Create strong package names
 
-#### Markdown
 
-In our Markdown documentation, we use [remark-lint](https://github.com/wooorm/remark-lint) to ensure consistent Markdown styling.
+We suggest that package folders follow a `<functionality>-<package-name>` format.
 
-### Pull Requests
+```sh
+/imports/plugins/custom/payments-custom-provider
+/imports/plugins/included/shipping-provider
+```
 
-Pull request branches are evaluated using [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) for insecure dependencies and code quality.
+Registry package names should preferably use some organizational namespacing as a prefix.
 
--   must pass a Linting check and _no errors_ are accepted.
--   must pass a Dependency check and no priority packages are accepted.
--   must pass `reaction test`
+```js
+reaction-paypal
+reaction-google-analytics
+yourorg-your-package
+```
 
-In many cases, documentation updates can be required as well.
+### Group related files together into folders
 
-Pull requests are submitted to a peer code review process before acceptance.
+As a convention, if there are multiple files that provide functionality that is broken down across multiple files, these files should be grouped within a folder. If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the separator.
 
-### Naming Conventions
-
-In general we use hyphens (-) for folder names. Underscores are not to be used for file or folder names unless expressly required.  Be aware that not all operating systems are case sensitive, so it's not ok to have two files named the same with differing case. To prevent this, we recommend not using camelCasing when naming folders or files.
-
-As a convention, if there are multiple files that provide functionality that is broken down across multiple files, these files should be grouped within a folder. If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the seperator.
-
-**Good**
+**Do**
 
 ```sh
 /container/settings.js
@@ -84,7 +104,7 @@ or
 /settings-container.html
 ```
 
-**Bad**
+**Don't**
 
 ```sh
 /container/settings-containers.js
@@ -92,74 +112,108 @@ or
 settingsContainer.js
 ```
 
-#### Folders
+## JavaScript style recommendations
 
-**Good**
+### Variables
 
--   Folder names for packages should contain only lowercased alpha numeric characters and are **hyphenated** if joining more than one word
+#### Naming variables
 
-```sh
-    // Packages in /imports/plugins
-    ui-grid/
-    example-paymentmethod/
-    social/
-    taxes-avalara/
+Variable names should be:
+
+- Meaningful. Avoid single-letter variables.
+- Use `error`, instead of `e` or `err`
+- Variables that contains a boolean value should use a `isThisTrue` style.
+- Variables that return arrays should be plural.
+
+Publication names should:
+
+- Use TitleCase
+
+#### Working with variables
+
+- Use `const` except when a variable is being reassigned.
+
+## Methods
+
+#### Method names should:
+- Methods names should use a verb/noun style when possible, e.g. `checkConfiguration` or `addToCart`.
+- Methods that return a single value should be singular.
+- Methods whose main purpose is to return a value should use the get prefix.
+
+- Avoid ternary operators and one-line `if` statements
+
+#### Use parenthesis for clarity
+
+- Use parenthesis around all method arguments. 
+
+**Don't**
+```
+cartItems.find(item => item.status === picked)
 ```
 
-**Bad**
-
--   Package name should contain hyphens to make it easier to read.
--   Underscores are not to be used unless expressly required.
--   Folder names should not be camelCased.
-
-```sh
-  reactionpackagename/
-  address_book/
+**Do**
+```
+cartItems.find((item) => item.status === picked)
 ```
 
-#### Files
+- When specifying a callback, always use the parenthesis to indicate the argument being accepted over the bare arrow-function form. This way, it's clear it's not another argument to the original function:
 
-**Good**
+**Don't**
+```
+thisMethodTakesACallback(arg1, arg2, result => {
+  doStuff
+});
+```
+**Do** 
 
-
--   File names should contain only lowercased alpha numeric characters and are **hyphenated** if joining more than one word
--   File names may contain multiple (.) characters as needed
--   File names can use hyphens but should avoid camelCase naming.
-
-```sh
-  bootstrap.rtl.js
-  index.js
+```
+thisMethodTakesACallback(arg1, arg2, (result) => {
+  dostuff();
+});
 ```
 
-**Bad**
 
--   Underscores and camelCased are not to be used unless expressly required;
+#### Avoid multi-line shorthand arrow functions
 
-```sh
-  settingsContainer.js
-  publishContainer.js
-  addressBook.js
-  settings_container.js
-  publish-container.js
-  address_book.js
+If you have to break your arrow function into multiple lines, use curly brackets and a return rather than trying to break the shorthand arrow function into multiple lines.
+
+
+**Don't**
+ ```
+cartItems.find(
+   (item) => item.status === status
+ )
 ```
 
-#### Packages
-
-
-We suggest that package folders follow a `<functionality>-<package-name>` format.
-
-**Good**
-
-```sh
-/imports/plugins/custom/payments-custom-provider
-/imports/plugins/included/shipping-provider
+**Do**
+ ```
+cartItems.find((item) => {
+  return item.status === status;
+})
 ```
 
-Registry package names should preferably use some organizational namespacing as a prefix.
 
-```js
-reaction-paypal
-reaction-google-analytics
-yourorg-your-package
+#### Working with collections
+
+Be explicit in querying:
+
+**Don't**
 ```
+Products.findOne("abc123")
+```
+**Do**
+```
+Products.findOne({ _id: "abc123" })
+```
+
+#### Using lodash and ES2015
+
+Use native ES6 elements over lodash whenever there is a 1-for-1 replacement. Here are some examples of lodash methods that can be replaced with native elements:
+
+- Replace `_.map`, with  `Array.prototype.map`
+- Replace `_.reduce`, with  `Array.prototype.reduce`
+- Replace `_.filter`, with  `Array.prototype.filter`
+- Replace `_.each`, `_.forEach`, with  `Array.prototype.forEach`
+- Replace `_.isArray`, with `Array.isArray`
+- Replace `_.extend` with `Object.assign`
+
