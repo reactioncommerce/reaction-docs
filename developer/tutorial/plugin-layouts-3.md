@@ -140,6 +140,8 @@ layout template we will create in the next chapter. We also specify which templa
 and what's the main template that we render and that's `products`. We also
 specified which template we would use for a "notFound". When we get to the routing and template more of this will make sense.
 
+More detailed documentation on the other `register.js` can be found in this [blog post](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/).
+
 One important thing to understand is that at any point in time when RC goes to render a route/page it's going to
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step.
 It is essentially the "default" workflow when you hit the home page.
