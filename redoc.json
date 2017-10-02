@@ -751,9 +751,9 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "deploying-reaction-on-managed",
-    "label": "Managed",
+    "label": "Reaction Platform",
     "repo": "reaction-docs",
-    "docPath": "developer/deploying/launchdock.md"
+    "docPath": "developer/deploying/platform.md"
   }, {
     "class": "guide-nav-item",
     "alias": "guidelines",
