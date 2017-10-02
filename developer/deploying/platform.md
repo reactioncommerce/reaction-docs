@@ -10,7 +10,7 @@ The `reaction-cli` incorporates functionality for any team to deploy Reaction to
 4.  Create application environment
 5.  Deploy application
 
-## Configration
+## Configuration
 
 As a user of the **Reaction Platform**, you'll receive an email containing a "invite token" from the Reaction Platform API ("Launchdock"). **Launchdock** is the name of our internal  orchestration management platform.
 
@@ -18,7 +18,7 @@ You will be asked for your [invite token](http://getrxn.io/reaction-platform) wh
 
 ### register
 
-`reaction register` and create keys locally before configuring your application environment. `reaction login` authenticates you to the Reaction Platform and syncronizes platform services.
+`reaction register` to create keys locally before configuring your application environment. `reaction login` authenticates you to the Reaction Platform and syncronizes platform services.
 
 ```sh
 # Register with invite token
@@ -54,7 +54,7 @@ reaction keys add ~/.ssh/<keyname>.pub
 
 ## Applications
 
-An "application" is a instance of Reaction Commerce and any services, connectors, or container dependencies that are configured to deploy as one to the application environment.
+An "application" is an instance of Reaction Commerce plus any services, connectors, or container dependencies that are configured to deploy as one to an application environment.
 
 ### create
 

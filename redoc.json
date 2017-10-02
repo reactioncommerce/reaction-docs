@@ -750,7 +750,7 @@
     "docPath": "developer/deploying/docker.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-on-managed",
+    "alias": "deploying-on-reaction-platform",
     "label": "Reaction Platform",
     "repo": "reaction-docs",
     "docPath": "developer/deploying/platform.md"
