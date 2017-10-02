@@ -128,9 +128,9 @@ Expect to recieve an email with the completed build status (failed or deployed).
 
 #### CI/CD Configuration
 
-[Continious Integration configuration](https://docs.gitlab.com/ee/ci/) should be commited in `.reaction/ci/config.yml`.
+[Continious integration configuration](https://docs.gitlab.com/ee/ci/) should be commited in `.reaction/ci/config.yml`.
 
-## Basic Example
+## Basic example
 
 Below is an example `simple-demo` application deployment, setting the minimum required settings.
 
@@ -147,7 +147,7 @@ reaction deploy --app simple-demo
 reaction open simple-demo
 ```
 
-## Full Example
+## Full example
 
   Below is a more complete example that sets up a SMTP mail server URL (for app emails), imports [Reaction registry](https://docs.reactioncommerce.com/reaction-docs/master/registry) settings and [Meteor settings](https://docs.meteor.com/api/core.html#Meteor-settings), and deploys the latest official Reaction image. Then we update the app with an API key environment variable.  And finally, we add a custom domain to the app and open it in our browser.
 
