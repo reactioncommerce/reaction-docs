@@ -132,15 +132,15 @@ Expect to recieve an email with the completed build status (failed or deployed).
 
 ## Basic Example
 
-Below is an example deployment, setting the minimum required settings.
+Below is an example `simple-demo` application deployment, setting the minimum required settings.
 
 ```sh
 # create the application environment
-reaction apps create --name reaction
+reaction apps create --name simple-demo
 
 # deploy application to the environment
 
-reaction deploy --app reaction
+reaction deploy --app simple-demo
 
 # open your app in your browser
 
