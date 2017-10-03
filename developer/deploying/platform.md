@@ -2,7 +2,7 @@
 
 Reaction Commerce offers a managed deployment option, the [Reaction Platform](http://getrxn.io/reaction-platform).
 
-The `reaction-cli` incorporates functionality for any team to deploy Reaction to multiple environments. [Visit reactioncommerce.com](http://getrxn.io/reaction-platform) to get a demo or request an **invite token**.
+The `reaction-cli` incorporates functionality for any team to deploy Reaction Commerce to multiple environments. [Visit reactioncommerce.com](http://getrxn.io/reaction-platform) to get a demo or request an **invite token**.
 
 1.  [Request invite token](http://getrxn.io/reaction-platform).
 2.  Register local environment
@@ -54,13 +54,19 @@ ssh-add -K ~/.ssh/<private key created above>
 reaction keys add ~/.ssh/<keyname>.pub
 ```
 
-## Applications
+## apps
 
 An "application" is an instance of Reaction Commerce plus any services, connectors, or container dependencies that are configured to deploy as one to an application environment.
 
+```sh
+#### apps list
+# list your apps and their domains
+reaction apps list
+```
+
 ### create
 
-Creating an "application" configures the environment that the built application will be deployed into.
+Creating an "app" configures the environment that the built application will be deployed into.
 
 ```sh
 # Create and configure your new app deployment
@@ -73,7 +79,16 @@ reaction apps create \
   --settings path/to/settings.json
 ```
 
-#### env
+### delete
+
+Deletes an application deployment.
+
+```sh
+# delete existing app deployment
+reaction apps delete --name <appname>
+```
+
+## env
 
 Configure environment variables for the application deployment.
 
@@ -98,7 +113,7 @@ reaction env list --app <appname>
 
 **--settings** pass a Meteor `settings.json` to the environment
 
-#### domains
+## domains
 
 ```sh
 # add a custom domain for your app
@@ -107,13 +122,9 @@ reaction domains add --app <appname> -d mycoolshop.com
 
 # remove a custom domain from your app
 reaction domains remove --app <appname> -d mycoolshop.com
-
-#### apps list
-# list your apps and their domains
-reaction apps list
 ```
 
-### deploy
+## deploy
 
 Submit your application for a deployment. This will begin the CI/CD/CD process. This begins a build process that is unique for every project. Expect this entire process to take around 20 minutes.
 
@@ -128,9 +139,9 @@ Submit your application for a deployment. This will begin the CI/CD/CD process. 
 
 Expect to recieve an email with the completed build status (failed or deployed).
 
-#### CI/CD Configuration
+**CI/CD Configuration**
 
-[Continious integration configuration](https://docs.gitlab.com/ee/ci/) should be commited in `.reaction/ci/config.yml`.
+[Continious integration configuration](https://docs.gitlab.com/ee/ci/) should be commited in [.reaction/ci/config.yml](https://github.com/reactioncommerce/reaction/blob/master/.reaction/ci/config.yml).
 
 ## Basic example
 
@@ -151,7 +162,7 @@ reaction open simple-demo
 
 ## Full example
 
-  Below is a more complete example that sets up a SMTP mail server URL (for app emails), imports [Reaction registry](https://docs.reactioncommerce.com/reaction-docs/master/registry) settings and [Meteor settings](https://docs.meteor.com/api/core.html#Meteor-settings), and deploys the latest official Reaction image. Then we update the app with an API key environment variable.  And finally, we add a custom domain to the app and open it in our browser.
+  Below is a more complete example that sets up a SMTP mail server URL (for app emails), imports [Reaction registry](https://docs.reactioncommerce.com/reaction-docs/master/registry) settings and [Meteor settings](https://docs.meteor.com/api/core.html#Meteor-settings), and deploys the latest official Reaction Commerce image. Then we update the app with an API key environment variable.  And finally, we add a custom domain to the app and open it in our browser.
 
 ```sh
 # create the app
