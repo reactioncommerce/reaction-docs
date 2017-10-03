@@ -37,9 +37,11 @@ Set up an SSH key pair:
 ```sh
 # https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 #
-# create a new SSH key pair
-# prompts for filename
+# creates a new SSH key pair
+# prompts for filename, uses full path
 # suggest "~/.ssh/launchdock" for ease
+# ok to skip adding passphrase (return twice)
+#
 ssh-keygen -t rsa -b 4096 -C "you@example.com"
 
 # make sure the ssh-agent is running in the background
