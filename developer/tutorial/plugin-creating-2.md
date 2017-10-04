@@ -37,16 +37,15 @@ Reaction.registerPackage({
 ```
 
 When done, your local RC directory should look like:
-```
-...
-└── imports
-   └── plugins
-       └── custom
-           └── beesknees
-               └── client
-               └── server
-               ├── register.js
-```
+
+    ...
+    └── imports
+       └── plugins
+           └── custom
+               └── beesknees
+                   └── client
+                   └── server
+                   ├── register.js
 
 It's important to understand that Registry entries are added upon first start, but they don't get reloaded if they already
 exist. So to have registry changes take effect you must either `reaction reset -n` or remove that entry directly from

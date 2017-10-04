@@ -60,9 +60,9 @@ source .bashrc
 ```
 
 You can always check you file limits with the line:
-```
-ulimit -n
-```
+
+    ulimit -n
+
 It should be 65536.
 
 **Homebrew**
