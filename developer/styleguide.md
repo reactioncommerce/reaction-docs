@@ -21,12 +21,12 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
 - Give methods space
 - Add spaces around brackets
 - 120 character line-length
-- `import` in order:
-  - React npm packages (`React`, `prop-types`, etc...)
-  - other npm packages
-  - Meteor core packages
-  - Meteor (Atmosphere) packages
-  - local app files
+- `import` listed in this order:
+  1. React npm packages (`React`, `prop-types`)
+  2. Other npm packages
+  3. Meteor core packages
+  4. Meteor (Atmosphere) packages
+  5. Local app files
 
 Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
 - [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
@@ -134,18 +134,20 @@ Publication names should:
 #### Working with variables
 
 - Use `const` except when a variable is being reassigned.
+- Use string template notation, `${thisVariable} is true` over string concatenation
 
 ### Methods
 
 #### Naming methods
 
 - Methods names should use a verb/noun style when possible, e.g. `checkConfiguration` or `addToCart`.
+- When naming multiple methods acting on the same resource should follow this style, e.g. `cart/items/add`, `cart/items/remove`
 - Methods that return a single value should be singular.
 - Methods whose main purpose is to return a value should use the `get` prefix, e.g. `getShop`.
-- Avoid ternary operators and one-line `if` statements (except in React componenets)
 
 #### Working with methods
 
+- Avoid ternary operators and one-line `if` statements (except in React componenets)
 - Use parenthesis around all method arguments.
 
 **Do**
@@ -206,20 +208,39 @@ Products.findOne({ _id: "abc123" })
 
 ### Using native JavaScript
 
-Use native JavaScript over lodash whenever there is a suitable replacement.
+Use native JavaScript over libraries like lodash and Underscore whenever there is a suitable replacement.
 
-Here are some examples of lodash methods that can be replaced with native elements:
-
-- Replace `_.map`, with  `Array.prototype.map`
-- Replace `_.reduce`, with  `Array.prototype.reduce`
-- Replace `_.filter`, with  `Array.prototype.filter`
-- Replace `_.each`, `_.forEach`, with  `Array.prototype.forEach`
+- Replace `_.map`, with `Array.prototype.map`
+- Replace `_.reduce`, with `Array.prototype.reduce`
+- Replace `_.filter`, with `Array.prototype.filter`
 - Replace `_.isArray`, with `Array.isArray`
 - Replace `_.extend` with `Object.assign`
+- Replace `_.find` with `Array.prototype.find`
+- Replace `_.keys` and `_.values`, with `Object.keys` and `Object.values`
+- Replace `_.first`, `_.rest` and `_.restParam`, with [destructuring syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- Replace `_.uniq`, with using a `Set`: `[...new Set(cartItems.map((item) => item.product._id))]`
+- Replace `pluck` from Underscore with `.map`:
+
+```
+const people = [{name: "George"}, {name: "Katherine"}, {name: "Kip"}]
+
+_.pluck(people, name) => people.map((person) => person.name)
+```
+- Replace `_.each`, `_.forEach`, with `Array.prototype.forEach` or loop over an object with:
+
+```
+sum = 0;
+lastKey = undefined;
+for (const [key, value] of Object.entries(foo)) {
+  sum += value;
+  lastKey = key;
+}
+```
 
 ### Working with React
 
-Use the return shorthand with arrow functions in React components:
+- Use `isRequired` for validating PropTypes
+- Use the return shorthand with arrow functions in React components:
 
 **Don't**
 ```
