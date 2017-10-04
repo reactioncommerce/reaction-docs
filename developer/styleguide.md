@@ -1,23 +1,34 @@
-# Style guide
+# Coding style guide
 
-As a community, Reaction follows guidelines for JavaScript style and syntax conventions, along with guidelines for naming variables, methods and filenames.
+As a community, Reaction follows guidelines for code style and naming conventions for variables, methods and filenames. The guide also includes tips on working with libraries in Reaction, like React, MongoDB, lodash and more.
+
+## On this page
+
+- [General rules](#syntax-and-style-conventions)
+- [Naming files and folders](#naming-conventions)
+- [Packages](#working-with-packages)
+- [Variables](#variables)
+- [Methods](#methods)
+- [MongoDB](#working-with-collections)
+- [Native JavaScript](#using-native-javascript)
+- [React](#working-with-react)
 
 ## Syntax and style conventions
 
 Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) and [Meteor Code Style](https://guide.meteor.com/code-style.html), [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), with a few custom Reaction-specific rules:
 
-- Double-quoted strings
-- Well-spaced functions
-- Spaces around brackets
+- Always double-quote strings
+- Give methods space
+- Add spaces around brackets
 - 120 character line-length
-- `import` order
+- `import` in order:
   - React npm packages (`React`, `prop-types`, etc...)
   - other npm packages
   - Meteor core packages
   - Meteor (Atmosphere) packages
   - local app files
 
-Reaction uses various linting libraries to automate style checking. Find the exact rules in the code:
+Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
 - [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
 - [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - [JS Beautifier](jsbeautifier.org) automates code formatting
 - [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
@@ -28,65 +39,57 @@ To see the rules in action, run `eslint .` from the command line or use [ESLint 
 
 ## Naming conventions
 
-### Avoid camel-casing files and folders
+### Use hyphens to separate words in names
 
-Not all operating systems are case sensitive, so avoid having two files named the same with differing case. Instead of camel-casing, use hyphens. Underscores are not to be used for file or folder names unless expressly required.
+File and directory names should be hyphenated. Not all operating systems are case sensitive, so avoid having two files named the same with differing case.
 
-Names of folders should be:
+Names of folders and files should be:
 - Lowercased
 - Alphanumeric characters
 - Hyphenated to join more words
-- Avoid camelCase, undescore_casing
-
-File names follow the same conventions as folder names, and also allow for names to contain multiple (.) characters as needed.
+- Avoid `camelCase`, `undescore_casing`
+- Files may use multiple `.` as needed
 
 **Do**
 
 ```sh
-  ui-grid/
-  example-payment-method/
-  social/
-```
-
-```sh
-  bootstrap.rtl.js
-  index.js
+  /ui-grid/
+  /example-payment-method/
+  /social/
+  /bootstrap.rtl.js
+  /index.js
 ```
 
 **Don't**
 
 ```sh
-  reactionpackagename/
-  address_book/
-  addressBook/
+  /reactionpackagename/
+  /address_book/
+  /addressBook/
+  /settingsContainer.js
+  /addressBook.js
+  /address_book.js
 ```
 
-```sh
-  settingsContainer.js
-  addressBook.js
-  address_book.js
-```
+## Working with packages
 
 ### Create strong package names
 
-Name package folders in this format: `<functionality>-<package-name>`
+Namespace package folders in this format: `<functionality>-<package-name>` or `<organization-name>-<package-name>`
 
 ```sh
-/imports/plugins/custom/payments-custom-provider
-/imports/plugins/included/shipping-provider
-```
-
-Registry package names should preferably use some organizational namespacing as a prefix.
-
-```js
-reaction-paypal
-reaction-google-analytics
-yourorg-your-package
+/imports/plugins/custom/payments-authnet
+/imports/plugins/included/connectors-shopify
+/imports/plugins/custom/connectors-magento
+/reaction-paypal/
+/yourorg-your-package/
 ```
 
 ### Group related files together into folders
 
-As a convention, if there are multiple files that provide functionality that is broken down across multiple files, these files should be grouped within a folder. If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the separator.
+If there are multiple files that provide functionality that is broken down across multiple files, these files should be grouped within a folder.
+
+If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the separator.
 
 **Do**
 
@@ -113,56 +116,50 @@ settingsContainer.js
 
 ## JavaScript style recommendations
 
-## Variables
+### Variables
 
-### Naming variables
+#### Naming variables
 
 Variable names should be:
 
 - Meaningful. Avoid single-letter variables.
 - Use `error`, instead of `e` or `err`
-- Variables that contains a boolean value should use a `isThisTrue` style.
+- Variables that contain a boolean value should use a `isThisTrue` style.
 - Variables that return arrays should be plural.
 
 Publication names should:
 
 - Use TitleCase
 
-### Working with variables
+#### Working with variables
 
 - Use `const` except when a variable is being reassigned.
 
-## Methods
+### Methods
 
-### Method names should:
+#### Naming methods
+
 - Methods names should use a verb/noun style when possible, e.g. `checkConfiguration` or `addToCart`.
 - Methods that return a single value should be singular.
-- Methods whose main purpose is to return a value should use the get prefix.
+- Methods whose main purpose is to return a value should use the `get` prefix, e.g. `getShop`.
+- Avoid ternary operators and one-line `if` statements (except in React componenets)
 
-- Avoid ternary operators and one-line `if` statements
-
-### Use parenthesis for clarity
+#### Working with methods
 
 - Use parenthesis around all method arguments.
-
-**Don't**
-```
-cartItems.find(item => item.status === picked)
-```
 
 **Do**
 ```
 cartItems.find((item) => item.status === picked)
 ```
 
-- When specifying a callback, always use the parenthesis to indicate the argument being accepted over the bare arrow-function form. This way, it's clear it's not another argument to the original function:
-
 **Don't**
 ```
-thisMethodTakesACallback(arg1, arg2, result => {
-  doStuff
-});
+cartItems.find(item => item.status === picked)
 ```
+
+- When specifying a callback, always use the parenthesis to indicate the argument being accepted over the bare arrow-function form. This way, it's clear it's not another argument to the original function:
+
 **Do**
 
 ```
@@ -171,24 +168,27 @@ thisMethodTakesACallback(arg1, arg2, (result) => {
 });
 ```
 
-
-### Avoid multi-line shorthand arrow functions
-
-If you have to break your arrow function into multiple lines, use curly brackets and a return rather than trying to break the shorthand arrow function into multiple lines.
-
-
 **Don't**
- ```
-cartItems.find(
-   (item) => item.status === status
- )
 ```
+thisMethodTakesACallback(arg1, arg2, result => {
+  doStuff
+});
+```
+
+- When breaking arrow functions into multiple lines, use curly brackets and a `return`:
 
 **Do**
  ```
 cartItems.find((item) => {
   return item.status === status;
 })
+```
+
+**Don't**
+```
+cartItems.find(
+   (item) => item.status === status
+ )
 ```
 
 ### Working with collections
@@ -204,9 +204,11 @@ Products.findOne("abc123")
 Products.findOne({ _id: "abc123" })
 ```
 
-### Replacing lodash with ES2015
+### Using native JavaScript
 
-Use native ES6 elements over lodash whenever there is a 1-for-1 replacement. Here are some examples of lodash methods that can be replaced with native elements:
+Use native JavaScript over lodash whenever there is a suitable replacement.
+
+Here are some examples of lodash methods that can be replaced with native elements:
 
 - Replace `_.map`, with  `Array.prototype.map`
 - Replace `_.reduce`, with  `Array.prototype.reduce`
@@ -214,3 +216,51 @@ Use native ES6 elements over lodash whenever there is a 1-for-1 replacement. Her
 - Replace `_.each`, `_.forEach`, with  `Array.prototype.forEach`
 - Replace `_.isArray`, with `Array.isArray`
 - Replace `_.extend` with `Object.assign`
+
+### Working with React
+
+Use the return shorthand with arrow functions in React components:
+
+**Don't**
+```
+const MyComponent = ({ title, content }) => {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <div>{content}/</div>
+    </div>  
+  );
+}
+```
+
+**Do**
+```
+const MyComponent = ({ title, content }) => (
+  <div>
+    <h1>{title}</h1>
+    <div>{content}/</div>
+  </div>  
+);
+```
+
+When iterating over arrays in a component:
+
+**Do**
+
+```
+const MyThings = ({ things }) => (
+  <ul>
+    {things.map((thing) => <li>{thing}</li>)}
+  </ul>  
+);
+
+// or
+
+const MyThings = ({ things }) => (
+  <ul>
+    {things.map((thing) => (
+      <li>{thing}</li>
+    ))}
+  </ul>  
+);
+```
