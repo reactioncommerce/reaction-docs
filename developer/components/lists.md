@@ -33,9 +33,9 @@ export default MyReactComponent;
 
 ### List
 
-| Property       | Type     | Description                                                |
-| -------------- | -------- | ---------------------------------------------------------- |
-| className      | String   | Custom class name                                          |
+| Property  | Type   | Description       |
+| --------- | ------ | ----------------- |
+| className | String | Custom class name |
 
 ### ListItem
 

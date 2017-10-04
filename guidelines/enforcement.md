@@ -18,10 +18,10 @@ See the reporting guidelines for details of what reports should contain. If a re
 
 The committee will then review the incident and determine, to the best of their ability:
 
-- what happened
-- whether this event constitutes a code of conduct violation
-- who, if anyone, was the bad actor
-- whether this is an ongoing situation, and there is a threat to anyone's physical safety
+-   what happened
+-   whether this event constitutes a code of conduct violation
+-   who, if anyone, was the bad actor
+-   whether this is an ongoing situation, and there is a threat to anyone's physical safety
 
 This information will be collected in writing, and whenever possible the group's deliberations will be recorded and retained (i.e. chat transcripts, email discussions, recorded voice conversations, etc).
 
@@ -43,12 +43,12 @@ The working group must agree on a resolution by consensus. If the group cannot r
 
 Possible responses include:
 
-- Taking no further action (if we determine no violation occurred).
-- A private reprimand from the working group to the individual(s) involved. In this case, the group chair will deliver that reprimand to the individual(s) over email, cc'ing the group.
-- A public reprimand. In this case, the group chair will deliver that reprimand in the same venue that the violation occurred (i.e. in chat for a chat violation; email for an email violation, etc.). The group may choose to publish this message elsewhere for posterity.
-- An imposed vacation (i.e. asking someone to "take a week off" from a mailing list or chat). The group chair will communicate this "vacation" to the individual(s). They'll be asked to take this vacation voluntarily, but if they don't agree then a temporary ban may be imposed to enforce this vacation.
-- A permanent or temporary ban from some or all Reaction Commerce spaces (mailing lists, chat, forums, etc.). The group will maintain records of all such bans so that they may be reviewed in the future, extended to new Reaction Commerce fora, or otherwise maintained.
-- A request for a public or private apology. The chair will deliver this request. The group may, if it chooses, attach "strings" to this request: for example, the group may ask a violator to apologize in order to retain his or her membership on a mailing list.
+-   Taking no further action (if we determine no violation occurred).
+-   A private reprimand from the working group to the individual(s) involved. In this case, the group chair will deliver that reprimand to the individual(s) over email, cc'ing the group.
+-   A public reprimand. In this case, the group chair will deliver that reprimand in the same venue that the violation occurred (i.e. in chat for a chat violation; email for an email violation, etc.). The group may choose to publish this message elsewhere for posterity.
+-   An imposed vacation (i.e. asking someone to "take a week off" from a mailing list or chat). The group chair will communicate this "vacation" to the individual(s). They'll be asked to take this vacation voluntarily, but if they don't agree then a temporary ban may be imposed to enforce this vacation.
+-   A permanent or temporary ban from some or all Reaction Commerce spaces (mailing lists, chat, forums, etc.). The group will maintain records of all such bans so that they may be reviewed in the future, extended to new Reaction Commerce fora, or otherwise maintained.
+-   A request for a public or private apology. The chair will deliver this request. The group may, if it chooses, attach "strings" to this request: for example, the group may ask a violator to apologize in order to retain his or her membership on a mailing list.
 
 Once a resolution is agreed upon, but before it is enacted, the working group will contact the original reporter and any other affected parties and explain the proposed resolution. The working group will ask if this resolution is acceptable, and must note feedback for the record. However, the working group is not required to act on this feedback.
 
@@ -60,4 +60,4 @@ The working group will never publicly discuss the issue; all public statements w
 
 In the event of any conflict of interest a working group member must immediately notify the other members, and recuse themselves if necessary.
 
-*Editor's note: The Reaction community doesn't exist in one place, and most of the time we're spread out across the world and interact online. This makes trying to define and enforce community standards a different type of challenge. This document is adapted from the [Django Code of Conduct](https://www.djangoproject.com/conduct/), the [Ada Initiative template](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Responding_to_reports) and the [PyCon 2013 Procedure for Handling Harassment Incidents](https://us.pycon.org/2013/about/code-of-conduct/harassment-incidents/), but changed to reflect the nature of our community. It is our expectation that this will be a living document and change as we grow to understand how to meet this challenge and best serve our community and ideals.*
+_Editor's note: The Reaction community doesn't exist in one place, and most of the time we're spread out across the world and interact online. This makes trying to define and enforce community standards a different type of challenge. This document is adapted from the [Django Code of Conduct](https://www.djangoproject.com/conduct/), the [Ada Initiative template](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Responding_to_reports) and the [PyCon 2013 Procedure for Handling Harassment Incidents](https://us.pycon.org/2013/about/code-of-conduct/harassment-incidents/), but changed to reflect the nature of our community. It is our expectation that this will be a living document and change as we grow to understand how to meet this challenge and best serve our community and ideals._

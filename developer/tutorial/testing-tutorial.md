@@ -115,12 +115,12 @@ export function setProductToHank(productId) {
 
 And that's all for now.
 
-Notice how we put `describe.only` in our first block? That means we want to only run *this* test when
+Notice how we put `describe.only` in our first block? That means we want to only run _this_ test when
 we run the suite. So now you should be able run `reaction test` and see our tests fail.
 
 It should tell you what it expected and what it actually got. For this test it would have expected "Hank" and got some random Product title instead (the Product fixture add a random product title).
 
->Part of writing good tests is being able to see the success in good failures.
+> Part of writing good tests is being able to see the success in good failures.
 
 Now our test fails. So let's finish our method so that it satisfies our criteria.
 

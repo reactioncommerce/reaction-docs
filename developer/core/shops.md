@@ -12,7 +12,7 @@ The default shop installation data is loaded from `/private/data/Shops.json`.
 
 Create a new shop, and give `shopAdminUserId` administrative permissions.
 
-*Customization required. Although this works, much of the UI doesn't yet handle multiple shops.*
+_Customization required. Although this works, much of the UI doesn't yet handle multiple shops._
 
 ```js
 Meteor.call("shop/createShop",shopAdminUserId, shopData);

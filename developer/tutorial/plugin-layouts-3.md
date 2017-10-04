@@ -1,6 +1,6 @@
 # Using Custom Layouts
 
-*Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation.*
+_Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation._
 
 ## Purpose
 
