@@ -1,32 +1,38 @@
-# Creating Our Plugin
+# Creating a Reaction plugin
 
 ## What is a Reaction plugin?
 
-Essentially a Reaction plugin is just a "module". Going forward Meteor is moving away from their own proprietary
-package format and towards [ES6 modules](http://exploringjs.com/es6/ch_modules.html). In order to future-proof RC we have
-adopted this approach as well. It also removes some of the "magic" that created global Meteor elements.
-It adds a little more boilerplate but makes up for it in clarity. Before moving forward you should have a
-good understanding of how [imports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) and
-[exports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export) work,
-and how to deal with importing [CSS](https://guide.meteor.com/build-tool.html#css-importing) and HTML files.
+A Reaction plugin is a plain old JavaScript module.
 
-### Adding our files
+Going forward, Meteor is moving away from their proprietary package format and towards the [ES6 modules](http://exploringjs.com/es6/ch_modules.html) standard. Reaction is adopting the module approach as well. While adding some boilerplate structure, using JavaScript's native built-in modules adds clarity and removes some of the _magic_ that created global Meteor elements. 
 
-For the purposes of this tutorial we are going to assume you are working from a fresh checkout of Reaction.
+Before moving forward you should have a good understanding of how [imports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) and
+[exports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export) work
+and importing [CSS](https://guide.meteor.com/build-tool.html#css-importing) and HTML files.
+
+## Getting started
+
+### Add `client` and `server` directory structure
+
+Start with a fresh checkout of the latest version of Reaction.
+
+1. Create a directory with the name of the plugin, `beesknees`, within the `imports/plugins/custom` directory of Reaction.
+2. Within `beesknees`, create `client` and `server` directories.
+
+You may, at this point want to also `git init` so you can start tracking your new package with source control. 
 
 The reference files for this tutorial are available [here](https://github.com/reactioncommerce/reaction-example-plugin).
 
-Start off by creating a directory within the `imports/plugins/custom` directory of RC. We will be calling our plugin `beesknees`.
-Within that directory you will want to create `client` and `server` directories.
-You may, at this point want to also `git init` so you can start tracking your new package with source control.
+### Create a [`register.js`](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/register.js)
 
-Then the first file we create is going to be our `register.js`. This is absolutely the bare minimum you need to create
-a plugin. This code adds your plugin to the "registry" (the Packages collection in the db). A bare minimum file would
-look something like this:
+The first file we create is going to be our `register.js`. This is absolutely the bare minimum you need to create
+a plugin. The `register.js` adds your plugin to the Registry, the Packages collection in the database. 
+
+3. Create a `register.js` file would look something like this:
 
 ```js
+// register.js
 import { Reaction } from "/server/api";
-
 
 Reaction.registerPackage({
   label: "Bees Knees",
@@ -36,23 +42,35 @@ Reaction.registerPackage({
 });
 ```
 
-When done, your local RC directory should look like:
+At this point, your local directory should look like:
 
-    ...
-    └── imports
-       └── plugins
-           └── custom
-               └── beesknees
-                   └── client
-                   └── server
-                   ├── register.js
+```sh
+  └── imports
+     └── plugins
+         └── custom
+             └── beesknees
+                 └── client
+                 └── server
+                 ├── register.js
+ ```
 
-It's important to understand that Registry entries are added upon first start, but they don't get reloaded if they already
-exist. So to have registry changes take effect you must either `reaction reset -n` or remove that entry directly from
-the `Packages` collection.
+### Load the plugin
+
+Now, to see load the plugin, run:
+
+```sh
+reaction reset -n
+```
+
+Registry entries are added when the app first starts, but they don't get reloaded if they already exist. Running `reset` will reset the database and restart the app, allowing the app to read the `register.js` file you just created.
+
+An alternative option to load a plugin would be to remove that entry directly from the `Packages` collection.
+
+> ProTip: Pass the `-n` flag to `reaction reset` to skip deleting the node_modules folder.
 
 Next: [Using Layouts](/developer/tutorial/plugin-layouts-3.md)
 
 ## Read more
 
-[Registry](/developer/packages/registry.md)
+- [Docs: Registry](/developer/packages/registry.md)
+- [Blog: An Intro to Architecture: The Registry](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/)
