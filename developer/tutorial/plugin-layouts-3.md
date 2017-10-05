@@ -10,6 +10,8 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
 
+**[/client/templates/layoutes/core.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/templates/layouts/core.js)**
+
 ```js
 import React, { Component } from "react";
 import PropTypes from "prop-types";
@@ -69,6 +71,8 @@ In order to change our default layout, we need add a record to the **registry** 
 
 First let's create our `defaults.js` with our custom layout. You will place this file in the `client` folder in your plugin. The `defaults.js` just looks like this:
 
+**[/client/default.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/fbf7d01921393e6926d567951d80a6d2bb9b8dc0/client/defaults.js)**
+
 ```js
 import { Session } from "meteor/session";
 
@@ -78,6 +82,7 @@ Session.set("DEFAULT_WORKFLOW", "coreWorkflow");
 
 In order for this file to take affect, we need to also import it. So we add it to our `index.js` in your `client` directory.
 
+**[/client/index.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/index.js)**
 ```js
 import "./defaults";
 ```
@@ -105,6 +110,7 @@ layout: [{
 ```
 
 so that our file will look like this
+**[/register.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/register.js)**
 
 ```js
 import { Reaction } from "/server/api";
@@ -142,19 +148,18 @@ specified which template we would use for a "notFound". When we get to the routi
 
 More detailed documentation on the other `register.js` can be found in this [blog post](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/).
 
-One important thing to understand is that at any point in time when RC goes to render a route/page it's going to
+One important thing to understand is that at any point in time when Reaction goes to render a route/page, it's going to
 determine how to pull the layout record from a key of `layout + workflow`. The `coreWorkflow` is a special case in that it is a workflow with just one step.
+
 It is essentially the "default" workflow when you hit the home page.
 
 Also note that:
-1. We have other parts that we could substitute without
-changing our layout. For example we change point our header or footer to
-a custom template by changing the values for "layoutHeader" or "layoutFooter".
-2. There is a `priority` field on layout objects (with a default value) of `999`. When RC goes to render a route/page
+1. We have other parts that we could substitute without changing our layout. For example we change point our header or footer to a custom template by changing the values for "layoutHeader" or "layoutFooter".
+2. There is a `priority` field on layout objects (with a default value) of `999`. When Reaction goes to render a route/page
 (as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
  used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
 
-Next: [Customizing Templates](/developer/tutorial/plugin-customizing-templates-4.md)
+Next: [Customizing templates](/developer/tutorial/plugin-customizing-templates-4.md)
 
 ## Read More
 
