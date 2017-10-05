@@ -20,7 +20,7 @@ To make this template part of the project we need to import it, so we add it to 
 
 ```js
 // client/index.js
-import "./components";
+import "./templates";
 ```
 
 ## client/templates/index.js
