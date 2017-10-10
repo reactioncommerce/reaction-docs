@@ -14,7 +14,7 @@ Reaction.Collections are defined in the common code of `lib/collections`, where 
 
 Custom schemas can also be defined in individual packages, by creating a `lib/collections/schemas` folder inside your package.
 
-## Registering Schemas
+## Registering
 
 All schemas should be registered using the `registerSchema()` method that Reaction uses internally to register all of our core Schemas.
 
