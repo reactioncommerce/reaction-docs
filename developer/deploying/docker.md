@@ -118,7 +118,7 @@ Now you have a customized Reaction Commerce with all your shiny new npm packages
 It runs great locally and you have built a local custom image using:
 
 ```sh
-reaction build mycustom
+docker build --build-arg TOOL_NODE_FLAGS="--max-old-space-size=2048" -t mycustom .
 ```
 
 Which you can verify with:
