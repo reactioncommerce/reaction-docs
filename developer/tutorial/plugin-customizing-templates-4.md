@@ -4,7 +4,7 @@ If you have been following along exactly with this tutorial you may have noticed
 we have broken the site. Why? Because the layout we specified cannot be found. So let's add it now.
 
 Create the following directory structure under the `client` directory.
-(*Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)*)
+(_Note that none of this structure except for client is required by Meteor, it's just how I like to structure things, [YMMV](http://www.urbandictionary.com/define.php?term=ymmv)_)
 
 ```sh
 client/
@@ -20,12 +20,12 @@ To make this template part of the project we need to import it, so we add it to 
 
 ```js
 // client/index.js
-import "./components";
+import "./templates";
 ```
 
 ## client/templates/index.js
 
-Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. *Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out*. So in `client/templates/index.js` we add
+Then we need to create another `index.js` at the root of the `templates` directory and import all of our templates there. _Every time we add a template we need to import here in this file. I won't be mentioning that every time from here on out_. So in `client/templates/index.js` we add
 
 ```js
 // client/templates/index.js

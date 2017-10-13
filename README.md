@@ -32,6 +32,6 @@ npm run lint-fix
 
 You can view and test your branch live on <https://docs.reactioncommerce.com/>.
 
-1. Go to <https://docs.reactioncommerce.com/>
-2. Open browser console and run: `Meteor.call("redoc/flushDocCache")`
-3. Find your branch in the drop-down menu. The URL should change to <https://docs.reactioncommerce.com/reaction-docs/your-branch-name/intro> and you should be able to see and test your changes here.
+1.  Go to <https://docs.reactioncommerce.com/>
+2.  Open browser console and run: `Meteor.call("redoc/flushDocCache")`
+3.  Find your branch in the drop-down menu. The URL should change to <https://docs.reactioncommerce.com/reaction-docs/your-branch-name/intro> and you should be able to see and test your changes here.

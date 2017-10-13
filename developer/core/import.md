@@ -14,40 +14,41 @@ Meteor.startup(function () {
 
 ## Contents
 
-- [Architecture](#architecture)
-  - [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
+-   [Architecture](#architecture)
 
-- [Choosing a suitable key](#choosing-a-suitable-key)
+    -   [Batch inserts and fixture data](#batch-inserts-and-fixture-data)
 
-- [Importing from files](#importing-from-files)
+-   [Choosing a suitable key](#choosing-a-suitable-key)
 
-- [Automatic collection detection](#automatic-collection-detection)
+-   [Importing from files](#importing-from-files)
 
-- [Image uploader](#image-uploader)
+-   [Automatic collection detection](#automatic-collection-detection)
 
-- [Reference](#reference)
-  - [`Reaction.Import.flush`](#flush)
-  - [`Reaction.Import.fixture`](#fixture)
-  - [`Reaction.Import.object`](#object)
-  - [`Reaction.Import.process`](#process)
-  - [`Reaction.Import.identify`](#identify)
-  - [`Reaction.Import.load`](#load)
-  - [`Reaction.Import.indication`](#indication)
-  - [`Reaction.Import.shop`](#shop)
-  - [`Reaction.Import.tag`](#tag)
-  - [`Reaction.Import.product`](#product)
+-   [Image uploader](#image-uploader)
+
+-   [Reference](#reference)
+    -   [`Reaction.Import.flush`](#flush)
+    -   [`Reaction.Import.fixture`](#fixture)
+    -   [`Reaction.Import.object`](#object)
+    -   [`Reaction.Import.process`](#process)
+    -   [`Reaction.Import.identify`](#identify)
+    -   [`Reaction.Import.load`](#load)
+    -   [`Reaction.Import.indication`](#indication)
+    -   [`Reaction.Import.shop`](#shop)
+    -   [`Reaction.Import.tag`](#tag)
+    -   [`Reaction.Import.product`](#product)
 
 ## Architecture
 
 `Reaction.Import` is structured around an import buffer. This buffer is used to support fast bulk updates and inserts by sending all the queries at once to the database server. The import buffer can be filled with a number of shop entities. Currently supported are:
 
-- Shops
-- Packages
-- Translations
-- Tags
-- Products
-- Shipping
-- Taxes
+-   Shops
+-   Packages
+-   Translations
+-   Tags
+-   Products
+-   Shipping
+-   Taxes
 
 All the import functions have a similar signature:
 

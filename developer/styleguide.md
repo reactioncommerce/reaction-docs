@@ -1,119 +1,276 @@
-# Style Guide
+# Coding style guide
 
-Our rules are similar to AirBnB or Meteor rules, [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), although we have tweaked them a little with what is working best for us.
+As a community, Reaction follows guidelines for code style and naming conventions for variables, methods and filenames. The guide also includes tips on working with libraries in Reaction, like React, MongoDB, lodash and more.
 
-A couple of notable Reaction specific style rules:
+## On this page
 
-- Double quoted strings
-- Well spaced function
-- 160 character line length
-- `import` order
-  - React npm packages (`React`, `prop-types`, etc...)
-  - other npm packages
-  - meteor core packages
-  - meteor (Atmosphere) packages
-  - local app files
+-   [General rules](#syntax-and-style-conventions)
+-   [Naming files and folders](#naming-conventions)
+-   [Packages](#working-with-packages)
+-   [Variables](#variables)
+-   [Methods](#methods)
+-   [MongoDB](#working-with-collections)
+-   [Native JavaScript](#using-native-javascript)
+-   [React](#working-with-react)
 
-Review [Meteor Code Style](https://guide.meteor.com/code-style.html) for additional guidelines that are typical of Meteor projects.
+## Syntax and style conventions
 
-## Editor Configuration
+Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) and [Meteor Code Style](https://guide.meteor.com/code-style.html), [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), with a few custom Reaction-specific rules:
 
-In the Reaction app root, we have Reaction specific configuration files that can be used with most editors with the appropriate tools installed.
+-   Always double-quote strings
+-   Give methods space
+-   Add spaces around brackets
+-   120 character line-length
+-   `import` listed in this order:
+    1.  React npm packages (`React`, `prop-types`)
+    2.  Other npm packages
+    3.  Meteor core packages
+    4.  Meteor (Atmosphere) packages
+    5.  Local app files
 
-- `.eslintrc` - [http://eslint.org/](https://eslint.org/)
-- `.jsbeautifyrc` - [http://jsbeautifier.org/](https://jsbeautifier.org/)
-- `.editorconfig` - [http://editorconfig.org/](https://editorconfig.org/)
+Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
 
-These configurations also include additional rules supporting [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features) and `React`.
+-   [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
+-   [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - [JS Beautifier](jsbeautifier.org) automates code formatting
+-   [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
 
-### Atom
+To see the rules in action, run `eslint .` from the command line or use [ESLint code editor tools](https://eslint.org/docs/user-guide/integrations).
 
-We've been using the Open Source [Atom](https://atom.io/) editor for some time now and can recommend it.
+💡 **ProTip!** If you're using [Atom](https://atom.io/), like the Core team, you can install all the necessary tools in one line:  `apm install editorconfig atom-beautify linter linter-eslint linter-markdown linter-jsonlint linter-docker`
 
-Setting up Atom is a quick command where we use the shell command `apm` to install the same [Atom linting packages](https://atom.io/users/AtomLinter) as we use for Reaction.
+## Naming conventions
+
+### Use hyphens to separate words in names
+
+File and directory names should be hyphenated. Not all operating systems are case sensitive, so avoid having two files named the same with differing case.
+
+Names of folders and files should be:
+
+-   Lowercased
+-   Alphanumeric characters
+-   Hyphenated to join more words
+-   Avoid `camelCase`, `undescore_casing`
+-   Files may use multiple `.` as needed
+
+**Do**
 
 ```sh
-apm install editorconfig atom-beautify linter linter-eslint linter-markdown linter-jsonlint linter-docker
+  /ui-grid/
+  /example-payment-method/
+  /social/
+  /bootstrap.rtl.js
+  /index.js
 ```
 
-### Lint
+**Don't**
 
-Reaction installs the `eslint` v3.x packages *eslint*, *eslint-plugin-react*, *babel-eslint* from [npm](https://www.npmjs.com/) as development dependencies.
+```sh
+  /reactionpackagename/
+  /address_book/
+  /addressBook/
+  /settingsContainer.js
+  /addressBook.js
+  /address_book.js
+```
 
-In the Reaction app root, we have a Reaction `eslint` configuration.
+## Working with packages
 
-`.eslintrc` - [http://eslint.org/](https://eslint.org/)
+### Create strong package names
 
-For more details, see the [ESLint Getting Started Guide](http://eslint.org/docs/user-guide/getting-started).
+Namespace package folders in this format: `<functionality>-<package-name>` or `<organization-name>-<package-name>`
 
-#### Markdown
+```sh
+/imports/plugins/custom/payments-authnet
+/imports/plugins/included/connectors-shopify
+/imports/plugins/custom/connectors-magento
+/reaction-paypal/
+/yourorg-your-package/
+```
 
-In our Markdown documentation, we use [remark-lint](https://github.com/wooorm/remark-lint) to ensure consistent Markdown styling.
+### Group related files together into folders
 
-### Pull Requests
+If there are multiple files that provide functionality that is broken down across multiple files, these files should be grouped within a folder.
 
-Pull request branches are evaluated using [BitHound](https://www.bithound.io/github/reactioncommerce/reaction) for insecure dependencies and code quality.
+If the files are stand-alone and the name needs to represent functionality, you can use a hyphen for the separator.
 
-- must pass a Linting check and *no errors* are accepted.
-- must pass a Dependency check and no priority packages are accepted.
-- must pass `reaction test`
+**Do**
 
-In many cases, documentation updates can be required as well.
+```sh
+/container/settings.js
+/container/settings.html
+/container/ <more files>
+```
 
-Pull requests are submitted to a peer code review process before acceptance.
+or
 
-### File Naming Conventions
+```sh
+/settings-container.js
+/settings-container.html
+```
 
-In general we use hyphens (-) and camelCase for folder names, and camelCase alone for file names. Underscores are not to be used for file or folder names unless expressly required.  Be aware that not all operating systems are case sensitive, so it's not ok to have two files named the same with differing case.
+**Don't**
 
-#### Folder Names
+```sh
+/container/settings-containers.js
+/container/settingsContainer.html
+settingsContainer.js
+```
 
-**Good**
+## JavaScript style recommendations
 
-- Folder names for packages must contain only lowercased alpha numeric characters and may be hyphenated if joining more than one word
-- Folder names all normal directories must start with a lowercased letter and may camel cased if joining more than one word
+### Variables
+
+#### Naming variables
+
+Variable names should be:
+
+-   Meaningful. Avoid single-letter variables.
+-   Use `error`, instead of `e` or `err`
+-   Variables that contain a boolean value should use a `isThisTrue` style.
+-   Variables that return arrays should be plural.
+
+Publication names should:
+
+-   Use TitleCase
+
+#### Working with variables
+
+-   Use `const` except when a variable is being reassigned.
+-   Use string template notation, `${thisVariable} is true` over string concatenation
+
+### Methods
+
+#### Naming methods
+
+-   Methods names should use a verb/noun style when possible, e.g. `checkConfiguration` or `addToCart`.
+-   When naming multiple methods acting on the same resource should follow this style, e.g. `cart/items/add`, `cart/items/remove`
+-   Methods that return a single value should be singular.
+-   Methods whose main purpose is to return a value should use the `get` prefix, e.g. `getShop`.
+
+#### Working with methods
+
+-   Avoid ternary operators and one-line `if` statements (except in React componenets)
+-   Use parenthesis around all method arguments.
+
+**Do**
+
+    cartItems.find((item) => item.status === picked)
+
+**Don't**
+
+    cartItems.find(item => item.status === picked)
+
+-   When specifying a callback, always use the parenthesis to indicate the argument being accepted over the bare arrow-function form. This way, it's clear it's not another argument to the original function:
+
+**Do**
+
+    thisMethodTakesACallback(arg1, arg2, (result) => {
+      dostuff();
+    });
+
+**Don't**
+
+    thisMethodTakesACallback(arg1, arg2, result => {
+      doStuff
+    });
+
+-   When breaking arrow functions into multiple lines, use curly brackets and a `return`:
+
+**Do**
+
+    cartItems.find((item) => {
+     return item.status === status;
+    })
+
+**Don't**
+
+    cartItems.find(
+       (item) => item.status === status
+     )
+
+### Working with collections
+
+Be explicit in querying:
+
+**Don't**
+
+    Products.findOne("abc123")
+
+**Do**
+
+    Products.findOne({ _id: "abc123" })
+
+### Using native JavaScript
+
+Use native JavaScript over libraries like lodash and Underscore whenever there is a suitable replacement.
+
+-   Replace `_.map`, with `Array.prototype.map`
+-   Replace `_.reduce`, with `Array.prototype.reduce`
+-   Replace `_.filter`, with `Array.prototype.filter`
+-   Replace `_.isArray`, with `Array.isArray`
+-   Replace `_.extend` with `Object.assign`
+-   Replace `_.find` with `Array.prototype.find`
+-   Replace `_.keys` and `_.values`, with `Object.keys` and `Object.values`
+-   Replace `_.first`, `_.rest` and `_.restParam`, with [destructuring syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+-   Replace `_.uniq`, with using a `Set`: `[...new Set(cartItems.map((item) => item.product._id))]`
+-   Replace `pluck` from Underscore with `.map`:
 
 
-    // Packages in /imports/plugins
-    ui-grid/
-    example-paymentmethod/
-    social/
-    taxes-avalara/
+    const people = [{name: "George"}, {name: "Katherine"}, {name: "Kip"}]
 
-    // All other folder names everywhere
-    addressBook/
+    _.pluck(people, name) => people.map((person) => person.name)
 
-**Bad**
-
-- Package name should contain hyphens to make it easier to read.
-- Underscores are not to be used unless expressly required.
+-   Replace `_.each`, `_.forEach`, with `Array.prototype.forEach` or loop over an object with:
 
 
-    reactionpackagename/
-    address_book/
+    sum = 0;
+    lastKey = undefined;
+    for (const [key, value] of Object.entries(foo)) {
+      sum += value;
+      lastKey = key;
+    }
 
-#### File Names
+### Working with React
 
-**Good**
+-   Use `isRequired` for validating PropTypes
+-   Use the return shorthand with arrow functions in React components:
 
-- File names must start with a lowercased letter and may be camel cased if joining more than one word.
-- File names may contain multiple (.) characters as needed
+**Don't**
 
+    const MyComponent = ({ title, content }) => {
+      return (
+        <div>
+          <h1>{title}</h1>
+          <div>{content}/</div>
+        </div>  
+      );
+    }
 
-    settingsContainer.js
-    publishContainer.js
-    addressBook.js
-    bootstrap.rtl.js
-    index.js
+**Do**
 
-    // This is an exception as it's part of Meteor's naming convention
-    addressBook.app-test.js
+    const MyComponent = ({ title, content }) => (
+      <div>
+        <h1>{title}</h1>
+        <div>{content}/</div>
+      </div>  
+    );
 
-**Bad**
+When iterating over arrays in a component:
 
-- Hyphens and underscores are not to be used unless expressly required; such is the case with Meteor for `*.app-test.js` files. Or for migration files to make the filename more readable.
+**Do**
 
+    const MyThings = ({ things }) => (
+      <ul>
+        {things.map((thing) => <li>{thing}</li>)}
+      </ul>  
+    );
 
-    settings_container.js
-    publish-container.js
-    address_book.js
+    // or
+
+    const MyThings = ({ things }) => (
+      <ul>
+        {things.map((thing) => (
+          <li>{thing}</li>
+        ))}
+      </ul>  
+    );
