@@ -53,6 +53,18 @@ reaction apps create \
   --settings path/to/settings.json
 ```
 
+### clone
+
+Git clone a previously deployed app
+
+```sh
+# clone an app repo into ./my-app
+reaction apps clone --app my-app
+
+# clone an app repo to a custom path
+reaction apps clone --app my-app --path ./optional/destination/path/
+```
+
 ### delete
 
 Deletes an application deployment.
