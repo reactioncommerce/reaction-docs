@@ -18,7 +18,7 @@ You will be asked for your [invite token](http://getrxn.io/reaction-platform) wh
 
 ### register
 
-`reaction register` to create keys locally before configuring your application environment. `reaction login` authenticates you to the Reaction Platform and syncronizes platform services.
+`reaction register` to create keys locally before configuring your application environment. `reaction login` authenticates you to the Reaction Platform and synchronizes platform services.
 
 ```sh
 # Register with invite token
@@ -26,32 +26,6 @@ reaction register
 
 # or if you've already registered, login with your username and password
 reaction login
-```
-
-### keys
-
-You will need to set up an SSH key to securely communicate with Launchdock.
-
-Set up an SSH key pair:
-
-```sh
-# https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-#
-# creates a new SSH key pair
-# prompts for filename, uses full path
-# suggest "~/.ssh/launchdock" for ease
-# ok to skip adding passphrase (return twice)
-#
-ssh-keygen -t rsa -b 4096 -C "you@example.com"
-
-# make sure the ssh-agent is running in the background
-eval "$(ssh-agent -s)"
-
-# add your new key to the agent
-ssh-add -K ~/.ssh/<private key created above>
-
-# add your public key to Launchdock
-reaction keys add ~/.ssh/<keyname>.pub
 ```
 
 ## apps
@@ -116,32 +90,33 @@ reaction env list --app <appname>
 ## domains
 
 ```sh
-# add a custom domain for your app
-# (first, update your DNS to point your domain at your app's default URL)
-reaction domains add --app <appname> -d mycoolshop.com
+# Add a custom domain for your app
+# First, update your DNS to point your domain at: ingress.launchdock.io
+# Once DNS has updated and works, set your custom domain for your app.
+reaction domain set --app <appname> -d mycoolshop.com
 
 # remove a custom domain from your app
-reaction domains remove --app <appname> -d mycoolshop.com
+reaction domain unset --app <appname> -d mycoolshop.com
 ```
 
 ## deploy
 
 Submit your application for a deployment. This will begin the CI/CD/CD process. This begins a build process that is unique for every project. Expect this entire process to take around 20 minutes.
 
--   test and build production bundle (continious integration)
--   build container image and publish (continious delivery)
--   deploy application cluster (continious deployment)
+-   test and build production bundle (continuous integration)
+-   build container image and publish (continuous delivery)
+-   deploy application cluster (continuous deployment)
 
 ```sh
-    # Deploy your application
-    reaction deploy --name <appname>
+# Deploy your application
+reaction deploy --name <appname>
 ```
 
-Expect to recieve an email with the completed build status (failed or deployed).
+Expect to receive an email with the completed build status (failed or deployed).
 
 **CI/CD Configuration**
 
-[Continious integration configuration](https://docs.gitlab.com/ee/ci/) should be commited in [.reaction/ci/config.yml](https://github.com/reactioncommerce/reaction/blob/master/.reaction/ci/config.yml).
+[Continuous integration configuration](https://docs.gitlab.com/ee/ci/) should be committed in [.reaction/ci/config.yml](https://github.com/reactioncommerce/reaction/blob/master/.reaction/ci/config.yml).
 
 ## Basic example
 
@@ -152,11 +127,9 @@ Below is an example `simple-demo` application deployment, setting the minimum re
 reaction apps create --name simple-demo
 
 # deploy application to the environment
-
 reaction deploy --app simple-demo
 
-# open your app in your browser
-
+# open your app in your browser once build/deployment has finished
 reaction open simple-demo
 ```
 
