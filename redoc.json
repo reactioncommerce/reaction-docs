@@ -575,6 +575,9 @@
     "label": "Popover",
     "docPath": "developer/components/popover.md"
   }, {
+    "label": "ReactionAvatar",
+    "docPath": "developer/components/avatar.md"
+  }, {
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
@@ -585,7 +588,7 @@
     "docPath": "developer/components/slider.md"
   }, {
     "label": "Sortable Table",
-    "docPath": "developer/components/sortableTable.md"
+    "docPath": "developer/components/sortableTable.a"
   }, {
     "label": "Switch",
     "docPath": "developer/components/switch.md"
