@@ -23,7 +23,7 @@ Your `PRERENDER_HOST` should be the domain your app is using (e.g. `example.com`
 
 > We try our very best to detect when a page is done loading by counting the number of requests in flight and saving the page when the number of requests in flight reaches zero (after a slight delay). You can tell us when your pages are ready so that we can be more accurate.
 
-If you need to set a page's readiness more specifically, you can use `window.prerenderReady`. We've done this on the [product grid](https://github.com/reactioncommerce/reaction/blob/development/imports/plugins/included/product-variant/client/templates/products/products.js) already and you can use that as an example if you need to set readiness for other templates.
+If you need to set a page's readiness more specifically, you can use `window.prerenderReady`. We've done this on the [product grid](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-variant/client/templates/products/products.js) already and you can use that as an example if you need to set readiness for other templates.
 
 For the product grid, we set `window.prerenderReady = false` at the top of our onCreated function and then in our autorun block, we wait until the products subscription is ready to set `window.prerenderReady = true`
 

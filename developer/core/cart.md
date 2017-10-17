@@ -16,7 +16,7 @@ When this `authenticated` user logs out of the site, the `publication` is update
 
 If the existing registered `guest` user adds items to an `anonymous` cart session, and then logs in,  the `anonymous` cart will be merged to their existing cart and new items added, existing items will additional quantity will get incremented. This is true from any browser/session.
 
-## [Cart Methods](https://github.com/reactioncommerce/reaction/blob/development/packages/reaction-core/server/methods/cart.js)
+## [Cart Methods](https://github.com/reactioncommerce/reaction/blob/master/packages/reaction-core/server/methods/cart.js)
 
 ### cart/mergeCart
 
