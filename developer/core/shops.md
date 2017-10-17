@@ -1,6 +1,6 @@
 # Shops
 
-Reaction Core provides a single tenant shop.
+Reaction Commerce supports both single tenant (marketplace) and marketplace merchants (shops).
 
 For other implementations, see: [#357](https://github.com/reactioncommerce/reaction/issues/357)
 
