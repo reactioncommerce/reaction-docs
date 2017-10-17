@@ -1,6 +1,6 @@
 # Helpers
 
-There are many Reaction specific helpers available [Template helpers](http://docs.meteor.com/#/full/template_helpers) in the [core/client/helpers folder](https://github.com/reactioncommerce/reaction/tree/development/packages/reaction-core/client/helpers)
+There are many Reaction specific helpers available [Template helpers](http://docs.meteor.com/#/full/template_helpers) in the [core/client/helpers folder](https://github.com/reactioncommerce/reaction/tree/master/packages/reaction-core/client/helpers)
 
 Meteor Template helper docs:
 
