@@ -50,4 +50,4 @@ export default MyReactComponent;
 | style | Object         | Style provided directly to component.                                                            |
 | textSizeRation | String         | Ratio of text-size to avatar size when `Name` is used as the display.                                                            |
 | twitterHandle | String         | Twitter handle used to get users Twitter profile image.                                                            |
-| vkontakteIdId | String         | VkontakteId ID used to get users VkontakteId profile image.                                                            |
+| vkontakteId | String         | Vkontakte ID used to get users VkontakteId profile image.                                                            |
