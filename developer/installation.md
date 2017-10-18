@@ -2,7 +2,7 @@
 
 [![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
 
-Review and install the [Reaction requirements.](https://docs.reactioncommerce.com/reaction-docs/development/requirements).
+Review and install the [Reaction requirements.](https://docs.reactioncommerce.com/reaction-docs/master/requirements).
 
 To install and run Reaction locally in development mode:
 

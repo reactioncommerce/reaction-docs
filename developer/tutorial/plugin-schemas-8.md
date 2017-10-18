@@ -1,7 +1,7 @@
 # Customizing Schemas
 
-*If will be easier to understand this section of the tutorial if you have read and understood the
-[Schemas](http://guide.meteor.com/collections.html#schemas) section of the Meteor Guide*
+_If will be easier to understand this section of the tutorial if you have read and understood the
+[Schemas](http://guide.meteor.com/collections.html#schemas) section of the Meteor Guide_
 
 While Mongo is a "schemaless" database that does not mean schemas are a bad idea. In fact they are a great idea and so
 Reaction Commerce uses a package called [Simple Schema](https://atmospherejs.com/aldeed/simple-schema) to build and enforce

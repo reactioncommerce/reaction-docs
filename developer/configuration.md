@@ -193,7 +193,7 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
 ]
 ```
 
-*Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload.*
+_Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload._
 
 ## Default sample data
 
@@ -217,7 +217,6 @@ If you prefer to run `reaction` _without_ default sample data, set the `SKIP_FIX
 $ export SKIP_FIXTURES=true
 $ reaction
 ```
-
 
 ## Importing Data
 

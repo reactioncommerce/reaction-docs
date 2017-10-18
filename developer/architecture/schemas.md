@@ -12,6 +12,46 @@ Schemas are implemented using the [aldeed:simple-schema](https://github.com/alde
 
 Reaction.Collections are defined in the common code of `lib/collections`, where the Schemas defined in `lib/collections/schemas` are attached.
 
+Custom schemas can also be defined in individual packages, by creating a `lib/collections/schemas` folder inside your package.
+
+## Registering
+
+All schemas should be registered using the `registerSchema()` method that Reaction uses internally to register all of our core Schemas.
+
+```js
+import { SimpleSchema } from "meteor/aldeed:simple-schema";
+import { registerSchema } from "@reactioncommerce/reaction-collections";
+
+const MyNewSchema = new SimpleSchema({
+  _id: {
+    type: Number,
+    label: "ID",
+    decimal: false
+  },
+  name: {
+    type: String,
+    label: "Name of thing"
+  },
+  description: {
+    type: String,
+    label: "Description of thing",
+    optional: true
+  }
+});
+
+registerSchema("MyNewSchema", MyNewSchema);
+```
+
+All registered schemas can be retrieved by importing `getSchemas`, and then using `getSchemas()`.
+
+```js
+import { getSchemas } from "@reactioncommerce/reaction-collections";
+
+return getSchemas();
+```
+
+## Importing
+
 Schemas should be imported to use
 
 ```js
@@ -26,7 +66,7 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 
 ### Reaction Schemas
 
-| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/development/lib/collections/schemas) | \*                |
+| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/master/lib/collections/schemas) | \*                |
 | --------------------------------------------------------------------------------------------------------- | ----------------- |
 | Email                                                                                                     | Address           |
 | Accounts                                                                                                  | CartItem          |

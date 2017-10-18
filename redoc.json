@@ -575,6 +575,9 @@
     "label": "Popover",
     "docPath": "developer/components/popover.md"
   }, {
+    "label": "ReactionAvatar",
+    "docPath": "developer/components/avatar.md"
+  }, {
     "label": "Select",
     "docPath": "developer/components/select.md"
   }, {
@@ -750,10 +753,10 @@
     "docPath": "developer/deploying/docker.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "deploying-reaction-on-managed",
-    "label": "Managed",
+    "alias": "deploying-on-reaction-platform",
+    "label": "Reaction Platform",
     "repo": "reaction-docs",
-    "docPath": "developer/deploying/launchdock.md"
+    "docPath": "developer/deploying/platform.md"
   }, {
     "class": "guide-nav-item",
     "alias": "guidelines",

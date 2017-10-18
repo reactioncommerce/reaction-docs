@@ -35,7 +35,7 @@ Meteor.call("products/cloneProduct", products, function (error, result) {
 
 cloneProduct takes a product object (the one you want to clone) and returns the insert callback from the newly created clone. As with all [meteor inserts](https://docs.meteor.com/#insert), this callback includes an error object as the first argument and, if no error, the \_id of the new document as the second.
 
-*Note: In the future we are going to implement an inheritance product that maintains relationships with the cloned product tree*
+_Note: In the future we are going to implement an inheritance product that maintains relationships with the cloned product tree_
 
 ### products/deleteProduct
 

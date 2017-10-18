@@ -55,7 +55,15 @@ echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
 sudo sysctl -w kern.maxfiles=65536
 sudo sysctl -w kern.maxfilesperproc=65536
 ulimit -n 65536 65536
+echo "ulimit -n 65536 65536" >> .bashrc
+source .bashrc
 ```
+
+You can always check you file limits with the line:
+
+    ulimit -n
+
+It should be 65536.
 
 **Homebrew**
 

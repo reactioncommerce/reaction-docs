@@ -1,12 +1,16 @@
 # Release Process
 
-Anyone from the [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) can create new release branches of Reaction.
+The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
-1.  Create a release branch.
-2.  Merge accepted PR's into release branch.
-3.  Create release notes and docs
-4.  Release review
-5.  Merge to `master` and tag release.
+The process is:
+1.  Create a release branch, but not until you ready to release!
+1.  Change destination branch from master to release branch for all PR that should be included.
+1.  Wait until all tests have passed on each PR.
+1.  Merge passing PR's into the release branch.
+1.  Create a new `Release x.x.x` pull request.
+1.  Create release notes and docs
+1.  Release review, test pass, be brave.
+1.  Merge to `master`, wait for tests, then tag release.
 
 ## Release Branch
 
@@ -29,11 +33,13 @@ Anyone from the [Reaction engineering team and invited community collaborators](
 -   Create release notes - a summary of all PR and notable changes in the release.
 -   Using <https://github.com/aaronjudd/git-release-notes>, you can run the following from the directory of the repo you are releasing
 
-```sh
-../repos/git-release-notes/index.js  -t "^([a-z]+) #(\d+) (.*)$" -b development <firstCommitHash>..<lastCommitHash> templates/reaction.ejs > History.md
 ```
+git log <firstCommitHash>..<lastCommitHash> | pcregrep -A 2 -M 'Merge pull request' | perl -pe 's/Merge.*(#[0-9]{4}).*/$1/' | perl -pe 's/^(\-|#| |(\[[a-zA-Z]+\])+|\n)*//g' | perl -0777pe 's/([0-9]{4})\n(.+)\n/ - $2 (#$1)\n/g'
+```
+Notes:
+ - you'll need `pcregrep` on your system which you can install on osx with brew `brew pcre`
 
--   Replace <firstCommitHash> and <lastCommitHash> with the first and last commit of the release respectively.
+-   Replace <firstCommitHash> and <lastCommitHash> with the first and last commit or tag of the release respectively. You can use prev tag and `HEAD` for this if you have the release branch checked out. e.g. `v1.5.0..HEAD`
 -   Copy release notes to PR
 
 ## Release Docs
