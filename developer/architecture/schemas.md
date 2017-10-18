@@ -67,28 +67,28 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 ### Reaction Schemas
 
 | [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/master/lib/collections/schemas) | \*                |
-| --------------------------------------------------------------------------------------------------------- | ----------------- |
-| Email                                                                                                     | Address           |
-| Accounts                                                                                                  | CartItem          |
-| CartItem                                                                                                  | CartItems         |
-| Cart                                                                                                      | DiscountType      |
-| DiscountRules                                                                                             | Discounts         |
-| Layout                                                                                                    | OrderItem         |
-| OrderTransaction                                                                                          | Order             |
-| Permissions                                                                                               | Workflow          |
-| PackageConfig                                                                                             | CorePackageConfig |
-| PaymentMethod                                                                                             | Invoice           |
-| Payment                                                                                                   | VariantMedia      |
-| ProductPosition                                                                                           | ProductVariant    |
-| Product                                                                                                   | ShippingMethod    |
-| ShipmentQuote                                                                                             | ShipmentItem      |
-| ShippingParcel                                                                                            | Shipment          |
-| ShippingProvider                                                                                          | Shipping          |
-| CustomEmailSettings                                                                                       | Metafield         |
-| Currency                                                                                                  | Locale            |
-| Shop                                                                                                      | Tag               |
-| TaxRates                                                                                                  | Taxes             |
-| Templates                                                                                                 | Translation       |
+| ---------------------------------------------------------------------------------------------------- | ----------------- |
+| Email                                                                                                | Address           |
+| Accounts                                                                                             | CartItem          |
+| CartItem                                                                                             | CartItems         |
+| Cart                                                                                                 | DiscountType      |
+| DiscountRules                                                                                        | Discounts         |
+| Layout                                                                                               | OrderItem         |
+| OrderTransaction                                                                                     | Order             |
+| Permissions                                                                                          | Workflow          |
+| PackageConfig                                                                                        | CorePackageConfig |
+| PaymentMethod                                                                                        | Invoice           |
+| Payment                                                                                              | VariantMedia      |
+| ProductPosition                                                                                      | ProductVariant    |
+| Product                                                                                              | ShippingMethod    |
+| ShipmentQuote                                                                                        | ShipmentItem      |
+| ShippingParcel                                                                                       | Shipment          |
+| ShippingProvider                                                                                     | Shipping          |
+| CustomEmailSettings                                                                                  | Metafield         |
+| Currency                                                                                             | Locale            |
+| Shop                                                                                                 | Tag               |
+| TaxRates                                                                                             | Taxes             |
+| Templates                                                                                            | Translation       |
 
 ### Autovalue
 
