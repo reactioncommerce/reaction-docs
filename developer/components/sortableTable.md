@@ -68,6 +68,7 @@ class MyComponent extends Component {
 
 ## Props
 
+=======
 | Property             | Type     | Description                                                                  | Notes                                                                                 |
 | -------------------- | -------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | collection           | Object   | collection to get data from                                                  | Use in conjunction with publication, or use data in place of collection + publication |
