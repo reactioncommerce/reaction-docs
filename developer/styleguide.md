@@ -8,7 +8,7 @@ As a community, Reaction follows guidelines for code style and naming convention
 - [Naming conventions](#naming-conventions)
 - [Working with packages](#working-with-packages)
 - [JavaScript style recommendations](#javascript-style-recommendations)
-- [Copy conventions](#copy)
+- [Copy conventions](#copy-conventions)
 
 ## Syntax and style conventions
 
