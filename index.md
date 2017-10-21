@@ -73,7 +73,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
 <div class="row">
   <div class="col-md-4">
     <div class="section-promo">
-      <a href="https://reactioncommerce.github.io/reaction-jsdoc/index.html">
+      <a href="http://api.docs.reactioncommerce.com/">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-core-api-guide.svg">
         <h3 class="accent-color text-center">Core API</h3>
       </a>
