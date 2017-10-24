@@ -37,7 +37,7 @@ git log <firstCommitHash>..<lastCommitHash> | pcregrep -A 2 -M 'Merge pull reque
 ```
 
 Notes:
-- You'll need `pcregrep` on your system which you can install on osx with brew `brew pcre`
+- You'll need `pcregrep` on your system which you can install on osx with brew `brew install pcre`
 - Replace <firstCommitHash> and <lastCommitHash> with the first and last commit or tag of the release respectively. You can use prev tag and `HEAD` for this if you have the release branch checked out. e.g. `v1.5.0..HEAD`
 - Copy release notes to PR
 
