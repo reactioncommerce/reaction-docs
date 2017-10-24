@@ -11,6 +11,7 @@ The process is:
 1. Create release notes and docs
 1. Release review, test pass, be brave.
 1. Merge to `master`, wait for tests, then tag release.
+1. After successful merge, delete the release branch.
 
 ## Release branch
 
@@ -56,9 +57,10 @@ Notes:
 
 ## Release
 
-- **Squash and merge** the `Release x.x.x` pull request into `master`
+- **Merge** the `Release x.x.x` pull request into `master`
 - Allow all tests and builds to complete
-- [Draft and Publish a new Github Release](https://github.com/reactioncommerce/reaction/releases)
+- [Draft and publish a new GitHub Release](https://github.com/reactioncommerce/reaction/releases)
+- Wait for all `master` tests to pass.
 - Follow the format of previous release, copy change log from release PR into the release notes.
 
 ## Cleanup
