@@ -10,7 +10,7 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
 
-**[/client/templates/layoutes/core.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/templates/layouts/core.js)**
+**[/client/templates/layouts/core.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/templates/layouts/core.js)**
 
 ```js
 import React, { Component } from "react";
@@ -18,7 +18,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
-import { registerComponent } from "@reactioncommerce/reaction-components";
+import { Components, registerComponent } from "@reactioncommerce/reaction-components";
 
 class CoreLayoutBeesknees extends Component {
   static propTypes = {
@@ -36,9 +36,7 @@ class CoreLayoutBeesknees extends Component {
 
     return (
       <div className={pageClassName} id="reactionAppContainer">
-        { Template[layoutHeader] &&
-          <Blaze template={layoutHeader} className="reaction-navigation-header" />
-        }
+        <Components.NavBar />
 
         <Blaze template="cartDrawer" className="reaction-cart-drawer" />
 
@@ -71,7 +69,7 @@ In order to change our default layout, we need add a record to the **registry** 
 
 First let's create our `defaults.js` with our custom layout. You will place this file in the `client` folder in your plugin. The `defaults.js` just looks like this:
 
-**[/client/default.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/fbf7d01921393e6926d567951d80a6d2bb9b8dc0/client/defaults.js)**
+**[/client/defaults.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/fbf7d01921393e6926d567951d80a6d2bb9b8dc0/client/defaults.js)**
 
 ```js
 import { Session } from "meteor/session";
@@ -98,7 +96,6 @@ layout: [{
   enabled: true,
   structure: {
     template: "products",
-    layoutHeader: "layoutHeader",
     layoutFooter: "layoutFooter",
     notFound: "productNotFound",
     dashboardHeader: "",
@@ -129,7 +126,6 @@ Reaction.registerPackage({
     enabled: true,
     structure: {
       template: "productsLanding",
-      layoutHeader: "layoutHeader",
       layoutFooter: "layoutFooter",
       notFound: "productNotFound",
       dashboardHeader: "",
