@@ -39,7 +39,7 @@ Reaction.registerPackage({
 
 client/index.less **(Required for LESS processing)** - Entry point of all client side LESS files. From this file you can import all your custom files and they will be processed and included when the app is built.
 
-```js
+```less
 // Entrypoint for LESS CSS
 
 @import "styles/navbar.less";
