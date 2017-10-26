@@ -10,11 +10,42 @@ The `reaction-cli` incorporates functionality for any team to deploy Reaction Co
 4.  Create application environment
 5.  Deploy application
 
-## Configuration
+## Request invite token
 
 As a user of the **Reaction Platform**, you'll receive an email containing a "invite token" from the Reaction Platform API ("Launchdock"). **Launchdock** is the name of our internal  orchestration management platform.
 
 You will be asked for your [invite token](http://getrxn.io/reaction-platform) when you use the [reaction-cli](http://getrxn.io/reaction-cli) to register your local Reaction environment with the Reaction Platform API.
+
+## Register local environment
+
+### Update `reaction-cli`
+
+Beforey you get started, make sure you have the latest version of the `reaction-cli` by running:
+
+```sh
+npm i -g reaction-cli
+```
+
+To confirm you have the latest version, run:
+
+```sh
+reaction -v
+```
+
+You should see the versions for `reaction-cli` and all of its dependencies:
+
+```sh
+$ reaction -v
+
+Node: 8.2.1
+NPM: 5.5.1
+Meteor Node: 4.8.4
+Meteor NPM: 4.6.1
+Reaction CLI: 0.19.0
+Docker: 17.09.0-ce
+```
+
+Now you're ready to get started.
 
 ### register
 
