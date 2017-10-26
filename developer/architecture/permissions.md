@@ -211,16 +211,14 @@ Reaction.addRolesToGroups({
 ```
 This will add the new permissions to the group and update all existing users belonging to that group.
 
-#### Shop.defaultVisitorRoles & shop.defaultCustomerRoles
-Note about Reaction install pre v1.5.0:
-The previous `shop.defaultVisitorRoles` are the roles now defined in the `guest` group.
-Also, the previous `shop.defaultCustomerRoles` are the roles now defined in the default `customer` group.
+#### Updating to 1.5.0
 
+For updating to 1.5.0, note these changes: 
+1. The previous `shop.defaultVisitorRoles` are the roles now defined in the `guest` group.
+2. The previous `shop.defaultCustomerRoles` are the roles now defined in the default `customer` group.
+3. The default roles set previously on the Shop schema are now present on server export of Reaction, `Reaction.defaultVisitorRoles`.
 
-So, if you had a previous reference to `shop.defaultVisitorRoles`, in v1.5.0 you should now use should now use the group object (e.g `Groups.find({slug: "guest", shopId}).permissions`).
-
-The default roles set previously on the Shop schema are present on server export of Reaction (i.e Reaction.default...).
-
+So, if you had a previous reference to `shop.defaultVisitorRoles`, use the group object, `Groups.find({slug: "guest", shopId}).permissions`.
 
 
 #### Custom Default Groups
