@@ -1,6 +1,6 @@
 # Store Operator's Guide
 
-Welcome to the Reaction Store Operator's Guide! Here you can find everything you need to know to configure your store and manage your orders and products. Click **Sign In** your admin credentials to get started.
+Welcome to the Reaction Store Operator's Guide! Here you can find everything you need to know to configure your store and manage your orders and products. Click **Sign In** and use your [admin credentials](https://docs.reactioncommerce.com/reaction-docs/master/installation) to get started.
 
 ## Products and the grid
 
