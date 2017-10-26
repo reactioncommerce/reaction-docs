@@ -197,7 +197,7 @@ You can also pass in an `audience` field to filter returned apps based on assign
 
 ## Permission Groups
 
-Permission Groups are are way to grant multiple users a group of permissions. This Accounts Dashboard provides a way to create a group and add users to them.
+Permission Groups are are way to grant multiple users a group of permissions. The Accounts Dashboard provides a way to create a group and add users to them.
 Reaction currently ships with the four groups: Guest, Customer, Shop Manager and Owner. The Shop Manager and Owner groups are admin groups.
 Guest group is by default for anonymous (un-registered) users while Customer group is by default for registered users (users who created accounts).
 
@@ -211,12 +211,15 @@ Reaction.addRolesToGroups({
 ```
 This will add the new permissions to the group and update all existing users belonging to that group.
 
-
-If you need to have more default groups on initializing of your app, you can run a function to insert the Group afterCoreInit. e.g
+#### Custom Default Groups
+If you need to have more default groups on initializing your app, you can call the `createGroups()` method passing in the shopId and a roles object containining key-value pairs representing the group slug (key) and array of roles for the group (value). See the [documentation page](http://api.docs.reactioncommerce.com/global.html#createGroups) for more details. This can be done, for example, in an afterCoreInit function e.g
 ```js
 Hooks.Events.add("afterCoreInit", () => {
-  Group.insert({
-    // group fields. See Reaction.createDefaultGroups for example
+  Reaction.createGroups({
+    shopId,
+    roles: {
+      influencers: [...customerRoles, ...influencerRoles]
+    }
   });
 });
 ```
