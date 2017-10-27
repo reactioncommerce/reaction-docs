@@ -63,9 +63,9 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   </div>
   <div class="col-md-4">
     <div class="section-promo">
-      <a href="http://gitter.im/reactioncommerce/">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-chat.svg" height="110">
-        <h3 class="accent-color text-center">Chat</h3>
+      <a href="http://api.docs.reactioncommerce.com/">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-core-api-guide.svg">
+        <h3 class="accent-color text-center">Core API</h3>
       </a>
     </div>
   </div>
@@ -73,9 +73,9 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
 <div class="row">
   <div class="col-md-4">
     <div class="section-promo">
-      <a href="http://api.docs.reactioncommerce.com/">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-core-api-guide.svg">
-        <h3 class="accent-color text-center">Core API</h3>
+      <a href="http://gitter.im/reactioncommerce/">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-chat.svg" height="110">
+        <h3 class="accent-color text-center">Chat</h3>
       </a>
     </div>
   </div>
