@@ -2,7 +2,7 @@
 
 ## How do I sign up for an account, login to my dashboard, and set up my domain?
 
-Currently, Reaction is only available locally via GitHub. In early 2017, we'll be launching the Beta release of our hosted platform, which will allow anyone to set up shop via our intuitive dashboard. Our custom hosting solution, which runs on Docker, will support domains, SSL, and more. Learn more about [Reaction Platform](https://reactioncommerce.com/hosting). Our vision is to allow anyone to customize, extend, and deploy his or her Reaction shop directly from on our platform.
+Currently, Reaction is only available locally via GitHub. In early 2017, we'll be launching the Beta release of our hosted platform, which will allow anyone to set up shop via our intuitive dashboard. Our custom hosting solution, [Reaction Platform](https://reactioncommerce.com/hosting), which runs on Docker, will support domains, SSL, and more. Our vision is to allow anyone to customize, extend, and deploy his or her Reaction shop directly from on our platform.
 
 ## I already have a hosting solution. Can I host a Reaction shop anywhere I want?
 
