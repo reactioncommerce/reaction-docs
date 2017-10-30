@@ -31,7 +31,7 @@ The process is:
 ## Release notes
 
 - Create release notes - a summary of all PR and notable changes in the release.
-- Using <https://github.com/aaronjudd/git-release-notes>, you can run the following from the directory of the repo you are releasing:
+- Run the following from the directory of the repo you are releasing:
 
 ```sh
 git log <firstCommitHash>..<lastCommitHash> | pcregrep -A 2 -M 'Merge pull request' | perl -pe 's/Merge.*(#[0-9]{4}).*/$1/' | perl -pe 's/^(\-|#| |(\[[a-zA-Z]+\])+|\n)*//g' | perl -0777pe 's/([0-9]{4})\n(.+)\n/ - $2 (#$1)\n/g'
@@ -39,7 +39,7 @@ git log <firstCommitHash>..<lastCommitHash> | pcregrep -A 2 -M 'Merge pull reque
 
 Notes:
 - You'll need `pcregrep` on your system which you can install on osx with brew `brew install pcre`
-- Replace <firstCommitHash> and <lastCommitHash> with the first and last commit or tag of the release respectively. You can use prev tag and `HEAD` for this if you have the release branch checked out. e.g. `v1.5.0..HEAD`
+- Replace `<firstCommitHash>` and `<lastCommitHash>` with the first and last commit or tag of the release respectively. You can use prev tag and `HEAD` for this if you have the release branch checked out. e.g. `git log v1.5.5..HEAD | ...`
 - Copy release notes to PR
 
 ## Release docs
