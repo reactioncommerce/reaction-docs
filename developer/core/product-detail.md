@@ -105,10 +105,10 @@ A registered React component, is a React component that has been registered with
 
 ```js
 import React, { Component } from "react";
-import { registerComponent } from "/imports/plugins/core/layout/lib/components";
+import { registerComponent } from "@reactioncommerce/reaction-components";
 
 // Create your component
-class MyComponent exports Component {
+class MyComponent extends Component {
   render() {
     return (
       <div>My Component</div>
@@ -117,10 +117,7 @@ class MyComponent exports Component {
 }
 
 // Register component for ReactionLayout
-registerComponent({
-  name: "MyComponent",
-  component: MyComponent
-});
+registerComponent("MyComponent", MyComponent);
 
 // Export component if you also want to use it in other places in the App
 export default MyComponent;
@@ -194,7 +191,7 @@ In a file on the client, create your React component, and register it.
 
 ```js
 import React, { Component } from "react";
-import { registerComponent } from "/imports/plugins/core/layout/lib/components";
+import { registerComponent } from "@reactioncommerce/reaction-components";
 
 // Create your component
 class MyPriceComponent extends Component {
@@ -206,10 +203,7 @@ class MyPriceComponent extends Component {
 }
 
 // Register component for ReactionLayout via Reaction.registerTemplate()
-registerComponent({
-  name: "MyPriceComponent",
-  component: MyPriceComponent
-});
+registerComponent("MyPriceComponent", MyPriceComponent);
 ```
 
 **Server**
