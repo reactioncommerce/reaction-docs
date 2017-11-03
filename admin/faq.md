@@ -2,7 +2,7 @@
 
 ## How do I sign up for an account, login to my dashboard, and set up my domain?
 
-Currently, Reaction is only available locally via GitHub. In early 2017, we'll be launching the Beta release of our hosted platform, which will allow anyone to set up shop via our intuitive dashboard. Our custom hosting solution, [Reaction Platform](https://reactioncommerce.com/hosting), which runs on Docker, will support domains, SSL, and more. Our vision is to allow anyone to customize, extend, and deploy his or her Reaction shop directly from on our platform.
+Reaction is available locally and for free via GitHub. We also recently launched [Reaction Platform](https://reactioncommerce.com/hosting), which allows anyone to set up their shop via an intuitive dashboard. Our vision is to allow anyone to customize, extend, deploy, scale, and secure his or her Reaction shop or marketplace directly from on our platform.
 
 ## I already have a hosting solution. Can I host a Reaction shop anywhere I want?
 
@@ -30,16 +30,10 @@ We're always testing! During our Alpha release, we performed extensive tests, de
 
 ## Reaction is an open source project. How can I get involved?
 
-We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
+We're always open to contributions from our community. To learn more about becoming a contributor, [click here](https://blog.reactioncommerce.com/how-to-write-a-pr-for-reaction/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
 
 ## Reaction is all JavaScript. Does this have a negative impact on SEO?
 
 Nope! [Google indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
-Additionally, Reaction can use a [modified version](https://github.com/ongoworks/spiderable) of the Meteor spiderable package, which renders a search engine-friendly static page version of your shop using PhantomJS.
-
-It's worth noting that the spiderable package is slotted for deprecation. The reasons for this include:
-
--   Google has deprecated the AJAX crawling specification that the spiderable package is based on
--   Search engine crawlers (like Google's) have gotten much better at dealing with JavaScript/AJAX based applications, without the need for any special handling
--   There are now several better options for SEO goodness, like pre-rendering services (e.g. Prerender.io - which is included in Reaction and can easily be setup), server-side rendering techniques, etc.
+Additionally, Reaction uses server-side rendering, as well as [Prerender.io](https://prerender.io/), which renders your JavaScript in a browser, saves the static HTML, and returns that to the crawlers.
