@@ -1,12 +1,18 @@
 # Frequently Asked Questions
 
+## What is Reaction Commerce?
+
+Reaction Commerce is an open source commerce platform that allows anyone to customize, extend, and deploy an online store or marketplace. Our codebase is available for free via [GitHub](https://github.com/reactioncommerce/reaction).
+
+We also offer [Reaction Platform](https://reactioncommerce.com/hosting), our paid platform-as-a-service. Beyond just hosting, our end-to-end system provides deployment, scaling, and support for retailers and brands.
+
 ## How do I sign up for an account, login to my dashboard, and set up my domain?
 
-Reaction is available locally and for free via GitHub. We also recently launched [Reaction Platform](https://reactioncommerce.com/hosting), which allows anyone to set up their shop via an intuitive dashboard. Our vision is to allow anyone to customize, extend, deploy, scale, and secure his or her Reaction shop or marketplace directly from on our platform.
+You'll need to install and run Reaction locally on your computer. For more info, check out our [Installation docs](https://docs.reactioncommerce.com/reaction-docs/master/installation).    
 
 ## I already have a hosting solution. Can I host a Reaction shop anywhere I want?
 
-Yep! You can host a Reaction shop on any host or virtual machine container that supports Node.js, Meteor, and MongoDB. Our code is fully open source and available via [GitHub](https://github.com/reactioncommerce/reaction).
+Yep! You can host a Reaction shop on any host or virtual machine container that supports Node.js, Meteor, and MongoDB. 
 
 ## Do you support multiple languages?
 
