@@ -165,6 +165,12 @@
     "docPath": "developer/styleguide.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "react-best-practices",
+    "label": "React Best Practices",
+    "repo": "reaction-docs",
+    "docPath": "developer/react-best-practices.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "community-channels",
     "label": "Community",
     "repo": "reaction-docs",
