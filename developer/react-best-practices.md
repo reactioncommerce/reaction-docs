@@ -100,6 +100,8 @@ class MyComponent extends Component {
 }
 ```
 
+<a class="jsbin-embed" href="https://jsbin.com/merebe/embed?html,js,console,output">JS Bin on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?4.1.0"></script>
+
 # Resources
 
 - ESnext Class fields - https://github.com/tc39/proposal-class-fields
