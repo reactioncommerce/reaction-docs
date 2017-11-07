@@ -171,6 +171,12 @@
     "docPath": "developer/react-best-practices.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "developer-faq",
+    "label": "FAQs",
+    "repo": "reaction-docs",
+    "docPath": "developer/developer-faqs.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "community-channels",
     "label": "Community",
     "repo": "reaction-docs",
