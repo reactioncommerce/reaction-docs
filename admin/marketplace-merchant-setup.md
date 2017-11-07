@@ -2,13 +2,20 @@
 
 This guide will dive into the steps needed by both the a owner, and merchant shop.
 
+**Prerequisites**
+
+The marketplace owner must have completed the following before proceeding with this guide.
+
+1. Enabled marketplace in "Shop Settings"
+2. Enabled the Stripe payment method in "Payment Methods"
+
 ## Invite a seller
 
 As the marketplace owner, these are the steps I must complete to invite a merchant shop owner.
 
 ### Invite merchant shop owner
 
-With Marketplace enabled, invite a new shop owner using the Makerplace invite owner form.
+With Marketplace enabled, invite a new shop owner using the Marketplace invite owner form.
 
 ![](/assets/admin-merchant-invite.png "Reaction's Invite Owner Form")
 
