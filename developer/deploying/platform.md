@@ -1,10 +1,10 @@
 # Reaction Platform
 
-Reaction Commerce offers a managed deployment option, [Reaction Platform](http://getrxn.io/reaction-platform).
+The following documentation is for paid users of [Reaction Platform](getrxn.io/reaction-platform). 
 
 The `reaction-cli` incorporates functionality for any team to deploy Reaction Commerce to multiple environments. [Visit reactioncommerce.com](http://getrxn.io/reaction-platform) to get a demo.
 
-1.  Request invite token
+1.  Get invite token from welcome email or contract
 2.  Register local environment
 3.  Create, add, and publish SSH keys
 4.  Create application environment
@@ -12,7 +12,7 @@ The `reaction-cli` incorporates functionality for any team to deploy Reaction Co
 
 ## Request invite token
 
-As a user of the **Reaction Platform**, you'll receive an email containing a "invite token" from the Reaction Platform API ("Launchdock"). **Launchdock** is the name of our internal  orchestration management platform.
+As a paid user of the **Reaction Platform**, you'll receive an email containing a "invite token" from the Reaction Platform API ("Launchdock"). **Launchdock** is the name of our internal  orchestration management platform.
 
 You will be asked for your invite token when you use the [reaction-cli](http://getrxn.io/reaction-cli) to register your local Reaction environment with the Reaction Platform API.
 
