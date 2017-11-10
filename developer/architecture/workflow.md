@@ -22,26 +22,54 @@ _The default workflow configuration components are configured in the following m
 
 ```js
 "layout" : [
-  {
-    "layout" : "coreLayout",
-    "workflow" : "coreLayout",
+{
+  "layout" : "coreLayout",
+    "workflow" : "coreProductGridWorkflow",
+    "collection" : "Products",
     "theme" : "default",
-    "enabled" : true
-  },
-  {
+    "enabled" : true,
+    "structure" : {
+      "template" : "products",
+      "layoutHeader" : "NavBar",
+      "notFound" : "productNotFound",
+      "dashboardHeader" : "gridPublishControls",
+      "dashboardControls" : "productDetailDashboardControls",
+      "adminControlsFooter" : "adminControlsFooter"
+    },
+    "priority" : 999,
+    "position" : 1
+  }, {
+    "layout" : "coreLayout",
+    "workflow" : "coreProductWorkflow",
+    "collection" : "Products",
+    "theme" : "default",
+    "enabled" : true,
+    "structure" : {
+      "template" : "productDetailSimple",
+      "layoutHeader" : "NavBar",
+      "notFound" : "productNotFound",
+      "dashboardHeader" : "productDetailSimpleToolbar",
+      "dashboardControls" : "productDetailDashboardControls",
+      "adminControlsFooter" : "adminControlsFooter"
+    },
+    "priority" : 999,
+    "position" : 1
+  }, {
     "layout" : "coreLayout",
     "workflow" : "coreCartWorkflow",
-    "theme" : "default",
     "collection" : "Cart",
-    "enabled" : true
-  },
-  {
-    "layout" : "coreLayout",
-    "workflow" : "coreOrderWorkflow",
     "theme" : "default",
-    "collection" : "Orders",
-    "enabled" : true
-  }
+    "enabled" : true,
+    "structure" : {
+      "template" : "cartCheckout",
+      "notFound" : "notFound",
+      "dashboardControls" : "dashboardControls",
+      "adminControlsFooter" : "adminControlsFooter"
+    },
+    "priority" : 999,
+    "position" : 1
+  },
+  ... more ...
 ]
 ```
 

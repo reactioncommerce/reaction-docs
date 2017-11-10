@@ -58,7 +58,7 @@ Reaction.registerPackage({
     enabled: true,
     structure: {
       template: "productDetail",
-      layoutHeader: "layoutHeader",
+      layoutHeader: "NavBar",
       layoutFooter: "",
       notFound: "productNotFound",
       dashboardHeader: "",
@@ -82,8 +82,8 @@ layout: [{
   enabled: true,
   structure: {
     template: "products",
-    layoutHeader: "layoutHeader",
-    layoutFooter: "layoutFooter",
+    layoutHeader: "NavBar",
+    layoutFooter: "Footer",
     notFound: "productNotFound",
     dashboardControls: "dashboardControls",
     adminControlsFooter: "adminControlsFooter"
