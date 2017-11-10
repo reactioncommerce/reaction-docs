@@ -4,7 +4,7 @@ Layouts are a combination of a `layout` object and an array of `workflow` object
 
 Layouts will [render a Blaze template](http://docs.meteor.com/#/full/blaze_render) as defined in the layout **structure**.
 
-The workflow elements will be rendered with the `ReactionTemplates` Meteor helper, and are meant to be used in combination with the layout **structure**.
+The workflow elements will be rendered with the `reactionTemplate` Meteor helper, and are meant to be used in combination with the layout **structure**.
 
 Layouts are meant to be created using the Package Registry, once they are defined in the Registry, they are copied into the `Shops.layout` array and referenced from there.  The Registry serves as the "source of truth", allowing customizations to be made directly to the individual Shops. In the case where we have two layouts with the same key structure (`layout`, `workflow`), the Array is loaded in reverse order, so that the newest layout will be used. Layouts can also be disabled in the data with `enabled:false`. This is reserved for a future UI implementation.
 
@@ -30,8 +30,8 @@ import { Session } from "meteor/session";
 
 Session.set("INDEX_OPTIONS", {
   template: "customHomePageTemplate",
-  layoutHeader: "layoutHeader",
-  layoutFooter: "layoutFooter",
+  layoutHeader: "NavBar",
+  layoutFooter: "Footer",
   notFound: "notFound",
   dashboardControls: "dashboardControls",
   adminControlsFooter: "adminControlsFooter"
@@ -53,7 +53,7 @@ Layouts can work in conjunction with [workflows](/developer/architecture/workflo
     enabled: true,
     structure: {
       template: "cartCheckout",
-      layoutHeader: "checkoutHeader",
+      layoutHeader: "NavBar",
       layoutFooter: "",
       notFound: "notFound",
       dashboardHeader: "",
