@@ -8,7 +8,7 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 ### How Reaction uses layouts
 
-Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our "one-page-checkout" we need to.
+Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template (/imports/plugins/core/layout/client/components/coreLayout.js) is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our customised &lt;main&gt; section we need to.
 
 **[/client/templates/layoutes/core.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/templates/layouts/core.js)**
 
@@ -18,13 +18,39 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
-import { registerComponent } from "@reactioncommerce/reaction-components";
+
+import { getComponent as assertComponent, registerComponent } from "/imports/plugins/core/components/lib";
+
 
 class CoreLayoutBeesknees extends Component {
   static propTypes = {
     actionViewIsOpen: PropTypes.bool,
     data: PropTypes.object,
     structure: PropTypes.object
+  }
+
+  getComponent(name) {
+    try {
+      if (name) {
+        return assertComponent(name);
+      }
+    } catch (e) {
+      // No-op
+    }
+    return null;
+  }
+
+  renderMain() {
+    const template = this.props.structure && this.props.structure.template;
+    const mainComponent = this.getComponent(template);
+    if (mainComponent) {
+      return React.createElement(mainComponent, {});
+    } else if (Template[template]) {
+      return (
+        <Blaze template={template} />
+      );
+    }
+    return null;
   }
 
   render() {
@@ -34,33 +60,46 @@ class CoreLayoutBeesknees extends Component {
       "show-settings": this.props.actionViewIsOpen
     });
 
+    const headerComponent = layoutHeader && this.getComponent(layoutHeader);
+    const footerComponent = layoutFooter && this.getComponent(layoutFooter);
+
     return (
       <div className={pageClassName} id="reactionAppContainer">
-        { Template[layoutHeader] &&
-          <Blaze template={layoutHeader} className="reaction-navigation-header" />
-        }
+
+        {headerComponent && React.createElement(headerComponent, {})}
 
         <Blaze template="cartDrawer" className="reaction-cart-drawer" />
 
-        { Template[template] &&
-          <main>
-            <Blaze template={template} />
-          </main>
-        }
+        <main>
+          <div className="rui beesknees">
+            <div className="bkdebug">
+              <em>{"Bee's Knees layout"}</em>
+            </div>
+            <div className="bkdebug">
+              <em>{"layoutHeader component:"}</em>
+              {this.props.structure.layoutHeader || "not applicable"}
+            </div>
+            <div className="bkdebug">
+              <em>{"layoutFooter component:"}</em>
+              {this.props.structure.layoutFooter || "not applicable"}
+            </div>
+            <div className="bkdebug">
+              <em>main {this.getComponent(template) ? "component:" : "(Blaze template):"}</em>
+              {template}
+            </div>
+          </div>
 
-        { Template[layoutFooter] &&
-          <Blaze template={layoutFooter} className="reaction-navigation-footer footer-default" />
-        }
+          { this.renderMain() }
+        </main>
+
+        {footerComponent && React.createElement(footerComponent, {})}
       </div>
     );
   }
 }
 
 // Register component for it to be usable
-registerComponent({
-  name: "coreLayoutBeesknees",
-  component: CoreLayoutBeesknees
-});
+registerComponent("coreLayoutBeesknees", CoreLayoutBeesknees);
 
 export default CoreLayoutBeesknees;
 ```
@@ -77,7 +116,6 @@ First let's create our `defaults.js` with our custom layout. You will place this
 import { Session } from "meteor/session";
 
 Session.set("DEFAULT_LAYOUT", "coreLayoutBeesknees");
-Session.set("DEFAULT_WORKFLOW", "coreWorkflow");
 ```
 
 In order for this file to take affect, we need to also import it. So we add it to our `index.js` in your `client` directory.
@@ -98,8 +136,8 @@ layout: [{
   enabled: true,
   structure: {
     template: "products",
-    layoutHeader: "layoutHeader",
-    layoutFooter: "layoutFooter",
+    layoutHeader: "NavBar",
+    layoutFooter: "Footer",
     notFound: "productNotFound",
     dashboardHeader: "",
     dashboardControls: "dashboardControls",
@@ -129,8 +167,8 @@ Reaction.registerPackage({
     enabled: true,
     structure: {
       template: "productsLanding",
-      layoutHeader: "layoutHeader",
-      layoutFooter: "layoutFooter",
+      layoutHeader: "NavBar",
+      layoutFooter: "Footer",
       notFound: "productNotFound",
       dashboardHeader: "",
       dashboardControls: "dashboardControls",
@@ -142,9 +180,16 @@ Reaction.registerPackage({
 ```
 
 You can see we specified several things there. The most important thing was the "layout" record, which refers to the new
-layout template we will create in the next chapter. We also specify which templates we want for the header and footer (we are just keeping the default for now),
+layout template we will create in the next chapter. We also specify which templates we want for the header and footer (we are just keeping the default for now, which
+are build-in React components called NavBar & Footer),
 and what's the main template that we render and that's `products`. We also
 specified which template we would use for a "notFound". When we get to the routing and template more of this will make sense.
+
+One important aspect is the casing of the properties within the `structure`.
+React component names start with capital letters, whereas Blaze templates are
+beginning with a lower character. For now it's not possible to use React
+components for properties that are expecting Blaze template names to be passed
+(and vice versa). Though, in future all properties should designate React component names.
 
 More detailed documentation on the other `register.js` can be found in this [blog post](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/).
 
@@ -154,7 +199,7 @@ determine how to pull the layout record from a key of `layout + workflow`. The `
 It is essentially the "default" workflow when you hit the home page.
 
 Also note that:
-1. We have other parts that we could substitute without changing our layout. For example we change point our header or footer to a custom template by changing the values for "layoutHeader" or "layoutFooter".
+1. We have other parts that we could substitute without changing our layout. For example we change point our header or footer to a custom React component by changing the values for "layoutHeader" or "layoutFooter".
 2. There is a `priority` field on layout objects (with a default value) of `999`. When Reaction goes to render a route/page
 (as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
  used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
