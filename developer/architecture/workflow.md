@@ -22,8 +22,23 @@ _The default workflow configuration components are configured in the following m
 
 ```js
 "layout" : [
-{
-  "layout" : "coreLayout",
+  {
+    "layout" : "coreLayout",
+    "workflow" : "coreWorkflow",
+    "theme" : "default",
+    "enabled" : true,
+    "structure" : {
+      "template" : "products",
+      "layoutHeader" : "NavBar",
+      "layoutFooter" : "Footer",
+      "notFound" : "productNotFound",
+      "dashboardControls" : "dashboardControls",
+      "adminControlsFooter" : "adminControlsFooter"
+    },
+    "priority" : 999,
+    "position" : 1
+  }, {
+    "layout" : "coreLayout",
     "workflow" : "coreProductGridWorkflow",
     "collection" : "Products",
     "theme" : "default",
@@ -33,22 +48,6 @@ _The default workflow configuration components are configured in the following m
       "layoutHeader" : "NavBar",
       "notFound" : "productNotFound",
       "dashboardHeader" : "gridPublishControls",
-      "dashboardControls" : "productDetailDashboardControls",
-      "adminControlsFooter" : "adminControlsFooter"
-    },
-    "priority" : 999,
-    "position" : 1
-  }, {
-    "layout" : "coreLayout",
-    "workflow" : "coreProductWorkflow",
-    "collection" : "Products",
-    "theme" : "default",
-    "enabled" : true,
-    "structure" : {
-      "template" : "productDetailSimple",
-      "layoutHeader" : "NavBar",
-      "notFound" : "productNotFound",
-      "dashboardHeader" : "productDetailSimpleToolbar",
       "dashboardControls" : "productDetailDashboardControls",
       "adminControlsFooter" : "adminControlsFooter"
     },
