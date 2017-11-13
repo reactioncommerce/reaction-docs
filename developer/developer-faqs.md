@@ -4,6 +4,14 @@
 
 ## General
 
+Q: Where is the admin panel?
+
+A: The login panel is visible on the right side once you login as a user with admin credentials
+
+Q: What's the admin login?
+
+A: By default the admin login will be username: `admin@localhost` and password `r3@cti0n`
+
 ## Architecture
 
 ## Creating Plugins
