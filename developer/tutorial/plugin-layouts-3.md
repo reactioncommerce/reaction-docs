@@ -186,9 +186,9 @@ and what's the main template that we render and that's `products`. We also
 specified which template we would use for a "notFound". When we get to the routing and template more of this will make sense.
 
 One important aspect is the casing of the properties within the `structure`.
-React component names start with capital letters, whereas Blaze templates are
-beginning with a lower character. For now it's not possible to use React
-components for properties that are expecting blaze template names to be passed
+React component names start with capital letters, whereas Blaze templates
+begin with a lower character. For now it's not possible to use React
+components for properties that are expecting Blaze template names to be passed
 (and vice versa). Though, in future all properties should designate React component names.
 
 More detailed documentation on the other `register.js` can be found in this [blog post](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/).
