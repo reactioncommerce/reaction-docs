@@ -63,6 +63,12 @@
     "docPath": "admin/dashboard/shop-admin.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "merchant-shop-setup",
+    "label": "Merchant Shop Setup",
+    "repo": "reaction-docs",
+    "docPath": "admin/marketplace-merchant-setup.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "label": "Email",
     "repo": "reaction-docs",
     "alias": "email-admin",
@@ -169,6 +175,12 @@
     "label": "React Best Practices",
     "repo": "reaction-docs",
     "docPath": "developer/react-best-practices.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "developer-faq",
+    "label": "FAQs",
+    "repo": "reaction-docs",
+    "docPath": "developer/developer-faqs.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "community-channels",
