@@ -14,7 +14,7 @@ One is a [package we maintain](https://github.com/ongoworks/spiderable) called S
 Reaction is support for a service called [Prerender.io](https://prerender.io/) which is a commercial service which will do 
 the same thing, just provide a key to your site and Prerender will handle the pre-rendering.
 
-In addition `Meta` tags are added automatically for products using the `dochead` package which uses the title, description and
+In addition `Meta` tags are added automatically for products using the [dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and
 `details` fields of the product to render SEO-friendly data. You may need to use a tool like "SEO Inspector" to see these values. This
 should meet the needs of most crawlers.
 
