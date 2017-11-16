@@ -1,6 +1,6 @@
 # Enhance ReactionCommerce with geo-tagged products
 
-## Extending the product schema with longitude and latitude
+## Step 1: Extending the product schema with longitude and latitude
 Because our products should be geotagged, we need to extend each product with two new fields for latitude and longitude. We like to keep all existing product properties from the original schema called `Product` intact. This is why we import the original schema and use it as base schema for the new, extended schema called `ExtendedSchema`. After extending, we make sure that our new schema is attached to the Products collection. To overwrite the schema already bound to the collection, we pass the parameter `replace: true`. Also notice the `selector` option, which is explained [here, section multiple-schemas](https://docs.reactioncommerce.com/reaction-docs/master/simple-schema)
 
 **[/imports/plugins/custom/beesknees/server/init.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/server/init.js)**
@@ -53,7 +53,7 @@ function setProductLocation() {
 
 Notice that the update operation to add latitude and longitude to the product needs to know which schema are going to be validated. This is done through parameter `selector`. Additionally we need to pass `publish: true` to ensure the internal RevisionAPI allows modification of the document.
 
-## Modify the layout of product detail page to show location coordinates
+## Step 2: Modify the layout of product detail page to show location coordinates
 
 Now that we know where our products are located, let's enhance the existing layout of the product detail page (PDP) to display the coordinates in a Google map. For our example we're going to swap the section with the product metadata for the map.
 
@@ -97,7 +97,8 @@ Reaction.registerTemplate({
 });
 ```
 
-## Create the AvailabilityMap React component
+## Step 3: Create the AvailabilityMap React component
+
 The next step is to crate a new React component which is going to render the Google map.
 **[/imports/plugins/custom/beesknees/client/components/availabilityMap.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/components/availabilityMap.js)**
 ```js
@@ -180,6 +181,8 @@ Great. This React component will inject the JavaScript we need and render the ma
 
 Now having that at hand through Meteor.settings variable, we now need to think about how we can pass that as property into the component. Just using it within the React component itself is not ideal, because for one thing the React component should be self-contained with no external dependencies. This ensures that we can use the component in an environment-agnostic way (be it React Native or the server). And the second thing to know is that Meteor.settings is a reactive data source which may not be synced to client yet, when the component is going to be rendered.
 This is a very common scenario and luckily our friend called `composer` jumps in. The composer is a higher-order function that has no other intend as to feed in data into our React components. Let's build one!
+
+## Step 4: Shovel data into our component
 
 **[/imports/plugins/custom/beesknees/client/container/availabilityMap.js(https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/container/availabilityMap.js)**
 
