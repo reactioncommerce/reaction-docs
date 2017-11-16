@@ -12,7 +12,7 @@ You'll need to install and run Reaction locally on your computer. For more info,
 
 ## I already have a hosting solution. Can I host a Reaction shop anywhere I want?
 
-Yep! You can host a Reaction shop on any host or virtual machine container that supports Node.js, Meteor, and MongoDB. 
+Yep! You can host a Reaction shop on any host or virtual machine container that supports Node.js, Meteor, and MongoDB.
 
 ## Do you support multiple languages?
 
@@ -43,3 +43,7 @@ We're always open to contributions from our community. To learn more about becom
 Nope! [Google indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
 Additionally, Reaction uses server-side rendering, as well as [Prerender.io](https://prerender.io/), which renders your JavaScript in a browser, saves the static HTML, and returns that to the crawlers.
+
+## How do I upload product images as part of my data fixtures?
+
+Often it's convenient to have product data along with its assets stored in a local directory that gets uploaded into MongoDB on application start as part of a data fixture. This is especially relevant, if you need an initial bulk import or if you're not intending to maintain your product images through the admin backend. You'll find a detailed introduction [here](/developer/data-fixtures-insert-product-images.md).
