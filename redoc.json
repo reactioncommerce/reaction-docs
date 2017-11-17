@@ -304,6 +304,13 @@
     "docPath": "developer/themes/register-email.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "fixtures-images",
+    "label": "Fixtures: Upload images",
+    "repo": "reaction-docs",
+    "docPath": "developer/data-fixtures-insert-product-images.md"
+  },
+  {
+    "class": "guide-sub-nav-item",
     "alias": "templates",
     "label": "Extend Blaze Templates",
     "repo": "reaction-docs",
