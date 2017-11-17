@@ -194,6 +194,13 @@
     "repo": "reaction-docs",
     "docPath": "developer/contributing.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "code-reviews",
+    "label": "Pull request reviews",
+    "repo": "reaction-docs",
+    "docPath": "developer/code-reviews.md"
+  },
+  {
     "class": "guide-nav-item",
     "alias": "tutorial",
     "label": "Customization Guide",
