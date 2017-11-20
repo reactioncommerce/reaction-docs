@@ -1,4 +1,9 @@
-# Final Thoughts
+# Completing the picture
+
+## Favicon
+Every website and especially web applications need a good favicon bundle to be ready for prime time. The easiest way to accomplish this would be to copy the [favicon code](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/default-theme/client/favicons.js) from the default-theme package into your own package. For a step-by-step instruction, see [here](/developer/how-to-change-the-favicon).
+
+## Final Thoughts
 
 Every attempt has been made to cover much of what the most common customizations that developers want to do but of course
 this doesn't even scratch the surface of what developers want to do with an ecommerce system. We are always open to suggestions
