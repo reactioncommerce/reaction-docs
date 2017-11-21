@@ -61,3 +61,7 @@ Longer answer: By design you can't, because presentation and data should be sepa
 "Right, I got all your points, but I really need to have more control over how the content is rendered."
 
 If you're absolutely keen it, you could overwrite the React component responsible for rendering [product properties](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-detail-simple/client/components/productField.js). You'll find an example on how to overwrite ReactionCommerce's built-in components [here](/developer/tutorial/extending-product-schema-location-map.md).
+
+## I want to make a change to the schema and use it in the product detail page (PDP)
+
+There's an extension to our [example plugin tutorial](/developer/tutorial/plugin-intro-1.md), that describes how to extend the product schema for [displaying a Google Map in the PDP](/developer/tutorial/extending-product-schema-location-map.md).
