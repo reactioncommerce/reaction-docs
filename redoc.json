@@ -194,6 +194,13 @@
     "repo": "reaction-docs",
     "docPath": "developer/contributing.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "code-reviews",
+    "label": "Pull request reviews",
+    "repo": "reaction-docs",
+    "docPath": "developer/code-reviews.md"
+  },
+  {
     "class": "guide-nav-item",
     "alias": "tutorial",
     "label": "Customization Guide",
@@ -296,6 +303,13 @@
     "repo": "reaction-docs",
     "docPath": "developer/themes/register-email.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "fixtures-images",
+    "label": "Fixtures: Upload images",
+    "repo": "reaction-docs",
+    "docPath": "developer/data-fixtures-insert-product-images.md"
+  },
+  {
     "class": "guide-sub-nav-item",
     "alias": "templates",
     "label": "Extend Blaze Templates",
