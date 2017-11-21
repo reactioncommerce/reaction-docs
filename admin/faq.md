@@ -47,3 +47,17 @@ Additionally, Reaction uses server-side rendering, as well as [Prerender.io](htt
 ## How do I upload product images as part of my data fixtures?
 
 Often it's convenient to have product data along with its assets stored in a local directory that gets uploaded into MongoDB on application start as part of a data fixture. This is especially relevant, if you need an initial bulk import or if you're not intending to maintain your product images through the admin backend. You'll find a detailed introduction [here](/developer/data-fixtures-insert-product-images.md).
+
+## How do I add HTML/markup to my product descriptions?
+
+Short answer: You shouldn't.
+
+Longer answer: By design you can't, because presentation and data should be separated. There are several reasons for that:
+- If you allow markup in product descriptions, the style can (and will sooner or later) differ from product to another
+- It means that if you attempt to display that data anywhere else, it comes with all the markup baggage that you added specifically for the product detail page
+- Allowing markup brings its own security related issues upon the table. [Cross-Site-Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) is one of them.
+- Sometimes, the thing you're after is something else already provided in a different way. For example, if you find yourself looking for missing things like bullet points in product descriptions, chances are that you should use something better like product metadata.
+
+"Right, I got all your points, but I really need to have more control over how the content is rendered."
+
+If you're absolutely keen it, you could overwrite the React component responsible for rendering [product properties](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-detail-simple/client/components/productField.js). You'll find an example on how to overwrite ReactionCommerce's built-in components [here](/developer/tutorial/extending-product-schema-location-map.md).

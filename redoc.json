@@ -194,6 +194,13 @@
     "repo": "reaction-docs",
     "docPath": "developer/contributing.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "code-reviews",
+    "label": "Pull request reviews",
+    "repo": "reaction-docs",
+    "docPath": "developer/code-reviews.md"
+  },
+  {
     "class": "guide-nav-item",
     "alias": "tutorial",
     "label": "Customization Guide",
@@ -272,6 +279,12 @@
     "repo": "reaction-docs",
     "docPath": "developer/tutorial/creating-a-payment-provider-plugin.md"
   }, {
+   "class": "guide-sub-nav-item",
+   "alias": "extending-product-schema-location-map",
+   "label": "Extending the product schema for Google map",
+   "repo": "reaction-docs",
+   "docPath": "developer/tutorial/extending-product-schema-location-map.md"
+  }, {
     "class": "guide-sub-nav-item",
     "alias": "appearance",
     "label": "Themes: Right-to-left",
@@ -296,6 +309,13 @@
     "repo": "reaction-docs",
     "docPath": "developer/themes/register-email.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "fixtures-images",
+    "label": "Fixtures: Upload images",
+    "repo": "reaction-docs",
+    "docPath": "developer/data-fixtures-insert-product-images.md"
+  },
+  {
     "class": "guide-sub-nav-item",
     "alias": "templates",
     "label": "Extend Blaze Templates",
