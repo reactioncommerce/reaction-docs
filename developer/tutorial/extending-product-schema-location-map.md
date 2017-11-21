@@ -208,4 +208,4 @@ Notice that we put our reactive data sources within the composer function and wa
 
 
 Having all pieces together, we can give our location aware PDP a try:
-![Screenshot](/assets/extended-product-schema-location-map.png)
+![Screenshot](/assets/extending-product-schema-location-map.png)
