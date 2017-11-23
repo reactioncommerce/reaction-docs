@@ -33,6 +33,12 @@
     "docPath": "admin/navigation-bar-and-grid.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "tagging",
+    "label": "Introduction into tagging concept",
+    "repo": "reaction-docs",
+    "docPath": "admin/tagging.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "orders-admin",
     "label": "Orders",
     "repo": "reaction-docs",
