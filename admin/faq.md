@@ -65,3 +65,8 @@ If you're absolutely keen it, you could overwrite the React component responsibl
 ## I want to make a change to the schema and use it in the product detail page (PDP)
 
 There's an extension to our [example plugin tutorial](/developer/tutorial/plugin-intro-1.md), that describes how to extend the product schema for [displaying a Google Map in the PDP](/developer/tutorial/extending-product-schema-location-map.md).
+
+## How can I put products into categories / sub-categories?
+
+Categorizing products is a very common scenario, although the way categories are supposed to behave may vary greatly from shop to shop. This is the reason why Reaction Commerce comes up with a very broad and generic concept of clustering products: ** Tags **.
+Click [here](/admin/tagging.md) for a detailed introduction into the tagging concept from the viewpoint of a shop admin.
