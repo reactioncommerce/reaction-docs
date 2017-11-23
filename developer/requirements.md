@@ -59,6 +59,11 @@ echo "ulimit -n 65536 65536" >> .bashrc
 source .bashrc
 ```
 
+
+**Notice:** It happened from time to time that these instructions didn't work in some circumstances. However, sometimes the issue could be solved through a dedicated launcher script rather than the bash approach described above. For more infomation, see this [Gist](https://gist.github.com/abernix/a7619b07b687bb97ab573b0dc30928a0).
+
+** Verify successful increase of file limits **
+
 You can always check you file limits with the line:
 
     ulimit -n
