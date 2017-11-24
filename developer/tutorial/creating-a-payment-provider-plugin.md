@@ -70,7 +70,7 @@ component, it takes the data provided in the component and makes the call to the
 
 ## Checkout
 
-In this project the payment form is implemented in `templates/cart/checkout/payment/methods/generic`.
+In this project the payment form is implemented in `/imports/plugins/included/payments-example/client/checkout/example.[html|js]`.
 The HTML template is just a standard Credit Card entry form with standard validation.
 You probably will want to look at the code in `Autoform.hooks` because
 here is where the `authorize` function is called. You may want to change
