@@ -68,5 +68,5 @@ There's an extension to our [example plugin tutorial](/developer/tutorial/plugin
 
 ## How can I put products into categories / sub-categories?
 
-Categorizing products is a very common scenario, although the way categories are supposed to behave may vary greatly from shop to shop. This is the reason why Reaction Commerce comes up with a very broad and generic concept of clustering products: ** Tags **.
+Categorizing products is a very common scenario, although the way categories are supposed to behave may vary greatly from shop to shop. This is the reason why Reaction Commerce comes up with a very broad and generic concept of clustering products: **Tags**.
 Click [here](/admin/tagging.md) for a detailed introduction into the tagging concept from the viewpoint of a shop admin.

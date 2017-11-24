@@ -18,11 +18,11 @@ To start, let's build a tagging hierarchy that looks like this:
 
 ### Step 1: Create the tag hierarchy in admin backend
 
-** Login to backend to create the top & second-level hierarchy: **
+**Login to backend to create the top & second-level hierarchy:**
 
 ![Screenshot](/assets/admin-tagging-step-1.jpg)
 
-** Creating the third-level tags: **
+**Creating the third-level tags:**
 
 ![Screenshot](/assets/admin-tagging-step-2.jpg)
 
@@ -32,7 +32,7 @@ To start, let's build a tagging hierarchy that looks like this:
 After creating the tags (read: product categories), we need to tell the products which
 category they belong to. If you like your product to be found regardless if one searches for a category that is a direct parent or an indirect ancestor, you need to ensure that the product gets assigned all tag names up to the root tag assigned.
 
-** Assigning tag names to products: **
+**Assigning tag names to products:**
 
 ![Screenshot](/assets/admin-tagging-step-3.jpg)
 
@@ -41,6 +41,6 @@ category they belong to. If you like your product to be found regardless if one 
 
 After publishing the changes, shop visitors will be able browse product categories via navigation bar.
 
-** The result: **
+**The result:**
 
 ![Screenshot](/assets/admin-tagging-step-4.jpg)
