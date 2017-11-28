@@ -3,7 +3,12 @@
 In any web framework, "routes" are one of the core elements of what happens on a website. Certainly rendering content
 when a user hits a particular URL is a majority of what happens in web development.
 
-Reaction uses [React Router](https://reacttraining.com/react-router/) for it's routing and discussing all the specifics of how this works is beyond the scope of this document. However, to add simple routes it's not necessary to understand that much about React Router. One important element to understand is that Reaction stores all it's Routes in the "Registry" in the database, which allows packages to dynamically add routes along with their functionality, and even override or remove existing routers. For more in-depth coverage of Routing you will want to consult the main Reaction docs, but one thing to understand is that a customized version of React Router is available globally as `Reaction.Router`.
+Reaction uses the [React Router](https://www.npmjs.com/package/react-router) package for routing. To get started with routing in Reaction, here are two important elements to understand:
+
+1. Reaction stores all its Routes in the "Registry" in the database. This allows packages to dynamically add routes along with their functionality, and even override or remove existing routers.
+2. The customized version of React Router is available globally as `Reaction.Router`.
+
+For more in-depth coverage, consult the main Reaction documentation on [Routing](/developer/architecture/routing.md) and the [React Router documentation](https://reacttraining.com/react-router/web/guides/philosophy).
 
 But we are going to keep it at its most simple and just add a single new route which will be available to anybody. Bee's
 Knees wants to add the ubiquitous "About" page to their site and wants to show essentially a static page there.
