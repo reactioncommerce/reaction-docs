@@ -163,6 +163,7 @@ To get all application logs since your app's last startup:
 
 ```sh
 reaction logs --app <appname>
+reaction logs -a <appname>
 ```
 
 Hint: to get a list of all apps you have access to, run `reaction apps list`
