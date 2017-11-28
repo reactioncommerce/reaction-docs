@@ -57,7 +57,10 @@ _Workflow processes_ and _workflow steps_ are serving different needs, which is 
   * The name of the React component that renders the footer for this _workflow process_.
 
 `enabled`
-  * Wether this _workflow process_ should be enabled or not.
+  * Whether this _workflow process_ should be enabled or not.
+
+`priority`
+*  This field denotes which _workflow process_ will be used when there're multiple _workflow processes) with the same key structure (layout, workflow). Lower values have higher precedence.
 
 ### Workflow step properties
 `workflow`
@@ -70,7 +73,7 @@ _Workflow processes_ and _workflow steps_ are serving different needs, which is 
   * The name of the [Blaze](http://docs.meteor.com/#/full/blaze_render) template that renders the content for this _workflow step_.
 
 `enabled`
-  * Wether this _workflow step_ should be enabled or not
+  * Whether this _workflow step_ should be enabled or not
 
 ### Notices
 * At any given time, only one _Global Layout_ can be active. See also `layout` property above.
@@ -79,7 +82,7 @@ _Workflow processes_ and _workflow steps_ are serving different needs, which is 
 
 ### Implementation details:
 
-* Layouts are meant to be created using the Package Registry. During initialization, the _workflow processes_ are cloned to the Shops collection which is where the application refers to them at runtime. Contrary, the _workflow steps_ are not cloned to the Shops collection.
+* Layouts are meant to be created using the Package Registry. During initialization, the _workflow processes_ are cloned to the Shops collection which is where the application refers to them at runtime. On the other hand, the _workflow steps_ are not cloned to the Shops collection.
 
 * It's perfectly legal to have a workflow process **without** a corresponding workflow step. This just means that the rendered _Container_ does not have children that are dependent on the state of the _workflow process_.
 
@@ -87,7 +90,7 @@ _Workflow processes_ and _workflow steps_ are serving different needs, which is 
 
 * The _workflow steps_ will be rendered with the `reactionTemplate` Meteor helper.
 
-* The Registry serves as the "source of truth", allowing customizations to be made directly to the individual shops. In the case where we have two _workflow processes_ with the same key structure (`layout`, `workflow`), the array is loaded in reverse order, so that the newest layout will be used.
+* The Registry serves as the "source of truth", allowing customizations to be made directly to the individual shops through `Shops.layout`.
 
 ## Changing the global layout
 
