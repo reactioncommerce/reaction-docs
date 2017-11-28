@@ -24,7 +24,7 @@ npm install -g reaction-cli
 `reaction-cli` will prompt you to install Meteor, if you have not already installed it.
 
 ```sh
-curl https://install.meteor.com/ | sh
+curl "https://install.meteor.com/?release=1.5.5.2" | sh
 ```
 
 ### Build Tools
