@@ -26,7 +26,7 @@ Under Actions, you can find important tasks that are used on a daily basis:
 
 Under Settings, you can view the rest of your store's feature settings, which you may access, configure, and customize to your heart’s content:
 
--   [Login services](/admin/dashboard/login-services.md) - Enable or disable customer login via social media
+-   [Login services](/admin/dashboard/login-auth-services.md) - Enable or disable customer login via social media
 -   [Social settings](/admin/dashboard/social-settings.md) - Set your shop's Facebook, Twitter, Pinterest, and Google Plus accounts
 -   [Shop](/admin/dashboard/shop-admin.md) - Configure your shop's name, address, payment methods, and other settings
 -   [Email](/admin/dashboard/email-admin.md) - Manage your mail setup and view email logs
