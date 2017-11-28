@@ -1,34 +1,34 @@
-# Frequently Asked Questions
+# Frequently asked questions
 
 ## Installation
 
-## General
+## Admin
 
-Q: Where is the admin panel?
+### Where is the admin panel?
 
-A: The login panel is visible on the right side once you login as a user with admin credentials
+The login panel is visible on the right side, once you login as a user with admin credentials. For more on navigating admin, read our [Reaction Commerce Store Operator Guide](/admin/dashboard.md).
 
-Q: What's the admin login?
+### What's the admin login?
 
-A: By default the admin login will be username: `admin@localhost` and password `r3@cti0n`
+By default, the admin login will be username: `admin@localhost` and password `r3@cti0n`.
 
 ## Architecture
 
-Q: What about SEO?
+### What about SEO?
 
-A: Since 2014 [Google has indexed Javascript when crawling websites](https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html).
-Additionally Reaction offers a couple of options for pre-rendering (rendering plain HTML for crawlers, while leaving dynamic sites for users).
-One is a [package we maintain](https://github.com/ongoworks/spiderable) called Spiderable. Also included in the base
-Reaction is support for a service called [Prerender.io](https://prerender.io/) which is a commercial service which will do 
-the same thing, just provide a key to your site and Prerender will handle the pre-rendering.
+Since 2014 [Google has indexed JavaScript when crawling websites](https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html). Reaction, however, offers page pre-rendering and product detail page metatag generation out of the box to ensure products are indexed well for web crawlers and search engines:
 
-In addition `Meta` tags are added automatically for products using the [dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and
-`details` fields of the product to render SEO-friendly data. You may need to use a tool like "SEO Inspector" to see these values. This
-should meet the needs of most crawlers.
+1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. ALl you have to do is provide a key to your site and Prerender will handle the pre-rendering.
 
-## Creating Plugins
+2. [Spiderable](https://github.com/ongoworks/spiderable): A now-deprecated solution is our Atmosphere package called (Spiderable)[https://atmospherejs.com/ongoworks/spiderable] that pre-renders Meteor applications for search engines.
+
+3. [meteor-dochead](https://github.com/kadirahq/meteor-dochead): Automatically add `<meta>` tags are for products using the [meteor-dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data.
+
+## Plugins
 
 ## Extending Reaction
+
+## More
 
 ### I have another question. Where's the best place to ask it?
 
