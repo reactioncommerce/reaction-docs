@@ -1,6 +1,6 @@
 # Reaction Platform
 
-The following documentation is for paid users of [Reaction Platform](getrxn.io/reaction-platform). 
+The following documentation is for paid users of [Reaction Platform](getrxn.io/reaction-platform).
 
 The `reaction-cli` incorporates functionality for any team to deploy Reaction Commerce to multiple environments. [Visit reactioncommerce.com](http://getrxn.io/reaction-platform) to get a demo.
 
@@ -156,6 +156,16 @@ reaction deploy --name <appname>
 ```
 
 Expect to receive an email with the completed build status (failed or deployed).
+
+## logs
+
+To get all application logs since your app's last startup:
+
+```sh
+reaction logs --app <appname>
+```
+
+Hint: to get a list of all apps you have access to, run `reaction apps list`
 
 **CI/CD Configuration**
 
