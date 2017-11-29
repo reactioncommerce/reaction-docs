@@ -11,8 +11,7 @@ A: To start hacking Reaction, you should probably have a basic understanding of 
 - Some knowledge of Meteor, especially an understanding of [Publications and Subscriptions](https://guide.meteor.com/data-loading.html)
 - A front-end framework/library like React
 
-Reaction tried to be as modular as possible. All user customizations are intended to live in plugins. But this flexibility comes at a cost: There are quite a few internal development APIs to know of when doing certain things like implementing a custom payment provider. It can sometimes be a bit daunting for newbies trying to do their first baby steps with Reaction. So it could absolutely be a viable first approach to just hack Reaction core directly without bothering too much with plugins, APIs, whatsoever. This makes it easier for you to get familiar with the inner workings of Reaction and leaves room for later improvement, when you're ready for the next step: Building a plugin, which rewards you with a secure upgrade path.
-See [here](/developer/tutorial/plugin-intro-1.md) for a more detailed explanation into the plugin topic.
+Reaction tries to be as modular as possible. All user customizations are intended to live in plugins, as they provide a secure upgrade path when new versions are rolled out. See [here](/developer/tutorial/plugin-intro-1.md) for a more detailed explanation into the plugin topic.
 
 Q: Where is the admin panel?
 
@@ -29,7 +28,7 @@ Q: What about SEO?
 A: Since 2014 [Google has indexed Javascript when crawling websites](https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html).
 Additionally Reaction offers a couple of options for pre-rendering (rendering plain HTML for crawlers, while leaving dynamic sites for users).
 One is a [package we maintain](https://github.com/ongoworks/spiderable) called Spiderable. Also included in the base
-Reaction is support for a service called [Prerender.io](https://prerender.io/) which is a commercial service which will do
+Reaction has support for a service called [Prerender.io](https://prerender.io/) which is a commercial service which will do
 the same thing, just provide a key to your site and Prerender will handle the pre-rendering.
 
 In addition `Meta` tags are added automatically for products using the [dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and
