@@ -2,8 +2,7 @@
 
 ## What is a "Payment Provider"
 
-Payment Providers are companies that provide a gateway between e-commerce
-software customer payment. In the U.S. that largely means credit cards
+Payment Providers are companies that provide a gateway between ecommerce software customer payment. In the U.S. that largely means credit cards
 but it can also mean something like a PayPal account or in other parts
 of the world it could mean cards linked to Kiosks or even BitCoin.
 Reaction doesn't really care what you do here, you could even not
