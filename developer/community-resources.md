@@ -47,7 +47,12 @@ Mahalo for your kokua, [Curran!](https://github.com/curranabell)
 
 #### loanlaux/reaction-hydrotik-plugin
 
-This is an up-to-date fork of hydrotik/reaction-hydrotik-plugin that works with current Reaction version.
+This is an up-to-date fork of hydrotik/reaction-hydrotik-plugin that works with current Reaction version. A visually appealing example on how to customize the landing page of a Reaction shop.
+
+Prerequisites:
+
+- Uses additional npm packages. Open a console in project's root directory and execute these commands: `npm install --save react-slick slick-carousel`
+- Move files in folder <plugin-dir>/public to your root public folder
 
 Requirements:
 - Basic LESS/CSS knowledge
@@ -56,6 +61,7 @@ Requirements:
 Learning content:
 - Customize the visual appearance of Reaction
 - Use Reaction's component API to gain control over rendered HTML markup
+- Shows how to integrate third-party React components
 
 Kudos for [Loan!](https://github.com/loanlaux)
 
@@ -66,14 +72,6 @@ This plugin is **work-in-progress**, but does address a very common request: A R
 [https://github.com/boomerdigital/reaction-subscription-billing](https://github.com/boomerdigital/reaction-subscription-billing)
 
 Thank you for helping our ecosystem to grow, [Daniel!](https://github.com/dhonig)
-
-
-#### boomerdigital/reaction-category-products
- https://github.com/boomerdigital/reaction-category-products
-
-
-Keep up the good work, [Allie!](https://github.com/acreilly)
-
 
 ## REST-API for Reaction applications
 DDP is great and good, but ever found yourself in need for a traditional REST API? Here's how to get your API off the ground:
@@ -133,3 +131,8 @@ The plugin is based off of our [reaction example plugin](https://github.com/reac
 [https://github.com/hydrotik/reaction-hydrotik-plugin](https://github.com/hydrotik/reaction-hydrotik-plugin)
 
 Thanks for riding with us, [Donovan!](https://github.com/hydrotik)
+
+
+
+## One more thing
+We all love [awesome lists](https://github.com/iamchathu/awesome-reactioncommerce), right?
