@@ -1,6 +1,6 @@
 # Curated list of community-provided resources for Reaction
 
-This page is here to guide you through the Reaction ecosystem. As we've stated before, we'd not be here without our very engaging community. Lots of people are continuing to contribute to core development, but also supplying other members of the community with valuable plugins, tutorials or learning material. Here we'd like to introduce you to some of the awesome things we've seen out there.
+This page is here to guide you through the Reaction ecosystem. As we've stated before, we'd not be here without our very engaged community. Lots of people are continuing to contribute to core development, but also supplying other members of the community with valuable plugins, tutorials or learning material. Here we'd like to introduce you to some of the awesome things we've seen out there.
 
 _**Note:** If you miss something that's not listed here and want to see it here, please let us [know](mailto:hello@reactioncommerce.com)._
 
@@ -8,7 +8,7 @@ _**Note:** If you miss something that's not listed here and want to see it here,
 
 #### reaction-generic-theme
 
-This is a theming plugin directly targeted at those who like to change the theme for a Reaction installation. It's a great way to get accustomed to LESS variables that builds the foundation of Reaction's color palette. It also allows to override styles for more specific parts of the application, like navigation, buttons and the like.
+This is a theming plugin directly targeted at those who like to change the theme for a Reaction installation. It's a great way to get accustomed to LESS variables that builds the foundation of Reaction's color palette. It also allows you to override styles for more specific parts of the application, like navigation, buttons and the like.
 
 [https://github.com/joshuacox/reaction-generic-theme](https://github.com/joshuacox/reaction-generic-theme)
 
@@ -77,7 +77,9 @@ Thank you for helping our ecosystem to grow, [Daniel!](https://github.com/dhonig
 DDP is great and good, but ever found yourself in need for a traditional REST API? Here's how to get your API off the ground:
 [https://github.com/kahmali/meteor-restivus](https://github.com/kahmali/meteor-restivus)
 
-As a bonus, you will want to check out the [Swagger add-on](https://github.com/apinf/restivus-swagger).
+As a bonus on top of it, you will want to check out the [Swagger add-on](https://github.com/apinf/restivus-swagger).
+
+Another package for building REST APIs is [simple:rest](https://atmospherejs.com/simple/rest).
 
 
 ## Other resources
