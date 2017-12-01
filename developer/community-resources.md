@@ -2,7 +2,7 @@
 
 This page is here to guide you through the Reaction ecosystem. As we've stated before, we'd not be here without our very engaged community. Lots of people are continuing to contribute to core development, but also supplying other members of the community with valuable plugins, tutorials or learning material. Here we'd like to introduce you to some of the awesome things we've seen out there.
 
-_**Note:** If you miss something that's not listed here and want to see it here, please let us [know](mailto:hello@reactioncommerce.com)._
+_**Note:** If you miss something that's not listed here and want to see it here, you're invited to open a [pull request](https://github.com/reactioncommerce/reaction-docs/pull/new/master)._
 
 ## Reaction plugins in no particular order
 
