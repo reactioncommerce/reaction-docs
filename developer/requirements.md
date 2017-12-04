@@ -23,8 +23,18 @@ npm install -g reaction-cli
 
 `reaction-cli` will prompt you to install Meteor, if you have not already installed it.
 
+On Mac OS X and Linux:
+
 ```sh
 curl https://install.meteor.com/ | sh
+```
+
+On Windows:
+
+First install [Chocolatey](https://chocolatey.org/), then run this command using an Administrator command prompt:
+
+```sh
+choco install meteor
 ```
 
 ### Build Tools

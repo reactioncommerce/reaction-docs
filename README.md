@@ -6,29 +6,37 @@ All pushed branches are published to <https://docs.reactioncommerce.com>
 
 ## Contributing
 
-Pull requests should be made to the `master` branches.
+1. Click on `Edit on GitHub` from any Reaction Commerce documentation page.
+2. Click on the :pen: to enter edit mode.
+3. Make changes and commit changes with the `Create a new branch for this commit and start a pull request.` option.
+4. Make a pull request against the `master` branch.
 
-### Style
+## Linting 
 
-Reaction Docs uses [remark-lint](https://github.com/wooorm/remark-lint) for linting Markdown style. You can install and use it in this repo by running:
+Reaction Docs uses [remark-lint](https://github.com/wooorm/remark-lint) for linting Markdown style:
+- Install command-line tool: `npm install remark-lint` and run `npm run lint` or `npm run lint-fix`
+- Install a code editor integration: [linter-markdown](https://atom.io/packages/linter-markdown) for Atom and [more supported editors](https://github.com/wooorm/remark-lint#editor-integrations).
 
-```sh
-npm install
-```
+## Linking
 
-If you're using [Atom](https://atom.io), you can install the supported plugin [linter-markdown](https://atom.io/packages/linter-markdown) to get linting feedback as you write. If you're using a different editor, see the list of [available editor integrations](https://github.com/wooorm/remark-lint#editor-integrations).
+1. To link from one documentation page to another, always use `.md` file extension:
 
-### Linting
+```[Store Operator Guide](/admin/dashboard.md)```
+Example: [Store Operator Guide](/admin/dashboard.md)
 
-```sh
-# get lint results for the whole repo in your console
-npm run lint
+2. To link to a specific point within the same page, use a `#` anchor tag:
 
-# fix anything that can be fixed automatically
-npm run lint-fix
-```
+```[Testing](#testing)```
+Example: [Testing](#testing)
 
-### Testing
+3. To link to a specific point in a different page, use both `.md` and `#`:
+
+```[Variable naming convention](/developer/styleguide.md#variables)```
+Example: [Variable naming convention](/developer/styleguide.md#variables)
+
+###
+
+## Testing
 
 You can view and test your branch live on <https://docs.reactioncommerce.com/>.
 
