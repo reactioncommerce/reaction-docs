@@ -2,7 +2,7 @@
 
 ### What do I need to know to work with Reaction?
 
-To start hacking Reaction, you should probably have a basic understanding of the following technologies:
+To start customizing Reaction, you should probably have a basic understanding of the following technologies:
 - JavaScript, specifically ES6
 - HTML/CSS
 - Some knowledge of Meteor, especially an understanding of [Publications and Subscriptions](https://guide.meteor.com/data-loading.html)
