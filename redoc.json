@@ -146,6 +146,12 @@
     "repo": "reaction-docs",
     "docPath": "developer/getting-started.md"
   }, {
+    "class": "guide-nav-item",
+    "alias": "community-resources",
+    "label": "Developer",
+    "repo": "reaction-docs",
+    "docPath": "developer/community-resources.md"
+  }, {
     "class": "guide-sub-nav-item",
     "alias": "requirements",
     "label": "Requirements",
@@ -290,6 +296,12 @@
    "label": "Extending the product schema for Google map",
    "repo": "reaction-docs",
    "docPath": "developer/tutorial/extending-product-schema-location-map.md"
+  }, {
+  "class": "guide-sub-nav-item",
+  "alias": "testing-tutorial",
+  "label": "Tutorial: Writing your first test",
+  "repo": "reaction-docs",
+  "docPath": "developer/tutorial/testing-tutorial.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "appearance",
