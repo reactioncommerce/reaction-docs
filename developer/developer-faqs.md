@@ -11,7 +11,7 @@ Ecommerce and marketplace sites from around the world are using Reaction in prod
 ### I cloned the Reaction repo but when I run `meteor` it doesn't work
 
 You need to install and use the Reaction command line tool in order to run Reaction. It does some work building the application
-before the app starts that is not optional. You can install the CLI by doing `npm install -g reaction-cli`.
+before the app starts that is not optional. You can install the CLI by doing `npm install -g reaction-cli`. Then you should be able to run `meteor npm install` and then start the app by running `reaction run` or just `reaction`.
 
 ## Admin
 
