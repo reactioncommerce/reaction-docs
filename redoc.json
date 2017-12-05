@@ -146,9 +146,9 @@
     "repo": "reaction-docs",
     "docPath": "developer/getting-started.md"
   }, {
-    "class": "guide-nav-item",
+    "class": "guide-sub-nav-item",
     "alias": "community-resources",
-    "label": "Developer",
+    "label": "Community resources",
     "repo": "reaction-docs",
     "docPath": "developer/community-resources.md"
   }, {
