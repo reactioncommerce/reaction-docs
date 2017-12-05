@@ -14,10 +14,19 @@ Reaction tries to be as modular as possible. All user customizations are intende
 
 Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://reactioncommerce.com/community-showcase).
 
+
+## Installation
+
+### I cloned the Reaction repo but when I run `meteor` it doesn't work
+
+You need to install and use the Reaction command line tool in order to run Reaction. It does some work building the application
+before the app starts that is not optional. You can install the CLI by doing `npm install -g reaction-cli`. Then you should be able to run `meteor npm install` and then start the app by running `reaction run` or just `reaction`.
+
 ### Do you have a list of community provided plugins, themes or other resources?
 
 We compiled a curated list of community projects that can be found in the wild. Over time this list will continue to grow and some of the project's may become deprecated. Please drop us a note if you spot new awesome contributions out there!
 [Community Resources](/developer/community-resources.md).
+
 
 ## Admin
 
