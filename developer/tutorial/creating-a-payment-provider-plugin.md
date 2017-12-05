@@ -89,11 +89,11 @@ Just the one method is called from the client-side: `authorize`, and that method
 
 It is likely that your payment method has some parameters that need to
 be customized and should not be stored in code. Typically this includes
-usernames, passwords, API keys, etc. The template provided at
-`template/settings` provides a form for entering in this information.
-The provided form just takes one parameter, an API key (which of course
-is not needed or used). You can add any additional parameters required
-here.
+usernames, passwords, API keys, etc. The React component provided at
+`/imports/plugins/custom/<your-plugin-name>/client/settings/components/exampleSettingsForm.js` provides a form for entering in this information. The data to display the form is injected into the component through the container in /imports/plugins/included/<your-plugin-name>/client/settings/containers/exampleSettingsFormContainer.js
+The form is passed one settings parameter: an API key (which of course
+is not needed or used for this particular example plugin, because it doesn't reach out to third-party APIs). You can add any additional parameters required
+here. Additionally, an array of supported payment actions (authorize, capture, refund) is passed to render checkboxes for enabling, disabling them.
 
 ## Server-side
 
