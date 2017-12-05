@@ -1,6 +1,14 @@
-# Frequently asked questions
-
+# Frequently Asked Questions
 ## General
+### What do I need to know to work with Reaction?
+
+To start customizing Reaction, you should probably have a basic understanding of the following technologies:
+- JavaScript, specifically ES6
+- HTML/CSS
+- Some knowledge of Meteor, especially an understanding of [Publications and Subscriptions](https://guide.meteor.com/data-loading.html)
+- A front-end framework/library like React
+
+Reaction tries to be as modular as possible. All user customizations are intended to live in plugins, as they provide a secure upgrade path when new versions are rolled out. See [here](/developer/tutorial/plugin-intro-1.md) for a more detailed explanation into the plugin topic.
 
 ### What sites are built on Reaction Commerce?
 
@@ -19,9 +27,7 @@ The login panel is visible on the right side, once you login as a user with admi
 
 ### What's the admin login?
 
-By default, the admin login will be username: `admin@localhost` and password `r3@cti0n`.
-
-## Architecture
+By default the admin login will be username: `admin@localhost` and password `r3@cti0n`
 
 ### What about SEO?
 
