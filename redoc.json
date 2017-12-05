@@ -212,7 +212,7 @@
     "repo": "reaction-docs",
     "docPath": "developer/code-reviews.md"
   }, {
-    "class": "guide-nav-item",
+    "class": "guide-sub-nav-item",
     "alias": "how-to-change-the-favicon",
     "label": "Changing the favicon",
     "repo": "reaction-docs",
