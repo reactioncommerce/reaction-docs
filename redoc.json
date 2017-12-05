@@ -33,6 +33,12 @@
     "docPath": "admin/navigation-bar-and-grid.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "tagging",
+    "label": "Introduction into tagging concept",
+    "repo": "reaction-docs",
+    "docPath": "admin/tagging.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "orders-admin",
     "label": "Orders",
     "repo": "reaction-docs",
@@ -139,6 +145,12 @@
     "label": "Developer",
     "repo": "reaction-docs",
     "docPath": "developer/getting-started.md"
+  }, {
+    "class": "guide-nav-item",
+    "alias": "community-resources",
+    "label": "Developer",
+    "repo": "reaction-docs",
+    "docPath": "developer/community-resources.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "requirements",
@@ -278,6 +290,18 @@
     "label": "Creating a Payment Provider",
     "repo": "reaction-docs",
     "docPath": "developer/tutorial/creating-a-payment-provider-plugin.md"
+  }, {
+   "class": "guide-sub-nav-item",
+   "alias": "extending-product-schema-location-map",
+   "label": "Extending the product schema for Google map",
+   "repo": "reaction-docs",
+   "docPath": "developer/tutorial/extending-product-schema-location-map.md"
+  }, {
+  "class": "guide-sub-nav-item",
+  "alias": "testing-tutorial",
+  "label": "Tutorial: Writing your first test",
+  "repo": "reaction-docs",
+  "docPath": "developer/tutorial/testing-tutorial.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "appearance",

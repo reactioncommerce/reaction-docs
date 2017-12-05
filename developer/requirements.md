@@ -23,8 +23,18 @@ npm install -g reaction-cli
 
 `reaction-cli` will prompt you to install Meteor, if you have not already installed it.
 
+On Mac OS X and Linux:
+
 ```sh
 curl https://install.meteor.com/ | sh
+```
+
+On Windows:
+
+First install [Chocolatey](https://chocolatey.org/), then run this command using an Administrator command prompt:
+
+```sh
+choco install meteor
 ```
 
 ### Build Tools
@@ -58,6 +68,11 @@ ulimit -n 65536 65536
 echo "ulimit -n 65536 65536" >> .bashrc
 source .bashrc
 ```
+
+
+**Notice:** It happened from time to time that these instructions didn't work in some circumstances. However, sometimes the issue could be solved through a dedicated launcher script rather than the bash approach described above. For more infomation, see this [Gist](https://gist.github.com/abernix/a7619b07b687bb97ab573b0dc30928a0).
+
+** Verify successful increase of file limits **
 
 You can always check you file limits with the line:
 

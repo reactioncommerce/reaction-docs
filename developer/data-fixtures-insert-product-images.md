@@ -24,9 +24,20 @@ Notice: Because the images can only be loaded through the Meteor Assets API, it'
 ## Step 2: Import the images into Media collection during application startup.
 
 Every time the application starts, we want to check if each product has its corresponding image imported already. That can be achieved through adding a Reaction hook:
+
 **/server/init.js**
 ```js
 import { Hooks } from "/server/api";
+import { Products, Media } from "/lib/collections";
+
+
+function getTopVariant(productId) {
+  const topVariant = Products.findOne({
+    "ancestors": { $in: [productId] },
+    "ancestors.1": { $exists: false }
+  });
+  return topVariant;
+}
 
 Hooks.Events.add("afterCoreInit", () => {
   const products = Products.find({ type: "simple" }).fetch();

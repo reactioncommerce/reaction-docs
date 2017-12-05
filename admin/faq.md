@@ -61,3 +61,16 @@ Longer answer: By design you can't, because presentation and data should be sepa
 "Right, I got all your points, but I really need to have more control over how the content is rendered."
 
 If you're absolutely keen it, you could overwrite the React component responsible for rendering [product properties](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-detail-simple/client/components/productField.js). You'll find an example on how to overwrite ReactionCommerce's built-in components [here](/developer/tutorial/extending-product-schema-location-map.md).
+
+## I want to make a change to the schema and use it in the product detail page (PDP)
+
+There's an extension to our [example plugin tutorial](/developer/tutorial/plugin-intro-1.md), that describes how to extend the product schema for [displaying a Google Map in the PDP](/developer/tutorial/extending-product-schema-location-map.md).
+
+## How can I put products into categories / sub-categories?
+
+Categorizing products is a very common scenario, although the way categories are supposed to behave may vary greatly from shop to shop. This is the reason why Reaction Commerce comes up with a very broad and generic concept of clustering products: **Tags**.
+Click [here](/admin/tagging.md) for a detailed introduction into the tagging concept from the viewpoint of a shop admin.
+
+## I want to use XYZ payment/shipping provider. How can I do this?
+Reaction features a couple of built-in payment providers: PayPal Flow, PayPal Express, Stripe, Braintree, Authorize.net and others. As far as shipping is concerned, we've these out-of-the-box plugins: ShippingRates and [Shippo](https://goshippo.com/).
+When implementing your own shop you may encounter situations where you need to bring your own solutions into the game. Because this is such a common use case, Reaction's answer to this question is built upon two pillars: The _plugin concept_ and the _internal development payment/shipping APIs_. If you're interested in learning more, head over to our [tutorial](/developer/tutorial/creating-a-payment-provider-plugin.md) that teaches how to implement an exemplary payment provider plugin.
