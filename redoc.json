@@ -211,8 +211,13 @@
     "label": "Pull request reviews",
     "repo": "reaction-docs",
     "docPath": "developer/code-reviews.md"
-  },
-  {
+  }, {
+    "class": "guide-nav-item",
+    "alias": "how-to-change-the-favicon",
+    "label": "Changing the favicon",
+    "repo": "reaction-docs",
+    "docPath": "developer/how-to-change-the-favicon.md"
+  }, {
     "class": "guide-nav-item",
     "alias": "tutorial",
     "label": "Customization Guide",
