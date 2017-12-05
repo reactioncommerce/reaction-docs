@@ -6,7 +6,7 @@ _**Note:** If you miss something that's not listed here and want to see it here,
 
 ## Reaction plugins in no particular order
 
-#### reaction-generic-theme
+### reaction-generic-theme
 
 This is a theming plugin directly targeted at those who like to change the theme for a Reaction installation. It's a great way to get accustomed to LESS variables that builds the foundation of Reaction's color palette. It also allows you to override styles for more specific parts of the application, like navigation, buttons and the like.
 
@@ -22,7 +22,7 @@ Learning content:
 Kudos for [Joshua Cox!](https://github.com/joshuacox)
 
 
-#### customReactionTheme
+### customReactionTheme
 
 Another plugin that is concerned with customizing the Shop's CSS styling, but also shows how to render own markup for different parts of the shop, like the landing page. It does so through usage of Reaction's [component API](http://api.docs.reactioncommerce.com/Components.html)
 
@@ -45,7 +45,7 @@ Learning content:
 Mahalo for your kokua, [Curran!](https://github.com/curranabell)
 
 
-#### loanlaux/reaction-hydrotik-plugin
+### loanlaux/reaction-hydrotik-plugin
 
 This is an up-to-date fork of hydrotik/reaction-hydrotik-plugin that works with current Reaction version. A visually appealing example on how to customize the landing page of a Reaction shop.
 
@@ -65,7 +65,7 @@ Learning content:
 
 Kudos for [Loan!](https://github.com/loanlaux)
 
-#### boomerdigital/reaction-subscription-billing
+### boomerdigital/reaction-subscription-billing
 
 This plugin is **work-in-progress**, but does address a very common request: A Reaction  plugin that does support the most popular subscription billing features. This is because subscriptions play an important and ever increasing role in the ecommerce landscape.
 
@@ -84,7 +84,7 @@ Another package for building REST APIs is [simple:rest](https://atmospherejs.com
 
 ## Other resources
 
-#### reactioncommerce-json-importer
+### reactioncommerce-json-importer
 A small node package, that allows to convert a generic JSON product format into Reaction's product format.
 [https://github.com/carlos-olivera/reactioncommerce-json-importer](https://github.com/carlos-olivera/reactioncommerce-json-importer)
 
@@ -95,7 +95,7 @@ Below there's a list of older plugins, that are may be outdated or not be mainta
 
 
 
-#### reaction-cod (cash-on-delivery payment provider plugin)
+### reaction-cod (cash-on-delivery payment provider plugin)
 **Status: non-working**
 
 This is an outdated, non-working cash-on-delivery plugin written in CoffeeScript, which is still using Blaze templates. The good news is, that we're in the way of getting a COD-plugin out the door, that uses React components.
@@ -109,7 +109,7 @@ Requirements:
 
 Many thanks to [Goutham!](https://github.com/Gouthamve)
 
-#### regionalization
+### regionalization
 
 **Status: non-working**
 
@@ -124,7 +124,7 @@ Requirements:
 Thank you for your support, [Daniel!](https://github.com/danielsouzapinn)
 
 
-#### hydrotik/reaction-hydrotik-plugin
+### hydrotik/reaction-hydrotik-plugin
 
 **Status: non-working**
 
