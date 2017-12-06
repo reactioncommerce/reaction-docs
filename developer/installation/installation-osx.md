@@ -1,40 +1,58 @@
-# Installation for Windows
+# Installation for OSX
+
+[![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
 
 ## Install prerequisites:
-
-**Note: These commands all assume you are running them from an administrator shell**
 
 ### Install node
 Download and run the installer from the [NodeJs site](https://nodejs.org)
 
-### Install Chocolately
+### Install Xcode
+Download and run the installer from [Apple Developer Site](https://developer.apple.com/download/)
 
-Visit the [Chocolatey site](https://chocolatey.org/install) and follow the instructions
+Then from the command line run
 
+```sh
+xcode-select --install
+```
+
+### Install Homebrew
+
+(If you are uncomfortable just running a random script from Github, you can also visit the [Homebrew site](http://brew.sh/))
+
+```sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 ### Install Git
 
 ```sh
-choco install git
+brew install git
 ````
 
 ### Install Meteor
-```sh
-choco install meteor
-```
-
-### Install ImageMagick (Optional but recommended)
 
 ```sh
-choco install imagemagick
+curl https://install.meteor.com/ | sh
 ```
 
-### Install Windows Build Tools 2015
+### Increase your open file limit
+
+The Meteor development environment requires significantly more available files than are configured in macOS by default.
+
+See: <http://stackoverflow.com/a/27982223>
+
+Increase your file limits with these `terminal` commands.
 
 ```sh
-npm install -g windows-build-tools
+echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
+echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -w kern.maxfiles=65536
+sudo sysctl -w kern.maxfilesperproc=65536
+ulimit -n 65536 65536
+echo "ulimit -n 65536 65536" >> .bashrc
+source .bashrc
 ```
-
 
 ## Install Reaction
 
@@ -47,8 +65,6 @@ npm install -g reaction-cli
 
 ### Create your local Reaction installation
 
-You should preferably create a directory under your user, do not run this from the `\Windows\system32` directory as you won't have the correct permissions
-
 ```sh
 # clone Reaction, install NPM dependencies
 reaction init
@@ -59,7 +75,6 @@ If you don't want Reaction to be installed in the default `reaction` directory y
 specify a direction like
 ```sh
 reaction init my-new-reaction-project
-cd init my-new-reaction-project
 ```
 
 
@@ -74,8 +89,6 @@ reaction
 reaction run
 ```
 
-**Note that the first run can take a while as it downloads dependencies. This is especially true if you are not in North America**
-
 _The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
 
 ![](/assets/guide-installation-default-user.png)
@@ -89,6 +102,7 @@ To terminate `reaction` use `CTRL-c`.
 The `reaction` command line also accepts [Meteor command line options](http://docs.meteor.com/#/full/meteorhelp).
 
 `reaction` appends some commands to the default `meteor` command, it adds `--raw-logs` and uses the `settings/dev.settings.json` configuration by default. If you create a `settings/settings.json` it will use this file instead of the default.
+
 
 ### More commands
 
@@ -114,6 +128,7 @@ This will give you a fresh test dataset from `private/data`.
 ```sh
 reaction reset
 ```
+
 
 To just reset the database you can run
 
