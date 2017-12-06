@@ -165,6 +165,24 @@
     "docPath": "developer/installation.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "installation-osx",
+    "label": "Installation for OSX",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-osx.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-windows",
+    "label": "Installation for Windows",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-windows.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-linux",
+    "label": "Installation for Linux",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-linux.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "configuration",
     "label": "Configuration",
     "repo": "reaction-docs",
