@@ -5,9 +5,14 @@
 
 ### Install Node
 
-Download and run the installer from the [NodeJs site](https://nodejs.org)
+_Currently we recommend installing via a package manager_
 
-_(if you want to install via a package manager follow the instructions for your distro [here](https://nodejs.org/en/download/package-manager/))_
+1. Install Node via your package manager (apt, yum, pacman, etc). Find the instructions for your distro [here](https://nodejs.org/en/download/package-manager/))
+1. Correct the permissions so that you can install global packages without using `sudo`. (see other options for doing this [here](https://docs.npmjs.com/getting-started/fixing-npm-permissions))
+
+```sh
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+```
 
 
 ### Install Build Tools and Package Requirements
@@ -89,6 +94,8 @@ To learn more about the Reaction command-line-client visit the [CLI docs](/devel
 To learn how to manage your store as an admin user visit the [admin documentation](/admin/dashboard.md)
 
 To learn how to customize Reaction visit the [Customization Guide](/developer/tutorial/introduction.md)
+
+last_tested: Dec-8-2017
 
 
 
