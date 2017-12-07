@@ -153,12 +153,6 @@
     "docPath": "developer/community-resources.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "requirements",
-    "label": "Requirements",
-    "repo": "reaction-docs",
-    "docPath": "developer/requirements.md"
-  }, {
-    "class": "guide-sub-nav-item",
     "alias": "installation",
     "label": "Installation",
     "repo": "reaction-docs",
