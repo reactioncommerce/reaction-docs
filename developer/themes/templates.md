@@ -1,7 +1,7 @@
 
 ---
 **NOTE:**
-This page's content is deprecated and no longer relevant. Reaction is in the progress of completely eliminating all usages of Blaze technology and replace it through React components. Prolonged usage of Blaze templates will rule an upgrade path to newer Reaction versions out.
+This page's content is deprecated and no longer relevant. Reaction is in the progress of completely eliminating all usages of Blaze technology and replacing it through React components. Prolonged usage of Blaze templates will rule an upgrade path to newer Reaction versions out.
 
 ---
 
