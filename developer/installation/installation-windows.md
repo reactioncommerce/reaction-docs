@@ -66,7 +66,7 @@ cd reaction
 ```
 
 If you don't want Reaction to be installed in the default `reaction` directory you can
-specify a direction like
+specify a directory like
 ```sh
 reaction init my-new-reaction-project
 cd init my-new-reaction-project
