@@ -98,7 +98,10 @@ Congrats! Now you've created your first Reaction store. View the store by going 
 To terminate `reaction` use `CTRL-c`.
 
 To learn more about the Reaction command-line-client visit the [CLI docs](/developer/installation/reacion-cli,md)
+
 To learn how to manage your store as an admin user visit the [admin documentation](/admin/dashboard.md)
+
 To learn how to customize Reaction visit the [Customization Guide](/developer/tutorial/introduction.md)
+
 
 last_tested: Dec-7-2017
