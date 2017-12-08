@@ -1,80 +1,49 @@
-# Coding style guide
-
-A guide to working on code at Reaction, in bite-size steps!
-
-## Git: Issues, branches, commits
+# Git style guide
 
 Git version control is how we work together as a team. Naming branches and writing commit messages helps us keep a easy-to-understand history of the changes in the project.
 
-Follow these guidelines to make releases and code reviews smoother.
+## Naming Git branches
 
-1. Find the GitHub issue for what you're working on.
+Create a branch name, with the ID number of the GitHub issue, in the following style:
+`type-###-yourhandle-slug`. Example: `feat-123-impactmass-permissions`, `fix-222-spencern-shopify-hooks`
 
-2. Branch name: Create a branch name, with the ID number of the GitHub issue, in the following style:
-`yourhandle-type-###-slug`
+## Writing commit messages
 
-```
-spencern-feat-222-add-email
-machikoyasuda-docs-123-email
-impactmass-fix-341-email-retries
-```
+Make atomic commits in the [Git commit message guidelines from Angular.js](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits), with a `(type):` followed by `subject`.
 
-3. Make atomic commits in Angular.js style, with a `(scope)` and `subject`, in the following style:
+All of the types:
+- *feat*: A new feature
+- *fix*: A bug fix
+- *docs*: Documentation only changes
+- *style*: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- *refactor*: A code change that neither fixes a bug nor adds a feature
+- *perf*: A code change that improves performance
+- *test*: Adding missing or correcting existing tests
+- *chore*: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
-The subject line: Has a (type) and short description.
+Note the following styles:
+- Use the imperative, present tense: use "change", not "changed" nor "changes"
+- Do not capitalize first letter
+- No dot (.) at the end
+- Use `BREAKING CHANGES:` to note breaking changes
+
+Examples:
 ```
 (feat): add sendEmail() job
 (docs): add doc for sendEmailJob() method
-(fix): bug fix for issue
+(refactor): replace Blaze component with React component
+
+BREAKING CHANGES: remove Header Blaze template. To migrate to the React component, use HeaderComponent.
 ```
 
-The footer: Notes the issue number:
-```
-Closes #222
-```
+See more [examples from Angular.js](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.8sw072iehlhg).
 
-All of the types:
-- feat: A new feature
-- fix: A bug fix
-- docs: Documentation only changes
-- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- refactor: A code change that neither fixes a bug nor adds a feature
-- perf: A code change that improves performance
-- test: Adding missing or correcting existing tests
-- chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+## Making a pull request
 
-Note the following styles:
-- use the imperative, present tense: "change" not "changed" nor "changes"
-- don't capitalize first letter
-- no dot (.) at the end
-- use `BREAKING CHANGES:` to note breaking changes
+Title the pull request (PR) with the ID number of the GitHub issue. Add `WIP` (work in progress) to the beginning of the title to get feedback early on.
 
-More details: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commit-message-format
-Examples: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.8sw072iehlhg
+Follow the [PR template](https://github.com/reactioncommerce/reaction/blob/master/.github/pull_request_template.md) provided and make sure to add `Closes ###` with the GitHub issue number.
 
-4. When you're ready to make a pull request, make sure the PR title and body contain the ### of the issue.
+## Wait for a code review
 
-## JavaScript
-
-<Add sentence here about why consistent JavaScript file and function conventions are important.>
-
-### Files
-
-- Organizing functions within a file:
-  1. Private methods at the top
-  2. Export at the bottom
-- Naming files:
-
-### Function
-
-- Naming functions:
-- Write JSDoc
-- How to deprecate methods:
-
-## React
-
-> Link to React Best Practices
-
-- Do not use i18next. Use Translation.Component.
-
-## CSS
+Congrats! You made a pull request. Head to the [Code review process guide](/developer/code-review.md) to see what's next.
