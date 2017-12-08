@@ -14,7 +14,17 @@ Reaction tries to be as modular as possible. All user customizations are intende
 
 Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://reactioncommerce.com/community-showcase).
 
+### Can I compile a mobile app from Reaction? Are you going to develop a mobile app?
 
+While theoretically you can compile a [Meteor app to mobile using Cordova](https://guide.meteor.com/mobile.html) we don't support
+it and getting it to work may be non-trivial.
+
+We do have plans to work on a mobile app on [the Roadmap](https://reactioncommerce.com/roadmap) but more than likely it will
+be React Native or some other native solution. We also currently don't have any release date.
+
+What's important to know however is that Reaction Commerce takes a "mobile first" design approach and the site (both consumer
+and admin views) should work on most modern mobile devices.
+ 
 ## Installation
 
 ### I cloned the Reaction repo but when I run `meteor` it doesn't work
