@@ -47,7 +47,7 @@ We compiled a curated list of community projects that can be found in the wild. 
 
 ## Deployment
 
-### What is the best place to host
+### What is the best place to host?
 
 Here are some options for deployment. What the best options is depends on your budget and your expected level of traffic
 
@@ -67,7 +67,7 @@ You can find out more and request a quote [here](https://reactioncommerce.com/#g
 The Meteor Development Group offers a hosting service that is focused on hosting Meteor apps with monitoring, etc. You can find
 more information [here](https://www.meteor.com/hosting)
 
-### What about services like Heroku, or running on EC2
+### What about services like Heroku, or running on EC2?
 
 You can deploy Reaction Commerce to anywhere you could deploy a Docker container or a Node app. Because of the complexities involved
 we currently can't offer any support for getting these deployed.
