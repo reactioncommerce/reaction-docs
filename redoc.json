@@ -190,7 +190,7 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "styleguide",
-    "label": "Style Guide",
+    "label": "Code Style Guide",
     "repo": "reaction-docs",
     "docPath": "developer/styleguide.md"
   }, {
@@ -217,6 +217,12 @@
     "label": "Contributing",
     "repo": "reaction-docs",
     "docPath": "developer/contributing.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "git-style-guide",
+    "label": "Git style guide",
+    "repo": "reaction-docs",
+    "docPath": "developer/git-style-guide.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "code-reviews",
