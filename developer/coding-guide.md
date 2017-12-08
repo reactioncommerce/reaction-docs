@@ -8,7 +8,7 @@ Git version control is how we work together as a team. Naming branches and writi
 
 Follow these guidelines to make releases and code reviews smoother.
 
-1. Find a GitHub issue for what you're working on.
+1. Find the GitHub issue for what you're working on.
 
 2. Branch name: Create a branch name, with the ID number of the GitHub issue, in the following style:
 `yourhandle-type-###-slug`
@@ -78,6 +78,3 @@ Examples: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OO
 - Do not use i18next. Use Translation.Component.
 
 ## CSS
-
-
-
