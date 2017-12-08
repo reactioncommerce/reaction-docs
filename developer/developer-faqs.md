@@ -14,6 +14,23 @@ Reaction tries to be as modular as possible. All user customizations are intende
 
 Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://reactioncommerce.com/community-showcase).
 
+#### Why is Reaction so slow?
+
+*For Development*
+
+We are aware that Reaction Commerce can take a long time to reload when using the development server. This has to do with that
+large amount of files that are in the project. Hopefully this has been mitigated to some degree with the update to Meteor 1.6, however
+we know that faster is better when it comes to development so we will be focusing all of our efforts on improving performance. You
+can see our plan, weigh in with suggestions, contribute, and track progress [here](https://github.com/reactioncommerce/reaction/issues/3233)
+
+*To "first paint"*
+
+As mentioned above we are aware that because of the nature of Meteor apps and the size of this app that on some connections
+it can take several seconds before the site is rendered to clients. We are working to reduce the bundle size by eliminating some
+package and moving to a more dynamic loading so that parts of the app that may not be needed till later are not sent to the client on first
+load. Performance will be our main focus until the problem is resolved.
+You can see our plan, weigh in with suggestions, contribute, and track progress [here](https://github.com/reactioncommerce/reaction/issues/3233)
+
 
 ## Installation
 
