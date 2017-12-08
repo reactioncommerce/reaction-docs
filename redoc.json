@@ -190,7 +190,7 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "styleguide",
-    "label": "Style Guide",
+    "label": "Code Style Guide",
     "repo": "reaction-docs",
     "docPath": "developer/styleguide.md"
   }, {
