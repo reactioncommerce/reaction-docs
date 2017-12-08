@@ -99,6 +99,20 @@ Since 2014 [Google has indexed JavaScript when crawling websites](https://webmas
 
 3. [meteor-dochead](https://github.com/kadirahq/meteor-dochead): Automatically add `<meta>` tags are for products using the [meteor-dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data.
 
+## Extending Reaction
+
+### How can I add static pages/Integrate with a CMS?
+
+It's relatively simple to add a single page (and child pages) by adding a route and is covered in-depth in this section of
+the [Customization Guide](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6). This will probably work fine
+for a few simple static pages (like About or Contact Us).
+
+If you have a lot of content that needs to be managed you probably want to use a Content Manager. On our [roadmap](https://reactioncommerce.com/roadmap)
+we have a planned integration with a CMS like Drupal which can hopefully serve as a model for other similar integrations.
+
+
+
+
 ## More
 
 ### I have another question. Where's the best place to ask it?
