@@ -195,6 +195,12 @@
     "docPath": "developer/styleguide.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "styleguide",
+    "label": "Git Style Guide",
+    "repo": "reaction-docs",
+    "docPath": "developer/git-style-guide.md"
+  },{
+    "class": "guide-sub-nav-item",
     "alias": "react-best-practices",
     "label": "React Best Practices",
     "repo": "reaction-docs",
