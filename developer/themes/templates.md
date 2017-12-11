@@ -1,7 +1,9 @@
-
 ---
-**NOTE:**
-This page's content is deprecated and no longer relevant. Reaction is in the progress of completely eliminate all usages of Blaze technology and replace it through React components. Prolonged usage of Blaze templates will rule an upgrade path to newer Reaction versions out.
+
+⚠️ &nbsp;**DEPRECATION NOTICE:** This page's content is deprecated and no longer relevant.
+
+As of mid-2017 Reaction releases, Reaction has started replacing Blaze templating with React components. Reaction will continue to do so until Blaze templates are completely eliminated. 
+To ensure easier version updates in the future, we recommend using React over Blaze as well.
 
 ---
 
@@ -15,7 +17,7 @@ To learn more about Meteor, Spacebars, and Blaze templates: <http://blazejs.org/
 
 Reaction includes the [meteor-template-extension](https://github.com/aldeed/meteor-template-extension) package which provides functionality for extending Meteor templates.
 
-To extend and customize the html for any reaction/meteor template, add a template extension map to `client/templates.js`
+To extend and customize the HTML for any Reaction/Meteor template, add a template extension map to `client/templates.js`
 
 ```js
 // extending core with template extensions
