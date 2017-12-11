@@ -16,7 +16,7 @@ To learn more about Meteor, Spacebars, and Blaze templates: <http://blazejs.org/
 
 Reaction includes the [meteor-template-extension](https://github.com/aldeed/meteor-template-extension) package which provides functionality for extending Meteor templates.
 
-To extend and customize the html for any reaction/meteor template, add a template extension map to `client/templates.js`
+To extend and customize the HTML for any Reaction/Meteor template, add a template extension map to `client/templates.js`
 
 ```js
 // extending core with template extensions
