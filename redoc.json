@@ -153,16 +153,28 @@
     "docPath": "developer/community-resources.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "requirements",
-    "label": "Requirements",
-    "repo": "reaction-docs",
-    "docPath": "developer/requirements.md"
-  }, {
-    "class": "guide-sub-nav-item",
     "alias": "installation",
     "label": "Installation",
     "repo": "reaction-docs",
     "docPath": "developer/installation.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-osx",
+    "label": "Installation for OSX",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-osx.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-windows",
+    "label": "Installation for Windows",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-windows.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-linux",
+    "label": "Installation for Linux",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-linux.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "configuration",
@@ -178,10 +190,16 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "styleguide",
-    "label": "Style Guide",
+    "label": "Code Style Guide",
     "repo": "reaction-docs",
     "docPath": "developer/styleguide.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "git-style-guide",
+    "label": "Git Style Guide",
+    "repo": "reaction-docs",
+    "docPath": "developer/git-style-guide.md"
+  },{
     "class": "guide-sub-nav-item",
     "alias": "react-best-practices",
     "label": "React Best Practices",
