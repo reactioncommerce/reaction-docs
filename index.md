@@ -45,9 +45,11 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   
   .content-blocks {
     display: flex;
+    flex-wrap: wrap;
   }
   
   .content-block {
+    width: 100%;
     display: grid;
     margin: 0 10px;
   }
