@@ -42,10 +42,27 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
     text-decoration: none !important;
     color: rgb(5,42,78) !important;
   }
+  
+  .content-blocks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .content-block {
+    width: 100%;
+    display: grid;
+  }
+  
+  @media (min-width: 992px) {
+    .content-block {
+      margin: 0 10px;
+      width: calc(33.33% - 20px);
+    }
+  }
 </style>
 
-<div class="row">
-  <div class="col-md-4">
+<div class="content-blocks">
+  <div class="content-block">
     <div class="section-promo">
       <a href="https://docs.reactioncommerce.com/reaction-docs/master/dashboard">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-store-guide.svg" height="110">
@@ -53,7 +70,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
       </a>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="content-block">
     <div class="section-promo">
       <a href="https://docs.reactioncommerce.com/reaction-docs/master/getting-started-developing-with-reaction">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-developer-guide.svg">
@@ -61,7 +78,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
       </a>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="content-block">
     <div class="section-promo">
       <a href="http://api.docs.reactioncommerce.com/">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-core-api-guide.svg">
@@ -69,9 +86,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
       </a>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
+  <div class="content-block">
     <div class="section-promo">
       <a href="http://gitter.im/reactioncommerce/">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-chat.svg" height="110">
@@ -79,7 +94,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
       </a>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="content-block">
     <div class="section-promo">
       <a href="https://styleguide.reactioncommerce.com/">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-style-guide.svg">
@@ -87,7 +102,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
       </a>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="content-block">
     <div class="section-promo">
       <a href="https://forums.reactioncommerce.com/">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-forums.svg">
