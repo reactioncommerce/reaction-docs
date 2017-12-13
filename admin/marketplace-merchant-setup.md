@@ -1,6 +1,6 @@
 # Merchant Shop Setup
 
-This guide will dive into the steps needed by both the a owner, and merchant shop.
+This guide will dive into the steps needed by both the marketplace owner, and marketplace merchant's shop.
 
 **Prerequisites**
 

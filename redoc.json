@@ -33,6 +33,12 @@
     "docPath": "admin/navigation-bar-and-grid.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "tagging",
+    "label": "Introduction into tagging concept",
+    "repo": "reaction-docs",
+    "docPath": "admin/tagging.md"
+  }, {
+    "class": "guide-sub-nav-item",
     "alias": "orders-admin",
     "label": "Orders",
     "repo": "reaction-docs",
@@ -141,16 +147,34 @@
     "docPath": "developer/getting-started.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "requirements",
-    "label": "Requirements",
+    "alias": "community-resources",
+    "label": "Community resources",
     "repo": "reaction-docs",
-    "docPath": "developer/requirements.md"
+    "docPath": "developer/community-resources.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "installation",
     "label": "Installation",
     "repo": "reaction-docs",
     "docPath": "developer/installation.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-osx",
+    "label": "Installation for OSX",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-osx.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-windows",
+    "label": "Installation for Windows",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-windows.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "installation-linux",
+    "label": "Installation for Linux",
+    "repo": "reaction-docs",
+    "docPath": "developer/installation/installation-linux.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "configuration",
@@ -166,10 +190,16 @@
   }, {
     "class": "guide-sub-nav-item",
     "alias": "styleguide",
-    "label": "Style Guide",
+    "label": "Code Style Guide",
     "repo": "reaction-docs",
     "docPath": "developer/styleguide.md"
   }, {
+    "class": "guide-sub-nav-item",
+    "alias": "git-style-guide",
+    "label": "Git Style Guide",
+    "repo": "reaction-docs",
+    "docPath": "developer/git-style-guide.md"
+  },{
     "class": "guide-sub-nav-item",
     "alias": "react-best-practices",
     "label": "React Best Practices",
@@ -193,6 +223,18 @@
     "label": "Contributing",
     "repo": "reaction-docs",
     "docPath": "developer/contributing.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "code-reviews",
+    "label": "Pull request reviews",
+    "repo": "reaction-docs",
+    "docPath": "developer/code-reviews.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "how-to-change-the-favicon",
+    "label": "Changing the favicon",
+    "repo": "reaction-docs",
+    "docPath": "developer/how-to-change-the-favicon.md"
   }, {
     "class": "guide-nav-item",
     "alias": "tutorial",
@@ -272,6 +314,18 @@
     "repo": "reaction-docs",
     "docPath": "developer/tutorial/creating-a-payment-provider-plugin.md"
   }, {
+   "class": "guide-sub-nav-item",
+   "alias": "extending-product-schema-location-map",
+   "label": "Extending the product schema for Google map",
+   "repo": "reaction-docs",
+   "docPath": "developer/tutorial/extending-product-schema-location-map.md"
+  }, {
+  "class": "guide-sub-nav-item",
+  "alias": "testing-tutorial",
+  "label": "Tutorial: Writing your first test",
+  "repo": "reaction-docs",
+  "docPath": "developer/tutorial/testing-tutorial.md"
+  }, {
     "class": "guide-sub-nav-item",
     "alias": "appearance",
     "label": "Themes: Right-to-left",
@@ -297,11 +351,12 @@
     "docPath": "developer/themes/register-email.md"
   }, {
     "class": "guide-sub-nav-item",
-    "alias": "templates",
-    "label": "Extend Blaze Templates",
+    "alias": "fixtures-images",
+    "label": "Fixtures: Upload images",
     "repo": "reaction-docs",
-    "docPath": "developer/themes/templates.md"
-  }, {
+    "docPath": "developer/data-fixtures-insert-product-images.md"
+  },
+  {
     "class": "guide-sub-nav-item",
     "alias": "template-helpers",
     "label": "Helpers",

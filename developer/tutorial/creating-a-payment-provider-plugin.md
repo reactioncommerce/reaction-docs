@@ -2,8 +2,7 @@
 
 ## What is a "Payment Provider"
 
-Payment Providers are companies that provide a gateway between ecommerce
-software customer payment. In the U.S. that largely means credit cards
+Payment Providers are companies that provide a gateway between ecommerce software customer payment. In the U.S. that largely means credit cards
 but it can also mean something like a PayPal account or in other parts
 of the world it could mean cards linked to Kiosks or even BitCoin.
 Reaction doesn't really care what you do here, you could even not
@@ -27,19 +26,19 @@ plugins are just Meteor modules with some additional configuration.
 ## Getting Started
 
 Start off by copying the `payments-example` package into the
-`imports/plugins/custom` folder. You will need to add imports to the
+`/imports/plugins/custom` folder. You will need to add imports to the
 `main.js` file in both the `client` and `server` directories. If you
 wish you can remove imports for the Example Payment Method.
 
 The first task is to choose a simple, single-word identifier for your
 payment method. You will use this over and over and having it simple and
 consistent will make it easier to keep your package free of bugs. In
-this project we have chosen the clever name of `example`.
+this project we have chosen the clever name of `your-plugin-name`.
 
 Then you will want to modify the `register.js` file to reflect your
 payment provider. Specifically you will need to at minimum change the
 label to whatever name you are using. You can pretty much just change
-"example" wherever it is used to whatever identifier you are using.
+"your-plugin-name" wherever it is used to whatever identifier you are using.
 
 ## The Schema
 
@@ -47,7 +46,7 @@ The main "secret sauce" here is using the [AutoForm](https://atmospherejs.com/al
 [Simple Schema](https://atmospherejs.com/aldeed/simple-schema) package.
 This allows you to declare the schema you want to insert against and
 have your form and validations (mostly) built for you. If you look in
-`import/plugins/included/payments-example/lib/collections/schemas/example.js`
+`/imports/plugins/included/<your-plugin-name>/lib/collections/schemas/example.js`
 you can see there are two schemas declared, `ExamplePackageConfig` which
 is the data we want to input in settings and `ExamplePayment` which is
 the data we submit when submitting a payment.
@@ -70,13 +69,13 @@ component, it takes the data provided in the component and makes the call to the
 
 ## Checkout
 
-In this project the payment form is implemented in `templates/cart/checkout/payment/methods/generic`.
+In this project the payment form is implemented in `/imports/plugins/included/<your-plugin-name>/client/checkout/example.[html|js]`.
 The HTML template is just a standard Credit Card entry form with standard validation.
 You probably will want to look at the code in `Autoform.hooks` because
 here is where the `authorize` function is called. You may want to change
 how some elements such as `storedCard` are implemented based on your needs,
 although the default will probably work for most people. You have to
-change all the references to `example` or`ExamplePayment` to whatever
+change all the references to `your-plugin-name` or `ExamplePayment` to whatever
 your payment method is called. Most importantly in the section where
 the `paymentMethod` object is created to be stored in the db you must
 change the `processor` and `method` values. _(This should probably be
@@ -90,17 +89,17 @@ Just the one method is called from the client-side: `authorize`, and that method
 
 It is likely that your payment method has some parameters that need to
 be customized and should not be stored in code. Typically this includes
-usernames, passwords, API keys, etc. The template provided at
-`template/settings` provides a form for entering in this information.
-The provided form just takes one parameter, an API key (which of course
-is not needed or used). You can add any additional parameters required
-here.
+usernames, passwords, API keys, etc. The React component provided at
+`/imports/plugins/custom/<your-plugin-name>/client/settings/components/exampleSettingsForm.js` provides a form for entering in this information. The data to display the form is injected into the component through the container in /imports/plugins/included/<your-plugin-name>/client/settings/containers/exampleSettingsFormContainer.js
+The form is passed one settings parameter: an API key (which of course
+is not needed or used for this particular example plugin, because it doesn't reach out to third-party APIs). You can add any additional parameters required
+here. Additionally, an array of supported payment actions (authorize, capture, refund) is passed to render checkboxes for enabling, disabling them.
 
 ## Server-side
 
 ### Collections
 
-In `paymentmethod/lib/collections/schemas/` you will want to change
+In `/imports/plugins/custom/<your-plugin-name>/lib/collections/schemas/` you will want to change
 the PackageConfig schema to include any settings you added to the
 dashboard form. In addition you will want to modify the
 `ExamplePayment` schema to have your own name and modify which values
@@ -109,13 +108,8 @@ the same).
 
 ### Routing
 
-Two new routes are created in the `register.js`, one for payment and one
-for settings. If your method is a typical server-side method, you should
-not need to add any additional routes, just modify the existing route
-for the dashboard to reflect the name of your package. If you need to
-implement a client-side package (for example where you go to a provider
-and get a token that gets saved) you can look at the PayPal express
-implementation which adds more routes for storing the token.
+If your payment plugin needs to register additional client-side routes (for example where you go to a provider and get a token that gets saved) you can look at the PayPal express
+implementation which adds additional routes to `register.js` for storing the token.
 
 ### Methods
 
@@ -130,7 +124,7 @@ and `refunds`.
 
 Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the **authorize** stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you **but no funds have been transferred**.
 
-To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount. Typically an autorization will expire after a set number of days. Usually you cannot capture more than you authorize but you can capture less and leave the balance still captured or release the balance. In a typical hard-goods shipment scenario an authorize will be performed at time of order then when the actual good are shipped a capture is performed.
+To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount. Typically an authorization will expire after a set number of days. Usually you cannot capture more than you authorize but you can capture less and leave the balance still captured or release the balance. In a typical hard-goods shipment scenario an authorize will be performed at time of order then when the actual good are shipped a capture is performed.
 
 -   **capture**
 

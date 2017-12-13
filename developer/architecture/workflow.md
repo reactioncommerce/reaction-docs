@@ -22,7 +22,23 @@ _The default workflow configuration components are configured in the following m
 
 ```js
 "layout" : [
-  {
+{
+  "layout" : "coreLayout",
+    "workflow" : "coreProductGridWorkflow",
+    "collection" : "Products",
+    "theme" : "default",
+    "enabled" : true,
+    "structure" : {
+      "template" : "products",
+      "layoutHeader" : "NavBar",
+      "notFound" : "productNotFound",
+      "dashboardHeader" : "gridPublishControls",
+      "dashboardControls" : "productDetailDashboardControls",
+      "adminControlsFooter" : "adminControlsFooter"
+    },
+    "priority" : 999,
+    "position" : 1
+  }, {
     "layout" : "coreLayout",
     "workflow" : "coreWorkflow",
     "theme" : "default",

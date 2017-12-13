@@ -113,7 +113,7 @@ reaction
 ```
 
 Then add your theming and customizations using the
-[customization guide](../tutorial/introduction.md).
+[customization guide](/developer/tutorial/introduction.md).
 Now you have a customized Reaction Commerce with all your shiny new npm packages and theming.
 It runs great locally and you have built a local custom image using:
 
