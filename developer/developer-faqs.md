@@ -16,14 +16,11 @@ Ecommerce and marketplace sites from around the world are using Reaction in prod
 
 ### Can I compile a mobile app from Reaction? Are you going to develop a mobile app?
 
-While theoretically you can compile a [Meteor app to mobile using Cordova](https://guide.meteor.com/mobile.html) we don't support
-it and getting it to work may be non-trivial.
+While Meteor allows all apps to be compiled into Android and iOS apps with Cordova, we do not support it. Setting up a Reaction app with Cordova may be difficult. Learn more about building [mobile apps with Meteor's Cordova integration](https://guide.meteor.com/mobile.html).
 
-We do have plans to work on a mobile app on [the Roadmap](https://reactioncommerce.com/roadmap) but more than likely it will
-be React Native or some other native solution. We also currently don't have any release date.
+While we do have plans to work on a mobile app on the [Roadmap](https://reactioncommerce.com/roadmap), we expect to use a non-Cordova approach, like React Native. We do not have a release date.
 
-What's important to know however is that Reaction Commerce takes a "mobile first" design approach and the site (both consumer
-and admin views) should work on most modern mobile devices.
+What's important to know, however, is that Reaction Commerce takes a "mobile first" design approach to ensure that both the consumer-facing and admin-facing sites are functional on most modern mobile devices.
  
 ## Installation
 
