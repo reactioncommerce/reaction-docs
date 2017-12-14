@@ -50,17 +50,18 @@ Since 2014 [Google has indexed JavaScript when crawling websites](https://webmas
 
 ## Extending Reaction
 
-### How can I add static pages/Integrate with a CMS?
+### How can I add add a static page?
 
-It's relatively simple to add a single page (and child pages) by adding a route and is covered in-depth in this section of
-the [Customization Guide](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6). This will probably work fine
-for a few simple static pages (like About or Contact Us).
+Add a single page, and more child pages, by adding a route and a template. This will require knowledge of HTML, JavaScript and Git or web development. This is covered in depth in this section of the [Customization Guide](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6).
 
-If you have a lot of content that needs to be managed you probably want to use a Content Manager. On our [roadmap](https://reactioncommerce.com/roadmap)
-we have a planned integration with a CMS like Drupal which can hopefully serve as a model for other similar integrations.
+This would work great for static pages like an About or Contact us page. If you want to add tools for administrators to manage text and image content without having to code, you probably want to a content management system (CMS).
 
+### How do I integrate with a content management system (CMS)?
 
+If you have a lot of content (like images and text) that needs to be managed you probably want to use a content management system (CMS). We currently do not have one integrated with Reaction.
 
+On our [roadmap](https://reactioncommerce.com/roadmap)
+we have a planned integration with a CMS like Drupal, which can hopefully serve as a model for other similar integrations.
 
 ## More
 
