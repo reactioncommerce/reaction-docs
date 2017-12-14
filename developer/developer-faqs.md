@@ -31,7 +31,14 @@ package and moving to a more dynamic loading so that parts of the app that may n
 load. Performance will be our main focus until the problem is resolved.
 You can see our plan, weigh in with suggestions, contribute, and track progress [here](https://github.com/reactioncommerce/reaction/issues/3233)
 
+### Can I compile a mobile app from Reaction? Are you going to develop a mobile app?
 
+While Meteor allows all apps to be compiled into Android and iOS apps with Cordova, we do not support it. Setting up a Reaction app with Cordova may be difficult. Learn more about building [mobile apps with Meteor's Cordova integration](https://guide.meteor.com/mobile.html).
+
+While we do have plans to work on a mobile app on the [Roadmap](https://reactioncommerce.com/roadmap), we expect to use a non-Cordova approach, like React Native. We do not have a release date.
+
+What's important to know, however, is that Reaction Commerce takes a "mobile first" design approach to ensure that both the consumer-facing and admin-facing sites are functional on most modern mobile devices.
+ 
 ## Installation
 
 ### I cloned the Reaction repo but when I run `meteor` it doesn't work
