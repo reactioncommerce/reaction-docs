@@ -40,15 +40,30 @@ _The default workflow configuration components are configured in the following m
     "position" : 1
   }, {
     "layout" : "coreLayout",
-    "workflow" : "coreProductWorkflow",
+    "workflow" : "coreWorkflow",
+    "theme" : "default",
+    "enabled" : true,
+    "structure" : {
+      "template" : "products",
+      "layoutHeader" : "NavBar",
+      "layoutFooter" : "Footer",
+      "notFound" : "productNotFound",
+      "dashboardControls" : "dashboardControls",
+      "adminControlsFooter" : "adminControlsFooter"
+    },
+    "priority" : 999,
+    "position" : 1
+  }, {
+    "layout" : "coreLayout",
+    "workflow" : "coreProductGridWorkflow",
     "collection" : "Products",
     "theme" : "default",
     "enabled" : true,
     "structure" : {
-      "template" : "productDetailSimple",
+      "template" : "products",
       "layoutHeader" : "NavBar",
       "notFound" : "productNotFound",
-      "dashboardHeader" : "productDetailSimpleToolbar",
+      "dashboardHeader" : "gridPublishControls",
       "dashboardControls" : "productDetailDashboardControls",
       "adminControlsFooter" : "adminControlsFooter"
     },

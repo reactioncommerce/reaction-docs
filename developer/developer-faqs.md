@@ -14,6 +14,23 @@ Reaction tries to be as modular as possible. All user customizations are intende
 
 Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://reactioncommerce.com/community-showcase).
 
+#### Why is Reaction so slow?
+
+*For Development*
+
+We are aware that Reaction Commerce can take a long time to reload when using the development server. This has to do with that
+large amount of files that are in the project. Hopefully this has been mitigated to some degree with the update to Meteor 1.6, however
+we know that faster is better when it comes to development so we will be focusing all of our efforts on improving performance. You
+can see our plan, weigh in with suggestions, contribute, and track progress [here](https://github.com/reactioncommerce/reaction/issues/3233)
+
+*To "first paint"*
+
+As mentioned above we are aware that because of the nature of Meteor apps and the size of this app that on some connections
+it can take several seconds before the site is rendered to clients. We are working to reduce the bundle size by eliminating some
+package and moving to a more dynamic loading so that parts of the app that may not be needed till later are not sent to the client on first
+load. Performance will be our main focus until the problem is resolved.
+You can see our plan, weigh in with suggestions, contribute, and track progress [here](https://github.com/reactioncommerce/reaction/issues/3233)
+
 ### Can I compile a mobile app from Reaction? Are you going to develop a mobile app?
 
 While Meteor allows all apps to be compiled into Android and iOS apps with Cordova, we do not support it. Setting up a Reaction app with Cordova may be difficult. Learn more about building [mobile apps with Meteor's Cordova integration](https://guide.meteor.com/mobile.html).
@@ -34,6 +51,33 @@ before the app starts that is not optional. You can install the CLI by doing `np
 We compiled a curated list of community projects that can be found in the wild. Over time this list will continue to grow and some of the project's may become deprecated. Please drop us a note if you spot new awesome contributions out there!
 [Community Resources](/developer/community-resources.md).
 
+
+## Deployment
+
+### What is the best place to host?
+
+Here are some options for deployment. What the best options is depends on your budget and your expected level of traffic
+
+1. Reaction Platform
+
+The Reaction Platform comes with virtual private clusters, containerized cloud hosting, multiple staging environments, SSL and domains, direct support channels, and one-step deployment.
+
+Reaction Commerce’s Platform enables clients to : 
+1. innovate faster by leveraging modern container-based technology that provides continuous integration, delivery, and deployment.  
+2. more effectively and efficiently manage your site with seamless cutovers, dynamic scaling, and multiple “everything”
+3. have greater peace of mind from our high availability, virtual clusters, and 24x7x365 support.
+
+You can find out more and request a quote [here](https://reactioncommerce.com/#get-a-demo) or you can contact sales@reactioncommerce.com.
+
+2. Galaxy
+
+The Meteor Development Group offers a hosting service that is focused on hosting Meteor apps with monitoring, etc. You can find
+more information [here](https://www.meteor.com/hosting)
+
+### What about services like Heroku, or running on EC2?
+
+You can deploy Reaction Commerce to anywhere you could deploy a Docker container or a Node app. Because of the complexities involved
+we currently can't offer any support for getting these deployed.
 
 ## Admin
 

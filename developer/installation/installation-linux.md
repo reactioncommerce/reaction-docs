@@ -4,16 +4,7 @@
 ## Install prerequisites:
 
 ### Install Node
-
-_Currently we recommend installing via a package manager_
-
-1. Install Node via your package manager (apt, yum, pacman, etc). Find the instructions for your distro [here](https://nodejs.org/en/download/package-manager/))
-1. Correct the permissions so that you can install global packages without using `sudo`. (see other options for doing this [here](https://docs.npmjs.com/getting-started/fixing-npm-permissions))
-
-```sh
-sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
-```
-
+Follow the instructions at [NodeJs site](https://nodejs.org)
 
 ### Install Build Tools and Package Requirements
 
