@@ -92,7 +92,7 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 
 ### Autovalue
 
-Reaction provides Autovalue helpers in `/lib/collections/helpers.js`.
+Reaction provides Autovalue helpers in `/lib/collections/schemas/helpers.js`.
 
 ```js
 /**
