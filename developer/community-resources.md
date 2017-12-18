@@ -7,7 +7,7 @@ _**Note:** If you miss something that's not listed here and want to see it here,
 ## Plugins maintained by Reaction's community team
 
 ### payments-cod
-A very basic payment provider plugin that offers Cash-On-Delivery.
+A very basic payment provider plugin that offers Cash On Delivery.
 
 [https://github.com/reactioncommerce/payments-cod](https://github.com/reactioncommerce/payments-cod)
 
