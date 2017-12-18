@@ -4,7 +4,22 @@ This page is here to guide you through the Reaction ecosystem. As we've stated b
 
 _**Note:** If you miss something that's not listed here and want to see it here, you're invited to open a [pull request](https://github.com/reactioncommerce/reaction-docs/pull/new/master)._
 
-## Reaction plugins in no particular order
+## Plugins maintained by Reaction's community team
+
+### payments-cod
+A very basic payment provider plugin that offers Cash-On-Delivery.
+
+[https://github.com/reactioncommerce/payments-cod](https://github.com/reactioncommerce/payments-cod)
+
+It does essentially just skip the payment step during checkout workflow and allows ordering without the need for entering credit card details.
+
+Requirements:
+- Basic React understanding
+
+Learning content:
+- How to create a [payment provider plugin](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-payment-provider)
+
+## Plugins from our community in no particular order
 
 ### reaction-generic-theme
 
