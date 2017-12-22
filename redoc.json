@@ -236,6 +236,12 @@
     "repo": "reaction-docs",
     "docPath": "developer/how-to-change-the-favicon.md"
   }, {
+   "class": "guide-sub-nav-item",
+   "alias": "migrations",
+   "label": "Database migrations",
+   "repo": "reaction-docs",
+   "docPath": "developer/migrations.md"
+  }, {
     "class": "guide-nav-item",
     "alias": "tutorial",
     "label": "Customization Guide",
