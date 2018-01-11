@@ -42,7 +42,7 @@ We're always open to contributions from our community. To learn more about becom
 
 Nope! [Google indexes JavaScript when crawling websites](https://googlewebmastercentral.blogspot.com.es/2014/05/understanding-web-pages-better.html).
 
-Additionally, Reaction uses server-side rendering, as well as [Prerender.io](https://prerender.io/), which renders your JavaScript in a browser, saves the static HTML, and returns that to the crawlers.
+Additionally, Reaction uses server-side rendering, as well as [Prerender.io](https://prerender.io/), which renders your JavaScript in a browser, saves the static HTML, and returns that to the crawlers. Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our latest blog post.
 
 ## How do I upload product images as part of my data fixtures?
 
