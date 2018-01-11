@@ -141,5 +141,30 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
             <span class="headline">The Core Commerce Funnel: Product Grid</span><span class="dateline">28 Jul 2017 | Spencer Norman</span>
           </div>
         </a>
+        <a href="https://blog.reactioncommerce.com/product-part-1/" class="article-link">
+          <div class="article">
+            <span class="headline">Core Commerce Funnel: Product, Part 1</span><span class="dateline">11 Aug 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/products-part-2/" class="article-link">
+          <div class="article">
+            <span class="headline">Core Commerce Funnel: Product, Part 2</span><span class="dateline">31 Aug 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/products-part-3/" class="article-link">
+          <div class="article">
+            <span class="headline">Core Commerce Funnel: Product, Part 3</span><span class="dateline">18 Sep 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/better-debugging-in-reaction/" class="article-link">
+          <div class="article">
+            <span class="headline">Better Debugging in Reaction</span><span class="dateline">15 Nov 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/building-and-launching-a-store-on-reaction/" class="article-link">
+          <div class="article">
+            <span class="headline">Building & Launching a Swag Shop on Reaction</span><span class="dateline">14 Dec 2017 | Michael Jenny</span>
+          </div>
+        </a>
     </div>
 </div>
