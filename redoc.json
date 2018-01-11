@@ -621,6 +621,9 @@
     "label": "Click To Copy",
     "docPath": "developer/components/clickToCopy.md"
   }, {
+    "label": "CSV Download",
+    "docPath": "developer/components/csvDownload.md"
+  }, {
     "label": "Divider",
     "docPath": "developer/components/divider.md"
   }, {
