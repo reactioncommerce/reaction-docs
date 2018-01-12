@@ -33,7 +33,7 @@ Start small and open up a dialogue with us. This will help to get your contribut
 
 ### Here's what to expect when you make a pull request to Reaction
 
-As soon as pull requests are pushed, [BitHound](https://www.bithound.io/github/reactioncommerce/reaction), [CircleCI](https://circleci.com/gh/reactioncommerce/reaction) and [Synk](https://snyk.io/) run automated tests. All checks should pass successfully to ensure:
+As soon as pull requests are pushed, automated test are run to ensure:
 
 -   All linting rules pass without errors or ignores.
 -   Dependencies are not failing.
@@ -45,9 +45,9 @@ You can run these checks yourself by running these commands:
 -   `eslint .` for linting
 -   `reaction test` for all tests
 
-### Core team pull request review
+### Community team pull request review
 
-Every Monday, the Core team triages all new pull requests. The Core team reviews code quality rules including:
+The Community team triages all new pull requests as soon as possible. The team reviews code quality rules including:
 
 -   No new Atmosphere or Meteor dependencies are introduced.
 -   No hard-coded copy: All copy and alerts should have i18n keys and values.
@@ -55,7 +55,9 @@ Every Monday, the Core team triages all new pull requests. The Core team reviews
 -   All new methods and files have jsdoc summaries, as outlined in [JSDoc guide](https://github.com/reactioncommerce/reaction-jsdoc#how-to-write-docs).
 -   All folders, variables, method names follow naming conventions, outlined in [Reaction style guide](/developer/styleguide.md).
 
-The Core team also encourages in-line commenting. Use comments to:
+The team also encourages in-line commenting.
+
+Use comments to:
 
 -   Explain functionality to someone new to the code
 -   Link to any external documentation
