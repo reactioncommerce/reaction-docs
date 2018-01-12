@@ -314,17 +314,23 @@
     "repo": "reaction-docs",
     "docPath": "developer/tutorial/creating-a-payment-provider-plugin.md"
   }, {
-   "class": "guide-sub-nav-item",
-   "alias": "extending-product-schema-location-map",
-   "label": "Extending the product schema for Google map",
-   "repo": "reaction-docs",
-   "docPath": "developer/tutorial/extending-product-schema-location-map.md"
+    "class": "guide-sub-nav-item",
+    "alias": "extending-product-schema-location-map",
+    "label": "Extending the product schema for Google map",
+    "repo": "reaction-docs",
+    "docPath": "developer/tutorial/extending-product-schema-location-map.md"
   }, {
-  "class": "guide-sub-nav-item",
-  "alias": "testing-tutorial",
-  "label": "Tutorial: Writing your first test",
-  "repo": "reaction-docs",
-  "docPath": "developer/tutorial/testing-tutorial.md"
+    "class": "guide-sub-nav-item",
+    "alias": "testing-tutorial",
+    "label": "Tutorial: Writing your first test",
+    "repo": "reaction-docs",
+    "docPath": "developer/tutorial/testing-tutorial.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "tutorial-debugging-server-code",
+    "label": "Tutorial: Debugging server-side code",
+    "repo": "reaction-docs",
+    "docPath": "developer/tutorial/tutorial-debugging-server-code.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "appearance",
@@ -355,8 +361,7 @@
     "label": "Fixtures: Upload images",
     "repo": "reaction-docs",
     "docPath": "developer/data-fixtures-insert-product-images.md"
-  },
-  {
+  }, {
     "class": "guide-sub-nav-item",
     "alias": "template-helpers",
     "label": "Helpers",
