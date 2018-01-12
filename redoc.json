@@ -230,12 +230,6 @@
     "repo": "reaction-docs",
     "docPath": "developer/code-reviews.md"
   }, {
-    "class": "guide-sub-nav-item",
-    "alias": "how-to-change-the-favicon",
-    "label": "Changing the favicon",
-    "repo": "reaction-docs",
-    "docPath": "developer/how-to-change-the-favicon.md"
-  }, {
     "class": "guide-nav-item",
     "alias": "tutorial",
     "label": "Customization Guide",
@@ -325,6 +319,12 @@
   "label": "Tutorial: Writing your first test",
   "repo": "reaction-docs",
   "docPath": "developer/tutorial/testing-tutorial.md"
+  }, {
+    "class": "guide-sub-nav-item",
+    "alias": "how-to-change-the-favicon",
+    "label": "Tutorial: Use a custom favicon",
+    "repo": "reaction-docs",
+    "docPath": "developer/how-to-change-the-favicon.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "appearance",
