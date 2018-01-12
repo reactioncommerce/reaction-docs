@@ -29,5 +29,5 @@ with favicon bundle files living in `<project_root>/public/resources/favicons/`
 import "./favicons"
 ```
 
-#### Notice
+### Notice
 The above described method yields duplicated favicons links in the HTML head. Although this will result in a few extra bytes transmitted, it shouldn't generally be a problem, as the browser will actually use the favicon that it sees last.
