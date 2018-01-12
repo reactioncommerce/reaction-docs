@@ -207,6 +207,12 @@
     "docPath": "developer/react-best-practices.md"
   }, {
     "class": "guide-sub-nav-item",
+    "alias": "contributing-to-reaction",
+    "label": "Contributing Guide",
+    "repo": "reaction-docs",
+    "docPath": "developer/contributing.md"
+  },{
+    "class": "guide-sub-nav-item",
     "alias": "developer-faq",
     "label": "FAQs",
     "repo": "reaction-docs",
@@ -217,18 +223,6 @@
     "label": "Community",
     "repo": "reaction-docs",
     "docPath": "developer/community.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "contributing-to-reaction",
-    "label": "Contributing",
-    "repo": "reaction-docs",
-    "docPath": "developer/contributing.md"
-  }, {
-    "class": "guide-sub-nav-item",
-    "alias": "code-reviews",
-    "label": "Pull request reviews",
-    "repo": "reaction-docs",
-    "docPath": "developer/code-reviews.md"
   }, {
     "class": "guide-sub-nav-item",
     "alias": "how-to-change-the-favicon",
