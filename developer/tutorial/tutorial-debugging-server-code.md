@@ -1,16 +1,21 @@
 # Tutorial: Debugging server-side code
 
-As of Meteor 1.6, you can now debug server code using the `--inspect` flag in Chrome DevTools and within code editors like [Visual Studio Code (VS Code)](https://code.visualstudio.com/), a free code editor, and Webstorm. Here are the steps to get started:
+As of Meteor 1.6, you can now debug server code using the `--inspect` flag in Chrome DevTools and within integrated developer environments like [Visual Studio Code (VS Code)](https://code.visualstudio.com/), a free code editor, and [WebStorm by JetBrains](https://www.jetbrains.com/webstorm/).
+
+Here are the steps to get started using Reaction in `inspect` mode in any editor:
 
 ## Launch the application in `inspect` mode
 
-1. Before we get started, make sure you have at least Reaction 1.6. You can do that by running:
+1. Before we get started, make sure you have at least Reaction 1.6.
+
+You can do that by running:
 
 ```sh
 reaction -v
 ```
 
-You should see something like:
+You should see an output of Reaction's version:
+
 ```sh
 Node: 8.2.1
 NPM: 5.6.0
@@ -30,7 +35,7 @@ If your Reaction version is older than 1.6, you will have to upgrade to at least
 meteor run --settings settings/dev.settings.json --raw-logs --inspect
 ```
 
-What do these flags do?
+What these flags do:
 - `settings`: Specifies the Reaction and Meteor settings file. A blank template file is provided in [`settings/dev.settings.json`](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json).
 - `raw-logs`: Shows logs in the Terminal
 - `inspect`: Turns on the Node inspector
@@ -38,10 +43,12 @@ What do these flags do?
 Once this process has started, Node opens a WebSocket to listen for a debugger on port 9229 by default. Once you've successfully attached a debugger, you'll see the Debugger attached message in your Terminal:
 
 ```sh
-(STDERR) Debugger listening on ws://127.0.0.1:9229/...
+Debugger listening on ws://127.0.0.1:9229/...
 ```
 
-After that, the application will run, just like running `reaction`. You'll see the typical Reaction application logs:
+After that, the application will run, just like running `reaction`.
+
+You'll see the typical Reaction application logging:
 
 ```sh
 INFO Reaction: Reaction initialization finished.
@@ -54,27 +61,27 @@ Now, you're ready to debug!
 
 ## Inspecting with Chrome DevTools
 
-1. Open Google Chrome and visit `chrome://inspect`
+1. Open Google Chrome and visit `chrome://inspect`.
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/devtools-setup.png)
 
-2. Click `Open dedicated DevTools for Node`
+2. Click **Open dedicated DevTools for Node**.
 
-3. There are two main ways to set up breakpoints: in the DevTools, or in the code.
+3. There are two main ways to set up breakpoints: in the DevTools or in the code.
 
-- To set up a breakpoint in DevTools, open up the Source tab and navigate to a file you would like to debug. Click on the line number where you'd like the code to stop executing. You can set up as many breakpoints as you'd like.
+- To set up a breakpoint in DevTools, open up the **Source** tab and navigate to a file you would like to debug in the left-side bar. Click on the line number where you'd like the code to stop executing. You can set up as many breakpoints as you'd like.
 
 - To set up a breakpoint in your code, add the keyword `debugger` right before you'd like the application to pause execution.
 
-Since you are currently debugging the Reaction server, you'll only have access to code that runs on the server - not the client.
+Remember: Since you are currently debugging the Reaction server, you'll only have access to code that runs on the server - not the client.
 
-4. Now open `localhost:3000` as you normally would, and the code should stop executing at your first breakpoint.
+4. Now open `http://localhost:3000` as you normally would and the code should stop executing at your first breakpoint.
 
 In this example, the code stopped executing at a breakpoint in the Products publication, which gets called whenever a client connects to the product grid on the index route:
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/devtools-variables.png)
 
-5. At this breakpoint, you can access the Console by hitting `esc` and opening the Drawer.
+5. At this breakpoint, you can access the Console by hitting <kbd>esc</kbd> and opening the *Drawer*.
 
 ![DevTools setup](http://g.recordit.co/1hRutFIaLe.gif)
 
@@ -82,7 +89,7 @@ Now you can watch variables, check the call stack and investigate scope to bette
 
 To learn more about Chrome DevTools, check out Google's [Tools for Web Developers](https://developers.google.com/web/tools/chrome-devtools/javascript/).
 
-## Inspecting in VSCode
+## Inspecting in VS Code
 
 _Note:_ You can only have one debugger connected at a time, so if you've already connected to DevTools, then you'll need to disconnect before you can connect with VS Code.
 
@@ -94,7 +101,7 @@ Setting up [VS Code](https://code.visualstudio.com/) and connecting it to the No
 
 2. Set up your file:
 
-*.vscode/launch.json*
+**.vscode/launch.json**
 ```js
 {
     "version": "0.2.0",
@@ -115,11 +122,12 @@ Setting up [VS Code](https://code.visualstudio.com/) and connecting it to the No
     ]
 }
 ```
+
 This borrows heavily from a Meteor forum post on [Meteor 1.6 server debugging with VS Code](https://forums.meteor.com/t/meteor-1-6-server-debugging-with-vs-code/39821).
 
 **Tip:** Port 9229 is the default Node inspector port, but if you switch to another one, eg. `--inspect=5000`, then you'll need to adjust the port in your `launch.json` file.
 
-3. Open the debug panel and click the *Play* icon
+3. Open the debug panel and click the **Play** icon
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/vscode-devtools.png)
 
@@ -129,9 +137,9 @@ To learn more about debugging JavaScript with VS Code, check out [VS Code's debu
 
 ## Inspecting in Webstorm
 
-1. Create a new JavaScript Debug configuration.
+1. Create a new [Run/Debug configuration](https://www.jetbrains.com/help/webstorm/run-debug-configuration-javascript-debug.html) based on the Meteor default.
 
-2. Use the following settings:
+Use the following settings:
 
 - Meteor executable: `/usr/local/bin/meteor`
 - Program arguments: `--settings settings/dev.settings.json --raw-logs`
@@ -140,6 +148,8 @@ To learn more about debugging JavaScript with VS Code, check out [VS Code's debu
 
 ![Webstorm setup](https://user-images.githubusercontent.com/72819/34857305-fb058c44-f784-11e7-9739-c34f09c11bd0.png)
 
-3. Click **OK**
+2. Select your breakpoints by clicking along the left-hand side line numbers.
+3. Click on the **Debug** icon to start you Reaction app in debugger mode.
+4. Use the **Step In**, **Step Out**, **Steop Over** buttons to navigate through the code.
 
 For more on debugging with Webstorm, check out the [Jetbrains guide](https://www.jetbrains.com/help/webstorm/debugging-javascript-in-chrome.html).
