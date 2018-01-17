@@ -104,12 +104,6 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/code-reviews.md"
 		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "how-to-change-the-favicon",
-			"label": "Changing the favicon",
-			"repo": "reaction-docs",
-			"docPath": "developer/how-to-change-the-favicon.md"
-		}, {
 			"class": "guide-nav-item",
 			"alias": "tutorial",
 			"label": "Customization Guide",
@@ -193,6 +187,12 @@
 			"label": "Extending the product schema for Google map",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/extending-product-schema-location-map.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "how-to-change-the-favicon",
+			"label": "Tutorial: Customize the favicon",
+			"repo": "reaction-docs",
+			"docPath": "developer/how-to-change-the-favicon.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "testing-tutorial",
