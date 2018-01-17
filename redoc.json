@@ -15,132 +15,6 @@
 			"default": true
 		}, {
 			"class": "guide-nav-item",
-			"alias": "dashboard",
-			"label": "Store Operator's Guide",
-			"repo": "reaction-docs",
-			"docPath": "admin/dashboard.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "products",
-			"label": "Products",
-			"repo": "reaction-docs",
-			"docPath": "admin/products.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "navigation-bar-and-grid",
-			"label": "Navigation and Product tags",
-			"repo": "reaction-docs",
-			"docPath": "admin/navigation-bar-and-grid.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "tagging",
-			"label": "Introduction into tagging concept",
-			"repo": "reaction-docs",
-			"docPath": "admin/tagging.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "orders-admin",
-			"label": "Orders",
-			"repo": "reaction-docs",
-			"docPath": "admin/dashboard/orders-admin.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "accounts",
-			"label": "Accounts",
-			"repo": "reaction-docs",
-			"docPath": "admin/dashboard/accounts.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "login-auth-services",
-			"label": "Login services",
-			"repo": "reaction-docs",
-			"docPath": "admin/dashboard/login-auth-services.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Social settings",
-			"repo": "reaction-docs",
-			"alias": "social-settings",
-			"docPath": "admin/dashboard/social-settings.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Shop",
-			"repo": "reaction-docs",
-			"alias": "shop-admin",
-			"docPath": "admin/dashboard/shop-admin.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "merchant-shop-setup",
-			"label": "Merchant Shop Setup",
-			"repo": "reaction-docs",
-			"docPath": "admin/marketplace-merchant-setup.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Email",
-			"repo": "reaction-docs",
-			"alias": "email-admin",
-			"docPath": "admin/dashboard/email-admin.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Localization and i18n",
-			"repo": "reaction-docs",
-			"alias": "localization-and-i18n",
-			"docPath": "admin/dashboard/localization-and-i18n.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Payment",
-			"repo": "reaction-docs",
-			"alias": "payment",
-			"docPath": "admin/dashboard/payment.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Catalog",
-			"repo": "reaction-docs",
-			"alias": "catalog",
-			"docPath": "admin/dashboard/catalog.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "tax",
-			"label": "Tax",
-			"repo": "reaction-docs",
-			"docPath": "admin/dashboard/tax.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Template",
-			"repo": "reaction-docs",
-			"alias": "template",
-			"docPath": "admin/dashboard/template.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Search",
-			"repo": "reaction-docs",
-			"alias": "search",
-			"docPath": "admin/dashboard/search.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "SMS Notifications",
-			"repo": "reaction-docs",
-			"alias": "sms-notifications",
-			"docPath": "admin/dashboard/sms-notifications.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Shipping",
-			"repo": "reaction-docs",
-			"alias": "shipping-admin",
-			"docPath": "admin/dashboard/shipping-admin.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"label": "Discounts",
-			"repo": "reaction-docs",
-			"alias": "payments-discounts",
-			"docPath": "admin/dashboard/payments-discounts.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "faqs",
-			"label": "FAQs",
-			"repo": "reaction-docs",
-			"docPath": "admin/faq.md"
-		}, {
-			"class": "guide-nav-item",
 			"alias": "getting-started-developing-with-reaction",
 			"label": "Developer",
 			"repo": "reaction-docs",
@@ -223,12 +97,6 @@
 			"label": "Community",
 			"repo": "reaction-docs",
 			"docPath": "developer/community.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "how-to-change-the-favicon",
-			"label": "Changing the favicon",
-			"repo": "reaction-docs",
-			"docPath": "developer/how-to-change-the-favicon.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "tutorial",
@@ -313,6 +181,12 @@
 			"label": "Extending the product schema for Google map",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/extending-product-schema-location-map.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "how-to-change-the-favicon",
+			"label": "Tutorial: Customize the favicon",
+			"repo": "reaction-docs",
+			"docPath": "developer/how-to-change-the-favicon.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "testing-tutorial",
@@ -827,6 +701,132 @@
 			"label": "Reaction Platform",
 			"repo": "reaction-docs",
 			"docPath": "developer/deploying/platform.md"
+		}, {
+			"class": "guide-nav-item",
+			"alias": "dashboard",
+			"label": "Store Operator's Guide",
+			"repo": "reaction-docs",
+			"docPath": "admin/dashboard.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "products",
+			"label": "Products",
+			"repo": "reaction-docs",
+			"docPath": "admin/products.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "navigation-bar-and-grid",
+			"label": "Navigation and Product tags",
+			"repo": "reaction-docs",
+			"docPath": "admin/navigation-bar-and-grid.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "tagging",
+			"label": "Introduction into tagging concept",
+			"repo": "reaction-docs",
+			"docPath": "admin/tagging.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "orders-admin",
+			"label": "Orders",
+			"repo": "reaction-docs",
+			"docPath": "admin/dashboard/orders-admin.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "accounts",
+			"label": "Accounts",
+			"repo": "reaction-docs",
+			"docPath": "admin/dashboard/accounts.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "login-auth-services",
+			"label": "Login services",
+			"repo": "reaction-docs",
+			"docPath": "admin/dashboard/login-auth-services.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Social settings",
+			"repo": "reaction-docs",
+			"alias": "social-settings",
+			"docPath": "admin/dashboard/social-settings.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Shop",
+			"repo": "reaction-docs",
+			"alias": "shop-admin",
+			"docPath": "admin/dashboard/shop-admin.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "merchant-shop-setup",
+			"label": "Merchant Shop Setup",
+			"repo": "reaction-docs",
+			"docPath": "admin/marketplace-merchant-setup.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Email",
+			"repo": "reaction-docs",
+			"alias": "email-admin",
+			"docPath": "admin/dashboard/email-admin.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Localization and i18n",
+			"repo": "reaction-docs",
+			"alias": "localization-and-i18n",
+			"docPath": "admin/dashboard/localization-and-i18n.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Payment",
+			"repo": "reaction-docs",
+			"alias": "payment",
+			"docPath": "admin/dashboard/payment.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Catalog",
+			"repo": "reaction-docs",
+			"alias": "catalog",
+			"docPath": "admin/dashboard/catalog.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "tax",
+			"label": "Tax",
+			"repo": "reaction-docs",
+			"docPath": "admin/dashboard/tax.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Template",
+			"repo": "reaction-docs",
+			"alias": "template",
+			"docPath": "admin/dashboard/template.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Search",
+			"repo": "reaction-docs",
+			"alias": "search",
+			"docPath": "admin/dashboard/search.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "SMS Notifications",
+			"repo": "reaction-docs",
+			"alias": "sms-notifications",
+			"docPath": "admin/dashboard/sms-notifications.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Shipping",
+			"repo": "reaction-docs",
+			"alias": "shipping-admin",
+			"docPath": "admin/dashboard/shipping-admin.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"label": "Discounts",
+			"repo": "reaction-docs",
+			"alias": "payments-discounts",
+			"docPath": "admin/dashboard/payments-discounts.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "faqs",
+			"label": "FAQs",
+			"repo": "reaction-docs",
+			"docPath": "admin/faq.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "guidelines",
