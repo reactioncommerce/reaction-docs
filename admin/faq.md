@@ -8,7 +8,7 @@ We also offer [Reaction Platform](https://reactioncommerce.com/hosting), our pai
 
 ### Is there a live demo shop?
 
-You can check out a live shop and use the admin tool in our [Demo Swag](https://swag.getreaction.io/) shop.
+You can check out a live shop and use the admin tool in our [Demo Swag](https://swag.getreaction.io/) shop. You can also run the demo locally by cloning the [Reaction Swag Shop](https://github.com/reactioncommerce/reaction-swag-shop) repository.
 
 ### I already have a hosting solution. Can I host a Reaction shop anywhere I want?
 
