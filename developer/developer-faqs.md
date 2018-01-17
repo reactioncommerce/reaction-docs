@@ -60,7 +60,7 @@ before the app starts that is not optional. You can install the CLI by doing `np
 
 ### Do you have a list of community provided plugins, themes or other resources?
 
-We compiled a curated list of community projects that can be found in the wild. Over time, this list will continue to grow and some of the project's may become deprecated. Please drop us a note if you spot new awesome contributions out there! [Community Resources](/developer/community-resources.md).
+We compiled a curated list of community projects that can be found in the wild. Over time, this list will continue to grow and some of the projects may become deprecated. Please drop us a note if you spot new awesome contributions out there! [Community Resources](/developer/community-resources.md).
 
 ## Deployment
 
