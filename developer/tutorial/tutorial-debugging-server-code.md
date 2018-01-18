@@ -29,16 +29,11 @@ Docker: 17.09.0-ce
 
 If your Reaction version is older than 1.6, you will have to upgrade to at least 1.6 first.
 
-2. Instead of using `reaction` to run the application, use the Meteor [`run`](https://docs.meteor.com/commandline.html#meteorrun) method with the following flags:
+2. Run `reaction` with the `--inspect` flag:
 
 ```sh
-meteor run --settings settings/dev.settings.json --raw-logs --inspect
+reaction --inspect
 ```
-
-What these flags do:
-- `settings`: Specifies the Reaction and Meteor settings file. A blank template file is provided in [`settings/dev.settings.json`](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json).
-- `raw-logs`: Shows logs in the Terminal
-- `inspect`: Turns on the Node inspector
 
 Once this process has started, Node opens a WebSocket to listen for a debugger on port 9229 by default. Once you've successfully attached a debugger, you'll see the Debugger attached message in your Terminal:
 
