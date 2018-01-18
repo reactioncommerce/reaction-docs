@@ -194,6 +194,12 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/testing-tutorial.md"
 		}, {
+      "class": "guide-sub-nav-item",
+			"alias": "testing-debugging-server-code",
+			"label": "Tutorial: Debugging server-side code",
+			"repo": "reaction-docs",
+			"docPath": "developer/tutorial/tutorial-debugging-server-code.md"
+    },{
 			"class": "guide-sub-nav-item",
 			"alias": "appearance",
 			"label": "Themes: Right-to-left",
