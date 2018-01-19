@@ -219,6 +219,18 @@
 			"docPath": "developer/react-best-practices.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "release-process",
+			"label": "Release Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/release-process.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "reporting-vulnerabilities",
+			"label": "Report Vulnerabilities",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/vulnerabilities.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "community-channels",
 			"label": "Community",
 			"repo": "reaction-docs",
@@ -670,18 +682,6 @@
 			"label": "CI Builds",
 			"repo": "reaction-docs",
 			"docPath": "developer/testing/ci.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "release-process",
-			"label": "Release Process",
-			"repo": "reaction-docs",
-			"docPath": "developer/testing/release-process.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "reporting-vulnerabilities",
-			"label": "Report Vulnerabilities",
-			"repo": "reaction-docs",
-			"docPath": "developer/testing/vulnerabilities.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "deploying",
