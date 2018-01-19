@@ -86,6 +86,12 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/community.md"
 		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "community-resources",
+			"label": "Community resources",
+			"repo": "reaction-docs",
+			"docPath": "developer/community-resources.md"
+		}, {
 			"class": "guide-nav-item",
 			"alias": "plugin-intro-1",
 			"label": "Plugin Tutorial",
