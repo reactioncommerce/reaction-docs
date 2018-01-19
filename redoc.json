@@ -16,15 +16,9 @@
 		}, {
 			"class": "guide-nav-item",
 			"alias": "getting-started-developing-with-reaction",
-			"label": "Developer",
+			"label": "Getting started",
 			"repo": "reaction-docs",
 			"docPath": "developer/getting-started.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "community-resources",
-			"label": "Community resources",
-			"repo": "reaction-docs",
-			"docPath": "developer/community-resources.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "installation",
@@ -97,6 +91,12 @@
 			"label": "Community",
 			"repo": "reaction-docs",
 			"docPath": "developer/community.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "community-resources",
+			"label": "Community resources",
+			"repo": "reaction-docs",
+			"docPath": "developer/community-resources.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "tutorial",
