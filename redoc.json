@@ -51,12 +51,6 @@
 			"docPath": "developer/configuration.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "email-api",
-			"label": "Email",
-			"repo": "reaction-docs",
-			"docPath": "developer/core/email.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "styleguide",
 			"label": "Code Style Guide",
 			"repo": "reaction-docs",
@@ -355,6 +349,12 @@
 			"label": "Analytics",
 			"repo": "reaction-docs",
 			"docPath": "developer/core/analytics.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "email-api",
+			"label": "Email",
+			"repo": "reaction-docs",
+			"docPath": "developer/core/email.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "i18n",
