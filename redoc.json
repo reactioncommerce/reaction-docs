@@ -56,48 +56,6 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/developer-faqs.md"
 		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "styleguide",
-			"label": "Code Style Guide",
-			"repo": "reaction-docs",
-			"docPath": "developer/styleguide.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "git-style-guide",
-			"label": "Git Style Guide",
-			"repo": "reaction-docs",
-			"docPath": "developer/git-style-guide.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "react-best-practices",
-			"label": "React Best Practices",
-			"repo": "reaction-docs",
-			"docPath": "developer/react-best-practices.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "contributing-to-reaction",
-			"label": "Contributing Guide",
-			"repo": "reaction-docs",
-			"docPath": "developer/contributing.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "developer-faq",
-			"label": "FAQs",
-			"repo": "reaction-docs",
-			"docPath": "developer/developer-faqs.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "community-channels",
-			"label": "Community",
-			"repo": "reaction-docs",
-			"docPath": "developer/community.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "community-resources",
-			"label": "Community resources",
-			"repo": "reaction-docs",
-			"docPath": "developer/community-resources.md"
-		}, {
 			"class": "guide-nav-item",
 			"alias": "plugin-intro-1",
 			"label": "Plugin Tutorial",
@@ -235,6 +193,42 @@
 			"label": "Helpers",
 			"repo": "reaction-docs",
 			"docPath": "developer/themes/helpers.md"
+		}, {
+			"class": "guide-nav-item",
+			"alias": "contributing-to-reaction",
+			"label": "Contributing Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/contributing.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "styleguide",
+			"label": "Code Style Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/styleguide.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "git-style-guide",
+			"label": "Git Style Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/git-style-guide.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "react-best-practices",
+			"label": "React Best Practices",
+			"repo": "reaction-docs",
+			"docPath": "developer/react-best-practices.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "community-channels",
+			"label": "Community",
+			"repo": "reaction-docs",
+			"docPath": "developer/community.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "community-resources",
+			"label": "Community resources",
+			"repo": "reaction-docs",
+			"docPath": "developer/community-resources.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "architecture",
