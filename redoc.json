@@ -51,6 +51,12 @@
 			"docPath": "developer/configuration.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "developer-faq",
+			"label": "Developer FAQs",
+			"repo": "reaction-docs",
+			"docPath": "developer/developer-faqs.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "styleguide",
 			"label": "Code Style Guide",
 			"repo": "reaction-docs",
@@ -73,12 +79,6 @@
 			"label": "Contributing Guide",
 			"repo": "reaction-docs",
 			"docPath": "developer/contributing.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "developer-faq",
-			"label": "FAQs",
-			"repo": "reaction-docs",
-			"docPath": "developer/developer-faqs.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "community-channels",
