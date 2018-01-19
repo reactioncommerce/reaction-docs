@@ -16,13 +16,13 @@ Hooks.Events.add("afterCoreInit", () => {
 The Migrations package keeps track of the applied changes in a dedicated collection aptly called _Migrations_ (configurable):
 ![Screenshot of Collection Migrations](../assets/screenshot-migrations-collection.png)
 
-Hint: In case there's an error during a migration run, it could happen that the migration process doesn't release the lock state. If that happens, check for any errors in the up() and down() methods. If they're fixed, you may set the `locked` flag in the database to `false` and try it again.
+Hint: In case there's an error during a migration run, it is possible that the migration process didn't release the lock state. If that happens, check for any errors in the up() and down() methods. If they're fixed, you may set the `locked` flag in the database to `false` and try it again.
 
 ### Code changes that affect existing data in MongoDB
 Whenever code changes require existing data in MongoDB to be changed, a new database revision is added in the plugin [reaction-migrations](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/versions/server/migrations/12_add_shopId_on_billing.js).
 
 **12_add_shopId_on_billing.js**
-```
+```js
 Migrations.add({
   version: 12,
   up() {
@@ -58,7 +58,7 @@ Migrations.add({
 });
 ```
 
-Each revision consists of a `version` and the two methods: `up()` and `down()` which are inverse: Calling up() and then down() on a dataset should leave you with the original dataset again. Downgrading is not used often, but can be helpful in some situations. For example one could investigate if a specific error that depends on your existing data in mongo also occurs in an older version of Reaction.
+Each revision consists of a `version` and the two methods: `up()` and `down()` which are inverse. Calling up() and then down() on a dataset should leave you with the original dataset again. Downgrading is not used often, but can be helpful in some situations. For example one could investigate if a specific error that depends on your existing data in mongo also occurs in an older version of Reaction.
 
 ### How to deal with your own migration needs
 In case you're writing your own plugins and do change the structure of the database you may want to deal with migrations as well to keep your plugin's source code in sync with the database structure.
