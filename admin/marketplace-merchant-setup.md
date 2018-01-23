@@ -8,6 +8,7 @@ The marketplace owner must have completed the following before proceeding with t
 
 1. Enabled marketplace in "Shop Settings"
 2. Enabled the Stripe payment method in "Payment Methods"
+3. Make sure the [Stripe Connect](https://dashboard.stripe.com/applications/overview) account's redirect URI is set to:  `https://<yourdomain>/stripe/connect/authorize`
 
 ## Invite a seller
 
@@ -19,7 +20,7 @@ With Marketplace enabled, invite a new shop owner using the Marketplace invite o
 
 ![](/assets/admin-merchant-invite.png "Reaction's Invite Owner Form")
 
-### Activate new shop 
+### Activate new shop
 
 After submitting the invite owner form, go to the "Marketplace Shops" settings panel and set the shop to active.
 
@@ -27,7 +28,7 @@ After submitting the invite owner form, go to the "Marketplace Shops" settings p
 
 ## Seller shop onboarding
 
-As a user, whom was invited as a seller in a marketplace, these are the minimun steps I must complete to have a working shop.
+As a user, whom was invited as a seller in a marketplace, these are the minimum steps I must complete to have a working shop.
 
 ### Invitation email
 
@@ -41,7 +42,7 @@ You will be prompted to set your password for the first time.
 
 ![](/assets/admin-merchant-onboarding-1.png "Merchant onboarding step 1 - set email")
 
-### Set up shop settings 
+### Set up shop settings
 
 Go to shop settings and update general shop info.
 

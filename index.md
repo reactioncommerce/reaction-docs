@@ -42,17 +42,17 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
     text-decoration: none !important;
     color: rgb(5,42,78) !important;
   }
-  
+
   .content-blocks {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   .content-block {
     width: 100%;
     display: grid;
   }
-  
+
   @media (min-width: 992px) {
     .content-block {
       margin: 0 10px;
@@ -64,17 +64,17 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
 <div class="content-blocks">
   <div class="content-block">
     <div class="section-promo">
-      <a href="https://docs.reactioncommerce.com/reaction-docs/master/dashboard">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-store-guide.svg" height="110">
-        <h3 class="accent-color text-center">Store Guide</h3>
+      <a href="https://docs.reactioncommerce.com/reaction-docs/master/installation">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-developer-guide.svg">
+        <h3 class="accent-color text-center">Installation Guide</h3>
       </a>
     </div>
   </div>
   <div class="content-block">
     <div class="section-promo">
-      <a href="https://docs.reactioncommerce.com/reaction-docs/master/getting-started-developing-with-reaction">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-developer-guide.svg">
-        <h3 class="accent-color text-center">Developer Guide</h3>
+      <a href="https://docs.reactioncommerce.com/reaction-docs/master/tutorial">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-store-guide.svg" height="110">
+        <h3 class="accent-color text-center">Customization Tutorials</h3>
       </a>
     </div>
   </div>
@@ -96,9 +96,9 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   </div>
   <div class="content-block">
     <div class="section-promo">
-      <a href="https://styleguide.reactioncommerce.com/">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-style-guide.svg">
-        <h3 class="accent-color text-center">Style Guide</h3>
+      <a href="https://docs.reactioncommerce.com/reaction-docs/master/dashboard">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/assets/svg/reaction-commerce-store-guide.svg" height="110">
+        <h3 class="accent-color text-center">Store Guide</h3>
       </a>
     </div>
   </div>
@@ -139,6 +139,31 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
         <a href="https://blog.reactioncommerce.com/product-grid/" class="article-link">
           <div class="article">
             <span class="headline">The Core Commerce Funnel: Product Grid</span><span class="dateline">28 Jul 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/product-part-1/" class="article-link">
+          <div class="article">
+            <span class="headline">Core Commerce Funnel: Product, Part 1</span><span class="dateline">11 Aug 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/products-part-2/" class="article-link">
+          <div class="article">
+            <span class="headline">Core Commerce Funnel: Product, Part 2</span><span class="dateline">31 Aug 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/products-part-3/" class="article-link">
+          <div class="article">
+            <span class="headline">Core Commerce Funnel: Product, Part 3</span><span class="dateline">18 Sep 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/better-debugging-in-reaction/" class="article-link">
+          <div class="article">
+            <span class="headline">Better Debugging in Reaction</span><span class="dateline">15 Nov 2017 | Spencer Norman</span>
+          </div>
+        </a>
+        <a href="https://blog.reactioncommerce.com/building-and-launching-a-store-on-reaction/" class="article-link">
+          <div class="article">
+            <span class="headline">Building & Launching a Swag Shop on Reaction</span><span class="dateline">14 Dec 2017 | Michael Jenny</span>
           </div>
         </a>
     </div>
