@@ -61,6 +61,6 @@ Migrations.add({
 Each revision consists of a `version` and the two methods: `up()` and `down()` which are inverse. Calling `up()` and then `down()` on a dataset should leave you with the original dataset again. Downgrading is not used often, but can be helpful in some situations. For example one could investigate if a specific error that depends on your existing data in mongo also occurs in an older version of Reaction.
 
 ### How to deal with your own migration needs
-In case you're writing your own plugins and do change the structure of the database you may want to deal with migrations as well to keep your plugin's source code in sync with the database structure.
+In case you're writing your own plugins and do change the structure of the database, you may want to deal with migrations as well to keep your plugin's source code in sync with the database structure.
 
 Right now there's no officially supported or recommend way of doing this. We're aware of the situation, but haven't decided which route to go in order to address the topic.
