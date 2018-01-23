@@ -272,6 +272,12 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/architecture/collections.md"
 		}, {
+      "class": "guide-sub-nav-item",
+			"alias": "database-migrations",
+			"label": "Migrations",
+			"repo": "reaction-docs",
+			"docPath": "developer/architecture/migrations.md"      
+    }, {
 			"class": "guide-sub-nav-item",
 			"alias": "image-handling",
 			"label": "Images",
