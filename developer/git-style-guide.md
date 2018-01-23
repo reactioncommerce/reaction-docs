@@ -46,4 +46,4 @@ Follow the [PR template](https://github.com/reactioncommerce/reaction/blob/maste
 
 ## Wait for a code review
 
-Congrats! You made a pull request. Head to the [contributing guide](/developer/contributing-to-reaction.md#step-3-the-pull-request-and-review-process) to see what's next.
+Congrats! You made a pull request. Head to the [contributing guide](/developer/contributing-to-reaction.md) to see what's next.
