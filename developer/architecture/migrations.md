@@ -14,7 +14,7 @@ Hooks.Events.add("afterCoreInit", () => {
 ```
 
 The Migrations package keeps track of the applied changes in a dedicated collection aptly called _Migrations_ (configurable):
-![Screenshot of Collection Migrations](../assets/screenshot-migrations-collection.png)
+![Screenshot of Collection Migrations](https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/screenshot-migrations-collection.png)
 
 Hint: In case there's an error during a migration run, it is possible that the migration process didn't release the lock state. If that happens, check for any errors in the `up()` and `down()` methods. If they're fixed, you may set the `locked` flag in the database to `false` and try it again.
 
