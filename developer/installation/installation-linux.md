@@ -11,17 +11,17 @@ Follow the instructions at [NodeJs site](https://nodejs.org)
 For Ubuntu/Debian
 
 ```sh
-apt-get update
+sudo apt-get update
 
-apt-get install -y --no-install-recommends build-essential bzip2 curl ca-certificates git graphicsmagick python
+sudo apt-get install -y --no-install-recommends build-essential bzip2 curl ca-certificates git graphicsmagick python
 ```
 
 For CentOS/RHEL
 
 ```sh
-yum groupinstall "Development Tools"
+sudo yum groupinstall "Development Tools"
 # add "Extra Packages for Enterprise Linux" repository for GraphicsMagick
-yum install epel-release  GraphicsMagick
+sudo yum install epel-release GraphicsMagick
 ```
 
 ### Install Meteor
@@ -37,7 +37,7 @@ curl https://install.meteor.com/ | sh
 
 ```sh
 # install CLI
-npm install -g reaction-cli
+sudo npm install -g reaction-cli
 ```
 
 ### Create your first Reaction project
