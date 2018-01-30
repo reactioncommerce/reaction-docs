@@ -5,16 +5,14 @@ Categorizing products is a very common scenario. Reaction Commerce offers a very
 Reaction Commerce does offer out-of-the-box functionality to build product hierarchies with categories and sub-categories, although it's important to understand that tags are specific on a product level, i.e. they do not apply down to individual variants of a specific product (or even options of variants).
 
 To start, let's build a tagging hierarchy that looks like this:
-```
-       |-- Gear  (top-level category)
-           |-- Helmets  (second-level category)
-               |-- Full-face  (third-level category)
-               |   |-- Btomic SL extreme  (product)
-               |
-               |-- Standard protection  (third-level category)
-                   |-- Concordia XTRA light  (product)
-```
 
+           |-- Gear  (top-level category)
+               |-- Helmets  (second-level category)
+                   |-- Full-face  (third-level category)
+                   |   |-- Btomic SL extreme  (product)
+                   |
+                   |-- Standard protection  (third-level category)
+                       |-- Concordia XTRA light  (product)
 
 ### Step 1: Create the tag hierarchy in admin backend
 
@@ -26,7 +24,6 @@ To start, let's build a tagging hierarchy that looks like this:
 
 ![Screenshot](/assets/admin-tagging-step-2.jpg)
 
-
 ### Step 2: Assign previously created tags to products
 
 After creating the tags (read: product categories), we need to tell the products which
@@ -35,7 +32,6 @@ category they belong to. If you like your product to be found regardless if one 
 **Assigning tag names to products:**
 
 ![Screenshot](/assets/admin-tagging-step-3.jpg)
-
 
 ### Step 3: Navigating product categories
 

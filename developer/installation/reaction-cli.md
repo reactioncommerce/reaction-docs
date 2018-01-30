@@ -6,7 +6,6 @@ Some handy commands to know
 
 `reaction -h` will give you help for the `reaction` command.
 
-
 #### reaction pull
 
 Pull the latest version of Reaction and update dependencies
@@ -36,7 +35,6 @@ reaction reset -n
 #### reaction test
 
 To run the server integration tests
-
 
 #### reaction plugin create <your-plugin-name>
 
