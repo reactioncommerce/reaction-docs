@@ -8,7 +8,7 @@ Reaction uses `/private/settings/reaction.json` for the configuration of Reactio
 
 You can use [environment variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps#how-the-environment-and-environmental-variables-work) for settings, useful for headless and automated virtual machine configuration.
 
-Environment variables take priority over variables set in _settings.json_.
+Environment variables take priority over variables set in `settings.json`.
 
 You can also assign these variables before the `reaction` command.
 
@@ -64,7 +64,7 @@ For convenience, the initial Reaction administrator can be configured here.
 
 Creating a `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `reaction` command to start Reaction.
 
-Once you have edited the **_settings/settings.json_** you will need to run:
+Once you have edited the `_settings/settings.json_` you will need to run:
 
 ```sh
 reaction reset && reaction
@@ -72,7 +72,7 @@ reaction reset && reaction
 
 To reset the database.
 
-**_settings/settings.json_**
+`_settings/settings.json_`
 
 ```json
 {
@@ -193,7 +193,7 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
 ]
 ```
 
-_Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload._
+*Note: Where `name` is Reaction package name, the `settings` object will update the `Packages` collection on every restart/reload.*
 
 ## Default sample data
 
@@ -206,14 +206,16 @@ Reaction installs sample shop data, translations, and other fixture defaults fro
 
 You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
 
-_Note: the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method._
+*Note: the `private` prefix is automatically removed by the [Meteor Assets](http://docs.meteor.com/api/assets.html) method.*
 
 ### Overwrite sample data
 
 If you prefer to run `reaction` _without_ default sample data, set the `SKIP_FIXTURES` variable to `true`. Run `SKIP_FIXTURES=true reaction` or export the variable to set it for the life of that shell session:
 
-    $ export SKIP_FIXTURES=true
-    $ reaction
+```sh
+export SKIP_FIXTURES=true
+reaction
+```
 
 ## Importing Data
 
@@ -221,7 +223,7 @@ The `Reaction.Import` class provides import functionality.
 
 See: [import.md](/developer/core/import.md) for documentation on `Reaction.Import`.
 
-_Example import of shipping records_
+Example import of shipping records:
 
 ```js
 import { Meteor} from "meteor/meteor";

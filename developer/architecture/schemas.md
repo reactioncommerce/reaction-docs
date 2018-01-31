@@ -247,7 +247,7 @@ It's important to note that collections do not enforce structure, so nothing wil
 
 ### Updates
 
-Updates where the _selector is not provided must have the selector in the update statement_.
+Updates where the *selector is not provided must have the selector in the update statement*.
 
 Provide selector in **query**
 

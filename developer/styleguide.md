@@ -15,9 +15,13 @@ As a community, Reaction follows guidelines for code style and naming convention
 Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) and [Meteor Code Style](https://guide.meteor.com/code-style.html), [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), with a few custom Reaction-specific rules:
 
 - Always double-quote strings
+
 - Give methods space
+
 - Add spaces around brackets
+
 - 120 character line-length
+
 - `import`s should be listed in this order:
   1. React npm packages (`React`, `prop-types`)
   2. Other npm packages

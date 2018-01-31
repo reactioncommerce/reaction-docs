@@ -78,8 +78,8 @@ although the default will probably work for most people. You have to
 change all the references to `your-plugin-name` or `ExamplePayment` to whatever
 your payment method is called. Most importantly in the section where
 the `paymentMethod` object is created to be stored in the db you must
-change the `processor` and `method` values. _(This should probably be
-changed in the future to derive this value from the package)_
+change the `processor` and `method` values. *(This should probably be
+changed in the future to derive this value from the package)*
 
 ## Client Methods
 

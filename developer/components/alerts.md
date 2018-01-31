@@ -36,7 +36,7 @@ export default MyReactComponent;
 | [alerts](#propalerts) | Array[Object] | An Array of alert objects |
 
 ## Prop: alerts
-
+```js
     const alertArray = [
       {
         message: "Something went wrong",
@@ -46,6 +46,7 @@ export default MyReactComponent;
         }
       }
     ];
+```
 
 ### Example
 
