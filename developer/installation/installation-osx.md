@@ -100,9 +100,8 @@ reaction
 reaction run
 ```
 
-**Note that the first run can take a while as it downloads dependencies. This is especially true if you are not in North America**
-
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
+- **Note that the first run can take a while as it downloads dependencies. This is especially true if you are not in North America**
+- *The initial admin user for the site is auto-generated, and displayed in your console (or see: env variables section to default these)*
 
 By default the username will be :`admin@localhost` and the password will be: `r3@cti0n`
 

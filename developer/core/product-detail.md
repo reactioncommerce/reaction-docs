@@ -185,7 +185,7 @@ Reaction.registerTemplate({
 
 With all of this together we can register our template for use on the PDP page.
 
-**Client**
+#### Client
 
 In a file on the client, create your React component, and register it.
 
@@ -206,7 +206,7 @@ class MyPriceComponent extends Component {
 registerComponent("MyPriceComponent", MyPriceComponent);
 ```
 
-**Server**
+#### Server
 
 In a file on the server, create your template layout, and register it.
 

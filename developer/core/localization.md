@@ -15,9 +15,7 @@ We've created `formatPrice` and `currencySymbol` helpers for using in templates:
 
 We use the [accounting.js](https://openexchangerates.github.io/accounting.js/) library for formatting.
 
-Typical usage is `price = accounting.formatMoney price, Reaction.Locale.currency`
-
-*Note: changing base shop currency is not reactive. Refresh/restart to see changes.*
+Typical usage is `price = accounting.formatMoney price, Reaction.Locale.currency`. *Note: changing base shop currency is not reactive. Refresh/restart to see changes.*
 
 To add a currency you can add an entry in `reaction-sample-data/private/data/Shops.json`. For example:
 

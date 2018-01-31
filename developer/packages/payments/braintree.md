@@ -27,7 +27,7 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
 - Signature Debit Cards
 
-_Actual payment method support will vary by country._
+> *Note: Actual payment method support will vary by country.*
 
 Based on the accepted payment methods, Braintree's default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/braintree/lib/collections/schemas/package.js` depending on your needs.
 
@@ -41,7 +41,7 @@ Based on the accepted payment methods, Braintree's default schema for credit car
 
 > Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures take up to 24 hours to process, and no other actions on this transaction can occur during this time period.
 >
-> _If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`._
+> *If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`.*
 
 - refund
 
