@@ -31,7 +31,7 @@ export default MyReactComponent;
 ## Props
 
 ### TagList
-
+<!--lint disable-->
 | Property         | Type          | Description                                                                        |
 | ---------------- | ------------- | ---------------------------------------------------------------------------------- |
 | editable         | Boolean       | True: enable editable tags. False (default) show tags for display only.            |
@@ -50,9 +50,11 @@ export default MyReactComponent;
 | suggestions      | Array[Object] | Array of suggestion for TagItem                                                    |
 | tagProps         | Object        | Props to apply to TagItem                                                          |
 | tags             | Array[Tag]    | Array of Tag objects                                                               |
+<!--lint enable-->
 
 ### TagItem
 
+<!--lint disable-->
 | Property                | Type          | Description                                                                   |
 | ----------------------- | ------------- | ----------------------------------------------------------------------------- |
 | blank                   | Boolean       | Render a blank, editable tag for adding new tags                              |
@@ -73,3 +75,4 @@ export default MyReactComponent;
 | parentTag               | Object        | Parent tag if this tag is a child of another.                                 |
 | suggestions             | Array[Object] | Array of suggestions for Autosuggest input. `[{ label: "Suggestion Label" }]` |
 | tag                     | Object        | Tag object, see tag schema                                                    |
+<!--lint enable-->

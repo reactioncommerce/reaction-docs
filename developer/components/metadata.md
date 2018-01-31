@@ -33,7 +33,7 @@ export default MyReactComponent;
 ```
 
 ### Props
-
+<!--lint disable-->
 | Property     | Type          | Description                                                                                                           |
 | ------------ | ------------- | --------------------------------------------------------------------------------------------------------------------- |
 | editable     | Boolean       | toggle between an editable and non editable states                                                                    |
@@ -42,7 +42,7 @@ export default MyReactComponent;
 | onMetaChange | Function      | On metafield change via input. callback signature `(event, metafield, index) => {}`                                   |
 | onMetaRemove | Function      | Metafield remove callback. callback signature `(event, metafield, index) => {}`                                       |
 | onMetaSave   | Function      | Metafield save callback. callback signature `(event, metafield, index) => {}` index may be `undefined` if its is new. |
-
+<!--lint enable-->
 ## Media
 
 ```javascript
