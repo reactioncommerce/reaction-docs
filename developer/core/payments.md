@@ -4,7 +4,7 @@ Payment methods are one of the most common packages that developers need to crea
 
 The [Creating a Payment Provider](/developer/tutorial/creating-a-payment-provider-plugin.md) tutorial was created to try and make this process as easy as possible for developers new to Reaction. It should be used as a guide in making all payment methods as consistent as possible so that they are usable by the largest number of users.
 
-Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](/developer/packages/payments/authnet.md), [Braintree](/developer/packages/payments/braintree.md), [Paypal Express](/developer/packages/payments/paypal.md), [Paypal Payflow](/developer/packages/payments/paypal.md), and [Stripe](/developer/packages/payments/stripe.md).
+Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](/developer/packages/payments/authnet.md), [Braintree](/developer/packages/payments/braintree.md), [PayPal Express](/developer/packages/payments/paypal.md), [PayPal Payflow](/developer/packages/payments/paypal.md), and [Stripe](/developer/packages/payments/stripe.md).
 
 ## Transactions
 
@@ -74,7 +74,7 @@ MethodHooks.after("cart/submitPayment", function (options) {
 
 Saves a submitted payment to cart, triggers workflow and adds "paymentSubmitted" to cart workflow
 
-_Note: this method also has a client stub, that forwards to cartCompleted._
+*Note: this method also has a client stub, that forwards to cartCompleted.*
 
 ```js
 import { Meteor } from "meteor/meteor";

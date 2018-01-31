@@ -26,7 +26,7 @@ Ok, so step #1 will be to set up a Docker host to deploy to. To accomplish this,
 
 Docker Machine has drivers for [most of the major cloud providers](https://docs.docker.com/machine/drivers/). They each have their own settings, but the process is essentially the same for all of them. We're going to focus on the Digital Ocean driver because it's one of the easiest to use. Only a few settings are required to start a new server, but see [the Digital Ocean driver docs](https://docs.docker.com/machine/drivers/digital-ocean/) for all of the available options.
 
-Before you start a machine, you'll need to get an API key from your Digital Ocean account. See "_[How Do I Get My API Credentials?](https://www.digitalocean.com/help/api/)_"
+Before you start a machine, you'll need to get an API key from your Digital Ocean account. See *[How Do I Get My API Credentials?](https://www.digitalocean.com/help/api/)*
 
 Once you have that, you're ready to use Docker Machine to provision a server. To do so, run:
 

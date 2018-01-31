@@ -2,7 +2,7 @@
 
 [![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
 
-## Install prerequisites:
+## Install prerequisites
 
 ### Install Node
 

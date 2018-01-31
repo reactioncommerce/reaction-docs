@@ -31,7 +31,7 @@ export REACTION_EMAIL="<login email>"
 Set the Reaction [logging level](/developer/architecture/logging.md). Defaults to `info`.
 
 ```sh
- REACTION_LOG_LEVEL="DEBUG" reaction
+REACTION_LOG_LEVEL="DEBUG" reaction
 ```
 
 ### MONGO_URL
@@ -210,7 +210,7 @@ You can overwrite or delete these import files to alter the default data. If alt
 
 ### Overwrite sample data
 
-If you prefer to run `reaction` _without_ default sample data, set the `SKIP_FIXTURES` variable to `true`. Run `SKIP_FIXTURES=true reaction` or export the variable to set it for the life of that shell session:
+If you prefer to run `reaction` *without* default sample data, set the `SKIP_FIXTURES` variable to `true`. Run `SKIP_FIXTURES=true reaction` or export the variable to set it for the life of that shell session:
 
 ```sh
 export SKIP_FIXTURES=true

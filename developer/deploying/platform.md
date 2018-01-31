@@ -168,7 +168,7 @@ reaction logs -a <appname>
 
 Hint: to get a list of all apps you have access to, run `reaction apps list`
 
-**CI/CD Configuration**
+### CI/CD Configuration
 
 [Continuous integration configuration](https://docs.gitlab.com/ee/ci/) should be committed in [.reaction/ci/config.yml](https://github.com/reactioncommerce/reaction/blob/master/.reaction/ci/config.yml).
 

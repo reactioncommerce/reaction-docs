@@ -19,14 +19,14 @@ Ecommerce and marketplace sites from around the world are using Reaction in prod
 
 ### Why is Reaction so slow?
 
-_For Development_
+*For Development*
 
 We are aware that Reaction Commerce can take a long time to reload when using the development server. This has to do with that
 large amount of files that are in the project. Hopefully this has been mitigated to some degree with the update to Meteor 1.6, however
 we know that faster is better when it comes to development so we will be focusing all of our efforts on improving performance. You
 can see our plan, weigh in with suggestions, contribute, and track progress [here](https://github.com/reactioncommerce/reaction/issues/3233)
 
-_To "first paint"_
+*To "first paint"*
 
 As mentioned above we are aware that because of the nature of Meteor apps and the size of this app that on some connections
 it can take several seconds before the site is rendered to clients. We are working to reduce the bundle size by eliminating some
@@ -108,10 +108,8 @@ By default the admin login will be username: `admin@localhost` and password `r3@
 
 Since 2014 [Google has indexed JavaScript when crawling websites](https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html). Reaction, however, offers page pre-rendering and product detail page metatag generation out of the box to ensure products are indexed well for web crawlers and search engines:
 
-1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. ALl you have to do is provide a key to your site and Prerender will handle the pre-rendering.
-
+1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. All you have to do is provide a key to your site and Prerender will handle the pre-rendering.
 2. [Spiderable](https://github.com/ongoworks/spiderable): A now-deprecated solution is our Atmosphere package called (Spiderable)[https://atmospherejs.com/ongoworks/spiderable] that pre-renders Meteor applications for search engines.
-
 3. [meteor-dochead](https://github.com/kadirahq/meteor-dochead): Automatically add `<meta>` tags are for products using the [meteor-dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data.
 
 Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our latest blog post.
@@ -158,7 +156,7 @@ There's an extension to our [example plugin tutorial](/developer/tutorial/plugin
 
 Reaction features a couple of built-in payment providers: PayPal Flow, PayPal Express, Stripe, Braintree, Authorize.net and others. As far as shipping is concerned, we've these out-of-the-box plugins: ShippingRates and [Shippo](https://goshippo.com/).
 
-When implementing your own shop you may encounter situations where you need to bring your own solutions into the game. Because this is such a common use case, Reaction's answer to this question is built upon two pillars: The _plugin concept_ and the _internal development payment/shipping APIs_. If you're interested in learning more, head over to our [tutorial](/developer/tutorial/creating-a-payment-provider-plugin.md) that teaches how to implement an exemplary payment provider plugin.
+When implementing your own shop you may encounter situations where you need to bring your own solutions into the game. Because this is such a common use case, Reaction's answer to this question is built upon two pillars: The *plugin concept* and the *internal development payment/shipping APIs*. If you're interested in learning more, head over to our [tutorial](/developer/tutorial/creating-a-payment-provider-plugin.md) that teaches how to implement an exemplary payment provider plugin.
 
 ## More
 

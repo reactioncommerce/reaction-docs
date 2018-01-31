@@ -6,7 +6,7 @@ The product detail page is made up of `React` components and a `json` layout sto
 
 Default layouts for the product detail page are registered in in the `product-detail-simple` package, located `imports/plugins/included/produce-detail-simple`.
 
-**An Example of the simple layout configuration.**
+### An example of the simple layout configuration
 
 `imports/plugins/included/produce-detail-simple/lib/layout/simple.js`
 
@@ -45,7 +45,7 @@ export default function blocks() {
 }
 ```
 
-**An Example of the simple layout being registered as a template.**
+### An example of the simple layout being registered as a template
 
 `imports/plugins/included/produce-detail-simple/server/index.js`
 

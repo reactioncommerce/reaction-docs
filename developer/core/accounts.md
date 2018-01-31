@@ -2,7 +2,7 @@
 
 Reaction extends [Meteor Account](http://docs.meteor.com/api/accounts.html) functionality in `client/modules/accounts` with Reaction specific UI and behavior.
 
-- _Accounts_ collection
+- *Accounts* collection
 - dropdown accounts ui
 - inline accounts ui
 - user profile
@@ -136,7 +136,7 @@ Meteor.call("accounts/addUserPermissions", userId, permissions, group);
 | Parameter   | Type              | Description                                                                                                                     |
 | ----------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | userId      | String            | userId                                                                                                                          |
-| permissions | Array, String     | Name of role/permission.  If array, users returned will have at least one of the roles specified but need not have _all_ roles. |
+| permissions | Array, String     | Name of role/permission.  If array, users returned will have at least one of the roles specified but need not have *all* roles. |
 | group       | String            | Optional name of group to restrict roles to. User's Roles.GLOBAL_GROUP will also be checked.                                    |
 | **Returns** | **Type**          | **Description**                                                                                                                 |
 | Boolean     | success / failure |                                                                                                                                 |

@@ -16,7 +16,7 @@ Copy the [favicon code](https://github.com/reactioncommerce/reaction/blob/master
 
 For best results, you may want to create favicons for different devices. You can create favicon bundles with various online tools, e.g. <https://realfavicongenerator.net>
 
-## Step 4: Adjust _basePath_ to your webserver
+## Step 4: Adjust `basePath` to your webserver
 
 Depending on how you intend to serve your static favicons, you can adjust the `basePath` variable in favicons to the public URL, where your favicons live. If you don't want to go the extra mile and deliver them through a dedicated webserver, a CDN or AWS S3, you can also put them into your application's `/public` folder and let Meteor serve them.
 
