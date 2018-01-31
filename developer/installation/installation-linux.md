@@ -37,7 +37,7 @@ curl https://install.meteor.com/ | sh
 
 ```sh
 # install CLI
-sudo npm install -g reaction-cli
+npm install -g reaction-cli
 ```
 
 ### Create your first Reaction project
