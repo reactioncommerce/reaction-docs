@@ -45,6 +45,12 @@
 			"docPath": "developer/installation/installation-linux.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "reaction-cli",
+			"label": "Reaction CLI",
+			"repo": "reaction-docs",
+			"docPath": "developer/installation/reaction-cli.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "configuration",
 			"label": "Configuration",
 			"repo": "reaction-docs",
