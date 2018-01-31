@@ -1,11 +1,11 @@
-* * *
+---
 
 ⚠️  **DEPRECATION NOTICE:** This page's content is deprecated and no longer relevant.
 
-As of mid-2017 Reaction releases, Reaction has started replacing Blaze templating with React components. Reaction will continue to do so until Blaze templates are completely eliminated. 
+As of mid-2017 Reaction releases, Reaction has started replacing Blaze templating with React components. Reaction will continue to do so until Blaze templates are completely eliminated.
 To ensure easier version updates in the future, we recommend using React over Blaze as well.
 
-* * *
+---
 
 # Templates
 
@@ -34,4 +34,4 @@ then create a template (probably a copy of the one you are extending).
 
 While you can always organize your templates however you wish, [we suggest](/developer/styleguide.md) you mirror the existing structure. For example, if you are extending the template located in `reaction/imports/plugins/included/product-variant/client/templates/products/products.html` then you would mirror that by creating your new template at `reaction/client/templates/products/myTemplate.html`
 
-_The template helpers, events, etc. from the original are still accessible and used in the new extended template._
+*The template helpers, events, etc. from the original are still accessible and used in the new extended template.*

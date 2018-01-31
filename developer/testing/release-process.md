@@ -27,7 +27,7 @@ The process is:
 ## Accept pull requests and i18n
 
 - Merge approved patches/fixes/features pull requests for this release into the `release-x.x.x` branch.
-- Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch. LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of _i18n imports_ should also be performed before merging the i18n translation PR into the release branch.
+- Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch. LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of *i18n imports* should also be performed before merging the i18n translation PR into the release branch.
 - run `meteor npm install` as well as `reaction run` to make sure that all `package.json` and `package-lock.json` files get updated.
 - Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `master`.
 

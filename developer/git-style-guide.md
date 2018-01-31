@@ -13,14 +13,14 @@ Make atomic commits in the [Git commit message guidelines from Angular.js](https
 
 All of the types:
 
-- _feat_: A new feature
-- _fix_: A bug fix
-- _docs_: Documentation only changes
-- _style_: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- _refactor_: A code change that neither fixes a bug nor adds a feature
-- _perf_: A code change that improves performance
-- _test_: Adding missing or correcting existing tests
-- _chore_: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- *feat*: A new feature
+- *fix*: A bug fix
+- *docs*: Documentation only changes
+- *style*: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- *refactor*: A code change that neither fixes a bug nor adds a feature
+- *perf*: A code change that improves performance
+- *test*: Adding missing or correcting existing tests
+- *chore*: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 Note the following styles:
 
@@ -31,11 +31,11 @@ Note the following styles:
 
 Examples:
 
-    (feat): add sendEmail() job
-    (docs): add doc for sendEmailJob() method
-    (refactor): replace Blaze component with React component
+`(feat): add sendEmail() job`
+`(docs): add doc for sendEmailJob() method`
+`(refactor): replace Blaze component with React component`
 
-    BREAKING CHANGES: remove Header Blaze template. To migrate to the React component, use HeaderComponent.
+`BREAKING CHANGES: remove Header Blaze template. To migrate to the React component, use HeaderComponent.``
 
 See more [examples from Angular.js](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.8sw072iehlhg).
 

@@ -39,8 +39,8 @@ Assertions made include:
 - Given a set of inputs (states OR props) assert what a component should output (render).
 
 - Given a user action, assert how a component behaves:
-    - It might make a state update.
-    - Call a prop function passed to it by a parent.
+  - It might make a state update.
+  - Call a prop function passed to it by a parent.
 
 ### Enzyme
 
@@ -83,11 +83,11 @@ Getting started with enzyme:
   })
 ```
 
-_Steps 1_: Shallow render a component
+*Steps 1*: Shallow render a component
 
-_Steps 2_: Traverse the shallow DOM searching for expected elements e.g. `div`, `li`, `a` ... tags
+*Steps 2*: Traverse the shallow DOM searching for expected elements e.g. `div`, `li`, `a` ... tags
 
-_Steps 3_: Use methods provided by enzyme wrapper to make assertions. Find methods in the enzyme [docs](http://airbnb.io/enzyme/docs/api/shallow.html#shallow-rendering-api).
+*Steps 3*: Use methods provided by enzyme wrapper to make assertions. Find methods in the enzyme [docs](http://airbnb.io/enzyme/docs/api/shallow.html#shallow-rendering-api).
 
 ### Jest
 

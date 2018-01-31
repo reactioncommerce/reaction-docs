@@ -4,7 +4,7 @@
 
 Place your images in your application's `private` directory, e.g. like this:
 
-    -- ./private
+  -- ./private
        |-- ./data
            |-- ./Products.json
            |-- ./Shipping.json

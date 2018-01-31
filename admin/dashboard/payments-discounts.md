@@ -15,11 +15,12 @@ Discount codes can be enabled in the **Payments** <i class="rui font-icon fa fa-
 - **Total Limit**, per code usage limit
 
 - **Calculation Method**
-    - credit - a credit is applied to the order subtotal up to the formula value
-    - discount - the formula value applied as a percentage discount off order subtotal
-    - sale - overrides item pricing with a fixed sale price
-    - shipping - the formula value should be a string that matches the name of a shipping method. The calculated shipping rate will be applied as a discount.
+  - credit - a credit is applied to the order subtotal up to the formula value
+  - discount - the formula value applied as a percentage discount off order subtotal
+  - sale - overrides item pricing with a fixed sale price
+  - shipping - the formula value should be a string that matches the name of a shipping method. The calculated shipping rate will be applied as a discount.
 
 ![](/assets/admin-dashboard-payments-discounts.png "Payment Discounts")
 
 Discounts are validated when a user enters a code during checkout, and are applied as payment methods on the cart. The discount code usage is tracked once the order has been placed.
+  -
