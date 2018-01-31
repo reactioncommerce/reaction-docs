@@ -137,9 +137,9 @@ One key thing to remember is that at any given time, only one Global Layout can 
 
 You can change the default layout values in [`/client/config/defaults.js`](https://github.com/reactioncommerce/reaction/blob/v1.6.0/client/config/defaults.js) by overriding them in a new file.
 
-1.  Create a file called `default.js` in the [`custom/client/`](https://github.com/reactioncommerce/reaction/tree/master/custom/client) folder, already created for you.
-2.  Import [Meteor Session](http://docs.meteor.com/api/session.html), using `import { Session } from "meteor/session";`
-3.  Set a [Meteor Session](http://docs.meteor.com/api/session.html) variable for `DEFAULT_LAYOUT`.
+1. Create a file called `default.js` in the [`custom/client/`](https://github.com/reactioncommerce/reaction/tree/master/custom/client) folder, already created for you.
+2. Import [Meteor Session](http://docs.meteor.com/api/session.html), using `import { Session } from "meteor/session";`
+3. Set a [Meteor Session](http://docs.meteor.com/api/session.html) variable for `DEFAULT_LAYOUT`.
     Your resulting file should look like:
 
 ```js
@@ -148,7 +148,7 @@ import { Session } from "meteor/session";
 Session.set("DEFAULT_LAYOUT", "coreLayout");
 ```
 
-4.  Make sure to restart the server when changing global variables.
+4. Make sure to restart the server when changing global variables.
 
 Use the same pattern to override home page structure with `INDEX_OPTIONS`:
 

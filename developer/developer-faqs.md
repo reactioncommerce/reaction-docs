@@ -71,7 +71,7 @@ We compiled a curated list of community projects that can be found in the wild. 
 
 Here are some options for deployment. What the best options is depends on your budget and your expected level of traffic
 
-1.  [Reaction Platform](https://reactioncommerce.com/hosting)
+1. [Reaction Platform](https://reactioncommerce.com/hosting)
 
 The [Reaction Platform](https://reactioncommerce.com/hosting) comes with virtual private clusters, containerized cloud hosting, multiple staging environments, SSL and domains, direct support channels, and one-step deployment.
 
@@ -83,7 +83,7 @@ Reaction Commerce’s Platform enables clients to:
 
 You can find out more and request a quote [here](https://reactioncommerce.com/#get-a-demo) or you can contact <mailto:sales@reactioncommerce.com>.
 
-2.  Galaxy
+2. Galaxy
 
 The Meteor Development Group offers a hosting service that is focused on hosting Meteor apps with monitoring, etc. You can find more information [here](https://www.meteor.com/hosting).
 
@@ -108,11 +108,11 @@ By default the admin login will be username: `admin@localhost` and password `r3@
 
 Since 2014 [Google has indexed JavaScript when crawling websites](https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html). Reaction, however, offers page pre-rendering and product detail page metatag generation out of the box to ensure products are indexed well for web crawlers and search engines:
 
-1.  [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. ALl you have to do is provide a key to your site and Prerender will handle the pre-rendering.
+1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. ALl you have to do is provide a key to your site and Prerender will handle the pre-rendering.
 
-2.  [Spiderable](https://github.com/ongoworks/spiderable): A now-deprecated solution is our Atmosphere package called (Spiderable)[https://atmospherejs.com/ongoworks/spiderable] that pre-renders Meteor applications for search engines.
+2. [Spiderable](https://github.com/ongoworks/spiderable): A now-deprecated solution is our Atmosphere package called (Spiderable)[https://atmospherejs.com/ongoworks/spiderable] that pre-renders Meteor applications for search engines.
 
-3.  [meteor-dochead](https://github.com/kadirahq/meteor-dochead): Automatically add `<meta>` tags are for products using the [meteor-dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data.
+3. [meteor-dochead](https://github.com/kadirahq/meteor-dochead): Automatically add `<meta>` tags are for products using the [meteor-dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data.
 
 Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our latest blog post.
 
