@@ -268,7 +268,7 @@ Reaction.registerTemplate({
 ## Data Fetching & Container Components
 
 Every component receives a set of props automatically.
-
+<!--lint disable-->
 | Property           | Type         | Description                                         |
 | ------------------ | ------------ | --------------------------------------------------- |
 | variants           | String       | Top level variants                                  |
@@ -280,3 +280,4 @@ Every component receives a set of props automatically.
 | editable           | Boolean      | Boolean true / false if the page should be editable |
 | viewAs             | String       | Viewing this page as "customer" / "administrator"   |
 | hasAdminPermission | Boolean      | If current user has admin permissions               |
+<!--lint enable-->
