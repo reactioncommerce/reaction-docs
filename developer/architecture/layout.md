@@ -79,16 +79,16 @@ Let's look at the full object from [`register.js`](https://github.com/reactionco
 
 ### Workflow process properties
 
--   `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6)
--   `layout`: This property's name is a bit misleading. Conceptually, it designates a shop-wide identifier for a collection of _Layouts_ (subsequently referred to only as **_Global Layout_**), because it covers potentially many routes (as opposed to _Layout_, which only refers to a specific _View_)
--   `collection`: Refers to a Mongo collection which holds the _workflow state_, if any.
--   `enabled`: Whether this _workflow process_ should be enabled or not.
--   `structure`: Contains information about which components should be rendered when this _workflow process_ is applied by the Reaction router.
-    -   `structure.template`: The name of the [Blaze](http://docs.meteor.com/#/full/blaze_render) template that renders the main content for this _workflow process_.
-    -   `structure.notFound`: Name of Blaze template that gets rendered if `structure.template` does not exist (Should not be necessary).
-    -   `structure.headerLayout`: The name of the React component that renders the header for this _workflow process_.
-    -   `structure.footerLayout`: The name of the React component that renders the footer for this _workflow process_.
--   `priority`: This field denotes which _workflow process_ will be used when there are multiple _workflow processes_) with the same key structure (layout, workflow). Lower values have higher precedence.
+- `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6)
+- `layout`: This property's name is a bit misleading. Conceptually, it designates a shop-wide identifier for a collection of _Layouts_ (subsequently referred to only as **_Global Layout_**), because it covers potentially many routes (as opposed to _Layout_, which only refers to a specific _View_)
+- `collection`: Refers to a Mongo collection which holds the _workflow state_, if any.
+- `enabled`: Whether this _workflow process_ should be enabled or not.
+- `structure`: Contains information about which components should be rendered when this _workflow process_ is applied by the Reaction router.
+    - `structure.template`: The name of the [Blaze](http://docs.meteor.com/#/full/blaze_render) template that renders the main content for this _workflow process_.
+    - `structure.notFound`: Name of Blaze template that gets rendered if `structure.template` does not exist (Should not be necessary).
+    - `structure.headerLayout`: The name of the React component that renders the header for this _workflow process_.
+    - `structure.footerLayout`: The name of the React component that renders the footer for this _workflow process_.
+- `priority`: This field denotes which _workflow process_ will be used when there are multiple _workflow processes_) with the same key structure (layout, workflow). Lower values have higher precedence.
 
 ### Workflow step
 
@@ -107,10 +107,10 @@ A workflow step contains a `container` property, along with a few other values. 
 
 ### Workflow step properties
 
--   `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See also the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6)
--   `container`: The DOM element where the rendered template should go into.
--   `template`: The name of the [Blaze](http://docs.meteor.com/#/full/blaze_render) template that renders the content for this _workflow step_.
--   `enabled`: Whether this _workflow step_ should be enabled or not
+- `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See also the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6)
+- `container`: The DOM element where the rendered template should go into.
+- `template`: The name of the [Blaze](http://docs.meteor.com/#/full/blaze_render) template that renders the content for this _workflow step_.
+- `enabled`: Whether this _workflow step_ should be enabled or not
 
 ## How Reaction incorporates Layouts and Workflows
 
@@ -124,14 +124,14 @@ One key thing to remember is that at any given time, only one Global Layout can 
 
 ### Workflow proceses
 
--   The _workflow process_ will be returned in the `ReactionLayout` function in [`/imports/plugins/core/router/lib/router.js`](https://github.com/reactioncommerce/reaction/blob/v1.6.0/imports/plugins/core/router/lib/router.js#L412).
--   Cloned in the Shops collection at initialization
+- The _workflow process_ will be returned in the `ReactionLayout` function in [`/imports/plugins/core/router/lib/router.js`](https://github.com/reactioncommerce/reaction/blob/v1.6.0/imports/plugins/core/router/lib/router.js#L412).
+- Cloned in the Shops collection at initialization
 
 ### Workflow steps
 
--   The _workflow steps_ will be rendered with the [`reactionTemplate`](https://github.com/reactioncommerce/reaction/blob/1.6/client/modules/core/helpers/layout.js#L9) Meteor helper.
--   Workflow steps are not required. This just means that the rendered _Container_ does not have children that are dependent on the state of the _workflow process_.
--   Workflow steps are not cloned to the Shops collection.
+- The _workflow steps_ will be rendered with the [`reactionTemplate`](https://github.com/reactioncommerce/reaction/blob/1.6/client/modules/core/helpers/layout.js#L9) Meteor helper.
+- Workflow steps are not required. This just means that the rendered _Container_ does not have children that are dependent on the state of the _workflow process_.
+- Workflow steps are not cloned to the Shops collection.
 
 ## Overriding default Layout settings
 

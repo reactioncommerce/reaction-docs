@@ -199,10 +199,10 @@ _Note: Where `name` is Reaction package name, the `settings` object will update 
 
 Reaction installs sample shop data, translations, and other fixture defaults from [`/private/data/`](https://github.com/reactioncommerce/reaction/tree/master/private/data) and [`/private/data/i18n`](https://github.com/reactioncommerce/reaction/tree/master/private/data/i18n) using the `Reaction.Import` class. You can see the provided data below:
 
--   [Products.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Products.json)
--   [Shipping.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Shipping.json)
--   [Shops.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Shops.json)
--   [Tags.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Tags.json)
+- [Products.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Products.json)
+- [Shipping.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Shipping.json)
+- [Shops.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Shops.json)
+- [Tags.json](https://github.com/reactioncommerce/reaction/blob/master/private/data/Tags.json)
 
 You can overwrite or delete these import files to alter the default data. If altered, the changed data will be merged with existing documents, but changes in the database will not overwrite on restart if there are no changes.
 

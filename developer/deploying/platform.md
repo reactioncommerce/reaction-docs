@@ -146,9 +146,9 @@ reaction domain unset --app <appname> -d mycoolshop.com
 
 Submit your application for a deployment. This will begin the CI/CD/CD process. This begins a build process that is unique for every project. Expect this entire process to take around 20 minutes.
 
--   test and build production bundle (continuous integration)
--   build container image and publish (continuous delivery)
--   deploy application cluster (continuous deployment)
+- test and build production bundle (continuous integration)
+- build container image and publish (continuous delivery)
+- deploy application cluster (continuous deployment)
 
 ```sh
 # Deploy your application

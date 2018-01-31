@@ -31,16 +31,16 @@ Every product comes filled with one default, required variant. To create more:
 1\. Click the <i class="font-icon fa fa-pencil"></i> icon, located under the **Options** card.
 2\. Fill out the following fields in the **Edit Variant** panel:
 
--   **Label** - Required. A description of your variant, which appears in the under the **Options** label on the Product Detail Page.
--   **Origin country** - Optional. A drop-down menu of countries.
--   **Weight** - Optional. The weight of your item, which will help determine shipping costs.
--   **MSRP (Manufacturer's suggested retail price)** - Optional. The suggested retail price of your product.
--   **Price** - Required. The price that you are actually selling your product.
--   **Width, Length, Height, Weight** - Optional. The size of your product
--   **Taxable** - Optional. Check this box to automatically add tax to this item when purchased. Add Tax Code and Tax Description for more options.
--   **Inventory tracking** - Optional. Check this box if you'd like to track this item in your inventory.
--   **Warn at** - Optional. Adds the `Limited Supply` badge on the Product Grid when quantity is lower than this number.
--   **Allow Backorder** - Optional. Allows customers to backorder the product.
+- **Label** - Required. A description of your variant, which appears in the under the **Options** label on the Product Detail Page.
+- **Origin country** - Optional. A drop-down menu of countries.
+- **Weight** - Optional. The weight of your item, which will help determine shipping costs.
+- **MSRP (Manufacturer's suggested retail price)** - Optional. The suggested retail price of your product.
+- **Price** - Required. The price that you are actually selling your product.
+- **Width, Length, Height, Weight** - Optional. The size of your product
+- **Taxable** - Optional. Check this box to automatically add tax to this item when purchased. Add Tax Code and Tax Description for more options.
+- **Inventory tracking** - Optional. Check this box if you'd like to track this item in your inventory.
+- **Warn at** - Optional. Adds the `Limited Supply` badge on the Product Grid when quantity is lower than this number.
+- **Allow Backorder** - Optional. Allows customers to backorder the product.
 
 3.  Click the **Publish** button on the top right to save Unpublished changes.
 

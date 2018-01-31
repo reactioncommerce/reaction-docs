@@ -6,10 +6,10 @@ Select your shop preferences from the drop-down menu.
 
 You may customize the following:
 
--   Timezone
--   Base Currency
--   Base Unit of Measure
--   Base Language
+- Timezone
+- Base Currency
+- Base Unit of Measure
+- Base Language
 
 We offer translations in over 20 languages, including right-to-left languages like Hebrew. To enable or disable a language, toggle each option on or off.
 

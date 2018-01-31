@@ -13,21 +13,21 @@ Make atomic commits in the [Git commit message guidelines from Angular.js](https
 
 All of the types:
 
--   _feat_: A new feature
--   _fix_: A bug fix
--   _docs_: Documentation only changes
--   _style_: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
--   _refactor_: A code change that neither fixes a bug nor adds a feature
--   _perf_: A code change that improves performance
--   _test_: Adding missing or correcting existing tests
--   _chore_: Changes to the build process or auxiliary tools and libraries such as documentation generation
+- _feat_: A new feature
+- _fix_: A bug fix
+- _docs_: Documentation only changes
+- _style_: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- _refactor_: A code change that neither fixes a bug nor adds a feature
+- _perf_: A code change that improves performance
+- _test_: Adding missing or correcting existing tests
+- _chore_: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 Note the following styles:
 
--   Use the imperative, present tense: use "change", not "changed" nor "changes"
--   Do not capitalize first letter
--   No dot (.) at the end
--   Use `BREAKING CHANGES:` to note breaking changes
+- Use the imperative, present tense: use "change", not "changed" nor "changes"
+- Do not capitalize first letter
+- No dot (.) at the end
+- Use `BREAKING CHANGES:` to note breaking changes
 
 Examples:
 
