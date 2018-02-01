@@ -40,7 +40,7 @@ When there are multiple shops in Reaction, we'll automatically prefix a url safe
 
 > //host/store: Reaction Test/product/title: Example Product/
 
-**//localhost:3000/reaction-test/product/example-product**
+## localhost:3000/reaction-test/product/example-product
 
 To define a route in the registry that does not add a prefix you can define the route in the registry _without a leading "/"_.
 
@@ -60,7 +60,7 @@ This registry entry automatically adds matching permissions to the `Roles` colle
 
 To permit all users to view a route, add the **route name** to the `Shops.defaultVisitorRole` array.
 
-_Default permissions are not added automatically, as there will be a UI component to manage the Shop defaults in the future._
+_Note:_ Default permissions are not added automatically, as there will be a UI component to manage the Shop defaults in the future.
 
 `Accounts.onCreateUser` adds default roles need for products, profiles, and checkout routes automatically if none are defined for the Shop.
 

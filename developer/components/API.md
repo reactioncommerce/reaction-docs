@@ -154,16 +154,16 @@ replaceComponent("MainDropdown", MyCustomDropdown);
 
 In the example above, all of the original class methods and state handlers that exist in the `MainDropdown` class will still be available and the only customization will be on the methods that you specifically define (the `render()` method in this example). This is extremely helpful if you only want to change one small detail about a complex component, but you don't want to have to rewrite the entire component from scratch.
 
-# API
+## API
 
 Below is the full API for the Reaction components system. Each of these items can be imported from `@reactioncommerce/reaction-components`.
 
-#### [Components Objects](#components-objects)
+### [Components Objects](#components-objects)
 
 - [`Components`](#components)
 - [`ComponentsTable`](#componentstable)
 
-#### [Methods](#methods)
+### [Methods](#methods)
 
 - [`registerComponent()`](#registercomponent)
 - [`replaceComponent()`](#replacecomponent)
@@ -174,7 +174,7 @@ Below is the full API for the Reaction components system. Each of these items ca
 - [`copyHOCs()`](#copyhocs)
 - [`loadRegisteredComponents()`](#loadregisteredcomponents)
 
-#### [Higher Order Components](#higher-order-components)
+### [Higher Order Components](#higher-order-components)
 
 - [`withCurrentUser`](#withcurrentuser)
 - [`withCurrentAccount`](#withcurrentaccount)
@@ -485,7 +485,7 @@ export default withIsOwner(MyComponent);
 ### withPermissions
 
 This sets a Boolean `hasPermissions` prop to be passed into the wrapped component based on `roles` or `group`. Like the others above, you can use it to conditionally show parts of the UI or change what functionality is available.
-Default roles used roles = ["guest", "anonymous"]. This is overridden by group, if a group option is passed in. Example is show below without passing any option, and passing roles (commented), and group (commented).
+Default roles used `roles = ["guest", "anonymous"]`. This is overridden by group, if a group option is passed in. Example is show below without passing any option, and passing roles (commented), and group (commented).
 
 ```js
 import { registerComponent, withPermissions } from "@reactioncommerce/reaction-components";
