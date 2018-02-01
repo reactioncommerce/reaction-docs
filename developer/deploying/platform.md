@@ -7,7 +7,7 @@ The `reaction-cli` incorporates functionality for any team to deploy Reaction Co
 1. Get invite token from welcome email or contract
 2. Register local environment
 3. Create, add, and publish SSH keys
-4.  Create application environment
+4. Create application environment
 5.  Deploy application
 
 ## Request invite token

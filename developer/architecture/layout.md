@@ -148,7 +148,7 @@ import { Session } from "meteor/session";
 Session.set("DEFAULT_LAYOUT", "coreLayout");
 ```
 
-4.  Make sure to restart the server when changing global variables.
+4. Make sure to restart the server when changing global variables.
 
 Use the same pattern to override home page structure with `INDEX_OPTIONS`:
 

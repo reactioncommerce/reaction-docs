@@ -18,7 +18,7 @@ The process is:
 1. Create a branch from `master` named **release-x.x.x**
 2. Commit incremented `package.json` version
 3. run `meteor npm install` to bump `package-lock.json` version
-4.  Should ~follow [SemVer](http://semver.org/) guidelines:
+4. Should ~follow [SemVer](http://semver.org/) guidelines:
 
 - MAJOR version when you make incompatible API changes,
 - MINOR version when you add functionality in a backwards-compatible manner, and

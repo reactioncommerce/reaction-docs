@@ -14,7 +14,7 @@ To create a product, login to your dashboard and follow these steps:
 
 3. To upload a product photo, click on the plus <i class="font-icon fa fa-plus"></i> on the photo placeholder. You can upload multiple photos at a time by selecting more than one. You can also drag and drop multiple photos into the box.
 
-4.  Editing social media sharing and tags from the sidebar: If your shop is connected to social media sharing, customize your product's social sharing messaging by clicking on the <i class="font-icon fa fa-pencil"></i> icon on the right of the product pricing.
+4. Editing social media sharing and tags from the sidebar: If your shop is connected to social media sharing, customize your product's social sharing messaging by clicking on the <i class="font-icon fa fa-pencil"></i> icon on the right of the product pricing.
 
 5.  Add product tags by clicking on the plus <i class="font-icon fa fa-plus"></i>, located under the **Tags** card.
     ![](/assets/admin-product-details-tag.png "Reaction's Product Page")
@@ -51,7 +51,7 @@ Variant Options provide a second layer of customization on top of each variant. 
 1. Click on the <i class="font-icon fa fa-plus"></i> button to the right of the **Variant Options** section.
 2. Add the Variant Option's **Label**, **Short Label**, **Quantity** and **Price**. **Label** is displayed in cart, checkout and orders. **Short Label** is displayed on the Product Detail Page. All fields are required.
 3. Keep adding more options by clicking the <i class="font-icon fa fa-plus"></i> button.
-4.  Click the **Publish** button on the top right to save Unpublished changes.
+4. Click the **Publish** button on the top right to save Unpublished changes.
 
 ## Adding product images
 
