@@ -1,6 +1,6 @@
 # Email
 
-Email sending in Reaction is handled by [Nodemailer](https://github.com/nodemailer/nodemailer) and the use of any SMTP server is supported. See the [configuration documentation](/admin/email.md) for details on how to set up mail in the admin dashboard.
+Email sending in Reaction is handled by [Nodemailer](https://github.com/nodemailer/nodemailer) and the use of any SMTP server is supported. See the [configuration documentation](/admin/dashboard/email-admin.md) for details on how to set up mail in the admin dashboard.
 
 All emails that are sent from Reaction are added to a job queue for both logging and failure handling (see [vsivsi:job-collection](https://github.com/vsivsi/meteor-job-collection) for full API docs). While you can add jobs directly to the queue, it is recommended that you use the API outlined below to send emails.
 
@@ -12,7 +12,7 @@ All server side email methods (except Meteor methods) are available in the `Reac
 
 If mail is configured, returns an SMTP URL string.
 
-The following settings are checked in the order shown and the first one that is found with all required parts (host, port, user, password) will be used. See [email configuration](/admin/email.md) for more information.
+The following settings are checked in the order shown and the first one that is found with all required parts (host, port, user, password) will be used. See [email configuration](/admin/dashboard/email-admin.md) for more information.
 
 -   `MAIL_URL` environment variable
 -   `Meteor.settings.MAIL_URL`
@@ -22,7 +22,7 @@ The following settings are checked in the order shown and the first one that is 
 
 If mail is configured, returns a [Nodemailer](https://github.com/nodemailer/nodemailer) configuration object.
 
-The following settings are checked in the order shown and the first one that is found with all required parts (host, port, user, password) will be used. See [email configuration](/admin/email.md) for more information.
+The following settings are checked in the order shown and the first one that is found with all required parts (host, port, user, password) will be used. See [email configuration](/admin/dashboard/email-admin.md) for more information.
 
 -   `MAIL_URL` environment variable
 -   `Meteor.settings.MAIL_URL`
