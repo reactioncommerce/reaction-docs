@@ -4,8 +4,8 @@
 
 Currency formatting is determined by users locale currency. The currency formatting is stored in the `Shops.currencies` object, and the configuration data is available in the client as `Reaction.Locale`. There are 2 important objects here:
 
--   `currency` - contains data about user's currency;
--   `shopCurrency` - contains data about base shop currency.
+- `currency` - contains data about user's currency;
+- `shopCurrency` - contains data about base shop currency.
 
 We've created `formatPrice` and `currencySymbol` helpers for using in templates:
 
@@ -15,9 +15,7 @@ We've created `formatPrice` and `currencySymbol` helpers for using in templates:
 
 We use the [accounting.js](https://openexchangerates.github.io/accounting.js/) library for formatting.
 
-Typical usage is `price = accounting.formatMoney price, Reaction.Locale.currency`
-
-_Note: changing base shop currency is not reactive. Refresh/restart to see changes._
+Typical usage is `price = accounting.formatMoney price, Reaction.Locale.currency`. *Note: changing base shop currency is not reactive. Refresh/restart to see changes.*
 
 To add a currency you can add an entry in `reaction-sample-data/private/data/Shops.json`. For example:
 
@@ -30,11 +28,11 @@ To add a currency you can add an entry in `reaction-sample-data/private/data/Sho
 ]
 ```
 
-_Please note that the currency must be supported by Open Exchange Rates service to get automatic conversion for a user's locale._
+*Please note that the currency must be supported by Open Exchange Rates service to get automatic conversion for a user's locale.*
 
 ### where
 
-In some currencies it is more natural to display only one currency symbol in price range (_"100 - 120 руб."_ instead of _"100 руб. - 120 руб."_).
+In some currencies it is more natural to display only one currency symbol in price range (*"100 - 120 руб."* instead of *"100 руб. - 120 руб."*).
 
 You can add optional field `where` to force usage of only one sign and specify on which side of range the symbol should be placed. Currently only `right` value is supported.
 

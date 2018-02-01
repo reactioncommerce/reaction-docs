@@ -8,9 +8,9 @@ First, you should find the [Docker installer for your platform](https://www.dock
 
 As described by Docker:
 
--   **[Docker Engine](https://docs.docker.com/engine/understanding-docker/)** provides the core functions you need to create Docker images and run Docker containers.
--   **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
--   **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.
+- **[Docker Engine](https://docs.docker.com/engine/understanding-docker/)** provides the core functions you need to create Docker images and run Docker containers.
+- **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
+- **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.
 
 The following documentation only aims to show you how to setup a production deployment of Reaction Commerce. If you would like to learn more about the basics of Docker and how it might be useful for your development workflow, we strongly encourage reading Docker's [Getting Started docs](https://docs.docker.com/) and going through some of their [beginner tutorials](https://docs.docker.com/learn/).
 
@@ -26,7 +26,7 @@ Ok, so step #1 will be to set up a Docker host to deploy to. To accomplish this,
 
 Docker Machine has drivers for [most of the major cloud providers](https://docs.docker.com/machine/drivers/). They each have their own settings, but the process is essentially the same for all of them. We're going to focus on the Digital Ocean driver because it's one of the easiest to use. Only a few settings are required to start a new server, but see [the Digital Ocean driver docs](https://docs.docker.com/machine/drivers/digital-ocean/) for all of the available options.
 
-Before you start a machine, you'll need to get an API key from your Digital Ocean account. See "_[How Do I Get My API Credentials?](https://www.digitalocean.com/help/api/)_"
+Before you start a machine, you'll need to get an API key from your Digital Ocean account. See *[How Do I Get My API Credentials?](https://www.digitalocean.com/help/api/)*
 
 Once you have that, you're ready to use Docker Machine to provision a server. To do so, run:
 

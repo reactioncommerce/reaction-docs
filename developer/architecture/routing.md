@@ -15,7 +15,7 @@ const urlParam = Router.getQueryParam("urlParam");
 
 ## Route Definition
 
-While you _can_ use the [React Router API](https://reacttraining.com/react-router/). to directly add routes to the app, we recommend that you use the Reaction Router API. Reaction Router extends React Router to integrate route permissions, make routing configurable by plugins (via the package registry), and to help future proof against changes to the routing layer.  
+While you *can* use the [React Router API](https://reacttraining.com/react-router/). to directly add routes to the app, we recommend that you use the Reaction Router API. Reaction Router extends React Router to integrate route permissions, make routing configurable by plugins (via the package registry), and to help future proof against changes to the routing layer.  
 
 Our recommended approach to define routes is to use the **Package Registry**.
 
@@ -36,13 +36,13 @@ The **Reaction package registry** entries define routes that can be used with th
 
 When there are multiple shops in Reaction, we'll automatically prefix a url safe (transliterated) version of the shop name before the route. Where there is only one shop, the prefix will not be used.
 
-**Multi-shop prefixed urls structure**
+### Multi-shop prefixed urls structure
 
 > //host/store: Reaction Test/product/title: Example Product/
 
-**//localhost:3000/reaction-test/product/example-product**
+### //localhost:3000/reaction-test/product/example-product
 
-To define a route in the registry that does not add a prefix you can define the route in the registry _without a leading "/"_.
+To define a route in the registry that does not add a prefix you can define the route in the registry *without a leading "/"*.
 
 ```js
   registry: [{
@@ -58,9 +58,7 @@ This route will resolve to `//localhost:3000/about`.
 
 This registry entry automatically adds matching permissions to the `Roles` collection, and checks the user's permissions when displaying the route. By default, all routes require a user to have permissions to view them. A user's route permissions can be managed in the Accounts UI.
 
-To permit all users to view a route, add the **route name** to the `Shops.defaultVisitorRole` array.
-
-_Default permissions are not added automatically, as there will be a UI component to manage the Shop defaults in the future._
+To permit all users to view a route, add the **route name** to the `Shops.defaultVisitorRole` array. *Default permissions are not added automatically, as there will be a UI component to manage the Shop defaults in the future.*
 
 `Accounts.onCreateUser` adds default roles need for products, profiles, and checkout routes automatically if none are defined for the Shop.
 
@@ -271,7 +269,7 @@ A Blaze template helper that will return an absolute path for a named route.
 
 ## Route Hooks
 
-The `Router.Hooks` namespace provides a router-agnostic API for registering functions to be called either on specific routes or on _every_ route.  There are hooks for `onEnter` and `onExit` and the callback functions are passed the same `context` object to optionally do something with.
+The `Router.Hooks` namespace provides a router-agnostic API for registering functions to be called either on specific routes or on *every* route.  There are hooks for `onEnter` and `onExit` and the callback functions are passed the same `context` object to optionally do something with.
 
 ### API
 

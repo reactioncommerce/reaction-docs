@@ -4,11 +4,11 @@
 
 `sessionId` should be unique for each new client (moz vs firefox, mobile vs desktop etc), but not unique in the same browser instance (tabs).
 
-When an **anonymous** user visits, they get a `sessionId`, this a generated server side, and stored in the browser localStorage, so that combined with their **anonymous** user account identifies them within the tab/browser/window session. The presence of a unique sessionId tells us not to create another user account for an **anonymous** user.  The same sessionId should never be used by the server for any two sessions, as it comes from the client.. it's only set on the server side in the initial _subscription to `Sessions`_.
+When an **anonymous** user visits, they get a `sessionId`, this a generated server side, and stored in the browser localStorage, so that combined with their **anonymous** user account identifies them within the tab/browser/window session. The presence of a unique sessionId tells us not to create another user account for an **anonymous** user.  The same sessionId should never be used by the server for any two sessions, as it comes from the client.. it's only set on the server side in the initial *subscription to `Sessions`*.
 
 It this same user visits on another device, browser or anonymous session they will get a new **anonymous** `userId` and `sessionId`.
 
-When a visitor registers with a password or authentication service (FB,GH,etc),  they are **anonymous** before they register.  We then create a _new_ user and account.  If the user is `authenticated`, and has a `sessionId` that matches previous carts with the same sessionId, we then merge matching `sessionId` carts into the newly created cart.  (and we _should_ remove the existing **anonymous** cart, user, account).
+When a visitor registers with a password or authentication service (FB,GH,etc),  they are **anonymous** before they register.  We then create a *new* user and account.  If the user is `authenticated`, and has a `sessionId` that matches previous carts with the same sessionId, we then merge matching `sessionId` carts into the newly created cart.  (and we *should* remove the existing **anonymous** cart, user, account).
 
 We identify an `authenticated` user  in `Roles` as a `guest` without the `anonymous` role.
 

@@ -2,10 +2,10 @@
 
 Reaction uses Meteor as a build tool and development environment. Meteor eases Reaction's use of ES6, npm packages, services, and React by providing additional glue for the integration and deployment of these components.
 
--   [Meteor](https://www.meteor.com/developers)
--   [npm](https://docs.npmjs.com/how-npm-works/packages)
--   [Less](http://guide.meteor.com/build-tool.html#less)
--   [React](https://facebook.github.io/react/tutorial/tutorial.html)
+- [Meteor](https://www.meteor.com/developers)
+- [npm](https://docs.npmjs.com/how-npm-works/packages)
+- [Less](http://guide.meteor.com/build-tool.html#less)
+- [React](https://facebook.github.io/react/tutorial/tutorial.html)
 
 ## Customization Guide
 
@@ -17,7 +17,8 @@ A number of plugin modules are imported in the `reaction` local `/imports/plugin
 
 There are many Reaction plugins included. The current `imports` folder contains core, included, and a folder for custom plugins.
 
-    `-- ./plugins
+```sh
+    -- ./plugins
         |-- ./plugins/custom
         |-- ./plugins/core
         |   |-- ./plugins/core/revisions
@@ -68,8 +69,8 @@ There are many Reaction plugins included. The current `imports` folder contains 
             |-- ./plugins/included/payments-braintree
             |-- ./plugins/included/payments-example
             |-- ./plugins/included/payments-paypal
-            `-- ./plugins/included/payments-stripe
-
+            -- ./plugins/included/payments-stripe
+```
 ### Packages
 
 The preferred method of extending Reaction functionality is to use local import plugins or [**npm**](https://www.npmjs.com/) packages.

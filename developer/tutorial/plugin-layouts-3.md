@@ -1,6 +1,6 @@
 # Using Custom Layouts
 
-_Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation._
+*Note: Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation.*
 
 ## Purpose
 
@@ -8,7 +8,7 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 ### How Reaction uses layouts
 
-Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template (/imports/plugins/core/layout/client/components/coreLayout.js) is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our customised &lt;main&gt; section we need to.
+Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template (/imports/plugins/core/layout/client/components/coreLayout.js) is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our customised &lt;main> section we need to.
 
 **[/client/templates/layouts/core.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/templates/layouts/core.js)**
 
@@ -121,6 +121,7 @@ Session.set("DEFAULT_LAYOUT", "coreLayoutBeesknees");
 In order for this file to take affect, we need to also import it. So we add it to our `index.js` in your `client` directory.
 
 **[/client/index.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/index.js)**
+
 ```js
 import "./defaults";
 ```
@@ -199,8 +200,8 @@ determine how to pull the layout record from a key of `layout + workflow`. The `
 It is essentially the "default" workflow when you hit the home page.
 
 Also note that:
-1. We have other parts that we could substitute without changing our layout. For example we change point our header or footer to a custom React component by changing the values for "layoutHeader" or "layoutFooter".
-2. There is a `priority` field on layout objects (with a default value) of `999`. When Reaction goes to render a route/page
+1\. We have other parts that we could substitute without changing our layout. For example we change point our header or footer to a custom React component by changing the values for "layoutHeader" or "layoutFooter".
+2\. There is a `priority` field on layout objects (with a default value) of `999`. When Reaction goes to render a route/page
 (as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
  used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
 

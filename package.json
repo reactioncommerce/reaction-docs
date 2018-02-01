@@ -56,6 +56,10 @@
         false
       ],
       [
+        "remark-lint-no-file-name-mixed-case",
+        false
+      ],
+      [
         "remark-lint-maximum-heading-length",
         180
       ],

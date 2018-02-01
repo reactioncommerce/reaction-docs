@@ -2,7 +2,7 @@
 
 This guide will dive into the steps needed by both the marketplace owner, and marketplace merchant's shop.
 
-**Prerequisites**
+## Prerequisites
 
 The marketplace owner must have completed the following before proceeding with this guide.
 

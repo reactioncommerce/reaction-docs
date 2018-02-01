@@ -67,7 +67,7 @@ class MyComponent extends Component {
 ```
 
 ## Props
-
+<!--lint disable-->
 | Property             | Type     | Description                                                                  | Notes                                                                                 |
 | -------------------- | -------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | collection           | Object   | collection to get data from                                                  | Use in conjunction with publication, or use data in place of collection + publication |
@@ -87,3 +87,4 @@ class MyComponent extends Component {
 | query                | Object   | provides query for publication filtering                                     |                                                                                       |
 | selectedRows         | Array    | provides selected rows in the table                                          |                                                                                       |
 | transform            | Function | transform of collection for grid results                                     |                                                                                       |
+<!--lint enable-->

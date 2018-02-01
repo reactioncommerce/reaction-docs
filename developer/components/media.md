@@ -27,7 +27,7 @@ export default MyReactComponent;
 ```
 
 ### Props
-
+<!--lint disable-->
 | Property      | Type          | Description                                                                   |
 | ------------- | ------------- | ----------------------------------------------------------------------------- |
 | editable      | Boolean       | toggle between an editable and non editable media gallery                     |
@@ -35,7 +35,7 @@ export default MyReactComponent;
 | onDrop        | Function      | Dropzone drop event. callback signature `(files) => {}`                       |
 | onMove        | Function      | React DnD drag move event. callback signature `(moveIndex, hoverIndex) => {}` |
 | onRemoveMedia | Function      | Remove media callback. callback signature `(media) => {}`                     |
-
+<!--lint enable-->
 ## Media
 
 ```javascript

@@ -104,4 +104,4 @@ Try a demo on <a class="jsbin-embed" href="https://jsbin.com/merebe/edit?js,cons
 
 ## Resources
 
-- ESnext Class fields - https://github.com/tc39/proposal-class-fields
+- ESnext Class fields - <https://github.com/tc39/proposal-class-fields>

@@ -4,25 +4,25 @@ Payment methods are one of the most common packages that developers need to crea
 
 The [Creating a Payment Provider](/developer/tutorial/creating-a-payment-provider-plugin.md) tutorial was created to try and make this process as easy as possible for developers new to Reaction. It should be used as a guide in making all payment methods as consistent as possible so that they are usable by the largest number of users.
 
-Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](/developer/packages/payments/authnet.md), [Braintree](/developer/packages/payments/braintree.md), [Paypal Express](/developer/packages/payments/paypal.md), [Paypal Payflow](/developer/packages/payments/paypal.md), and [Stripe](/developer/packages/payments/stripe.md).
+Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](/developer/packages/payments/authnet.md), [Braintree](/developer/packages/payments/braintree.md), [PayPal Express](/developer/packages/payments/paypal.md), [PayPal Payflow](/developer/packages/payments/paypal.md), and [Stripe](/developer/packages/payments/stripe.md).
 
 ## Transactions
 
 Most Reaction payment packages can support these transaction types. They all do things a little differently, so please be sure to read each individual payment packages docs.
 
--   authorize
+- authorize
 
 > Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the authorize stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you. To the consumer it looks like the charge has already gone through, and their balance is reduced by the allocated amount, however no funds will actually be transferred. Typically an authorization will expire after a set number of days, and you will need to re-authorize in order to perform a capture. In a typical hard-goods shipment scenario, an authorize will be performed at time of order.
 
--   capture
+- capture
 
 > A capture is a transaction performed against a previously authorized transaction, and it tells the payment processor to transfer the actual funds. Most payment providers allow for a capture amount to be equal to or less than the authorization amount (i.e. giving a discount post-authorization, but pre-capture). Some payment processors allow you to authorize and capture in one step, which is why the authorize method takes a transactionType parameter. In a typical hard-goods shipment scenario, a capture will be performed at time of shipment.
 
--   refund
+- refund
 
 > This method is self-explanatory. Most payment processors will only allow refunds to be performed on captured payments, not on authorized payments.
 
--   refunds (list)
+- refunds (list)
 
 > This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 
@@ -74,7 +74,7 @@ MethodHooks.after("cart/submitPayment", function (options) {
 
 Saves a submitted payment to cart, triggers workflow and adds "paymentSubmitted" to cart workflow
 
-_Note: this method also has a client stub, that forwards to cartCompleted._
+*Note: this method also has a client stub, that forwards to cartCompleted.*
 
 ```js
 import { Meteor } from "meteor/meteor";

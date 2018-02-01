@@ -8,12 +8,12 @@ If you believe you have discovered a vulnerablity or a compliance issue that has
 
 Send an email to `security@reactioncommerce.com` providing
 
--   Vulnerability details
--   include output of `reaction -v`
--   Links to source
--   Steps to replicate
--   Any known impact/threat level
--   Patch files
+- Vulnerability details
+- include output of `reaction -v`
+- Links to source
+- Steps to replicate
+- Any known impact/threat level
+- Patch files
 
 We will review and merge security patch files into our next release.
 

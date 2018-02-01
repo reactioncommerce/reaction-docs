@@ -12,6 +12,7 @@ Create a branch name, with the ID number of the GitHub issue, in the following s
 Make atomic commits in the [Git commit message guidelines from Angular.js](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits), with a `(type):` followed by `subject`.
 
 All of the types:
+
 - *feat*: A new feature
 - *fix*: A bug fix
 - *docs*: Documentation only changes
@@ -22,19 +23,19 @@ All of the types:
 - *chore*: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 Note the following styles:
+
 - Use the imperative, present tense: use "change", not "changed" nor "changes"
 - Do not capitalize first letter
 - No dot (.) at the end
 - Use `BREAKING CHANGES:` to note breaking changes
 
 Examples:
-```
-(feat): add sendEmail() job
-(docs): add doc for sendEmailJob() method
-(refactor): replace Blaze component with React component
 
-BREAKING CHANGES: remove Header Blaze template. To migrate to the React component, use HeaderComponent.
-```
+`(feat): add sendEmail() job`
+`(docs): add doc for sendEmailJob() method`
+`(refactor): replace Blaze component with React component`
+
+`BREAKING CHANGES: remove Header Blaze template. To migrate to the React component, use HeaderComponent.``
 
 See more [examples from Angular.js](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.8sw072iehlhg).
 

@@ -3,15 +3,15 @@
 The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
 The process is:
-1. Create a release branch, but not until you ready to release!
-1. Change destination branch from master to release branch for all PR that should be included.
-1. Wait until all tests have passed on each PR.
-1. Merge passing PR's into the release branch.
-1. Create a new `Release x.x.x` pull request.
-1. Create release notes and docs
-1. Release review, test pass, be brave.
-1. Merge to `master`, wait for tests, then tag release.
-1. After successful merge, delete the release branch.
+1\. Create a release branch, but not until you ready to release!
+1\. Change destination branch from master to release branch for all PR that should be included.
+1\. Wait until all tests have passed on each PR.
+1\. Merge passing PR's into the release branch.
+1\. Create a new `Release x.x.x` pull request.
+1\. Create release notes and docs
+1\. Release review, test pass, be brave.
+1\. Merge to `master`, wait for tests, then tag release.
+1\. After successful merge, delete the release branch.
 
 ## Release branch
 
@@ -19,9 +19,10 @@ The process is:
 2. Commit incremented `package.json` version
 3. run `meteor npm install` to bump `package-lock.json` version
 4. Should ~follow [SemVer](http://semver.org/) guidelines:
-  - MAJOR version when you make incompatible API changes,
-  - MINOR version when you add functionality in a backwards-compatible manner, and
-  - PATCH version when you make backwards-compatible bug fixes.
+
+- MAJOR version when you make incompatible API changes,
+- MINOR version when you add functionality in a backwards-compatible manner, and
+- PATCH version when you make backwards-compatible bug fixes.
 
 ## Accept pull requests and i18n
 
@@ -38,10 +39,12 @@ The process is:
 ```sh
 git log <firstCommitHash>..<lastCommitHash> | pcregrep -A 2 -M 'Merge pull request' | perl -pe 's/Merge.*(#[0-9]{4}).*/$1/' | perl -pe 's/^(\-|#| |(\[[a-zA-Z]+\])+|\n)*//g' | perl -0777pe 's/([0-9]{4})\n(.+)\n/ - $2 (#$1)\n/g'
 ```
+
 - Write extended notes about anything that is a breaking change or potentially breaking change.
 - Write extended notes about anything that is interesting, adds exciting new functionality, or improves the app significantly in some way
 
 Notes:
+
 - You'll need `pcregrep` on your system which you can install on osx with brew `brew install pcre`
 - Replace `<firstCommitHash>` and `<lastCommitHash>` with the first and last commit or tag of the release respectively. You can use prev tag and `HEAD` for this if you have the release branch checked out. e.g. `git log v1.5.5..HEAD | ...`
 - Copy release notes to PR
