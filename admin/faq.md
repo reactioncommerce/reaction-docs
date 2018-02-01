@@ -1,5 +1,7 @@
 # Frequently Asked Questions
+
 ## General
+
 ### What is Reaction Commerce?
 
 Reaction Commerce is an open source commerce platform that allows anyone to customize, extend, and deploy an online store or marketplace. Our codebase is available for free via [GitHub](https://github.com/reactioncommerce/reaction).
@@ -25,6 +27,7 @@ Nope! [Google indexes JavaScript when crawling websites](https://googlewebmaster
 Additionally, Reaction uses server-side rendering, as well as [Prerender.io](https://prerender.io/), which renders your JavaScript in a browser, saves the static HTML, and returns that to the crawlers.
 
 ## Operating a store
+
 ### How do I sign up for an account, login to my dashboard, and set up my domain?
 
 You'll need to install and run Reaction locally on your computer. For more info, check out our [Installation docs](https://docs.reactioncommerce.com/reaction-docs/master/installation).    

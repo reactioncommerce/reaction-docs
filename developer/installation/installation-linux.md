@@ -1,9 +1,9 @@
 # Installation for Linux
 
-
 ## Install prerequisites:
 
 ### Install Node
+
 Follow the instructions at [NodeJs site](https://nodejs.org)
 
 ### Install Build Tools and Package Requirements
@@ -30,7 +30,6 @@ yum install epel-release  GraphicsMagick
 curl https://install.meteor.com/ | sh
 ```
 
-
 ## Install Reaction
 
 ### Install the Reaction command-line interface (CLI)
@@ -51,10 +50,10 @@ cd reaction
 
 If you don't want Reaction to be installed in the default `reaction` directory you can
 specify a directory like
+
 ```sh
 reaction init my-new-reaction-project
 ```
-
 
 ### Start Reaction
 
@@ -75,8 +74,7 @@ By default the username will be :`admin@localhost` and the password will be: `r3
 
 ![](/assets/guide-installation-default-user.png)
 
-
-Congrats! Now you've created your first Reaction store. View the store by going to http://localhost:3000 in your favorite browser.
+Congrats! Now you've created your first Reaction store. View the store by going to <http://localhost:3000> in your favorite browser.
 
 To terminate `reaction` use `CTRL-c`.
 
@@ -87,6 +85,3 @@ To learn how to manage your store as an admin user visit the [admin documentatio
 To learn how to customize Reaction visit the [Customization Guide](/developer/tutorial/introduction.md)
 
 last_tested: Dec-8-2017
-
-
-
