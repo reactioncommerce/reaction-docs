@@ -225,6 +225,12 @@
 			"docPath": "developer/react-best-practices.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "jsdoc-style-guide",
+			"label": "JSDoc Style Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/jsdoc-style-guide.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "release-process",
 			"label": "Release Guide",
 			"repo": "reaction-docs",
