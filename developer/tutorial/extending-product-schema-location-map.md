@@ -166,7 +166,7 @@ export default AvailabilityMap;
 
 Great. This React component will inject the JavaScript we need and render the marker according our new product coordinates. One nice thing to notice is the fact, that ReactionCommerce's internal machinery will call our React component with appropriate context, namely the product itself. Therefor we get the React property `this.props.product` for free, which essentially is our document from database that features `lng` and `lat` information. What isn't provided out-of-the-box is the `trackingId` property needed for Google maps inclusion. This is your personal Google API key that is available from [developer.google.com](https://developers.google.com/maps/documentation/javascript/get-api-key). We're going to store that in our settings file in /settings/dev.settings.json:
 
-** [/settings/dev.settings.json](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json)**
+**[/settings/dev.settings.json](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json)**
 
 ```json
 {
