@@ -17,6 +17,7 @@ A number of plugin modules are imported in the `reaction` local `/imports/plugin
 
 There are many Reaction plugins included. The current `imports` folder contains core, included, and a folder for custom plugins.
 
+```sh
     `-- ./plugins
         |-- ./plugins/custom
         |-- ./plugins/core
@@ -69,6 +70,7 @@ There are many Reaction plugins included. The current `imports` folder contains 
             |-- ./plugins/included/payments-example
             |-- ./plugins/included/payments-paypal
             `-- ./plugins/included/payments-stripe
+```
 
 ### Packages
 
