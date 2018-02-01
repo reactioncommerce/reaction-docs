@@ -76,7 +76,7 @@ In this example, the code stopped executing at a breakpoint in the Products publ
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/devtools-variables.png)
 
-5.  At this breakpoint, you can access the Console by hitting <kbd>esc</kbd> and opening the _Drawer_.
+5. At this breakpoint, you can access the Console by hitting <kbd>esc</kbd> and opening the _Drawer_.
 
 ![DevTools setup](http://g.recordit.co/1hRutFIaLe.gif)
 
