@@ -66,6 +66,10 @@
       [
         "remark-lint-no-duplicate-headings",
         false
+      ],
+      [
+        "remark-lint-emphasis-marker",
+        "_"
       ]
     ]
   }
