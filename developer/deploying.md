@@ -13,7 +13,7 @@ There are two Docker images available:
 -   [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/) - the latest stable `master` image.
 -   [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - tagged pre-release builds.
 
-All Reaction [configuration options](configuration.md) can be used with these deployment choices.
+All Reaction [configuration options](/developer/configuration.md) can be used with these deployment choices.
 
 Reaction can be deployed as a [standard Node application](https://guide.meteor.com/deployment.html) or as a [Docker container](https://www.docker.com/).
 
