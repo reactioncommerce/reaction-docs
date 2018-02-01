@@ -19,9 +19,9 @@ To create a product, login to your dashboard and follow these steps:
 5. Add product tags by clicking on the plus <i class="font-icon fa fa-plus"></i>, located under the **Tags** card.
     ![](/assets/admin-product-details-tag.png "Reaction's Product Page")
 
-6.  You can change the layout template, product title permalink, subtitle, vendor, description and origin country from the sidebar's top **Product Settings** option.
+6. You can change the layout template, product title permalink, subtitle, vendor, description and origin country from the sidebar's top **Product Settings** option.
 
-7.  Click the **Publish** button on the top right to save Unpublished changes, indicated by the golden pencil i class="font-icon fa fa-pencil"> status indicators.
+7. Click the **Publish** button on the top right to save Unpublished changes, indicated by the golden pencil i class="font-icon fa fa-pencil"> status indicators.
 
 ## Configuring your first Variant
 
