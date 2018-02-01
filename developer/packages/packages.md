@@ -6,9 +6,9 @@ Reaction packages can be **npm** packages, local plugins, or Atmosphere packages
 
 The `imports/plugins` folder contain plugin modules for Reaction.
 
--   core (required core modules)
--   included (optional modules distributed with Reaction)
--   custom (a folder for custom plugins)
+- core (required core modules)
+- included (optional modules distributed with Reaction)
+- custom (a folder for custom plugins)
 
 The plugins in the `imports` folder will not be [bundled by Meteor](https://guide.meteor.com/structure.html#structuring-imports) unless the modules are imported.
 

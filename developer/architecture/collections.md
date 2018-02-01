@@ -11,14 +11,14 @@ SupportChats = new Mongo.Collection("supportchats");
 
 Collections provide the following methods.
 
--   [find](http://docs.meteor.com/api/collections.html#Mongo-Collection-find)
--   [findOne](http://docs.meteor.com/api/collections.html#Mongo-Collection-findOne)
--   [insert](http://docs.meteor.com/api/collections.html#Mongo-Collection-insert)
--   [update](http://docs.meteor.com/api/collections.html#Mongo-Collection-update)
--   [upsert](http://docs.meteor.com/api/collections.html#Mongo-Collection-upsert)
--   [remove](http://docs.meteor.com/api/collections.html#Mongo-Collection-remove)
--   [allow](http://docs.meteor.com/api/collections.html#Mongo-Collection-allow)
--   [deny](http://docs.meteor.com/api/collections.html#Mongo-Collection-deny)
+- [find](http://docs.meteor.com/api/collections.html#Mongo-Collection-find)
+- [findOne](http://docs.meteor.com/api/collections.html#Mongo-Collection-findOne)
+- [insert](http://docs.meteor.com/api/collections.html#Mongo-Collection-insert)
+- [update](http://docs.meteor.com/api/collections.html#Mongo-Collection-update)
+- [upsert](http://docs.meteor.com/api/collections.html#Mongo-Collection-upsert)
+- [remove](http://docs.meteor.com/api/collections.html#Mongo-Collection-remove)
+- [allow](http://docs.meteor.com/api/collections.html#Mongo-Collection-allow)
+- [deny](http://docs.meteor.com/api/collections.html#Mongo-Collection-deny)
 
 ## Client Example
 
@@ -94,10 +94,10 @@ Client collection access is restricted through a Meteor [publication/subscriptio
 
 Reaction Core collections defined in `lib/collections/collections.js` extend [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) with additional functionality providing Auto Forms and Schemas using a frameworks of helper dependencies.
 
--   [aldeed:AutoForm](https://github.com/aldeed/meteor-autoform)
--   [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
--   [aldeed:simple-schema](https://github.com/aldeed/meteor-simple-schema)
--   [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
+- [aldeed:AutoForm](https://github.com/aldeed/meteor-autoform)
+- [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
+- [aldeed:simple-schema](https://github.com/aldeed/meteor-simple-schema)
+- [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
 
 Collections and Schemas can be used to create or customize collections, including extending Reaction Core collections.
 
@@ -115,18 +115,18 @@ const packages = Reaction.Collections.Packages.find({
 
 Some of the [Reaction Collections](https://github.com/reactioncommerce/reaction/blob/master/lib/collections/collections.js) are:
 
--   Accounts
--   AnalyticsEvents
--   Cart
--   Discounts
--   Inventory
--   Jobs
--   Orders
--   Packages
--   Shipping
--   Shops
--   Tags
--   Taxes
+- Accounts
+- AnalyticsEvents
+- Cart
+- Discounts
+- Inventory
+- Jobs
+- Orders
+- Packages
+- Shipping
+- Shops
+- Tags
+- Taxes
 
 The [Reaction Collection hooks](https://github.com/reactioncommerce/reaction/blob/master/packages/reaction-collections/common/collections/hooks/hooks.js) extend [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) with before/after hooks for `insert`, `update`, `remove`, `find`, and `findOne`.
 

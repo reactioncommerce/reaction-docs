@@ -16,11 +16,11 @@ It does essentially just skip the payment step during checkout workflow and allo
 
 Requirements:
 
--   Basic React understanding
+- Basic React understanding
 
 Learning content:
 
--   How to create a [payment provider plugin](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-payment-provider)
+- How to create a [payment provider plugin](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-payment-provider)
 
 ## Plugins from our community in no particular order
 
@@ -32,12 +32,12 @@ This is a theming plugin directly targeted at those who like to change the theme
 
 Requirements:
 
--   Basic LESS/CSS knowledge
+- Basic LESS/CSS knowledge
 
 Learning content:
 
--   Customize the visual appearance of Reaction
--   LESS functions helper functions to ease CSS related boilerplate
+- Customize the visual appearance of Reaction
+- LESS functions helper functions to ease CSS related boilerplate
 
 Kudos for [Joshua Cox!](https://github.com/joshuacox)
 
@@ -53,13 +53,13 @@ Uses additional meteor package. Open a console in project's root directory and e
 
 Requirements:
 
--   Basic LESS/CSS knowledge
--   Basic React understanding
+- Basic LESS/CSS knowledge
+- Basic React understanding
 
 Learning content:
 
--   Customize the visual appearance of Reaction
--   Use Reaction's component API to gain control over rendered HTML markup
+- Customize the visual appearance of Reaction
+- Use Reaction's component API to gain control over rendered HTML markup
 
 Mahalo for your kokua, [Curran!](https://github.com/curranabell)
 
@@ -69,19 +69,19 @@ This is an up-to-date fork of hydrotik/reaction-hydrotik-plugin that works with 
 
 Prerequisites:
 
--   Uses additional npm packages. Open a console in project's root directory and execute these commands: `npm install --save react-slick slick-carousel`
--   Move files in folder <plugin-dir>/public to your root public folder
+- Uses additional npm packages. Open a console in project's root directory and execute these commands: `npm install --save react-slick slick-carousel`
+- Move files in folder <plugin-dir>/public to your root public folder
 
 Requirements:
 
--   Basic LESS/CSS knowledge
--   Basic React understanding
+- Basic LESS/CSS knowledge
+- Basic React understanding
 
 Learning content:
 
--   Customize the visual appearance of Reaction
--   Use Reaction's component API to gain control over rendered HTML markup
--   Shows how to integrate third-party React components
+- Customize the visual appearance of Reaction
+- Use Reaction's component API to gain control over rendered HTML markup
+- Shows how to integrate third-party React components
 
 Kudos for [Loan!](https://github.com/loanlaux)
 
@@ -126,8 +126,8 @@ Here's the link nonetheless in case you're curious:
 
 Requirements:
 
--   Knowledge of Blaze templating engine
--   CoffeeScript
+- Knowledge of Blaze templating engine
+- CoffeeScript
 
 Many thanks to [Goutham!](https://github.com/Gouthamve)
 
@@ -141,8 +141,8 @@ This plugin extends Products with new location related attributes, like cities a
 
 Requirements:
 
--   Knowledge of Blaze templating engine
--   Portuguese language ;-)
+- Knowledge of Blaze templating engine
+- Portuguese language ;-)
 
 Thank you for your support, [Daniel!](https://github.com/danielsouzapinn)
 

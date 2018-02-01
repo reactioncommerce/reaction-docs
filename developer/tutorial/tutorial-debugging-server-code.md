@@ -64,9 +64,9 @@ Now, you're ready to debug!
 
 3.  There are two main ways to set up breakpoints: in the DevTools or in the code.
 
--   To set up a breakpoint in DevTools, open up the **Source** tab and navigate to a file you would like to debug in the left-side bar. Click on the line number where you'd like the code to stop executing. You can set up as many breakpoints as you'd like.
+- To set up a breakpoint in DevTools, open up the **Source** tab and navigate to a file you would like to debug in the left-side bar. Click on the line number where you'd like the code to stop executing. You can set up as many breakpoints as you'd like.
 
--   To set up a breakpoint in your code, add the keyword `debugger` right before you'd like the application to pause execution.
+- To set up a breakpoint in your code, add the keyword `debugger` right before you'd like the application to pause execution.
 
 Remember: Since you are currently debugging the Reaction server, you'll only have access to code that runs on the server - not the client.
 
@@ -137,10 +137,10 @@ To learn more about debugging JavaScript with VS Code, check out [VS Code's debu
 
 Use the following settings:
 
--   Meteor executable: `/usr/local/bin/meteor`
--   Program arguments: `--settings settings/dev.settings.json --raw-logs`
--   Working directory: `/YourMachine/code/reaction`
--   Environmental variables: `REACTION_EMAIL=youremail@gmail.com;REACTION_AUTH=...`
+- Meteor executable: `/usr/local/bin/meteor`
+- Program arguments: `--settings settings/dev.settings.json --raw-logs`
+- Working directory: `/YourMachine/code/reaction`
+- Environmental variables: `REACTION_EMAIL=youremail@gmail.com;REACTION_AUTH=...`
 
 ![Webstorm setup](https://user-images.githubusercontent.com/72819/34857305-fb058c44-f784-11e7-9739-c34f09c11bd0.png)
 

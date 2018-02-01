@@ -4,8 +4,8 @@
 
 Currency formatting is determined by users locale currency. The currency formatting is stored in the `Shops.currencies` object, and the configuration data is available in the client as `Reaction.Locale`. There are 2 important objects here:
 
--   `currency` - contains data about user's currency;
--   `shopCurrency` - contains data about base shop currency.
+- `currency` - contains data about user's currency;
+- `shopCurrency` - contains data about base shop currency.
 
 We've created `formatPrice` and `currencySymbol` helpers for using in templates:
 

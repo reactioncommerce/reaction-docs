@@ -34,8 +34,8 @@ This is a special group for the "owner" of a store. This group has all the permi
 
 Store owners can:
 
--   Move a user from one group to the other, except for the owner group.
--   Assign another user the owner of a store. This will move the current owner as to the user's group, because there is only one store owner.
+- Move a user from one group to the other, except for the owner group.
+- Assign another user the owner of a store. This will move the current owner as to the user's group, because there is only one store owner.
 
 #### 2. Shop Manager group
 
@@ -45,7 +45,7 @@ This group possess almost all the permissions of an owner. A user in the store m
 
 Store Owners and users with permission to the Accounts dashboard have the ability to:
 
--   Create new groups under the "Edit Groups" section
--   Add users to new groups
--   Add or remove permissions from groups
--   If the group has permissions that are a superset of another group's permission, then the admin can invite a user to that group.
+- Create new groups under the "Edit Groups" section
+- Add users to new groups
+- Add or remove permissions from groups
+- If the group has permissions that are a superset of another group's permission, then the admin can invite a user to that group.

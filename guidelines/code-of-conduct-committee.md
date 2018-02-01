@@ -8,9 +8,9 @@ Reaction Commerce has created a committee to handle specific tasks related to ou
 
 The Code of Conduct Committee deals with violations in the Reaction Commerce Code of Conduct.
 
--   **Chair:** Sara Hicks, [GitHub](https://github.com/saralouhicks)
--   Brent Hoover, [GitHub](https://github.com/zenweasel)
--   Spencer Norman, [GitHub](https://github.com/spencern)
+- **Chair:** Sara Hicks, [GitHub](https://github.com/saralouhicks)
+- Brent Hoover, [GitHub](https://github.com/zenweasel)
+- Spencer Norman, [GitHub](https://github.com/spencern)
 
 You can contact <mailto:conduct@reactioncommerce.com>. For more details, please see the [Reporting Guidelines](/guidelines/reporting-guide.md).
 

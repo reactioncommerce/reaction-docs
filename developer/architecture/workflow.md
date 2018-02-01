@@ -4,17 +4,17 @@ Reaction template display (layout) and workflow rules are created and stored in 
 
 A workflow is similar to `package.registry` entries,  but  `package.layout` entries are defined by the following properties:
 
--   It does not control routes anywhere.
--   each workflow in the package registry has a definition in Shops
--   stores **status** in a **collection** specified in Shops
--   collections should have attached _Workflow schema_
--   **audience** is just another label for 'permissions', essentially just permissions for UIX.
--   can be used to control page layout for the content manager
--   audience can be used to control different check out, different product views,  for users with different roles..
--   a **workflow** controls "the how and where" of layout components
--   can be used to trigger events from analytics events
--   to disable a workflow template remove audience roles
--   routes could be dynamically generated from registry
+- It does not control routes anywhere.
+- each workflow in the package registry has a definition in Shops
+- stores **status** in a **collection** specified in Shops
+- collections should have attached _Workflow schema_
+- **audience** is just another label for 'permissions', essentially just permissions for UIX.
+- can be used to control page layout for the content manager
+- audience can be used to control different check out, different product views,  for users with different roles..
+- a **workflow** controls "the how and where" of layout components
+- can be used to trigger events from analytics events
+- to disable a workflow template remove audience roles
+- routes could be dynamically generated from registry
 
 _The default workflow configuration components are configured in the following manner:_
 

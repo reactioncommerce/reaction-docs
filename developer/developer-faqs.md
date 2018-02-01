@@ -6,10 +6,10 @@
 
 To start customizing Reaction, you should have a basic understanding of the following technologies:
 
--   JavaScript, specifically ES6
--   HTML/CSS
--   Some knowledge of Meteor, especially an understanding of [Publications and Subscriptions](https://guide.meteor.com/data-loading.html)
--   A front-end framework/library like React
+- JavaScript, specifically ES6
+- HTML/CSS
+- Some knowledge of Meteor, especially an understanding of [Publications and Subscriptions](https://guide.meteor.com/data-loading.html)
+- A front-end framework/library like React
 
 Reaction tries to be as modular as possible. All user customizations are intended to live in plugins, as they provide a secure upgrade path when new versions are rolled out. See [here](/developer/tutorial/plugin-intro-1.md) for a more detailed explanation into the plugin topic.
 
@@ -77,9 +77,9 @@ The [Reaction Platform](https://reactioncommerce.com/hosting) comes with virtual
 
 Reaction Commerce’s Platform enables clients to:
 
--   Innovate faster by leveraging modern container-based technology that provides continuous integration, delivery, and deployment.  
--   More effectively and efficiently manage your site with seamless cutovers, dynamic scaling, and multiple “everything”
--   Have greater peace of mind from our high availability, virtual clusters, and 24x7x365 support.
+- Innovate faster by leveraging modern container-based technology that provides continuous integration, delivery, and deployment.  
+- More effectively and efficiently manage your site with seamless cutovers, dynamic scaling, and multiple “everything”
+- Have greater peace of mind from our high availability, virtual clusters, and 24x7x365 support.
 
 You can find out more and request a quote [here](https://reactioncommerce.com/#get-a-demo) or you can contact <mailto:sales@reactioncommerce.com>.
 
@@ -141,10 +141,10 @@ Short answer: You shouldn't.
 
 Longer answer: By design you can't, because presentation and data should be separated. There are several reasons for that:
 
--   If you allow markup in product descriptions, the style can (and will sooner or later) differ from product to another
--   It means that if you attempt to display that data anywhere else, it comes with all the markup baggage that you added specifically for the product detail page
--   Allowing markup brings its own security related issues upon the table. [Cross-Site-Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) is one of them.
--   Sometimes, the thing you're after is something else already provided in a different way. For example, if you find yourself looking for missing things like bullet points in product descriptions, chances are that you should use something better like product metadata.
+- If you allow markup in product descriptions, the style can (and will sooner or later) differ from product to another
+- It means that if you attempt to display that data anywhere else, it comes with all the markup baggage that you added specifically for the product detail page
+- Allowing markup brings its own security related issues upon the table. [Cross-Site-Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) is one of them.
+- Sometimes, the thing you're after is something else already provided in a different way. For example, if you find yourself looking for missing things like bullet points in product descriptions, chances are that you should use something better like product metadata.
 
 "Right, I got all your points, but I really need to have more control over how the content is rendered."
 
