@@ -13,7 +13,7 @@ To add a social media integration, follow these steps:
 1. Click the **Facebook** toggle button.
 2. Register your app at [Facebook for Developers](https://developers.facebook.com/apps) to get your App ID and Secret.
 3. Enter your App ID and App Secret. Click **Save Changes**.
-4.  Enabling this setting adds a Facebook icon and link to share that product on the product page.
+4. Enabling this setting adds a Facebook icon and link to share that product on the product page.
 
 ## Twitter
 

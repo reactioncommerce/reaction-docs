@@ -9,7 +9,7 @@ All pushed branches are published to <https://docs.reactioncommerce.com>
 1. Click on `Edit on GitHub` from any Reaction Commerce documentation page.
 2. Click on the :pen: to enter edit mode.
 3. Make changes and commit changes with the `Create a new branch for this commit and start a pull request.` option.
-4.  Make a pull request against the `master` branch.
+4. Make a pull request against the `master` branch.
 
 ## Linting
 

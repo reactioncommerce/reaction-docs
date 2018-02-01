@@ -70,7 +70,7 @@ Now, you're ready to debug!
 
 Remember: Since you are currently debugging the Reaction server, you'll only have access to code that runs on the server - not the client.
 
-4.  Now open `http://localhost:3000` as you normally would and the code should stop executing at your first breakpoint.
+4. Now open `http://localhost:3000` as you normally would and the code should stop executing at your first breakpoint.
 
 In this example, the code stopped executing at a breakpoint in the Products publication, which gets called whenever a client connects to the product grid on the index route:
 
@@ -146,6 +146,6 @@ Use the following settings:
 
 2. Select your breakpoints by clicking along the left-hand side line numbers.
 3. Click on the **Debug** icon to start you Reaction app in debugger mode.
-4.  Use the **Step In**, **Step Out**, **Steop Over** buttons to navigate through the code.
+4. Use the **Step In**, **Step Out**, **Steop Over** buttons to navigate through the code.
 
 For more on debugging with Webstorm, check out the [Jetbrains guide](https://www.jetbrains.com/help/webstorm/debugging-javascript-in-chrome.html).

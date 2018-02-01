@@ -22,7 +22,7 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
     1. React npm packages (`React`, `prop-types`)
     2. Other npm packages
     3. Meteor core packages
-    4.  Meteor (Atmosphere) packages
+    4. Meteor (Atmosphere) packages
     5.  Local app files
 
 Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
