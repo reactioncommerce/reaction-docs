@@ -39,8 +39,8 @@ Assertions made include:
 - Given a set of inputs (states OR props) assert what a component should output (render).
 
 - Given a user action, assert how a component behaves:
-    - It might make a state update.
-    - Call a prop function passed to it by a parent.
+  - It might make a state update.
+  - Call a prop function passed to it by a parent.
 
 ### Enzyme
 
