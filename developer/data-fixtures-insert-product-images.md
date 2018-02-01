@@ -4,6 +4,7 @@
 
 Place your images in your application's `private` directory, e.g. like this:
 
+```sh
     -- ./private
        |-- ./data
            |-- ./Products.json
@@ -16,12 +17,13 @@ Place your images in your application's `private` directory, e.g. like this:
                |-- ./gygxrADdPPWoCCmS7.jpg
                |-- ./h2v7MYCXBtjMm7Piv.jpg
                |-- ./ioKwBYk6Nom9K92cv.jpg
+```
 
 The idea behind the cryptic names of the product images is to have them related to the product ids in Products.json. This allows us to easily identify which image goes to which product.
 
 Notice: Because the images can only be loaded through the Meteor Assets API, it's important for now, that the fixture data lives under the private folder of your root application (not within the plugin folder itself). This is necessary, because assets (non-code files) can't be loaded via the ES6 `import` keyword, resp. `require` function.
 
-## Step 2: Import the images into Media collection during application startup.
+## Step 2: Import the images into Media collection during application startup
 
 Every time the application starts, we want to check if each product has its corresponding image imported already. That can be achieved through adding a Reaction hook:
 
