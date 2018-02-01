@@ -1,11 +1,11 @@
-* * *
+---
 
 ⚠️  **DEPRECATION NOTICE:** This page's content is deprecated and no longer relevant.
 
-As of mid-2017 Reaction releases, Reaction has started replacing Blaze templating with React components. Reaction will continue to do so until Blaze templates are completely eliminated. 
+As of mid-2017 Reaction releases, Reaction has started replacing Blaze templating with React components. Reaction will continue to do so until Blaze templates are completely eliminated.
 To ensure easier version updates in the future, we recommend using React over Blaze as well.
 
-* * *
+---
 
 # Templates
 
