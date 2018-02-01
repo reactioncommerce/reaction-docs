@@ -44,5 +44,5 @@ The following factories are predefined. The appropriate object is created by exe
 
 - following 2 factories are used internally and not used directly for creation of full product. We don't recommend use them for tests (check `faker` instead):
 
-    - `variant` creates item with `type = variant`
-    - `product` creates empty product without variants
+  - `variant` creates item with `type = variant`
+  - `product` creates empty product without variants
