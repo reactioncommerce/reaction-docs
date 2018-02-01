@@ -6,7 +6,7 @@ when a user hits a particular URL is a majority of what happens in web developme
 Reaction uses the [React Router](https://www.npmjs.com/package/react-router) package for routing. To get started with routing in Reaction, here are two important elements to understand:
 
 1. Reaction stores all its Routes in the "Registry" in the database. This allows packages to dynamically add routes along with their functionality, and even override or remove existing routers.
-2.  The customized version of React Router is available globally as `Reaction.Router`.
+2. The customized version of React Router is available globally as `Reaction.Router`.
 
 For more in-depth coverage, consult the main Reaction documentation on [Routing](/developer/architecture/routing.md) and the [React Router documentation](https://reacttraining.com/react-router/web/guides/philosophy).
 

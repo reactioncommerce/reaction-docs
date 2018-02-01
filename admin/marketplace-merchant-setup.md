@@ -7,7 +7,7 @@ This guide will dive into the steps needed by both the marketplace owner, and ma
 The marketplace owner must have completed the following before proceeding with this guide.
 
 1. Enabled marketplace in "Shop Settings"
-2.  Enabled the Stripe payment method in "Payment Methods"
+2. Enabled the Stripe payment method in "Payment Methods"
 3.  Make sure the [Stripe Connect](https://dashboard.stripe.com/applications/overview) account's redirect URI is set to:  `https://<yourdomain>/stripe/connect/authorize`
 
 ## Invite a seller

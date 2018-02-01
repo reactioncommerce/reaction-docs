@@ -17,7 +17,7 @@ and importing [CSS](https://guide.meteor.com/build-tool.html#css-importing) and 
 Start with a fresh checkout of the latest version of Reaction.
 
 1. Create a directory with the name of the plugin, `beesknees`, within the `imports/plugins/custom` directory of Reaction.
-2.  Within `beesknees`, create `client` and `server` directories.
+2. Within `beesknees`, create `client` and `server` directories.
 
 You may, at this point want to also `git init` so you can start tracking your new package with source control. 
 

@@ -12,7 +12,7 @@ a users perspective (as opposed to unit or integration tests)
 Each test assumes this environment unless otherwise stated
 
 1. Ran `reaction reset`
-2.  Products are created from the `reaction-sample-data` package
+2. Products are created from the `reaction-sample-data` package
 3.  All orders are processed with the Generic Payment method unless otherwise stated
 4.  The developer console is open to monitor for client-side errors. A successful test implies that no errors are shown here
 5.  Server logs are monitored. (the console when running locally) A successful test implies that no errors are shown here.
@@ -21,7 +21,7 @@ Each test assumes this environment unless otherwise stated
 ### 1A - Place an order for a single product as an anonymous user
 
 1. Click on "Basic Reaction Product"
-2.  Click "Add to Cart"
+2. Click "Add to Cart"
 3.  Click on "Checkout Now"
 4.  Click on "Continue As Guest"
 5.  Fill out address
@@ -38,7 +38,7 @@ Each test assumes this environment unless otherwise stated
 ### 1B - Place two consecutive orders as an anonymous user
 
 1. Follow the instructions for "Place an order for a single product as an anonymous user"
-2.  Return to the home screen by clicking on "Reaction" up in the upper left corner
+2. Return to the home screen by clicking on "Reaction" up in the upper left corner
 3.  Click on "Basic Reaction Product"
 4.  Click "Add to Cart"
 5.  Click on "Checkout Now"
@@ -53,7 +53,7 @@ Each test assumes this environment unless otherwise stated
 ### 2A - Place an order for a single product as an authenticated user
 
 1. From the home screen click on "Sign In"
-2.  In the dialog that opens click on "Register"
+2. In the dialog that opens click on "Register"
 3.  Enter an email and password
 4.  Click on "Register"
 5.  Verify that the name in the upper right corner changes to "Guest"
@@ -74,7 +74,7 @@ Each test assumes this environment unless otherwise stated
 ### 2B - Place two consecutive orders as an authenticated user
 
 1. Follow the instructions for "Place an order for a single product as an authenticated user"
-2.  Return to the home screen by clicking on "Reaction" up in the upper left corner
+2. Return to the home screen by clicking on "Reaction" up in the upper left corner
 3.  Click on "Basic Reaction Product"
 4.  Click "Add to Cart"
 5.  Click on "Checkout Now"
@@ -89,7 +89,7 @@ Each test assumes this environment unless otherwise stated
 ### 3A - Place an order paid for via PayFlow Pro
 
 1. Log in as the admin
-2.  Click on "Dashboard" in right hand column
+2. Click on "Dashboard" in right hand column
 3.  Click on the gear icon
 4.  Scroll down to "Payflow Pro"
 5.  Select Enabled for "Payflow Enabled"
@@ -105,7 +105,7 @@ Each test assumes this environment unless otherwise stated
 the Paypal documentation for more details)
 
 1. Log in as the admin
-2.  Click on "Dashboard" in right hand column
+2. Click on "Dashboard" in right hand column
 3.  Click on the gear icon
 4.  Select Enabled for "Express Enabled"
 5.  Enter Merchant ID
@@ -129,7 +129,7 @@ the Paypal documentation for more details)
 ### 5A - Place an order paid for via Stripe
 
 1. Log in as the admin
-2.  Click on "Dashboard" in right hand column
+2. Click on "Dashboard" in right hand column
 3.  Click on the gear icon
 4.  Enter API Client ID
 5.  Click on "Update"

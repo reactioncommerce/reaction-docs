@@ -29,7 +29,7 @@ Docker: 17.09.0-ce
 
 If your Reaction version is older than 1.6, you will have to upgrade to at least 1.6 first.
 
-2.  Run `reaction` with the `--inspect` flag:
+2. Run `reaction` with the `--inspect` flag:
 
 ```sh
 reaction --inspect
@@ -60,7 +60,7 @@ Now, you're ready to debug!
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/devtools-setup.png)
 
-2.  Click **Open dedicated DevTools for Node**.
+2. Click **Open dedicated DevTools for Node**.
 
 3.  There are two main ways to set up breakpoints: in the DevTools or in the code.
 
@@ -94,7 +94,7 @@ Setting up [VS Code](https://code.visualstudio.com/) and connecting it to the No
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/vscode-launch.png)
 
-2.  Set up your file:
+2. Set up your file:
 
 **.vscode/launch.json**
 
@@ -144,7 +144,7 @@ Use the following settings:
 
 ![Webstorm setup](https://user-images.githubusercontent.com/72819/34857305-fb058c44-f784-11e7-9739-c34f09c11bd0.png)
 
-2.  Select your breakpoints by clicking along the left-hand side line numbers.
+2. Select your breakpoints by clicking along the left-hand side line numbers.
 3.  Click on the **Debug** icon to start you Reaction app in debugger mode.
 4.  Use the **Step In**, **Step Out**, **Steop Over** buttons to navigate through the code.
 

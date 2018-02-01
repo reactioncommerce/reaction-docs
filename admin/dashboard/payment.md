@@ -18,7 +18,7 @@ having to sign up for a merchant account.
 To enable a payment provider for your shop, login as a shop admin and navigate to your Dashboard.
 
 1. Click **Payment** <i class="rui font-icon fa fa-credit-card"></i> from the Dashboard.
-2.  Click the toggle icon to turn on particular payment package and add credentials.
+2. Click the toggle icon to turn on particular payment package and add credentials.
 3.  Choose to enable Authorization, De-Authorization, Captures and Refunds.
 4.  Click **Save Changes**.
 
