@@ -72,5 +72,5 @@ Next: [Using Layouts](/developer/tutorial/plugin-layouts-3.md)
 
 ## Read more
 
--   [Docs: Registry](/developer/packages/registry.md)
--   [Blog: An Intro to Architecture: The Registry](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/)
+- [Docs: Registry](/developer/packages/registry.md)
+- [Blog: An Intro to Architecture: The Registry](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/)

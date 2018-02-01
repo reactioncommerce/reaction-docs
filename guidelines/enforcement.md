@@ -18,10 +18,10 @@ See the reporting guidelines for details of what reports should contain. If a re
 
 The committee will then review the incident and determine, to the best of their ability:
 
--   what happened
--   whether this event constitutes a code of conduct violation
--   who, if anyone, was the bad actor
--   whether this is an ongoing situation, and there is a threat to anyone's physical safety
+- what happened
+- whether this event constitutes a code of conduct violation
+- who, if anyone, was the bad actor
+- whether this is an ongoing situation, and there is a threat to anyone's physical safety
 
 This information will be collected in writing, and whenever possible the group's deliberations will be recorded and retained (i.e. chat transcripts, email discussions, recorded voice conversations, etc).
 
@@ -43,12 +43,12 @@ The working group must agree on a resolution by consensus. If the group cannot r
 
 Possible responses include:
 
--   Taking no further action (if we determine no violation occurred).
--   A private reprimand from the working group to the individual(s) involved. In this case, the group chair will deliver that reprimand to the individual(s) over email, cc'ing the group.
--   A public reprimand. In this case, the group chair will deliver that reprimand in the same venue that the violation occurred (i.e. in chat for a chat violation; email for an email violation, etc.). The group may choose to publish this message elsewhere for posterity.
--   An imposed vacation (i.e. asking someone to "take a week off" from a mailing list or chat). The group chair will communicate this "vacation" to the individual(s). They'll be asked to take this vacation voluntarily, but if they don't agree then a temporary ban may be imposed to enforce this vacation.
--   A permanent or temporary ban from some or all Reaction Commerce spaces (mailing lists, chat, forums, etc.). The group will maintain records of all such bans so that they may be reviewed in the future, extended to new Reaction Commerce fora, or otherwise maintained.
--   A request for a public or private apology. The chair will deliver this request. The group may, if it chooses, attach "strings" to this request: for example, the group may ask a violator to apologize in order to retain his or her membership on a mailing list.
+- Taking no further action (if we determine no violation occurred).
+- A private reprimand from the working group to the individual(s) involved. In this case, the group chair will deliver that reprimand to the individual(s) over email, cc'ing the group.
+- A public reprimand. In this case, the group chair will deliver that reprimand in the same venue that the violation occurred (i.e. in chat for a chat violation; email for an email violation, etc.). The group may choose to publish this message elsewhere for posterity.
+- An imposed vacation (i.e. asking someone to "take a week off" from a mailing list or chat). The group chair will communicate this "vacation" to the individual(s). They'll be asked to take this vacation voluntarily, but if they don't agree then a temporary ban may be imposed to enforce this vacation.
+- A permanent or temporary ban from some or all Reaction Commerce spaces (mailing lists, chat, forums, etc.). The group will maintain records of all such bans so that they may be reviewed in the future, extended to new Reaction Commerce fora, or otherwise maintained.
+- A request for a public or private apology. The chair will deliver this request. The group may, if it chooses, attach "strings" to this request: for example, the group may ask a violator to apologize in order to retain his or her membership on a mailing list.
 
 Once a resolution is agreed upon, but before it is enacted, the working group will contact the original reporter and any other affected parties and explain the proposed resolution. The working group will ask if this resolution is acceptable, and must note feedback for the record. However, the working group is not required to act on this feedback.
 

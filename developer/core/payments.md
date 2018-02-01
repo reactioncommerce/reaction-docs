@@ -10,19 +10,19 @@ Reaction currently comes packaged with five (5) payment methods that can be enab
 
 Most Reaction payment packages can support these transaction types. They all do things a little differently, so please be sure to read each individual payment packages docs.
 
--   authorize
+- authorize
 
 > Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the authorize stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you. To the consumer it looks like the charge has already gone through, and their balance is reduced by the allocated amount, however no funds will actually be transferred. Typically an authorization will expire after a set number of days, and you will need to re-authorize in order to perform a capture. In a typical hard-goods shipment scenario, an authorize will be performed at time of order.
 
--   capture
+- capture
 
 > A capture is a transaction performed against a previously authorized transaction, and it tells the payment processor to transfer the actual funds. Most payment providers allow for a capture amount to be equal to or less than the authorization amount (i.e. giving a discount post-authorization, but pre-capture). Some payment processors allow you to authorize and capture in one step, which is why the authorize method takes a transactionType parameter. In a typical hard-goods shipment scenario, a capture will be performed at time of shipment.
 
--   refund
+- refund
 
 > This method is self-explanatory. Most payment processors will only allow refunds to be performed on captured payments, not on authorized payments.
 
--   refunds (list)
+- refunds (list)
 
 > This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 

@@ -26,19 +26,19 @@ The [browser-policy](https://atmospherejs.com/meteor/browser-policy) package pro
 
 The [browser-policy](https://atmospherejs.com/meteor/browser-policy) package implements some default [Content Security Policy](https://www.w3.org/TR/CSP3/) rules.
 
--   Content can only be loaded from the same origin as your app.
--   Inline scripts and styles are allowed, but string-to-code features like eval are not.
--   WebSocket and XmlHttpRequest connections can talk to any origin.
+- Content can only be loaded from the same origin as your app.
+- Inline scripts and styles are allowed, but string-to-code features like eval are not.
+- WebSocket and XmlHttpRequest connections can talk to any origin.
 
 Reaction defines additional policies in `server/security/policy.js`.
 
--   prevent the site from being framed
--   prevent inline scripts
--   prevent eval
--   allow inline styles (for fonts)
--   allow fonts to be loaded via data URLs
--   allow origin from trusted sites
--   external scripts must be loaded over HTTPS
+- prevent the site from being framed
+- prevent inline scripts
+- prevent eval
+- allow inline styles (for fonts)
+- allow fonts to be loaded via data URLs
+- allow origin from trusted sites
+- external scripts must be loaded over HTTPS
 
 Additionally, imported modules add additional policies- for an example take a look at `imports/plugins/included/analytics/server/policy.js`.
 

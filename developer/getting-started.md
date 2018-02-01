@@ -2,10 +2,10 @@
 
 Reaction uses Meteor as a build tool and development environment. Meteor eases Reaction's use of ES6, npm packages, services, and React by providing additional glue for the integration and deployment of these components.
 
--   [Meteor](https://www.meteor.com/developers)
--   [npm](https://docs.npmjs.com/how-npm-works/packages)
--   [Less](http://guide.meteor.com/build-tool.html#less)
--   [React](https://facebook.github.io/react/tutorial/tutorial.html)
+- [Meteor](https://www.meteor.com/developers)
+- [npm](https://docs.npmjs.com/how-npm-works/packages)
+- [Less](http://guide.meteor.com/build-tool.html#less)
+- [React](https://facebook.github.io/react/tutorial/tutorial.html)
 
 ## Customization Guide
 

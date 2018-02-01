@@ -8,9 +8,9 @@ First, you should find the [Docker installer for your platform](https://www.dock
 
 As described by Docker:
 
--   **[Docker Engine](https://docs.docker.com/engine/understanding-docker/)** provides the core functions you need to create Docker images and run Docker containers.
--   **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
--   **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.
+- **[Docker Engine](https://docs.docker.com/engine/understanding-docker/)** provides the core functions you need to create Docker images and run Docker containers.
+- **[Docker Compose](https://docs.docker.com/compose/overview/)** defines and manages multi-container applications.
+- **[Docker Machine](https://docs.docker.com/machine/overview/)** automates Docker host provisioning on your network or in the cloud.
 
 The following documentation only aims to show you how to setup a production deployment of Reaction Commerce. If you would like to learn more about the basics of Docker and how it might be useful for your development workflow, we strongly encourage reading Docker's [Getting Started docs](https://docs.docker.com/) and going through some of their [beginner tutorials](https://docs.docker.com/learn/).
 

@@ -15,8 +15,8 @@ All pushed branches are published to <https://docs.reactioncommerce.com>
 
 Reaction Docs uses [remark-lint](https://github.com/wooorm/remark-lint) for linting Markdown style:
 
--   Install command-line tool: `npm install remark-lint` and run `npm run lint` or `npm run lint-fix`
--   Install a code editor integration: [linter-markdown](https://atom.io/packages/linter-markdown) for Atom and [more supported editors](https://github.com/wooorm/remark-lint#editor-integrations).
+- Install command-line tool: `npm install remark-lint` and run `npm run lint` or `npm run lint-fix`
+- Install a code editor integration: [linter-markdown](https://atom.io/packages/linter-markdown) for Atom and [more supported editors](https://github.com/wooorm/remark-lint#editor-integrations).
 
 ## Linking
 

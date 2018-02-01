@@ -120,21 +120,21 @@ require any parameters you may not need the `accountOptions` method but
 most payment methods should implement `authorize`, `capture`, `refund`,
 and `refunds`.
 
--   **authorize**
+- **authorize**
 
 Most credit-card processors have a two-step process to allow for different payment models. You should read your merchant agreement and the documentation to get the specifics but typically the **authorize** stage will do a check of the customer's payment method (credit or debit card) and allocate that amount to you **but no funds have been transferred**.
 
 To the consumer it looks like the charge has already gone through and their balance is reduced by the allocated amount. Typically an authorization will expire after a set number of days. Usually you cannot capture more than you authorize but you can capture less and leave the balance still captured or release the balance. In a typical hard-goods shipment scenario an authorize will be performed at time of order then when the actual good are shipped a capture is performed.
 
--   **capture**
+- **capture**
 
 As noted before, this will operate against a previously performed authorization and tell the payment processor to transfer the actual funds. Some payment processors allow you to authorize and capture in one step which is why the `authorize` method takes a `transactionType` parameter.
 
--   **refund**
+- **refund**
 
 This method is probably self-explanatory, and is just a wrapper for whatever method your payment provider has for processing refunds.
 
--   **refunds**
+- **refunds**
 
 This method should query for a list of refunds and these refunds will show up in the dashboard when managing orders.
 

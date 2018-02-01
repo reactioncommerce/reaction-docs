@@ -12,9 +12,9 @@ Reaction gives you the ability to assign different tax rates to different region
 
 You may customize your rates by region via the following:
 
--   Country
--   State / Province / Region
--   Zip code
+- Country
+- State / Province / Region
+- Zip code
 
 Enter your rate as a percentage into the **Rate** field. Then, click **Save Changes,** and your new custom rate should show up at the top. You may use the search box to filter your results.
 
