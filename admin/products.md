@@ -12,7 +12,7 @@ To create a product, login to your dashboard and follow these steps:
 
 2. Now you will be in a Product Detail Page's **Edit Mode**, add product title, subtitle, vendor name, and description by clicking on each section and typing into the field. After typing and editing a field, a golden pencil <i class="font-icon fa fa-pencil"></i> status indicator appears to show that there are unpublished changes that need to be published.
 
-3.  To upload a product photo, click on the plus <i class="font-icon fa fa-plus"></i> on the photo placeholder. You can upload multiple photos at a time by selecting more than one. You can also drag and drop multiple photos into the box.
+3. To upload a product photo, click on the plus <i class="font-icon fa fa-plus"></i> on the photo placeholder. You can upload multiple photos at a time by selecting more than one. You can also drag and drop multiple photos into the box.
 
 4.  Editing social media sharing and tags from the sidebar: If your shop is connected to social media sharing, customize your product's social sharing messaging by clicking on the <i class="font-icon fa fa-pencil"></i> icon on the right of the product pricing.
 
@@ -42,7 +42,7 @@ Every product comes filled with one default, required variant. To create more:
 - **Warn at** - Optional. Adds the `Limited Supply` badge on the Product Grid when quantity is lower than this number.
 - **Allow Backorder** - Optional. Allows customers to backorder the product.
 
-3.  Click the **Publish** button on the top right to save Unpublished changes.
+3. Click the **Publish** button on the top right to save Unpublished changes.
 
 ## Adding more product Variant Options
 
@@ -50,7 +50,7 @@ Variant Options provide a second layer of customization on top of each variant. 
 
 1. Click on the <i class="font-icon fa fa-plus"></i> button to the right of the **Variant Options** section.
 2. Add the Variant Option's **Label**, **Short Label**, **Quantity** and **Price**. **Label** is displayed in cart, checkout and orders. **Short Label** is displayed on the Product Detail Page. All fields are required.
-3.  Keep adding more options by clicking the <i class="font-icon fa fa-plus"></i> button.
+3. Keep adding more options by clicking the <i class="font-icon fa fa-plus"></i> button.
 4.  Click the **Publish** button on the top right to save Unpublished changes.
 
 ## Adding product images
@@ -69,7 +69,7 @@ To get back to the product detail and tag editing panel:
 
 1. Click on the <i class="font-icon fa fa-pencil"></i> next to the product price.
 2. Click **Tags** to add, remove or rearrange product tags. Tags are links displayed below the images section. Clicking on a tag link leads the customer to a page listing all of the products with that tag. Tags can be linked to the top navigation bar.
-3.  Click **Details** to add or remove product details. Details are displayed under the Tags section as static text in a table.
+3. Click **Details** to add or remove product details. Details are displayed under the Tags section as static text in a table.
 
 ## Discounting products
 
@@ -84,7 +84,7 @@ To remove an entire product from your inventory:
 
 ![](/assets/admin-product-delete.png "Reaction remove product")
 
-3.  Click the **Publish** button on the top right to save Unpublished changes.
+3. Click the **Publish** button on the top right to save Unpublished changes.
 
 To restore an archived product:
 

@@ -26,7 +26,7 @@ The advantages of creating a plugin are:
 
 1. All of your changes are in one place and it's easy to see what's been modified and what is "stock". This also allows you to easily segment out what is "private" from what can be public or open-source.
 2. Upgrading is as simple as just pulling in the latest changes from the repo, or installing a new version and dropping your plugin in.
-3.  Allows you to break your modifications into modules for better organization.
+3. Allows you to break your modifications into modules for better organization.
 
 ## Understanding the Plugin Loader
 

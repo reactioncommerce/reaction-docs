@@ -14,7 +14,7 @@ Once logged in as a shop admin, under **Actions**, click the <i class="font-icon
 
 1. Create an email provider account and get your SMTP credentials. In this example, we will use [Mailgun](https://www.mailgun.com/). See the [Mailgun documentation](https://documentation.mailgun.com/quickstart.html).
 2. Go to the Reaction dashboard and click the **envelope icon** to open your email settings.
-3.  Under **Mail Provider**, click the **gear icon** to open the **Edit Settings** menu.
+3. Under **Mail Provider**, click the **gear icon** to open the **Edit Settings** menu.
 4.  Click the **Provider Name** dropdown menu and search for your email provider. In this example, choose Mailgun.
 5.  Fill out your **User** and **Password** from your provider. Click **Save**.
 

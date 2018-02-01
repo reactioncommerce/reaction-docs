@@ -4,7 +4,7 @@ Converting a package is largely about moving files into different places and cre
 
 1. You don't need your `package.js` any longer. Most of what was done here is done in imports.
 2. Move your `register.js` up from the server folder into the root of your plugin.
-3.  _(optional)_ Move everything possible out of `common` folder into either `client` or `server`. This is going to make managing your imports either. Schemas still need to stay here but we are trying to standardize on using `lib`. Generally the only thing that truly needs to be available on both client and server are collections and schemas.
+3. _(optional)_ Move everything possible out of `common` folder into either `client` or `server`. This is going to make managing your imports either. Schemas still need to stay here but we are trying to standardize on using `lib`. Generally the only thing that truly needs to be available on both client and server are collections and schemas.
 4.  Add relevant imports to all your files. (there is a note with a few common ones at the bottom of this doc). This includes simple things like `import { Meteor } from "meteor/meteor"` and `import { Template } from "meteor/templating"`.
 5.  Change most references to `ReactionCore` to `Reaction` with the exception of logger calls which should be changed to just `Logger` (and imported).
 6.  Collections can either be referenced as `Reaction.Collections.{CollectionName}` or imported from "/lib/collections" depending on what style you prefer. We've tried to make most things available from the `Reaction` namespace but referencing it that way can get tiresome.
