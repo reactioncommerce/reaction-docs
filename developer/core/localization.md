@@ -17,7 +17,7 @@ We use the [accounting.js](https://openexchangerates.github.io/accounting.js/) l
 
 Typical usage is `price = accounting.formatMoney price, Reaction.Locale.currency`
 
-_Note: changing base shop currency is not reactive. Refresh/restart to see changes._
+_Note:_ Changing base shop currency is not reactive. Refresh/restart to see changes.
 
 To add a currency you can add an entry in `reaction-sample-data/private/data/Shops.json`. For example:
 
