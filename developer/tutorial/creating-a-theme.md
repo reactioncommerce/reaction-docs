@@ -34,7 +34,6 @@ Reaction.registerPackage({
   // Routes and other registry items related to layout
   registry: []
 });
-
 ```
 
 client/index.less **(Required for LESS processing)** - Entry point of all client side LESS files. From this file you can import all your custom files and they will be processed and included when the app is built.
@@ -43,7 +42,6 @@ client/index.less **(Required for LESS processing)** - Entry point of all client
 // Entrypoint for LESS CSS
 
 @import "styles/navbar.less";
-
 ```
 
 > You may store your CSS anywhere within your plugin. For the example theme we've placed CSS in the directory `client/styles`.
@@ -76,7 +74,6 @@ You can override classes and variables of the default theme simple by defining t
   font-size: 24px;
   color: @white; // All variables and mixins from the default theme are available to use
 }
-
 ```
 
 > In LESS variables are considered constants, and are processed first, from top to bottom of all included LESS files. That means you can override variables after they've already been declared and the last instance takes effect.

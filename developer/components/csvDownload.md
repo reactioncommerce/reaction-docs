@@ -34,11 +34,11 @@ export default MyReactComponent;
 
 ## Props
 
-| Property        | Type                      | Description                                               |
-| --------------- | ------------------------- | --------------------------------------------------------- |
-| className       | String                    | classNames to apply to element                            |
-| data            | Array, Object             | Data to be downloaded in CSV format                       |
-| filename        | String                    | Name of file to be saved to                               |
-| headers         | Array, Object             | Custom headers for CSV columns                            |
-| i18nKeyLabel    | String                    | i18nKey for label                                         |
-| label           | String                    | Label / text to show inside element (button)              |
+| Property     | Type          | Description                                  |
+| ------------ | ------------- | -------------------------------------------- |
+| className    | String        | classNames to apply to element               |
+| data         | Array, Object | Data to be downloaded in CSV format          |
+| filename     | String        | Name of file to be saved to                  |
+| headers      | Array, Object | Custom headers for CSV columns               |
+| i18nKeyLabel | String        | i18nKey for label                            |
+| label        | String        | Label / text to show inside element (button) |

@@ -16,8 +16,8 @@ and importing [CSS](https://guide.meteor.com/build-tool.html#css-importing) and 
 
 Start with a fresh checkout of the latest version of Reaction.
 
-1. Create a directory with the name of the plugin, `beesknees`, within the `imports/plugins/custom` directory of Reaction.
-2. Within `beesknees`, create `client` and `server` directories.
+1.  Create a directory with the name of the plugin, `beesknees`, within the `imports/plugins/custom` directory of Reaction.
+2.  Within `beesknees`, create `client` and `server` directories.
 
 You may, at this point want to also `git init` so you can start tracking your new package with source control. 
 
@@ -28,7 +28,7 @@ The reference files for this tutorial are available [here](https://github.com/re
 The first file we create is going to be our `register.js`. This is absolutely the bare minimum you need to create
 a plugin. The `register.js` adds your plugin to the Registry, the Packages collection in the database. 
 
-3. Create a `register.js` file would look something like this:
+3.  Create a `register.js` file would look something like this:
 
 ```js
 // register.js
@@ -52,7 +52,7 @@ At this point, your local directory should look like:
                  └── client
                  └── server
                  ├── register.js
- ```
+```
 
 ### Load the plugin
 
@@ -72,5 +72,5 @@ Next: [Using Layouts](/developer/tutorial/plugin-layouts-3.md)
 
 ## Read more
 
-- [Docs: Registry](/developer/packages/registry.md)
-- [Blog: An Intro to Architecture: The Registry](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/)
+-   [Docs: Registry](/developer/packages/registry.md)
+-   [Blog: An Intro to Architecture: The Registry](https://blog.reactioncommerce.com/an-intro-to-architecture-the-registry/)

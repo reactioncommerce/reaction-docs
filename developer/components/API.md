@@ -176,12 +176,12 @@ Below is the full API for the Reaction components system. Each of these items ca
 
 #### [Higher Order Components](#higher-order-components)
 
-- [`withCurrentUser`](#withcurrentuser)
-- [`withCurrentAccount`](#withcurrentaccount)
-- [`withIsAdmin`](#withisadmin)
-- [`withIsOwner`](#withisowner)
-- [`withPermissions`](#withPermissions)
-- [`composeWithTracker`](#composewithtracker)
+-   [`withCurrentUser`](#withcurrentuser)
+-   [`withCurrentAccount`](#withcurrentaccount)
+-   [`withIsAdmin`](#withisadmin)
+-   [`withIsOwner`](#withisowner)
+-   [`withPermissions`](#withPermissions)
+-   [`composeWithTracker`](#composewithtracker)
 
 ## Components Objects
 
