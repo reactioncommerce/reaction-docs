@@ -9,7 +9,7 @@ Reaction uses Meteor as a build tool and development environment. Meteor eases R
 
 ## Customization Guide
 
-Looking to customize your store? Check out our [customization guide](/developer/tutorial/customization.md) for a walkthrough, as well as examples on how to create your own custom packages.
+Looking to customize your store? Check out our [customization guide](/developer/tutorial/introduction.md) for a walkthrough, as well as examples on how to create your own custom packages.
 
 ## Local Plugins
 
