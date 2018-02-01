@@ -38,10 +38,9 @@ Make sure you check the PayPal documentation for which countries are supported. 
 ## Accepted Payment Methods
 
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
-
 - Signature Debit Cards
 
-_Actual payment method support will vary by country._
+**Note:** Actual payment method support will vary by country.
 
 Based on the accepted payment methods, PayPal's default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/paypal/lib/collections/schemas/package.js` depending on your needs.
 
