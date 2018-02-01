@@ -31,6 +31,84 @@ Start small and open up a dialogue with us. This will help to get your contribut
 -   Contributors should review the CLA.
 -   Code reviewed before merge acceptance.
 
+### Pull request template
+
+```
+Resolves #issueNumber
+Impact breaking|minor|bug|style|refactor
+
+## Issue
+
+Description of the issue this PR is solving, why it's happening and how it can be reproduced. This may differ from the original ticket as you now have more information at your disposal.
+
+## Solution
+
+Summarize the your solution to the problem, as well as any things you may have tried along the way that may not have worked.
+
+## Breaking changes
+
+- If you have a breaking changes, list them here, otherwise list none.
+
+## Testing
+
+1. Add steps to test this PR
+1. Be detailed enough that someone can work through it
+1. Avoid being too granular
+```
+
+#### Template sections
+
+##### Top section
+
+###### PR author
+
+The first line of every PR should have `Resolves #ticketNumber`.
+The second line of every PR should have `Impact breaking|minor|bug|style|refactor`.
+
+###### Reviewer
+
+Read over the original ticket, and understand the impact this PR will have on the codebase. If the PR doesn't follow the above template, reject and point the other to this doc.
+
+##### Issue
+
+###### PR author
+
+Describe the issue this PR is solving with the knowledge you've gained by fixing it. This may differ from the original ticket as you now have more information at your disposal.
+
+###### Reviewer
+
+Use this information as the basis for your review. If something is not clear here, Reject the PR and ask for clarity. While the original issue may have useful information, the PR should be the most up to date representation if ideas.
+
+##### Solution
+
+###### PR author
+
+Summarize the your solution to the problem, as well as any other solutions you may have tried along the way that may not have worked.
+
+###### Reviewer
+
+Use this information to help determine path to test this PR. Research any included packages or techniques that may have been used that you're not familiar with. Ask questions if you're confused.
+
+##### Breaking changes
+
+###### PR author
+
+List any breaking changes that come with this PR. If you have none, then simply put `none`. Examples of breaking changes include changing file names, moving files around, deleting files, renaming functions or exports, or significantly changing code to where previous versions of the app may not work as expected.
+
+###### Reviewer
+
+If there are breaking changes, make you'll need to make sure any necessary migrations or guards have been put into place so existing apps do not break. Try testing this PR on an existing version of reaction you may already have data for.
+
+##### Testing
+
+###### PR author
+
+List the steps needed for testing your change in this section. Assume that testers already know how to start the app, and do the basic setup tasks. Beyond that, the steps should guide users through the feature or fix you've implemented in this PR. Include additional steps if multiple paths are available.
+
+###### Reviewer
+
+Run through the author's steps to verify that it works as they've tested it. Then run through the app on your own as you would test it. Run through the app as many times as you feel comfortable before issuing an approval or a request for changes.
+
 ### Here's what to expect when you make a pull request to Reaction
 
 As soon as pull requests are pushed, automated test are run to ensure:
