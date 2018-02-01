@@ -3,15 +3,15 @@
 The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
 The process is:
-1\. Create a release branch, but not until you ready to release!
-1\. Change destination branch from master to release branch for all PR that should be included.
-1\. Wait until all tests have passed on each PR.
-1\. Merge passing PR's into the release branch.
-1\. Create a new `Release x.x.x` pull request.
-1\. Create release notes and docs
-1\. Release review, test pass, be brave.
-1\. Merge to `master`, wait for tests, then tag release.
-1\. After successful merge, delete the release branch.
+1. Create a release branch, but not until you ready to release!
+1. Change destination branch from master to release branch for all PR that should be included.
+1. Wait until all tests have passed on each PR.
+1. Merge passing PR's into the release branch.
+1. Create a new `Release x.x.x` pull request.
+1. Create release notes and docs
+1. Release review, test pass, be brave.
+1. Merge to `master`, wait for tests, then tag release.
+1. After successful merge, delete the release branch.
 
 ## Release branch
 

@@ -28,8 +28,8 @@ To create a product, login to your dashboard and follow these steps:
 Product Variants allow you to create different versions of the same base product. Perfect for products that come, for example, in multiple colors.
 
 Every product comes filled with one default, required variant. To create more:
-1\. Click the <i class="font-icon fa fa-pencil"></i> icon, located under the **Options** card.
-2\. Fill out the following fields in the **Edit Variant** panel:
+1. Click the <i class="font-icon fa fa-pencil"></i> icon, located under the **Options** card.
+2. Fill out the following fields in the **Edit Variant** panel:
 
 -   **Label** - Required. A description of your variant, which appears in the under the **Options** label on the Product Detail Page.
 -   **Origin country** - Optional. A drop-down menu of countries.
