@@ -70,6 +70,10 @@
       [
         "remark-lint-emphasis-marker",
         "_"
+      ],
+      [
+        "remark-lint-no-file-name-mixed-case",
+        false
       ]
     ]
   }
