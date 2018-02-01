@@ -30,13 +30,13 @@ Note the following styles:
 - Use `BREAKING CHANGES:` to note breaking changes
 
 Examples:
-
+```sh
     (feat): add sendEmail() job
     (docs): add doc for sendEmailJob() method
     (refactor): replace Blaze component with React component
 
     BREAKING CHANGES: remove Header Blaze template. To migrate to the React component, use HeaderComponent.
-
+```
 See more [examples from Angular.js](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.8sw072iehlhg).
 
 ## Making a pull request
