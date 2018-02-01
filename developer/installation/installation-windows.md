@@ -1,6 +1,6 @@
 # Installation for Windows
 
-## Install prerequisites:
+## Install prerequisites
 
 **Note: These commands all assume you are running them from an administrator shell**
 
@@ -82,11 +82,9 @@ reaction
 reaction run
 ```
 
-**Note that the first run can take a while as it downloads dependencies. This is especially true if you are not in North America**
+**Note**: The first run can take a while as it downloads dependencies. This is especially true if you are not in North America.
 
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
-
-By default the username will be :`admin@localhost` and the password will be: `r3@cti0n`
+_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ By default the username will be :`admin@localhost` and the password will be: `r3@cti0n`
 
 ![](/assets/guide-installation-default-user.png)
 
