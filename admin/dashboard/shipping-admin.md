@@ -23,7 +23,7 @@ Your store comes with three default shipping methods: `Free`, `Standard`, and `P
 - Rate: The actual price you're charging your customer.
 - Enabled: Check this to enable this option.
 
-3.  Click **Save Changes**.
+3. Click **Save Changes**.
 
 ## Integrating Shippo
 

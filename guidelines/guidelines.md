@@ -16,7 +16,7 @@ The point of this section is not to find opportunities to punish people, but we 
 
 1. **First occurrence:** We'll give you a friendly, but public reminder that the behavior is inappropriate according to our guidelines.
 2. **Second occurrence:** We will send you a private message with a warning that any additional violations will result in removal from the community.
-3.  **Third occurrence:** Depending on the violation, we may need to block your account from participating in our community areas.
+3. **Third occurrence:** Depending on the violation, we may need to block your account from participating in our community areas.
 
 Notes:
 

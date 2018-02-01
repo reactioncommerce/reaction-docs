@@ -139,7 +139,7 @@ You can change the default layout values in [`/client/config/defaults.js`](https
 
 1. Create a file called `default.js` in the [`custom/client/`](https://github.com/reactioncommerce/reaction/tree/master/custom/client) folder, already created for you.
 2. Import [Meteor Session](http://docs.meteor.com/api/session.html), using `import { Session } from "meteor/session";`
-3.  Set a [Meteor Session](http://docs.meteor.com/api/session.html) variable for `DEFAULT_LAYOUT`.
+3. Set a [Meteor Session](http://docs.meteor.com/api/session.html) variable for `DEFAULT_LAYOUT`.
     Your resulting file should look like:
 
 ```js

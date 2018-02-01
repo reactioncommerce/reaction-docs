@@ -28,7 +28,7 @@ The reference files for this tutorial are available [here](https://github.com/re
 The first file we create is going to be our `register.js`. This is absolutely the bare minimum you need to create
 a plugin. The `register.js` adds your plugin to the Registry, the Packages collection in the database. 
 
-3.  Create a `register.js` file would look something like this:
+3. Create a `register.js` file would look something like this:
 
 ```js
 // register.js

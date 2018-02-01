@@ -62,7 +62,7 @@ Now, you're ready to debug!
 
 2. Click **Open dedicated DevTools for Node**.
 
-3.  There are two main ways to set up breakpoints: in the DevTools or in the code.
+3. There are two main ways to set up breakpoints: in the DevTools or in the code.
 
 - To set up a breakpoint in DevTools, open up the **Source** tab and navigate to a file you would like to debug in the left-side bar. Click on the line number where you'd like the code to stop executing. You can set up as many breakpoints as you'd like.
 
@@ -123,7 +123,7 @@ This borrows heavily from a Meteor forum post on [Meteor 1.6 server debugging wi
 
 **Tip:** Port 9229 is the default Node inspector port, but if you switch to another one, eg. `--inspect=5000`, then you'll need to adjust the port in your `launch.json` file.
 
-3.  Open the debug panel and click the **Play** icon
+3. Open the debug panel and click the **Play** icon
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/vscode-devtools.png)
 
@@ -145,7 +145,7 @@ Use the following settings:
 ![Webstorm setup](https://user-images.githubusercontent.com/72819/34857305-fb058c44-f784-11e7-9739-c34f09c11bd0.png)
 
 2. Select your breakpoints by clicking along the left-hand side line numbers.
-3.  Click on the **Debug** icon to start you Reaction app in debugger mode.
+3. Click on the **Debug** icon to start you Reaction app in debugger mode.
 4.  Use the **Step In**, **Step Out**, **Steop Over** buttons to navigate through the code.
 
 For more on debugging with Webstorm, check out the [Jetbrains guide](https://www.jetbrains.com/help/webstorm/debugging-javascript-in-chrome.html).
