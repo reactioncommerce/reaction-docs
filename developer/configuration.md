@@ -212,8 +212,10 @@ _Note: the `private` prefix is automatically removed by the [Meteor Assets](http
 
 If you prefer to run `reaction` _without_ default sample data, set the `SKIP_FIXTURES` variable to `true`. Run `SKIP_FIXTURES=true reaction` or export the variable to set it for the life of that shell session:
 
-    $ export SKIP_FIXTURES=true
-    $ reaction
+```sh
+export SKIP_FIXTURES=true
+reaction
+```
 
 ## Importing Data
 
