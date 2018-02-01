@@ -6,6 +6,7 @@ Reaction Commerce does offer out-of-the-box functionality to build product hiera
 
 To start, let's build a tagging hierarchy that looks like this:
 
+```sh
            |-- Gear  (top-level category)
                |-- Helmets  (second-level category)
                    |-- Full-face  (third-level category)
@@ -13,30 +14,31 @@ To start, let's build a tagging hierarchy that looks like this:
                    |
                    |-- Standard protection  (third-level category)
                        |-- Concordia XTRA light  (product)
+```
 
-### Step 1: Create the tag hierarchy in admin backend
+## Step 1: Create the tag hierarchy in admin backend
 
-**Login to backend to create the top & second-level hierarchy:**
+### Login to backend to create the top & second-level hierarchy
 
 ![Screenshot](/assets/admin-tagging-step-1.jpg)
 
-**Creating the third-level tags:**
+### Creating the third-level tags
 
 ![Screenshot](/assets/admin-tagging-step-2.jpg)
 
-### Step 2: Assign previously created tags to products
+## Step 2: Assign previously created tags to products
 
 After creating the tags (read: product categories), we need to tell the products which
 category they belong to. If you like your product to be found regardless if one searches for a category that is a direct parent or an indirect ancestor, you need to ensure that the product gets assigned all tag names up to the root tag assigned.
 
-**Assigning tag names to products:**
+### Assigning tag names to products
 
 ![Screenshot](/assets/admin-tagging-step-3.jpg)
 
-### Step 3: Navigating product categories
+## Step 3: Navigating product categories
 
 After publishing the changes, shop visitors will be able browse product categories via navigation bar.
 
-**The result:**
+### The result
 
 ![Screenshot](/assets/admin-tagging-step-4.jpg)
