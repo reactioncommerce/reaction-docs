@@ -27,7 +27,7 @@ Note: this package automatically converts the total charge amount into smallest 
 - All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
 - Signature Debit Cards displaying the Visa® or MasterCard® logo
 
-_Actual payment method support will vary by country._
+**Note:** Actual payment method support will vary by country.
 
 Based on the accepted payment methods, Stripe's default schema for credit card numbers will allow between 13 - 16 numbers. This can be changed in `/imports/plugins/included/stripe/lib/collections/schemas/package.js` depending on your needs.
 
