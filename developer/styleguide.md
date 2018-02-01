@@ -19,7 +19,7 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
 - Add spaces around brackets
 - 120 character line-length
 - `import`s should be listed in this order:
-    1.  React npm packages (`React`, `prop-types`)
+    1. React npm packages (`React`, `prop-types`)
     2.  Other npm packages
     3.  Meteor core packages
     4.  Meteor (Atmosphere) packages

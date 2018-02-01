@@ -8,7 +8,7 @@ What the store operator sees, the customer sees. Create, edit, preview and publi
 
 To create a product, login to your dashboard and follow these steps:
 
-1.  Click on the plus <i class="font-icon fa fa-plus"></i>, located on the top right. If you're not already in **Edit Mode**, clicking on the plus will put you in Edit Mode.
+1. Click on the plus <i class="font-icon fa fa-plus"></i>, located on the top right. If you're not already in **Edit Mode**, clicking on the plus will put you in Edit Mode.
 
 2.  Now you will be in a Product Detail Page's **Edit Mode**, add product title, subtitle, vendor name, and description by clicking on each section and typing into the field. After typing and editing a field, a golden pencil <i class="font-icon fa fa-pencil"></i> status indicator appears to show that there are unpublished changes that need to be published.
 
@@ -48,7 +48,7 @@ Every product comes filled with one default, required variant. To create more:
 
 Variant Options provide a second layer of customization on top of each variant. For instance, in addition to carrying shirts in multiple colors, you may also want to carry multiple size options for each color. Use this flexible structure to customize your products however you like.
 
-1.  Click on the <i class="font-icon fa fa-plus"></i> button to the right of the **Variant Options** section.
+1. Click on the <i class="font-icon fa fa-plus"></i> button to the right of the **Variant Options** section.
 2.  Add the Variant Option's **Label**, **Short Label**, **Quantity** and **Price**. **Label** is displayed in cart, checkout and orders. **Short Label** is displayed on the Product Detail Page. All fields are required.
 3.  Keep adding more options by clicking the <i class="font-icon fa fa-plus"></i> button.
 4.  Click the **Publish** button on the top right to save Unpublished changes.
@@ -67,7 +67,7 @@ Once you have images added to your gallery, drag and drop to change their positi
 
 To get back to the product detail and tag editing panel:
 
-1.  Click on the <i class="font-icon fa fa-pencil"></i> next to the product price.
+1. Click on the <i class="font-icon fa fa-pencil"></i> next to the product price.
 2.  Click **Tags** to add, remove or rearrange product tags. Tags are links displayed below the images section. Clicking on a tag link leads the customer to a page listing all of the products with that tag. Tags can be linked to the top navigation bar.
 3.  Click **Details** to add or remove product details. Details are displayed under the Tags section as static text in a table.
 
@@ -79,7 +79,7 @@ Reaction supports discount codes and rates. Read more about discounting products
 
 To remove an entire product from your inventory:
 
-1.  Click on the **Archive** button <i class="rui font-icon fa fa-archive"></i>.
+1. Click on the **Archive** button <i class="rui font-icon fa fa-archive"></i>.
 2.  Select Archive to confirm.
 
 ![](/assets/admin-product-delete.png "Reaction remove product")
@@ -88,4 +88,4 @@ To remove an entire product from your inventory:
 
 To restore an archived product:
 
-1.  Archived products can be restored
+1. Archived products can be restored

@@ -2,7 +2,7 @@
 
 Converting a package is largely about moving files into different places and creating some `index.js` files. Here are step-by-step instructions.
 
-1.  You don't need your `package.js` any longer. Most of what was done here is done in imports.
+1. You don't need your `package.js` any longer. Most of what was done here is done in imports.
 2.  Move your `register.js` up from the server folder into the root of your plugin.
 3.  _(optional)_ Move everything possible out of `common` folder into either `client` or `server`. This is going to make managing your imports either. Schemas still need to stay here but we are trying to standardize on using `lib`. Generally the only thing that truly needs to be available on both client and server are collections and schemas.
 4.  Add relevant imports to all your files. (there is a note with a few common ones at the bottom of this doc). This includes simple things like `import { Meteor } from "meteor/meteor"` and `import { Template } from "meteor/templating"`.

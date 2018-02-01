@@ -15,7 +15,7 @@ elements of Meteor such as pub/sub or reactivity. But to understand what is happ
 
 When you start to work with Reaction Commerce (and with many other open-source ecommerce packages) you have two paths to go down. The first is to simply fork the package and make the changes you want. The advantages of this are:
 
-1.  Changes are often simpler to make and understand. If you want to change the look of a template, you just change it.
+1. Changes are often simpler to make and understand. If you want to change the look of a template, you just change it.
 2.  You can make changes that the core package may not allow you to make
 
 However the disadvantage of this approach is that upgrading to newer releases of the software become more and more difficult. Depending on how complex your changes are, at some point it may become literally impossible to integrate your changes with updated software and you may end up rewriting your modifications again to be able to update.
@@ -24,7 +24,7 @@ It's possible that you believe that you never will need to upgrade. RC gives you
 
 The advantages of creating a plugin are:
 
-1.  All of your changes are in one place and it's easy to see what's been modified and what is "stock". This also allows you to easily segment out what is "private" from what can be public or open-source.
+1. All of your changes are in one place and it's easy to see what's been modified and what is "stock". This also allows you to easily segment out what is "private" from what can be public or open-source.
 2.  Upgrading is as simple as just pulling in the latest changes from the repo, or installing a new version and dropping your plugin in.
 3.  Allows you to break your modifications into modules for better organization.
 

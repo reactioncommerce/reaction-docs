@@ -12,7 +12,7 @@ Your store comes with three default shipping methods: `Free`, `Standard`, and `P
 
 ![](/assets/admin-dashboard-shipping-2.png "Reaction Commerce Shipping")
 
-1.  Click the plus <i class="font-icon fa fa-plus"></i>.
+1. Click the plus <i class="font-icon fa fa-plus"></i>.
 2.  Fill out the following:
 
 - Method Name: Edit the name of your method.
