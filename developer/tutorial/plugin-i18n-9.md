@@ -5,7 +5,7 @@ using the <http://i18next.com/> library.
 
 The process is simple and just involves these steps:
 
-1.  Determine the strings that need to be localized
+1. Determine the strings that need to be localized
 2.  Create keys for these strings and the default text
 3.  Add some bootstrap code to load these translations into the db
 

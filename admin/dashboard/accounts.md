@@ -18,7 +18,7 @@ Enter the user's name and email address in the fields below, and an invitation w
 
 To add an account to a group:
 
-1.  Click on user the "Add Admin User" on the right section.
+1. Click on user the "Add Admin User" on the right section.
 2.  Enter the user's name and email address in the fields.
 3.  Select Group to invite to and send. If an account with the email already exist, it is given the permissions of the group. If no account exists for the email, a new account is created under the specified group.
 

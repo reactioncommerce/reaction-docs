@@ -6,7 +6,7 @@ Here are the steps to get started using Reaction in `inspect` mode in any editor
 
 ## Launch the application in `inspect` mode
 
-1.  Before we get started, make sure you have at least Reaction 1.6.
+1. Before we get started, make sure you have at least Reaction 1.6.
 
 You can do that by running:
 
@@ -56,7 +56,7 @@ Now, you're ready to debug!
 
 ## Inspecting with Chrome DevTools
 
-1.  Open Google Chrome and visit `chrome://inspect`.
+1. Open Google Chrome and visit `chrome://inspect`.
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/devtools-setup.png)
 
@@ -90,7 +90,7 @@ _Note:_ You can only have one debugger connected at a time, so if you've already
 
 Setting up [VS Code](https://code.visualstudio.com/) and connecting it to the Node debugger is only slightly more complicated than using DevTools. But once it's set up, it can easily become a part of your regular workflow.
 
-1.  In the root of your project directory, add a `.vscode/launch.json` file.
+1. In the root of your project directory, add a `.vscode/launch.json` file.
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/vscode-launch.png)
 
@@ -133,7 +133,7 @@ To learn more about debugging JavaScript with VS Code, check out [VS Code's debu
 
 ## Inspecting in Webstorm
 
-1.  Create a new [Run/Debug configuration](https://www.jetbrains.com/help/webstorm/run-debug-configuration-javascript-debug.html) based on the Meteor default.
+1. Create a new [Run/Debug configuration](https://www.jetbrains.com/help/webstorm/run-debug-configuration-javascript-debug.html) based on the Meteor default.
 
 Use the following settings:
 
