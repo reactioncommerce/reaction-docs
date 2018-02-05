@@ -67,7 +67,7 @@ The second line of every PR should have `Impact breaking|minor|bug|style|refacto
 
 ###### Reviewer
 
-Read over the original ticket, and understand the impact this PR will have on the codebase. If the PR doesn't follow the above template, reject and point the other to this doc.
+Read over the original ticket, and understand the impact this PR will have on the codebase. If the PR doesn't follow the our template, reject and point the author of the PR to this doc.
 
 ##### Issue
 
@@ -97,7 +97,7 @@ List any breaking changes that come with this PR. If you have none, then simply 
 
 ###### Reviewer
 
-If there are breaking changes, make you'll need to make sure any necessary migrations or guards have been put into place so existing apps do not break. Try testing this PR on an existing version of reaction you may already have data for.
+Test by applying this patch to an existing install of Reaction with existing users, orders, carts, etc. Specifically, test any parts of the app where the breaking change is involved and any data set that is involved in a migration.
 
 ##### Testing
 
@@ -107,7 +107,7 @@ List the steps needed for testing your change in this section. Assume that teste
 
 ###### Reviewer
 
-Run through the author's steps to verify that it works as they've tested it. Then run through the app on your own as you would test it. Run through the app as many times as you feel comfortable before issuing an approval or a request for changes.
+Run through the author's steps to verify that it works as they've tested it. Then run through the app on your own as you would test it. Run through the app as many times as you feel comfortable before approving or requesting changes.
 
 ### Here's what to expect when you make a pull request to Reaction
 
