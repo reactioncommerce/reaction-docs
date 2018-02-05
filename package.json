@@ -16,7 +16,7 @@
   "author": "hello@reactioncommerce.com",
   "license": "MIT",
   "scripts": {
-    "lint": "remark .",
+    "lint": "remark . --frail",
     "lint-fix": "remark . -o"
   },
   "devDependencies": {
