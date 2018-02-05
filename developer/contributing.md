@@ -83,7 +83,7 @@ Use this information as the basis for your review. If something is not clear her
 
 ###### PR author
 
-Summarize the your solution to the problem, as well as any other solutions you may have tried along the way that may not have worked.
+Summarize your solution to the problem. Please include short descriptions of any solutions you tested before arriving at your final solution. This will help reviewers know why you decided to solve this problem in this particular way and will speed up the review process.
 
 ###### Reviewer
 
