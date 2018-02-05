@@ -1,6 +1,6 @@
 # Customizing with Themes and Plugins
 
-# Purpose
+## Purpose
 
 This tutorial is in two parts, the first parts focuses on creating a custom "theme" which is how you can modify
 the appearance of Reaction without changing any of the original files. The second part deals with creating a custom
