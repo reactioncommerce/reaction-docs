@@ -119,22 +119,8 @@ Document a function by adding comments above the function definition with the fo
   * @type {propTypes}
   * @param {Object} props - React PropTypes
   * @property {Object} collection collection to get data from
-  * @property {Array} columnMetadata provides filtered columns with i18n headers
   * @property {Array} data provides array of objects to be used in place of publication data
   * @property {Number} defaultPageSize how many results per page
-  * @property {Boolean} filterType filter by table, column, or both
-  * @property {Array} filteredFields provides filtered columns, use columnMetadata instead
-  * @property {Boolean} isFilterable show / hide column filter
-  * @property {Boolean} isResizeable allow resizing of table columns
-  * @property {Boolean} isSortable allow column sorting
-  * @property {String} matchingResultsCount provides Count publication to get count from
-  * @property {Number} minRows minimum amount of rows to display in table
-  * @property {String} noDataMessage text to display when no data is available
-  * @property {Function} onRowClick provides function / action when clicking on row
-  * @property {String} publication provides publication to get Meteor data from
-  * @property {object} query provides query for publication filtering
-  * @property {Array} selectedRows provides selected rows in the table
-  * @property {Function} transform transform of collection for grid results
   * @return {Array} React propTypes
   */
 ```
@@ -201,7 +187,7 @@ A deprecated method:
 ```
 ![screen shot 2017-10-17 at 5 14 34 pm](https://user-images.githubusercontent.com/3673236/31695432-78784758-b35f-11e7-8bfe-eb3bc770d199.png)
 
-## document Meteor methods, grouped together as a `@namespace`
+## Document Meteor methods, grouped together as a `@namespace`
 
 1. In one file: Create `@namespace` at the top of the file. A namespace only needs to be declared once across the whole repository:
 
@@ -216,14 +202,30 @@ A deprecated method:
 2. In all methods: Above the method, add, `@memberof NameOfNamespace`, along with all the standard method tags.
 
 ```js
-@name NameOfMethod
-@method
-@memberof NameOfNamespace
-@summary Method summary goes here
-@params {Object} shop - current shop
-@returns {Object} shop - new shop
+/**
+ * @name NameOfMethod
+ * @method
+ * @memberof NameOfNamespace
+ * @summary Method summary goes here
+ * @params {Object} shop - current shop
+ * @returns {Object} shop - new shop
+ */
 ```
 
 ![screen shot 2017-10-17 at 7 40 20 pm](https://user-images.githubusercontent.com/3673236/31698588-0a908e62-b373-11e7-85ba-9b7cf8f057de.png)
 
 ![screen shot 2017-10-17 at 7 40 36 pm](https://user-images.githubusercontent.com/3673236/31698619-35a4c80c-b373-11e7-9f02-942043e867f6.png)
+
+## Document a third-party packages
+
+1. When incorporating methods from a third-party package, use the `@author` tag to indicate the author.
+2. Use the `@see` tag to link to relevant documentation.
+
+```js
+/**
+ * @name Hook
+ * @method
+ * @author Workpop
+ * @see https://github.com/Workpop/meteor-method-hooks
+ */
+```
