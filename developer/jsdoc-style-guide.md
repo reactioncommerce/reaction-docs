@@ -30,17 +30,16 @@ Document a function by adding comments above the function definition with the fo
 - `@async`
 - `@private`
 - `@default`
-- `@deprecated` since version number
-- `@since` version number
-- `@todo` any todo notes here
-
-### other things
+- `@deprecated` - since version number
+- `@since` - version number
+- `@todo` - any TODO notes here
 - `@ignore` - if you don't want the function to output docs
-- Lowercase type names, like `object`, `string`
+- `@author` - to indicate third-party method authors
+- `@see` - link to relevant third-party documentation
 
 ### Example of a method
 
-**basic example:**
+**Basic example:**
 
 ```js
 /**
@@ -56,7 +55,7 @@ Document a function by adding comments above the function definition with the fo
 
 <img width="917" alt="screen shot 2017-10-04 at 9 47 43 am" src="https://user-images.githubusercontent.com/3673236/31188268-2caac880-a8e9-11e7-973d-77567b3dffcc.png">
 
-**more examples:**
+**More examples:**
 
 ```js
 /**
@@ -67,21 +66,6 @@ Document a function by adding comments above the function definition with the fo
  * @param {string} options.topic - the shopify topic to subscribe to
  * @param {string} [options.absoluteUrl] - Url to send webhook requests - should only be used in development mode
  * @return {undefined}
- */
-```
-
-```js
-/**
- * @method createReactionProductFromShopifyProduct
- * @summary Transforms a Shopify product into a Reaction product.
- * @private
- * @param  {object} options Options object
- * @param  {object} options.shopifyProduct the Shopify product object
- * @param  {string} options.shopId The shopId we're importing for
- * @param  {[string]} options.hashtags An array of hashtags that should be attached to this product.
- * @return {object} An object that fits the `Product` schema
- *
- * @todo consider abstracting private Shopify import helpers into a helpers file
  */
 ```
 
@@ -98,7 +82,6 @@ Document a function by adding comments above the function definition with the fo
 ```
 
 2. Document each method with `@property` and `@param` tags:
-
 ```js
 /**
   * renderComponent
@@ -126,7 +109,6 @@ Document a function by adding comments above the function definition with the fo
 ```
 ![screen shot 2017-10-18 at 12 12 00 pm](https://user-images.githubusercontent.com/3673236/31737844-9aaf6fba-b3fd-11e7-9939-d148a4843e47.png)
 ![screen shot 2017-10-18 at 12 12 09 pm](https://user-images.githubusercontent.com/3673236/31737845-9ac73c1c-b3fd-11e7-946b-ddd771e9e4e0.png)
-![screen shot 2017-10-18 at 12 12 12 pm](https://user-images.githubusercontent.com/3673236/31737881-bfc6e648-b3fd-11e7-9247-db56893e9273.png)
 
 ## Document a one-file module
 
@@ -143,13 +125,9 @@ Document a function by adding comments above the function definition with the fo
 The sidebar and page:
 ![screen shot 2017-10-18 at 11 09 29 am](https://user-images.githubusercontent.com/3673236/31734867-e7565ecc-b3f4-11e7-997c-4328fd088e3f.png)
 
-A deprecated method:
-![screen shot 2017-10-18 at 11 10 49 am](https://user-images.githubusercontent.com/3673236/31735033-6dee393c-b3f5-11e7-858b-84327a9f61b0.png)
-
 ## Document a core Schema
 
 1. Add a `@namespace schemas` declaration at the top:
-
 ```js
 /**
  * @file Reaction Core schemas
@@ -190,7 +168,6 @@ A deprecated method:
 ## Document Meteor methods, grouped together as a `@namespace`
 
 1. In one file: Create `@namespace` at the top of the file. A namespace only needs to be declared once across the whole repository:
-
 ```js
 /**
  * @file Meteor methods for Accounts
@@ -200,7 +177,6 @@ A deprecated method:
 ```
 
 2. In all methods: Above the method, add, `@memberof NameOfNamespace`, along with all the standard method tags.
-
 ```js
 /**
  * @name NameOfMethod
@@ -220,7 +196,6 @@ A deprecated method:
 
 1. When incorporating methods from a third-party package, use the `@author` tag to indicate the author.
 2. Use the `@see` tag to link to relevant documentation.
-
 ```js
 /**
  * @name Hook
