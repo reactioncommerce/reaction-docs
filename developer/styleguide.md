@@ -21,12 +21,22 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
 - Add spaces around brackets
 
 - 120 character line-length
-- `import`s should be listed in this order, as enforced by ESLint:
-  1. Built-in: Built-in Node modules,
-  2. External: External npm modules, React packages, Meteor core, Meteor Atmosphere packages
+
+- `import`s should be listed in this order, as enforced by [ESLint](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md):
+  1. Built-in: Built-in Node modules
+
+  2. External: External packages, ordered by:
+     - React packages
+     - External npm modules
+     - Meteor Core packages
+     - Meteor Atmosphere packages
+
   3. Internal: Internal Reaction modules
+
   4. Parent: Modules from a parent directory
+
   5. Sibling: Modules from the same or sibling directories
+
   6. Index: Index of the current directory
 
 Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
