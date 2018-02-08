@@ -28,7 +28,6 @@ Start small and open up a dialogue with us. This will help to get your contribut
 -   Should reference an issue if one exists, or provide detailed information on the goal of the PR.
 -   Should pass CI / Tests. New functionality should include new tests.
 -   Should passing a linter code review and follow Reaction style guidelines.
--   Contributors should review the CLA.
 -   Code reviewed before merge acceptance.
 
 ### Pull request template
