@@ -36,7 +36,7 @@ changes within the site those settings **will not** be saved when you reset unle
 ## Sidebar: How do I look at my data? Where is it?
 
 When in development mode Meteor uses its own copy of Mongo and will use the port that your dev server is running on +1.
-You can use [RoboMongo](https://robomongo.org/) or similar GUI's to see your data. Or alternately you run run `meteor mongo`
+You can use [RoboMongo](https://robomongo.org/) or similar GUI's to see your data. Or alternately you can run `meteor mongo`
 while your application is running and query your data via the command line.
 
 If you look at the `Shops` collection in the database you can see that it pretty much looks exactly like the JSON files

@@ -23,36 +23,36 @@ It can also be done in `private/settings/reaction.json` by adding (or updating) 
 
 ## Accepted Payment Methods
 
--   All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
--   Signature Debit Cards
+- All major credit cards: Visa®, MasterCard®, American Express®, Discover®, Diner's Club, JCB
+- Signature Debit Cards
 
-_Actual payment method support will vary by country._
+**Note:** Actual payment method support will vary by country.
 
 Based on the accepted payment methods, Authorize.net's default schema for credit card numbers will allow between 12 - 19 numbers. This can be changed in `/imports/plugins/included/authnet/lib/collections/schemas/package.js` depending on your needs.
 
 ## Transactions
 
--   authorize
+- authorize
 
 > Authorizations are held for 30 days. If the payment is not captured in this time period, the funds will be released.
 
--   capture
+- capture
 
 > Captures of an authorized charge can be made in any amount equal to or less than the original authorization, unless your industry (i.e. tipping in restaurants) or individual account is authorized otherwise. Only the captured amount will be seen on the customers statement. Captures are immediate.
 >
 > _If a customer is given a 100% discount prior to capturing, the charge will appear as `voided`._
 
--   refund
+- refund
 
 > **Refunds are not supported**  
 > Authorize.net requires the expiration date and last four digits of the credit card to process refunds. This does not comply with Reaction's policy to not store data that is not compatible with PCI compliance. Refunds can still be processed directly through the [Authorize.net dashboard](https://account.authorize.net/).
 
--   refunds (list)
+- refunds (list)
 
 > **Refunds are not supported**
 
 ## Testing
 
--   Credit card number : `4242424242424242`
--   Expiration date: Any date in the future
--   CVV2: Any 3 numbers
+- Credit card number : `4242424242424242`
+- Expiration date: Any date in the future
+- CVV2: Any 3 numbers

@@ -61,11 +61,9 @@ Now, you're ready to debug!
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/devtools-setup.png)
 
 2. Click **Open dedicated DevTools for Node**.
-
 3. There are two main ways to set up breakpoints: in the DevTools or in the code.
 
 - To set up a breakpoint in DevTools, open up the **Source** tab and navigate to a file you would like to debug in the left-side bar. Click on the line number where you'd like the code to stop executing. You can set up as many breakpoints as you'd like.
-
 - To set up a breakpoint in your code, add the keyword `debugger` right before you'd like the application to pause execution.
 
 Remember: Since you are currently debugging the Reaction server, you'll only have access to code that runs on the server - not the client.
@@ -76,7 +74,7 @@ In this example, the code stopped executing at a breakpoint in the Products publ
 
 ![DevTools setup](https://blog.reactioncommerce.com/content/images/2017/11/devtools-variables.png)
 
-5. At this breakpoint, you can access the Console by hitting <kbd>esc</kbd> and opening the *Drawer*.
+5. At this breakpoint, you can access the Console by hitting <kbd>esc</kbd> and opening the _Drawer_.
 
 ![DevTools setup](http://g.recordit.co/1hRutFIaLe.gif)
 
@@ -97,6 +95,7 @@ Setting up [VS Code](https://code.visualstudio.com/) and connecting it to the No
 2. Set up your file:
 
 **.vscode/launch.json**
+
 ```js
 {
     "version": "0.2.0",

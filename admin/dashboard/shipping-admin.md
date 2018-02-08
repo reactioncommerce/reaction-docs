@@ -12,18 +12,18 @@ Your store comes with three default shipping methods: `Free`, `Standard`, and `P
 
 ![](/assets/admin-dashboard-shipping-2.png "Reaction Commerce Shipping")
 
-1.  Click the plus <i class="font-icon fa fa-plus"></i>.
-2.  Fill out the following:
+1. Click the plus <i class="font-icon fa fa-plus"></i>.
+2. Fill out the following:
 
--   Method Name: Edit the name of your method.
--   Cost: The cost, as a shop owner, to ship this item.
--   Public Label: How your rate name appears to your customers.
--   Handling: Any handling fees you might want to include.
--   Group: Choose `Ground`, `Priority`, `One Day` or `Free`.
--   Rate: The actual price you're charging your customer.
--   Enabled: Check this to enable this option.
+- Method Name: Edit the name of your method.
+- Cost: The cost, as a shop owner, to ship this item.
+- Public Label: How your rate name appears to your customers.
+- Handling: Any handling fees you might want to include.
+- Group: Choose `Ground`, `Priority`, `One Day` or `Free`.
+- Rate: The actual price you're charging your customer.
+- Enabled: Check this to enable this option.
 
-3.  Click **Save Changes**.
+3. Click **Save Changes**.
 
 ## Integrating Shippo
 

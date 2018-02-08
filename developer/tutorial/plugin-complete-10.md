@@ -1,6 +1,7 @@
 # Completing the picture
 
 ## Favicon
+
 Every website and especially web applications need a good favicon bundle to be ready for prime time. The easiest way to accomplish this would be to copy the [favicon code](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/default-theme/client/favicons.js) from the default-theme package into your own package. For a step-by-step instruction, see [here](/developer/how-to-change-the-favicon.md).
 
 ## Final Thoughts
@@ -14,19 +15,22 @@ chat and on our forums.
 
 If you want to get even further into Reaction Commerce there are some additional tutorials that cover specific topics.
 
-#### Scenario 1
+## Scenario 1: Payment Provider Plugin
+
 The first is for if you want to add a specific payment provider that we do not currently support:
 [Creating a Payment Provider Plugin](/developer/tutorial/creating-a-payment-provider-plugin.md)
 
-#### Scenario 2
+## Scenario 2: Extending the Product Schema
+
 Here we are going to extend the schema of our products to accommodate two additional fields: Longitude and Latitude. We want to use the fields to sell  products or services that are bound to specific locations. For example, we might sell certain products only in specific branch stores and we'd like to give the user a map to see in which stores our products are available:
 [Extending a product schema and display geographic location of product in Google map](/developer/tutorial/extending-product-schema-location-map.md)
 
-#### Scenario 3
-Another scenario is an indepth-tutorial into how to write tests in Reaction Commerce and how to overcome some of the common
+## Scenario 3: Testing
+
+Another scenario is an in-depth tutorial into how to write tests in Reaction Commerce and how to overcome some of the common
 challenges with testing: [Testing Tutorial](/developer/tutorial/testing-tutorial.md)
 
 ## Getting Help
 
--   [Gitter Live Chat](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
--   [Forums](<>)
+- [Gitter Live Chat](https://gitter.im/reactioncommerce/reaction)
+- [Forums](http://forums.reactioncommerce.com)

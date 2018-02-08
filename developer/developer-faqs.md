@@ -1,8 +1,11 @@
 # Frequently Asked Questions
+
 ## General
+
 ### What do I need to know to work with Reaction?
 
 To start customizing Reaction, you should have a basic understanding of the following technologies:
+
 - JavaScript, specifically ES6
 - HTML/CSS
 - Some knowledge of Meteor, especially an understanding of [Publications and Subscriptions](https://guide.meteor.com/data-loading.html)
@@ -16,14 +19,14 @@ Ecommerce and marketplace sites from around the world are using Reaction in prod
 
 ### Why is Reaction so slow?
 
-*For Development*
+#### For development
 
 We are aware that Reaction Commerce can take a long time to reload when using the development server. This has to do with that
 large amount of files that are in the project. Hopefully this has been mitigated to some degree with the update to Meteor 1.6, however
 we know that faster is better when it comes to development so we will be focusing all of our efforts on improving performance. You
 can see our plan, weigh in with suggestions, contribute, and track progress [here](https://github.com/reactioncommerce/reaction/issues/3233)
 
-*To "first paint"*
+#### To "first paint"
 
 As mentioned above we are aware that because of the nature of Meteor apps and the size of this app that on some connections
 it can take several seconds before the site is rendered to clients. We are working to reduce the bundle size by eliminating some
@@ -73,11 +76,12 @@ Here are some options for deployment. What the best options is depends on your b
 The [Reaction Platform](https://reactioncommerce.com/hosting) comes with virtual private clusters, containerized cloud hosting, multiple staging environments, SSL and domains, direct support channels, and one-step deployment.
 
 Reaction Commerce’s Platform enables clients to:
+
 - Innovate faster by leveraging modern container-based technology that provides continuous integration, delivery, and deployment.  
 - More effectively and efficiently manage your site with seamless cutovers, dynamic scaling, and multiple “everything”
 - Have greater peace of mind from our high availability, virtual clusters, and 24x7x365 support.
 
-You can find out more and request a quote [here](https://reactioncommerce.com/#get-a-demo) or you can contact [sales@reactioncommerce.com](mailto:sales@reactioncommerce.com).
+You can find out more and request a quote [here](https://reactioncommerce.com/#get-a-demo) or you can contact <mailto:sales@reactioncommerce.com>.
 
 2. Galaxy
 
@@ -105,9 +109,7 @@ By default the admin login will be username: `admin@localhost` and password `r3@
 Since 2014 [Google has indexed JavaScript when crawling websites](https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html). Reaction, however, offers page pre-rendering and product detail page metatag generation out of the box to ensure products are indexed well for web crawlers and search engines:
 
 1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. ALl you have to do is provide a key to your site and Prerender will handle the pre-rendering.
-
-2. [Spiderable](https://github.com/ongoworks/spiderable): A now-deprecated solution is our Atmosphere package called (Spiderable)[https://atmospherejs.com/ongoworks/spiderable] that pre-renders Meteor applications for search engines.
-
+2. [Spiderable](https://github.com/ongoworks/spiderable): A now-deprecated solution is our Atmosphere package called [Spiderable](https://atmospherejs.com/ongoworks/spiderable) that pre-renders Meteor applications for search engines.
 3. [meteor-dochead](https://github.com/kadirahq/meteor-dochead): Automatically add `<meta>` tags are for products using the [meteor-dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data.
 
 Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our latest blog post.
@@ -136,6 +138,7 @@ Often it's convenient to have product data along with its assets stored in a loc
 Short answer: You shouldn't.
 
 Longer answer: By design you can't, because presentation and data should be separated. There are several reasons for that:
+
 - If you allow markup in product descriptions, the style can (and will sooner or later) differ from product to another
 - It means that if you attempt to display that data anywhere else, it comes with all the markup baggage that you added specifically for the product detail page
 - Allowing markup brings its own security related issues upon the table. [Cross-Site-Scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) is one of them.
@@ -150,6 +153,7 @@ If you're absolutely keen it, you could overwrite the React component responsibl
 There's an extension to our [example plugin tutorial](/developer/tutorial/plugin-intro-1.md), that describes how to extend the product schema for [displaying a Google Map in the PDP](/developer/tutorial/extending-product-schema-location-map.md).
 
 ### I want to use XYZ payment/shipping provider. How can I do this?
+
 Reaction features a couple of built-in payment providers: PayPal Flow, PayPal Express, Stripe, Braintree, Authorize.net and others. As far as shipping is concerned, we've these out-of-the-box plugins: ShippingRates and [Shippo](https://goshippo.com/).
 
 When implementing your own shop you may encounter situations where you need to bring your own solutions into the game. Because this is such a common use case, Reaction's answer to this question is built upon two pillars: The _plugin concept_ and the _internal development payment/shipping APIs_. If you're interested in learning more, head over to our [tutorial](/developer/tutorial/creating-a-payment-provider-plugin.md) that teaches how to implement an exemplary payment provider plugin.

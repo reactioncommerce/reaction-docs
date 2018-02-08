@@ -59,7 +59,7 @@ should help you find them.
 
 Or, the plugin tutorial is intended to be read from beginning to end. You can start here
 
-[Plugin Tutorial](/developer/tutorial/creating-a-plugin.md)
+[Plugin Tutorial](/developer/tutorial/plugin-creating-2.md)
 
 ## How do I create a custom payment-provider package?
 

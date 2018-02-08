@@ -2,12 +2,14 @@
 
 [![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
 
-## Install prerequisites:
+## Install prerequisites
 
 ### Install Node
+
 Download and run the installer from the [NodeJs site](https://nodejs.org)
 
 ### Install Xcode
+
 Download and run the installer from [Apple Developer Site](https://developer.apple.com/download/)
 
 Then from the command line run
@@ -28,7 +30,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ```sh
 brew install git
-````
+```
 
 ### Install Meteor
 
@@ -62,7 +64,6 @@ ImageMagick is used for image resizing on upload. So generally if you are going 
 brew install imagemagick
 ```
 
-
 ## Install Reaction
 
 ### Install the Reaction command-line interface (CLI)
@@ -83,10 +84,10 @@ cd reaction
 
 If you don't want Reaction to be installed in the default `reaction` directory you can
 specify a directory like
+
 ```sh
 reaction init my-new-reaction-project
 ```
-
 
 ### Start Reaction
 
@@ -99,16 +100,13 @@ reaction
 reaction run
 ```
 
-**Note that the first run can take a while as it downloads dependencies. This is especially true if you are not in North America**
+**Note**: The first run can take a while as it downloads dependencies. This is especially true if you are not in North America.
 
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_
-
-By default the username will be :`admin@localhost` and the password will be: `r3@cti0n`
+_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ By default the username will be :`admin@localhost` and the password will be: `r3@cti0n`
 
 ![](/assets/guide-installation-default-user.png)
 
-
-Congrats! Now you've created your first Reaction store. View the store by going to http://localhost:3000 in your favorite browser.
+Congrats! Now you've created your first Reaction store. View the store by going to <http://localhost:3000> in your favorite browser.
 
 To terminate `reaction` use `CTRL-c`.
 

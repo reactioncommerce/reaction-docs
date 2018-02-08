@@ -112,7 +112,7 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   </div>
 </div>
 
-# Recent blog posts
+## Recent blog posts
 
 <div class="row article-list">
     <div class="col-xs-12">

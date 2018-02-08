@@ -64,10 +64,10 @@ registerComponent("MyComponent", MyComponent);
 
 To understand how theming works in Reaction, it's important to understand what higher order components (HOC's) are and how they interact with UI (presentational) components. If this is the first time you're hearing about higher order components, we recommend you read some or all of the following items to get familiar with this pattern of writing React components.
 
--   Official React docs <https://facebook.github.io/react/docs/higher-order-components.html>
--   Higher Order Components in React <https://spin.atomicobject.com/2017/03/02/higher-order-components-in-react/>
--   A Gentle Introduction to React's Higher Order Components <https://www.robinwieruch.de/gentle-introduction-higher-order-components/>
--   Recompose (a handy library of HOC's that we use in Reaction) <https://github.com/acdlite/recompose/blob/master/docs/API.md>
+- Official React docs <https://facebook.github.io/react/docs/higher-order-components.html>
+- Higher Order Components in React <https://spin.atomicobject.com/2017/03/02/higher-order-components-in-react/>
+- A Gentle Introduction to React's Higher Order Components <https://www.robinwieruch.de/gentle-introduction-higher-order-components/>
+- Recompose (a handy library of HOC's that we use in Reaction) <https://github.com/acdlite/recompose/blob/master/docs/API.md>
 
 A higher order component's role is essentially to wrap a another component and pass it props that help it to render what you want in the UI. This could be a list of items from the database, the current user, info about the current route, etc.
 
@@ -154,27 +154,27 @@ replaceComponent("MainDropdown", MyCustomDropdown);
 
 In the example above, all of the original class methods and state handlers that exist in the `MainDropdown` class will still be available and the only customization will be on the methods that you specifically define (the `render()` method in this example). This is extremely helpful if you only want to change one small detail about a complex component, but you don't want to have to rewrite the entire component from scratch.
 
-# API
+## API
 
 Below is the full API for the Reaction components system. Each of these items can be imported from `@reactioncommerce/reaction-components`.
 
-#### [Components Objects](#components-objects)
+### [Components Objects](#components-objects)
 
--   [`Components`](#components)
--   [`ComponentsTable`](#componentstable)
+- [`Components`](#components)
+- [`ComponentsTable`](#componentstable)
 
-#### [Methods](#methods)
+### [Methods](#methods)
 
--   [`registerComponent()`](#registercomponent)
--   [`replaceComponent()`](#replacecomponent)
--   [`getComponent()`](#getcomponent)
--   [`getRawComponent()`](#getrawcomponent)
--   [`registerHOC()`](#registerhoc)
--   [`getHOCs()`](#gethocs)
--   [`copyHOCs()`](#copyhocs)
--   [`loadRegisteredComponents()`](#loadregisteredcomponents)
+- [`registerComponent()`](#registercomponent)
+- [`replaceComponent()`](#replacecomponent)
+- [`getComponent()`](#getcomponent)
+- [`getRawComponent()`](#getrawcomponent)
+- [`registerHOC()`](#registerhoc)
+- [`getHOCs()`](#gethocs)
+- [`copyHOCs()`](#copyhocs)
+- [`loadRegisteredComponents()`](#loadregisteredcomponents)
 
-#### [Higher Order Components](#higher-order-components)
+### [Higher Order Components](#higher-order-components)
 
 - [`withCurrentUser`](#withcurrentuser)
 - [`withCurrentAccount`](#withcurrentaccount)
@@ -485,7 +485,7 @@ export default withIsOwner(MyComponent);
 ### withPermissions
 
 This sets a Boolean `hasPermissions` prop to be passed into the wrapped component based on `roles` or `group`. Like the others above, you can use it to conditionally show parts of the UI or change what functionality is available.
-Default roles used roles = ["guest", "anonymous"]. This is overridden by group, if a group option is passed in. Example is show below without passing any option, and passing roles (commented), and group (commented).
+Default roles used `roles = ["guest", "anonymous"]`. This is overridden by group, if a group option is passed in. Example is show below without passing any option, and passing roles (commented), and group (commented).
 
 ```js
 import { registerComponent, withPermissions } from "@reactioncommerce/reaction-components";

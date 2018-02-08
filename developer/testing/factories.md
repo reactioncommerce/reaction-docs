@@ -24,25 +24,25 @@ There are also the following functions/builders that can be imported directly.
 
 The following factories are predefined. The appropriate object is created by executing `Factory.create("nameOfFactory");`
 
--   `cart` creates cart with 2 items
+- `cart` creates cart with 2 items
 
--   `cartToOrder` creates cart with `workflow.status: checkoutPayment`. It is ready for order testing
+- `cartToOrder` creates cart with `workflow.status: checkoutPayment`. It is ready for order testing
 
--   `anonymousCart` creates cart attached to anonymous user
+- `anonymousCart` creates cart attached to anonymous user
 
--   `order`
+- `order`
 
--   `authorizedApprovedPaypalOrder` defines order factory which generates an authorized, apporved, paypal order
+- `authorizedApprovedPaypalOrder` defines order factory which generates an authorized, apporved, paypal order
 
--   `shop` creates shop.
+- `shop` creates shop.
 
--   `user` creates user without `roles`
+- `user` creates user without `roles`
 
--   `registeredUser` creates normal user with an additional `account/profile` role to the default `roles` list.
+- `registeredUser` creates normal user with an additional `account/profile` role to the default `roles` list.
 
--   `anonymous` creates anonymous user with an additional `anonymous` role to the default `roles` list.
+- `anonymous` creates anonymous user with an additional `anonymous` role to the default `roles` list.
 
--   following 2 factories are used internally and not used directly for creation of full product. We don't recommend use them for tests (check `faker` instead):
+- following 2 factories are used internally and not used directly for creation of full product. We don't recommend use them for tests (check `faker` instead):
 
-    -   `variant` creates item with `type = variant`
-    -   `product` creates empty product without variants
+  - `variant` creates item with `type = variant`
+  - `product` creates empty product without variants

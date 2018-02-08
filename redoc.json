@@ -45,6 +45,12 @@
 			"docPath": "developer/installation/installation-linux.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "reaction-cli",
+			"label": "Reaction CLI",
+			"repo": "reaction-docs",
+			"docPath": "developer/installation/reaction-cli.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "configuration",
 			"label": "Configuration",
 			"repo": "reaction-docs",
@@ -219,6 +225,12 @@
 			"docPath": "developer/react-best-practices.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "jsdoc-style-guide",
+			"label": "JSDoc Style Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/jsdoc-style-guide.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "release-process",
 			"label": "Release Guide",
 			"repo": "reaction-docs",
@@ -276,7 +288,7 @@
 			"alias": "database-migrations",
 			"label": "Migrations",
 			"repo": "reaction-docs",
-			"docPath": "developer/architecture/migrations.md"      
+			"docPath": "developer/architecture/migrations.md"
     }, {
 			"class": "guide-sub-nav-item",
 			"alias": "image-handling",
@@ -511,9 +523,6 @@
 		}, {
 			"label": "Click To Copy",
 			"docPath": "developer/components/clickToCopy.md"
-		}, {
-			"label": "CSV Download",
-			"docPath": "developer/components/csvDownload.md"
 		}, {
 			"label": "Divider",
 			"docPath": "developer/components/divider.md"
