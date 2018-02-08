@@ -25,15 +25,15 @@ Start small and open up a dialogue with us. This will help to get your contribut
 
 [Create a pull request](https://help.github.com/articles/creating-a-pull-request/) to propose and collaborate on changes to Reaction. These changes are proposed in a PR branch, and are reviewed before being merged into a `release-x.x.x` branch, and then released to `master`.
 
--   PR should fill in all sections of the pull request
--   Should reference an issue if one exists, or provide detailed information on the goal of the PR.
--   Should pass CI / Tests. New functionality should include new tests.
--   Should passing a linter code review and follow Reaction style guidelines.
--   Code reviewed before merge acceptance.
+- PR should fill in all sections of the pull request
+- Should reference an issue if one exists, or provide detailed information on the goal of the PR.
+- Should pass CI / Tests. New functionality should include new tests.
+- Should passing a linter code review and follow Reaction style guidelines.
+- Code reviewed before merge acceptance.
 
 ### Pull request template
 
-```
+```md
 Resolves #issueNumber
 Impact: breaking|critical|major|minor
 Type: feature|bugfix|performance|test|style|refactor|docs|chore
@@ -76,11 +76,10 @@ We do not accept PRs to add functionality without an issue.
 The second line of every PR should have `Impact breaking|critical|major|minor`.
 
 The impact of a PR will help us determine what kind of release it belongs in, and how urgent the review needs to be. E.g. a `critical` bugfix would be a PR that fixes a bug in the core ecommerce flow (browse products, view PDP, add to cart, any checkout step).
--   `breaking` - introduces breaking changes to the app.
--   `critical` - resolves a `critical` bug blocking core functionality. Examples include browsing products, adding products to cart, checking out, processing orders, etc.
--   `major` - resolves a `major` bug or introduces significant new feature.
--   `minor` - resolves a `minor` bug, minor changes to the app, or minor new feature
-
+- `breaking` - introduces breaking changes to the app.
+- `critical` - resolves a `critical` bug blocking core functionality. Examples include browsing products, adding products to cart, checking out, processing orders, etc.
+- `major` - resolves a `major` bug or introduces significant new feature.
+- `minor` - resolves a `minor` bug, minor changes to the app, or minor new feature
 
 ##### Type
 
@@ -122,7 +121,6 @@ Write instructions for testing your changes. You can assume that reviewers know 
 
 The steps you list should guide the reviewer through testing the feature or fix you've implemented. These steps will generally be very similar to the reproduction steps in the issue.
 
-
 ### Additional details for pull request reviewers
 
 #### Top Section
@@ -149,15 +147,14 @@ Review the code changes that this PR makes. Note any changes that you'll want to
 
 Code should be vetted for:
 
--   Readability: the linter will help with this, but call out anything that is difficult to understand or that you feel needs comments
--   Documentation: all code added or touched should have proper jsdoc, any new functionality should be documented.
--   Security: Code should only be usable by users with the correct roles. Any data published should be filtered to ensure that only users with the correct roles for the correct shops have access to it.
--   Performance: Code should be written with performance in mind. Data publications should only publish data necessary to accomplish the specific goal at hand.
--   Tests: Any new functionality should include tests
--   Dependencies: Any newly introduced dependencies should be updated to the latest version. No Meteor dependencies.
--   i18n: All static copy should use i18next. Include definitions in the appropriate `en.json` file.
--   a11y: Code should be a11y compliant.
-
+- Readability: the linter will help with this, but call out anything that is difficult to understand or that you feel needs comments
+- Documentation: all code added or touched should have proper jsdoc, any new functionality should be documented.
+- Security: Code should only be usable by users with the correct roles. Any data published should be filtered to ensure that only users with the correct roles for the correct shops have access to it.
+- Performance: Code should be written with performance in mind. Data publications should only publish data necessary to accomplish the specific goal at hand.
+- Tests: Any new functionality should include tests
+- Dependencies: Any newly introduced dependencies should be updated to the latest version. No Meteor dependencies.
+- i18n: All static copy should use i18next. Include definitions in the appropriate `en.json` file.
+- a11y: Code should be a11y compliant.
 
 ### Here's what to expect when you make a pull request to Reaction
 
@@ -170,8 +167,8 @@ As soon as pull requests are pushed, automated test are run to ensure:
 
 You can run these checks yourself by running these commands:
 
--   `npm run lint` for linting
--   `reaction test` for all tests
+- `npm run lint` for linting
+- `reaction test` for all tests
 
 ### Community team pull request review
 
