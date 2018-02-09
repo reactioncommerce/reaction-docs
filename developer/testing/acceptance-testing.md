@@ -99,10 +99,10 @@ Each test assumes this environment unless otherwise stated
 9. Click on "Save Changes"
 10. Perform either test 1A or 2A but substitute Payflow Pro for Generic Payment Method
 
-### 4A - Place an order paid for via Paypal Express
+### 4A - Place an order paid for via PayPal Express
 
-(**Note**: To test this method you will need to create a user (separate from your admin user) for testing. See
-the Paypal documentation for more details)
+**Note**: To test this method you will need to create a user, separate from your admin user, for testing. See
+the PayPal documentation to [learn how to create a personal sandbox account](https://developer.paypal.com/docs/classic/lifecycle/sb_about-accounts/#create-a-personal-sandbox-account).
 
 1. Log in as the admin
 2. Click on "Dashboard" in right hand column
@@ -121,8 +121,8 @@ the Paypal documentation for more details)
 15. Fill out address
 16. Click on "Save and Continue"
 17. Select "Free Shipping"
-18. Click on "Checkout with Paypal Express"
-19. The Paypal modal will open. Enter the Paypal user and password you created in the Sandbox dashboard
+18. Click on "Checkout with PayPal Express"
+19. The PayPal modal will open. Enter the PayPal user and password you created in the Sandbox dashboard
 20. When the modal returns click on "Continue"
 21. Verify that you receive the confirmation screen ("Thank You!")
 
