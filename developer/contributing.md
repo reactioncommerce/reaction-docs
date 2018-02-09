@@ -17,7 +17,7 @@ reaction
 
 Explore the interface and the code to give you a good overview of the product and a sense for what's already built. Keep an eye out for bugs and interface issues, as well as features you'd like to see created.
 
-Explore the [Pull Requests Encouraged](https://github.com/reactioncommerce/reaction/issues?q=is%3Aissue+is%3Aopen+label%3Apull-requests-encouraged) issues on our GitHub repo. If you find something you want to work on, let us know right there in the comments. If you are interested in a specific aspect of the project but aren't sure where to begin, feel free to ask.
+Check our our [`Good First Issue`](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) and [`Help Wanted`](https://github.com/reactioncommerce/reaction/issues?q=label%3A%22help+wanted%22) tags for good issues to tackle. If you find something you want to work on, let us know right there in the comments. If you are interested in a specific aspect of the project but aren't sure where to begin, feel free to ask.
 
 Start small and open up a dialogue with us. This will help to get your contributions accepted easily.
 
