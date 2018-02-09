@@ -177,7 +177,7 @@ The Community team triages all new pull requests as soon as possible. The team r
 - No new Atmosphere or Meteor dependencies are introduced.
 - No hard-coded copy: All copy and alerts should have i18n keys and values.
 - Updated LingoHub translations.
-- All new methods and files have JSDoc summaries, as outlined in [JSDoc guide](/developer/jsdoc-style-guide).
+- All new methods and files have JSDoc summaries, as outlined in [JSDoc guide](/developer/jsdoc-style-guide.md).
 - All folders, variables, method names follow naming conventions, outlined in [Reaction style guide](/developer/styleguide.md).
 
 The team also encourages in-line commenting.
