@@ -148,7 +148,7 @@ Review the code changes that this PR makes. Note any changes that you'll want to
 Code should be vetted for:
 
 - Readability: the linter will help with this, but call out anything that is difficult to understand or that you feel needs comments
-- Documentation: all code added or touched should have proper jsdoc, any new functionality should be documented.
+- Documentation: all code added or touched should have proper JSDoc, any new functionality should be documented.
 - Security: Code should only be usable by users with the correct roles. Any data published should be filtered to ensure that only users with the correct roles for the correct shops have access to it.
 - Performance: Code should be written with performance in mind. Data publications should only publish data necessary to accomplish the specific goal at hand.
 - Tests: Any new functionality should include tests
@@ -177,7 +177,7 @@ The Community team triages all new pull requests as soon as possible. The team r
 - No new Atmosphere or Meteor dependencies are introduced.
 - No hard-coded copy: All copy and alerts should have i18n keys and values.
 - Updated LingoHub translations.
-- All new methods and files have jsdoc summaries, as outlined in [JSDoc guide](/jsdoc-style-guide).
+- All new methods and files have JSDoc summaries, as outlined in [JSDoc guide](/developer/jsdoc-style-guide).
 - All folders, variables, method names follow naming conventions, outlined in [Reaction style guide](/developer/styleguide.md).
 
 The team also encourages in-line commenting.
