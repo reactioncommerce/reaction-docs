@@ -1,6 +1,6 @@
 # Accounts
 
-Reaction extends [Meteor Account](http://docs.meteor.com/api/accounts.html) functionality in `client/modules/accounts` with Reaction specific UI and behavior.
+Reaction extends [Meteor Account](http://docs.meteor.com/api/accounts.html) functionality in `imports/plugins/core/accounts/` with Reaction specific UI and behavior.
 
 - _Accounts_ collection
 - dropdown accounts ui
