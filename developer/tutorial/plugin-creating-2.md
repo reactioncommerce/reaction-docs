@@ -52,7 +52,7 @@ At this point, your local directory should look like:
                  └── client
                  └── server
                  ├── register.js
- ```
+```
 
 ### Load the plugin
 

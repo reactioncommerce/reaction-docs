@@ -4,11 +4,11 @@ The following documentation is for paid users of [Reaction Platform](getrxn.io/r
 
 The `reaction-cli` incorporates functionality for any team to deploy Reaction Commerce to multiple environments. [Visit reactioncommerce.com](http://getrxn.io/reaction-platform) to get a demo.
 
-1.  Get invite token from welcome email or contract
-2.  Register local environment
-3.  Create, add, and publish SSH keys
-4.  Create application environment
-5.  Deploy application
+1. Get invite token from welcome email or contract
+2. Register local environment
+3. Create, add, and publish SSH keys
+4. Create application environment
+5. Deploy application
 
 ## Request invite token
 
@@ -146,9 +146,9 @@ reaction domain unset --app <appname> -d mycoolshop.com
 
 Submit your application for a deployment. This will begin the CI/CD/CD process. This begins a build process that is unique for every project. Expect this entire process to take around 20 minutes.
 
--   test and build production bundle (continuous integration)
--   build container image and publish (continuous delivery)
--   deploy application cluster (continuous deployment)
+- test and build production bundle (continuous integration)
+- build container image and publish (continuous delivery)
+- deploy application cluster (continuous deployment)
 
 ```sh
 # Deploy your application
@@ -168,7 +168,7 @@ reaction logs -a <appname>
 
 Hint: to get a list of all apps you have access to, run `reaction apps list`
 
-**CI/CD Configuration**
+### CI/CD Configuration
 
 [Continuous integration configuration](https://docs.gitlab.com/ee/ci/) should be committed in [.reaction/ci/config.yml](https://github.com/reactioncommerce/reaction/blob/master/.reaction/ci/config.yml).
 
@@ -189,7 +189,7 @@ reaction open simple-demo
 
 ## Full example
 
-  Below is a more complete example that sets up a SMTP mail server URL (for app emails), imports [Reaction registry](https://docs.reactioncommerce.com/reaction-docs/master/registry) settings and [Meteor settings](https://docs.meteor.com/api/core.html#Meteor-settings), and deploys the latest official Reaction Commerce image. Then we update the app with an API key environment variable.  And finally, we add a custom domain to the app and open it in our browser.
+Below is a more complete example that sets up a SMTP mail server URL (for app emails), imports [Reaction registry](https://docs.reactioncommerce.com/reaction-docs/master/registry) settings and [Meteor settings](https://docs.meteor.com/api/core.html#Meteor-settings), and deploys the latest official Reaction Commerce image. Then we update the app with an API key environment variable.  And finally, we add a custom domain to the app and open it in our browser.
 
 ```sh
 # create the app

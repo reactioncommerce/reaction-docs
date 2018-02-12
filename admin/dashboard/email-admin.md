@@ -12,18 +12,18 @@ Once logged in as a shop admin, under **Actions**, click the <i class="font-icon
 
 ### Using a provider preset
 
-1.  Create an email provider account and get your SMTP credentials. In this example, we will use [Mailgun](https://www.mailgun.com/). See the [Mailgun documentation](https://documentation.mailgun.com/quickstart.html).
-2.  Go to the Reaction dashboard and click the **envelope icon** to open your email settings.
-3.  Under **Mail Provider**, click the **gear icon** to open the **Edit Settings** menu.
-4.  Click the **Provider Name** dropdown menu and search for your email provider. In this example, choose Mailgun.
-5.  Fill out your **User** and **Password** from your provider. Click **Save**.
+1. Create an email provider account and get your SMTP credentials. In this example, we will use [Mailgun](https://www.mailgun.com/). See the [Mailgun documentation](https://documentation.mailgun.com/quickstart.html).
+2. Go to the Reaction dashboard and click the **envelope icon** to open your email settings.
+3. Under **Mail Provider**, click the **gear icon** to open the **Edit Settings** menu.
+4. Click the **Provider Name** dropdown menu and search for your email provider. In this example, choose Mailgun.
+5. Fill out your **User** and **Password** from your provider. Click **Save**.
 
 ### Using custom settings
 
 If your preferred mail provider is not in the list, you can configure your own custom SMTP settings. Any SMTP server is supported, including self-hosted.
 
-1.  Select **Custom** from the services dropdown menu.
-2.  Fill out the **Host** and **Port** fields, along with the **User** and **Password** fields. Click **Save**.
+1. Select **Custom** from the services dropdown menu.
+2. Fill out the **Host** and **Port** fields, along with the **User** and **Password** fields. Click **Save**.
 
 ## Verifying your email settings
 

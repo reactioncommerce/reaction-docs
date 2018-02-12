@@ -10,10 +10,10 @@ Docker images are pushed when Reaction successfully builds and passes all tests 
 
 There are two Docker images available:
 
--   [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/) - the latest stable `master` image.
--   [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - tagged pre-release builds.
+- [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/) - the latest stable `master` image.
+- [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - tagged pre-release builds.
 
-All Reaction [configuration options](configuration.md) can be used with these deployment choices.
+All Reaction [configuration options](/developer/configuration.md) can be used with these deployment choices.
 
 Reaction can be deployed as a [standard Node application](https://guide.meteor.com/deployment.html) or as a [Docker container](https://www.docker.com/).
 
@@ -21,7 +21,7 @@ The Reaction core team recommends using Docker for deploying Reaction.
 
 We recommend you deploy with at least **2GB of memory** for Node and Reaction to run well.
 
--   [Docker Deployment Guide](deploying/docker.md)
+- [Docker Deployment Guide](deploying/docker.md)
 
 The database is included in development, and our containers also include a MongoDB instance inside the container, but it is only intended for development and testing. It’s not a production solution, and you should provide an external replica-set db instance with oplog access enabled for production deployment.
 
@@ -29,7 +29,7 @@ The database is included in development, and our containers also include a Mongo
 
 Meteor offers hosting on their Galaxy platform.
 
--   [Galaxy (MDG)](https://www.meteor.com/hosting)
+- [Galaxy (MDG)](https://www.meteor.com/hosting)
 
 ## Build System
 
@@ -41,27 +41,27 @@ You can [read the entire guide for the Meteor build system](https://guide.meteor
 
 The Meteor build system is the actual command line tool that you get when you install Meteor. You run it by typing the `reaction` command in your terminal, possibly followed by a set of arguments. Read the [docs about the command line tool](https://github.com/reactioncommerce/reaction-cli) or type `reaction help` in your terminal to learn about all of the commands.
 
-**What does it do?**
+## What does it do?
 
 The Meteor build tool is what compiles, runs, deploys, and publishes all of your Meteor apps and packages. It's Meteor's built-in solution to the problems also solved by tools like Grunt, Gulp, Webpack, Browserify, Nodemon, and many others, and uses many popular Node.js tools like Babel and UglifyJS internally to enable a seamless experience.
 
-**Reloads app on file change**
+## Reloads app on file change
 
 When you run `reaction`, the tool starts up, and you should leave it running continuously while developing your app. The tool automatically detects any relevant file changes and recompiles the necessary changes, restarting your client or server environment if needed.
 
-**Compiles files with build plugins**
+## Compiles files with build plugins
 
 The main function of the Meteor build tool is to run "build plugins". These plugins define different parts of your app build process. Meteor puts heavy emphasis on reducing or removing build configuration files, so you won't see any large build process config files like you would in Gulp or Webpack. The Meteor build process, and [file load order](structure.html#load-order), is configured almost entirely through adding and removing packages to your app and putting files in specially named directories. For example, to get all of the newest stable ES2015 JavaScript features in your app, you just add the [`ecmascript` package](http://docs.meteor.com/#/full/ecmascript). This package provides support for ES2015 modules, which gives you even more fine grained control over file load order using ES2015 `import` and `export`. As new Meteor releases add new features to this package you just get them for free.
 
-**Combines and minifies code**
+## Combines and minifies code
 
 Another important feature of the Meteor build tool is that it automatically concatenates and minifies all of your files in production mode. This is enabled by the [`standard-minifier-js`](https://atmospherejs.com/meteor/standard-minifiers-js) and [`standard-minifier-css`](https://atmospherejs.com/meteor/standard-minifiers-css) packages, which are in all Meteor apps by default. If you need different minification behavior, you can replace these packages. Below, we'll talk about how to [switch out a minifier to add PostCSS to your build process](#postcss).
 
-**Development vs. production**
+## Development vs. production
 
 Running an app in development is all about fast iteration time. All kinds of different parts of your app are handled differently and instrumented to enable better reloads and debugging. In production, the app is reduced to just the necessary code, and functions like a regular Node.js app. Therefore, you shouldn't run your app in production by running the `reaction` command. Instead, follow the directions in the [production deployment article](https://guide.meteor.com/deployment.html#custom-deployment).
 
-**Minification**
+## Minification
 
 The current best practice for deploying web production applications is to concatenate and minify all of your app assets. This lets you add all of the comments and whitespace you want to your source code, and split it into as many files as is necessary without worrying about app performance.
 

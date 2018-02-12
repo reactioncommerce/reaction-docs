@@ -41,7 +41,7 @@ class MyComponent extends Component {
 
 ### Don't
 
-Don't use arrow functions to bind callbacks in `render` fucntions. A new function reference will be created everytime the component is re-rendered.
+Don't use arrow functions to bind callbacks in `render` functions. A new function reference will be created everytime the component is re-rendered.
 
 ```js
 class MyComponent extends Component {
@@ -104,4 +104,4 @@ Try a demo on <a class="jsbin-embed" href="https://jsbin.com/merebe/edit?js,cons
 
 ## Resources
 
-- ESnext Class fields - https://github.com/tc39/proposal-class-fields
+- ESnext Class fields - <https://github.com/tc39/proposal-class-fields>

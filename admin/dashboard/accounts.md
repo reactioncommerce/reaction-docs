@@ -12,7 +12,6 @@ To add a new member to your store, click on the "Add User" icon, located on the 
 
 Enter the user's name and email address in the fields below, and an invitation will be sent via email.
 
-
 ## Add an User to a Permission Group
 
 ![](/assets/admin-accounts-dashboard-add-user.png "Reaction Commerce Dashboard")
@@ -35,13 +34,12 @@ This is a special group for the "owner" of a store. This group has all the permi
 
 Store owners can:
 
-* Move a user from one group to the other, except for the owner group.
-* Assign another user the owner of a store. This will move the current owner as to the user's group, because there is only one store owner.
+- Move a user from one group to the other, except for the owner group.
+- Assign another user the owner of a store. This will move the current owner as to the user's group, because there is only one store owner.
 
 #### 2. Shop Manager group
 
 This group possess almost all the permissions of an owner. A user in the store manager group can act on behalf of the owner in most cases.
-
 
 ## Managing group permissions
 

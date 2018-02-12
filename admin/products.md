@@ -17,7 +17,7 @@ To create a product, login to your dashboard and follow these steps:
 4. Editing social media sharing and tags from the sidebar: If your shop is connected to social media sharing, customize your product's social sharing messaging by clicking on the <i class="font-icon fa fa-pencil"></i> icon on the right of the product pricing.
 
 5. Add product tags by clicking on the plus <i class="font-icon fa fa-plus"></i>, located under the **Tags** card.
-![](/assets/admin-product-details-tag.png "Reaction's Product Page")
+    ![](/assets/admin-product-details-tag.png "Reaction's Product Page")
 
 6. You can change the layout template, product title permalink, subtitle, vendor, description and origin country from the sidebar's top **Product Settings** option.
 
@@ -30,6 +30,7 @@ Product Variants allow you to create different versions of the same base product
 Every product comes filled with one default, required variant. To create more:
 1. Click the <i class="font-icon fa fa-pencil"></i> icon, located under the **Options** card.
 2. Fill out the following fields in the **Edit Variant** panel:
+
 - **Label** - Required. A description of your variant, which appears in the under the **Options** label on the Product Detail Page.
 - **Origin country** - Optional. A drop-down menu of countries.
 - **Weight** - Optional. The weight of your item, which will help determine shipping costs.

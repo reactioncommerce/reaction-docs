@@ -30,13 +30,14 @@ const MyReactComponent = () => {
 
 export default MyReactComponent;
 ```
-
+<!--lint disable-->
 | Property              | Type          | Description               |
 | --------------------- | ------------- | ------------------------- |
 | [alerts](#propalerts) | Array[Object] | An Array of alert objects |
-
+<!--lint enable-->
 ## Prop: alerts
 
+```js
     const alertArray = [
       {
         message: "Something went wrong",
@@ -46,6 +47,7 @@ export default MyReactComponent;
         }
       }
     ];
+```
 
 ### Example
 

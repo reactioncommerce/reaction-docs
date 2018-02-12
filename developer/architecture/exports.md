@@ -66,12 +66,12 @@ import { Reaction } from "/server/api";
 
 The includes additional helpers:
 
--   Reaction
--   Router
--   GeoCoder
--   Hooks
--   Logger
--   MethodHooks
+- Reaction
+- Router
+- GeoCoder
+- Hooks
+- Logger
+- MethodHooks
 
 A similar export is available from `client/api` for client Reaction functions.
 

@@ -4,11 +4,11 @@ Whenever a Pull Request or merge request is made to the Reaction repo, there are
 
 Automated tests include:
 
--   package dependency checks for outdated, insecure packages
--   code style and lint rules adherance
--   reaction tests
--   docker builds on release branches
--   contributor agreements
+- package dependency checks for outdated, insecure packages
+- code style and lint rules adherance
+- reaction tests
+- docker builds on release branches
+- contributor agreements
 
 ## Builds
 
@@ -16,5 +16,5 @@ Docker images are pushed when Reaction successfully builds and passes all tests 
 
 There are two Docker images available:
 
--   [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/) - the latest stable `master` image.
--   [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - tagged pre-release builds.
+- [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/) - the latest stable `master` image.
+- [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - tagged pre-release builds.
