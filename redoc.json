@@ -16,15 +16,9 @@
 		}, {
 			"class": "guide-nav-item",
 			"alias": "getting-started-developing-with-reaction",
-			"label": "Developer",
+			"label": "Getting started",
 			"repo": "reaction-docs",
 			"docPath": "developer/getting-started.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "community-resources",
-			"label": "Community resources",
-			"repo": "reaction-docs",
-			"docPath": "developer/community-resources.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "installation",
@@ -51,40 +45,16 @@
 			"docPath": "developer/installation/installation-linux.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "reaction-cli",
+			"label": "Reaction CLI",
+			"repo": "reaction-docs",
+			"docPath": "developer/installation/reaction-cli.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "configuration",
 			"label": "Configuration",
 			"repo": "reaction-docs",
 			"docPath": "developer/configuration.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "email-api",
-			"label": "Email",
-			"repo": "reaction-docs",
-			"docPath": "developer/core/email.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "styleguide",
-			"label": "Code Style Guide",
-			"repo": "reaction-docs",
-			"docPath": "developer/styleguide.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "git-style-guide",
-			"label": "Git Style Guide",
-			"repo": "reaction-docs",
-			"docPath": "developer/git-style-guide.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "react-best-practices",
-			"label": "React Best Practices",
-			"repo": "reaction-docs",
-			"docPath": "developer/react-best-practices.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "contributing-to-reaction",
-			"label": "Contributing Guide",
-			"repo": "reaction-docs",
-			"docPath": "developer/contributing.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "developer-faq",
@@ -92,93 +62,93 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/developer-faqs.md"
 		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "community-channels",
-			"label": "Community",
-			"repo": "reaction-docs",
-			"docPath": "developer/community.md"
-		}, {
 			"class": "guide-nav-item",
-			"alias": "tutorial",
-			"label": "Customization Guide",
-			"repo": "reaction-docs",
-			"docPath": "developer/tutorial/introduction.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "creating-a-theme",
-			"label": "Creating a Theme",
-			"repo": "reaction-docs",
-			"docPath": "developer/tutorial/creating-a-theme.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "plugin-intro-1",
-			"label": "Introduction",
+			"label": "Plugin Tutorial",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-intro-1.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-creating-2",
-			"label": "Creating your plugin",
+			"label": "Part 1: Creating your plugin",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-creating-2.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-layouts-3",
-			"label": "Layouts",
+			"label": "Part 2: Layouts",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-layouts-3.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-customizing-templates-4",
-			"label": "Customizing Templates",
+			"label": "Part 3: Customizing Templates",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-customizing-templates-4.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-fixtures-5",
-			"label": "Fixtures",
+			"label": "Part 4: Fixtures",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-fixtures-5.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-routes-6",
-			"label": "Routes",
+			"label": "Part 5: Routes",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-routes-6.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-workflow-7",
-			"label": "Workflow",
+			"label": "Part 6: Workflow",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-workflow-7.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-schemas-8",
-			"label": "Schemas",
+			"label": "Part 7: Schemas",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-schemas-8.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-i18n-9",
-			"label": "i18n",
+			"label": "Part 8: i18n",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-i18n-9.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "plugin-complete-10",
-			"label": "Completing your plugin",
+			"label": "Part 9: Completing your plugin",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/plugin-complete-10.md"
 		}, {
+			"class": "guide-nav-item",
+			"alias": "tutorial",
+			"label": "Customization Guides",
+			"repo": "reaction-docs",
+			"docPath": "developer/tutorial/introduction.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "creating-a-theme",
+			"label": "Theme: Creating a Theme",
+			"repo": "reaction-docs",
+			"docPath": "developer/tutorial/creating-a-theme.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "appearance",
+			"label": "Themes: Right-to-left",
+			"repo": "reaction-docs",
+			"docPath": "developer/themes/themes.md"
+		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "creating-a-payment-provider",
-			"label": "Creating a Payment Provider",
+			"label": "Payments: Creating a Payment Provider",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/creating-a-payment-provider-plugin.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "extending-product-schema-location-map",
-			"label": "Extending the product schema for Google map",
+			"label": "Tutorial: Extending the product schema for Google map",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/extending-product-schema-location-map.md"
 		}, {
@@ -199,18 +169,18 @@
 			"label": "Tutorial: Debugging server-side code",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/tutorial-debugging-server-code.md"
-    },{
-			"class": "guide-sub-nav-item",
-			"alias": "appearance",
-			"label": "Themes: Right-to-left",
-			"repo": "reaction-docs",
-			"docPath": "developer/themes/themes.md"
-		}, {
+    }, {
 			"class": "guide-sub-nav-item",
 			"alias": "register-template",
-			"label": "Create Custom Templates",
+			"label": "Email: Create Custom E-mail Templates",
 			"repo": "reaction-docs",
 			"docPath": "developer/themes/register-template.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "register-email",
+			"label": "Email: Customize Email Templates",
+			"repo": "reaction-docs",
+			"docPath": "developer/themes/register-email.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "register-component",
@@ -219,23 +189,70 @@
 			"docPath": "developer/themes/register-component.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "register-email",
-			"label": "Customize Email Templates",
-			"repo": "reaction-docs",
-			"docPath": "developer/themes/register-email.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "fixtures-images",
-			"label": "Fixtures: Upload images",
+			"label": "Tutorial: Upload images as data fixtures",
 			"repo": "reaction-docs",
 			"docPath": "developer/data-fixtures-insert-product-images.md"
-		},
-		{
+		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "template-helpers",
 			"label": "Helpers",
 			"repo": "reaction-docs",
 			"docPath": "developer/themes/helpers.md"
+		}, {
+			"class": "guide-nav-item",
+			"alias": "contributing-to-reaction",
+			"label": "Contributing Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/contributing.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "styleguide",
+			"label": "Code Style Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/styleguide.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "git-style-guide",
+			"label": "Git Style Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/git-style-guide.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "react-best-practices",
+			"label": "React Best Practices",
+			"repo": "reaction-docs",
+			"docPath": "developer/react-best-practices.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "jsdoc-style-guide",
+			"label": "JSDoc Style Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/jsdoc-style-guide.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "release-process",
+			"label": "Release Guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/release-process.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "reporting-vulnerabilities",
+			"label": "Report Vulnerabilities",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/vulnerabilities.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "community-channels",
+			"label": "Community",
+			"repo": "reaction-docs",
+			"docPath": "developer/community.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "community-resources",
+			"label": "Community resources",
+			"repo": "reaction-docs",
+			"docPath": "developer/community-resources.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "architecture",
@@ -267,6 +284,12 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/architecture/collections.md"
 		}, {
+      "class": "guide-sub-nav-item",
+			"alias": "database-migrations",
+			"label": "Migrations",
+			"repo": "reaction-docs",
+			"docPath": "developer/architecture/migrations.md"
+    }, {
 			"class": "guide-sub-nav-item",
 			"alias": "image-handling",
 			"label": "Images",
@@ -362,6 +385,12 @@
 			"label": "Analytics",
 			"repo": "reaction-docs",
 			"docPath": "developer/core/analytics.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "email-api",
+			"label": "Email",
+			"repo": "reaction-docs",
+			"docPath": "developer/core/email.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "i18n",
@@ -494,9 +523,6 @@
 		}, {
 			"label": "Click To Copy",
 			"docPath": "developer/components/clickToCopy.md"
-		}, {
-			"label": "CSV Download",
-			"docPath": "developer/components/csvDownload.md"
 		}, {
 			"label": "Divider",
 			"docPath": "developer/components/divider.md"
@@ -671,18 +697,6 @@
 			"label": "CI Builds",
 			"repo": "reaction-docs",
 			"docPath": "developer/testing/ci.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "release-process",
-			"label": "Release Process",
-			"repo": "reaction-docs",
-			"docPath": "developer/testing/release-process.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "reporting-vulnerabilities",
-			"label": "Report Vulnerabilities",
-			"repo": "reaction-docs",
-			"docPath": "developer/testing/vulnerabilities.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "deploying",

@@ -2,7 +2,7 @@
 
 Package authors should choose a support path for their packages, and use the `priority` property in the **Reaction package registry** to indicate the kind of support path a package uses.
 
-**Core**
+## Core
 
 Core packages are developed, and fully supported by the Reaction Core team.
 
@@ -10,7 +10,7 @@ Core packages are developed, and fully supported by the Reaction Core team.
  priority: 1 // core
 ```
 
-**Foundation**
+## Foundation
 
 Generally this is a repository that's been transferred to the reactioncommerce organization.
 
@@ -22,16 +22,18 @@ Any documentation blocks should contain your organization and author information
 
 In the package registry, packages of this type should be configured priority:2.
 
-**Community**
+## Community
 
 If a package needs to distributed with the base Reaction app installation, we can create a reactioncommerce org **fork** of your package repo, and maintain a supported fork that we publish as a `reactioncommerce:*` package. These packages may be included in the default `.meteor/packages` file for Reaction.  Packages of this type should be configured as `Foundation` ,  `priority: 2` in the package registry.  Ideally these packages have CI and some testing coverage.
 
-**Local** All other package types should be `priority:4`.
+## Local
+
+All other package types should be `priority:4`.
 
 You want to manage all org, control and package publishing. You'll be responsible for compatibility updates and ensure that corresponding _Atmosphere and NPM_ package updates are published for every major Reaction release to maintain compatibility.  Packages of this type should be configured as `Public` ,  `priority: 3` in the package registry.
 
 We'll do limited testing on these packages, so they will only be made available as optional packages that have to be manually added.
 
-**Licensing**
+## Licensing
 
 The Reaction application is GPL v3 licensed. Package licensing may be GPL v3 compatible licenses such as GPL v3, MIT, APACHE v2 if you want to distribute with the Reaction application.

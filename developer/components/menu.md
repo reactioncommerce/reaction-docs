@@ -2,13 +2,13 @@
 
 A selectable menu component with supplied menu items.
 
-# Import
+## Import
 
 ```javascript
 import { Menu } from "/imports/plugins/core/ui/client/components";
 ```
 
-# Usage Example
+## Usage Example
 
 ```javascript
 import React, { Component } from "react";
@@ -53,7 +53,7 @@ class MyReactComponent extends Component {
 export default MyReactComponent;
 ```
 
-# Menu Props
+## Menu Props
 
 | Property   | Type                    | Description                                                          |
 | ---------- | ----------------------- | -------------------------------------------------------------------- |
@@ -64,7 +64,7 @@ export default MyReactComponent;
 | style      | Object                  | Custom style for menu                                                |
 | value      | String, Boolean, Number | A `String`, `Boolean`, or `Number` value                             |
 
-# Menu Item Props
+## Menu Item Props
 
 | Property             | Type           | Description                                                                                                                                |
 | -------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |

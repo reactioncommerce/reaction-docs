@@ -19,14 +19,15 @@ The process is:
 2. Commit incremented `package.json` version
 3. run `meteor npm install` to bump `package-lock.json` version
 4. Should ~follow [SemVer](http://semver.org/) guidelines:
-  - MAJOR version when you make incompatible API changes,
-  - MINOR version when you add functionality in a backwards-compatible manner, and
-  - PATCH version when you make backwards-compatible bug fixes.
+
+- MAJOR version when you make incompatible API changes,
+- MINOR version when you add functionality in a backwards-compatible manner, and
+- PATCH version when you make backwards-compatible bug fixes.
 
 ## Accept pull requests and i18n
 
 - Merge approved patches/fixes/features pull requests for this release into the `release-x.x.x` branch.
-- Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch. LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of *i18n imports* should also be performed before merging the i18n translation PR into the release branch.
+- Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch. LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of _i18n imports_ should also be performed before merging the i18n translation PR into the release branch.
 - run `meteor npm install` as well as `reaction run` to make sure that all `package.json` and `package-lock.json` files get updated.
 - Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `master`.
 
@@ -38,10 +39,12 @@ The process is:
 ```sh
 git log <firstCommitHash>..<lastCommitHash> | pcregrep -A 2 -M 'Merge pull request' | perl -pe 's/Merge.*(#[0-9]{4}).*/$1/' | perl -pe 's/^(\-|#| |(\[[a-zA-Z]+\])+|\n)*//g' | perl -0777pe 's/([0-9]{4})\n(.+)\n/ - $2 (#$1)\n/g'
 ```
+
 - Write extended notes about anything that is a breaking change or potentially breaking change.
 - Write extended notes about anything that is interesting, adds exciting new functionality, or improves the app significantly in some way
 
 Notes:
+
 - You'll need `pcregrep` on your system which you can install on osx with brew `brew install pcre`
 - Replace `<firstCommitHash>` and `<lastCommitHash>` with the first and last commit or tag of the release respectively. You can use prev tag and `HEAD` for this if you have the release branch checked out. e.g. `git log v1.5.5..HEAD | ...`
 - Copy release notes to PR

@@ -6,19 +6,19 @@ Reaction has support for discount codes and discount rates.  A "code" is a code 
 
 Discount codes can be enabled in the **Payments** <i class="rui font-icon fa fa-credit-card"></i> settings in the Reaction dashboard.
 
--   **Discount Code**, case-sensitive string for a code
+- **Discount Code**, case-sensitive string for a code
 
--   **Discount**, a discount formula value (string or number)
+- **Discount**, a discount formula value (string or number)
 
--   **Account Limit**, per user limit for this code
+- **Account Limit**, per user limit for this code
 
--   **Total Limit**, per code usage limit
+- **Total Limit**, per code usage limit
 
--   **Calculation Method**
-    -   credit - a credit is applied to the order subtotal up to the formula value
-    -   discount - the formula value applied as a percentage discount off order subtotal
-    -   sale - overrides item pricing with a fixed sale price
-    -   shipping - the formula value should be a string that matches the name of a shipping method. The calculated shipping rate will be applied as a discount.
+- **Calculation Method**
+  - credit - a credit is applied to the order subtotal up to the formula value
+  - discount - the formula value applied as a percentage discount off order subtotal
+  - sale - overrides item pricing with a fixed sale price
+  - shipping - the formula value should be a string that matches the name of a shipping method. The calculated shipping rate will be applied as a discount.
 
 ![](/assets/admin-dashboard-payments-discounts.png "Payment Discounts")
 

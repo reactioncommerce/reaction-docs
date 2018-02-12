@@ -8,7 +8,7 @@ In general layouts are a way of applying a structure to a site beyond what you w
 
 ### How Reaction uses layouts
 
-Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template (/imports/plugins/core/layout/client/components/coreLayout.js) is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our customised &lt;main&gt; section we need to.
+Reaction uses one primary layout as the master or default called `coreLayout`. This layout is just another React component. The code in this template (/imports/plugins/core/layout/client/components/coreLayout.js) is pretty minimal and you can see contains very little. So before jumping in to replace this you may want to ask yourself if this is what you actually need to do. But because we are changing the global structure of our site to accommodate our customised &lt;main> section we need to.
 
 **[/client/templates/layouts/core.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/templates/layouts/core.js)**
 
@@ -121,6 +121,7 @@ Session.set("DEFAULT_LAYOUT", "coreLayoutBeesknees");
 In order for this file to take affect, we need to also import it. So we add it to our `index.js` in your `client` directory.
 
 **[/client/index.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/client/index.js)**
+
 ```js
 import "./defaults";
 ```

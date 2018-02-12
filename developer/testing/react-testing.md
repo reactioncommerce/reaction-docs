@@ -4,8 +4,8 @@
 
 Reaction has testing set up for react components. Frameworks in place for these tests are:
 
--   [jest](https://facebook.github.io/jest/)
--   [enzyme](http://airbnb.io/enzyme/index.html#enzyme)
+- [jest](https://facebook.github.io/jest/)
+- [enzyme](http://airbnb.io/enzyme/index.html#enzyme)
 
 The purpose of this section is to showcase how to write a few tests for components using the frameworks mentioned above.
 
@@ -36,11 +36,11 @@ Jest utilizes the **Jasmine assertion library** therefore the syntax of the test
 For every component we test **presentaion** and expected **behaviour**.
 Assertions made include:
 
--   Given a set of inputs (states OR props) assert what a component should output (render).
+- Given a set of inputs (states OR props) assert what a component should output (render).
 
--   Given a user action, assert how a component behaves:
-    -   It might make a state update.
-    -   Call a prop function passed to it by a parent.
+- Given a user action, assert how a component behaves:
+  - It might make a state update.
+  - Call a prop function passed to it by a parent.
 
 ### Enzyme
 
@@ -48,8 +48,8 @@ Assertions made include:
 
 Enzyme has the capability to shallow render our components. When a component is shallow rendered it is rendered only one level deep. Also it does not render to the actual DOM, it maintains a virtual representation of the DOM. So if the render function of your component contains children, those children won't actually be rendered. Instead the virtual DOM representation will contain references to unrendered child components.
 
--   Allows us to test components in isolation, i.e. test parent components without worrying about children.
--   Its fast because there isn't much interaction with the actual DOM.
+- Allows us to test components in isolation, i.e. test parent components without worrying about children.
+- Its fast because there isn't much interaction with the actual DOM.
 
 Getting started with enzyme:
 

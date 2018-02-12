@@ -4,7 +4,7 @@
 
 ## Packages
 
-**Permissions are grouped by `shopId`.**
+### Permissions are grouped by `shopId`
 
 Package specific roles can be defined in `register.js`, by adding custom permissions to registry entries with:
 
@@ -202,6 +202,7 @@ Reaction currently ships with the four groups: Guest, Customer, Shop Manager and
 Guest group is by default for anonymous (un-registered) users while Customer group is by default for registered users (users who created accounts).
 
 If you installed a package that adds new permissions, you need to run:
+
 ```js
 Reaction.addRolesToGroups({
   allShops: true,
@@ -209,20 +210,22 @@ Reaction.addRolesToGroups({
   roles: ["new-permission"]
 });
 ```
+
 This will add the new permissions to the group and update all existing users belonging to that group.
 
-#### Updating to 1.5.0
+### Updating to 1.5.0
 
-For updating to 1.5.0, note these changes: 
+For updating to 1.5.0, note these changes:
 1. The previous `shop.defaultVisitorRoles` are the roles now defined in the `guest` group.
 2. The previous `shop.defaultCustomerRoles` are the roles now defined in the default `customer` group.
 3. The default roles set previously on the Shop schema are now present on server export of Reaction, `Reaction.defaultVisitorRoles`.
 
 So, if you had a previous reference to `shop.defaultVisitorRoles`, use the group object, `Groups.find({slug: "guest", shopId}).permissions`.
 
-
 #### Custom Default Groups
+
 If you need to have more default groups on initializing your app, you can call the `createGroups()` method passing in the shopId and a roles object containining key-value pairs representing the group slug (key) and array of roles for the group (value). See the [documentation page](http://api.docs.reactioncommerce.com/global.html#createGroups) for more details. This can be done, for example, in an afterCoreInit function e.g
+
 ```js
 Hooks.Events.add("afterCoreInit", () => {
   Reaction.createGroups({

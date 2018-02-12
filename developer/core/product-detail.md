@@ -6,7 +6,7 @@ The product detail page is made up of `React` components and a `json` layout sto
 
 Default layouts for the product detail page are registered in in the `product-detail-simple` package, located `imports/plugins/included/produce-detail-simple`.
 
-**An Example of the simple layout configuration.**
+### An Example of the simple layout configuration
 
 `imports/plugins/included/produce-detail-simple/lib/layout/simple.js`
 
@@ -45,7 +45,7 @@ export default function blocks() {
 }
 ```
 
-**An Example of the simple layout being registered as a template.**
+### An Example of the simple layout being registered as a template
 
 `imports/plugins/included/produce-detail-simple/server/index.js`
 
@@ -185,7 +185,7 @@ Reaction.registerTemplate({
 
 With all of this together we can register our template for use on the PDP page.
 
-**Client**
+### Client
 
 In a file on the client, create your React component, and register it.
 
@@ -206,7 +206,7 @@ class MyPriceComponent extends Component {
 registerComponent("MyPriceComponent", MyPriceComponent);
 ```
 
-**Server**
+### Server
 
 In a file on the server, create your template layout, and register it.
 
@@ -268,7 +268,7 @@ Reaction.registerTemplate({
 ## Data Fetching & Container Components
 
 Every component receives a set of props automatically.
-
+<!--lint disable-->
 | Property           | Type         | Description                                         |
 | ------------------ | ------------ | --------------------------------------------------- |
 | variants           | String       | Top level variants                                  |
@@ -280,3 +280,4 @@ Every component receives a set of props automatically.
 | editable           | Boolean      | Boolean true / false if the page should be editable |
 | viewAs             | String       | Viewing this page as "customer" / "administrator"   |
 | hasAdminPermission | Boolean      | If current user has admin permissions               |
+<!--lint enable-->

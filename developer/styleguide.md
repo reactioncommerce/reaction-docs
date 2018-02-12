@@ -15,15 +15,29 @@ As a community, Reaction follows guidelines for code style and naming convention
 Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) and [Meteor Code Style](https://guide.meteor.com/code-style.html), [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), with a few custom Reaction-specific rules:
 
 - Always double-quote strings
+
 - Give methods space
+
 - Add spaces around brackets
+
 - 120 character line-length
-- `import`s should be listed in this order:
-  1. React npm packages (`React`, `prop-types`)
-  2. Other npm packages
-  3. Meteor core packages
-  4. Meteor (Atmosphere) packages
-  5. Local app files
+
+- `import`s should be listed in this order, as enforced by [ESLint](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md):
+  1. Built-in: Built-in Node modules
+
+  2. External: External packages, ordered by:
+     - React packages
+     - External npm modules
+     - Meteor Core packages
+     - Meteor Atmosphere packages
+
+  3. Internal: Internal Reaction modules
+
+  4. Parent: Modules from a parent directory
+
+  5. Sibling: Modules from the same or sibling directories
+
+  6. Index: Index of the current directory
 
 Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
 
@@ -116,29 +130,35 @@ settingsContainer.js
 ### Variables
 
 Variable names should be:
+
 - Meaningful. Avoid single-letter variables.
 - Use `error`, instead of `e` or `err`
 - Variables that contain a boolean value should use a `isThisTrue` style.
 - Variables that return arrays should be plural.
 
 Publication names should:
+
 - Use TitleCase
 
 Working with variables:
+
 - Use `const` except when a variable is being reassigned.
 - Use string template notation, `${thisVariable} is true` over string concatenation
 
 ### Methods
 
 Naming methods:
+
 - Methods names should use a verb/noun style when possible, e.g. `checkConfiguration` or `addToCart`.
 - When naming multiple methods acting on the same resource should follow this style, e.g. `cart/items/add`, `cart/items/remove`
 - Methods that return a single value should be singular.
 - Methods whose main purpose is to return a value should use the `get` prefix, e.g. `getShop`.
 
 Working with methods:
+
 - Avoid ternary operators and one-line `if` statements (except in React componenets)
 - Use parenthesis around all method arguments:
+
 ```js
 // do - use () around the method arguments
 cartItems.find((item) => item.status === picked)
@@ -146,7 +166,9 @@ cartItems.find((item) => item.status === picked)
 // don't
 cartItems.find(item => item.status === picked)
 ```
+
 - When specifying a callback, always use the parenthesis to indicate the argument being accepted over the bare arrow-function form. This way, it's clear it's not another argument to the original function:
+
 ```js
 // do - explicitly use a () in the callback function
 thisMethodTakesACallback(arg1, arg2, (result) => {
@@ -158,7 +180,9 @@ thisMethodTakesACallback(arg1, arg2, result => {
   doStuff
 });
 ```
+
 - When breaking arrow functions into multiple lines, use curly brackets and a `return`:
+
 ```js
 // do - explicitly use a return
 cartItems.find((item) => {
@@ -197,11 +221,14 @@ Use native JavaScript over libraries like lodash and Underscore whenever there i
 - Replace `_.first`, `_.rest` and `_.restParam`, with [destructuring syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - Replace `_.uniq`, with using a `Set`: `[...new Set(cartItems.map((item) => item.product._id))]`
 - Replace `pluck` from Underscore with `.map`:
+
 ```js
 const people = [{name: "George"}, {name: "Katherine"}, {name: "Kip"}]
 _.pluck(people, name) => people.map((person) => person.name)
 ```
+
 - Replace `_.each`, `_.forEach`, with `Array.prototype.forEach` or loop over an object with:
+
 ```js
 sum = 0;
 lastKey = undefined;
@@ -215,6 +242,7 @@ for (const [key, value] of Object.entries(foo)) {
 
 - Use `isRequired` for validating PropTypes
 - Use the return shorthand with arrow functions in React components:
+
 ```js
 // do
 
@@ -236,7 +264,9 @@ const MyComponent = ({ title, content }) => {
   );
 }
 ```
+
 - Use the return shorthand with arrow function when iterating over arrays in a component:
+
 ```js
     const MyThings = ({ things }) => (
       <ul>
@@ -262,6 +292,7 @@ const MyComponent = ({ title, content }) => {
 When writing user interface copy for Reaction, use sentence casing. This includes copy for titles, buttons, alerts, form inputs, form placeholders and copy elsewhere used throughout the application.
 
 Copy should be:
+
 - Have the first letter capitalized.
 - No other words should be capitalized.
 - Example: `Your orders` instead of `Your Orders`
