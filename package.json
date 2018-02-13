@@ -14,7 +14,7 @@
     "Reaction"
   ],
   "author": "hello@reactioncommerce.com",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "scripts": {
     "lint": "remark . --frail",
     "lint-fix": "remark . -o"
