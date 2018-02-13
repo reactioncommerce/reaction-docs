@@ -67,30 +67,17 @@ We compiled a curated list of community projects that can be found in the wild. 
 
 ## Deployment
 
-### What is the best place to host?
+### Where should I deploy/host my Reaction Commerce shop or marketplace?
 
-Here are some options for deployment. What the best options is depends on your budget and your expected level of traffic
+You can deploy Reaction Commerce to anywhere you could deploy a Docker container or a Node app. Because of the complexities involved, we currently can’t offer any support for getting these deployed.
 
-1. [Reaction Platform](https://reactioncommerce.com/hosting)
+What the best options is depends on your budget and your expected level of traffic. Below are some options for deployment:
 
-The [Reaction Platform](https://reactioncommerce.com/hosting) comes with virtual private clusters, containerized cloud hosting, multiple staging environments, SSL and domains, direct support channels, and one-step deployment.
-
-Reaction Commerce’s Platform enables clients to:
-
-- Innovate faster by leveraging modern container-based technology that provides continuous integration, delivery, and deployment.  
-- More effectively and efficiently manage your site with seamless cutovers, dynamic scaling, and multiple “everything”
-- Have greater peace of mind from our high availability, virtual clusters, and 24x7x365 support.
-
-You can find out more and request a quote [here](https://reactioncommerce.com/#get-a-demo) or you can contact <mailto:sales@reactioncommerce.com>.
-
-2. Galaxy
-
-The Meteor Development Group offers a hosting service that is focused on hosting Meteor apps with monitoring, etc. You can find more information [here](https://www.meteor.com/hosting).
-
-### What about services like Heroku, or running on EC2?
-
-You can deploy Reaction Commerce to anywhere you could deploy a Docker container or a Node app. Because of the complexities involved
-we currently can't offer any support for getting these deployed.
+- Galaxy: The Meteor Development Group offers a hosting service, Galaxy, that is focused on hosting Meteor apps with monitoring, etc. You can find more information [here](https://www.meteor.com/hosting).
+- Heroku
+- Amazon Web Services (AWS)
+- Azure
+- Digital Ocean
 
 ## Admin
 
