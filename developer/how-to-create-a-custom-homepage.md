@@ -1,6 +1,5 @@
 # How to create a custom home page
 
-
 You can change the default layout values in [`/client/config/defaults.js`]( https://github.com/reactioncommerce/reaction/blob/f40ff536c139d70da02ca10ae12655247452d658/client/config/defaults.js#L1-L74) by overriding them in a new file.
 
 1) Create a new custom plugin
@@ -11,7 +10,6 @@ You can change the default layout values in [`/client/config/defaults.js`]( http
    Success!
    New plugin created at: /imports/plugins/custom/custom-home
 ```
-
 
 2) Create a file called `default.js` in the `/imports/plugins/custom/custom-home/client/` folder already created for you and put this into it:
 
@@ -42,8 +40,6 @@ class MyStoreFront extends getRawComponent("Products") {
 registerComponent("MyStoreFront", MyStoreFront, getHOCs("Products"));
 ```
 
-
-
 4) Import new files from index.js
 **/imports/plugins/custom/custom-home/index.js**
 ```js
@@ -51,11 +47,9 @@ registerComponent("MyStoreFront", MyStoreFront, getHOCs("Products"));
   import "./MyStoreFront";
 ```
 
-
 5) Customize the render() method  
-Start Reaction and navigate to http://localhost:3000, which does now render
+Start Reaction and navigate to <http://localhost:3000>, which does now render
 `MyStoreFront` component.
-
 
 NOTE: You also could omit the custom default.js entirely if you'd write
 
@@ -70,4 +64,4 @@ registerComponent("MyStoreFront", MyStoreFront, getHOCs("Products"));
 ```
 
 But this would also change other routes that make usage of the `products`
-component, like _http://localhost:3000/tag/:slug_.
+component, like <http://localhost:3000/tag/:slug>.
