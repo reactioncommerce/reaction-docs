@@ -142,8 +142,9 @@ import PropTypes from "prop-types";
 ### Utils
 
 ```javascript
-import moment from "moment-timezone";
+import { withMoment } from "/imports/plugins/core/components/lib";
 ```
+See [Components API](https://docs.reactioncommerce.com/reaction-docs/master/components-api#withMoment) docs for usage examples
 
 ## Meteor
 
