@@ -13,15 +13,13 @@ For Ubuntu/Debian
 ```sh
 apt-get update
 
-apt-get install -y --no-install-recommends build-essential bzip2 curl ca-certificates git graphicsmagick python
+apt-get install -y --no-install-recommends build-essential bzip2 curl ca-certificates git python
 ```
 
 For CentOS/RHEL
 
 ```sh
 yum groupinstall "Development Tools"
-# add "Extra Packages for Enterprise Linux" repository for GraphicsMagick
-yum install epel-release  GraphicsMagick
 ```
 
 ### Install Meteor
