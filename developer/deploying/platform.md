@@ -1,8 +1,8 @@
 # Reaction Platform
 
-The following documentation is for the [Reaction Platform](getrxn.io/reaction-platform).
+The following documentation is for the Reaction Platform.
 
-The `reaction-cli` incorporates functionality for any team to deploy Reaction Commerce to multiple environments. [Visit reactioncommerce.com](http://getrxn.io/reaction-platform) to get a demo.
+The `reaction-cli` incorporates functionality for any team to deploy Reaction Commerce to multiple environments.
 
 1. Get invite token from welcome email or contract
 2. Register local environment
