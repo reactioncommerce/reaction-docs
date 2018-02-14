@@ -56,14 +56,6 @@ echo "ulimit -n 65536 65536" >> .bashrc
 source .bashrc
 ```
 
-### Install ImageMagick (Optional but recommended)
-
-ImageMagick is used for image resizing on upload. So generally if you are going to use images you need it.
-
-```sh
-brew install imagemagick
-```
-
 ## Install Reaction
 
 ### Install the Reaction command-line interface (CLI)
