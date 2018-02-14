@@ -180,6 +180,7 @@ Below is the full API for the Reaction components system. Each of these items ca
 - [`withCurrentAccount`](#withcurrentaccount)
 - [`withIsAdmin`](#withisadmin)
 - [`withIsOwner`](#withisowner)
+- [`withMoment`](#withmoment)
 - [`withPermissions`](#withPermissions)
 - [`composeWithTracker`](#composewithtracker)
 
@@ -480,6 +481,29 @@ const MyComponent = ({ isOwner }) => (
 registerComponent("MyComponent", MyComponent, withIsOwner)
 
 export default withIsOwner(MyComponent);
+```
+
+### withMoment
+
+`withMoment` dynamically loads the `moment` library when needed, instead of on initial load. Wrapping your export in `withMoment` sends `moment` into the component as a `prop`.
+
+```js
+import { registerComponent, withMoment } from "@reactioncommerce/reaction-components";
+
+class MyCustomComponent extends Component {
+  render() {
+    { moment } = this.props;
+    return (
+      <div>
+        {moment && moment(data.dateToFormat).fromNow()} | {dateFormat(data.dateToFormat, "MM/D/YYYY")}
+      </div>
+    )
+  }
+}
+
+registerComponent("MyCustomComponent", MyCustomComponent, withMoment)
+
+export default withMoment(MyCustomComponent);
 ```
 
 ### withPermissions
