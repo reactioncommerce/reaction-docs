@@ -116,6 +116,9 @@ Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/ho
 
 ## Extending Reaction
 
+### How to do I create a custom home page?
+The easiest way to render a customized landing page is to set the INDEX_OPTIONS session variable and point it to a customized template. There's a more in-depth explanation [here](/developer/how-to-create-a-custom-home-page.md). 
+
 ### How can I add add a static page?
 
 Add a single page, and more child pages, by adding a route and a template. This will require knowledge of HTML, JavaScript and Git or web development. This is covered in depth in this section of the [Customization Guide](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6).
