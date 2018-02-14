@@ -492,7 +492,7 @@ import { registerComponent, withMoment } from "@reactioncommerce/reaction-compon
 
 class MyCustomComponent extends Component {
   render() {
-    { moment } = this.props;
+    const { moment } = this.props;
     return (
       <div>
         {moment && moment(data.dateToFormat).fromNow()} | {dateFormat(data.dateToFormat, "MM/D/YYYY")}
