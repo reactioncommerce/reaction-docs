@@ -15,8 +15,10 @@ There are three ways to go about contributing to Reaction: file a bug, work on a
 ### File a bug
 
 1. Before you file a bug, please search for existing issues first.
+
 2. Are you looking for support instead? Please go
 to our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
+
 3. Make sure to follow the issue template.
 
 Once your bug issue is filed, the community team will evaluate and prioritize using the following label/criteria:
