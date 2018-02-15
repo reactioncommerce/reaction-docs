@@ -4,25 +4,28 @@ At Reaction Commerce, we're dedicated to the open source community. In fact, we'
 
 ## Step 1: Get Reaction running
 
-If you haven't already, get Reaction running locally:
+If you haven't already, get Reaction running locally.
 
-```sh
-curl https://install.meteor.com | /bin/sh
-git clone https://github.com/reactioncommerce/reaction.git
-cd reaction
-reaction
-```
+Instructions are here for [Windows](/developer/installation/installation-windows.md), [Mac OSX](/developer/installation/installation-osx.md) and [Linux](/developer/installation/installation-linux.md).
 
 ## Step 2: Find or open an issue
 
-Explore the interface and the code to give you a good overview of the product and a sense for what's already built. Keep an eye out for bugs and interface issues, as well as features you'd like to see created.
+There are three ways to go about contributing to Reaction: file a bug, work on an issue or bug that is already created and vetted by the team, or propose a new feature in our [Reaction Feature Requests](https://github.com/reactioncommerce/reaction-feature-requests) repository.
 
-There are two ways to go about contributing to Reaction: work on an issue or bug that is already created and vetted by the team, or propose a new feature in our [Reaction Feature Requests](https://github.com/reactioncommerce/reaction-feature-requests) repository.
+### File a bug
+
+1. Before you file a bug, please search for existing issues first.
+2. Are you looking for support instead? Please go
+to our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
+3. Make sure to follow the issue template.
+
+Once your bug issue is filed, 
 
 ### Find an issue and claim it
 
 1. Explore the [Help Wanted](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) or [Good First Issue](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) issues on our GitHub repo.
-2. If you find something you want to work on, let us know right there in the comments.
+2. If you find something you want to work on, let us know right there in the comment with how you want to approach the problem.
+3. If you are a first-time contributor, also mention the `@reactioncommerce/community` team in the comment so you can  request to be made a contributor.
 
 ### Create a Feature Request issue
 
@@ -33,15 +36,9 @@ Don't see a ticket for a feature you'd like to see in Reaction? Follow these ste
 
 If you are interested in a specific aspect of the project but aren't sure where to begin, feel free to ask us on Gitter.
 
-## Step 3: Getting feedback early in a pull request
+## Step 3: Prepare a pull request for review
 
-Want to get feedback on your pull request before it's ready for code review?
-
-[Create a pull request](https://help.github.com/articles/creating-a-pull-request/) (PR) and add `[WIP]` for Work in Progress to the title and ask a question in GitHub.
-
-## Step 4: Prepare a pull request for review
-
-Once your PR fulfills the issue it tackles, you are ready to finalize your pull request.
+Once your branch fulfills the issue it tackles, you are ready to [create a pull request](https://help.github.com/articles/creating-a-pull-request/) (PR). Your PR will have to meet the following criteria first:
 
 ### Pass all tests
 
