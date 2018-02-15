@@ -1,5 +1,7 @@
 # Installation for Windows
 
+[![Installation Video](/assets/guide-installation-video-screenshot-windows.png)](https://www.youtube.com/watch?v=FCxLQFpppLo&t=1s)
+
 ## Install prerequisites
 
 **Note: These commands all assume you are running them from an administrator shell**
