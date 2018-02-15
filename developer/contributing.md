@@ -19,7 +19,15 @@ There are three ways to go about contributing to Reaction: file a bug, work on a
 to our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
 3. Make sure to follow the issue template.
 
-Once your bug issue is filed, 
+Once your bug issue is filed, the community team will evaluate and prioritize using the following label/criteria:
+
+**impact-critical** (do now): Blocks core functionality which would include checking out, processing orders, adding a product, etc.
+
+**impact-major** (do next): Blocks important functionality but there is a workaround or the problem doesn't inhibit shopping/purchasing
+
+**impact-minor** (do eventually): Impacts peripheral functionality or there is a reasonable workaround (UI glitches, etc)
+
+Once it's been triaged and verified a Community Engineering team member will work on it according the above criteria.
 
 ### Find an issue and claim it
 
