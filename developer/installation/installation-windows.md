@@ -96,7 +96,7 @@ To terminate `reaction` use `CTRL-c`.
 
 **Troubleshooting tip**
 
-If you run into errors with running out of memory, you may want to try the below command and restarting the build
+If you run into errors with running out of memory, you may want to try the below command and restart the build
 
 ```sh
 set TOOL_NODE_FLAGS=’–max_old_space_size=1024'
