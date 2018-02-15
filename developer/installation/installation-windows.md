@@ -94,14 +94,13 @@ Congrats! Now you've created your first Reaction store. View the store by going 
 
 To terminate `reaction` use `CTRL-c`.
 
-**Troubleshooting tip**
+#### Troubleshooting tip
 
 If you run into errors with running out of memory, you may want to try the below command and restart the build
 
 ```sh
 set TOOL_NODE_FLAGS=’–max_old_space_size=1024'
 ```
-
 
 To learn more about the Reaction command-line-client visit the [CLI docs](/developer/installation/reaction-cli.md)
 
