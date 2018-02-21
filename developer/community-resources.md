@@ -16,6 +16,10 @@ A very basic payment provider plugin that offers Cash On Delivery. This package 
 **Learning content:**
 - How to create a [payment provider plugin](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-payment-provider)
 
+### [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
+
+Install this plugin to get a dashboard panel that allows you to load datasets and images quickly for testing your app locally.
+
 ## Community themes
 
 ### [reaction-generic-theme](https://github.com/joshuacox/reaction-generic-theme)
