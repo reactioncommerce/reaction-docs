@@ -56,61 +56,47 @@ As soon as your PR is pushed, automated test run to ensure:
 
 Before you are ready for a team code review, you will also have to fill out the following sections in the template:
 
-#### 1-3. Top section
-
-1. `Resolves #issueNumber`
+1. **Resolves** - Note issue number
   - Link to the GitHub issue number
   - If you're resolving an unreported bug, note: `Resolves unreported issue`
   - We do not accept PRs for features without issues.
-2. `Impact: breaking|critical|major|minor`
-  - `breaking` - introduces breaking changes to the app.
-  - `critical` - resolves a `critical` bug blocking core functionality. Examples include browsing products, adding products to cart, checking out, processing orders, etc.
-  - `major` - resolves a `major` bug or introduces significant new feature.
-  - `minor` - resolves a `minor` bug, minor changes to the app, or minor new feature
-3. `Type: feature|bugfix|performance|test|style|refactor|docs|chore`
-  - `feature`: A new feature or functionality
-  - `bugfix`: A bug fix
-  - `performance`: A code change that improves performance
-  - `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-  - `test`: Adding missing or correcting existing tests
-  - `refactor`: A code change that neither fixes a bug nor adds a feature
-  - `docs`: Documentation only changes
-  - `chore`: Changes to the build process or auxiliary tools and libraries such as documentation generation
-
-#### 4. Issue Description
-
-Describe the issue this PR is solving with the knowledge you've gained by fixing it. This may differ from the original ticket as you now have more information at your disposal. A great PR will include additional information gathered during the process of resolving the ticket that might be helpful to reviewers or other users who might encounter the same problem.
-
-Please include _all_ information necessary to understand the issue this PR resolves so that the reviewer does not need to look at the original ticket.
-
-#### 5. Solution
-
-Summarize your solution to the problem. Please include short descriptions of any solutions you tested before arriving at your final solution. This will help reviewers know why you decided to solve this problem in this particular way and will speed up the review process.
-
-If you have introduced any new dependencies, please list them, explain how they are used in your solution and any other libs that you considered.
-
-#### 6. Breaking changes
-
-If you have a breaking changes, list them here, otherwise list none.
-
-Examples of breaking changes include:
-- Changing file names
-- Moving files
-- Deleting files
-- Renaming functions or exports
-- Changes to code which might cause previous versions of Reaction or third-party code not to work as expected.
-
-Note any work that you did to mitigate the effect of any breaking changes such as creating migrations, deprecation warnings, etc.
-
-#### 7. Testing Instructions
-
-Write instructions for testing your changes. You can assume that reviewers know how to start the app and how to perform basic setup tasks. For any task where there may be multiple ways to do something, be explicit. (e.g. there are several ways to "Create a Product" and many options once created before a product is published).
-
-The steps you list should guide the reviewer through testing the feature or fix you've implemented. These steps will generally be very similar to the reproduction steps in the issue.
+2. **Impact** - Choose from one of the following:
+  - **breaking** - introduces breaking changes to the app.
+  - **critical** - resolves a **critical** bug blocking core functionality. Examples include browsing products, adding products to cart, checking out, processing orders, etc.
+  - **major** - resolves a **major** bug or introduces significant new feature.
+  - **minor** - resolves a `minor` bug, minor changes to the app, or minor new feature
+3. **Type** - Choose from one of the following:
+  - **feature**: A new feature or functionality
+  - **bugfix**: A bug fix
+  - **performance**: A code change that improves performance
+  - **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+  - **test**: Adding missing or correcting existing tests
+  - **refactor**: A code change that neither fixes a bug nor adds a feature
+  - **docs**: Documentation only changes
+  - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+4. **Issue Description**
+  - Describe the issue this PR is solving with the knowledge you've gained by fixing it. This may differ from the original ticket as you now have more information at your disposal.
+  - Include additional information gathered during the process of resolving the ticket that might be helpful to reviewers or other users who might encounter the same problem.
+  - Include _all_ information necessary to understand the issue this PR resolves so that the reviewer does not need to look at the original ticket.
+5. **Solution**
+  - Summarize your solution to the problem. Please include short descriptions of any solutions you tested before arriving at your final solution. This will help reviewers know why you decided to solve this problem in this particular way and will speed up the review process.
+  - **Note new dependencies**: If you have introduced any new dependencies, please list them, explain how they are used in your solution and any other libs that you considered.
+6. **Breaking changes:** List breaking changes, or otherwise list none.
+  - Changing file names
+  - Moving files
+  - Deleting files
+  - Renaming functions or exports
+  - Changes to code which might cause previous versions of Reaction or third-party code not to work as expected.
+  - Note any work that you did to mitigate the effect of any breaking changes such as creating migrations, deprecation warnings, etc.
+7. **Testing Instructions**
+  - Write instructions for testing your changes. You can assume that reviewers know how to start the app and how to perform basic setup tasks. For any task where there may be multiple ways to do something, be explicit. (e.g. there are several ways to "Create a Product" and many options once created before a product is published).
+  - The steps you list should guide the reviewer through testing the feature or fix you've implemented. These steps will generally be very similar to the reproduction steps in the issue.
 
 ## Step 4: PR review process begins
 
 The Community team triages all new pull requests as soon as the PR is complete.
+
+### PR gets reviewed
 
 The team reviews code quality rules including:
 
@@ -138,9 +124,12 @@ The team reviews code quality rules including:
 
 Reviewers will note any changes that they will want to QA in the app, even if they aren't listed in the testing steps (e.g if the code changes a `cart` button, ensure that the button still works).
 
-## Step 5: Congrats! It's approved and merged. What's next?
+### PR is ready to merge
 
-Once a pull request goes through both the automated and Core team reviews, it's ready to be merged. Here are some things you may want to consider after that:
+Congrats - Once you have all the green lights with an approved PR, you are ready to merge.
 
-- If your pull request referenced an issue, close that issue.
-- Does your new feature require new user documentation or developer documentation? Make an issue for that in [reaction-docs](https://github.com/reactioncommerce/reaction-docs/issues).
+Does your new feature require new user documentation or developer documentation? Make an issue for that in [reaction-docs](https://github.com/reactioncommerce/reaction-docs/issues).
+
+## Step 5: Congrats! It's merged. What happens next?
+
+Now that your PR is merged, the feature will be released in the next release. Head on over to our [Release Guide](developer/testing/release-process.md) for more on how we release versions of Reaction.
