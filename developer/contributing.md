@@ -14,22 +14,17 @@ There are three ways to go about contributing to Reaction: file a bug, work on a
 
 ### File a bug
 
-1. Before you file a bug, please search for existing issues first.
-
-2. Are you looking for support instead? Please go
-to our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
-
+1. Before you file a bug, please [search existing issues](https://github.com/reactioncommerce/reaction/issues) first.
+2. Are you looking for support instead? Please go to our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
 3. Make sure to follow the issue template.
 
 Once your bug issue is filed, the community team will evaluate and prioritize using the following label/criteria:
 
-**impact-critical** (do now): Blocks core functionality which would include checking out, processing orders, adding a product, etc.
+- **impact-critical** (do now): Blocks core functionality which would include checking out, processing orders, adding a product, etc.
+- **impact-major** (do next): Blocks important functionality but there is a workaround or the problem doesn't inhibit shopping/purchasing
+- **impact-minor** (do eventually): Impacts peripheral functionality or there is a reasonable workaround (UI glitches, etc)
 
-**impact-major** (do next): Blocks important functionality but there is a workaround or the problem doesn't inhibit shopping/purchasing
-
-**impact-minor** (do eventually): Impacts peripheral functionality or there is a reasonable workaround (UI glitches, etc)
-
-Once it's been triaged and verified a Community Engineering team member will work on it according the above criteria.
+Once it's been triaged and verified, a Community Engineering team member will work on it according the above criteria.
 
 ### Find an issue and claim it
 
@@ -54,13 +49,8 @@ Once your branch fulfills the issue it tackles, you are ready to [create a pull 
 
 As soon as your PR is pushed, automated test run to ensure:
 
-- Pass current continuous integration tests
-- Pass linter code review and follow Reaction style guidelines
-
-You can check these yourself by running:
-
-- `npm run lint`
-- `reaction test`
+- `npm run lint`: Pass current continuous integration tests
+- `reaction test`: Pass linter code review and follow Reaction style guidelines
 
 ### Fill out the pull request template
 
