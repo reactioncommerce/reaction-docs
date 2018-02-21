@@ -1,5 +1,7 @@
 # Installation for Windows
 
+[![Installation Video](/assets/guide-installation-video-screenshot-windows.png)](https://www.youtube.com/watch?v=FCxLQFpppLo&t=1s)
+
 ## Install prerequisites
 
 **Note: These commands all assume you are running them from an administrator shell**
@@ -85,6 +87,14 @@ _The initial admin user for the site is auto generated, and displayed in your co
 Congrats! Now you've created your first Reaction store. View the store by going to <http://localhost:3000> in your favorite browser.
 
 To terminate `reaction` use `CTRL-c`.
+
+#### Troubleshooting tip
+
+If you run into errors with running out of memory, you may want to try the below command and restart the build
+
+```sh
+set TOOL_NODE_FLAGS=’–max_old_space_size=1024'
+```
 
 To learn more about the Reaction command-line-client visit the [CLI docs](/developer/installation/reaction-cli.md)
 

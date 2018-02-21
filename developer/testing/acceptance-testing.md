@@ -12,11 +12,10 @@ a users perspective (as opposed to unit or integration tests)
 Each test assumes this environment unless otherwise stated
 
 1. Ran `reaction reset`
-2. Products are created from the `reaction-sample-data` package
-3. All orders are processed with the Generic Payment method unless otherwise stated
-4. The developer console is open to monitor for client-side errors. A successful test implies that no errors are shown here
-5. Server logs are monitored. (the console when running locally) A successful test implies that no errors are shown here.
-6. Tests are performed using U.S. currency and English unless specified
+2. All orders are processed with the Example Payment method unless otherwise stated
+3. The developer console is open to monitor for client-side errors. A successful test implies that no errors are shown here
+4. Server logs are monitored. (the console when running locally) A successful test implies that no errors are shown here.
+5. Tests are performed using U.S. currency and English unless specified
 
 ### 1A - Place an order for a single product as an anonymous user
 
@@ -134,3 +133,41 @@ the PayPal documentation to [learn how to create a personal sandbox account](htt
 4. Enter API Client ID
 5. Click on "Update"
 6. Perform either test 1A or 2A but substitute Stripe for Generic Payment Method
+
+### 6A - Fulfill, Refund, and Cancel orders
+1. Follow all the above steps first, and make sure you have _at least_ six (6) orders ready to be processed.
+2. Login as your administrator (default) account
+3. Navigate to Orders fulfillment dashboard
+4. Test the text search filter by typing various emails / names / Order ID's
+5. Change the table to only display five (5) rows, and test out the table pagination
+6. Click one of the orders, and process the order:
+  - Click the `Approve` button
+  - Print the invoice
+  - Click the `Capture Payment` button
+  - Apply a partial refund (this will not work with the `Example Payment Provider`)
+  - Print the invoice (again)
+  - If Shippo is enabled, print the shipping label
+  - If Shippo is not enabled, add a tracking number and save
+  - Click the `All Items Packed` button
+  - Click the `Shipped` button
+  - Click the `Resend Shipment Notification` button
+  - Make sure you receive both emails
+7. Back on the Orders table, select two unprocessed orders, and use bulk actions to process:
+  - Use the bulk actions dropdown to move the orders forward through the workflows
+  - Use the bulk actions dropdown to regress orders backwards through the workflows
+  - Press the `Capture` button to capture both orders
+8. Click one of the remaining unprocessed orders, and cancel the order without restocking products
+  - Write down the product and quantity of product in this order
+  - Visit the PDP of the products, and write down the current inventory number
+  - Return to this order, and press the `Cancel Order` button
+  - Click the `Yes, but no restocking` button
+  - Return to the PDP of the product, and confirm that inventory has not changed
+9. Click one of the remaining unprocessed orders, and cancel the order with restocking products:
+  - Write down the product and quantity of product in this order
+  - Visit the PDP of the products, and write down the current inventory number
+  - Return to this order, and press the `Cancel Order` button
+  - Click the `Yes, and restock` button
+  - Return to the PDP of the product, and confirm that inventory has changed as it should
+10. Click one of the orders, and try to apply a refund that is more than the total order
+11. Test the `Status` and `Shipping Status` filters now that your orders have different statuses
+12. Test the column sorting in the table now that your orders have different statuses

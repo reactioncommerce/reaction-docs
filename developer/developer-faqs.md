@@ -79,6 +79,15 @@ What the best options is depends on your budget and your expected level of traff
 - Azure
 - Digital Ocean
 
+### I'm getting "FATAL ERROR: CALL_AND_RETRY_LAST" when building a custom docker image
+
+Be sure to use this command to build your custom docker image:
+
+```sh
+docker build --build-arg TOOL_NODE_FLAGS="--max-old-space-size=2048" -t mycustom .
+```
+This seems to force Meteor to use less memory when building and work around this issue.
+
 ## Admin
 
 ### Where is the admin panel?

@@ -1,39 +1,71 @@
 # Contributing Guide
 
-At Reaction Commerce, we're dedicated to the open source community. In fact, we've designed our entire platform and business to grow from the passion and creativity that an open source community ignites. We've already attracted a small, dedicated team of open source contributors, and there's always room for more. If you'd like to join us, here's how to get started:
+At Reaction Commerce, we're dedicated to the open source community. In fact, we've designed our entire platform and business to grow from the passion and creativity that an open source community ignites. We've already attracted a small, dedicated team of open source contributors, and there's always room for more. If you'd like to join us, here's how to get started.
 
 ## Step 1: Get Reaction running
 
-If you haven't already, get Reaction running locally:
+If you haven't already, get Reaction running locally.
 
-```sh
-curl https://install.meteor.com | /bin/sh
-git clone https://github.com/reactioncommerce/reaction.git
-cd reaction
-reaction
-```
+Instructions are here for [Windows](/developer/installation/installation-windows.md), [Mac OSX](/developer/installation/installation-osx.md) and [Linux](/developer/installation/installation-linux.md).
 
-## Step 2: Finding an issue
+## Step 2: Find or open an issue
 
-Explore the interface and the code to give you a good overview of the product and a sense for what's already built. Keep an eye out for bugs and interface issues, as well as features you'd like to see created.
+There are three ways to go about contributing to Reaction: file a bug, work on an issue or bug that is already created and vetted by the team, or propose a new feature in our [Reaction Feature Requests](https://github.com/reactioncommerce/reaction-feature-requests) repository.
 
-Check our our [`Good First Issue`](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) and [`Help Wanted`](https://github.com/reactioncommerce/reaction/issues?q=label%3A%22help+wanted%22) tags for good issues to tackle. If you find something you want to work on, let us know right there in the comments. If you are interested in a specific aspect of the project but aren't sure where to begin, feel free to ask.
+### File a bug
 
-Start small and open up a dialogue with us. This will help to get your contributions accepted easily.
+1. Before you file a bug, please search for existing issues first.
 
-## Step 3: The pull request and review process
+2. Are you looking for support instead? Please go
+to our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
 
-[Create a pull request](https://help.github.com/articles/creating-a-pull-request/) to propose and collaborate on changes to Reaction. These changes are proposed in a PR branch, and are reviewed before being merged into a `release-x.x.x` branch, and then released to `master`.
+3. Make sure to follow the issue template.
 
-- PR should fill in all sections of the pull request
-- Should reference an issue if one exists, or provide detailed information on the goal of the PR.
-- Should pass CI / Tests. New functionality should include new tests.
-- Should passing a linter code review and follow Reaction style guidelines.
-- Code reviewed before merge acceptance.
+Once your bug issue is filed, the community team will evaluate and prioritize using the following label/criteria:
 
-### Pull request template
+**impact-critical** (do now): Blocks core functionality which would include checking out, processing orders, adding a product, etc.
 
-```md
+**impact-major** (do next): Blocks important functionality but there is a workaround or the problem doesn't inhibit shopping/purchasing
+
+**impact-minor** (do eventually): Impacts peripheral functionality or there is a reasonable workaround (UI glitches, etc)
+
+Once it's been triaged and verified a Community Engineering team member will work on it according the above criteria.
+
+### Find an issue and claim it
+
+1. Explore the [Help Wanted](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) or [Good First Issue](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) issues on our GitHub repo.
+2. If you find something you want to work on, let us know right there in the comment with how you want to approach the problem.
+3. If you are a first-time contributor, also mention the `@reactioncommerce/community` team in the comment so you can  request to be made a contributor.
+
+### Create a Feature Request issue
+
+Don't see a ticket for a feature you'd like to see in Reaction? Follow these steps:
+
+1. Create an issue in the [Reaction Feature Requests](https://github.com/reactioncommerce/reaction-feature-requests) repository detailing the feature.
+2. Upon team review, the team will provide next steps for how to get started on the feature.
+
+If you are interested in a specific aspect of the project but aren't sure where to begin, feel free to ask us on Gitter.
+
+## Step 3: Prepare a pull request for review
+
+Once your branch fulfills the issue it tackles, you are ready to [create a pull request](https://help.github.com/articles/creating-a-pull-request/) (PR). Your PR will have to meet the following criteria first:
+
+### Pass all tests
+
+As soon as your PR is pushed, automated test run to ensure:
+
+- Pass current continuous integration tests
+- Pass linter code review and follow Reaction style guidelines
+
+You can check these yourself by running:
+
+- `npm run lint`
+- `reaction test`
+
+### Fill out the pull request template
+
+Before you are ready for a team code review, you will also have to fill out the following sections in the template:
+
 Resolves #issueNumber
 Impact: breaking|critical|major|minor
 Type: feature|bugfix|performance|test|style|refactor|docs|chore
@@ -52,12 +84,10 @@ Examples of breaking changes include changing file names, moving files, deleting
 
 Note any work that you did to mitigate the effect of any breaking changes such as creating migrations, deprecation warnings, etc.
 
-
 ## Testing
 1. List the steps needed for testing your change in this section.
 2. Assume that testers already know how to start the app, and do the basic setup tasks.
 3. Be detailed enough that someone can work through it without being too granular
-```
 
 ### Additional details for pull request authors
 
@@ -141,14 +171,14 @@ Test by applying this patch to an existing install of Reaction with existing use
 
 Run through the author's steps to verify that it works as they've tested it. Then run through the app on your own as you would test it. Run through the app as many times as you feel comfortable before approving or requesting changes.
 
-#### Code Review
+## Step 4: PR review process begins
 
-Review the code changes that this PR makes. Note any changes that you'll want to QA in the app, even if they aren't listed in the testing steps (e.g if the code changes a `cart` button, ensure that the button still works).
+The Community team triages all new pull requests as soon as the PR is complete.
 
-Code should be vetted for:
+The team reviews code quality rules including:
 
 - Readability: the linter will help with this, but call out anything that is difficult to understand or that you feel needs comments
-- Documentation: all code added or touched should have proper JSDoc, any new functionality should be documented.
+- Documentation: all code added or touched should have proper JSDoc, any new functionality should be documented, as outlined in [JSDoc Style Guide](/developer/jsdoc-style-guide.md).
 - Security: Code should only be usable by users with the correct roles. Any data published should be filtered to ensure that only users with the correct roles for the correct shops have access to it.
 - Performance: Code should be written with performance in mind. Data publications should only publish data necessary to accomplish the specific goal at hand.
 - Tests: Any new functionality should include tests
@@ -156,44 +186,9 @@ Code should be vetted for:
 - i18n: All static copy should use i18next. Include definitions in the appropriate `en.json` file.
 - a11y: Code should be a11y compliant.
 
-### Here's what to expect when you make a pull request to Reaction
+Reviewers will note any changes that they will want to QA in the app, even if they aren't listed in the testing steps (e.g if the code changes a `cart` button, ensure that the button still works).
 
-As soon as pull requests are pushed, automated test are run to ensure:
-
-- All linting rules pass without errors or ignores.
-- Dependencies are not failing.
-- All tests pass.
-- No new security vulnerabilities are introduced.
-
-You can run these checks yourself by running these commands:
-
-- `npm run lint` for linting
-- `reaction test` for all tests
-
-### Community team pull request review
-
-The Community team triages all new pull requests as soon as possible. The team reviews code quality rules including:
-
-- No new Atmosphere or Meteor dependencies are introduced.
-- No hard-coded copy: All copy and alerts should have i18n keys and values.
-- Updated LingoHub translations.
-- All new methods and files have JSDoc summaries, as outlined in [JSDoc Style Guide](/developer/jsdoc-style-guide.md).
-- All folders, variables, method names follow naming conventions, outlined in [Reaction Code Style Guide](/developer/styleguide.md).
-
-The team also encourages in-line commenting.
-
-Use comments to:
-
-- Explain functionality to someone new to the code
-- Link to any external documentation
-
-### Getting feedback early and often
-
-Want to get feedback on your pull request before it's ready for merging?
-
-Push up the branch and add `[WIP]` for Work in Progress to the title and ask a question in GitHub.
-
-## Step 4: Congrats! It's approved and merged. What's next?
+## Step 5: Congrats! It's approved and merged. What's next?
 
 Once a pull request goes through both the automated and Core team reviews, it's ready to be merged. Here are some things you may want to consider after that:
 
