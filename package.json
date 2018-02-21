@@ -72,6 +72,10 @@
         "_"
       ],
       [
+        "remark-lint-list-item-bullet-indent",
+        false
+      ],
+      [
         "remark-lint-no-file-name-mixed-case",
         false
       ]
