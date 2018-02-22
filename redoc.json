@@ -254,6 +254,12 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/community-resources.md"
 		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "community-showcase",
+			"label": "Community showcase",
+			"repo": "reaction-docs",
+			"docPath": "developer/community-showcase.md"
+		}, {
 			"class": "guide-nav-item",
 			"alias": "architecture",
 			"label": "Architecture",
