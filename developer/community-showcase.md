@@ -6,21 +6,8 @@
     flex-wrap: wrap;
   }
 
-  .photo-grid-item {
-    flex: 1 1 auto;
-    max-width: 25%;
-    width: 25%;
-    padding: 10px;
-  }
-
   .photo-grid img {
-    width: 100%;
-  }
-
-  .info a,
-  .info a:hover {
-    text-decoration: none;
-    text-align: right;
+    max-width: 100%;
   }
 
   .showcase-grid-item {
@@ -28,10 +15,6 @@
     max-width: 33%;
     width: 33%;
     padding: 10px;
-
-    img {
-      width: 100%;
-    }
 
     @media screen and (max-width: @screen-sm-max) {
       max-width: 50%;
@@ -43,47 +26,68 @@
       width: 100%;
     }
   }
+
+  a.showcase-grid-item {
+    text-decoration: none;
+    text-align: right;
+  }
+
+  a.showcase-grid-item:hover {
+    text-decoration: underline;
+  }
+
+  p.item-info {
+    margin: 0;
+    padding: 0;
+  }
+
+  p.label {
+    letter-spacing: 0.05em;
+    font-size: .75em;
+    font-weight: bold;
+  }
+
 </style>
 
 <div class="photo-grid">
   <a href="http://itfurniturestore.com" class="showcase-grid-item" target="_blank">
     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-1-itfurniture.png">
-    <div class="info">
-      <p>itfurniturestore.com</p>
-      <h5>USA</h5>
-      <h5>Ecommerce</h5>
+    <div>
+      <p class="item-info">itfurniturestore.com</p>
+      <p class="item-info label">USA</p>
+      <p class="item-info label">Ecommerce</p>
     </div>
   </a>
   <a href="http://artlimes.com" class="showcase-grid-item" target="_blank">
     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-2-artlimes.png">
-    <div class="info">
-      <p>artlimes.com</p>
-      <h5>UK</h5>
-      <h5>Marketplace</h5>
+    <div>
+      <p class="item-info">artlimes.com</p>
+      <p class="item-info label">UK</p>
+      <p class="item-info label">Marketplace</p>
     </div>
   </a>
   <a href="http://nextlevel.com.bo" class="showcase-grid-item" target="_blank">
     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-3-nextlevel.png">
-    <div class="info">
-      <p>nextlevel.com.bo</p>
-      <h5>Bolivia</h5>
-      <h5>Ecommerce</h5>
+    <div>
+      <p class="item-info">nextlevel.com.bo</p>
+      <p class="item-info label">Bolivia</p>
+      <p class="item-info label">Ecommerce</p>
     </div>
   </a>
   <a href="http://stephenkenn.com" class="showcase-grid-item" target="_blank">
     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-4-stephenkenn.png">
-    <div class="info">
-      <p>stephenkenn.com</p>
-      <h5>USA</h5>
-      <h5>Ecommerce</h5>
+    <div>
+      <p class="item-info">stephenkenn.com</p>
+      <p class="item-info label">USA</p>
+      <p class="item-info label">Ecommerce</p>
     </div>
   </a>
   <a href="http://shoppe.pinupmagazine.org" class="showcase-grid-item" target="_blank">
     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-5-pinup.png">
-    <div class="info">
-      <p>shoppe.pinupmagazine.org</p>
-      <h5>USA</h5>
-      <h5>Marketplace</h5>
+    <div>
+      <p class="item-info">shoppe.pinupmagazine.org</p>
+      <p class="item-info label">USA</p>
+      <p class="item-info label">Marketplace</p>
     </div>
   </a>
 </div>
