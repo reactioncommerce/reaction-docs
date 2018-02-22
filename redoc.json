@@ -159,6 +159,12 @@
 			"docPath": "developer/how-to-change-the-favicon.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "how-to-create-a-custom-homepage",
+			"label": "Tutorial: Create a custom homepage",
+			"repo": "reaction-docs",
+			"docPath": "developer/how-to-create-a-custom-homepage.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "testing-tutorial",
 			"label": "Tutorial: Writing your first test",
 			"repo": "reaction-docs",

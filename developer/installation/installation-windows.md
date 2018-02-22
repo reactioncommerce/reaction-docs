@@ -32,12 +32,6 @@ choco install meteor
 npm install -g windows-build-tools
 ```
 
-### Install ImageMagick (Optional but recommended)
-
-```sh
-choco install imagemagick
-```
-
 ## Install Reaction
 
 ### Install the Reaction command-line interface (CLI)
