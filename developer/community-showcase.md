@@ -25,6 +25,7 @@
   p.item-info {
     margin: 0;
     padding: 0;
+    color: rgb(5, 42, 78);
   }
 
   p.item-label {
