@@ -17,8 +17,8 @@
     width: 100%;
   }
 
-  .info p.social-links a,
-  .info p.social-links a:hover {
+  .info a,
+  .info a:hover {
     text-decoration: none;
     text-align: right;
   }
@@ -47,47 +47,47 @@
 
 <div class="photo-grid">
   <a href="http://itfurniturestore.com" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-1-itfurniture.png">
+    ![itfurniturestore.com](/assets/community-showcase/community-showcase-1-itfurniture.png)
     <div class="info">
       <p>itfurniturestore.com</p>
-      <h5>USA</h5>
-      <h5>Ecommerce</h5>
+      <strong>USA</strong>
+      <strong>Ecommerce</strong>
     </div>
   </a>
   <a href="http://artlimes.com" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-2-artlimes.png">
+    ![artlimes.com](/assets/community-showcase/community-showcase-2-artlimes.png)
     <div class="info">
       <p>artlimes.com</p>
-      <h5>UK</h5>
-      <h5>Marketplace</h5>
+      <strong>UK</strong>
+      <strong>Marketplace</strong>
     </div>
   </a>
   <a href="http://nextlevel.com.bo" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-3-nextlevel.png">
+    ![nextlevel.com.bo](/assets/community-showcase/community-showcase-3-nextlevel.png)
     <div class="info">
       <p>nextlevel.com.bo</p>
-      <h5>Bolivia</h5>
-      <h5>Ecommerce</h5>
+      <strong>Bolivia</strong>
+      <strong>Ecommerce</strong>
     </div>
   </a>
   <a href="http://stephenkenn.com" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-4-stephenkenn.png">
+    ![](/assets/community-showcase/community-showcase-4-stephenkenn.png)
     <div class="info">
       <p>stephenkenn.com</p>
-      <h5>USA</h5>
-      <h5>Ecommerce</h5>
+      <strong>USA</strong>
+      <strong>Ecommerce</strong>
     </div>
   </a>
   <a href="http://shoppe.pinupmagazine.org" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-5-pinup.png">
+    ![](/assets/community-showcase/community-showcase-5-pinup.png)
     <div class="info">
       <p>shoppe.pinupmagazine.org</p>
-      <h5>USA</h5>
-      <h5>Marketplace</h5>
+      <strong>USA</strong>
+      <strong>Marketplace</strong>
     </div>
   </a>
 </div>
 
 ## Building a project on Reaction?
 
-Submit your onlinen store or marketplace, and we'll feature you in our showcase. [Submit your project](https://reactioncommerce.com/community-showcase#submit-project).
+Submit your online store or marketplace, and we'll feature you in our showcase. [Submit your project](https://reactioncommerce.com/community-showcase#submit-project).
