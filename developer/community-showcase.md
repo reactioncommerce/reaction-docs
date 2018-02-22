@@ -55,7 +55,7 @@
     </div>
   </a>
   <a href="http://artlimes.com" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-2-artlimes.png">
+    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-2-artlimes.png">
     <div class="info">
       <p>artlimes.com</p>
       <h5>UK</h5>
@@ -63,7 +63,7 @@
     </div>
   </a>
   <a href="http://nextlevel.com.bo" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-3-nextlevel.png">
+    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-3-nextlevel.png">
     <div class="info">
       <p>nextlevel.com.bo</p>
       <h5>Bolivia</h5>
@@ -71,7 +71,7 @@
     </div>
   </a>
   <a href="http://stephenkenn.com" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-4-stephenkenn.png">
+    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-4-stephenkenn.png">
     <div class="info">
       <p>stephenkenn.com</p>
       <h5>USA</h5>
@@ -79,7 +79,7 @@
     </div>
   </a>
   <a href="http://shoppe.pinupmagazine.org" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-5-pinup.png">
+    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-5-pinup.png">
     <div class="info">
       <p>shoppe.pinupmagazine.org</p>
       <h5>USA</h5>
