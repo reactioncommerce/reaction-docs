@@ -13,12 +13,12 @@
     padding: 10px;
   }
 
-  img {
+  .photo-grid img {
     width: 100%;
   }
 
-  .info p.social-links a,
-  .info p.social-links a:hover {
+  .info a,
+  .info a:hover {
     text-decoration: none;
     text-align: right;
   }
