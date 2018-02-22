@@ -15,7 +15,7 @@ Reaction tries to be as modular as possible. All user customizations are intende
 
 ### What sites are built on Reaction Commerce?
 
-Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://reactioncommerce.com/community-showcase).
+Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://docs.reactioncommerce.com/reaction-docs/master/community-showcase).
 
 ### Why is Reaction so slow?
 
