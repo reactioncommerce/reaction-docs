@@ -27,7 +27,7 @@
     padding: 0;
   }
 
-  p.item-item-label {
+  p.item-label {
     letter-spacing: 0.05em;
     font-size: .75em;
     font-weight: bold;
