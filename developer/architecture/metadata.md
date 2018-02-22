@@ -1,6 +1,6 @@
 # SEO and Metadata
 
-Basic meta tag data is inserted by the `Router.DocHead.init` method which uses the `dom` core package to manipulate `document.head`.
+Basic meta tag data is inserted by the `MetaData.init` method which uses the `dom` core package to manipulate `document.head`.
 
 Add additional meta objects using `Reaction.DOM.setMetaTag` as detailed below.
 
