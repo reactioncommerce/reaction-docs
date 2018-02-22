@@ -47,7 +47,7 @@
 
 <div class="photo-grid">
   <a href="http://itfurniturestore.com" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-showcase/community-showcase-1-itfurniture.png">
+    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-1-itfurniture.png">
     <div class="info">
       <p>itfurniturestore.com</p>
       <h5>USA</h5>
