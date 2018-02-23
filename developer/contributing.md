@@ -148,4 +148,6 @@ The Reaction team reviewer is responsible for merging the PRs they approved, unl
 
 Does your new feature require new user documentation or developer documentation? Make an issue for that in [reaction-docs](https://github.com/reactioncommerce/reaction-docs/issues).
 
-Now that your PR is merged, the feature will be released in the next release. Head on over to our [Release Guide](developer/testing/release-process.md) for more on how we release versions of Reaction.
+## Step 5: Congrats! It's merged. What happens next?
+
+Now that your PR is merged, the feature will be released in the next release. Head on over to our [Release Guide](/developer/testing/release-process.md) for more on how we release versions of Reaction.
