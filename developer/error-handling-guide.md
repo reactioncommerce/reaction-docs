@@ -9,7 +9,7 @@ Reaction uses Meteor's [`Meteor.Error()`](https://docs.meteor.com/api/methods.ht
 [`Meteor.Error()`](https://docs.meteor.com/api/methods.html#Meteor-Error) takes three arguments, one that is required: `error`, a short machine-readable error code, and two that are optional: `reason`, a human-readable message and `details` for any additional stack trace
 information.
 
-#### Use `error` and `reason` arguments
+#### Always include both error and reason messages
 
 Reaction requires using both `error` and `reason` arguments:
 
@@ -22,7 +22,7 @@ Meteor.Error("short-message", "Long message with more detail for users.");
 Here is a list of standardized arguments for various error situations:
 
 | error               | reason examples                                                     |
-| ---                |     ---                                                              |
+| ---                 |     ---                                                             |
 | `access-denied`     | "Access denied"                                                     |
 | `invalid-parameter` | "X is invalid", "Bad X ID" "X is required"                          |
 | `not-configured`    | "Open Exchange Rates not configured. Configure for current rates."  |
@@ -34,6 +34,6 @@ Here is a list of standardized arguments for various error situations:
 
 The above list is not exhaustive throughout the whole app. For other error scenarios, use the guidelines below:
 
-- Do not use HTTP status codes, like `404` or `500`. Use the error messages `invalid-parameter` and `internal-server-error` instead respectively.
+- Do not use HTTP status codes, like `404` or `500`. Use the error messages `invalid-parameter` and `server-error` instead respectively.
 - Always start the reason with a capital letter.
 - Do not use exclamation marks in the reason.
