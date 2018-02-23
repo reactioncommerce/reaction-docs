@@ -43,7 +43,15 @@ If you are interested in a specific aspect of the project but aren't sure where 
 
 ## Step 3: Prepare a pull request for review
 
-Once your branch fulfills the issue it tackles, you are ready to [create a pull request](https://help.github.com/articles/creating-a-pull-request/) (PR). Your PR will have to meet the following criteria first:
+Once your branch fulfills the issue it tackles, you are ready to [create a pull request](https://help.github.com/articles/creating-a-pull-request/) (PR).
+
+### Use our Git commit message conventions
+
+Follow the [Git Style Guide](/developer/git-style-guide.md) rules outlined in the docs for branch names and commit message styles.
+
+### Give your PR a good title
+
+Title the PR with the ID number of the GitHub issue. Add `WIP` (work in progress) to the beginning of the title if your PR is still in development and you do not want it to be merged.
 
 ### Pass all tests
 
