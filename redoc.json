@@ -237,6 +237,12 @@
 			"docPath": "developer/jsdoc-style-guide.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "error-handling-guide",
+			"label": "Error handling guide",
+			"repo": "reaction-docs",
+			"docPath": "developer/error-handling-guide.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "release-process",
 			"label": "Release Guide",
 			"repo": "reaction-docs",
