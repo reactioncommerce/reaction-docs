@@ -85,6 +85,6 @@ Run `meteor mongo` from your Reaction directory to view and run commands in the 
 
 See Meteor's documentation on [`meteor mongo`](https://docs.meteor.com/commandline.html#meteormongo) and MongoDB's documentation on all the [Mongo shell commands](https://docs.mongodb.com/manual/reference/mongo-shell/#mongo-shell-command-history).
 
-## meteor shell
+### meteor shell
 
 Start the Meteor interactive shell with `meteor shell`. See Meteor's documentation on [`meteor shell`](https://docs.meteor.com/commandline.html#meteorshell).
