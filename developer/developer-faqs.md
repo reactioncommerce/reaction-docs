@@ -104,16 +104,16 @@ By default the admin login will be username: `admin@localhost` and password `r3@
 
 Since 2014 [Google has indexed JavaScript when crawling websites](https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html). Reaction, however, offers page pre-rendering and product detail page metatag generation out of the box to ensure products are indexed well for web crawlers and search engines:
 
-1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. ALl you have to do is provide a key to your site and Prerender will handle the pre-rendering.
-2. [Spiderable](https://github.com/ongoworks/spiderable): A now-deprecated solution is our Atmosphere package called [Spiderable](https://atmospherejs.com/ongoworks/spiderable) that pre-renders Meteor applications for search engines.
-3. [meteor-dochead](https://github.com/kadirahq/meteor-dochead): Automatically add `<meta>` tags are for products using the [meteor-dochead](https://github.com/kadirahq/meteor-dochead) package which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data.
+1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. All you have to do is provide a key to your site and Prerender will handle the pre-rendering.
+2. [Meteor Chrome Headless Spiderable](https://github.com/artlimes/meteor-chrome-headless-spiderable) with the [Reaction Commerce Caching Plugin](https://github.com/artlimes/reaction-commerce-caching-plugin): This updated Meteor package uses Google's Headless Chrome to crawl pages. Combined with the Reaction-specific caching plugin, the Spiderable package will allow Reaction pages to be crawled by search engines.
+3. [dom](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/dom/client/dom.js): Automatically adds `<meta>` tags are for products using the [dom](https://github.com/reactioncommerce/reaction/blob/release-1.8.0/imports/plugins/core/dom/client/dom.js) core package since 1.8, which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data. Read more on [SEO and Metadata](/developer/architecture/seo-metadata.md).
 
 Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our latest blog post.
 
 ## Extending Reaction
 
 ### How to do I create a custom home page?
-The easiest way to render a customized landing page is to set the INDEX_OPTIONS session variable and point it to a customized template. There's a more in-depth explanation [here](/developer/how-to-create-a-custom-home-page.md). 
+The easiest way to render a customized landing page is to set the INDEX_OPTIONS session variable and point it to a customized template. There's a more in-depth explanation [here](/developer/how-to-create-a-custom-home-page.md).
 
 ### How can I add add a static page?
 
