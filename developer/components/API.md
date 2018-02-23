@@ -69,7 +69,7 @@ To understand how theming works in Reaction, it's important to understand what h
 - A Gentle Introduction to React's Higher Order Components <https://www.robinwieruch.de/gentle-introduction-higher-order-components/>
 - Recompose (a handy library of HOC's that we use in Reaction) <https://github.com/acdlite/recompose/blob/master/docs/API.md>
 
-A higher order component's role is essentially to wrap a another component and pass it props that help it to render what you want in the UI. This could be a list of items from the database, the current user, info about the current route, etc.
+A higher order component's role is essentially to wrap another component and pass it props that help it to render what you want in the UI. This could be a list of items from the database, the current user, info about the current route, etc.
 
 In Reaction, HOC's are added either at the point when components are registered or when you are replacing an existing component. The first argument of `registerComponent` or `replaceComponent` is the component's name, the second is the component itself, and the third optional argument can be either a single HOC or an array of them.
 
