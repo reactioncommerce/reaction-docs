@@ -1,8 +1,8 @@
 # Schemas
 
-Reaction uses MongoDB, which is a schemaless database. This allows maximum flexibility, particularly important when quickly reacting to the design challenges that uniquely different customizations require in the course of a commerce operation.
+Reaction uses [MongoDB](https://docs.mongodb.com/manual/), which is a schemaless database. This allows maximum flexibility, particularly important when quickly reacting to the design challenges that uniquely different customizations require in the course of an ecommerce operation.
 
-However, we don't want to just get completely crazy, so we define a **schema** that is attached to the previously schemaless collection. These schemas apply basic content and structure validation, also very necessary in commerce.
+However, we don't want to just get completely crazy, so we define a **schema** that is attached to the previously schemaless collection. These schemas apply basic content and structure validation, also very necessary in ecommerce.
 
 As we apply each additional layer of structure, it's good to remember that there are usually server methods to bypass these layers as well.
 
@@ -10,13 +10,13 @@ As we apply each additional layer of structure, it's good to remember that there
 
 Schemas are implemented using the [simpl-schema](https://github.com/aldeed/simple-schema-js) NPM package.
 
-Reaction.Collections are defined in the common code of `lib/collections`, where the SimpleSchemas defined in `lib/collections/schemas` are attached.
+Reaction.Collections are defined in the common code of `lib/collections`, where the SimpleSchemas defined in [`lib/collections/schemas`](https://github.com/reactioncommerce/reaction/tree/v1.8.0/lib/collections/schemas) are attached. View all schemas in the [API Docs](http://api.docs.reactioncommerce.com/schemas.html).
 
 Custom schemas can also be defined in individual packages, by creating a `lib/collections/schemas` folder inside your package.
 
 ## Registering
 
-All schemas should be registered using the `registerSchema()` method that Reaction uses internally to register all of our core Schemas.
+All schemas should be registered using the [`registerSchema()`](http://api.docs.reactioncommerce.com/module-collections.html#~registerSchema) method that Reaction uses internally to register all of our core Schemas.
 
 ```js
 import SimpleSchema from "simpl-schema";
@@ -41,7 +41,7 @@ const MyNewSchema = new SimpleSchema({
 registerSchema("MyNewSchema", MyNewSchema);
 ```
 
-All registered schemas can be retrieved by importing `getSchemas`, and then using `getSchemas()`.
+All registered schemas can be retrieved by importing `getSchemas`, and then using [`getSchemas()`](http://api.docs.reactioncommerce.com/module-collections.html#~getSchemas).
 
 ```js
 import { getSchemas } from "@reactioncommerce/reaction-collections";
@@ -51,19 +51,21 @@ return getSchemas();
 
 ## Importing
 
-Schemas should be imported to use
+Schemas should be imported to use:
 
 ```js
 import * as Schemas from "/lib/collections/schemas";
 ```
 
-or an individual schema definition
+or an individual schema definition:
 
 ```js
 import { PackageConfig } from "/lib/collections/schemas/registry";
 ```
 
 ### Reaction Schemas
+
+View all schemas in the [API Docs](http://api.docs.reactioncommerce.com/schemas.html).
 
 | [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/master/lib/collections/schemas) | \*                |
 | ---------------------------------------------------------------------------------------------------- | ----------------- |
@@ -91,7 +93,7 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 
 ### Automatic Values
 
-Reaction provides `autoValue` helpers in `/lib/collections/schemas/helpers.js`.
+Reaction provides `autoValue` helpers in [`/lib/collections/schemas/helpers.js`](https://github.com/reactioncommerce/reaction/blob/v1.8.0/lib/collections/schemas/helpers.js).
 
 ```js
 /**
@@ -114,29 +116,13 @@ export const SchemaExample =  new SimpleSchema({
 });
 ```
 
-#### createdAtAutoValue
-
-Date representing now if it's an insert
-
-#### updatedAtAutoValue
-
-Date representing now
-
-#### shopIdAutoValue
-
-Current shopId
-
-#### shopIdAutoValueForCart
-
-Current shopId for a cart
-
-#### schemaIdAutoValue
-
-A `Random.id()` only if not already set on the server, or if inserting on the client.
-
-#### shopDefaultCountry
-
-The country value from the default shop
+| Helper method            |      Return value                                                                     |
+| ------------------------ |                                                                                       |
+| `updatedAtAutoValue`     | Date representing now                                                                 |
+| `shopIdAutoValue`        | Current shopId                                                                        |
+| `shopIdAutoValueForCart` | Current shopId for a cart                                                             |
+| `schemaIdAutoValue`      | A `Random.id()` only if not already set on the server, or if inserting on the client. |
+| `shopDefaultCountry`     | The country value from the default shop                                               |
 
 ### Examples
 
@@ -244,7 +230,7 @@ Multiple Schema functionality allows us to use different schemas for different d
 
 To work with multi-schema you need to specify the selector. You can do this by several ways:
 
-If object contains selector (it should because selector should be required)
+- If object contains selector (it should because selector should be required):
 
 ```js
 MyCollection.simpleSchema(object);
@@ -303,13 +289,13 @@ Reaction.Collections.Products.update("BCTMZ6HTxFSppJESk", {
 });
 ```
 
-It's important to note that collections do not enforce structure, so nothing will stop you from updating a product with a "type:simple", using the "type:variant" schema.
+It's important to note that collections do not enforce structure, so nothing will stop you from updating a product with a `"type:simple"`, using the `"type:variant"` schema.
 
 ### Updates
 
 Updates where the _selector is not provided must have the selector in the update statement_.
 
-Provide selector in **query**
+Provide selector in **query**:
 
 ```js
 Reaction.Collections.Products.update(
