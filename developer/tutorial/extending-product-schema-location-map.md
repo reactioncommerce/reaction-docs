@@ -10,6 +10,8 @@ You'll learn how to:
 - Store and use API keys
 - Use product data into a React component
 
+At the end of this tutorial, your PDP will look like this:
+
 ![Screenshot](/assets/extending-product-schema-location-map.png)
 
 ## Step 1: Extending product schema with longitude and latitude
