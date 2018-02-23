@@ -148,7 +148,7 @@
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "extending-product-schema-location-map",
-			"label": "Tutorial: Extending the product schema for Google map",
+			"label": "Tutorial: Extemd the product schema with a map",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/extending-product-schema-location-map.md"
 		}, {
