@@ -117,7 +117,7 @@ export const SchemaExample =  new SimpleSchema({
 ```
 
 | Helper method            |      Return value                                                                     |
-| ------------------------ |                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------- |
 | `updatedAtAutoValue`     | Date representing now                                                                 |
 | `shopIdAutoValue`        | Current shopId                                                                        |
 | `shopIdAutoValueForCart` | Current shopId for a cart                                                             |
