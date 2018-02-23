@@ -27,16 +27,6 @@ Shortcut: `-h`
 
 `reaction --help` or `-h` will give you help for the `reaction` command.
 
-### reaction pull
-
-Pull the latest version of Reaction and update dependencies
-
-```sh
-reaction pull
-```
-
-You could just use `git pull`, but running `reaction pull` will also update npm modules and other dependencies.
-
 ### reaction reset
 
 Resets the Reaction database, updates npm modules, and optionally removes `node_modules` before updating.
