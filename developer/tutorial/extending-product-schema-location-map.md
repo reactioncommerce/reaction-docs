@@ -109,62 +109,65 @@ The next step is to crate a new React component which is going to render the Goo
 ```js
 import React from "react";
 import PropTypes from "prop-types";
-import { DocHead } from "meteor/kadira:dochead";
+import loadScript from "load-script";
+import { $ } from "meteor/jquery";
 import { i18next } from "/client/api";
+
 
 class AvailabilityMap extends React.Component {
   static propTypes = {
-   trackingId: PropTypes.string.isRequired
- };
+    product: PropTypes.object,
+    trackingId: PropTypes.string.isRequired
+  };
 
- renderMap() {
-   // eslint-disable-next-line no-undef, no-new
-   const googleMap = new google.maps.Map(this.refs.map, {
-     center: {
-       lat: this.props.product.lat,
-       lng: this.props.product.lng
-     },
-     zoom: 13
-   });
+  componentDidMount() {
+    if (this.props.trackingId) {
+      if ($("#mapsHead").length === 0) {
+        const url = `https://maps.googleapis.com/maps/api/js?key=${this.props.trackingId}`;
+        loadScript(url, { attrs: { id: "mapsHead" } }, () => {
+          this.renderMap();
+        });
+      } else {
+        this.renderMap();
+      }
+    }
+  }
 
-   // eslint-disable-next-line no-undef, no-new
-   new google.maps.Marker({
-     position: {
-       lat: this.props.product.lat,
-       lng: this.props.product.lng
-     },
-     map: googleMap,
-     title: i18next.t("buyHere", "Buy here!")
-   });
- }
+  renderMap() {
+    // eslint-disable-next-line no-undef, no-new
+    const googleMap = new google.maps.Map(this.refs.map, {
+      center: {
+        lat: this.props.product.lat,
+        lng: this.props.product.lng
+      },
+      zoom: 13
+    });
 
- componentDidMount() {
-   if (this.props.trackingId) {
-     if ($("#mapsHead").length === 0) {
-       const url = `https://maps.googleapis.com/maps/api/js?key=${this.props.trackingId}`;
-       DocHead.loadScript(url, { attrs: { id: "mapsHead" } }, () => {
-         this.renderMap();
-       });
-     } else {
-       this.renderMap();
-     }
-   }
- }
+    // eslint-disable-next-line no-undef, no-new
+    new google.maps.Marker({
+      position: {
+        lat: this.props.product.lat,
+        lng: this.props.product.lng
+      },
+      map: googleMap,
+      title: i18next.t("buyHere", "Buy here!")
+    });
+  }
 
- render() {
-   return (
-     <div>
-       <h3>{i18next.t("availableLocations", "Available at the following stores")}</h3>
-       <div className="map" ref="map" />
-     </div>
-   );
- }
+  render() {
+    return (
+      <div>
+        <h3>{i18next.t("availableLocations", "Available at the following stores")}</h3>
+        <div className="map" ref="map" />
+      </div>
+    );
+  }
 }
 
 export default AvailabilityMap;
 ```
 
-Great. This React component will inject the JavaScript we need and render the marker according our new product coordinates. One nice thing to notice is the fact, that ReactionCommerce's internal machinery will call our React component with appropriate context, namely the product itself. Therefor we get the React property `this.props.product` for free, which essentially is our document from database that features `lng` and `lat` information. What isn't provided out-of-the-box is the `trackingId` property needed for Google maps inclusion. This is your personal Google API key that is available from [developer.google.com](https://developers.google.com/maps/documentation/javascript/get-api-key). We're going to store that in our settings file in /settings/dev.settings.json:
+Great. This React component will inject the JavaScript we need and render the marker according our new product coordinates. One nice thing to notice is the fact, that ReactionCommerce's internal machinery will call our React component with appropriate context, namely the product itself. Therefore we get the React property `this.props.product` for free, which essentially is our document from database that features `lng` and `lat` information. What isn't provided out-of-the-box is the `trackingId` property needed for Google maps inclusion. This is your personal Google API key that is available from [developer.google.com](https://developers.google.com/maps/documentation/javascript/get-api-key). We're going to store that in our settings file in /settings/dev.settings.json:
 
 **[/settings/dev.settings.json](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json)**
 
