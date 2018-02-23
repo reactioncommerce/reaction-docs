@@ -189,12 +189,6 @@
 			"docPath": "developer/themes/register-email.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "register-component",
-			"label": "Create Custom Components",
-			"repo": "reaction-docs",
-			"docPath": "developer/themes/register-component.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "fixtures-images",
 			"label": "Tutorial: Upload images as data fixtures",
 			"repo": "reaction-docs",
