@@ -236,7 +236,7 @@ import { Cart } from "/lib/collections";
 Cart.simpleSchema(someObj).validate(someObj);
 ```
 
-This is correct because (a) it pulls the schema off the collection using `Cart.simpleSchema(someObj)`, and (b) it passes the object to `simpleSchema` function to get the correct schema back if multiple have been attached. Refer to [Multiple Schemas] section.
+This is correct because (a) it pulls the schema off the collection using `Cart.simpleSchema(someObj)`, and (b) it passes the object to `simpleSchema` function to get the correct schema back if multiple have been attached. Refer to [Multiple Schemas](#multiple-schemas) section.
 
 ## Multiple Schemas
 
