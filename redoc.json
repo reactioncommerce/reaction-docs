@@ -238,7 +238,7 @@
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "error-handling-guide",
-			"label": "Error handling guide",
+			"label": "Error Handling Guide",
 			"repo": "reaction-docs",
 			"docPath": "developer/error-handling-guide.md"
 		}, {
