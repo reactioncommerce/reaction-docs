@@ -1,4 +1,4 @@
-# Tutorial: Extend the product schema with a map
+# Tutorial: Add a map to Product pages
 
 Before you get started with this tutorial, make sure to complete the Plugin Tutorial and are familiar with basic React. This tutorial continues on from the `beesknees` plugin.
 

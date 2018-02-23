@@ -148,7 +148,7 @@
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "extending-product-schema-location-map",
-			"label": "Tutorial: Extemd the product schema with a map",
+			"label": "Tutorial: Add a map to Product pages",
 			"repo": "reaction-docs",
 			"docPath": "developer/tutorial/extending-product-schema-location-map.md"
 		}, {
