@@ -1,6 +1,18 @@
-# Enhance ReactionCommerce with geo-tagged products
+# Tutorial: Extend the product schema with a map
 
-## Step 1: Extending the product schema with longitude and latitude
+Before you get started with this tutorial, make sure to complete the Plugin Tutorial and are familiar with basic React. This tutorial continues on from the `beesknees` plugin.
+
+In this tutorial, we're going to save `latitude` and `longitude` fields for each product and use that data to display a map on each Product Detail Page (PDP).
+
+You'll learn how to:
+- Extend the Product schema
+- Add a React component to the Product Detail page
+- Store and use API keys
+- Use product data into a React component
+
+![Screenshot](/assets/extending-product-schema-location-map.png)
+
+## Step 1: Extending product schema with longitude and latitude
 
 Because our products should be geotagged, we need to extend each product with two new fields for latitude and longitude. We like to keep all existing product properties from the original schema called `Product` intact. This is why we import the original schema and use it as base schema for the new, extended schema called `ExtendedSchema`. After extending, we make sure that our new schema is attached to the Products collection. To overwrite the schema already bound to the collection, we pass the parameter `replace: true`. Also notice the `selector` option, which is explained [here, section multiple-schemas](https://docs.reactioncommerce.com/reaction-docs/master/simple-schema)
 
