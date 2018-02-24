@@ -34,12 +34,12 @@ The registry is refreshed only on update/deleting the Package record in the data
 
 ### Top-level properties
 
-| Property      | Type    | Description                         |
-| ------------  |         |                                     |
-| `name`        | String  | Used to refer to the plugin internally. Must be unique. Namespace your plugin to avoid conflicts, e.g. `yourorg-plugin-name`.                         |
-| `label`       | String  | The label is displayed wherever the client refers to the plugin with a text label.                                                                     |
-| `icon`        | String  | The icon is a set of classes that are used to define an icon. The example above refers to a Font Awesome icon.                                              |
-| `autoEnable`  | Boolean | The autoEnable flag tells the app whether or not the plugin should be enabled on load, or if it must be turned on after the app has been started.         |
+| Property     | Type    | Description                                                                                                                                       |
+| ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`       | String  | Used to refer to the plugin internally. Must be unique. Namespace your plugin to avoid conflicts, e.g. `yourorg-plugin-name`.                     |
+| `label`      | String  | The label is displayed wherever the client refers to the plugin with a text label.                                                                |
+| `icon`       | String  | The icon is a set of classes that are used to define an icon. The example above refers to a Font Awesome icon.                                    |
+| `autoEnable` | Boolean | The autoEnable flag tells the app whether or not the plugin should be enabled on load, or if it must be turned on after the app has been started. |
 
 ### Settings object
 
@@ -160,6 +160,7 @@ Again, the `icon` is a set of classes that are used to define an icon. The examp
 ```js
 label: "Orders"
 ```
+
 The `label` is the human readable name for a registry entry. This should be originally written in English. You may then use i18n files within each plugin to translate them into other languages.
 
 ### Container
@@ -167,6 +168,7 @@ The `label` is the human readable name for a registry entry. This should be orig
 ```js
 container: "core"
 ```
+
 This is used to group plugins. Saved for later use.
 
 The `container` is used to define which part of the app a plugin belongs to. This permits us to put different registry entries in their appropriate sections, eg. permissions and shortcuts.
@@ -212,46 +214,50 @@ This property tells us how a part of the app should be used. Different `provides
 
 Currently, the following are valid `provides` values:
 
--`provides: "addressValidation"` - Registers an address validation service to perform address validation. This isn't associated with a route.
+\-`provides: "addressValidation"` - Registers an address validation service to perform address validation. This isn't associated with a route.
 
--`provides: "addressValidation"` requires:
-  - `label`
-  - `name`
-  - `provides`
+\-`provides: "addressValidation"` requires:
+
+- `label`
+- `name`
+- `provides`
 - `provides: "catalogSettings"` - This will register a template to appear in the catalogSettings panel of the dashboard.
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-catalog-settings-1.png" width="50%" align="center">
 
 - `provides: "catalogSettings"` requires:
-  - `label`
-  - `name`
-  - `template`
-  - `provides`
-  - To see an example, check out our [Revisions plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/revisions/register.js#L14-L19).
+
+    - `label`
+    - `name`
+    - `template`
+    - `provides`
+    - To see an example, check out our [Revisions plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/revisions/register.js#L14-L19).
 
 - `provides: "dashboard"` - This will cause a link with an icon and a label to appear in the Action Panel. The link will only be visible for users with appropriate permissions. This value is very similar to `provides: "settings"`.
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-dashboard.png" width="50%">
 
--`provides: "dashboard"` requires:
-  - `container` (unused)
-  - `description` (unused)
-  - `icon`
-  - `label`
-  - `priority` (unused)
-  - `provides`
-  - `name`
-  - `route` (unused)
-  - `template`
-  - `workflow` (unused)
+\-`provides: "dashboard"` requires:
+
+- `container` (unused)
+- `description` (unused)
+- `icon`
+- `label`
+- `priority` (unused)
+- `provides`
+- `name`
+- `route` (unused)
+- `template`
+- `workflow` (unused)
 - `provides: "paymentMethod"` - This will register a payment method form template. These payment forms will get rendered at checkout if the payment method is enabled.
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-payment-method-1.png" width="50%">
 
 - `provides: "paymentMethod"` requires:
-   - `template`
-   - `icon`
-   - `provides`
+
+    - `template`
+    - `icon`
+    - `provides`
 
 - `provides: "paymentSettings"` - This will register a template to appear in the paymentSettings panel of the dashboard.
 
@@ -260,33 +266,36 @@ Currently, the following are valid `provides` values:
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/default-payment-dropdown-1.png" width="50%">
 
 - `provides: "paymentSettings"` requires:
-  - `label`
-  - `template`
-  - `provides`
+
+    - `label`
+    - `template`
+    - `provides`
 
 - `provides: "settings"` - This will register a link with an icon and a label to appear in the dashboard settings section. Link will only be visible for users with appropriate permissions. This value is very similar to `provides: "dashboard"`.
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-dashboard-vs-provides-settings-2.png" width="50%">
 
 - `provides: "settings"` requires:
-  - `label`
-  - `name`
-  - `description` (unused)
-  - `icon`
-  - `template`
-  - `provides`
+
+    - `label`
+    - `name`
+    - `description` (unused)
+    - `icon`
+    - `template`
+    - `provides`
 
 - `provides: "shippingSettings"` - This will register a template to appear in the shippingSettings panel of the dashboard. For an example, check out our [Flat Rate Shipping plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/shipping-rates/register.js#L26-L33).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shipping-settings-1.png" width="50%">
 
 - `provides: "shippingSettings"` requires:
-  - `label`
-  - `template`
-  - `icon`
-  - `name`
-  - `description`
-  - `provides`
+
+    - `label`
+    - `template`
+    - `icon`
+    - `name`
+    - `description`
+    - `provides`
 
 - `provides: "shortcut"` - This adds a link to an admin dropdown menu. When a user image or name is clicked on, a list of shortcuts (which the user has been given permission to access) will appear. `shortcut`s and `userAccountDropdown`s are fairly similar, except `shortcut`s will check for permissions before displaying a link, while `userAccountDropdown`s will display the link to all logged-in users.
 
@@ -295,62 +304,68 @@ Currently, the following are valid `provides` values:
 Shortcuts get passed into [mainDropdown.js](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L44-L58) and then rendered to the [DropDownMenu component](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L117) in the same file. See the [Accounts register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/accounts/register.js#L34-L44) for an example of a shortcut in the registry.
 
 - `provides: "shortcut"` requires:
-  - `route` (unused)
-  - `name`
-  - `workflow` (unused)
-  - `label`
-  - `icon`
-  - `priority` (unused)
-  - `container` (unused)
-  - `template`
-  - `provides`
+
+    - `route` (unused)
+    - `name`
+    - `workflow` (unused)
+    - `label`
+    - `icon`
+    - `priority` (unused)
+    - `container` (unused)
+    - `template`
+    - `provides`
 
 - `provides: "social"` - This will register a template to appear in the [product social template](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-variant/client/templates/products/productDetail/social.html#L4-L6). The only core plugin that currently uses this setting is the Social plugin ([example here](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/social/register.js#L53-L56)).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-social-1.png" width="50%">
 
 - `provides: "social"` requires:
-  - `template`
-  - `provides`
+
+    - `template`
+    - `provides`
 
 - `provides: "taxCodes"` - This will register `getTaxCodesMethod`. We find the taxCodes provider in [variantFormContainer.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-variant/containers/variantFormContainer.js#L39). See an example via our [Avalara plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/taxes-avalara/register.js#L46-L50).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-tax-codes-1.png" width="50%">
 
 - `provides: "taxCodes"` requires:
-  - `label`
-  - `name`
-  - `provides`
+
+    - `label`
+    - `name`
+    - `provides`
 
 - `provides: "taxSettings"` - This will register a template to appear in the Tax section of the dashboard. See our core [Taxes plugin register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/taxes/register.js#L34-L39) for an example.
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-tax-settings-1.png" width="50%">
 
--`provides: "taxSettings"` requires:
-  - `label`
-  - `name`
-  - `icon`
-  - `template`
-  - `provides`
+\-`provides: "taxSettings"` requires:
+
+- `label`
+- `name`
+- `icon`
+- `template`
+- `provides`
 - `provides: "ui-search"` - Registers a template to appear in the search UI. Currently, the search UI only uses a single template, so unless you remove the core search UI plugin, adding additional search templates won't really have an effect. For examples, check out the [search UI register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/ui-search/register.js#L9-L13), which gets pulled into the navbar in [navbarContainer.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/ui-navbar/client/components/navbar/containers/navbarContainer.js#L19).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-ui-search-1.png" width="50%">
 
--`provides: "ui-search"` requires:
-  - `name`
-  - `template`
-  - `provides`
+\-`provides: "ui-search"` requires:
+
+- `name`
+- `template`
+- `provides`
 - `provides: "userAccountDropdown"` - This will add a link to a logged-in user's dropdown menu. When you click on a user's image or name when logged in, you'll seeing a list of shortcuts they have permission to access. `shortcut`s and `userAccountDropdown`s are similar. The primary difference is that `shortcut`s will check for permissions before displaying a link, while `userAccountDropdown`s display the link to all logged-in users. userAccountDropdowns get passed into [mainDropdown.js](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L60-L74), then rendered to the [DropDownMenu component](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L116) in the same file. Currently, the only plugin that registers a `userAccountDropdown` is the [Accounts plugin register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/accounts/register.js#L44-L51).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shortcut-vs-provides-user-account-dropdown-3.png" width="50%">
 
--`provides: "shortcut"` requires:
-  - `route`
-  - `name`
-  - `label`
-  - `icon`
-  - `template`
-  - `provides`
+\-`provides: "shortcut"` requires:
+
+- `route`
+- `name`
+- `label`
+- `icon`
+- `template`
+- `provides`
 
 ## Layout property
 
@@ -358,14 +373,21 @@ The registry property takes an array of objects that are defined by the [Layout 
 
 <http://api.docs.reactioncommerce.com/schemas.html#.Layout>
 
-| property   |                              |                                                                                                                                                   |
-| ---------- | :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Workflow   | `name: "reaction-dashboard"` | Used to refer to the plugin internally. Must be unique. Namespace your plugin to avoid conflicts, e.g. `yourorg-plugin-name`.                     |
-| Layout     | `label: "Dashboard"`         | The label is displayed wherever the client refers to the plugin with a text label.                                                                |
-| Collection | `icon: "fa fa-th"`           | The icon is a set of classes that are used to define an icon. The example above refers to a Font Awesome icon.                                    |
-| Theme      | `autoEnable: true`           | The autoEnable flag tells the app whether or not the plugin should be enabled on load, or if it must be turned on after the app has been started. |
-| Enabled    | `autoEnable: true`           | The autoEnable flag tells the app whether or not the plugin should be enabled on load, or if it must be turned on after the app has been started. |
-| Structured | `autoEnable: true`           | The autoEnable flag tells the app whether or not the plugin should be enabled on load, or if it must be turned on after the app has been started. |
+| Name       | Type            | Description                                                                     |
+| ---------- | --------------- | ------------------------------------------------------------------------------- |
+| layout     | String          | optional                                                                        |
+| workflow   | String          | optional                                                                        |
+| template   | String          | optional                                                                        |
+| collection | String          | optional                                                                        |
+| theme      | String          | optional                                                                        |
+| enabled    | Boolean         | default value: true                                                             |
+| status     | String          | optional                                                                        |
+| label      | String          | optional                                                                        |
+| container  | String          | optional                                                                        |
+| audience   | Array.<String>  | optional                                                                        |
+| structure  | LayoutStructure | optional                                                                        |
+| priority   | Number          | optional default value: 999 - Layouts are prioritized with lower numbers first. |
+| position   | Number          | optional default value: 1                                                       |
 
 ### Workflow
 
