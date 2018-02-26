@@ -14,3 +14,11 @@ You may customize the following:
 We offer translations in over 20 languages, including right-to-left languages like Hebrew. To enable or disable a language, toggle each option on or off.
 
 ![Changing currency and language on Reaction](/assets/admin-localization.png)
+
+## Reloading translations 
+
+Translations can be reloaded in the **Localization and i18n** dashboard panel using the reload button. This will relaod translations for the current shop.
+
+As the owner of the primary shop, you may also `alt + click` or `option + click` on the reload button to reload translations for all shops.
+
+![](/assets/admin-i18n-reload.png "Localization and i18n reload")
