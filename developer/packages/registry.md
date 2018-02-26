@@ -6,6 +6,10 @@ The Registry is the defining file of any Reaction plugin. You can think of the `
 
 A `registry` object can be any combination of properties, with `provides` and `name` being the only required elements.
 
+The registry is refreshed only on update/deleting the Package record in the database, on delete/addition of the package and restarting the app.
+
+Once registered, plugins are published to the client in the [Packages publication](https://github.com/reactioncommerce/reaction/blob/v1.8.0/server/publications/collections/packages.js). Inspecting this publication will give you some insight as to how and what parts of plugins are published to different parts of the app and how plugin settings can be public or private.
+
 ## A basic Register.js file
 
 Here's an example of the most basic `register.js` file.
@@ -28,9 +32,11 @@ Reaction.registerPackage({
 });
 ```
 
-Once registered, plugins are published to the client in the [Packages publication](https://github.com/reactioncommerce/reaction/blob/v1.8.0/server/publications/collections/packages.js). Inspecting this publication will give you some insight as to how and what parts of plugins are published to different parts of the app and how plugin settings can be public or private.
-
-The registry is refreshed only on update/deleting the Package record in the database, on delete/addition of the package and restarting the app.
+There are four main sections:
+1\. Top-level properties
+2\. Settings object
+3\. Registry object
+4\. Layout object
 
 ### Top-level properties
 
@@ -45,33 +51,26 @@ The registry is refreshed only on update/deleting the Package record in the data
 
 The settings property is required, but it can also just be an empty object, `{}`.
 
-- **Declare public settings**: Put all public, client settings for all users in the `public` object.
-- **All others are private**: Everything outside of the `public` property will be private. Use for API keys, passwords, etc.
-- **The `settings` object is a black box**: The schema will permit anything inside the object.
-- **Fetching package settings**: Use [getPackageSettings()](http://api.docs.reactioncommerce.com/Core.html#.getPackageSettings) method to retrieve settings.
-
-Here's an example of a settings object for a payment package:
+Here's a snippet from the Marketplace plugin registry file: [plugins/included/marketplace/register.js](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/included/marketplace/register.js)
 
 ```js
-settings: {  
+settings: {
+  name: "Marketplace",
+  enabled: true,
   public: {
-    allowGuestCheckout: true
-  },
-  mail: {
-    user: "",
-    password: "",
-    host: "",
-    port: ""
-  },
-  openexchangerates: {
-    appId: "",
-    refreshPeriod: "every 1 hour"
-  },
-  paymentMethod: {
-    defaultPaymentMethod: ""
+    allowMerchantSignup: false, // Merchants can sign up without an invite
+    marketplaceNakedRoutes: true, // Routes to the primary marketplace shop should not use shop prefix
+    merchantCart: false, // Unique cart for each merchant
   }
 }
 ```
+
+Use the settings object to:
+
+- **Declare public settings**: Put all public, client settings for all users in the `public` object. The public object is useful for setting permission booleans.
+- **All others are private**: Everything outside of the `public` property will be private. Use for API keys, passwords, etc.
+- **The `settings` object is a black box**: The schema will permit anything inside the object.
+- **Fetching package settings**: Use [getPackageSettings()](http://api.docs.reactioncommerce.com/Core.html#.getPackageSettings) method to retrieve settings.
 
 ## Registry property
 
@@ -208,22 +207,58 @@ meta: {
 
 Currently, the only setting used within the `meta` property is to set the `dashboardSize` for the `actionView`. The [Email register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/email/register.js#L19-L23) is an example of this.
 
-### Provides
+## Provides
 
 This property tells us how a part of the app should be used. Different `provides` values will have different requirements in terms of the other properties that should be listed alongside them.
 
 Currently, the following are valid `provides` values:
 
-\-`provides: "addressValidation"` - Registers an address validation service to perform address validation. This isn't associated with a route.
+| Value                 | Description                                                                                                                   |                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `addressValidation`   | Register an address validation service to perform address validation.                                                         | Requires `label`, `name`, `provides`                                    |
+| `catalogSettings`     | Register template to appear in **Catalog** panel                                                                              | Requires `label`, `name`, `provides`, `template`                        |
+| `dashboard`           | Register a template, icon and label to appear in Action Panel, for users with appropriate permissions. Similar to `settings`  | See example                                                             |
+| `paymentMethod`       | Register a payment method form template                                                                                       | Requires `icon`, `provides`, `template`                                 |
+| `paymentSettings`     | Register a template to appear in **Payment** panel                                                                            | Requires `label`, `provides`, `template`                                |
+| `settings`            | Register a template, icon and label to appear in Action Panel, for users with appropriate permissions. Similar to `dashboard` | See example                                                             |
+| `shippingSettings`    | Register a template to appear in **Shipping** panel                                                                           | Requires `description`, `icon`, `label`, `name`, `provides`, `template` |
+| `shortcut`            | Add a link to the Admin dropdown menu, for users with appropriate permissions                                                 | See example                                                             |
+| `social`              | Register a template in the product social template                                                                            | Requires `template`, `provides`                                         |
+| `taxCodes`            | Register `getTaxCodesMethod` in **Variant** panel                                                                             | Requires `label`, `name`, `provides`                                    |
+| `taxSettings`         | Register a template to appear in **Tax** panel                                                                                | Requires `label`, `name`, `icon`, `template`, `provides`                |
+| `ui-search`           | Register a template to appear in search                                                                                       | Requires `name`, `template`, `provides`                                 |
+| `userAccountDropdown` | Add a link to User dropdown menu                                                                                              | Requires `route`, `name`, `label`, `icon`, `template`, `provides`       |
 
-\-`provides: "addressValidation"` requires:
+### Dashboard settings: Dashboard, Social, Catalog, Shipping
 
-- `label`
-- `name`
-- `provides`
-- `provides: "catalogSettings"` - This will register a template to appear in the catalogSettings panel of the dashboard.
+To add and customize Dashboard panels, use these `provides` values.
 
-<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-catalog-settings-1.png" width="50%" align="center">
+<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-dashboard.png" width="50%">
+
+- `provides: "dashboard"` will cause a link with an icon and a label to appear in the Action Panel. The link will only be visible for users with appropriate permissions. This value is very similar to `provides: "settings"`.
+
+- `provides: "dashboard"` requires:
+
+    - `container` (unused)
+    - `description` (unused)
+    - `icon`
+    - `label`
+    - `priority` (unused)
+    - `provides`
+    - `name`
+    - `route` (unused)
+    - `template`
+    - `workflow` (unused)
+
+- `provides: "social"` - This will register a template to appear in the [product social template](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-variant/client/templates/products/productDetail/social.html#L4-L6). The only core plugin that currently uses this setting is the Social plugin ([example here](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/social/register.js#L53-L56)).
+    <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-social-1.png" width="50%">
+
+- `provides: "social"` requires:
+
+    - `template`
+    - `provides`
+
+- `provides: "catalogSettings"` will register a template to appear in the catalogSettings panel of the dashboard.
 
 - `provides: "catalogSettings"` requires:
 
@@ -231,27 +266,26 @@ Currently, the following are valid `provides` values:
     - `name`
     - `template`
     - `provides`
-    - To see an example, check out our [Revisions plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/revisions/register.js#L14-L19).
 
-- `provides: "dashboard"` - This will cause a link with an icon and a label to appear in the Action Panel. The link will only be visible for users with appropriate permissions. This value is very similar to `provides: "settings"`.
+- To see an example, check out the [Revisions plugin](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/core/revisions/register.js).
 
-<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-dashboard.png" width="50%">
+- `provides: "shippingSettings"` - This will register a template to appear in the shippingSettings panel of the dashboard. For an example, check out our [Flat Rate Shipping plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/shipping-rates/register.js#L26-L33).
 
-\-`provides: "dashboard"` requires:
+<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shipping-settings-1.png" width="50%">
 
-- `container` (unused)
-- `description` (unused)
-- `icon`
-- `label`
-- `priority` (unused)
-- `provides`
-- `name`
-- `route` (unused)
-- `template`
-- `workflow` (unused)
-- `provides: "paymentMethod"` - This will register a payment method form template. These payment forms will get rendered at checkout if the payment method is enabled.
+- `provides: "shippingSettings"` requires:
+    - `label`
+    - `template`
+    - `icon`
+    - `name`
+    - `description`
+    - `provides`  
+
+### Payment-related: Methods and Settings
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-payment-method-1.png" width="50%">
+
+- `provides: "paymentMethod"` - This will register a payment method form template. These payment forms will get rendered at checkout if the payment method is enabled.
 
 - `provides: "paymentMethod"` requires:
 
@@ -276,7 +310,6 @@ Currently, the following are valid `provides` values:
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-dashboard-vs-provides-settings-2.png" width="50%">
 
 - `provides: "settings"` requires:
-
     - `label`
     - `name`
     - `description` (unused)
@@ -284,24 +317,14 @@ Currently, the following are valid `provides` values:
     - `template`
     - `provides`
 
-- `provides: "shippingSettings"` - This will register a template to appear in the shippingSettings panel of the dashboard. For an example, check out our [Flat Rate Shipping plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/shipping-rates/register.js#L26-L33).
-
-<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shipping-settings-1.png" width="50%">
-
-- `provides: "shippingSettings"` requires:
-
-    - `label`
-    - `template`
-    - `icon`
-    - `name`
-    - `description`
-    - `provides`
+### Menu link settings: Shortcut and User Account Dropdown
 
 - `provides: "shortcut"` - This adds a link to an admin dropdown menu. When a user image or name is clicked on, a list of shortcuts (which the user has been given permission to access) will appear. `shortcut`s and `userAccountDropdown`s are fairly similar, except `shortcut`s will check for permissions before displaying a link, while `userAccountDropdown`s will display the link to all logged-in users.
+    <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shortcut-vs-provides-user-account-dropdown-2.png" width="50%">
 
-<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shortcut-vs-provides-user-account-dropdown-2.png" width="50%">
+- Shortcuts get passed into [mainDropdown.js](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L44-L58) and then rendered to the [DropDownMenu component](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L117) in the same file.
 
-Shortcuts get passed into [mainDropdown.js](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L44-L58) and then rendered to the [DropDownMenu component](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L117) in the same file. See the [Accounts register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/accounts/register.js#L34-L44) for an example of a shortcut in the registry.
+- See the [Accounts register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/accounts/register.js#L34-L44) for an example of a shortcut in the registry.
 
 - `provides: "shortcut"` requires:
 
@@ -315,14 +338,11 @@ Shortcuts get passed into [mainDropdown.js](https://github.com/reactioncommerce/
     - `template`
     - `provides`
 
-- `provides: "social"` - This will register a template to appear in the [product social template](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-variant/client/templates/products/productDetail/social.html#L4-L6). The only core plugin that currently uses this setting is the Social plugin ([example here](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/social/register.js#L53-L56)).
+- `provides: "userAccountDropdown"` - This will add a link to a logged-in user's dropdown menu. When you click on a user's image or name when logged in, you'll seeing a list of shortcuts they have permission to access. `shortcut`s and `userAccountDropdown`s are similar. The primary difference is that `shortcut`s will check for permissions before displaying a link, while `userAccountDropdown`s display the link to all logged-in users. userAccountDropdowns get passed into [mainDropdown.js](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L60-L74), then rendered to the [DropDownMenu component](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L116) in the same file. Currently, the only plugin that registers a `userAccountDropdown` is the [Accounts plugin register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/accounts/register.js#L44-L51).
 
-<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-social-1.png" width="50%">
+<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shortcut-vs-provides-user-account-dropdown-3.png" width="50%">
 
-- `provides: "social"` requires:
-
-    - `template`
-    - `provides`
+### Taxes
 
 - `provides: "taxCodes"` - This will register `getTaxCodesMethod`. We find the taxCodes provider in [variantFormContainer.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-variant/containers/variantFormContainer.js#L39). See an example via our [Avalara plugin](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/taxes-avalara/register.js#L46-L50).
 
@@ -335,8 +355,7 @@ Shortcuts get passed into [mainDropdown.js](https://github.com/reactioncommerce/
     - `provides`
 
 - `provides: "taxSettings"` - This will register a template to appear in the Tax section of the dashboard. See our core [Taxes plugin register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/taxes/register.js#L34-L39) for an example.
-
-<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-tax-settings-1.png" width="50%">
+    <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-tax-settings-1.png" width="50%">
 
 \-`provides: "taxSettings"` requires:
 
@@ -345,6 +364,9 @@ Shortcuts get passed into [mainDropdown.js](https://github.com/reactioncommerce/
 - `icon`
 - `template`
 - `provides`
+
+### Search
+
 - `provides: "ui-search"` - Registers a template to appear in the search UI. Currently, the search UI only uses a single template, so unless you remove the core search UI plugin, adding additional search templates won't really have an effect. For examples, check out the [search UI register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/ui-search/register.js#L9-L13), which gets pulled into the navbar in [navbarContainer.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/ui-navbar/client/components/navbar/containers/navbarContainer.js#L19).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-ui-search-1.png" width="50%">
@@ -352,18 +374,6 @@ Shortcuts get passed into [mainDropdown.js](https://github.com/reactioncommerce/
 \-`provides: "ui-search"` requires:
 
 - `name`
-- `template`
-- `provides`
-- `provides: "userAccountDropdown"` - This will add a link to a logged-in user's dropdown menu. When you click on a user's image or name when logged in, you'll seeing a list of shortcuts they have permission to access. `shortcut`s and `userAccountDropdown`s are similar. The primary difference is that `shortcut`s will check for permissions before displaying a link, while `userAccountDropdown`s display the link to all logged-in users. userAccountDropdowns get passed into [mainDropdown.js](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L60-L74), then rendered to the [DropDownMenu component](https://github.com/reactioncommerce/reaction/blob/master/client/modules/accounts/components/dropdown/mainDropdown.js#L116) in the same file. Currently, the only plugin that registers a `userAccountDropdown` is the [Accounts plugin register.js](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/accounts/register.js#L44-L51).
-
-<img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shortcut-vs-provides-user-account-dropdown-3.png" width="50%">
-
-\-`provides: "shortcut"` requires:
-
-- `route`
-- `name`
-- `label`
-- `icon`
 - `template`
 - `provides`
 
