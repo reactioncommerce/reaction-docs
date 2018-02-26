@@ -194,12 +194,6 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/data-fixtures-insert-product-images.md"
 		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "template-helpers",
-			"label": "Helpers",
-			"repo": "reaction-docs",
-			"docPath": "developer/themes/helpers.md"
-		}, {
 			"class": "guide-nav-item",
 			"alias": "contributing-to-reaction",
 			"label": "Contributing Guide",
@@ -499,6 +493,12 @@
 			"label": "Module Import Cheatsheet",
 			"repo": "reaction-docs",
 			"docPath": "developer/module-cheatsheet.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "template-helpers",
+			"label": "Helpers",
+			"repo": "reaction-docs",
+			"docPath": "developer/themes/helpers.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "revision-api",
