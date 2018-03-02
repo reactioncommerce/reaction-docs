@@ -15,7 +15,7 @@ We offer translations in over 20 languages, including right-to-left languages li
 
 ![Changing currency and language on Reaction](/assets/admin-localization.png)
 
-## Reloading translations 
+## Reloading translations
 
 Translations can be reloaded in the **Localization and i18n** dashboard panel using the reload button. This will reload translations for the current shop.
 
