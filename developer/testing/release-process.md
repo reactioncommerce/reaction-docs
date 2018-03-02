@@ -78,5 +78,11 @@ Notes:
 ## Post-release checklist: Major releases
 
 - Community team: Tag a new Documentation release and update Editorial about any new documentation tutorial links, new FAQ questions and other relevant content for social media channels.
+
 - Community / Editorial team: If a release is noteworthy enough for a blog post, assign a blog post writer for the release post. The post should include instructions on how to upgrade.
-- Community team: Assign team members to review all [major plugin tutorial repositories](https://github.com/reactioncommerce/reaction-example-plugin/), [YouTube videos](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH), [`reaction-devtools`](https://github.com/reactioncommerce/reaction-devtools), [`reaction-swag-shop`](https://github.com/reactioncommerce/reaction-swag-shop) and documentation tutorials against the latest release. If plugins or tutorials fail, make issues appropriately.
+
+- Community team: Assign team members to review and test supported repositories and tutorials. Make issues if any of these fail or break with the newest release:
+  - [reaction-example-plugin](https://github.com/reactioncommerce/reaction-example-plugin/)
+  - [YouTube video tutorials](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH)
+  - [`reaction-devtools`](https://github.com/reactioncommerce/reaction-devtools)
+  - [`reaction-swag-shop`](https://github.com/reactioncommerce/reaction-swag-shop)
