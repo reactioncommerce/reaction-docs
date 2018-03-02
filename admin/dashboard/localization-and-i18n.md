@@ -19,6 +19,6 @@ We offer translations in over 20 languages, including right-to-left languages li
 
 Translations can be reloaded in the **Localization and i18n** dashboard panel using the reload button. This will reload translations for the current shop.
 
-As the owner of the primary shop, you may also `alt + click` or `option + click` on the reload button to reload translations for all shops.
+As the owner of the primary shop, you may also <kbd>alt</kbd> + `click` or <kbd>option</kbd> + `click` on the reload button to reload translations for all shops.
 
 ![](/assets/admin-i18n-reload.png "Localization and i18n reload")
