@@ -11,7 +11,7 @@ Test to verify the following functionality:
 **Touch Points**
  * Test must be completed two consecutive times to be considered passing.
  * Test must be completed using all three **user type** variants to be considered passing.
- * TODO: Paypal express note
+ * PayPal Express needs a personal sandbox account to test. See the [PayPal documentation](https://developer.paypal.com/docs/classic/lifecycle/sb_about-accounts/#create-a-personal-sandbox-account) for more information.
 
 ## Intended Outcome
  * The user will receive a confirmation screen, displaying the order ID, the user’s email address, items ordered, shipping address, payment method and order total summary.
@@ -89,4 +89,4 @@ Test to verify the following functionality:
    c. **Registered User**: Click the “Sign in” button below the register form and enter user credentials. Select a shipping address if needed.
  5. Select a shipping option.
  6. Fill out appropriate payment information for the payment provider and click the “Complete your order” button.
-   a. **PayPal Express**: 
+   a. **PayPal Express**: will open in a modal window, follow the sets using a PayPal sandbox account. More info how to create a sandbox account [here](https://developer.paypal.com/docs/classic/lifecycle/sb_about-accounts/#create-a-personal-sandbox-account).
