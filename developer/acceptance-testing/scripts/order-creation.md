@@ -50,24 +50,27 @@ Test to verify the following functionality:
 
 **PayPal Express**
  1. Click the payment option in the admin menu to open the payment provider settings panel.
- 2. Enter a Merchant ID, Username, Password and Signature.
- 3. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
- 4. Select "Authorize, Capture on complete" from the Capture at time of auth selectbox.
+ 2. Click the checkbox to right of the PayPal Express label to open the PayPal Express settings.
+ 3. Enter a Merchant ID, Username, Password and Signature.
+ 4. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
+ 5. Select "Authorize, Capture on complete" from the Capture at time of auth selectbox.
  6. Select "Testing - Sandbox Mode" from Express Mode selectbox.
  7. Click the "save changes" button.
  
 **PayPal Flow**
  1. Click the payment option in the admin menu to open the payment provider settings panel.
- 2. Eneter an API Client ID and a API Secret.
- 3. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
- 4. Select "Testing - Sandbox Mode" from the Payflow Mode selectbox.
- 5. Click the "save changes" button.
+ 2. Click the checkbox to right of the PayPal Flow label to open the PayPal Flow settings.
+ 3. Eneter an API Client ID and a API Secret.
+ 4. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
+ 5. Select "Testing - Sandbox Mode" from the Payflow Mode selectbox.
+ 6. Click the "save changes" button.
  
 **Stripe**
  1. Click the payment option in the admin menu to open the payment provider settings panel.
- 2. Eneter an API Secret Key.
- 3. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
- 4. Click the "save changes" button.
+ 2. Click the checkbox to right of the Stripe label to open the Stripe settings.
+ 3. Eneter an API Secret Key.
+ 4. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
+ 5. Click the "save changes" button.
 
 ### Shipping
 **Flat Rate**
@@ -78,7 +81,15 @@ Test to verify the following functionality:
  1. Click the shipping option in the admin menu to open the shipping settings panel.
 
 ### Taxation
+**Custom Rates**
+ 1. Click the taxation option in the admin menu to open the taxation settings panel.
 
+**Avalara**
+ 1. Click the taxation option in the admin menu to open the taxation settings panel.
+ 
+**TaxCloud**
+ 1. Click the taxation option in the admin menu to open the taxation settings panel.
+ 
 ## Testing Steps
  1. Starting at the shop’s product grid page click any product to view the product detail page.
  2. Click on a product’s variant to select the product then click the “Add to cart” button.
