@@ -1,4 +1,4 @@
-# Acceptance Testing
+# Acceptance Testing (old AT scripts for referance only, remove after new AT scripts are added)
 
 ## Purpose
 
