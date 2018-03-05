@@ -86,5 +86,5 @@ Notes:
   - [YouTube video tutorials](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH)
   - [`reaction-devtools`](https://github.com/reactioncommerce/reaction-devtools)
   - [`reaction-swag-shop`](https://github.com/reactioncommerce/reaction-swag-shop)
-   - [`reaction-doc`])https://github.com/reactioncommerce/payments-cod)
+  - [`reaction-doc`])https://github.com/reactioncommerce/payments-cod)
    
