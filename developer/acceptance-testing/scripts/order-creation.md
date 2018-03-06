@@ -76,12 +76,16 @@ Test to verify the following functionality:
 **Flat Rate**
  1. Click the shipping option in the admin menu to open the shipping settings panel.
  2. Click the checkbox to right of the Flat Rate label to open the Flat Rate settings.
-  . Click the "save changes" button.
+ 3. Select one of the shipping rate method rows from the table to open the method options.
+ 4. Click the "enabled" checkbox to enable the shipping method.
+ 5. Click the "save changes" button.
  
 **Shippo**
  1. Click the shipping option in the admin menu to open the shipping settings panel.
  2. Click the checkbox to right of the Shippo label to open the Shippo settings.
- 3. Click the "save changes" button.
+ 3. Click the "Edit API Key" link to open the Shippo settings.
+ 4. Add an API Key and click the "save changes" button.
+ 5. Click the "Refresh methods" link to refresh the shipping options.
 
 ### Taxation
 **Custom Rates**
