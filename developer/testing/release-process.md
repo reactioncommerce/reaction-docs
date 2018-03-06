@@ -70,6 +70,21 @@ Notes:
 - Wait for all `master` tests to pass.
 - Follow the format of previous release, copy change log from release PR into the release notes.
 
-## Cleanup
+## Post-release checklist: All releases
 
-- Review issues that the release resolves, that they are closed and stale branches removed.
+- Core team: Review issues that the release resolves, that they are closed and stale branches removed.
+- Community team: Update Gitter with links to the latest release, changelog and update instructions.
+
+## Post-release checklist: Major releases
+
+- Community team: Tag a new Documentation release and update Editorial about any new documentation tutorial links, new FAQ questions and other relevant content for social media channels.
+
+- Community / Editorial team: If a release is noteworthy enough for a blog post, assign a blog post writer for the release post. The post should include instructions on how to upgrade.
+
+- Community team: Assign team members to review and test supported repositories and tutorials. Make issues if any of these fail or break with the newest release:
+  - [reaction-example-plugin](https://github.com/reactioncommerce/reaction-example-plugin/)
+  - [YouTube video tutorials](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH)
+  - [`reaction-devtools`](https://github.com/reactioncommerce/reaction-devtools)
+  - [`reaction-swag-shop`](https://github.com/reactioncommerce/reaction-swag-shop)
+  - [`reaction-doc`](https://github.com/reactioncommerce/payments-cod)
+   
