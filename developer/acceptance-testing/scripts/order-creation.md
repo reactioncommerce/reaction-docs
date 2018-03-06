@@ -91,12 +91,17 @@ Test to verify the following functionality:
 **Custom Rates**
  1. Click the taxation option in the admin menu to open the taxation settings panel.
  2. Click the checkbox to right of the Custom Rates label to open the Custom Rates settings.
- 3. Click the "save changes" button.
+ 3. Click the "+" button to add a new custom tax rate.
+ 4. Select a country and a state/province/region from their respective selectboxes.
+ 5. Enter a ZIP Code/Postal Code.
+ 6. Enter the tax rate percentage.
+ 7. Click the "save changes" button.
 
 **Avalara**
  1. Click the taxation option in the admin menu to open the taxation settings panel.
  2. Click the checkbox to right of the Avalara label to open the Avalara settings.
- 3. Click the "save changes" button.
+ 3. TODO: work out the setup steps for Avalara
+ 4. Click the "save changes" button.
  
 **TaxCloud**
  1. Click the taxation option in the admin menu to open the taxation settings panel.
