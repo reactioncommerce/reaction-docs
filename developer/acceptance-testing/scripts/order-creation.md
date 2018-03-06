@@ -60,7 +60,7 @@ Test to verify the following functionality:
 **PayPal Flow**
  1. Click the payment option in the admin menu to open the payment provider settings panel.
  2. Click the checkbox to right of the PayPal Flow label to open the PayPal Flow settings.
- 3. Eneter an API Client ID and a API Secret.
+ 3. Enter an API Client ID and a API Secret.
  4. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
  5. Select "Testing - Sandbox Mode" from the Payflow Mode selectbox.
  6. Click the "save changes" button.
@@ -68,7 +68,7 @@ Test to verify the following functionality:
 **Stripe**
  1. Click the payment option in the admin menu to open the payment provider settings panel.
  2. Click the checkbox to right of the Stripe label to open the Stripe settings.
- 3. Eneter an API Secret Key.
+ 3. Enter an API Secret Key.
  4. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
  5. Click the "save changes" button.
 
@@ -84,7 +84,7 @@ Test to verify the following functionality:
  1. Click the shipping option in the admin menu to open the shipping settings panel.
  2. Click the checkbox to right of the Shippo label to open the Shippo settings.
  3. Click the "Edit API Key" link to open the Shippo settings.
- 4. Add an API Key and click the "save changes" button.
+ 4. Enter an API Key and click the "save changes" button.
  5. Click the "Refresh methods" link to refresh the shipping options.
 
 ### Taxation
@@ -101,7 +101,8 @@ Test to verify the following functionality:
 **TaxCloud**
  1. Click the taxation option in the admin menu to open the taxation settings panel.
  2. Click the checkbox to right of the TaxCloud label to open the TaxCloud settings.
- 3. Click the "save changes" button.
+ 3. Enter a TaxCloud API Login ID and a TaxCloud API Key.
+ 4. Click the "save changes" button.
  
 ## Testing Steps
  1. Starting at the shop’s product grid page click any product to view the product detail page.
