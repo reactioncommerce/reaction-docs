@@ -1,6 +1,6 @@
 # Installation for Windows
 
-[![Installation Video](/assets/guide-installation-video-screenshot-windows.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
+[![Installation Video](/assets/guide-installation-video-screenshot-windows.png)](https://www.youtube.com/watch?v=FCxLQFpppLo&t=1s)
 
 ## Install prerequisites
 
