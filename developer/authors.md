@@ -2,9 +2,7 @@
 
 Thanks to these authors whose packages and contributions we use in Reaction.
 
-Eric Dobbertin [Autoform](https://github.com/aldeed/meteor-autoform)   [Collection2](https://github.com/aldeed/meteor-collection2)  [Simple Schema](https://github.com/aldeed/meteor-simple-schema)
-
-Morten Henriksen [CollectionFS](https://github.com/CollectionFS/Meteor-CollectionFS)
+Eric Dobbertin [Autoform](https://github.com/aldeed/meteor-autoform)   [Collection2](https://github.com/aldeed/meteor-collection2)  [Simple Schema](https://github.com/aldeed/simple-schema-js)
 
 Tom Coleman & Chris Mathers [Iron Router](https://github.com/EventedMind/iron-router/)
 
