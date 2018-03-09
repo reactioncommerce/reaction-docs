@@ -548,7 +548,7 @@
 			"label": "Lists",
 			"docPath": "developer/components/lists.md"
 		}, {
-			"label": "Media",
+			"label": "Media-Related",
 			"docPath": "developer/components/media.md"
 		}, {
 			"label": "Menu",
@@ -592,9 +592,6 @@
 		}, {
 			"label": "Translation",
 			"docPath": "developer/components/translation.md"
-		}, {
-			"label": "Upload",
-			"docPath": "developer/components/upload.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "packages",
