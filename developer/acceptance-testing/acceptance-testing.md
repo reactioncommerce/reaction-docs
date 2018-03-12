@@ -35,9 +35,6 @@ Table of contents for all Reaction Commerce AT scripts.
  - [Order Canceling](/developer/acceptance-testing/scripts/order-canceling.md)
  - [Order Refunding](/developer/acceptance-testing/scripts/order-refunding.md)
 
-## Glossary
-TODO: list of AT terms with definition
-
 ## Resources
 **Testing**
  - [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
