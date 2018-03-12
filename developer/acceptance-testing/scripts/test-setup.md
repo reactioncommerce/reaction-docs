@@ -7,6 +7,13 @@
  - Create a fresh product inventory using [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
  - Keep browser console open to monitor any client-side errors or warnings
  - Keep terminal in view to monitor any server-side errors or warnings
+ 
+## Devtools
+Reaction Devtools 
+
+### Install
+
+### Loading Sample Data
 
 ## Payment Provider
 
@@ -82,8 +89,15 @@
 ### Avalara
  1. Click the taxation option in the admin menu to open the taxation settings panel.
  2. Click the checkbox to right of the Avalara label to open the Avalara settings.
- 3. TODO: work out the setup steps for Avalara
- 4. Click the "save changes" button.
+ 3. Enter an Avalara API Login ID, Username, Password, Company Code and Shipping Tax Code.
+ 4. Enable Address Validation.
+ 5. Enter the countries needed for Address Validation.
+ 6. Enter a Request Timeout number.
+ 7. Select "Testing - Sandbox Mode" from the selectbox.
+ 8. Enable Preform Tax Calculation
+ 9. Enter a Retain Logs Duration number.
+ 10. Enable Commit Documents.
+ 11. Click the "save changes" button.
  
 ### TaxCloud
  1. Click the taxation option in the admin menu to open the taxation settings panel.
