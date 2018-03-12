@@ -9,11 +9,21 @@
  - Keep terminal in view to monitor any server-side errors or warnings
  
 ## Devtools
-Reaction Devtools 
+Reaction Devtools is a Reaction Commerce plugin that allows you to load a variety of data sets for testing directly from the admin dashboard.
 
 ### Install
+ 1. Clone or download the [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools) repository into the `/imports/plugins/custom/` directory of your Reaction Commerce project.
+ 2. Run `meteor npm install jpeg-js` if you need to test with product images.
+ 3. Run `reaction reset` before starting your Reaction Commerce project.
 
 ### Loading Sample Data
+ 1. Click the devtools option in the admin menu to open the devtools panel.
+ 2. Click the "Reset Data" button to remove all Product, Tag and Order data.
+ 3. Click the "Load Products and Tags" buttons to load basic shop data.
+ 4. Click the "Load Orders" button to load unprocessed new orders.
+ 5. Click the "Load Images" button to create product images for all products.
+ **Note:** Loading product images can take a few minutes depending on the amount of products that have been created.
+ **Note:** Loading the large dataset while running Reaction Commerce on your local development machine is discouraged. 
 
 ## Payment Provider
 
