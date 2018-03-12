@@ -19,7 +19,10 @@ Reaction Devtools
 
 ### Example Provider
  1. Click the payment option in the admin menu to open the payment provider settings panel.
- 1. TODO: need steps for this
+ 2. Click the checkbox to right of the Example Provider label to open the settings.
+ 3. Enter an API Key.
+ 4. Clcik the "Authorize", "Capture" & "Refund" checkboxes for the supported methods.
+ 5. Click the "save changes" button.
  
 ### Authorize.net
  1. Click the payment option in the admin menu to open the payment provider settings panel.
@@ -97,6 +100,7 @@ Reaction Devtools
  8. Enable Preform Tax Calculation
  9. Enter a Retain Logs Duration number.
  10. Enable Commit Documents.
+ 11. Click the "Test Credentials" to verify Avalara is properly configured.
  11. Click the "save changes" button.
  
 ### TaxCloud
