@@ -6,7 +6,7 @@ Throughout this tutorial, we'll refer to layouts as _Layout_, sections as _Conta
 
 A _Layout_ is always used in conjunction with _workflow processes_ or sometimes - even more specifically - with individual _workflow steps_, which both acts as _Container_ as the _Layout_ is rendered.
 
-> ProTip: There's additionally a more lightweight way of rendering templates directly without the need for a _Layout_ which is explained in the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6.md)
+> ProTip: There's additionally a more lightweight way of rendering templates directly without the need for a _Layout_ which is explained in the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6)
 
 ## What is a Layout?
 
