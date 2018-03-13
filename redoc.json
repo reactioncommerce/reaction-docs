@@ -453,10 +453,10 @@
 			"docPath": "developer/core/orders.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "reaction-import",
-			"label": "Import",
+			"alias": "reaction-importer",
+			"label": "Importer",
 			"repo": "reaction-docs",
-			"docPath": "developer/core/import.md"
+			"docPath": "developer/core/importer.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "reaction-inventory",
