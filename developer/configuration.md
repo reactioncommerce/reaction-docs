@@ -219,9 +219,9 @@ reaction
 
 ## Importing Data
 
-The `Reaction.Import` class provides import functionality.
+The `Reaction.Importer` class provides import functionality.
 
-See: [import.md](/developer/core/import.md) for documentation on `Reaction.Import`.
+See: [importer.md](/developer/core/importer.md) for documentation on `Reaction.Importer`.
 
 _Example import of shipping records_
 
@@ -230,8 +230,8 @@ import { Meteor} from "meteor/meteor";
 import { Reaction } from "/server/api";
 
 Meteor.startup(function () {
-  Reaction.Import.process(Assets.getText("data/Shipping.json"), ["name"], Reaction.Import.shipping);
-  Reaction.Import.flush();
+  Reaction.Importer.process(Assets.getText("data/Shipping.json"), ["name"], Reaction.Importer.shipping);
+  Reaction.Importer.flush();
 });
 ```
 
