@@ -50,8 +50,6 @@ eval "$(docker-machine env reaction-host)"
 
 Now when you run Docker commands, they will be executing on the remote server instead of your local machine. Ok, let's fire up some Docker containers on your new server!
 
-### Docker
-
 If you don't have a customized version of Reaction Commerce, you can use our official release builds that are [available on Docker Hub](https://hub.docker.com/r/reactioncommerce/reaction/) as `reactioncommerce/reaction:latest`. The official releases are built by [Circle CI](https://circleci.com/) every time code is merged into [the master branch on Github](https://github.com/reactioncommerce/reaction/tree/master).
 
 All you need to run the latest stable build of Reaction is a single Docker command (assuming you have a Mongo database hosted somewhere - e.g. [Compose.io](https://compose.io), etc.)
@@ -93,7 +91,7 @@ Once you have your host IP, go to your domain name provider and point your domai
 
 That's it. You're done!  Once your DNS records update, you should then be able to access your deployed Reaction Commerce shop.
 
-## Custom build
+#### Custom build
 
 Let's customize locally, and build your docker image.
 
@@ -133,7 +131,7 @@ mycustom           latest              d21371bbdba3        2 hours ago  359MB
 
 Now to get your image online so your server can access it.
 
-## Publishing on Docker Hub
+#### Publishing on Docker Hub
 
 Log into your dockerhub account:
 
@@ -171,3 +169,29 @@ docker run -d \
   -e REACTION_AUTH="admin-password" \
   mydockerhubuser/mycustom:mytag
 ```
+
+
+### Using Docker Compose
+
+You can use Docker Compose to run both Mongo and Reaction in containers.
+
+We've included a demo [docker-compose file](https://github.com/reactioncommerce/reaction/blob/master/docker-compose-demo.yml) in the repository. In it's current basic form, it is meant for quickly running a demo of your production build. It can also serve as starting point for your production docker-compose setup.
+
+If you have a custom Docker image of your Reaction app, you can modify the `docker-compose-demo.yml` file to point to use it by changing the `image` name of the `reaction` service.
+
+```yml
+services:
+  reaction:
+    image: custom-image
+    depends_on:
+      - mongo
+    ....
+```
+
+Start the app by runnung the `docker-compose up` command and specifying your Compose file
+
+```sh
+docker-compose -f docker-compose-demo.yml up -d
+```
+
+This will pull down the specified Docker images (if not available locally). After pulling, the images are then started for you in the background. You can connect to the logs from your reaction instance with `docker-compose logs reaction --follow` From the logs, you'll see when the app is up and you can then load it in a browser.
