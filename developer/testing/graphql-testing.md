@@ -28,16 +28,13 @@ To run tests:
   npm run test:unit -- --no-cache
 ```
 
-- `SyntaxError: Unexpected token import` is an error you'll see if your compiled node modules build is different than the ones the tests are running against. To fix this issue, try the following commands:
+- `SyntaxError: Unexpected token import` is an error you'll see if your compiled node modules build is different than the ones the tests are running against. To fix this issue, try the following commands, testing after each command to see if it's been fixed:
 
 ```sh
   npm rebuild
 ```
 ```sh
-  rm -rf node_modules
-```
-```sh
-  meteor npm install
+  rm -rf node_modules && meteor npm install
 ```
 
 - `Error: 'fsevents' unavailable (this watcher can only be used on Darwin)` is thrown when `watchman` is not installed. Install `watchman` to fix this error:
