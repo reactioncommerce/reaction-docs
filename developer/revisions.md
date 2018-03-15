@@ -4,6 +4,10 @@
 
 When changes are made to a product, a collection hook in `/imports/plugins/core/revisions/server/hooks.js` is fired and diverts most changes bound for the `Products` collection to a document in the `Revisions` collection.
 
+## Publishing revisions
+
+The `Publish` button in the admin is used to publish revisions to the `Products` collection, and subsequently to the `Catalog` collection as a denormalized product document. The publish button is always active, even if there are no revisions to publish. In this case, the products are published directly to the `Catalog` collection, bypasing revision control.
+
 ## Schema
 
 See `lib/collections/schemas/revisions.js` for more details.
