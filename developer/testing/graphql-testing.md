@@ -4,7 +4,7 @@
 
 Reaction has testing set up for GraphQL endpoints.
 
-### Pre-requisits
+### Prerequisites
 
 Install `watchman` if you'd like to run `--watch` or `--watchAll` on tests
 
