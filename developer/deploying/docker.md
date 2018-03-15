@@ -170,7 +170,6 @@ docker run -d \
   mydockerhubuser/mycustom:mytag
 ```
 
-
 ### Using Docker Compose
 
 You can also use Docker Compose to run Reaction and Mongo in separate connected Docker containers.
