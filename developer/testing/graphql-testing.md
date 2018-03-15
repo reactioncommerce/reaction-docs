@@ -39,3 +39,9 @@ To run tests:
 ```sh
   meteor npm install
 ```
+
+- `Error: 'fsevents' unavailable (this watcher can only be used on Darwin)` is thrown when `watchman` is not installed. Install `watchman` to fix this error:
+
+```sh
+brew install watchman
+```
