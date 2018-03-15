@@ -687,10 +687,10 @@
 			"docPath": "developer/testing/acceptance-testing.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "graphql-testing",
-			"label": "GraphQL Testing",
+			"alias": "running-jest-tests",
+			"label": "Running Jest Tests",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/graphql-testing.md"
+			"docPath": "developer/testing/running-jest-tests.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "react-testing",
