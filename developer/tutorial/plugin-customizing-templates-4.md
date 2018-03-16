@@ -11,7 +11,7 @@ Your `client` directory should look like this:
 
 ```sh
 client/
-└──default.js
+└──defaults.js
 └─┬templates/
   └─┬layouts/
     └─core.js
@@ -51,7 +51,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
-import { registerComponent } from "/imports/plugins/core/layout/lib/components";
+import { registerComponent } from "@reactioncommerce/reaction-components";
 
 class CoreLayoutBeesknees extends Component {
   static propTypes = {
@@ -96,10 +96,8 @@ class CoreLayoutBeesknees extends Component {
 }
 
 // Register component for it to be usable
-registerComponent({
-  name: "coreLayoutBeesknees",
-  component: CoreLayoutBeesknees
-});
+registerComponent("coreLayoutBeesknees", CoreLayoutBeesknees);
+
 
 export default CoreLayoutBeesknees;
 ```
