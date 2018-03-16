@@ -19,7 +19,7 @@ import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
 
-import { getComponent as assertComponent, registerComponent } from "/imports/plugins/core/components/lib";
+import { getComponent as assertComponent, registerComponent } from "@reactioncommerce/reaction-components";
 
 
 class CoreLayoutBeesknees extends Component {
@@ -110,7 +110,7 @@ In order to change our default layout, we need add a record to the **registry** 
 
 First let's create our `defaults.js` with our custom layout. You will place this file in the `client` folder in your plugin. The `defaults.js` just looks like this:
 
-**[/client/default.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/fbf7d01921393e6926d567951d80a6d2bb9b8dc0/client/defaults.js)**
+**[/client/defaults.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/fbf7d01921393e6926d567951d80a6d2bb9b8dc0/client/defaults.js)**
 
 ```js
 import { Session } from "meteor/session";
