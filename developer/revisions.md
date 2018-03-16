@@ -6,7 +6,7 @@ When changes are made to a product, a collection hook in `/imports/plugins/core/
 
 ## Publishing revisions
 
-The `Publish` button in the admin is used to publish revisions to the `Products` collection, and subsequently to the `Catalog` collection as a denormalized product document. The publish button is always active, even if there are no revisions to publish. In this case, the products are published directly to the `Catalog` collection, bypasing revision control.
+The `Publish` button in the admin is used to publish revisions to the `Products` collection, and subsequently to the `Catalog` collection as a denormalized product document. The publish button is always active, even if there are no revisions to publish. When there are no revisions to publish, the products are published directly to the `Catalog` collection, bypassing revision control.
 
 ## Schema
 
