@@ -87,4 +87,3 @@ Notes:
   - [`reaction-swag-shop`](https://github.com/reactioncommerce/reaction-swag-shop)
   - [`payments-cod`](https://github.com/reactioncommerce/payments-cod)
   - [YouTube video tutorials](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH)
-
