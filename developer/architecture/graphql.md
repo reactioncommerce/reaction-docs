@@ -9,7 +9,8 @@ Use the [GraphQL schema](https://github.com/reactioncommerce/reaction/blob/feat-
 - - `imports/plugins/core/graphql/server/schemas/group.js`
 - - `imports/plugins/core/graphql/server/schemas/shop.js`
 
-- Create your functions / methods inside their appropriate folder inside their respective packages. In this case, we are creating our methods inside `imports/plugins/core/accounts/server/methods/groupQuery.js`.
+- Create your functions / methods inside their appropriate folder inside their respective packages. In this case, we are creating our methods inside
+- - `imports/plugins/core/accounts/server/methods/groupQuery.js`.
 
 - Create your Connection and Edge Resolvers, and import them:
 
