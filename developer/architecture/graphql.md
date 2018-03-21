@@ -23,10 +23,8 @@ Use the [GraphQL schema](https://github.com/reactioncommerce/reaction/blob/feat-
 - - `imports/plugins/core/graphql/server/resolvers/shop/Group/createdBy.js`
 - - `imports/plugins/core/graphql/server/resolvers/shop/Group/shop.js`
 - - `imports/plugins/core/graphql/server/resolvers/shop/Shop/groups.js`
-- -
-`imports/plugins/core/graphql/server/resolvers/shop/Shop/index.js`
-- -
-`imports/plugins/core/graphql/server/resolvers/shop/Group/index.js`
+- - `imports/plugins/core/graphql/server/resolvers/shop/Shop/index.js`
+- - `imports/plugins/core/graphql/server/resolvers/shop/Group/index.js`
 - - `imports/plugins/core/graphql/server/resolvers/account/query/index.js`
 - - `imports/plugins/core/graphql/server/resolvers/account/index.js`
 
