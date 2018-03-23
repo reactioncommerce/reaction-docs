@@ -194,6 +194,36 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/data-fixtures-insert-product-images.md"
 		}, {
+      "class": "guide-nav-item",
+      "alias": "swag-shop-tutorial",
+      "label": "Swag shop tutorial",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/introduction.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-collecting-requirements",
+      "label": "Collecting the shop requirements",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-collecting-requirements.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-initialization",
+      "label": "Project scaffolding",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-initilization.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-landing-page",
+      "label": "The Landing Page",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-landing-page.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-pdp",
+      "label": "Category tiles and the Product Detail Page",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-pdp.md"
+    }, {
 			"class": "guide-nav-item",
 			"alias": "contributing-to-reaction",
 			"label": "Contributing Guide",
