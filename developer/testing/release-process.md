@@ -83,8 +83,7 @@ Notes:
 
 - Community team: Assign team members to review and test supported repositories and tutorials. Make issues if any of these fail or break with the newest release:
   - [reaction-example-plugin](https://github.com/reactioncommerce/reaction-example-plugin/)
-  - [YouTube video tutorials](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH)
   - [`reaction-devtools`](https://github.com/reactioncommerce/reaction-devtools)
   - [`reaction-swag-shop`](https://github.com/reactioncommerce/reaction-swag-shop)
-  - [`reaction-doc`](https://github.com/reactioncommerce/payments-cod)
-   
+  - [`payments-cod`](https://github.com/reactioncommerce/payments-cod)
+  - [YouTube video tutorials](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH)

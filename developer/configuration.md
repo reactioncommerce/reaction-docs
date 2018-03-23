@@ -1,14 +1,12 @@
 # Configuration
 
-Reaction can be configured on startup with a combination of environment variables, `settings/settings.json`, and default data files for store pre-configuration.
+Reaction can be configured on startup with a combination of environment variables and default data files for store pre-configuration.
 
 Reaction uses `/private/settings/reaction.json` for the configuration of Reaction and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 
 ## Environment variables
 
-You can use [environment variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps#how-the-environment-and-environmental-variables-work) for settings, useful for headless and automated virtual machine configuration.
-
-Environment variables take priority over variables set in _settings.json_.
+You should use [environment variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps#how-the-environment-and-environmental-variables-work) for settings, useful for headless and automated virtual machine configuration.
 
 You can also assign these variables before the `reaction` command.
 
@@ -55,39 +53,6 @@ To send email you should pre-configure the administrative SMTP email server from
 Reaction supports sending mail over SMTP; the `MAIL_URL` environment variable should be of the form `smtp://USERNAME:PASSWORD@HOST:PORT`.
 
 The Email dashboard provides a UI for quick configuration of the email server as well.
-
-## Settings
-
-You can use custom [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) by copying `settings/dev.settings.json` to `settings/settings.json`
-
-For convenience, the initial Reaction administrator can be configured here.
-
-Creating a `settings.json` will prevent the default `dev.settings.json` from being loaded when you use the `reaction` command to start Reaction.
-
-Once you have edited the **_settings/settings.json_** you will need to run:
-
-```sh
-reaction reset && reaction
-```
-
-To reset the database.
-
-**_settings/settings.json_**
-
-```json
-{
-  "ROOT_URL": "",
-  "MAIL_URL": "",
-  "reaction": {
-    "REACTION_USER": "<username>",
-    "REACTION_AUTH": "<password>",
-    "REACTION_EMAIL": "<login email>"
-  },
-  "isDebug": "info"
-}
-```
-
-When the [`reaction-cli`](https://www.npmjs.com/package/reaction-cli) npm package is installed, running `reaction` is the equivalent of starting a server with `meteor --raw-logs --settings settings/<your-settings>.json`
 
 ## Initialization
 
@@ -219,9 +184,9 @@ reaction
 
 ## Importing Data
 
-The `Reaction.Import` class provides import functionality.
+The `Reaction.Importer` class provides import functionality.
 
-See: [import.md](/developer/core/import.md) for documentation on `Reaction.Import`.
+See: [importer.md](/developer/core/importer.md) for documentation on `Reaction.Importer`.
 
 _Example import of shipping records_
 
@@ -230,8 +195,8 @@ import { Meteor} from "meteor/meteor";
 import { Reaction } from "/server/api";
 
 Meteor.startup(function () {
-  Reaction.Import.process(Assets.getText("data/Shipping.json"), ["name"], Reaction.Import.shipping);
-  Reaction.Import.flush();
+  Reaction.Importer.process(Assets.getText("data/Shipping.json"), ["name"], Reaction.Importer.shipping);
+  Reaction.Importer.flush();
 });
 ```
 
