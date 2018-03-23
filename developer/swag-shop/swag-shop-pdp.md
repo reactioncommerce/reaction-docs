@@ -52,7 +52,7 @@ Later, I'll show you how to make this field editable in the admin backend. For n
 
 To render the tiles on the landing page, change the `Products` component. First, let's render the tile section in the **Shop all products** image:
 
-![]](https://user-images.githubusercontent.com/1733229/35676726-32bfcb2c-074d-11e8-87c9-d41fa4971ce4.jpg)
+![](https://user-images.githubusercontent.com/1733229/35676726-32bfcb2c-074d-11e8-87c9-d41fa4971ce4.jpg)
 
 In mobile, this image is placed before the actual category images. The markup is structured in a way to support Reaction's mobile-first approach:
 
@@ -240,7 +240,7 @@ There are many possible ways to implement a feature like this. We decided to use
 - The admin UI already provides ways to add arbitrary tags to each product we're interested in linking.
 - One product can be related to multiple other products through the tagging concept. It's possible to tag a product with _<product-1-related>_ and _<product-2-related>_, which would appear as a related product on /product/product-1 and /product/product-2.
 
-Now let's add the `relatedTag` field to the product schema. This field's value should populate automatically whenever the product's permalink (e.g. http://localhost:3000/product/t-shirt) changes. The permalink itself is built from yet another field on the product schema, the `handle` field
+Now let's add the `relatedTag` field to the product schema. This field's value should populate automatically whenever the product's permalink (e.g. <http://localhost:3000/product/t-shirt>) changes. The permalink itself is built from yet another field on the product schema, the `handle` field
 
 [/imports/plugins/custom/reaction-swag-shop/lib/collections/schemas/swagProduct.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/755a6025c25bcbd21e58c2afb72a15fa2c5ee390/lib/collections/schemas/swagProduct.js)
 ```js
