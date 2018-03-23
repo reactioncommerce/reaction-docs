@@ -19,7 +19,7 @@ My intention with this tutorial is to take you with me on our journey. From conc
 
 ## Table of Contents
 
-* [Collecting the shop requirements](/developer/swag-shop/swag-shop-collecting-requirements.md)
-* [Project scaffolding](/developer/swag-shop/swag-shop-initialization.md)
-* [The Landing Page](/developer/swag-shop/swag-shop-landing-page.md)
-* [Category tiles and the Product Detail Page](/developer/swag-shop/swag-shop-pdp.md)
+- [Collecting the shop requirements](/developer/swag-shop/swag-shop-collecting-requirements.md)
+- [Project scaffolding](/developer/swag-shop/swag-shop-initialization.md)
+- [The Landing Page](/developer/swag-shop/swag-shop-landing-page.md)
+- [Category tiles and the Product Detail Page](/developer/swag-shop/swag-shop-pdp.md)

@@ -8,7 +8,7 @@ All code presented here can be found in our [Swag Shop repository](https://githu
 
 Whenever starting a Reaction project, the first thing you should do after cloning the source from GitHub is to create a plugin. Create a plugin by running:
 ```sh
-$ reaction plugins create --name <your_project>
+reaction plugins create --name <your_project>
 ```
 
 This will generate a bare-bones plugin in `/imports/plugins/custom/<your_project>`,  which will serve as a starting point for further customizations.
