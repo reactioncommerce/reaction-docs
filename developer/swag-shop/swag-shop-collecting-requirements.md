@@ -4,8 +4,7 @@ For me, as an engineer, the first encounter with people from our design team dur
 
 To set the scene: in this particular project, our design team will play the role of the customer. Let's have a quick sneak peek into the ideas of our design team, shall we?
 
-
-### Landing page designs
+## Landing page designs
 Below is a screenshot of the landing page layout that I've been given from the design team:
 
 ![](https://user-images.githubusercontent.com/1733229/33711844-b2fffe6c-db45-11e7-9a23-bbab24396004.png)
@@ -50,7 +49,7 @@ The third epic consists of three user stories:
 - Feature: show similar products [#8](https://github.com/reactioncommerce/reaction-swag-shop/issues/8)
 - Footer (which — strictly speaking — is not a user story specifically belonging to this particular epic, as it will be shown on almost every page) [#3](https://github.com/reactioncommerce/reaction-swag-shop/issues/3)
 
-### Estimating
+## Estimating
 
 After writing all of these user stories, I've felt myself pretty conscious about what has to be done. The big question mark, however, still did not vanish: how much effort is this going to be? My idea was to actually try to estimate the complete project. Even though that does not adhere to pure Scrum, I felt this makes sense for several reasons:
 

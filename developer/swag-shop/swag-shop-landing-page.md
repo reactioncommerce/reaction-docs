@@ -36,7 +36,6 @@ Products.attachSchema(ExtendedSchema, { replace: true, selector: { type: "simple
 
 Besides the Product schema, we’ll also need to extend the Filters schema, which is used to pass filter criteria when subscribing to products. For more information on how simple schemas are used and how to override it in Reaction, visit our [docs](https://docs.reactioncommerce.com/reaction-docs/master/simple-schema).
 
-
 [/imports/plugins/custom/reaction-swag-shop/server/publications/collections/schemas/filters.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/server/publications/collections/schemas/filters.js)
 ```js
 import { getSchemas } from "@reactioncommerce/reaction-collections";
@@ -52,7 +51,6 @@ Schemas.filters.extend({
   // -------------- %< --------------------
 });
 ```
-
 
 ## Adding an admin field
 Next, let’s provide a new text field in the backend, Featured product label.
@@ -107,7 +105,7 @@ In the above snippets, there are two important bits to consider:
 
 2. The Reaction default `ProductAdmin` React component is replaced with our derived version. This is done via calling `replaceComponent`. For more information on how the Reaction Component API works, [visit our API docs](http://api.docs.reactioncommerce.com/Components.html).
 
-** Updating the landing page **
+## Modifying the product grid
 Now that we have the backend functionality in place, let's move on to the public-facing landing page and render those labels in different colors.
 
 Clone the `ProductGridItems` component from _/imports/plugins/included/product-variant/component/productGridItems.js_ into our plugin. To keep track of where we originally copied the files from, name the newly-created file the same as your files in core. Also, keep the name of the plugin in its path name. Here, the newly created file becomes:

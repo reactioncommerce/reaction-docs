@@ -7,7 +7,7 @@ All code presented here can be found in our [Swag Shop repository](https://githu
 ## Getting started: creating a plugin
 
 Whenever starting a Reaction project, the first thing you should do after cloning the source from GitHub is to create a plugin. Create a plugin by running:
-```
+```sh
 $ reaction plugins create --name <your_project>
 ```
 
@@ -28,7 +28,7 @@ In many cases, you will want to have fixtures that come with real products, cate
 ![](https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/swag-shop-start.gif)
 
 To prevent Reaction from sourcing the default data fixtures, start the server with the `SKIP_FIXTURES` environmental variable, e.g.
-```
+```sh
 SKIP_FIXTURES=1 && reaction
 ```
 and instead of the default fixtures we import our own fixtures in [/imports/plugins/custom/reaction-swag-shop/server/init.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/server/init.js):
