@@ -10,6 +10,16 @@ The marketplace owner must have completed the following before proceeding with t
 2. Enabled the Stripe payment method in "Payment Methods"
 3. Make sure the [Stripe Connect](https://dashboard.stripe.com/applications/overview) account's redirect URI is set to:  `https://<yourdomain>/stripe/connect/authorize`
 
+Tip: In case you want to test Stripe Connect with your locally running Reaction, you may be interested in setting up a tunnel to localhost using a tool like ngrok:
+```sh
+npx ngrok http 3000
+```
+
+This should start you a ad-hoc tunnel for testing purposes. The output should look similar to this:
+![](/assets/admin-marketplace-ngrok.png)
+
+In that case the redirect URL would be: <https://9052dd64.ngrok.io/stripe/connect/authorize>
+
 ## Invite a seller
 
 As the marketplace owner, these are the steps I must complete to invite a merchant shop owner.
