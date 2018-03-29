@@ -356,3 +356,6 @@ replaceComponent("ProductsCustomer", ProductGrid);
 ## Do I really need a custom React component for everything?
 
 The rule is as following: If you’re happy with the rendered markup and you don't need custom behaviour for a component (like overriding event handlers), you can get away with simple CSS changes. CSS changes are done in _/imports/plugins/custom/reaction-swag-shop/client/styles_. Because CSS files from custom plugins are loaded after the default CSS styles, it's generally sufficient to copy the original CSS selectors and modify their values according to your needs.
+
+## What's next
+Read in part 4 about how we implemented the [Product Detail Page (PDP)](/developer/swag-shop/swag-shop-pdp.md).

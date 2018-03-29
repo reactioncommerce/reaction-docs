@@ -2,7 +2,7 @@
 
 ---
 
- **⚠ NOTICE:** This tutorial aggregates a couple of Reaction blog posts into one place that should serve our community as an accessible show case on how to build a fully customized shop on top of Reaction. The orginal blog posts can be found here:
+ **⚠ NOTICE:** This tutorial aggregates a couple of Reaction blog posts into one place that should serve our community as an accessible show case on how to build a fully customized shop on top of Reaction. The original blog posts can be found here:
 - <https://blog.reactioncommerce.com/building-and-launching-a-store-on-reaction/>
 - <https://blog.reactioncommerce.com/building-launching-a-swag-shop-part-2/>
 - <https://blog.reactioncommerce.com/building-a-swag-shop-lp2/>
@@ -19,7 +19,7 @@ My intention with this tutorial is to take you with me on our journey. From conc
 
 ## Table of Contents
 
-- [Collecting the shop requirements](/developer/swag-shop/swag-shop-collecting-requirements.md)
-- [Project scaffolding](/developer/swag-shop/swag-shop-initialization.md)
-- [The Landing Page](/developer/swag-shop/swag-shop-landing-page.md)
-- [Category tiles and the Product Detail Page](/developer/swag-shop/swag-shop-pdp.md)
+- [Part 1: Collecting the shop requirements](/developer/swag-shop/swag-shop-collecting-requirements.md)
+- [Part 2: Project scaffolding](/developer/swag-shop/swag-shop-initialization.md)
+- [Part 3: The Landing Page](/developer/swag-shop/swag-shop-landing-page.md)
+- [Part 4: Category tiles and the Product Detail Page](/developer/swag-shop/swag-shop-pdp.md)

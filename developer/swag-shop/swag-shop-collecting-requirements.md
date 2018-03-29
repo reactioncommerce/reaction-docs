@@ -68,4 +68,4 @@ So we had another meeting with the product owner and explained the situation. Wh
 In the end, we agreed to strip down the functional requirements for our swag shop a bit, which resulted in different tasks to be labeled as phase2 in GitHub's [issue tracker](https://github.com/reactioncommerce/reaction-swag-shop/issues).
 
 ## What's next
-Read about how we implemented the [Landing Page](https://blog.reactioncommerce.com/building-launching-a-swag-shop-part-2/) in episode 2.
+Read in part 2 about how to setup a new [Reaction project](/developer/swag-shop/swag-shop-initialization.md).
