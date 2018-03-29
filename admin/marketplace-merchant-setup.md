@@ -10,7 +10,7 @@ The marketplace owner must have completed the following before proceeding with t
 2. Enabled the Stripe payment method in "Payment Methods"
 3. Make sure the [Stripe Connect](https://dashboard.stripe.com/applications/overview) account's redirect URI is set to:  `https://<yourdomain>/stripe/connect/authorize`
 
-Tip: In case you want to test Stripe Connect with your locally running Reaction, you may be interested in setting up a tunnel to localhost using a tool like ngrok:
+Tip: In case you want to test Stripe Connect with your locally running Reaction, you may be interested in setting up a tunnel to localhost using a tool like [ngrok](https://ngrok.com/):
 ```sh
 npx ngrok http 3000
 ```
