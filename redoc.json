@@ -202,25 +202,25 @@
     }, {
       "class": "guide-sub-nav-item",
       "alias": "swag-shop-collecting-requirements",
-      "label": "Collecting the shop requirements",
+      "label": "Part 1: Collecting the shop requirements",
       "repo": "reaction-docs",
       "docPath": "developer/swag-shop/swag-shop-collecting-requirements.md"
     }, {
       "class": "guide-sub-nav-item",
       "alias": "swag-shop-initialization",
-      "label": "Project scaffolding",
+      "label": "Part 2: Project scaffolding",
       "repo": "reaction-docs",
-      "docPath": "developer/swag-shop/swag-shop-initilization.md"
+      "docPath": "developer/swag-shop/swag-shop-initialization.md"
     }, {
       "class": "guide-sub-nav-item",
       "alias": "swag-shop-landing-page",
-      "label": "The Landing Page",
+      "label": "Part 3: The Landing Page",
       "repo": "reaction-docs",
       "docPath": "developer/swag-shop/swag-shop-landing-page.md"
     }, {
       "class": "guide-sub-nav-item",
       "alias": "swag-shop-pdp",
-      "label": "Category tiles and the Product Detail Page",
+      "label": "Part 4: Category tiles and the Product Detail Page",
       "repo": "reaction-docs",
       "docPath": "developer/swag-shop/swag-shop-pdp.md"
     }, {

@@ -138,3 +138,6 @@ methods.importProductImages = function () {
 Technically, it wouldn't be necessary to copy the subfolder **/imports/plugins/custom/reaction-swag-shop/private/data** with the JSON fixtures, because they can be `required` directly from their original location. But it couldn't hurt, either.
 
 Now that we have our data and image fixtures set up, we're ready to move onto building new features on top of images. In the next part, we'll be focusing on extending schemas (in this case, the Product schema), adding fields in Admin by replacing React components, and customizing Publications and Subscriptions.
+
+## What's next
+Read in part 3 about how we implemented the [Landing Page](/developer/swag-shop/swag-shop-landing-page.md).
