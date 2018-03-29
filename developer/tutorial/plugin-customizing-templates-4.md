@@ -51,7 +51,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
-import { registerComponent } from "@reactioncommerce/reaction-components";
+import { registerComponent } from "/imports/plugins/core/layout/lib/components";
 
 class CoreLayoutBeesknees extends Component {
   static propTypes = {
