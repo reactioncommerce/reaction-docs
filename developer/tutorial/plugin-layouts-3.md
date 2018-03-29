@@ -18,8 +18,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
-
-import { getComponent as assertComponent, registerComponent } from "@reactioncommerce/reaction-components";
+import { getComponent as assertComponent, registerComponent } from "/imports/plugins/core/components/lib";
 
 
 class CoreLayoutBeesknees extends Component {
