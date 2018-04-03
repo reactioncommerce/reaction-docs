@@ -2,20 +2,22 @@
 
 ## Overview
 
-**What is Acceptance Testing or AT**
-AT is a process of testing the application to verify functionality from a users perspective. Related functionality is group together and tested by following the steps of an AT script. AT scripts will outline the functionality to be tested, success criteria, testing steps and any test variants.
+### What is Acceptance Testing?
 
-**Why is this important?**
+Acceptance testing (AT) is a process of testing the application to verify functionality from a users perspective. Related functionality is group together and tested by following the steps of an AT script. AT scripts will outline the functionality to be tested, success criteria, testing steps and any test variants.
+
+### Why is AT important?
+
 AT gives us:
- - Insight to pain-points and issues related to any user-flows. 
- - Clear step to reproduce any issues discovered during AT.
- - A plan to test all user-flow variants.
+- Insight to pain-points and issues related to any user-flows.
+- Clear step to reproduce any issues discovered during AT.
+- A plan to test all user-flow variants.
 
 ## Getting Started
 There are three key touch points within the AT process
- - Test setup
- - Testing
- - Issue reporting
+- Test setup
+- Testing
+- Issue reporting
 
 **Test Setup**
 Most AT scripts will have setup steps as a prerequisite to the actual test. All relevant setup steps will be listed in each AT script under _Test Setup Steps_. Review all the AT setup steps [here](/developer/acceptance-testing/scripts/test-setup.md).
@@ -30,15 +32,18 @@ All AT scripts will have an _Intended Outcome_ section, if you've completed each
 Table of contents for all Reaction Commerce AT scripts.
 
 **Order Scripts**
- - [Order Creation](/developer/acceptance-testing/scripts/order-creation.md)
-<!-- - [Order Fulfillment](/developer/acceptance-testing/scripts/order-fulfillment.md)
+- [Order Creation](/developer/acceptance-testing/scripts/order-creation.md)
+
+<!--
+ - [Order Fulfillment](/developer/acceptance-testing/scripts/order-fulfillment.md)
  - [Order Canceling](/developer/acceptance-testing/scripts/order-canceling.md)
- - [Order Refunding](/developer/acceptance-testing/scripts/order-refunding.md) -->
+ - [Order Refunding](/developer/acceptance-testing/scripts/order-refunding.md)
+-->
 
 ## Resources
 **Testing**
- - [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
- - [Acceptance Test Script Templates](/developer/acceptance-testing/acceptance-testing-script-template.md)
+- [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
+- [Acceptance Test Script Templates](/developer/acceptance-testing/acceptance-testing-script-template.md)
 
 **Reporting**
- - [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction)
+- [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction)
