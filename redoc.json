@@ -738,19 +738,19 @@
 			"docPath": "developer/acceptance/acceptance-testing.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
+			"alias": "acceptance-test-setup",
 			"label": "Test Setup",
 			"repo": "reaction-docs",
 			"docPath": "developer/acceptance/test-setup.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
+			"alias": "acceptance-script-template",
 			"label": "Script Template",
 			"repo": "reaction-docs",
 			"docPath": "developer/acceptance/script-template.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
+			"alias": "acceptance-order-creation",
 			"label": "Script: Order Creation",
 			"repo": "reaction-docs",
 			"docPath": "developer/acceptance/order-creation.md"
