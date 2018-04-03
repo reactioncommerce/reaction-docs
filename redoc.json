@@ -717,7 +717,7 @@
 			"alias": "acceptance-testing",
 			"label": "AT: Setup",
 			"repo": "reaction-docs",
-			"docPath": "developer/acceptance-testing/scripts/test-setup.md"
+			"docPath": "developer/acceptance-testing/test-setup.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "acceptance-testing",
@@ -729,7 +729,7 @@
 			"alias": "acceptance-testing",
 			"label": "AT Script: Order Creation",
 			"repo": "reaction-docs",
-			"docPath": "developer/acceptance-testing/scripts/order-creation.md"
+			"docPath": "developer/acceptance-testing/order-creation.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "react-testing",
