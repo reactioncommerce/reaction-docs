@@ -1,7 +1,7 @@
 # Order Creation
 
 ## Description
-Test to verify the following functionality: 
+Test to verify the following functionality:
  - The user can access the product detail page from the product grid.
  - The user can select a product variant and add it to the cart.
  - The user can complete the checkout process.
@@ -24,7 +24,7 @@ Test to verify the following functionality:
  - **Taxation**: None, Custom Rates, Avalara, TaxCloud
 
 ## Test Setup Steps
- - Payment processing and shipping must be enabled as a prerequisite to this test. 
+ - Payment processing and shipping must be enabled as a prerequisite to this test.
  - All of the following setup steps must be done while logged in as an admin.
 
 ### Payment Provider Setup
@@ -43,15 +43,20 @@ Test to verify the following functionality:
  - [Custom Rates](/developer/acceptance-testing/scripts/test-setup.md#custom-rates)
  - [Avalara](/developer/acceptance-testing/scripts/test-setup.md#avalara)
  - [TaxCloud](/developer/acceptance-testing/scripts/test-setup.md#taxcloud)
- 
+
 ## Testing Steps
  1. Starting at the shop’s product grid page click any product to view the product detail page.
+
  2. Click on a product’s variant to select the product then click the “Add to cart” button.
+
  3. From ether the cart pop-up or cart drop down click the “Checkout now” button to start the checkout process.
+
  4. Fill out the appropriate account and address information for the user type:
      1. **Anonymous User**: Click “Continue as guest” button and enter an email address. Fill out the address details.
      2. **New User**: Enter new user credentials into the register form. Fill out the address details to create the account’s default address.
      3. **Registered User**: Click the “Sign in” button below the register form and enter user credentials. Select a shipping address if needed.
+
  5. Select a shipping option.
+
  6. Fill out appropriate payment information for the payment provider and click the “Complete your order” button.
      1. **PayPal Express**: will open in a modal window, follow the sets using a PayPal sandbox account. More info how to create a sandbox account [here](https://developer.paypal.com/docs/classic/lifecycle/sb_about-accounts/#create-a-personal-sandbox-account).
