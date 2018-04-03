@@ -708,30 +708,6 @@
 			"docPath": "developer/testing/testing.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
-			"label": "Acceptance Testing",
-			"repo": "reaction-docs",
-			"docPath": "developer/acceptance-testing/acceptance-testing.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
-			"label": "AT: Setup",
-			"repo": "reaction-docs",
-			"docPath": "developer/acceptance-testing/test-setup.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
-			"label": "AT: Script Template",
-			"repo": "reaction-docs",
-			"docPath": "developer/acceptance-testing/script-template.md"
-		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
-			"label": "AT Script: Order Creation",
-			"repo": "reaction-docs",
-			"docPath": "developer/acceptance-testing/order-creation.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "react-testing",
 			"label": "React Testing",
 			"repo": "reaction-docs",
@@ -754,6 +730,30 @@
 			"label": "CI Builds",
 			"repo": "reaction-docs",
 			"docPath": "developer/testing/ci.md"
+		}, {
+			"class": "guide-nav-item",
+			"alias": "acceptance-testing",
+			"label": "Acceptance Testing",
+			"repo": "reaction-docs",
+			"docPath": "developer/acceptance-testing/acceptance-testing.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "acceptance-testing",
+			"label": "Test Setup",
+			"repo": "reaction-docs",
+			"docPath": "developer/acceptance-testing/test-setup.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "acceptance-testing",
+			"label": "Script Template",
+			"repo": "reaction-docs",
+			"docPath": "developer/acceptance-testing/script-template.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "acceptance-testing",
+			"label": "Script: Order Creation",
+			"repo": "reaction-docs",
+			"docPath": "developer/acceptance-testing/order-creation.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "deploying",
