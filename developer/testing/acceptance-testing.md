@@ -43,7 +43,7 @@ Table of contents for all Reaction Commerce AT scripts.
 ## Resources
 **Testing**
 - [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
-- [Acceptance Test Script Templates](/developer/acceptance/acceptance-testing-script-template.md)
+- [Acceptance Test Script Templates](/developer/acceptance/script-template.md)
 
 **Reporting**
 - [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction)
