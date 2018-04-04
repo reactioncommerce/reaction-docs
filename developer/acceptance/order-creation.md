@@ -28,21 +28,21 @@ Test to verify the following functionality:
  - All of the following setup steps must be done while logged in as an admin.
 
 ### Payment Provider Setup
- - [Example Provider](/developer/acceptance-testing/scripts/test-setup.md#example-provider)
- - [Authorize.net](/developer/acceptance-testing/scripts/test-setup.md#authorize-net)
- - [Briantree](/developer/acceptance-testing/scripts/test-setup.md#braintree)
- - [PayPal Express](/developer/acceptance-testing/scripts/test-setup.md#paypal-express)
- - [PayPal Flow](/developer/acceptance-testing/scripts/test-setup.md#paypal-flow)
- - [Stripe](/developer/acceptance-testing/scripts/test-setup.md#stripe)
+ - [Example Provider](/developer/acceptance-testing/test-setup.md#example-provider)
+ - [Authorize.net](/developer/acceptance-testing/test-setup.md#authorize-net)
+ - [Briantree](/developer/acceptance-testing/test-setup.md#braintree)
+ - [PayPal Express](/developer/acceptance-testing/test-setup.md#paypal-express)
+ - [PayPal Flow](/developer/acceptance-testing/test-setup.md#paypal-flow)
+ - [Stripe](/developer/acceptance-testing/test-setup.md#stripe)
 
 ### Shipping Setup
- - [Flat Rate](/developer/acceptance-testing/scripts/test-setup.md#flat-rate)
- - [Shippo](/developer/acceptance-testing/scripts/test-setup.md#shippo)
+ - [Flat Rate](/developer/acceptance-testing/test-setup.md#flat-rate)
+ - [Shippo](/developer/acceptance-testing/test-setup.md#shippo)
 
 ### Taxation Setup
- - [Custom Rates](/developer/acceptance-testing/scripts/test-setup.md#custom-rates)
- - [Avalara](/developer/acceptance-testing/scripts/test-setup.md#avalara)
- - [TaxCloud](/developer/acceptance-testing/scripts/test-setup.md#taxcloud)
+ - [Custom Rates](/developer/acceptance-testing/test-setup.md#custom-rates)
+ - [Avalara](/developer/acceptance-testing/test-setup.md#avalara)
+ - [TaxCloud](/developer/acceptance-testing/test-setup.md#taxcloud)
 
 ## Testing Steps
  1. Starting at the shop’s product grid page click any product to view the product detail page.
