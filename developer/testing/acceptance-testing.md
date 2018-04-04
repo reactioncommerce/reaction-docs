@@ -32,7 +32,7 @@ All AT scripts will have an _Intended Outcome_ section, if you've completed each
 Table of contents for all Reaction Commerce AT scripts.
 
 **Order Scripts**
-- [Order Creation](developer/acceptance/order-creation.md)
+- [Order Creation](/developer/acceptance/order-creation.md)
 
 <!--
  - [Order Fulfillment](/developer/acceptance-testing/scripts/order-fulfillment.md)
@@ -43,7 +43,7 @@ Table of contents for all Reaction Commerce AT scripts.
 ## Resources
 **Testing**
 - [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
-- [Acceptance Test Script Templates](developer/acceptance/acceptance-testing-script-template.md)
+- [Acceptance Test Script Templates](/developer/acceptance/acceptance-testing-script-template.md)
 
 **Reporting**
 - [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction)
