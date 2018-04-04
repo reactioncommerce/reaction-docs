@@ -26,23 +26,7 @@ Test to verify the following functionality:
 ## Test Setup Steps
  - Payment processing and shipping must be enabled as a prerequisite to this test.
  - All of the following setup steps must be done while logged in as an admin.
-
-### Payment Provider Setup
- - [Example Provider](/developer/acceptance/test-setup.md#example-provider)
- - [Authorize.net](/developer/acceptance/test-setup.md#authorize-net)
- - [Briantree](/developer/acceptance/test-setup.md#braintree)
- - [PayPal Express](/developer/acceptance/test-setup.md#paypal-express)
- - [PayPal Flow](/developer/acceptance/test-setup.md#paypal-flow)
- - [Stripe](/developer/acceptance/test-setup.md#stripe)
-
-### Shipping Setup
- - [Flat Rate](/developer/acceptance/test-setup.md#flat-rate)
- - [Shippo](/developer/acceptance/test-setup.md#shippo)
-
-### Taxation Setup
- - [Custom Rates](/developer/acceptance/test-setup.md#custom-rates)
- - [Avalara](/developer/acceptance/test-setup.md#avalara)
- - [TaxCloud](/developer/acceptance/test-setup.md#taxcloud)
+ - Follow the [Payment, shipping, taxation setup instructions here](/developer/acceptance/test-setup.md)
 
 ## Testing Steps
  1. Starting at the shop’s product grid page click any product to view the product detail page.
