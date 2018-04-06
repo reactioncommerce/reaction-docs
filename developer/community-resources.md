@@ -76,7 +76,10 @@ Kudos to [Loan!](https://github.com/loanlaux)
 
 This plugin is **work-in-progress**, but does address a very common request: A Reaction plugin that does support the most popular subscription billing features. This is because subscriptions play an important and ever increasing role in the ecommerce landscape.
 
-Thank you for helping our ecosystem to grow, [Daniel!](https://github.com/dhonig)
+### [DeligenceTechnologies/Subscription-Recurring-payments-in-Reaction-Commerce-using-Braintree-Payments-Gateway](https://github.com/DeligenceTechnologies/Subscription-Recurring-payments-in-Reaction-Commerce-using-Braintree-Payments-Gateway)
+
+This is a simple implementation of using Braintree Subscriptions. Simply add a "plan" in your Braintree panel and your customers can checkout using that plan. Updated to work with version >= 1.9
+
 
 ## SEO tools
 
