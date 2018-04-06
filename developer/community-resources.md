@@ -80,7 +80,6 @@ This plugin is **work-in-progress**, but does address a very common request: A R
 
 This is a simple implementation of using Braintree Subscriptions. Simply add a "plan" in your Braintree panel and your customers can checkout using that plan. Updated to work with version >= 1.9
 
-
 ## SEO tools
 
 ### [reaction-commerce-caching-plugin](https://github.com/artlimes/reaction-commerce-caching-plugin)
