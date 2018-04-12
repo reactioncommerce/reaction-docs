@@ -77,7 +77,7 @@ async function storeFromAttachedBuffer(fileRecord) {
 }
 
 function addProductImage(product) {
-  const filepath = `data/product-images/${productId}.jpg`;
+  const filepath = `data/product-images/${product._id}.jpg`;
   const binary = Assets.getBinary(filepath);
   const buffer = new Buffer(binary);
   const fileName = `${product._id}.jpg`;
