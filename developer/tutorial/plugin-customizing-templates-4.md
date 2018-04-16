@@ -11,7 +11,7 @@ Your `client` directory should look like this:
 
 ```sh
 client/
-└──default.js
+└──defaults.js
 └─┬templates/
   └─┬layouts/
     └─core.js
@@ -96,10 +96,8 @@ class CoreLayoutBeesknees extends Component {
 }
 
 // Register component for it to be usable
-registerComponent({
-  name: "coreLayoutBeesknees",
-  component: CoreLayoutBeesknees
-});
+registerComponent("coreLayoutBeesknees", CoreLayoutBeesknees);
+
 
 export default CoreLayoutBeesknees;
 ```
