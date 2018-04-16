@@ -27,7 +27,7 @@ Notice: Because the images can only be loaded through the Meteor Assets API, it'
 
 **Install dependency**
 
-```
+```sh
 meteor npm install buffer-stream-reader --save
 ```
 
