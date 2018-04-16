@@ -17,7 +17,7 @@ directory at the root of your project.
 
 Now let's look at the data we moved over. There are four files there `Shops.json`, `Products.json`, `Shipping.json` and `Tags.json`.
 Primarily we are going to be concerned with Shops and Products but these are not the only types of data you can import.
-If you want to import other data types please consult the main documentation under "Import".
+If you want to import other data types please consult the main documentation under "Importer".
 
 Let's look at the Shops file. There is a lot of stuff there and a lot of it you won't want to change (unless you have
 revolutionary opinions about how many provinces Canada has, etc.). But there are some critical pieces to change.

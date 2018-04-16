@@ -194,6 +194,36 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/data-fixtures-insert-product-images.md"
 		}, {
+      "class": "guide-nav-item",
+      "alias": "swag-shop-tutorial",
+      "label": "Swag shop tutorial",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/introduction.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-collecting-requirements",
+      "label": "Part 1: Collecting the shop requirements",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-collecting-requirements.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-initialization",
+      "label": "Part 2: Project scaffolding",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-initialization.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-landing-page",
+      "label": "Part 3: The Landing Page",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-landing-page.md"
+    }, {
+      "class": "guide-sub-nav-item",
+      "alias": "swag-shop-pdp",
+      "label": "Part 4: Category tiles and the Product Detail Page",
+      "repo": "reaction-docs",
+      "docPath": "developer/swag-shop/swag-shop-pdp.md"
+    }, {
 			"class": "guide-nav-item",
 			"alias": "contributing-to-reaction",
 			"label": "Contributing Guide",
@@ -453,10 +483,10 @@
 			"docPath": "developer/core/orders.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "reaction-import",
-			"label": "Import",
+			"alias": "reaction-importer",
+			"label": "Importer",
 			"repo": "reaction-docs",
-			"docPath": "developer/core/import.md"
+			"docPath": "developer/core/importer.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "reaction-inventory",
@@ -548,7 +578,7 @@
 			"label": "Lists",
 			"docPath": "developer/components/lists.md"
 		}, {
-			"label": "Media",
+			"label": "Media-Related",
 			"docPath": "developer/components/media.md"
 		}, {
 			"label": "Menu",
@@ -592,9 +622,6 @@
 		}, {
 			"label": "Translation",
 			"docPath": "developer/components/translation.md"
-		}, {
-			"label": "Upload",
-			"docPath": "developer/components/upload.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "packages",
@@ -715,6 +742,30 @@
 			"label": "CI Builds",
 			"repo": "reaction-docs",
 			"docPath": "developer/testing/ci.md"
+		}, {
+			"class": "guide-nav-item",
+			"alias": "acceptance-testing",
+			"label": "Acceptance Testing",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/acceptance-testing.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "test-setup",
+			"label": "Test Setup",
+			"repo": "reaction-docs",
+			"docPath": "developer/acceptance/test-setup.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "script-template",
+			"label": "Script Template",
+			"repo": "reaction-docs",
+			"docPath": "developer/acceptance/script-template.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "order-creation",
+			"label": "Script: Order Creation",
+			"repo": "reaction-docs",
+			"docPath": "developer/acceptance/order-creation.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "deploying",
