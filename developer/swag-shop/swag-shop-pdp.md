@@ -18,7 +18,7 @@ Tiles present all of the available categories in a visually appealing way. For t
 
 [/imports/plugins/custom/reaction-swag-shop/lib/collections/schemas/tags.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/755a6025c25bcbd21e58c2afb72a15fa2c5ee390/lib/collections/schemas/tags.js)
 ```js
-import { getSchemas } from "@reactioncommerce/reaction-collections";
+import Schemas from "@reactioncommerce/schemas";;
 import { Tags } from "/lib/collections";
 
 const Schemas = getSchemas();
@@ -245,7 +245,7 @@ Now let's add the `relatedTag` field to the product schema. This field's value s
 [/imports/plugins/custom/reaction-swag-shop/lib/collections/schemas/swagProduct.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/755a6025c25bcbd21e58c2afb72a15fa2c5ee390/lib/collections/schemas/swagProduct.js)
 ```js
 import { Meteor } from "meteor/meteor";
-import { getSchemas } from "@reactioncommerce/reaction-collections";
+import Schemas from "@reactioncommerce/schemas";;
 import { Products } from "/lib/collections/index";
 
 const Schemas = getSchemas();

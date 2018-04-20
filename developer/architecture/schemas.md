@@ -20,7 +20,7 @@ All schemas should be registered using the [`registerSchema()`](http://api.docs.
 
 ```js
 import SimpleSchema from "simpl-schema";
-import { registerSchema } from "@reactioncommerce/reaction-collections";
+import { registerSchema } from "@reactioncommerce/schemas";
 
 const MyNewSchema = new SimpleSchema({
   _id: {
@@ -44,7 +44,7 @@ registerSchema("MyNewSchema", MyNewSchema);
 All registered schemas can be retrieved by importing `getSchemas`, and then using [`getSchemas()`](http://api.docs.reactioncommerce.com/module-collections.html#~getSchemas).
 
 ```js
-import { getSchemas } from "@reactioncommerce/reaction-collections";
+import Schemas from "@reactioncommerce/schemas";;
 
 return getSchemas();
 ```
