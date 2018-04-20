@@ -2,22 +2,42 @@
 
 ## Install
 
-- Make sure you are on Reaction 1.10 and above.
+- Make sure you are on Reaction 1.11 and above.
 - Check your current Reaction version by running: `reaction -v`
 
 > Note: The GraphQL API is an experimental, alpha prototype. Do **not** use for production.
 
-## Authentication
-
-To access the GraphQL API, you need to be authenticated as an administrator via the app first:
-
-- Start Reaction as you normally would by running `reaction`
-- Open `http://localhost:3000`
-- Log in as an admin user
-
 ## Your first query
 
-To test the endpoint, run your first query to fetch the `viewer` resource with its name:
+To try a simple query, open the GraphiQL interface by going to `http://localhost:3000/graphql` in your browser.
+
+In the right-hand query box, enter the following:
+
+```js
+{
+  primaryShopId
+}
+```
+
+You should see a successful response:
+
+```js
+{
+  "data": {
+    "primaryShopId": "cmVhY3Rpb24vc2hvcDpKOEJocTN1VHRkZ3daeDNyeg=="
+  }
+}
+```
+
+Running this query through the GraphiQL interface is the equivalent of running this [GET query](http://localhost:3000/graphql-alpha?query=%7B%0A%20%20primaryShopId%0A%7D) to `http://localhost:3000/graphql-alpha` with this query string (`query=%7B%0A%20%20primaryShopId%0A%7D`) in the browser.
+
+The GraphiQL interface allows you to not only make queries, but also read the corresponding documentation and go through your history.
+
+## Your first authenticated query
+
+While some queries, such as `primaryShopId`, do not require being logged in, other queries do require authentication and may either error or return different results depending on your authentication and authorization status.
+
+For example, let's fetch the `viewer`'s name, without logging in:
 
 ```js
 {
@@ -27,13 +47,30 @@ To test the endpoint, run your first query to fetch the `viewer` resource with i
 }
 ```
 
-You should see a successful response:
+You will not get any data:
 
 ```js
 {
   "data": {
     "viewer": {
-      "name": "Reaction Commerce"
+      "name": null
+    }
+  }
+}
+```
+
+To authenticate, simply log in to a shop as any user in a browser tab in the same browser.
+
+- Open `http://localhost:3000`
+- Log in as an user
+
+Click the Play button to replay the `viewer` query again:
+
+```js
+{
+  "data": {
+    "viewer": {
+      "name": "Reaction User"
     }
   }
 }
@@ -54,11 +91,11 @@ To also get the viewer's email addresses, run:
 }
 ```
 
-You should see the email address you used to log in to this admin user's account included in the result.
+You should see the email address you used to log in to this user's account included in the result.
 
 ## A query with a parameter
 
-First, find your admin account's ID by using this query:
+First, find your viewer account's ID by using this query:
 
 ```js
 {
@@ -68,7 +105,7 @@ First, find your admin account's ID by using this query:
 }
 ```
 
-Then, use that `id` as a parameter in the next query for an `account`:
+Then, copy the `id` and pass it in as a parameter in the next query for an `account`:
 
 ```js
 {
@@ -80,38 +117,32 @@ Then, use that `id` as a parameter in the next query for an `account`:
 
 ## Adding and updating data with mutations
 
-Now, we'll try making a `mutation` to update the admin user's address and the `addAccountAddressBookEntry` method:
+Now, we'll try making a `mutation` to update a user's currency code with the `setAccountProfileCurrency` method.
+
+Pass in the `accountId` and `currencyCode`  as inputs to the mutation:
 
 ```js
 mutation {
-  addAccountAddressBookEntry(input: {
-    accountId: "cmVhY3Rpb24vYWNjb3VudDpaN3pTcVlHZzJNbU1wazlTRw",
-    address: {
-      fullName: "Reaction Documentation",
-      country: "USA",
-      address1: "2110 Main St."
-      city: "Santa Monica",
-      region: "CA",
-      postal: "90405",
-      isBillingDefault: true,
-      isShippingDefault: true,
-      isCommercial: true,
-      phone: "310-123-4567"
-    }
-  }) {
-    clientMutationId
-    address {
-      _id
-      fullName
-      address1
-      phone
-      region
+  setAccountProfileCurrency(input: {
+    accountId: "cmVhY3Rpb24vYWNjb3VudDpaN3pTcVlHZzJNbU1wazlTRw==",
+    currencyCode: "EUR"
+  })
+}
+```
+
+To confirm that the mutation changed the currency as expected, you can query the viewer's currency code with:
+
+```js
+{
+  viewer {
+    currency {
+      code
     }
   }
 }
 ```
 
-Once you've added an entry successfully, check in your database or your running application app to confirm the changes were made correctly.
+Once you've added an entry successfully, check in your database or your running application to confirm the changes were made correctly.
 
 ## More on GraphQL
 - [Reaction Commerce: Running Jest Tests for GraphQL](https://docs.reactioncommerce.com/reaction-docs/master/running-jest-tests)
