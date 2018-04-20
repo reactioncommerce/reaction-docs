@@ -31,7 +31,7 @@ An async version of the above method (only works on the server-side)
 Let's say we wanted to create our own event for "onCreateUser". We would call the `run` method when the event occurred.
 
 ```js
-import { Hooks } from "/server/api"
+import Hooks from "@reactioncommerce/hooks";
 
 Accounts.onCreateUser(function(options, user) {
   // add a hook to alter the user object or do something with its data
@@ -42,7 +42,7 @@ Accounts.onCreateUser(function(options, user) {
 Now you can pass any amount of functions into that hook from anywhere else in the app
 
 ```js
-import { Hooks } from "/server/api"
+import Hooks from "@reactioncommerce/hooks";
 
 // create a callback to run
 function logUserEmail(user) {
