@@ -636,12 +636,6 @@
 			"docPath": "developer/packages/registry.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "converting",
-			"label": "Converting Packages to Plugins",
-			"repo": "reaction-docs",
-			"docPath": "developer/packages/convert-packages.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "permissions",
 			"label": "Permissions",
 			"repo": "reaction-docs",
