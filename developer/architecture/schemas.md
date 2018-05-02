@@ -41,14 +41,6 @@ const MyNewSchema = new SimpleSchema({
 registerSchema("MyNewSchema", MyNewSchema);
 ```
 
-All registered schemas can be retrieved by importing `getSchemas`, and then using [`getSchemas()`](http://api.docs.reactioncommerce.com/module-collections.html#~getSchemas).
-
-```js
-import Schemas from "@reactioncommerce/schemas";;
-
-return getSchemas();
-```
-
 ## Importing
 
 Schemas should be imported to use:
