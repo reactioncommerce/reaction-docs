@@ -17,10 +17,9 @@ The label's text should be editable through the admin backend. This requires som
 Essentially, we're extending the existing `Product` database schema with a new field called `featuredProductLabel`, which holds the label text. This can be seen in [/imports/plugins/custom/reaction-swag-shop/lib/collections/schemas/swagProducts.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/lib/collections/schemas/swagProduct.js):
 ```js
 import { Meteor } from "meteor/meteor";
-import Schemas from "@reactioncommerce/schemas";;
+import Schemas from "@reactioncommerce/schemas";
 import { Products } from "/lib/collections/index";
 
-const Schemas = getSchemas();
 const ExtendedSchema = Schemas.Product.extend({
   featuredProductLabel: {
     optional: true,
@@ -38,9 +37,8 @@ Besides the Product schema, we’ll also need to extend the Filters schema, whic
 
 [/imports/plugins/custom/reaction-swag-shop/server/publications/collections/schemas/filters.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/server/publications/collections/schemas/filters.js)
 ```js
-import Schemas from "@reactioncommerce/schemas";;
+import Schemas from "@reactioncommerce/schemas";
 
-const Schemas = getSchemas();
 Schemas.filters.extend({
   featuredProductLabel: {
     type: String,
@@ -200,11 +198,10 @@ import { Meteor } from "meteor/meteor";
 import { check, Match } from "meteor/check";
 import { Shops, Tags, Catalog } from "/lib/collections";
 import { Logger } from "/server/api";
-import Schemas from "@reactioncommerce/schemas";;
+import Schemas from "@reactioncommerce/schemas";
 
 
 // Validate the subscription filter against our extended filter schema.
-const Schemas = getSchemas();
 const { filters } = Schemas;
 
 function filterProducts(productFilters) {
