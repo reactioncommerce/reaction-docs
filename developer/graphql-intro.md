@@ -9,11 +9,11 @@
 
 ## Your first query
 
-To try a simple query, open the GraphiQL interface by going to `http://localhost:3000/graphql` in your browser.
+To try a simple query, open the GraphiQL interface by going to `http://localhost:3000/graphiql` in your browser.
 
-In the right-hand query box, enter the following:
+In the left-hand query box, enter the following:
 
-```js
+```graphql
 {
   primaryShopId
 }
@@ -21,15 +21,13 @@ In the right-hand query box, enter the following:
 
 You should see a successful response:
 
-```js
+```graphql
 {
   "data": {
     "primaryShopId": "cmVhY3Rpb24vc2hvcDpKOEJocTN1VHRkZ3daeDNyeg=="
   }
 }
 ```
-
-Running this query through the GraphiQL interface is the equivalent of running this [GET query](http://localhost:3000/graphql-alpha?query=%7B%0A%20%20primaryShopId%0A%7D) to `http://localhost:3000/graphql-alpha` with this query string (`query=%7B%0A%20%20primaryShopId%0A%7D`) in the browser.
 
 The GraphiQL interface allows you to not only make queries, but also read the corresponding documentation and go through your history.
 
@@ -39,7 +37,7 @@ While some queries, such as `primaryShopId`, do not require being logged in, oth
 
 For example, let's fetch the `viewer`'s name, without logging in:
 
-```js
+```graphql
 {
   viewer {
     name
@@ -49,7 +47,7 @@ For example, let's fetch the `viewer`'s name, without logging in:
 
 You will not get any data:
 
-```js
+```graphql
 {
   "data": {
     "viewer": {
@@ -66,7 +64,7 @@ To authenticate, simply log in to a shop as any user in a browser tab in the sam
 
 Click the Play button to replay the `viewer` query again:
 
-```js
+```graphql
 {
   "data": {
     "viewer": {
@@ -78,7 +76,7 @@ Click the Play button to replay the `viewer` query again:
 
 To also get the viewer's email addresses, run:
 
-```js
+```graphql
 {
   viewer {
   	name
@@ -97,7 +95,7 @@ You should see the email address you used to log in to this user's account inclu
 
 First, find your viewer account's ID by using this query:
 
-```js
+```graphql
 {
    viewer {
       _id
@@ -107,7 +105,7 @@ First, find your viewer account's ID by using this query:
 
 Then, copy the `id` and pass it in as a parameter in the next query for an `account`:
 
-```js
+```graphql
 {
    account(id: "cmVhY3Rpb24vYWNjb3VudDpaN3pTcVlHZzJNbU1wazlTRw==") {
      name
@@ -121,7 +119,7 @@ Now, we'll try making a `mutation` to update a user's currency code with the `se
 
 Pass in the `accountId` and `currencyCode`  as inputs to the mutation:
 
-```js
+```graphql
 mutation {
   setAccountProfileCurrency(input: {
     accountId: "cmVhY3Rpb24vYWNjb3VudDpaN3pTcVlHZzJNbU1wazlTRw==",
@@ -132,7 +130,7 @@ mutation {
 
 To confirm that the mutation changed the currency as expected, you can query the viewer's currency code with:
 
-```js
+```graphql
 {
   viewer {
     currency {
@@ -142,7 +140,7 @@ To confirm that the mutation changed the currency as expected, you can query the
 }
 ```
 
-Once you've added an entry successfully, check in your database or your running application to confirm the changes were made correctly.
+Once you've changed an entry successfully, check in your database or your running application to confirm the changes were made correctly.
 
 ## More on GraphQL
 - [Reaction Commerce: Running Jest Tests for GraphQL](https://docs.reactioncommerce.com/reaction-docs/master/running-jest-tests)
