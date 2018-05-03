@@ -14,11 +14,13 @@ And then at the top of your test file, ready them by executing:
 Fixtures();
 ```
 
-There are also the following functions/builders that can be imported directly.
+There are also many functions/builders that are available as named exports within `/server/imports/fixtures`. A few examples:
 
-`addProduct` which will create a new product and return that product to you: `import { addProduct } from "/server/imports/fixtures/products";`
-`getShop` which will either get the existing shop of create a new one and return it to you: `import { getShop } from "/server/imports/fixtures/shops";`
-`getUser` which either return an existing user or create one if it doesn't exist: `import { getUser } from "/server/imports/fixtures/users;`
+- `import { addProduct } from "/server/imports/fixtures/products";`
+- `import { getShop } from "/server/imports/fixtures/shops";`
+- `import { getUser } from "/server/imports/fixtures/users;`
+
+Check out those files in the `/server/imports/fixtures` folder to see what is available.
 
 ## Factory
 
@@ -49,32 +51,10 @@ The following factories are predefined. The appropriate object is created by exe
 
 ## Faker
 
-The [reaction-factories](https://github.com/reactioncommerce/reaction-factories) package supplies `Factory` and `faker` with additional methods for testing Reaction packages.
-
-**The recommended way to create shop:**
+To easily get fake data of various types, you can import and use the [faker](https://www.npmjs.com/package/faker) package.
 
 ```js
-const shopId = ReactionFaker.shops.getShop()._id;
+import faker from "faker";
+
+const productTitle = faker.commerce.productName();
 ```
-
-It checks whether already there is a shop and use it if so, in other case it
-creates the new one
-
-**The recommended way to create product:**
-
-```js
-const product = ReactionFaker.products.add();
-```
-
-It creates product with top-level variant and 2 options.
-
-**Additional custom faker methods added:**
-
-- ReactionFaker.address
-- ReactionFaker.metaField
-- ReactionFaker.productVariant
-- ReactionFaker.cartItem
-- ReactionFaker.order
-- ReactionFaker.shops
-- ReactionFaker.users
-- ReactionFaker.products
