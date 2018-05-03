@@ -1,17 +1,15 @@
 ## Running Meteor Integration Tests
 
-Integration testing is implemented using [Mocha](https://mochajs.org/#installation) and [`meteor --test`](https://guide.meteor.com/testing.html).
-
-Shortcut for running the test suite:
-
-```sh
-reaction test
-```
+Integration testing is implemented using [Mocha](https://mochajs.org/#installation) and [`meteor test`](https://guide.meteor.com/testing.html). The driver package is [meteortesting:mocha](https://github.com/meteortesting/meteor-mocha).
 
 Tests can be run from the command line:
 
 ```sh
-SERVER_TEST_REPORTER="dot" meteor test --full-app --once --driver-package dispatch:mocha
+npm run test:app
 ```
 
-For more detailed explanation see the tutorial for writing tests for Reaction
+Or to watch for code changes and restart:
+
+```sh
+npm run test:app:watch
+```
