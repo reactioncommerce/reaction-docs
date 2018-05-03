@@ -35,9 +35,9 @@ Table of contents for all Reaction Commerce AT scripts.
 - [Order Creation](/developer/acceptance/order-creation.md)
 
 <!--
- - [Order Fulfillment](/developer/acceptance-testing/scripts/order-fulfillment.md)
- - [Order Canceling](/developer/acceptance-testing/scripts/order-canceling.md)
- - [Order Refunding](/developer/acceptance-testing/scripts/order-refunding.md)
+ - [Order Fulfillment](/developer/acceptance/scripts/order-fulfillment.md)
+ - [Order Canceling](/developer/acceptance/scripts/order-canceling.md)
+ - [Order Refunding](/developer/acceptance/scripts/order-refunding.md)
 -->
 
 ## Resources
