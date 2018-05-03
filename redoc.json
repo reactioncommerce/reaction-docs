@@ -224,6 +224,12 @@
       "repo": "reaction-docs",
       "docPath": "developer/swag-shop/swag-shop-pdp.md"
     }, {
+      "class": "guide-sub-nav-item",
+      "alias": "graphql-intro",
+      "label": "Tutorial: Getting started with GraphQL",
+      "repo": "reaction-docs",
+      "docPath": "developer/graphql-intro.md"
+    }, {
 			"class": "guide-nav-item",
 			"alias": "contributing-to-reaction",
 			"label": "Contributing Guide",
