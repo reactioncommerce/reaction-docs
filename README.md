@@ -32,10 +32,10 @@ Example: [Testing](#testing)
 
 3. To link to a specific point in a different page, use both `.md` and `#`:
 
-`[Variable naming convention](/developer/styleguide.md#variables)`
-Example: [Variable naming convention](/developer/styleguide.md#variables)
+`[Variable naming convention](/developer/contributing/styleguide.md#variables)`
+Example: [Variable naming convention](/developer/contributing/styleguide.md#variables)
 
-### 
+###
 
 ## Testing
 

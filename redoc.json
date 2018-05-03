@@ -234,43 +234,49 @@
 			"alias": "styleguide",
 			"label": "Code Style Guide",
 			"repo": "reaction-docs",
-			"docPath": "developer/styleguide.md"
+			"docPath": "developer/contributing/styleguide.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "git-style-guide",
 			"label": "Git Style Guide",
 			"repo": "reaction-docs",
-			"docPath": "developer/git-style-guide.md"
+			"docPath": "developer/contributing/git-style-guide.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "react-best-practices",
 			"label": "React Best Practices",
 			"repo": "reaction-docs",
-			"docPath": "developer/react-best-practices.md"
+			"docPath": "developer/contributing/react-best-practices.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "jsdoc-style-guide",
 			"label": "JSDoc Style Guide",
 			"repo": "reaction-docs",
-			"docPath": "developer/jsdoc-style-guide.md"
+			"docPath": "developer/contributing/jsdoc-style-guide.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "error-handling-guide",
 			"label": "Error Handling Guide",
 			"repo": "reaction-docs",
-			"docPath": "developer/error-handling-guide.md"
+			"docPath": "developer/contributing/error-handling-guide.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "using-ci",
+			"label": "CI Builds",
+			"repo": "reaction-docs",
+			"docPath": "developer/contributing/ci.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "release-process",
 			"label": "Release Guide",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/release-process.md"
+			"docPath": "developer/contributing/release-process.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "reporting-vulnerabilities",
 			"label": "Report Vulnerabilities",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/vulnerabilities.md"
+			"docPath": "developer/contributing/vulnerabilities.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "community-channels",
@@ -702,46 +708,64 @@
 			"docPath": "developer/testing/testing.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "acceptance-testing",
-			"label": "Acceptance Testing",
+			"alias": "running-jest-unit-tests",
+			"label": "Running Jest Unit Tests",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/acceptance-testing.md"
+			"docPath": "developer/testing/running-jest-unit-tests.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "running-jest-tests",
-			"label": "Running Jest Tests",
+			"alias": "running-jest-integration-tests",
+			"label": "Running Jest Integration Tests",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/running-jest-tests.md"
+			"docPath": "developer/testing/running-jest-integration-tests.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "running-meteor-integration-tests",
+			"label": "Running Meteor Integration Tests",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/running-meteor-integration-tests.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "writing-jest-unit-tests",
+			"label": "Writing Jest Unit Tests",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/writing-jest-unit-tests.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "writing-jest-integration-tests",
+			"label": "Writing Jest Integration Tests",
+			"repo": "reaction-docs",
+			"docPath": "developer/testing/writing-jest-integration-tests.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "react-testing",
-			"label": "React Testing",
+			"label": "Writing Jest Tests for React Components",
 			"repo": "reaction-docs",
 			"docPath": "developer/testing/react-testing.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "using-factories-for-testing",
-			"label": "Factories",
+			"alias": "creating-test-data",
+			"label": "Creating Test Data",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/factories.md"
+			"docPath": "developer/testing/creating-test-data.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "using-faker-for-testing",
-			"label": "Faker",
+			"alias": "creating-test-data-for-meteor-tests",
+			"label": "Creating Test Data for Meteor Tests",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/faker.md"
+			"docPath": "developer/testing/creating-test-data-meteor.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "using-ci",
-			"label": "CI Builds",
+			"alias": "jest-tips",
+			"label": "Jest Tips",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/ci.md"
+			"docPath": "developer/testing/jest-tips.md"
 		}, {
 			"class": "guide-nav-item",
 			"alias": "acceptance-testing",
 			"label": "Acceptance Testing",
 			"repo": "reaction-docs",
-			"docPath": "developer/testing/acceptance-testing.md"
+			"docPath": "developer/acceptance/acceptance-testing.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "test-setup",
