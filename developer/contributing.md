@@ -47,7 +47,7 @@ Once your branch fulfills the issue it tackles, you are ready to [create a pull 
 
 ### Use our Git commit message conventions
 
-Follow the [Git Style Guide](/developer/git-style-guide.md) rules outlined in the docs for branch names and commit message styles.
+Follow the [Git Style Guide](/developer/contributing/git-style-guide.md) rules outlined in the docs for branch names and commit message styles.
 
 ### Give your PR a good title
 
@@ -122,7 +122,7 @@ The team reviews code quality rules including:
 
 - **Readability:** The linter will help with this, but call out anything that is difficult to understand or that you feel needs comments
 
-- **Documentation:** all code added or touched should have proper JSDoc, any new functionality should be documented, as outlined in [JSDoc Style Guide](/developer/jsdoc-style-guide.md).
+- **Documentation:** all code added or touched should have proper JSDoc, any new functionality should be documented, as outlined in [JSDoc Style Guide](/developer/contributing/jsdoc-style-guide.md).
 
 - **Security:**
   - Code should only be usable by users with the correct roles. Any data published should be filtered to ensure that only users with the correct roles for the correct shops have access to it.

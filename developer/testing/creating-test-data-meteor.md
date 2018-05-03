@@ -1,8 +1,8 @@
-# Fixtures/Factories
+# Creating Test Data for Meteor Tests
 
-Reaction comes with a set of prebuilt Factories and functions for creating data to write your tests.
+Reaction comes with a set of prebuilt factories and functions for creating data to write your Meteor integration tests.
 
-Whenever you want to use one of the Factories you need to import them like this:
+Whenever you want to use one of the factories you need to import them like this:
 
 ```js
 import Fixtures from "/server/imports/fixtures";
@@ -46,3 +46,35 @@ The following factories are predefined. The appropriate object is created by exe
 
   - `variant` creates item with `type = variant`
   - `product` creates empty product without variants
+
+## Faker
+
+The [reaction-factories](https://github.com/reactioncommerce/reaction-factories) package supplies `Factory` and `faker` with additional methods for testing Reaction packages.
+
+**The recommended way to create shop:**
+
+```js
+const shopId = ReactionFaker.shops.getShop()._id;
+```
+
+It checks whether already there is a shop and use it if so, in other case it
+creates the new one
+
+**The recommended way to create product:**
+
+```js
+const product = ReactionFaker.products.add();
+```
+
+It creates product with top-level variant and 2 options.
+
+**Additional custom faker methods added:**
+
+- ReactionFaker.address
+- ReactionFaker.metaField
+- ReactionFaker.productVariant
+- ReactionFaker.cartItem
+- ReactionFaker.order
+- ReactionFaker.shops
+- ReactionFaker.users
+- ReactionFaker.products

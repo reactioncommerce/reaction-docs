@@ -26,7 +26,7 @@ Every Monday, the Core team triages all new pull requests. The Core team reviews
 - No hard-coded copy: All copy and alerts should have i18n keys and values.
 - Updated LingoHub translations.
 - All new methods and files have jsdoc summaries, as outlined in [JSDoc guide](https://github.com/reactioncommerce/reaction-jsdoc#how-to-write-docs).
-- All folders, variables, method names follow naming conventions, outlined in [Reaction style guide](/developer/styleguide.md).
+- All folders, variables, method names follow naming conventions, outlined in [Reaction style guide](/developer/contributing/styleguide.md).
 
 The Core team also encourages in-line commenting. Use comments to:
 

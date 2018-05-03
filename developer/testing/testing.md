@@ -1,253 +1,56 @@
 # Testing
 
-## Integration Tests
+Testing Reaction breaks down into two broad categories:
 
-Integration testing is implemented using [Mocha](https://mochajs.org/#installation) and [`meteor --test`](https://guide.meteor.com/testing.html).
+- Manual or automated acceptance testing
+- Automated code tests
 
-Shortcut for running the test suite:
+The automated code tests category can be further divided into three main types:
 
-```sh
-reaction test
-```
+- Jest unit tests
+- Jest integration tests
+- Mocha integration tests with Meteor dependencies
 
-Tests can be run from the command line:
+The Mocha integration tests are gradually being converted to Jest, either unit or integration tests as appropriate.
 
-```sh
-SERVER_TEST_REPORTER="dot" meteor test --full-app --once --driver-package dispatch:mocha
-```
+The aim is to have full test coverage with Jest tests.
 
-For more detailed explanation see the tutorial for writing tests for Reaction
+## Unit vs. Integration
 
-## Acceptance Tests
+Unit tests simulate all possible outputs of a single function or component, given various inputs. They mock all external function calls in order to achieve a pure test of only that one function's logic.
 
-In acceptance testing, the idea is to simulate a users experience to validate functionality on the front end. Some test scripts simulate real user login and test functionality.
+Integration tests check to make sure that various functions or components are working together properly.
 
-### Setup
+For example, if you write a GraphQL `shop` resolver and a `tags` resolver, each of those must have a unit test that determines whether the shop or tags list, respectively, is correctly returned. But assuming that a shop has a `tags` field, your `shop` unit test will be mocking or otherwise ignoring the output of the `tags` resolver. To ensure that the two resolvers work together to produce the correct `shop.tags` field, you need an integration test.
 
-To get started with Acceptance Testing first you must install the latest [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and download [Selenium Standalone Server](http://goo.gl/2lZ46z).
+The different between a unit test and an integration test is not always clear cut. You might choose to test two functions together but still mock all other functions that they call. This is technically an integration test, but might be best written in a unit testing pattern.
 
-Place Selenium Server in your home directory.
+For this reason, think of the terms "unit" and "integration" more as ends of a spectrum, where the "unit" end mocks everything and tests in complete isolation while the "integration" end mocks nothing and is essentially like running the app itself.
 
-```sh
-mv ~/Downloads/selenium-server-standalone-* ~/
-```
+In practice, in the Reaction codebase, the primary distinction is that integration tests are all written in the `/tests` folder and can make use of a fake, in-memory version of MongoDB, while unit tests have no mock database and are written in files throughout the code, with names similar to the name of the file they test.
 
-### Install [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
+NOTE: For now, there are also some Meteor integration tests, which are located throughout the code, have the `.app-test.js` extension, and do have access to the full Meteor environemnt, including MongoDB, while running.
 
-#### Linux
+## When To Run Tests
 
-Download [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/).
+- If you are changing code and submitting a pull request, you should run all tests on your machine prior to submitting the pull request for review. Use the `reaction test` or `npm test` command to do this.
+- For all pull requests, CircleCI automatically runs all unit and integration tests and will not allow merging until they all pass.
 
-```sh
-sudo mv ~/Downloads/chromedriver /usr/bin/
-```
+## Further Reading
 
-#### macOS
+For Jest, see the following:
+- [Running Jest Unit Tests](/developer/testing/running-jest-unit-tests.md)
+- [Running Jest Integration Tests](/developer/testing/running-jest-integration-tests.md)
+- [Writing Jest Unit tests](/developer/testing/writing-jest-unit-tests.md)
+- [Writing Jest Integration Tests](/developer/testing/writing-jest-integration-tests.md)
+- [Writing Jest Tests for React Components](/developer/testing/react-testing.md)
+- [Creating Test Data](/developer/testing/creating-test-data.md)
+- [Jest Tips](/developer/testing/jest-tips.md)
+- [The official Jest documentation](https://facebook.github.io/jest/)
 
-Install manually or using `brew`.
+For Mocha/Meteor, see the following:
+- [Running Meteor integration tests](/developer/testing/running-meteor-integration-tests.md)
+- [Creating Test Data for Meteor Tests](/developer/testing/creating-test-data-meteor.md)
+- [The official Meteor testing documentation](https://guide.meteor.com/testing.html)
 
-```sh
-brew install chromedriver
-```
-
-Run Selenium Server (**NOTE:** your selenium version might differ):
-
-```sh
-java -jar selenium-server-standalone-3.0.0-beta2.jar
-```
-
-### Install Test Reporter
-
-#### Debian
-
-```sh
-sudo apt-add-repository ppa:yandex-qatools/allure-framework
-sudo apt-get update
-sudo apt-get install allure-commandline
-```
-
-#### macOS
-
-```sh
-brew tap qatools/formulas
-brew install allure-commandline
-```
-
-### Configuration
-
-#### Test Settings
-
-```sh
-tests/acceptance-tests/config/settings.yml
-```
-
-```yaml
-base_url: http://localhost:3000
-
-browser: chrome
-
-# browserstack additional capabilities
-browser_version: "52.0"
-os: Windows
-os_version: "10"
-resolution: "1920x1080"
-```
-
-`browser`: Which browser you would like to run the tests against.
-
-If you decide to use a third party test runner. Their browser capabilities can be placed here.
-
-#### Configure User Data
-
-```sh
-tests/acceptance-tests/config/user-data.yml
-```
-
-```yaml
-admin_email: testing@reactioncommerce.com
-admin_pw: password123
-
-guest_pw: password123
-
-# shop address
-country: US
-name: Lewis Hamilton
-address1: 2110 Main Street.
-postal: 90405
-city: Santa Monica
-region: CA
-phone: 555-555-5555
-
-# payment info
-card_holder: Nico Roseberg
-visa: 4242424242424242
-paypal_visa: 4111111111111111
-stripe_visa: 4000000000000077
-exp_month: 1
-exp_year: 2020
-cvv: 123
-```
-
-For ease of use make sure the admin email and password match what you have in your `settings.json`, or in `~/.bash_profile`.
-
-If none are set..
-
-Open:
-
-```sh
-~/.bash_profile
-```
-
-Add the following lines.
-
-```sh
-export REACTION_USER="admin"
-export REACTION_AUTH="0r61DHmH"
-export REACTION_EMAIL="prwtfizd@localhost"
-```
-
-```sh
-source ~/.bash_profile
-```
-
-#### Configure Test Suite
-
-```sh
-test/acceptance-tests/config/test-suite-config.yml
-```
-
-```yaml
-# Enable and disable different suites of tests
-
-# Payment Processor specific tests
-braintree: false
-stripe: false
-authnet: false
-paypal: false
-example: false
-
-# Admin functionality
-permissions: false
-
-# Regression suites
-smoke_test: true
-```
-
-By default all but `smoke_test` will be set to `false` (off). Setting to `true` will enable that suite of tests.
-
-### Run
-
-#### Start Reaction Application
-
-```sh
-reaction
-```
-
-#### Run tests
-
-Running tests locally:
-
-```sh
-npm install browserstack-local
-npm run test-local
-```
-
-### Automate with BrowserStack
-
-![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
-
-We use [BrowserStack](https://www.browserstack.com) for automated acceptance testing.
-
-#### Configure BrowserStack
-
-Add your BrowserStack credentials in `~/.bash_profile`.
-
-```sh
-export BROWSERSTACK_USERNAME="your_username"
-export BROWSERSTACK_ACCESS_KEY="your_api_key"
-```
-
-Running tests on BrowserStack:
-
-```sh
-npm run test-browserstack
-```
-
-### Reporter
-
-To enable Allure reporting results set `allure: true` in:
-
-```sh
-test/acceptance-tests/config/test-suite-config.yml
-```
-
-```yml
-# Test reporter
-allure: true
-```
-
-After a test run has completed a `allure-results` directory is created.
-
-Viewing the results of your tests:
-
-```sh
-npm run create-report
-```
-
-This compiles the report into your `$HOME` directory as `allure-report`.
-
-```sh
-npm run open-report
-```
-
-```js
-screenshotPath: "./tests/acceptance-tests/errorShots/"
-```
-
-The report will then be open in a browser window.
-
-To remove test report files run:
-
-```sh
-npm run del-report
-```
+For acceptance testing, see the [Acceptance Testing](/developer/acceptance/acceptance-testing.md) section.
