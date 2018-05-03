@@ -765,7 +765,7 @@
 			"alias": "acceptance-testing",
 			"label": "Acceptance Testing",
 			"repo": "reaction-docs",
-			"docPath": "developer/acceptance/acceptance-testing.md"
+			"docPath": "developer/acceptance/overview.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "test-setup",
