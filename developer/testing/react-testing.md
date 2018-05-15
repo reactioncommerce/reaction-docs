@@ -44,13 +44,11 @@ import React from "react";
 import { shallow } from "enzyme";
 import Buzz from "./Buzz";
 
-describe("Shallow render component", () => {
-  it("asserts component is called at least once", () => {
-    const wrapper = shallow(<Buzz />);
-    expect(wrapper.find(Custom).length).toEqual(1);
-    expect(wrapper.find(".fizz").length).toEqual(1);
-  });
-})
+test("expect component is called at least once", () => {
+  const wrapper = shallow(<Buzz />);
+  expect(wrapper.find(Custom).length).toEqual(1);
+  expect(wrapper.find(".fizz").length).toEqual(1);
+});
 ```
 
 _Steps 1_: Shallow render a component

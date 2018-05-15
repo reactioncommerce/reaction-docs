@@ -28,10 +28,10 @@ import GraphTester from "../GraphTester";
 let tester;
 beforeAll(async () => {
   tester = new GraphTester();
-  await tester.startServer();
+  await tester.start();
 });
 
-afterAll(() => tester.stopServer());
+afterAll(() => tester.stop());
 
 test("something", async () => {
   // (1) use tester.collections to write to MongoDB collections to set up initial data state
@@ -43,5 +43,5 @@ test("something", async () => {
 
 ### Further Reading
 
-- The MongoDB collections are simulated in-memory collections, implemented using [NeDB](https://github.com/louischatriot/nedb).
+- The MongoDB collections are simulated in-memory collections, implemented using [mongodb-memory-server](https://github.com/nodkz/mongodb-memory-server).
 - The `query`, `mutation`, and `subscription` properties of the `GraphTester` instance are wrappers around the methods of the same name provided by the [graphql.js](https://github.com/f/graphql.js) package.
