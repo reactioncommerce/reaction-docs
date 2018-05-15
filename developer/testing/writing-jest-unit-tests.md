@@ -71,7 +71,29 @@ Refer to the package documentation for complete details, but in general the proc
 2. Add a `beforeAll` in which you call `rewire$<name>` and pass it a mock. The mock must be the same type as is exported. For example, `rewire$someFunction(mockFunction)` or `rewire$someObject(mockObject)`.
 3. Add an `afterAll` in which you call `restore$<name>` for each export that you've rewired.
 
-Search the codebase for "rewire" to find examples.
+Example usage
+```js
+import { rewire as rewire$importedFunc, restore as restore$importedFunc } from "./importedFunc";
+import testedFunc from "./testedFunc";
+
+const mockImportedFunc = jest.fn().mockName("importedFunc");
+
+beforeAll(() => {
+ rewire$importedFunc(mockImportedFunc);
+});
+
+afterAll(() => {
+  restore$importedFunc(mockImportedFunc);
+});
+
+test("example test", () => {
+  mockImportedFunc.mockReturnValueOnce("mockValue");
+  const spec = testedFunc();
+  expect(spec).toEqual({ mockProp: "mockValue" });
+});
+```
+
+Search the codebase for "rewire" to find more examples.
 
 ## Rendering Components In Tests
 
