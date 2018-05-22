@@ -14,4 +14,4 @@ Once you have supplied the proper credentials, when you visit the Product Detail
 see a dropdown which lets you choose from Tax Codes provided by TaxCloud. This is the tax code that will be
 sent to TaxCloud and recorded with your order.
 
-![taxcloud-select-taxcodet](/assets/taxcloud-select-taxcodet.png)
+![taxcloud-select-taxcodet](/assets/avalara-tax-code-dropdown.png)
