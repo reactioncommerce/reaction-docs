@@ -83,6 +83,14 @@
       <p class="item-info item-label">Canada</p>
       <p class="item-info item-label">Ecommerce</p>
     </div>
+  </a>
+  <a href="https://hop.exchange/" class="showcase-grid-item" target="_blank">
+    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-hop-exchange.jpg">
+    <div>
+      <p class="item-info">hop.exchange</p>
+      <p class="item-info item-label">UK</p>
+      <p class="item-info item-label">Marketplace</p>
+    </div>
   </a>  
 </div>
 
