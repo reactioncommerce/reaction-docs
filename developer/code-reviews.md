@@ -6,7 +6,7 @@ Here's what to expect when you make a pull request to Reaction:
 
 ## Automated pull request checks
 
-As soon as pull requests are pushed, [BitHound](https://www.bithound.io/github/reactioncommerce/reaction), [CircleCI](https://circleci.com/gh/reactioncommerce/reaction) and [Synk](https://snyk.io/) run automated tests. All checks should pass successfully to ensure:
+As soon as pull requests are pushed, [CircleCI](https://circleci.com/gh/reactioncommerce/reaction) and [Synk](https://snyk.io/) run automated tests. All checks should pass successfully to ensure:
 
 - All linting rules pass without errors or ignores.
 - Dependencies are not failing.
