@@ -12,7 +12,7 @@ As a community, Reaction follows guidelines for code style and naming convention
 
 ## Syntax and style conventions
 
-Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) and [Meteor Code Style](https://guide.meteor.com/code-style.html), [standard template of ESLint rules](https://www.npmjs.com/package/eslint-config-airbnb), with a few custom Reaction-specific rules:
+Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) and [Meteor Code Style](https://guide.meteor.com/code-style.html) with a few custom Reaction-specific rules:
 
 - Always double-quote strings
 
@@ -41,11 +41,11 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
 
 Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
 
-- [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
+- [`@reactioncommerce/eslint-config`](https://github.com/reactioncommerce/reaction-eslint-config) - This Reaction Commerce [ESLint](http://eslint.org) config checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel, across all Reaction apps.
 - [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - [JS Beautifier](jsbeautifier.org) automates code formatting
 - [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
 
-To see the rules in action, run `eslint .` from the command line or use [ESLint code editor tools](https://eslint.org/docs/user-guide/integrations).
+To see the rules in action, run `npm run lint` or `npx eslint .` from the command line or use [ESLint code editor tools](https://eslint.org/docs/user-guide/integrations).
 
 💡 **ProTip!** If you're using [Atom](https://atom.io/), like the Core team, you can install all the necessary tools in one line:  `apm install editorconfig atom-beautify linter linter-eslint linter-markdown linter-jsonlint linter-docker`
 
