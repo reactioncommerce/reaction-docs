@@ -76,6 +76,14 @@
       <p class="item-info item-label">Marketplace</p>
     </div>
   </a>
+  <a href="https://greennie.com/" class="showcase-grid-item" target="_blank">
+    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-greenie.jpg">
+    <div>
+      <p class="item-info">greennie.com</p>
+      <p class="item-info item-label">Canada</p>
+      <p class="item-info item-label">Ecommerce</p>
+    </div>
+  </a>  
 </div>
 
 ## Building a project on Reaction?
