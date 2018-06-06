@@ -15,7 +15,7 @@ As soon as pull requests are pushed, [BitHound](https://www.bithound.io/github/r
 
 You can run these checks yourself by running these commands:
 
-- `eslint .` for linting
+- `npm run lint .` for linting
 - `reaction test` for all tests
 
 ## Core team pull request review
