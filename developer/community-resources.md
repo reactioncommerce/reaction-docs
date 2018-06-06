@@ -72,6 +72,18 @@ Kudos to [Loan!](https://github.com/loanlaux)
 
 ## Community plugins
 
+### [Reaction Commerce <> Magento importer](https://github.com/Buildateam/reaction-magento)
+
+Import products, orders and customers from Magento EE 1.x stores into Reaction.
+
+### [Reaction Commerce <> Netsuite bridge](https://github.com/Buildateam/reaction-netsuite)
+
+Export orders from Reaction Commerce into Netsuite.
+
+### [create-reaction-app](https://github.com/jussivesa/create-reaction-app)
+
+Set up a Reaction Commerce application with these scripts, ready-made base themes and examples of custom components.
+
 ### [boomerdigital/reaction-subscription-billing](https://github.com/boomerdigital/reaction-subscription-billing)
 
 This plugin is **work-in-progress**, but does address a very common request: A Reaction plugin that does support the most popular subscription billing features. This is because subscriptions play an important and ever increasing role in the ecommerce landscape.
