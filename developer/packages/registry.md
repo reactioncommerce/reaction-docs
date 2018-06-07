@@ -264,8 +264,6 @@ To add and customize Dashboard panels, use these `provides` values.
   - `template`
   - `provides`
 
-- To see an example, check out the [Revisions plugin](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/core/revisions/register.js).
-
 - `provides: "shippingSettings"` - This will register a template to appear in the shippingSettings panel of the dashboard. For an example, check out our [Flat Rate Shipping plugin](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/included/shipping-rates/register.js#L26-L33).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-shipping-settings-1.png" width="50%">
