@@ -882,12 +882,6 @@
 			"docPath": "admin/dashboard/payment.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"label": "Catalog",
-			"repo": "reaction-docs",
-			"alias": "catalog",
-			"docPath": "admin/dashboard/catalog.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "tax",
 			"label": "Tax",
 			"repo": "reaction-docs",
