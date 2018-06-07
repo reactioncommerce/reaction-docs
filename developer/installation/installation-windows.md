@@ -8,7 +8,9 @@
 
 ### Install Node
 
-Download and run the installer from the [NodeJs site](https://nodejs.org)
+Download and run the installer from the [Node.js site](https://nodejs.org) for the latest long-term support (LTS) version, 8.
+
+**Note:** Reaction is currently not compatible with Node 9.
 
 ### Install Chocolately
 

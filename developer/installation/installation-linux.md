@@ -4,7 +4,9 @@
 
 ### Install Node
 
-Follow the instructions at [NodeJs site](https://nodejs.org)
+Follow the instructions at [Node.js site](https://nodejs.org) for the latest long-term support (LTS) version, 8.
+
+**Note:** Reaction is currently not compatible with Node 9.
 
 ### Install Build Tools and Package Requirements
 
