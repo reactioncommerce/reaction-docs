@@ -809,12 +809,6 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/deploying/docker.md"
 		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "deploying-on-reaction-platform",
-			"label": "Reaction Platform",
-			"repo": "reaction-docs",
-			"docPath": "developer/deploying/platform.md"
-		}, {
 			"class": "guide-nav-item",
 			"alias": "dashboard",
 			"label": "Store Operator's Guide",
