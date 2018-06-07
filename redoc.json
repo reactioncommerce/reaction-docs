@@ -554,12 +554,6 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/themes/helpers.md"
 		}, {
-			"class": "guide-sub-nav-item",
-			"alias": "revision-api",
-			"label": "Revisions",
-			"repo": "reaction-docs",
-			"docPath": "developer/revisions.md"
-		}, {
 			"class": "guide-nav-item",
 			"alias": "components",
 			"label": "Components",
