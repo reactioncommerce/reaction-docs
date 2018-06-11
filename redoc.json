@@ -666,12 +666,6 @@
 			"docPath": "developer/packages/including.md"
 		}, {
 			"class": "guide-sub-nav-item",
-			"alias": "payment-packages-authnet",
-			"label": "Payments - Authorize.net",
-			"repo": "reaction-docs",
-			"docPath": "developer/packages/payments/authnet.md"
-		}, {
-			"class": "guide-sub-nav-item",
 			"alias": "payment-packages-braintree",
 			"label": "Payments - Braintree",
 			"repo": "reaction-docs",
