@@ -666,6 +666,12 @@
 			"docPath": "developer/packages/including.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "third-party-plugins",
+			"label": "Install third-party plugins",
+			"repo": "reaction-docs",
+			"docPath": "developer/packages/third-party-plugins.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "payment-packages-braintree",
 			"label": "Payments - Braintree",
 			"repo": "reaction-docs",
