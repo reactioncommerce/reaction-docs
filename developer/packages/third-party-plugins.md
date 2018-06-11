@@ -4,9 +4,9 @@ Find third-party packages for Reaction in the [`reaction-contrib`](https://githu
 
 ## List of packages
 
-Plugin | Link
--- | --
-Authorize.net | [meteor-authorize-net](https://github.com/reaction-contrib/meteor-authorize-net)
+| Plugin        | Link                                                                             |
+| ------------- | -------------------------------------------------------------------------------- |
+| Authorize.net | [meteor-authorize-net](https://github.com/reaction-contrib/meteor-authorize-net) |
 
 ## Installing plugins
 
@@ -15,4 +15,3 @@ Authorize.net | [meteor-authorize-net](https://github.com/reaction-contrib/meteo
 3. Run `reaction reset`
 
 Follow the specific configuration instructions in each package's README.
-
