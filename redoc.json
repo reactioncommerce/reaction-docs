@@ -498,7 +498,7 @@
 			"alias": "reaction-importer",
 			"label": "Importer",
 			"repo": "reaction-docs",
-			"docPath": "developer/core/importer.md"
+			"docPath": "developer/core/import.md"
 		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "reaction-inventory",
