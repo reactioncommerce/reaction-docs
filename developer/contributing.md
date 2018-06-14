@@ -24,13 +24,12 @@ Once your bug issue is filed, the community team will evaluate and prioritize us
 - **impact-major** (do next): Blocks important functionality but there is a workaround or the problem doesn't inhibit shopping/purchasing
 - **impact-minor** (do eventually): Impacts peripheral functionality or there is a reasonable workaround (UI glitches, etc)
 
-Once it's been triaged and verified, a Community Engineering team member will work on it according the above criteria.
+Once it's been triaged and verified, a team member will work on it according the above criteria.
 
 ### Find an issue and claim it
 
 1. Explore the [Help Wanted](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) or [Good First Issue](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) issues on our GitHub repo.
 2. If you find something you want to work on, let us know right there in the comment with how you want to approach the problem.
-3. If you are a first-time contributor, also mention the `@reactioncommerce/community` team in the comment so you can  request to be made a contributor.
 
 ### Create a Feature Request issue
 
@@ -108,7 +107,7 @@ Before you are ready for a team code review, you will also have to fill out the 
 
 ## Step 4: PR review process begins
 
-The Community team triages all new pull requests as soon as the PR is complete.
+The team triages all new pull requests as soon as the PR is complete.
 
 ### PR gets reviewed
 
@@ -145,9 +144,5 @@ Reviewers will note any changes that they will want to QA in the app, even if th
 ## Step 5: Congrats! It's approved. What happens next?
 
 The Reaction team reviewer is responsible for merging the PRs they approved, unless the PR submitter has requested otherwise.
-
-Does your new feature require new user documentation or developer documentation? Make an issue for that in [reaction-docs](https://github.com/reactioncommerce/reaction-docs/issues).
-
-## Step 5: Congrats! It's merged. What happens next?
 
 Now that your PR is merged, the feature will be released in the next release. Head on over to our [Release Guide](/developer/testing/release-process.md) for more on how we release versions of Reaction.
