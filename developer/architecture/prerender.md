@@ -8,12 +8,21 @@ To enable prerender for your app set the following environment variables
 
 ```shell
 PRERENDER_TOKEN: YOURTOKEN
+PRERENDER_SERVICE_URL: http://service.prerender.io/
 PRERENDER_HOST: example.com
 ```
 
 You can find your `PRERENDER_TOKEN` on your [prerender.io account page](https://prerender.io/account)
 
-Your `PRERENDER_HOST` should be the domain your app is using (e.g. `example.com` or `www.example.com`)
+Your `PRERENDER_HOST` should be the domain your app is using (e.g. `example.com` or `www.example.com`).
+
+To test that your integration with [prerender.io](prerender.io) works, append `?_escaped_fragment_=` to one of your site's URLs and load it on a browser. For example,
+
+```shell
+https://example.com/product/example-product?_escaped_fragment_=
+```
+
+You should then see the URL cached in your [prerender.io](prerender.io) dashboard.
 
 ## Customization
 
