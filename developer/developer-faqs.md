@@ -54,13 +54,6 @@ The database acts as the persistent storage of JavaScript objects. For example, 
 
 We're always open to contributions from our community. To learn more about becoming a contributor, [click here](https://blog.reactioncommerce.com/how-to-write-a-pr-for-reaction/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
 
-## Installation
-
-### I cloned the Reaction repo but when I run `meteor` it doesn't work
-
-You need to install and use the Reaction command line tool in order to run Reaction. It does some work building the application
-before the app starts that is not optional. You can install the CLI by doing `npm install -g reaction-cli`. Then you should be able to run `meteor npm install` and then start the app by running `reaction run` or just `reaction`.
-
 ### Do you have a list of community provided plugins, themes or other resources?
 
 We compiled a curated list of community projects that can be found in the wild. Over time, this list will continue to grow and some of the projects may become deprecated. Please drop us a note if you spot new awesome contributions out there! [Community Resources](/developer/community-resources.md).

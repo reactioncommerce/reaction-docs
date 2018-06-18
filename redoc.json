@@ -57,6 +57,18 @@
 			"docPath": "developer/configuration.md"
 		}, {
 			"class": "guide-sub-nav-item",
+			"alias": "developing-in-docker",
+			"label": "Developing in Docker",
+			"repo": "reaction-docs",
+			"docPath": "developer/installation/docker-development.md"
+		}, {
+			"class": "guide-sub-nav-item",
+			"alias": "development-troubleshooting",
+			"label": "Development Troubleshooting",
+			"repo": "reaction-docs",
+			"docPath": "developer/installation/development-troubleshooting.md"
+		}, {
+			"class": "guide-sub-nav-item",
 			"alias": "developer-faq",
 			"label": "FAQs",
 			"repo": "reaction-docs",

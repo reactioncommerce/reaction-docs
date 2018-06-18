@@ -42,21 +42,7 @@ curl https://install.meteor.com/ | sh
 
 ### Increase your open file limit
 
-The Meteor development environment requires significantly more available files than are configured in macOS by default.
-
-See: <http://stackoverflow.com/a/27982223>
-
-Increase your file limits with these `terminal` commands.
-
-```sh
-echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
-echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
-sudo sysctl -w kern.maxfiles=65536
-sudo sysctl -w kern.maxfilesperproc=65536
-ulimit -n 65536 65536
-echo "ulimit -n 65536 65536" >> .bashrc
-source .bashrc
-```
+The Meteor development environment requires significantly more available files than are configured in macOS by default. Follow the instructions here to fix this: https://gist.github.com/abernix/a7619b07b687bb97ab573b0dc30928a0
 
 ## Install Reaction
 
@@ -96,11 +82,11 @@ reaction run
 
 **Note**: The first run can take a while as it downloads dependencies. This is especially true if you are not in North America.
 
-_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ By default the username will be :`admin@localhost` and the password will be: `r3@cti0n`
+_The initial admin user for the site is auto generated, and displayed in your console (or see: env variables section to default these)_ By default the username will be `admin@localhost` and the password will be `r3@cti0n`
 
 ![](/assets/guide-installation-default-user.png)
 
-Congrats! Now you've created your first Reaction store. View the store by going to <http://localhost:3000> in your favorite browser.
+Congrats! Now you've created your first Reaction shop. View the shop by going to <http://localhost:3000> in your favorite browser.
 
 To terminate `reaction` use `CTRL-c`.
 
