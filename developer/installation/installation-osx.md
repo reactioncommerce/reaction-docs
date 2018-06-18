@@ -42,7 +42,7 @@ curl https://install.meteor.com/ | sh
 
 ### Increase your open file limit
 
-The Meteor development environment requires significantly more available files than are configured in macOS by default. Follow the instructions here to fix this: https://gist.github.com/abernix/a7619b07b687bb97ab573b0dc30928a0
+The Meteor development environment requires significantly more available files than are configured in macOS by default. [Follow the instructions here to fix this.](https://gist.github.com/abernix/a7619b07b687bb97ab573b0dc30928a0)
 
 ## Install Reaction
 
