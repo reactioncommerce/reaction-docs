@@ -22,7 +22,7 @@ To test that your integration with [prerender.io](prerender.io) works, append `?
 https://example.com/product/example-product?_escaped_fragment_=
 ```
 
-You should then see the URL cached in your [prerender.io](prerender.io) dashboard.
+You should then see the URL cached in your [prerender.io dashboard](prerender.io).
 
 ## Customization
 
