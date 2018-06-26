@@ -121,3 +121,5 @@ If you have big problems, there is a "Reset" option in the Docker for Mac or Doc
 ### Troubleshooting
 
 If you are experiencing issues, first make sure that you are allowing Docker sufficient memory to run. In your Docker preferences, we suggest adjusting the `Memory` setting to allow `3.0GiB`, and the `Swap` setting to allow `1.5GiB`.
+
+![advanced_and_reaction](https://user-images.githubusercontent.com/4482263/41941033-a31bc834-794f-11e8-8638-934220650730.png)
