@@ -36,14 +36,6 @@
 </style>
 
 <div class="photo-grid">
-  <a href="http://itfurniturestore.com" class="showcase-grid-item" target="_blank">
-    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-1-itfurniture.png">
-    <div>
-      <p class="item-info">itfurniturestore.com</p>
-      <p class="item-info item-label">USA</p>
-      <p class="item-info item-label">Ecommerce</p>
-    </div>
-  </a>
   <a href="http://artlimes.com" class="showcase-grid-item" target="_blank">
     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-2-artlimes.png">
     <div>
