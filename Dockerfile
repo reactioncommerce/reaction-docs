@@ -1,10 +1,10 @@
 FROM node:8-alpine
 
-ARG NAME=reaction-docs-static
+ARG NAME=reaction-docs
 ARG DESCRIPTION="Reaction Docs: Docusarus static documentation site generator"
-ARG URL=https://github.com/reactioncommerce/reaction-docs-static
-ARG DOC_URL=https://github.com/reactioncommerce/reaction-docs-static
-ARG VCS_URL=https://github.com/reactioncommerce/reaction-docs-static
+ARG URL=https://github.com/reactioncommerce/reaction-docs
+ARG DOC_URL=https://github.com/reactioncommerce/reaction-docs
+ARG VCS_URL=https://github.com/reactioncommerce/reaction-docs
 ARG VCS_REF
 ARG VENDOR
 ARG BUILD_DATE
