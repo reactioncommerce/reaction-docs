@@ -1,0 +1,77 @@
+{
+  "name": "@reactioncommerce/reaction-docs-static",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/reactioncommerce/reaction-docs-static",
+  "repository": "https://github.com/reactioncommerce/reaction-docs-static",
+  "author": {
+    "name": "Reaction Commerce",
+    "email": "engineering@reactioncommerce.com",
+    "url": "https://reactioncommerce.com"
+  },
+  "license": "GPL-3.0-only",
+  "private": true,
+  "scripts": {
+    "build": "cd website && yarn build --skip-image-compression",
+    "lint": "yarn run lint:eslint",
+    "lint:eslint": "eslint website/.",
+    "lint:fix": "yarn run lint:fix:eslint",
+    "lint:fix:eslint": "eslint --fix website/.",
+    "start": "cd website && yarn start --no-watch --port 4000",
+    "test": "echo 'No tests yet'",
+    "version": "cd website && yarn run version",
+    "rename-version": "cd website && yarn run rename-version"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@reactioncommerce"
+    ]
+  },
+  "eslintIgnore": [
+    "build",
+    "reports",
+    "node_modules",
+    "website/node_modules",
+    "website/build"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/reports/**",
+      "!**/build/**",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-styled-components"
+    ],
+    "presets": [
+      "env",
+      "stage-2",
+      "react"
+    ],
+    "sourceMaps": true
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@reactioncommerce/eslint-config": "1.7.0",
+    "adr": "^1.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "docusaurus": "^1.2",
+    "eslint": ">=4",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": ">=2",
+    "eslint-plugin-jest": "^21.12.1",
+    "eslint-plugin-jsx-a11y": ">=6",
+    "eslint-plugin-promise": ">=3",
+    "eslint-plugin-react": ">=7",
+    "jest-junit": "3.6.0",
+    "rimraf": "^2.6.2",
+    "snyk": "^1.69"
+  }
+}
