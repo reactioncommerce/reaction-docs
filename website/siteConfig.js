@@ -93,7 +93,7 @@ const siteConfig = {
   onPageNav: "separate",
 
   /* GitHub Edit button URL */
-  editUrl: "https://github.com/reactioncommerce/reaction-docs-static/blob/master/public-docs/",
+  editUrl: "https://github.com/reactioncommerce/reaction-docs/blob/master/public-docs/",
 
   /* Open Graph and Twitter card images */
   ogImage: "img/logo@2x.png",
