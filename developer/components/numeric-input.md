@@ -1,3 +1,0 @@
-# Numeric input for currency
-
-Coming soon...
