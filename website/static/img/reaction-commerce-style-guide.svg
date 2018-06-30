@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="109px" height="100px" viewBox="0 0 109 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Style Guide Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dev-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Docs-Landing-Page-" transform="translate(-793.000000, -673.000000)" stroke="#052A4E" stroke-width="5">
+            <g id="User-Guide" transform="translate(361.000000, 385.000000)">
+                <g id="Style-Guide" transform="translate(335.000000, 255.000000)">
+                    <g id="Style-Guide-Icon" transform="translate(102.000000, 38.000000)">
+                        <polygon id="Triangle" points="33.6666667 0 67.3333333 56.3265306 0 56.3265306"></polygon>
+                        <ellipse id="Oval" fill="#E4FAFF" cx="70.7" cy="62.4285714" rx="30.3" ry="29.5714286"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,255 @@
+/* colors                   */
+/* navy:            #052A4E */
+/* yellow:          #fffbcc */
+/* pink:            #fd8283 */
+/* bright blue:     #A7EDFF */
+/* medium blue:     #e4faff */
+/* light blue:      #f7fdff */
+/* gold:            #f1df8b */
+/* light gold:      #fffdea */
+
+p,
+a,
+ul,
+ol,
+li,
+table,
+td {
+  font-family: 'PostGrotesk-Regular', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: 'PostGrotesk-Bold', sans-serif;
+  font-size: 39px;
+  line-height: 1.25em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font-family: 'PostGrotesk-Regular', sans-serif;
+  font-size: 31px;
+  line-height: 1.25em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  font-family: 'PostGrotesk-Light', sans-serif;
+  font-size: 25px;
+  line-height: 1.25em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h4 {
+  font-family: 'PostGrotesk-Regular', sans-serif;
+  font-size: 20px;
+  line-height: 1.25em;
+  -webkit-font-smoothing: antialiased;
+}
+
+th,
+strong {
+  font-family: 'PostGrotesk-Bold', sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+p,
+ul,
+li {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  color: #052a4e;
+}
+
+code {
+  font-family: 'Overpass Mono', monospace;
+  letter-spacing: 0.1px;
+  line-height: 1.5;
+  color: #052a4e;
+  background-color: #e6e6e6;
+  border-radius: 2px;
+  box-shadow: none;
+  padding: 1px 4px;
+}
+
+a {
+  color: #fd8283;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a > code {
+  color: #052a4e;
+  text-decoration: underline;
+}
+
+a:hover > code {
+  text-decoration: none;
+}
+
+pre code {
+  border-radius: 5px;
+  background-color: #233444 !important;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+blockquote {
+  background-color: #fffdea;
+  border-left: solid 4px #f1df8b;
+}
+
+/* component styles */
+
+/* nav */
+
+.fixedHeaderContainer header h3 {
+  color: #052a4e;
+  font-family: "PostGrotesk-Regular", sans-serif;
+}
+
+/* article toc */
+
+.onPageNav a {
+  color: #052a4e;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+}
+
+.onPageNav ul ul {
+  display: none;
+}
+
+/* sidebar */
+
+nav.toc .toggleNav ul {
+  padding-left: 0;
+}
+
+nav.toc .toggleNav ul li a {
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  color: #052a4e;
+}
+
+nav.toc .toggleNav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(167,237,255);
+  transition: width .3s;
+  margin-top: -3px;
+}
+
+nav.toc .toggleNav ul li a:hover::after,
+nav.toc .toggleNav ul li a.navItemActive::after {
+  width: 100%;
+}
+
+nav.toc .toggleNav ul li a.navItemActive:hover::after {
+  width: 0;
+}
+
+nav.toc .toggleNav .navGroup h3 {
+  font-family: 'PostGrotesk-Bold';
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  color: #052a4e;
+}
+
+@media only screen and (min-width: 736px) {
+  nav.toc .toggleNav .navGroup {
+    margin-top: 40px;
+  }
+}
+
+/* documentation type styles */
+
+.docMainWrapper .post h2 {
+  padding-top: 10px;
+}
+
+.docMainWrapper .post h2::before {
+  display: block;
+  content: " ";
+  margin-top: -200px;
+  height: 200px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.edit-page-link.button,
+.edit-page-link.button:hover {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  line-height: 1em;
+  padding-right: 0;
+  background: transparent;
+  color: #052a4e;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.edit-page-link.button {
+  font-family: "PostGrotesk-Regular", sans-serif;
+  border-bottom: 1px solid #052a4e;
+  padding-left: 0;
+  padding-bottom: 2px;
+}
+
+/* style overrides */
+
+/* main documentation section */
+
+.mainContainer .wrapper a {
+  text-decoration: underline;
+}
+
+.mainContainer .wrapper a:hover, 
+.mainContainer .wrapper a:focus, 
+.inner .projectIntro a:hover, 
+.inner .projectIntro a:focus {
+  text-decoration: none;
+}
+
+.mainContainer .wrapper p, 
+.blockElement p, 
+.mainContainer .wrapper ul li, 
+.mainContainer .wrapper ol li {
+  line-height: 1.5;
+}
+
+
+@media only screen and (min-width: 736px) {
+  .mainContainer .wrapper .post .postHeader h1 {
+    font-size: 39px;
+    padding-bottom: 30px;
+  }
+  .mainContainer .wrapper .post h2 {
+    font-size: 31px;
+    line-height: 1.25em;
+  }
+  .mainContainer .wrapper .post h3 {
+    font-size: 25px;
+  }
+  /* search input placeholder */
+  .reactNavSearchWrapper input#search_input_react::-webkit-input-placeholder {
+    color: #052a4e;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .reactNavSearchWrapper input#search_input_react::-webkit-input-placeholder {
+    color: #ebebeb;
+  }  
+}

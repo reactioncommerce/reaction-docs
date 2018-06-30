@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'PostGrotesk-Light';
+  src: url('fonts/post-grotesk/PostGrotesk-Light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/post-grotesk/PostGrotesk-Light.woff') format('woff'),
+       url('fonts/post-grotesk/PostGrotesk-Light.svg') format('svg');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'PostGrotesk-Medium';
+  src: url('fonts/post-grotesk/PostGrotesk-Medium.eot'); /* IE9 Compat Modes */
+  src: url('fonts/post-grotesk/PostGrotesk-Medium.woff') format('woff'),
+       url('fonts/post-grotesk/PostGrotesk-Medium.svg') format('svg');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PostGrotesk-Bold';
+  src: url('fonts/post-grotesk/PostGrotesk-Bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/post-grotesk/PostGrotesk-Bold.woff') format('woff'),
+       url('fonts/post-grotesk/PostGrotesk-Bold.svg') format('svg');
+  font-weight: bold;
+}
+
+/* PostGrotesk-Regular is PostGrotesk-Book */
+@font-face {
+  font-family: 'PostGrotesk-Regular';
+  src: url('fonts/post-grotesk/PostGrotesk-Book.eot'); /* IE9 Compat Modes */
+  src: url('fonts/post-grotesk/PostGrotesk-Book.woff') format('woff'),
+       url('fonts/post-grotesk/PostGrotesk-Book.svg') format('svg');
+  font-weight: 800;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Overpass Mono Regular'), local('OverpassMono-Regular'), url(https://fonts.gstatic.com/s/overpassmono/v3/_Xmq-H86tzKDdAPa-KPQZ-AC1iG0tt21C35m6Q.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Overpass Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Overpass Mono Regular'), local('OverpassMono-Regular'), url(https://fonts.gstatic.com/s/overpassmono/v3/_Xmq-H86tzKDdAPa-KPQZ-AC1i-0tt21C34.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
