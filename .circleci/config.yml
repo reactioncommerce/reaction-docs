@@ -10,9 +10,9 @@ version: 2
 # typing. See http://yaml.org/type/merge.html for details.
 defaults: &defaults
   environment:
-    - DOCKER_REPOSITORY: "reactioncommerce/reaction-docs-static"
+    - DOCKER_REPOSITORY: "reactioncommerce/reaction-docs"
     - DOCKER_NAMESPACE: "reactioncommerce"
-    - DOCKER_NAME: "reaction-docs-static"
+    - DOCKER_NAME: "reaction-docs"
 
   docker:
     - image: circleci/node:8-stretch
