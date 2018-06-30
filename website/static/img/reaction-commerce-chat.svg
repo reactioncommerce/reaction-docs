@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="122px" viewBox="0 0 144 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Chat icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Dev-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Docs-Landing-Page-" transform="translate(-1112.000000, -420.000000)">
+            <g id="User-Guide" transform="translate(361.000000, 385.000000)">
+                <g id="Chat" transform="translate(670.000000, 0.000000)">
+                    <g id="Chat-icon" transform="translate(81.000000, 35.000000)">
+                        <path d="M141.5,91.7727273 L141.5,2.5 L2.5,2.5 L2.5,91.7727273 L41.2692308,91.7727273 L41.2692308,115.959077 L65.4250805,91.7727273 L141.5,91.7727273 Z" id="Combined-Shape" stroke="#062A4E" stroke-width="5"></path>
+                        <rect id="Rectangle-6" fill="#062A4E" x="28" y="39" width="16" height="16" rx="8"></rect>
+                        <rect id="Rectangle-6-Copy-2" fill="#062A4E" x="61" y="39" width="16" height="16" rx="8"></rect>
+                        <rect id="Rectangle-6-Copy-3" fill="#062A4E" x="94" y="39" width="16" height="16" rx="8"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
