@@ -1,9 +1,9 @@
 {
-  "name": "@reactioncommerce/reaction-docs-static",
+  "name": "@reactioncommerce/reaction-docs",
   "version": "0.1.0",
   "description": "",
-  "homepage": "https://github.com/reactioncommerce/reaction-docs-static",
-  "repository": "https://github.com/reactioncommerce/reaction-docs-static",
+  "homepage": "https://github.com/reactioncommerce/reaction-docs",
+  "repository": "https://github.com/reactioncommerce/reaction-docs",
   "author": {
     "name": "Reaction Commerce",
     "email": "engineering@reactioncommerce.com",
