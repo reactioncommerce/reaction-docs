@@ -1,6 +1,6 @@
-# reaction-docs-static
+# reaction-docs
 
-📝 `reaction-docs-static` is the new static documentation generator for all Reaction Commerce projects.
+📝 `reaction-docs` is the new static documentation generator for all Reaction Commerce projects.
 
 ## Requirements
 
@@ -23,8 +23,8 @@
 ## Getting started
 
 ```
-git clone git@github.com:reactioncommerce/reaction-docs-static.git
-cd reaction-docs-static
+git clone git@github.com:reactioncommerce/reaction-docs.git
+cd reaction-docs
 bin/setup
 docker-compose up
 ```
