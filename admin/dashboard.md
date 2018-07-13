@@ -32,7 +32,7 @@ Under Settings, you can view the rest of your store's feature settings, which yo
 - [Email](/admin/dashboard/email-admin.md) - Manage your mail setup and view email logs
 - [Localization and i18n](/admin/dashboard/localization-and-i18n.md) - Configure timezone, languages, and currencies
 - [Payment](/admin/dashboard/payment.md) - Manage payment methods and add discount codes
-- [Taxes](/admin/dashboard/tax.md) - Enable custom taxes, Avalara, and TaxCloud
+- [Taxes](/admin/dashboard/tax.md) - Enable custom taxes
 - [Template](/admin/dashboard/template.md) - Customize your email's messaging and look and feel
 - [Search](/admin/dashboard/search.md) - Configure your store's search settings
 - [SMS Notifications](/admin/dashboard/sms-notifications.md) - Enable SMS notifications

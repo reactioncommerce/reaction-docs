@@ -21,7 +21,7 @@ Test to verify the following functionality:
  - **User Type**: Anonymous, New, Registered
  - **Payment Provider**: Example Provider, Authorize.net, Braintree, PayPal Express, PayPal Flow, Stripe
  - **Shipping**: Flat Rate, Shippo
- - **Taxation**: None, Custom Rates, Avalara, TaxCloud
+ - **Taxation**: None, Custom Rates
 
 ## Test Setup Steps
  - Payment processing and shipping must be enabled as a prerequisite to this test.
