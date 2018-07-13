@@ -102,23 +102,3 @@ Reaction Devtools is a Reaction Commerce plugin that allows you to load a variet
  5. Enter a ZIP Code/Postal Code.
  6. Enter the tax rate percentage.
  7. Click the "save changes" button.
-
-### Avalara
- 1. Click the taxation option in the admin menu to open the taxation settings panel.
- 2. Click the checkbox to right of the Avalara label to open the Avalara settings.
- 3. Enter an Avalara API Login ID, Username, Password, Company Code and Shipping Tax Code.
- 4. Enable Address Validation.
- 5. Enter the countries needed for Address Validation.
- 6. Enter a Request Timeout number.
- 7. Select "Testing - Sandbox Mode" from the selectbox.
- 8. Enable Preform Tax Calculation
- 9. Enter a Retain Logs Duration number.
- 10. Enable Commit Documents.
- 11. Click the "Test Credentials" to verify Avalara is properly configured.
- 12. Click the "save changes" button.
-
-### TaxCloud
- 1. Click the taxation option in the admin menu to open the taxation settings panel.
- 2. Click the checkbox to right of the TaxCloud label to open the TaxCloud settings.
- 3. Enter a TaxCloud API Login ID and a TaxCloud API Key.
- 4. Click the "save changes" button.

@@ -345,7 +345,7 @@ To add and customize Dashboard panels, use these `provides` values.
 ### Taxes
 
 - `provides: "taxCodes"` - This will register `getTaxCodesMethod`. We find the taxCodes provider in [variantFormContainer.js](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/included/product-variant/containers/variantFormContainer.js#L54).
-- See an example via our [Avalara plugin](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/included/taxes-avalara/register.js#L30).
+- See an example via community [Avalara plugin](https://github.com/reaction-contrib/meteor-taxes-avalara/blob/master/register.js#L26).
 
 <img src="https://blog.reactioncommerce.com//content/images/2017/07/provides-tax-codes-1.png" width="50%">
 
