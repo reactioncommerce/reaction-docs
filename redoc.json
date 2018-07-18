@@ -803,6 +803,12 @@
 			"repo": "reaction-docs",
 			"docPath": "developer/deploying.md"
 		}, {
+			"class": "guide-nav-item",
+			"alias": "database-optimizations",
+			"label": "Database optimizations",
+			"repo": "reaction-docs",
+			"docPath": "developer/database-optimizations.md"
+		}, {
 			"class": "guide-sub-nav-item",
 			"alias": "prerender",
 			"label": "Prerender",
