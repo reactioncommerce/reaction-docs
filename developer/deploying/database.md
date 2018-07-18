@@ -1,5 +1,8 @@
 ## List of indexes to add to make queries faster
 
+Start the mongo client connecting to your database. Run `use <database_name>`.
+Run the follwing commands.
+
 1. `db.Catalog.createIndex({ createdAt: 1 })` 
 2. `db.Catalog.createIndex({ "product._id": 1 })` - used in addToCart
 3. `db.Catalog.createIndex({ "product.variants._id": 1 })` - used in addToCart
@@ -18,3 +21,6 @@
 16. `db.cfs_gridfs.large.chunks.createIndex({ files_id: 1, n: 1 })` - useful if media is stored in db
 17. `db.cfs_gridfs.thumbnail.chunks.createIndex({ files_id: 1, n: 1 })` - useful if media is stored in db
 18. `db.cfs_gridfs.medium.chunks.createIndex({ files_id: 1, n: 1 })` - useful if media is stored in db
+
+If you are using the default meteor database, you can connect to mongodb by running `meteor mongo` in the reaction directory.
+And then `use meteor`, then run the above commands.
