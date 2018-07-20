@@ -5,7 +5,7 @@ title: Community showcase
 
 <div class="photo-grid">
   <a href="http://artlimes.com" class="showcase-grid-item" target="_blank">
-    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-2-artlimes.png">
+    <img src="/assets/community-showcase-2-artlimes.png">
     <div>
       <p class="item-info">artlimes.com</p>
       <p class="item-info item-label">UK</p>
@@ -13,7 +13,7 @@ title: Community showcase
     </div>
   </a>
   <a href="http://stephenkenn.com" class="showcase-grid-item" target="_blank">
-    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-4-stephenkenn.png">
+    <img src="/assets/community-showcase-4-stephenkenn.png">
     <div>
       <p class="item-info">stephenkenn.com</p>
       <p class="item-info item-label">USA</p>
@@ -21,7 +21,7 @@ title: Community showcase
     </div>
   </a>
   <a href="http://shoppe.pinupmagazine.org" class="showcase-grid-item" target="_blank">
-    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-5-pinup.png">
+    <img src="/assets/community-showcase-5-pinup.png">
     <div>
       <p class="item-info">shoppe.pinupmagazine.org</p>
       <p class="item-info item-label">USA</p>
@@ -29,7 +29,7 @@ title: Community showcase
     </div>
   </a>
    <a href="https://greennie.com/" class="showcase-grid-item" target="_blank">
-     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-greenie.jpg">
+     <img src="/assets/community-showcase-greenie.jpg">
      <div>
        <p class="item-info">greennie.com</p>
        <p class="item-info item-label">Canada</p>
@@ -37,7 +37,7 @@ title: Community showcase
      </div>
     </a>
     <a href="https://hop.exchange/" class="showcase-grid-item" target="_blank">
-      <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-hop-exchange.jpg">
+      <img src="/assets/community-showcase-hop-exchange.jpg">
       <div>
         <p class="item-info">hop.exchange</p>
         <p class="item-info item-label">UK</p>
