@@ -12,14 +12,6 @@ title: Community showcase
       <p class="item-info item-label">Marketplace</p>
     </div>
   </a>
-  <a href="http://nextlevel.com.bo" class="showcase-grid-item" target="_blank">
-    <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-3-nextlevel.png">
-    <div>
-      <p class="item-info">nextlevel.com.bo</p>
-      <p class="item-info item-label">Bolivia</p>
-      <p class="item-info item-label">Ecommerce</p>
-    </div>
-  </a>
   <a href="http://stephenkenn.com" class="showcase-grid-item" target="_blank">
     <img src="https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/community-showcase/community-showcase-4-stephenkenn.png">
     <div>
