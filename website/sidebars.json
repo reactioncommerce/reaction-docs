@@ -39,8 +39,7 @@
             "testing-debugging-server-code",
             "register-template",
             "register-email",
-            "fixtures-images",
-            "graphql-intro"
+            "fixtures-images"
         ],
         "Swag shop tutorial": [
             "swag-shop-tutorial",
@@ -106,6 +105,13 @@
             "event-hooks",
             "reaction-module-cheatsheet",
             "template-helpers"
+        ],
+        "GraphQL": [
+            "graphql-what",
+            "graphql-using",
+            "graphql-intro",
+            "graphql-developing",
+            "graphql-create-mutation"
         ],
         "Components": [
             "components",
