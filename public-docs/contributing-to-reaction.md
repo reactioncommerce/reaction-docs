@@ -59,8 +59,8 @@ Title the PR with the ID number of the GitHub issue. Add `WIP` (work in progress
 
 As soon as your PR is pushed, automated test run to ensure:
 
-- `npm run lint`: Pass current continuous integration tests
-- `reaction test`: Pass linter code review and follow Reaction style guidelines
+- `npm run lint`: Pass linter code review and follow Reaction style guidelines
+- `reaction test`: Pass current continuous integration tests
 
 ### Fill out the pull request template
 
