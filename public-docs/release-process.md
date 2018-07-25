@@ -6,13 +6,15 @@ title: Release Guide
 The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
 The process is:
-1. Create a release branch, but not until you ready to release!
+1. Create a release branch!
 1. Change destination branch from master to release branch for all PR that should be included.
-1. Wait until all tests have passed on each PR.
-1. Merge passing PR's into the release branch.
-1. Create a new `Release x.x.x` pull request.
-1. Create release notes and docs
-1. Release review, test pass, be brave.
+1. When PRs have been approved, tests pass, and there are no conflicts, merge PRs into release branch
+1. Create a `Release x.x.x` pull request.
+1. Create release notes
+1. Add release notes to the CHANGELOG.MD file
+1. Ask for review from QA when release is ready
+1. QA Reviews release and verifies that automated tests pass
+1. Create PR to update [sample data](https://github.com/reactioncommerce/reaction-catalog-sample-data/) migrations.
 1. Merge to `master`, wait for tests, then tag release.
 1. After successful merge, delete the release branch.
 
