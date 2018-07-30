@@ -2,7 +2,7 @@
 id: writing-jest-integration-tests
 title: Writing Jest Integration Tests
 ---
-    
+
 Jest integration tests are written in almost the same way as unit tests, so you should read and understand the [Writing Jest Unit tests](writing-jest-unit-tests.md) article before moving on to this one.
 
 These are the key differences:
@@ -26,11 +26,11 @@ The folder and file structure in `/tests` should match as much as possible the g
 Prior to running the tests in each file, initialize a server, in-memory database, and any collection data you need. Then stop the server when done. The general pattern is something like this:
 
 ```js
-import GraphTester from "../GraphTester";
+import TestApp from "../TestApp";
 
 let tester;
 beforeAll(async () => {
-  tester = new GraphTester();
+  tester = new TestApp();
   await tester.start();
 });
 
@@ -44,7 +44,36 @@ test("something", async () => {
 });
 ```
 
+### Inserting a Primary Shop
+
+```js
+const shopId = await testApp.insertPrimaryShop();
+```
+
+### Create a User With Associated Account
+
+```js
+mockAccount = Factory.Accounts.makeOne({
+  // ...any specific properties you need on the account
+});
+await testApp.createUserAndAccount(mockAccount);
+```
+
+### Set and Clear the Logged in User
+
+```js
+beforeAll(async () => {
+  await testApp.setLoggedInUser(mockAccount);
+});
+
+afterAll(async () => {
+  await testApp.clearLoggedInUser();
+});
+```
+
+`mockAccount` may either be an account document that you've already inserted or one that will be inserted for you. Either way, it must have an `_id` property on it. This will be used to set the `user` and `account` properties on the GraphQL context for all test queries.
+
 ### Further Reading
 
 - The MongoDB collections are simulated in-memory collections, implemented using [mongodb-memory-server](https://github.com/nodkz/mongodb-memory-server).
-- The `query`, `mutation`, and `subscription` properties of the `GraphTester` instance are wrappers around the methods of the same name provided by the [graphql.js](https://github.com/f/graphql.js) package.
+- The `query`, `mutation`, and `subscription` properties of the `TestApp` instance are wrappers around the methods of the same name provided by the [graphql.js](https://github.com/f/graphql.js) package.
