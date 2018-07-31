@@ -52,8 +52,17 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 - [styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 
 ### Emacs
-
-Coming soon!
+    
+ - [js2-mode](https://melpa.org/#/js2-mode)
+ - [rjsx-mode](https://melpa.org/#/rjsx-mode)
+ - [prettier-js](https://melpa.org/#/prettier-js)
+ - [flycheck](https://melpa.org/#/flycheck)
+ - [json-mode](https://melpa.org/#/json-mode)
+ - [graphql-mode](https://melpa.org/#/graphql-mode)
+ - [markdown-mode](https://melpa.org/#/markdown-mode)
+ - [dockerfile-mode](https://melpa.org/#/dockerfile-mode)
+ - [yaml-mode](https://melpa.org/#/yaml-mode)
+ - [editorconfig](https://melpa.org/#/editorconfig)
 
 ### Vim
 
