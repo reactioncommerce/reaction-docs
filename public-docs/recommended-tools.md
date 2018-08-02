@@ -66,7 +66,9 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 
 ### Vim
 
-Coming soon!
+- [ale](https://github.com/w0rp/ale)
+- [vim-instant-markdown](https://github.com/suan/vim-instant-markdown)
+- [vim-javascript](https://github.com/pangloss/vim-javascript)
 
 ## MongoDB IDEs
 
