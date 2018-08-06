@@ -174,8 +174,9 @@
         ],
         "Deploying": [
             "deploying",
-            "prerender",
             "deploying-reaction-using-docker"
+            "prerender",
+            "database-optimizations"
         ],
         "Store Operator's Guide": [
             "dashboard",

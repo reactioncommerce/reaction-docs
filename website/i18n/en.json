@@ -36,6 +36,7 @@
     "creating-test-data": "Creating Test Data",
     "dashboard": "Store Operator's Guide",
     "database-migrations": "Migrations",
+    "database-optimizations": "Database optimizations",
     "deploying-on-reaction-platform": "Reaction Platform",
     "deploying-reaction-using-docker": "Docker",
     "deploying": "Deploying",
