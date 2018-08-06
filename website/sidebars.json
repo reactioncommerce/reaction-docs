@@ -174,7 +174,7 @@
         ],
         "Deploying": [
             "deploying",
-            "deploying-reaction-using-docker"
+            "deploying-reaction-using-docker",
             "prerender",
             "database-optimizations"
         ],
