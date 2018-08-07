@@ -7,7 +7,7 @@ Payment methods are one of the most common packages that developers need to crea
 
 The [Creating a Payment Provider](creating-a-payment-provider.md) tutorial was created to try and make this process as easy as possible for developers new to Reaction. It should be used as a guide in making all payment methods as consistent as possible so that they are usable by the largest number of users.
 
-Reaction currently comes packaged with five (5) payment methods that can be enabled in the Dashboard: [Authorize.net](payment-packages-authnet.md), [Braintree](payment-packages-braintree.md), [PayPal Express](payment-packages-paypal.md), [PayPal Payflow](payment-packages-paypal.md), and [Stripe](payment-packages-stripe.md).
+Reaction currently comes packaged with [Stripe](payment-packages-stripe.md).
 
 ## Transactions
 

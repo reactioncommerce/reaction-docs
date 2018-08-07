@@ -91,23 +91,6 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
       }]
     }
   }, {
-    "name": "reaction-paypal",
-    "enabled": true,
-    "settings": {
-      "express": {
-        "enabled": true
-      },
-      "express_mode": false,
-      "merchantId": "",
-      "username": "",
-      "password": "",
-      "signature": "",
-      "payflow_enabled": true,
-      "payflow_mode": false,
-      "client_id": "",
-      "client_secret": ""
-    }
-  }, {
     "name": "reaction-google-analytics",
     "enabled": false,
     "settings": {
