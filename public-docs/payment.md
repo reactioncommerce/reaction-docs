@@ -7,10 +7,13 @@ title: Payment
 
 Reaction supports the following payment packages:
 
+- Stripe
+
+And the following packages as optional plugins:
+
 - PayPal Express
 - Payflow Pro
 - Braintree
-- Stripe
 - Authorize.Net
 
 Also included is the "Example Payment" method, which allows you to checkout, etc. without
