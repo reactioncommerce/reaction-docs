@@ -150,8 +150,6 @@
             "payment-packages-braintree",
             "payment-packages-paypal",
             "payment-packages-stripe",
-            "taxes-packages-avalara",
-            "taxes-packages-taxcloud",
             "packages-search"
         ],
         "Testing": [
