@@ -3,7 +3,7 @@ id: tax
 title: Tax
 ---
 
-To enable custom taxes, or to link to your Avalara or TaxCloud account, click on the <i class="rui font-icon fa fa-university"></i> **Tax** card and toggle each feature on or off.
+To enable custom taxes, click on the <i class="rui font-icon fa fa-university"></i> **Tax** card and toggle each feature on or off.
 
 ## Custom rates
 
