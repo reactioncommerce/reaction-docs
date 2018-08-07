@@ -9,19 +9,47 @@ _**Note:** If you miss something that's not listed here and want to see it here,
 
 ## Plugins and tools maintained by Reaction
 
-### [payments-cod](https://github.com/reactioncommerce/payments-cod)
-
-A very basic payment provider plugin that offers Cash On Delivery. This package removes the payment step during checkout workflow and allows ordering without the need for entering credit card details.
-
-**Requirements:**
-- Basic React understanding
-
-**Learning content:**
-- How to create a [payment provider plugin](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-payment-provider)
-
 ### [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
 
 Install this plugin to get a dashboard panel that allows you to load datasets and images quickly for testing your app locally.
+
+## Community plugins
+
+|Category  |Reaction default(s)                |Community package(s)                         |
+|----------|-----------------------------------|---------------------------------------------|
+|Payments  |Stripe, example payment package    |[PayPal Express](https://github.com/reaction-contrib/meteor-payments-paypal-express), [Payflow Pro](https://github.com/reaction-contrib/meteor-payments-payflow-pro), [Authorize.net](https://github.com/reaction-contrib/meteor-payments-authorize-net), [Braintree](https://github.com/reaction-contrib/meteor-payments-braintree), [Cash on Delivery](https://github.com/reactioncommerce/payments-cod)|
+|Taxes     |Flat-rate                          |[Avalara](https://github.com/reaction-contrib/meteor-taxes-avalara), [TaxCloud](https://github.com/reaction-contrib/meteor-taxes-taxcloud)                                                                                   |
+|Shipping  |Flat-rate                          |[Shippo](https://github.com/reaction-contrib/meteor-shipping-shippo)                          |
+|Connectors|CSV connector                      |[Shopify connector](https://github.com/reaction-contrib/meteor-connector-shopify)             |
+|Adapters  |                                   |[AWS S3 file collections](https://github.com/reaction-contrib/reaction-file-collections-sa-s3)|
+|Logging   |                                   |[Meteor Logging API](https://github.com/reaction-contrib/meteor-logging-api)|
+
+### [Reaction Commerce <> Magento importer](https://github.com/Buildateam/reaction-magento)
+
+Import products, orders and customers from Magento EE 1.x stores into Reaction.
+
+### [Reaction Commerce <> Netsuite bridge](https://github.com/Buildateam/reaction-netsuite)
+
+Export orders from Reaction Commerce into Netsuite.
+
+### [create-reaction-app](https://github.com/jussivesa/create-reaction-app)
+
+### [boomerdigital/reaction-subscription-billing](https://github.com/boomerdigital/reaction-subscription-billing)
+
+This plugin is **work-in-progress**, but does address a very common request: A Reaction plugin that does support the most popular subscription billing features. This is because subscriptions play an important and ever increasing role in the ecommerce landscape.
+
+### [DeligenceTechnologies/Subscription-Recurring-payments-in-Reaction-Commerce-using-Braintree-Payments-Gateway](https://github.com/DeligenceTechnologies/Subscription-Recurring-payments-in-Reaction-Commerce-using-Braintree-Payments-Gateway)
+
+This is a simple implementation of using Braintree Subscriptions. Simply add a "plan" in your Braintree panel and your customers can checkout using that plan. Updated to work with version >= 1.9
+
+## SEO tools
+
+### [reaction-commerce-caching-plugin](https://github.com/artlimes/reaction-commerce-caching-plugin)
+
+Use this Reaction plugin in conjunction with [Meteor Chrome Headless Spiderable](https://github.com/artlimes/meteor-chrome-headless-spiderable) package to allow your Reaction site to be crawled by spiders to allow search engines to access each page.
+
+**Requirements:**
+- Chrome
 
 ## Community themes
 
@@ -72,35 +100,6 @@ This is an up-to-date fork of hydrotik/reaction-hydrotik-plugin that works with 
 - Shows how to integrate third-party React components
 
 Kudos to [Loan!](https://github.com/loanlaux)
-
-## Community plugins
-
-### [Reaction Commerce <> Magento importer](https://github.com/Buildateam/reaction-magento)
-
-Import products, orders and customers from Magento EE 1.x stores into Reaction.
-
-### [Reaction Commerce <> Netsuite bridge](https://github.com/Buildateam/reaction-netsuite)
-
-Export orders from Reaction Commerce into Netsuite.
-
-### [create-reaction-app](https://github.com/jussivesa/create-reaction-app)
-
-### [boomerdigital/reaction-subscription-billing](https://github.com/boomerdigital/reaction-subscription-billing)
-
-This plugin is **work-in-progress**, but does address a very common request: A Reaction plugin that does support the most popular subscription billing features. This is because subscriptions play an important and ever increasing role in the ecommerce landscape.
-
-### [DeligenceTechnologies/Subscription-Recurring-payments-in-Reaction-Commerce-using-Braintree-Payments-Gateway](https://github.com/DeligenceTechnologies/Subscription-Recurring-payments-in-Reaction-Commerce-using-Braintree-Payments-Gateway)
-
-This is a simple implementation of using Braintree Subscriptions. Simply add a "plan" in your Braintree panel and your customers can checkout using that plan. Updated to work with version >= 1.9
-
-## SEO tools
-
-### [reaction-commerce-caching-plugin](https://github.com/artlimes/reaction-commerce-caching-plugin)
-
-Use this Reaction plugin in conjunction with [Meteor Chrome Headless Spiderable](https://github.com/artlimes/meteor-chrome-headless-spiderable) package to allow your Reaction site to be crawled by spiders to allow search engines to access each page.
-
-**Requirements:**
-- Chrome
 
 ## REST-APIs
 
