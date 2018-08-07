@@ -146,9 +146,6 @@
         "Plugins": [
             "packages",
             "including",
-            "payment-packages-authnet",
-            "payment-packages-braintree",
-            "payment-packages-paypal",
             "payment-packages-stripe",
             "packages-search"
         ],
