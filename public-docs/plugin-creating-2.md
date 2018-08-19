@@ -35,7 +35,7 @@ a plugin. The `register.js` adds your plugin to the Registry, the Packages colle
 
 ```js
 // register.js
-import { Reaction } from "/server/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
 Reaction.registerPackage({
   label: "Bees Knees",
