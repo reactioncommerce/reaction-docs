@@ -159,7 +159,8 @@
             "react-testing",
             "creating-test-data",
             "creating-test-data-for-meteor-tests",
-            "jest-tips"
+            "jest-tips",
+            "testing-matrix"
         ],
         "Acceptance Testing": [
             "acceptance-testing",
