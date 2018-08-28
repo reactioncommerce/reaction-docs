@@ -1,6 +1,6 @@
 ---
 id: testing-matrix
-title: End to End Testing Matrix
+title: End-to-end testing matrix
 ---
 
 | Test ID                           | Test Case                                  | Step by Step                                                                                                                                                                                                              | Expected Outcome                                                       |
