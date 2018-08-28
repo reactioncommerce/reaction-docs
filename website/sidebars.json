@@ -163,8 +163,8 @@
         ],
         "Acceptance Testing": [
             "acceptance-testing",
-            "test-setup",
-            "testing-matrix"
+            "testing-matrix",
+            "test-setup"
         ],
         "Deploying": [
             "deploying",
