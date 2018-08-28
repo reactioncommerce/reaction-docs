@@ -159,14 +159,12 @@
             "react-testing",
             "creating-test-data",
             "creating-test-data-for-meteor-tests",
-            "jest-tips",
-            "testing-matrix"
+            "jest-tips"
         ],
         "Acceptance Testing": [
             "acceptance-testing",
             "test-setup",
-            "script-template",
-            "order-creation"
+            "testing-matrix"
         ],
         "Deploying": [
             "deploying",
