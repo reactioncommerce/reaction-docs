@@ -1,9 +1,9 @@
 ---
-id: configuration
-title: Configuration
+id: how-to-configure-meteor-app
+title: How To: Configure the Meteor app
 ---
-    
-Reaction can be configured on startup with a combination of environment variables and default data files for store pre-configuration.
+
+The Reaction Meteor app can be configured on startup with a combination of environment variables and default data files for store pre-configuration.
 
 Reaction uses `/private/settings/reaction.json` for the configuration of Reaction and [Meteor.settings](http://docs.meteor.com/#/full/meteor_settings) for initial administrator and server setup.
 

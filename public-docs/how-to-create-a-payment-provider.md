@@ -1,8 +1,7 @@
 ---
-id: creating-a-payment-provider
-title: Payments: Creating a Payment Provider
+title: Payments: Create a Payment Provider
 ---
-    
+
 ## What is a "Payment Provider"
 
 Payment Providers are companies that provide a gateway between ecommerce software customer payment. In the U.S. that largely means credit cards

@@ -1,8 +1,8 @@
 ---
 id: creating-a-theme
-title: Theme: Creating a Theme
+title: How To: Create a theme for the Meteor app
 ---
-    
+
 ## Starting point
 
 We've provided an example theme that you can use as a starting point for your own themes. Additionally, there's also a [YouTube tutorial](https://www.youtube.com/watch?v=D8FNJE9204Y) on this topic that should get you started in no time.

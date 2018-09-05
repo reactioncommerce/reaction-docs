@@ -1,9 +1,9 @@
 ---
 id: testing-debugging-server-code
-title: Tutorial: Debugging server-side code
+title: How To: Debug Meteor server-side code
 ---
-    
-As of Meteor 1.6, you can now debug server code using the `--inspect` flag in Chrome DevTools and within integrated developer environments like [Visual Studio Code (VS Code)](https://code.visualstudio.com/), a free code editor, and [WebStorm by JetBrains](https://www.jetbrains.com/webstorm/).
+
+You can debug Meteor server code using the `--inspect` flag in Chrome DevTools and within integrated developer environments like [Visual Studio Code (VS Code)](https://code.visualstudio.com/), a free code editor, and [WebStorm by JetBrains](https://www.jetbrains.com/webstorm/).
 
 Here are the steps to get started using Reaction in `inspect` mode in any editor:
 

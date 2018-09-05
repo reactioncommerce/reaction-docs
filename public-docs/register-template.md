@@ -1,9 +1,7 @@
 ---
 id: register-template
-title: Email: Create Custom E-mail Templates
+title: How To: Register a custom email template
 ---
-    
-Register and fetch a templates by name. This is server-only. Mostly suited for server side rendering of email templates. See [Customize Email Templates](register-email.md).
 
 ## Register a new email template
 
@@ -12,11 +10,16 @@ import { Reaction } from "/server/api";
 
 Reaction.registerTemplate({
   title: "My Template",
-  name: "my-template"
-  type: "template",
+  name: "my-template",
+  type: "email",
   template: `
-    <div>Custom Email Template!<div>
+  <html>
+  <body>
+    Custom Email Template!
+  </body>
+  </html>
   `,
+  subject: "A message from {{shop.name}}"
 });
 ```
 

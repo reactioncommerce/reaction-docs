@@ -2,31 +2,31 @@
 id: intro
 title: Introduction
 ---
-    
+
 Reaction Commerce is a modern, open source platform for today's premier ecommerce experiences. It is a lightweight, real-time reactive commerce solution that redefines, simplifies, and aligns both the experiences of the user and the vendor.
 
 <div class="content-blocks">
   <div class="content-block">
     <div class="section-promo">
-      <a href="installation">
+      <a href="getting-started-developing-with-reaction">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-developer-guide.svg">
-        <h3 class="accent-color text-center">Installation Guide</h3>
+        <h3 class="accent-color text-center">Developers</h3>
       </a>
     </div>
   </div>
   <div class="content-block">
     <div class="section-promo">
-      <a href="plugin-intro-1">
+      <a href="deploying">
         <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-store-guide.svg" height="110">
-        <h3 class="accent-color text-center">Customization Tutorials</h3>
+        <h3 class="accent-color text-center">System Admins</h3>
       </a>
     </div>
   </div>
   <div class="content-block">
     <div class="section-promo">
-      <a href="http://api.docs.reactioncommerce.com/">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-core-api-guide.svg">
-        <h3 class="accent-color text-center">Core API</h3>
+      <a href="dashboard">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-store-guide.svg" height="110">
+        <h3 class="accent-color text-center">Operators</h3>
       </a>
     </div>
   </div>
@@ -40,9 +40,9 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
   </div>
   <div class="content-block">
     <div class="section-promo">
-      <a href="dashboard">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-store-guide.svg" height="110">
-        <h3 class="accent-color text-center">Store Guide</h3>
+      <a href="http://api.docs.reactioncommerce.com/">
+        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-core-api-guide.svg">
+        <h3 class="accent-color text-center">Core API</h3>
       </a>
     </div>
   </div>
@@ -55,3 +55,17 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
     </div>
   </div>
 </div>
+
+## Roadmap
+
+A long term roadmap and completed features list is on our [roadmap](https://reactioncommerce.com/roadmap).
+
+Specific features in progress for the current sprint is found on the [Reaction repository's milestones page](https://github.com/reactioncommerce/reaction/milestones).
+
+## Issues
+
+To assign tasks or issues, please visit our project's [Issues](https://github.com/reactioncommerce/reaction/issues?state=open) page, where we track issues for all [reactioncommerce:\*](https://github.com/reactioncommerce/) packages.
+
+## Other Resources
+
+Got a question, comment, or suggestion? Check out our [![Gitter chat room](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge).

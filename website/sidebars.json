@@ -3,53 +3,38 @@
         "Introduction": [
             "intro"
         ],
-        "Getting started": [
+        "Concepts": [
+            "concepts-intro",
+            "concepts-accounts",
+            "concepts-carts",
+            "concepts-catalogs",
+            "concepts-fulfillment",
+            "concepts-orders",
+            "concepts-payments",
+            "concepts-pricing",
+            "concepts-products",
+            "concepts-shops",
+            "concepts-slugs",
+            "concepts-tags"
+        ],
+        "Core Plugins": [
+            "core-plugins-intro",
+            "core-plugins-marketplace",
+            "core-plugins-search",
+            "core-plugins-stripe"
+        ],
+        "Getting Started As a Developer": [
             "getting-started-developing-with-reaction",
-            "installation",
             "installation-osx",
             "installation-windows",
             "installation-linux",
             "reaction-cli",
-            "configuration",
             "recommended-tools",
             "installation-docker-development",
             "troubleshooting-development",
             "developer-faq"
         ],
-        "Plugin Tutorial": [
-            "plugin-intro-1",
-            "plugin-creating-2",
-            "plugin-layouts-3",
-            "plugin-customizing-templates-4",
-            "plugin-fixtures-5",
-            "plugin-routes-6",
-            "plugin-workflow-7",
-            "plugin-schemas-8",
-            "plugin-i18n-9",
-            "plugin-complete-10"
-        ],
-        "Customization Guides": [
-            "tutorial",
-            "creating-a-theme",
-            "appearance",
-            "creating-a-payment-provider",
-            "extending-product-schema-location-map",
-            "how-to-change-the-favicon",
-            "how-to-create-a-custom-homepage",
-            "testing-tutorial",
-            "testing-debugging-server-code",
-            "register-template",
-            "register-email",
-            "fixtures-images"
-        ],
-        "Swag shop tutorial": [
-            "swag-shop-tutorial",
-            "swag-shop-collecting-requirements",
-            "swag-shop-initialization",
-            "swag-shop-landing-page",
-            "swag-shop-pdp"
-        ],
-        "Contributing Guide": [
+        "For Developers: Contributing Guide": [
             "contributing-to-reaction",
             "styleguide",
             "git-style-guide",
@@ -63,7 +48,27 @@
             "community-resources",
             "community-showcase"
         ],
-        "Architecture": [
+        "For Developers: GraphQL": [
+            "graphql-what",
+            "graphql-using",
+            "graphql-intro",
+            "graphql-developing",
+            "graphql-create-mutation"
+        ],
+        "Developer How-To": [
+            "how-to-client-checkout-flow",
+            "how-to-get-shop-id-for-client",
+            "how-to-create-a-payment-provider",
+            "creating-a-theme",
+            "how-to-rtl",
+            "how-to-change-the-favicon",
+            "register-template",
+            "fixtures-images",
+            "testing-debugging-server-code",
+            "how-to-create-a-custom-homepage",
+            "extending-product-schema-location-map"
+        ],
+        "For Developers: Meteor App Architecture": [
             "architecture",
             "exports",
             "security",
@@ -82,7 +87,7 @@
             "logging",
             "jobcontrol"
         ],
-        "Core": [
+        "For Developers: Core Meteor App API": [
             "reaction-core",
             "admin-views",
             "reaction-user-accounts",
@@ -107,21 +112,24 @@
             "reaction-module-cheatsheet",
             "template-helpers"
         ],
-        "GraphQL": [
-            "graphql-what",
-            "graphql-using",
-            "graphql-intro",
-            "graphql-developing",
-            "graphql-create-mutation"
+        "For Developers: Plugin Tutorial": [
+            "plugin-intro-1",
+            "plugin-creating-2",
+            "plugin-layouts-3",
+            "plugin-customizing-templates-4",
+            "plugin-fixtures-5",
+            "plugin-routes-6",
+            "plugin-workflow-7",
+            "plugin-schemas-8",
+            "plugin-i18n-9",
+            "plugin-complete-10"
         ],
-        "Components": [
+        "For Developers: Meteor App Client Components": [
             "components",
             "components-api",
             "alerts",
             "badge",
-            "button",
             "cards",
-            "checkbox",
             "clickToCopy",
             "divider",
             "dropDownMenu",
@@ -133,21 +141,13 @@
             "multi-select",
             "popover",
             "avatar",
-            "select",
             "settings-card",
             "slider",
             "sortableTable",
             "switch",
             "tags",
-            "textfield",
             "tooltip",
             "translation"
-        ],
-        "Plugins": [
-            "packages",
-            "including",
-            "payment-packages-stripe",
-            "packages-search"
         ],
         "Testing": [
             "testing-reaction",
@@ -166,13 +166,14 @@
             "testing-matrix",
             "test-setup"
         ],
-        "Deploying": [
+        "System Administrator Guide": [
             "deploying",
             "deploying-reaction-using-docker",
             "prerender",
-            "database-optimizations"
+            "database-optimizations",
+            "how-to-configure-meteor-app"
         ],
-        "Store Operator's Guide": [
+        "Store Operator Guide": [
             "dashboard",
             "products",
             "navigation-bar-and-grid",
@@ -194,7 +195,7 @@
             "payments-discounts",
             "faqs"
         ],
-        "Guidelines": [
+        "Community": [
             "guidelines",
             "code-of-conduct",
             "diversity-statement",
@@ -203,6 +204,13 @@
             "code-of-conduct-committee",
             "guideline-faqs",
             "changes"
+        ],
+        "Swag shop tutorial": [
+            "swag-shop-tutorial",
+            "swag-shop-collecting-requirements",
+            "swag-shop-initialization",
+            "swag-shop-landing-page",
+            "swag-shop-pdp"
         ]
     }
 }
