@@ -1,8 +1,8 @@
 ---
 id: how-to-change-the-favicon
-title: Tutorial: Customize the favicon
+title: How To: Customize the favicon in the Meteor app
 ---
-    
+
 ## Step 1: Create a new custom package
 
 Create a new package in the `/custom/` folder.

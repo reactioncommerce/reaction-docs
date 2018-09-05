@@ -1,8 +1,8 @@
 ---
 id: fixtures-images
-title: Tutorial: Upload images as data fixtures
+title: How To: Upload images as data fixtures
 ---
-    
+
 ## Step 1: Make images available as static server assets
 
 Place your images in your application's `private` directory, e.g. like this:

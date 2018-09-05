@@ -1,15 +1,14 @@
 ---
-id: packages-search
-title: Search
+title: Search Plugins (Meteor)
 ---
-    
+
 Search is an important part of any ecommerce solution as studies have found that
 40-50% of users will completely bypass traditional navigation and head straight
 to search.
 
 In addition to being critical, Search is rarely the same for every merchant. How
 you organize, categorize, and market your products will affect how you want
-search to behave. So we have tried to create an search package that is customizable,
+search to behave. So we have tried to create an search plugin that is customizable,
 expandable, and ultimately replaceable.
 
 ## Decoupled Interface
@@ -18,23 +17,23 @@ One of the things we tried to do was ensure that you could replace one part
 of the search interface with another without having to rewrite all of it. To do so
 we broke the search down into a back-end and front-end component each of which
 can be replaced with another that uses the same interface. This was accomplished
-by using a publication to communicate between these two packages.
+by using a publication to communicate between these two plugins.
 
-The `search-mongo` package creates a `SearchResult` publication that can be consumed
-by any front-end, but by default is consumed by the `ui-search` package. But any
-back-end that creates this same publication will be utilized by the front-end package.
+The `search-mongo` plugin creates a `SearchResult` publication that can be consumed
+by any front-end, but by default is consumed by the `ui-search` plugin. But any
+back-end that creates this same publication will be utilized by the front-end plugin.
 
 ## search-mongo plugin
 
-This package implements the server-side elements of search. This package was a
+This plugin implements the server-side elements of search. This plugin was a
 compromise between more sophisticated engines like Elastic Search that require
-more maintenance and setup and trying to create a package that will meet the needs
+more maintenance and setup and trying to create a plugin that will meet the needs
 of most developers.
 
-This package tries to provide a comprehensive product search, while also providing a
+This plugin tries to provide a comprehensive product search, while also providing a
 relatively simple search API for orders and accounts.
 
-For product search this package leverages Mongo's own built-in [full-text search](https://docs.mongodb.com/manual/reference/operator/query/text/)
+For product search this plugin leverages Mongo's own built-in [full-text search](https://docs.mongodb.com/manual/reference/operator/query/text/)
 capabilities which provides more intelligent matching algorithms than just plain text searches and
 gives a "weight" based on the quality of the match. It also allows admins to customize
 which fields they include and what ranking they are given through the admin
@@ -75,7 +74,7 @@ in the future.
 
 ## ui-search plugin
 
-The `ui-search` package implements the client-side elements of search - a UI interface, and a subscription to the SearchResults publication created by the search-mongo package.
+The `ui-search` plugin implements the client-side elements of search - a UI interface, and a subscription to the SearchResults publication created by the search-mongo plugin.
 
 To subscribe to the SearchResults publication, you must provide the collection you wish to search, the search term (`searchQuery`), and optionally the `facets` you wish to filter by.
 
