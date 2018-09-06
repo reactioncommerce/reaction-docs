@@ -12,12 +12,12 @@ An account is generally created by registering using one of the Reaction UI clie
 
 Users and accounts are different but related concepts. Every **user** has exactly one account and every account has exactly one user. The user is managed by an outside user accounts system, while the linked account is part of the Reaction system.
 
-Everything that relates to generic user accounts management, such as a login email and password, is part of the user record, while all related records in the Reaction system, such as carts, orders and profiles, are linked with the account.
-
 | User         | Account  |
 | ------------ | -------- |
 | Login e-mail | Carts    |
 | Password     | Orders   |
 |              | Profiles |
+
+Everything that relates to generic user accounts management, such as a login email and password, is part of the user record, while all related records in the Reaction system, such as carts, orders and profiles, are linked with the account.
 
 > **Note:** In the main Reaction app, a **user** and an **account** are created for anonymous users, and the client automatically logs in as this account. However, this behavior is being removed soon.

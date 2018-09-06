@@ -2,9 +2,9 @@
 title: Carts
 ---
 
-A cart is an entity that holds items a user has added along with entered checkout info until checkout is complete or the items are removed. A cart eventually becomes an order (after checkout) or may be expired and deleted by the system after some amount of time. A cart is destroyed when it is converted to an order.
+A **cart** is an entity that holds items a user has added along with entered checkout info until checkout is complete or the items are removed. A cart eventually becomes an **order** (after checkout) or may be expired and deleted by the system after some amount of time. A cart is destroyed when it is converted to an order.
 
-There are two types of carts, anonymous carts and account carts.
+There are two types of carts, **anonymous carts** and **account carts**.
 
 ## Anonymous Carts
 
