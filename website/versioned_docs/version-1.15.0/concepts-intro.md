@@ -1,6 +1,6 @@
 ---
 title: Introduction to Concepts
-id: version-v1.15.0-concepts-intro
+id: version-1.15.0-concepts-intro
 original_id: concepts-intro
 ---
 

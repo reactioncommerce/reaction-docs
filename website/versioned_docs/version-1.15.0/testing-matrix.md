@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-testing-matrix
+id: version-1.15.0-testing-matrix
 title: End-to-end testing matrix
 original_id: testing-matrix
 ---

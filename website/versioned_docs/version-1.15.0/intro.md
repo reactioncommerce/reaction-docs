@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-intro
+id: version-1.15.0-intro
 title: Introduction
 original_id: intro
 ---

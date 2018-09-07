@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-testing-debugging-server-code
+id: version-1.15.0-testing-debugging-server-code
 title: How To: Debug Meteor server-side code
 original_id: testing-debugging-server-code
 ---

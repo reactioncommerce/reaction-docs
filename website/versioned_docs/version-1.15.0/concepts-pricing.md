@@ -1,6 +1,6 @@
 ---
 title: Pricing
-id: version-v1.15.0-concepts-pricing
+id: version-1.15.0-concepts-pricing
 original_id: concepts-pricing
 ---
 

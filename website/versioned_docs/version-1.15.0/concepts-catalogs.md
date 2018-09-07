@@ -1,6 +1,6 @@
 ---
 title: Catalogs
-id: version-v1.15.0-concepts-catalogs
+id: version-1.15.0-concepts-catalogs
 original_id: concepts-catalogs
 ---
 

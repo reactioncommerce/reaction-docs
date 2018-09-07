@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-how-to-configure-meteor-app
+id: version-1.15.0-how-to-configure-meteor-app
 title: How To: Configure the Meteor app
 original_id: how-to-configure-meteor-app
 ---

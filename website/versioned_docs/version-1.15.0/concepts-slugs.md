@@ -1,6 +1,6 @@
 ---
 title: Slugs
-id: version-v1.15.0-concepts-slugs
+id: version-1.15.0-concepts-slugs
 original_id: concepts-slugs
 ---
 

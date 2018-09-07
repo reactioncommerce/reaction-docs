@@ -1,6 +1,6 @@
 ---
 title: Marketplace Plugin (Meteor)
-id: version-v1.15.0-core-plugins-marketplace
+id: version-1.15.0-core-plugins-marketplace
 original_id: core-plugins-marketplace
 ---
 

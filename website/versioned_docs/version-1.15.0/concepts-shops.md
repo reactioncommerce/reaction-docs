@@ -1,6 +1,6 @@
 ---
 title: Shops
-id: version-v1.15.0-concepts-shops
+id: version-1.15.0-concepts-shops
 original_id: concepts-shops
 ---
 

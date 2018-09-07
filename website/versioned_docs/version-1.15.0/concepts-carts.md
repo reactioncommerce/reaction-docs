@@ -1,6 +1,6 @@
 ---
 title: Carts
-id: version-v1.15.0-concepts-carts
+id: version-1.15.0-concepts-carts
 original_id: concepts-carts
 ---
 

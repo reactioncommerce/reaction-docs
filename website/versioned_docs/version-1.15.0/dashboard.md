@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-dashboard
+id: version-1.15.0-dashboard
 title: Store Operator's Guide
 original_id: dashboard
 ---

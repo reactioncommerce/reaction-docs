@@ -1,6 +1,6 @@
 ---
 title: Payments
-id: version-v1.15.0-concepts-payments
+id: version-1.15.0-concepts-payments
 original_id: concepts-payments
 ---
 

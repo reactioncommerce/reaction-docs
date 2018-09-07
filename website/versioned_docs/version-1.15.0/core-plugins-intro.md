@@ -1,6 +1,6 @@
 ---
 title: Understanding Plugins
-id: version-v1.15.0-core-plugins-intro
+id: version-1.15.0-core-plugins-intro
 original_id: core-plugins-intro
 ---
 

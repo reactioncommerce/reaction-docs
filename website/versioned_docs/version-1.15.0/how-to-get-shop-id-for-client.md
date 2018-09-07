@@ -1,6 +1,6 @@
 ---
 title: How To: Get the shop ID for a client
-id: version-v1.15.0-how-to-get-shop-id-for-client
+id: version-1.15.0-how-to-get-shop-id-for-client
 original_id: how-to-get-shop-id-for-client
 ---
 
