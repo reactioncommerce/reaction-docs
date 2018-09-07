@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-community-resources
+id: version-1.15.0-community-resources
 title: Community plugins
 original_id: community-resources
 ---

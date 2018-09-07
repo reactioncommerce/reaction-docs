@@ -1,6 +1,6 @@
 ---
 title: How To: Implement a client checkout flow
-id: version-v1.15.0-how-to-client-checkout-flow
+id: version-1.15.0-how-to-client-checkout-flow
 original_id: how-to-client-checkout-flow
 ---
 

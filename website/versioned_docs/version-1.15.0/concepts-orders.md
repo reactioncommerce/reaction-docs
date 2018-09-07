@@ -1,6 +1,6 @@
 ---
 title: Orders
-id: version-v1.15.0-concepts-orders
+id: version-1.15.0-concepts-orders
 original_id: concepts-orders
 ---
 

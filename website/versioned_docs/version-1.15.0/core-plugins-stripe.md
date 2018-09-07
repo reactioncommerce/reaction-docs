@@ -1,6 +1,6 @@
 ---
 title: Stripe Payment Plugin (Node)
-id: version-v1.15.0-core-plugins-stripe
+id: version-1.15.0-core-plugins-stripe
 original_id: core-plugins-stripe
 ---
 

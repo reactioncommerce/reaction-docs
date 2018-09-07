@@ -1,6 +1,6 @@
 ---
 title: Products, Variants, and Options
-id: version-v1.15.0-concepts-products
+id: version-1.15.0-concepts-products
 original_id: concepts-products
 ---
 

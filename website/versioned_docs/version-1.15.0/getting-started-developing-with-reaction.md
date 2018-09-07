@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-getting-started-developing-with-reaction
+id: version-1.15.0-getting-started-developing-with-reaction
 title: Getting Started As a Developer
 original_id: getting-started-developing-with-reaction
 ---

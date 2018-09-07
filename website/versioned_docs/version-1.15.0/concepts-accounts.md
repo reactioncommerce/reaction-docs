@@ -1,6 +1,6 @@
 ---
 title: Accounts
-id: version-v1.15.0-concepts-accounts
+id: version-1.15.0-concepts-accounts
 original_id: concepts-accounts
 ---
 

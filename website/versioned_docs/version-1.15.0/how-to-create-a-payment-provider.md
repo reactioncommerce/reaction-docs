@@ -1,6 +1,6 @@
 ---
 title: Payments: Create a Payment Provider
-id: version-v1.15.0-how-to-create-a-payment-provider
+id: version-1.15.0-how-to-create-a-payment-provider
 original_id: how-to-create-a-payment-provider
 ---
 

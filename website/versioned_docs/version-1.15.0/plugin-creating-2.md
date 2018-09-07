@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-plugin-creating-2
+id: version-1.15.0-plugin-creating-2
 title: Part 1: Creating your plugin
 original_id: plugin-creating-2
 ---

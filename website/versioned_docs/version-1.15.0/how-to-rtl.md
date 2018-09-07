@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-how-to-rtl
+id: version-1.15.0-how-to-rtl
 title: How To: Add right-to-left language support in the Meteor app
 original_id: how-to-rtl
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-v1.15.0-register-template
+id: version-1.15.0-register-template
 title: How To: Register a custom email template
 original_id: register-template
 ---

@@ -1,6 +1,6 @@
 ---
 title: Search Plugins (Meteor)
-id: version-v1.15.0-core-plugins-search
+id: version-1.15.0-core-plugins-search
 original_id: core-plugins-search
 ---
 

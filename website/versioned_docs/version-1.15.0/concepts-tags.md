@@ -1,6 +1,6 @@
 ---
 title: Tags
-id: version-v1.15.0-concepts-tags
+id: version-1.15.0-concepts-tags
 original_id: concepts-tags
 ---
 
