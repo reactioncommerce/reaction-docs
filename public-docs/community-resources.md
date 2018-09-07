@@ -1,6 +1,6 @@
 ---
 id: community-resources
-title: Community resources
+title: Community plugins
 ---
     
 This page is here to guide you through the Reaction ecosystem. As we've stated before, we wouldn't be here without our very engaged community. Here we'd like to introduce you to some of the best things we've seen out there.
@@ -15,14 +15,14 @@ Install this plugin to get a dashboard panel that allows you to load datasets an
 
 ## Community plugins
 
-|Category  |Reaction default(s)                |Community package(s)                         |
-|----------|-----------------------------------|---------------------------------------------|
-|Payments  |Stripe, example payment package    |[PayPal Express](https://github.com/reaction-contrib/meteor-payments-paypal-express), [Payflow Pro](https://github.com/reaction-contrib/meteor-payments-payflow-pro), [Authorize.net](https://github.com/reaction-contrib/meteor-payments-authorize-net), [Braintree](https://github.com/reaction-contrib/meteor-payments-braintree), [Cash on Delivery](https://github.com/reactioncommerce/payments-cod)|
-|Taxes     |Flat-rate                          |[Avalara](https://github.com/reaction-contrib/meteor-taxes-avalara), [TaxCloud](https://github.com/reaction-contrib/meteor-taxes-taxcloud)                                                                                   |
-|Shipping  |Flat-rate                          |[Shippo](https://github.com/reaction-contrib/meteor-shipping-shippo)                          |
-|Connectors|CSV connector                      |[Shopify connector](https://github.com/reaction-contrib/meteor-connector-shopify)             |
-|Adapters  |                                   |[AWS S3 file collections](https://github.com/reaction-contrib/reaction-file-collections-sa-s3)|
-|Logging   |                                   |[Meteor Logging API](https://github.com/reaction-contrib/meteor-logging-api)|
+| Category   | Reaction default(s)             | Community package(s)                                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Payments   | Stripe, example payment package | [PayPal Express](https://github.com/reaction-contrib/meteor-payments-paypal-express), [Payflow Pro](https://github.com/reaction-contrib/meteor-payments-payflow-pro), [Authorize.net](https://github.com/reaction-contrib/meteor-payments-authorize-net), [Braintree](https://github.com/reaction-contrib/meteor-payments-braintree), [Cash on Delivery](https://github.com/reactioncommerce/payments-cod) |
+| Taxes      | Flat-rate                       | [Avalara](https://github.com/reaction-contrib/meteor-taxes-avalara), [TaxCloud](https://github.com/reaction-contrib/meteor-taxes-taxcloud)                                                                                                                                                                                                                                                                 |
+| Shipping   | Flat-rate                       | [Shippo](https://github.com/reaction-contrib/meteor-shipping-shippo)                                                                                                                                                                                                                                                                                                                                       |
+| Connectors | CSV connector                   | [Shopify connector](https://github.com/reaction-contrib/meteor-connector-shopify)                                                                                                                                                                                                                                                                                                                          |
+| Adapters   |                                 | [AWS S3 file collections](https://github.com/reaction-contrib/reaction-file-collections-sa-s3)                                                                                                                                                                                                                                                                                                             |
+| Logging    |                                 | [Meteor Logging API](https://github.com/reaction-contrib/meteor-logging-api)                                                                                                                                                                                                                                                                                                                               |
 
 ### [Reaction Commerce <> Magento importer](https://github.com/Buildateam/reaction-magento)
 
