@@ -58,4 +58,4 @@ Reaction Commerce is a modern, open source platform for today's premier ecommerc
 
 ## Roadmap
 
-A long term roadmap and completed features list is on our [roadmap](https://reactioncommerce.com/roadmap).
+A long term roadmap and features list is on our [roadmap](https://reactioncommerce.com/roadmap).
