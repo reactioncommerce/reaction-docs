@@ -14,7 +14,6 @@ Reaction is a series of projects that combine the efforts of [community contribu
 
 ## Hop on a call with the team
 
-- **[Reaction Community Calls](http://getrxn.io/2rcCal):** Every other Wednesday at 7AM PST/12PM EST, join the core team for a public Reaction Community Call on YouTube Live to discuss the latest hot questions and topics from the community. Subscribe to our [Reaction Community Google Calendar](http://getrxn.io/2rcCal) to RSVP to the next call and check out the [agenda](http://getrxn.io/community-agenda) and [watch the archives](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2N0G5zWfZms4Ef08m94k1VT).
 - **Reaction Action:** RSVP for the monthly Reaction Action livestreams with guest speakers, video tutorials and more.
 
 ## Submit a question for the community call
