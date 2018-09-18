@@ -65,7 +65,6 @@ You can deploy Reaction Commerce to anywhere you could deploy a Docker container
 
 The best option depends on your budget and your expected level of traffic. Below are some options for deployment:
 
-- Galaxy: The Meteor Development Group offers a hosting service, Galaxy, that is focused on hosting Meteor apps with monitoring, etc. You can find more information [here](https://www.meteor.com/hosting).
 - Heroku
 - Amazon Web Services (AWS)
 - Azure
