@@ -1,6 +1,6 @@
 ---
 id: creating-a-theme
-title: How To: Create a theme for the Meteor app
+title: How To: Create a theme for the Meteor UI
 ---
 
 ## Starting point

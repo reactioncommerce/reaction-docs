@@ -5,7 +5,7 @@ title: How To: Add right-to-left language support in the Meteor app
 
 The default Reaction Meteor app theme (core-theme) uses [Bootstrap 3](https://getbootstrap.com/css/#less) and the [Less](https://lesscss.org) preprocessor to build the theme.
 
-If you want to learn how to make a theme, see our [How To: Create a theme for the Meteor app](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-theme) documentation.
+If you want to learn how to make a theme, see our [How To: Create a theme for the Meteor UI](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-theme) documentation.
 
 ## Mixins
 

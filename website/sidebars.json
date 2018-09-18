@@ -1,6 +1,9 @@
 {
   "docs": {
-    "Introduction": ["intro"],
+    "Introduction": [
+      "intro",
+      "intro-glance"
+    ],
     "Concepts": [
       "concepts-intro",
       "concepts-accounts",
@@ -190,8 +193,7 @@
       "search",
       "sms-notifications",
       "shipping-admin",
-      "payments-discounts",
-      "faqs"
+      "payments-discounts"
     ],
     "Community": [
       "guidelines",

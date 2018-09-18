@@ -40,3 +40,13 @@ Make sure that you are allowing Docker sufficient memory to run. In your Docker 
 This usually happens when the `mongo-init-replica` service doesn’t finish setting up the replica set before Meteor tries to set up oplog. (See `mongo-init-replica` command in `docker-compose.yml`.) Although the `reaction` service depends on the `mongo-init-replica` service, there is no guarantee that Mongo has started and the replica set has been created prior to the `reaction` service starting.
 
 You should only have to restart the `reaction` service to resolve this.
+
+### "FATAL ERROR: CALL_AND_RETRY_LAST" error when building a custom Docker image
+
+Be sure to use this command to build your custom Docker image:
+
+```sh
+docker build --build-arg TOOL_NODE_FLAGS="--max-old-space-size=2048" -t mycustom .
+```
+
+This seems to force Meteor to use less memory when building and work around this issue.
