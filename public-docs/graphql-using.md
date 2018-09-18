@@ -16,7 +16,7 @@ docker-compose up -d reaction
 To run the Node Express server only from a local checkout:
 
 ```bash
-docker-compose up -d devserver
+npm run devserver
 ```
 
 If your Reaction shop is already hosted somewhere, just POST to /graphql-alpha at that URL to use GraphQL.

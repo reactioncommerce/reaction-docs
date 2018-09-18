@@ -5,11 +5,7 @@ title: Developing the GraphQL API
 
 ## Extending and Modifying the GraphQL Schema
 
-The GraphQL schema is written in multiple `.graphql` files in `/imports/plugins/core/graphql/server/no-meteor/schemas`, in the GraphQL schema language. These files are divided and named according to namespaces. There is no precise list of these, and you could create new files when necessary, but one way to think of the division is "If I were to break out the schema into separate services, which service would own which types?"
-
-All of the `.graphql` files are imported by an `index.js` file in the same folder. Importing `.graphql` files like this is made possible by the [babel-plugin-inline-import](https://www.npmjs.com/package/babel-plugin-inline-import) Babel plugin package.
-
-All the schemas are then imported and passed to `makeExecutableSchema` in `/imports/plugins/core/graphql/server/no-meteor/schema.js`.
+The GraphQL schema is written in multiple `.graphql` files, which contain type definitions in the GraphQL schema language. These files live in the plugins to which they relate, in a `server/no-meteor/schemas` folder. You can import the `.graphql` file(s) into an `index.js` file in that folder, and then import an array from that file in your `register.js`. Refer to the `registerPackage` section.
 
 ### Documenting the Schema
 
@@ -24,9 +20,9 @@ External references:
 - [Apollo Server: Documenting Your Schema](https://www.apollographql.com/docs/apollo-server/v2/essentials/schema.html#documentation)
 
 ### Adding a mutation to the schema
-1. Open the appropriate file in `/imports/plugins/core/graphql/server/no-meteor/schemas`. Make a new one if necessary.
-2. Add your mutation within `extend type Mutation { }`. Add an `extend type Mutation` section near the bottom if the file doesn't have it yet.
-3. We follow the Relay recommendations for input arguments, which is to have only one argument named `input` that takes an input type that is the capitalized mutation name plus the suffix "Input", and to return a type that is the capitalized mutation name plus the suffix "Payload".
+1. Find or create a `.graphql` file in the plugin that this mutation relates to.
+2. Add your mutation within `extend type Mutation { }`. Add an `extend type Mutation` section near the top if the file doesn't have it yet.
+3. We follow the Relay recommendations for mutation input arguments, which is to have only one argument named `input` that takes an input type that is the capitalized mutation name plus the suffix "Input", and to return a type that is the capitalized mutation name plus the suffix "Payload".
 
     Example: `addAccountEmailRecord(input: AddAccountEmailRecordInput!): AddAccountEmailRecordPayload`
 
@@ -35,27 +31,30 @@ External references:
 
 ## Where Resolvers are Defined
 
-All resolvers live in `/imports/plugins/core/graphql/server/no-meteor/resolvers`. The top folders in here follow the same namespace breakdown as in the `schemas` folder. So if you add a query or mutation to `schemas/account.graphql`, then the resolver for it will go in `resolvers/account`.
+Every plugin that extends the GraphQL schema should also have a `server/no-meteor/resolvers` folder, which should have an `index.js` file in which the default export is the full `resolvers` object. This object should be built by importing other files and folders in that directory, such that the folder and file tree looks the same as the `resolvers` object tree.
 
-Within the namespace folders, there is an `index.js` file and any number of folders or files that are named identically to the schema types they resolve. For example, there are typically folders named `Mutation` and `Query`. In the `account` folder there is also an `Account` folder, where resolvers for that type live. You may choose either folders or single files, depending on how many resolvers there are and how complex they are. The important thing is that the `index.js` file in the namespace folder must `export default` an object with the proper resolver tree structure. This object is deep merged with all the objects exported by all the other namespace folders, and the result is the full resolver function tree.
+For example, there are typically folders named `Mutation` and `Query`. In the `accounts` plugin there is also an `Account` folder, where resolvers for that type live. You may choose either folders or single files, depending on how many resolvers there are and how complex they are.
+
+The `resolvers` object for each plugin is deep merged with all the `resolvers` exported by all the other plugins, and the result is the full resolver function tree.
 
 ## Resolver Mutations and Queries vs. Plugin Mutations and Queries
 
 The path a GraphQL query or mutation takes is first to a resolver function, which then calls a query or mutation function provided by one of the plugins. It’s important to understand what happens in each.
 
 The resolver function:
-- Lives in `/imports/plugins/core/graphql/server/no-meteor/resolvers`
+- Lives in `server/no-meteor/resolvers` in a plugin folder
 - Returns a Promise (is async)
 - Transforms IDs (see “IDs in GraphQL”) and data structures (where they don’t match internal data structures)
 - May pull things from the GraphQL context to pass to the plugin function
-- May throw a `Meteor.Error` if anything goes wrong
+- May throw a `ReactionError` if anything goes wrong
 - Includes `clientMutationId` in the response (for mutations only)
 
 The plugin function:
-- Is available on the GraphQL context in `context.queries` or `context.mutations`
+- Lives in `server/no-meteor/queries` or `server/no-meteor/mutations` in a plugin folder
+- Is available on the GraphQL context in `context.queries` or `context.mutations`, and as such can be called by code elsewhere in the app
 - Returns a Promise (is async)
 - Does all permission checks
-- May throw a `Meteor.Error` if anything goes wrong
+- May throw a `ReactionError` if anything goes wrong
 - Performs the actual database mutations or queries
 
 Note that while we are transitioning off Meteor, some Meteor methods may wrap the same plugin query and mutation functions.
@@ -64,23 +63,20 @@ TIP: If you’re confused about where to draw the line, imagine what would have 
 
 ## The Endpoint
 
-The GraphQL server and `/graphql-alpha` endpoint is configured and returned by the `createApolloServer` function, which is located at `/imports/plugins/core/graphql/server/no-meteor/createApolloServer.js`.
+The GraphQL server and `/graphql-alpha` endpoint is configured and returned by the `createApolloServer` function, which is called from the `ReactionNodeApp` class and the `TestApp` class for Jest integration tests.
 
-This function is called from three different places:
-- From `/.reaction/devserver/index.js`, to make it available in our pure Node `devserver` app, without running the full Meteor app.
-- From `/imports/plugins/core/graphql/server/index.js`, to make it available when you run the full Meteor app.
-- From `/tests/TestApp.js`, as part of the `TestApp` class used by our Jest integration tests.
+Newer Reaction code runs within a single `ReactionNodeApp` instance, which is created by Meteor code during app startup. For development and testing purposes, it's also possible to run Reaction as a pure Node app, which also initializes a single `ReactionNodeApp` instance, but without a Meteor context available.
 
 `createApolloServer` does pretty standard configuration of an Express app using `apollo-server-express`. The main things it does are:
 - Checks the identity token using Express middleware
 - Builds the `context` object that’s available in all resolver functions. See [The Reaction GraphQL Context](#the-reaction-graphql-context)
 - Formats the `errors` array that is returned to clients, to make errors as helpful as possible
-- Imports and provides our GraphQL schema
+- Provides the merged GraphQL schema
 - Sets the path as `/graphql-alpha` and exposes a GraphiQL UI on `/graphiql`
 
 ## The Reaction GraphQL Context
 
-All GraphQL resolvers receive a [context](https://www.apollographql.com/docs/apollo-server/setup.html#graphqlOptions.context) object as their third argument. The context is built by `/imports/plugins/core/graphql/server/no-meteor/buildContext.js`, which is run by the `createApolloServer` function.
+All GraphQL resolvers receive a [context](https://www.apollographql.com/docs/apollo-server/setup.html#graphqlOptions.context) object as their third argument. The base context is built within the `ReactionNodeApp` constructor, and additional request-specific properties (like `accountId` and `userHasPermission`) are added to it in `/imports/node-app/core/util/buildContext.js`.
 
 If you call a function that needs the context object, and you’re calling from within a Meteor method or publication, you can build it like this:
 
@@ -89,7 +85,7 @@ If you call a function that needs the context object, and you’re calling from 
 import getGraphQLContextInMeteorMethod from “/imports/plugins/core/graphql/server/getGraphQLContextInMeteorMethod”;
 
 // Within a Meteor method function
-const context = Promise.await(getGraphQLContextInMeteorMethod(this.userId));
+const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId()));
 ```
 
 In Jest tests, you can get a mock context object with mock functions on it:
@@ -99,8 +95,8 @@ import mockContext from "/imports/test-utils/helpers/mockContext";
 ```
 
 Here’s what's on the context object:
-- Queries registered by plugins: `context.queries[pluginName][queryFunctionName]`
-- Mutations registered by plugins: `context.mutations[pluginName][mutationFunctionName]`
+- Queries registered by plugins: `context.queries[queryFunctionName]`
+- Mutations registered by plugins: `context.mutations[mutationFunctionName]`
 - The current user: `context.user`
 - The current user’s ID: `context.userId`
 - The current account: `context.account`
@@ -108,6 +104,14 @@ Here’s what's on the context object:
 - The default shop ID (this may go away): `context.shopId`
 - To check permissions: `context.userHasPermission(role, shopId)` (returns true or false)
 - MongoDB collections (NOT Meteor collections): `context.collections[CollectionName]`
+- A function to call a Meteor method: `context.callMeteorMethod` This is a no-op if running in the pure Node "devserver" app.
+- The `ReactionNodeApp` instance: `context.app`
+- App events object:
+    - To emit: `context.appEvents.emit`
+    - To listen: `context.appEvents.on`
+- To retrieve all functions registered as a specific type of function: `context.getFunctionsOfType(type)`
+- The app root URL: `context.rootUrl`
+- To convert a relative URL to absolute (prefix with the root URL): `context.getAbsoluteUrl(path)`
 
 ## How Auth Works
 
