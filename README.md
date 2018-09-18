@@ -119,6 +119,26 @@ docker-compose run --rm web yarn run rename-version <currentVersion> <newVersion
 
 See [Versioning guide](https://docusaurus.io/docs/en/1.1.4/versioning.html) for more.
 
+## Releasing a new version
+
+1. Add a new version
+
+```sh
+docker-compose run --rm web yarn run version <version-number>
+```
+
+2. Restart the container:
+
+```sh
+docker-compose down && docker-compose up
+```
+
+3. Run locally to confirm the version number has been changed on `localhost:4000`, and the previous version has been added to `localhost:4000/versions` list.
+
+4. If all things look good, push the branch up to make a pull request.
+
+5. Merge to `master` to auto-deploy
+
 ## Deploying
 
 ### Merge to `staging` branch
