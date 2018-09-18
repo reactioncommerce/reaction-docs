@@ -39,7 +39,7 @@ Since 2014 [Google has indexed JavaScript when crawling websites](https://webmas
 3. [dom](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/dom/client/dom.js): Automatically adds `<meta>` tags are for products using the [dom](https://github.com/reactioncommerce/reaction/blob/release-1.8.0/imports/plugins/core/dom/client/dom.js) core package since 1.8, which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data. Read more on [SEO and Metadata](seo-metadata.md).
 4. The storefront UI starter kit app uses NextJS framework with server side rendering enabled.
 
-Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our latest blog post.
+Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our blog post, and check out our [Ecommerce SEO Migration Checklist](http://marketing.reactioncommerce.com/acton/media/37362/seo-checklist).
 
 ## Performance and Scaling
 
