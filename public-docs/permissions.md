@@ -194,7 +194,7 @@ You can also pass in an `audience` field to filter returned apps based on assign
   Reaction.Apps({
     provides: "settings",
     enabled: true,
-    audience: Roles.getRolesForUser(Meteor.userId(), Reaction.getShopId())
+    audience: Roles.getRolesForUser(Reaction.getUserId(), Reaction.getShopId())
   })
 ```
 

@@ -74,7 +74,7 @@ Template.updateAddressBook.events({
       // More fields needed for a full address
       address1: event.target.address1.value
     };
-    const accountUserId = Meteor.userId();
+    const accountUserId = Reaction.getUserId();
     const type = "shipping";
 
     Meteor.call("accounts/addressBookUpdate", address, accountUserId, type, (error, result) => {

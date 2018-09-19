@@ -36,7 +36,7 @@ Called when any Order event occurs. The first occurrence is when a user clicks o
 history: {
   event: event,
   value: value,
-  userId: Meteor.userId(),
+  userId: Reaction.getUserId(),
   updatedAt: new Date()
 }
 ```
