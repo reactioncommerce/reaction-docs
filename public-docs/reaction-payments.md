@@ -48,7 +48,7 @@ MethodHooks.after("cart/submitPayment", function (options) {
   let result = options.result || {};
   if (typeof options.error === "undefined") {
     let cart = Cart.findOne({
-      userId: Meteor.userId()
+      userId: Reaction.getUserId()
     });
     // update workflow
     Meteor.call("workflow/pushCartWorkflow", "coreCartWorkflow",
