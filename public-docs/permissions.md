@@ -2,7 +2,7 @@
 id: permissions
 title: Permissions
 ---
-    
+
 [alanning:roles](https://github.com/alanning/meteor-roles) package provides Reaction permissions support.
 
 ## Packages
@@ -68,7 +68,8 @@ Users with "owner" role are full-permission, app-wide users.
 
 ```js
     # client / server
-    import { Logger, Reaction } from "/server/api";
+    import Logger from "@reactioncommerce/logger";
+    import Reaction from "/imports/plugins/core/core/server/Reaction";
 
     if ( Reaction.hasOwnerAccess() ) {
       Logger.info("The Reaction user has Owner Access");
@@ -92,7 +93,8 @@ Users with "admin" role are full-permission, site-wide users.
 
 ```js
 // client / server
-import { Logger, Reaction } from "/server/api";
+import Logger from "@reactioncommerce/logger";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
 if (Reaction.hasAdminAccess()) {
   Logger.info("The Reaction user has Admin Access");
@@ -115,10 +117,8 @@ Users with "dashboard" role are limited-permission, site-wide users.
 **To check if user has Dashboard access:**
 
 ```js
-// client
-import { Logger, Reaction } from "/client/api";
-// server
-import { Logger, Reaction } from "/server/api";
+import Logger from "@reactioncommerce/logger";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
 if (Reaction.hasDashboardAccess()) {
   Logger.info("The Reaction user has Owner Access");
@@ -141,7 +141,7 @@ Client
 
 ```js
 // client
-import { Reaction } from "/client/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
 // can be a String or Array of strings
 const permissions = ["guest", "profile"];
@@ -155,7 +155,7 @@ Uses the current shop and current user if either is not defined
 
 ```js
 // server
-import { Reaction } from "/server/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
 // can be a String or Array of strings
 const permissions = ["guest", "profile"];
@@ -181,21 +181,21 @@ This core helper method gets all package apps that match the filter passed in. Y
 get all enabled packages for payments.
 
 ```js
-  Reaction.Apps({
-    provides: "paymentMethod",
-    enabled: true
-  });
+Reaction.Apps({
+  provides: "paymentMethod",
+  enabled: true
+});
 ```
 
 You can also pass in an `audience` field to filter returned apps based on assigned roles for the user.
 [(source)](https://github.com/reactioncommerce/reaction/blob/master/client/modules/core/helpers/apps.js#L106-L127)
 
 ```js
-  Reaction.Apps({
-    provides: "settings",
-    enabled: true,
-    audience: Roles.getRolesForUser(Reaction.getUserId(), Reaction.getShopId())
-  })
+Reaction.Apps({
+  provides: "settings",
+  enabled: true,
+  audience: Roles.getRolesForUser(Reaction.getUserId(), Reaction.getShopId())
+});
 ```
 
 ## Permission Groups
@@ -219,6 +219,7 @@ This will add the new permissions to the group and update all existing users bel
 ### Updating to 1.5.0
 
 For updating to 1.5.0, note these changes:
+
 1. The previous `shop.defaultVisitorRoles` are the roles now defined in the `guest` group.
 2. The previous `shop.defaultCustomerRoles` are the roles now defined in the default `customer` group.
 3. The default roles set previously on the Shop schema are now present on server export of Reaction, `Reaction.defaultVisitorRoles`.
