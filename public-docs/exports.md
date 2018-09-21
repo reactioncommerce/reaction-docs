@@ -2,12 +2,12 @@
 id: exports
 title: Exports
 ---
-    
-[Meteor allows you to import](https://guide.meteor.com/structure.html#intro-to-import-export) CSS, HTML and JavaScript in Reaction. 
+
+[Meteor allows you to import](https://guide.meteor.com/structure.html#intro-to-import-export) CSS, HTML and JavaScript in Reaction.
 
 ## import
 
-[Meteor functions](http://docs.meteor.com/api/core.html) such  as `Session`, `Meteor.methods`, `Meteor.publish/subscribe`, `Mongo.Collection`.  While Meteor does make many of these available in the global exported `Meteor` object, you can also import Meteor.
+[Meteor functions](http://docs.meteor.com/api/core.html) such as `Session`, `Meteor.methods`, `Meteor.publish/subscribe`, `Mongo.Collection`. While Meteor does make many of these available in the global exported `Meteor` object, you can also import Meteor.
 
 ```js
 import { Meteor } from "meteor/meteor";
@@ -36,7 +36,8 @@ export default new Collection('lists');             // default export
 
 ```js
 // import Logger functions and Reaction global object.
-import { Logger, Reaction } from "/server/api";
+import Logger from "@reactioncommerce/logger";
+import { Reaction } from "/imports/plugins/core/core/server/Reaction";
 ```
 
 The convenience wrapper `Reaction`, exports a number of helpers from Reaction Core, that can be used without an independent import:
@@ -64,7 +65,8 @@ export default Reaction;
 
 ```js
 // import Logger functions and Reaction global object.
-import { Reaction } from "/server/api";
+import Logger from "@reactioncommerce/logger";
+import { Reaction } from "/imports/plugins/core/core/server/Reaction";
 ```
 
 The includes additional helpers:
@@ -80,5 +82,6 @@ A similar export is available from `client/api` for client Reaction functions.
 
 ```js
 // import Logger functions and Reaction global object.
-import { Reaction } from "/client/api";
+import Logger from "@reactioncommerce/logger";
+import { Reaction } from "/imports/plugins/core/core/server/Reaction";
 ```

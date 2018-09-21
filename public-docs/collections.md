@@ -2,12 +2,12 @@
 id: collections
 title: Collections
 ---
-    
+
 Meteor and Reaction store data in `collections`.  
 Collections are declared in a common location with [Mongo.Collection](http://docs.meteor.com/api/collections.html).
 
 ```js
-import { Mongo } from "meteor/mongo"
+import { Mongo } from "meteor/mongo";
 
 SupportChats = new Mongo.Collection("supportchats");
 ```
@@ -66,13 +66,16 @@ See the [Meteor docs for collection find](http://docs.meteor.com/#/full/find).
 import { Products } from "/lib/collections";
 
 function updateProductTitle(productId, title) {
-  Products.update({
-    _id: productId
-  }, {
-    $set: {
-      title
+  Products.update(
+    {
+      _id: productId
+    },
+    {
+      $set: {
+        title
+      }
     }
-  });
+  );
 }
 
 // Register your method as a Meteor Method
@@ -108,11 +111,11 @@ As a convenience, Collections and Schemas are attached to the Reaction export, s
 
 ```js
 // server api import
-import { Reaction } from "/server/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
 const packages = Reaction.Collections.Packages.find({
-   "shopId": Reaction.getShopId(),
-   "layout.workflow": workflow
+  shopId: Reaction.getShopId(),
+  "layout.workflow": workflow
 });
 ```
 
@@ -139,8 +142,8 @@ Example creation of the "Packages" collection:
 
 ```js
 /**
-* Packages Collection
-*/
+ * Packages Collection
+ */
 export const Packages = new Mongo.Collection("Packages");
 
 Packages.attachSchema(Schemas.PackageConfig);

@@ -43,7 +43,7 @@ Provide a [standard connection string for mongoDB](https://docs.mongodb.com/manu
 MONGO_URL=mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
 ```
 
-During development, mongoDB is installed and running locally, and can be accessed on the port above the http port.  Use [RoboMongo](https://robomongo.org/) and create a connection to `localhost:3001`, or `meteor mongo` on the CLI to access the local mongoDB instance. The default database is `meteor`.
+During development, mongoDB is installed and running locally, and can be accessed on the port above the http port. Use [RoboMongo](https://robomongo.org/) and create a connection to `localhost:3001`, or `meteor mongo` on the CLI to access the local mongoDB instance. The default database is `meteor`.
 
 ### ROOT_URL
 
@@ -67,80 +67,82 @@ Use `reaction.json` to provide an initial pre-configuration of Reaction. This wi
 
 ```json
 [
-  [{
-    "name": "core",
-    "enabled": true,
-    "settings": {
-      "public": {
-        "allowGuestCheckout": true
-      },
-      "mail": {
-        "user": "",
-        "password": "",
-        "host": "",
-        "port": 587
-      },
-      "openexchangerates": {
-        "appId": ""
-      },
-      "services": [{
-        "facebook": {
-          "appId": "",
-          "secret": ""
+  [
+    {
+      "name": "core",
+      "enabled": true,
+      "settings": {
+        "public": {
+          "allowGuestCheckout": true
+        },
+        "mail": {
+          "user": "",
+          "password": "",
+          "host": "",
+          "port": 587
+        },
+        "openexchangerates": {
+          "appId": ""
+        },
+        "services": [
+          {
+            "facebook": {
+              "appId": "",
+              "secret": ""
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "reaction-google-analytics",
+      "enabled": false,
+      "settings": {
+        "public": {
+          "api_key": ""
         }
-      }]
-    }
-  }, {
-    "name": "reaction-google-analytics",
-    "enabled": false,
-    "settings": {
-      "public": {
+      }
+    },
+    {
+      "name": "reaction-stripe",
+      "enabled": true,
+      "settings": {
         "api_key": ""
       }
-    }
-  }, {
-    "name": "reaction-stripe",
-    "enabled": true,
-    "settings": {
-      "api_key": ""
-    }
-  }, {
-    "name": "reaction-social",
-    "enabled": true,
-    "settings": {
-      "public": {
-        "autoInit": true,
-        "appsOrder": [
-          "facebook",
-          "twitter",
-          "pinterest",
-          "googleplus"
-        ],
-        "iconOnly": true,
-        "faSize": "fa-2x",
-        "faClass": "square",
-        "targetWindow": "_self",
-        "apps": {
-          "facebook": {
-            "appId": "",
-            "version": "v2.1",
-            "profilePage": "",
-            "enabled": true,
-            "appSecret": ""
-          },
-          "twitter": {
-            "enabled": true
-          },
-          "googleplus": {
-            "enabled": true
-          },
-          "pinterest": {
-            "enabled": true
+    },
+    {
+      "name": "reaction-social",
+      "enabled": true,
+      "settings": {
+        "public": {
+          "autoInit": true,
+          "appsOrder": ["facebook", "twitter", "pinterest", "googleplus"],
+          "iconOnly": true,
+          "faSize": "fa-2x",
+          "faClass": "square",
+          "targetWindow": "_self",
+          "apps": {
+            "facebook": {
+              "appId": "",
+              "version": "v2.1",
+              "profilePage": "",
+              "enabled": true,
+              "appSecret": ""
+            },
+            "twitter": {
+              "enabled": true
+            },
+            "googleplus": {
+              "enabled": true
+            },
+            "pinterest": {
+              "enabled": true
+            }
           }
         }
       }
     }
-  }]
+  ]
 ]
 ```
 
@@ -177,11 +179,15 @@ See: [reaction-import.md](reaction-import.md) for documentation on `Reaction.Imp
 _Example import of shipping records_
 
 ```js
-import { Meteor} from "meteor/meteor";
-import { Reaction } from "/server/api";
+import { Meteor } from "meteor/meteor";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
-Meteor.startup(function () {
-  Reaction.Importer.process(Assets.getText("data/Shipping.json"), ["name"], Reaction.Importer.shipping);
+Meteor.startup(function() {
+  Reaction.Importer.process(
+    Assets.getText("data/Shipping.json"),
+    ["name"],
+    Reaction.Importer.shipping
+  );
   Reaction.Importer.flush();
 });
 ```

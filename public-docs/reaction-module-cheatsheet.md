@@ -2,7 +2,7 @@
 id: reaction-module-cheatsheet
 title: Module Import Cheatsheet
 ---
-    
+
 ## Client (Core)
 
 ### API
@@ -20,7 +20,7 @@ import { i18next } from "/client/api";
 
 // Meteor depedency.
 // Use to watch for changes to i18n. Triggers on language change
-import { localeDep } from  "/client/modules/i18n";
+import { localeDep } from "/client/modules/i18n";
 ```
 
 ### Modules - Router
@@ -38,7 +38,7 @@ import { Countries } from "/client/collections";
 ## Server (Core)
 
 ```javascript
-import { Reaction } from "/server/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 import { Logger } from "/server/api";
 import { GeoCoder } from "/server/api";
 import { Hooks } from "/server/api";
@@ -63,7 +63,6 @@ import { Shops } from "/lib/collections";
 import { Tags } from "/lib/collections";
 import { Cart } from "/lib/collections";
 import { Orders } from "/lib/collections";
-
 
 import * as Schemas from "/lib/collections/schemas";
 ```
@@ -147,6 +146,7 @@ import PropTypes from "prop-types";
 ```javascript
 import { withMoment } from "/imports/plugins/core/components/lib";
 ```
+
 See [Components API](https://docs.reactioncommerce.com/reaction-docs/master/components-api#withMoment) docs for usage examples
 
 ## Meteor

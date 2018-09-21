@@ -54,7 +54,7 @@ export default function blocks() {
 
 ```javascript
 // File is shortened for example
-import { Reaction } from "/server/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 import SimpleLayout from "../lib/layout/simple";
 
 Reaction.registerTemplate({
