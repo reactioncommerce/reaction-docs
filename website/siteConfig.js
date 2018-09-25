@@ -28,7 +28,7 @@ const siteConfig = {
   headerLinks: [
     { doc: "intro", label: "Docs" },
     { search: true },
-    { href: "https://reactioncommerce.com/#get-in-touch", label: "Get in touch" }
+    { href: "http://marketing.reactioncommerce.com/acton/media/37362/get-in-touch", label: "Get in touch" }
   ],
   cleanUrl: true,
   /* path to images for header/footer */

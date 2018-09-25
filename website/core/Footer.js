@@ -50,7 +50,7 @@ class Footer extends React.Component {
               <ul className="footer-list">
                 <li><a target="_blank" href="https://reactioncommerce.com/partners">Partner</a></li>
                 <li><a target="_blank" href="https://reactioncommerce.com/contributors">Contribute</a></li>
-                <li><a target="_blank" href="#get-in-touch">Get in Touch</a></li>
+                <li><a target="_blank" href="http://marketing.reactioncommerce.com/acton/media/37362/get-in-touch">Get in Touch</a></li>
               </ul>
             </div>
 
