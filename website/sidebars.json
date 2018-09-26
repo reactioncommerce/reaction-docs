@@ -1,6 +1,8 @@
 {
   "docs": {
-    "Introduction": ["intro"],
+    "Introduction": [
+      "intro"
+    ],
     "Concepts": [
       "concepts-intro",
       "concepts-accounts",
@@ -51,7 +53,8 @@
       "graphql-using",
       "graphql-intro",
       "graphql-developing",
-      "graphql-create-mutation"
+      "graphql-create-mutation",
+      "graphql-api"
     ],
     "Developer How-To": [
       "how-to-client-checkout-flow",
