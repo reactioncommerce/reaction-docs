@@ -125,9 +125,9 @@ class HomePageFeatured extends Component {
 }
 ```
 
-While this is a deliberatly simple example, you can see how you can easily take data from any source on the server side and easily pass it down to the client side without having to have any understanding of where it came from or it's original data structure.
+While this is a deliberately simple example, you can see how you can easily take data from any source on the server side and easily pass it down to the client side without having to have any understanding of where it came from or its original data structure.
 
 With that you should have a working `Featured Products` section of the home page that you can edit by just editing the tags on individual products.
 
 
-Congratulations. You can completed the Swag Shop Tutorial
+Congratulations. You can completed the Swag Shop Tutorial 🎉

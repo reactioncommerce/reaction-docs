@@ -29,7 +29,7 @@ const theme = createMuiTheme({
 
 ## Styling a new component
 Either you can follow the above approach of naming the component and writing the styles in the `lib/reactionTheme.js` file.
-Or you can write the styling code within the component. For example we wrote the folloing component(HomePageStaticText) to display static text on the homepage:
+Or you can write the styling code within the component. For example we wrote the following component(HomePageStaticText) to display static text on the homepage:
 1. In the component file define a style object like:
 ```javascript
 const styles = (theme) => ({
