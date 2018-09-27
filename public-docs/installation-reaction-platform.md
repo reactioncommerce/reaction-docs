@@ -17,14 +17,15 @@ The Platform will install and run the the entire suite of Reaction services in t
 
 1. Requirements:
 
-- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Windows](https://docs.docker.com/docker-for-windows/install/)* | [Linux](https://docs.docker.com/compose/install/#install-compose)**) 
+- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Windows](https://docs.docker.com/docker-for-windows/install/)<sup>*</sup> | [Linux](https://docs.docker.com/compose/install/#install-compose)<sup>**</sup>) 
 - Install [Node.js](https://nodejs.org/en/)
 - A GitHub account with a configured SSH key
 
-> *Windows: Reaction Platform has not been fully tested in Windows at this time.
-> **Linux: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
+> <sup>*</sup>Windows: Reaction Platform has not been fully tested in Windows at this time.
 
-1. Before you get started, Make sure you are not running any applications the necessary ports,  `3000` and `4000`.
+> <sup>**</sup>Linux: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
+
+1. Before you get started, make sure you are not running any applications the necessary ports: `3000`, `4000`, `4444`.
 
 2. Clone [**Reaction Platform**](https://github.com/reactioncommerce/reaction-platform)
 
@@ -57,13 +58,13 @@ docker-compose logs -f
 
 6. Once the initial `make`  process finishes, the services will be accessible at the following URLs:
 
-| Service                                                                                    | URL                                                            |
+| Directory: Service                                                                                    | URL                                                            |
 | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [localhost:3000/graphpql-alpha](localhost:3000/graphpql-alpha) |
+| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [localhost:3000/graphpql-alpha](localhost:3000/graphql-alpha) |
 | [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [localhost:3000/graphiql](localhost:3000/graphiql)             |
 | [`reaction`](https://github.com/reactioncommerce/reaction): Classic UI                     | [localhost:3000](localhost:3000)                               |
-| [`mongo`](https://github.com/reactioncommerce/reaction): MongoDB                           | [localhost:27017](localhost:27017)                             |
-| [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra)                     | [localhost:4444](localhost:4444)                               |
+| [`reaction`](https://github.com/reactioncommerce/reaction): MongoDB                           | [localhost:27017](localhost:27017)                             |
+| [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra                     | [localhost:4444](localhost:4444)                               |
 | [`reaction-next-starterkit`](https://github.com/reactioncommerce/reaction-next-starterkit) | [localhost:4000](localhost:4000)                               |
 
 7. Congrats 🎉 Now you're running the entire suite of Reaction Platform services and ready to start developing.
