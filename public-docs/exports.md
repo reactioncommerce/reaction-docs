@@ -34,34 +34,9 @@ export default new Collection('lists');             // default export
 
 ### Reaction
 
-```js
-// import Logger functions and Reaction global object.
-import Logger from "@reactioncommerce/logger";
-import { Reaction } from "/imports/plugins/core/core/server/Reaction";
-```
+The convenience wrapper `Reaction`, exports a number of helpers from Reaction Core, that can be used without an independent import.
 
-The convenience wrapper `Reaction`, exports a number of helpers from Reaction Core, that can be used without an independent import:
-
-```js
-/**
- * Reaction methods (server)
- */
-const Reaction = Object.assign(
-  Core,
-  AssignRoles,
-  { Collections },
-  { Import },
-  LoadSettings,
-  { Log },
-  { Router },
-  { Schemas },
-  SetDomain,
-  ShopName,
-  UI,
-  Utils
-);
-export default Reaction;
-```
+In server code:
 
 ```js
 // import Logger functions and Reaction global object.
@@ -69,19 +44,10 @@ import Logger from "@reactioncommerce/logger";
 import { Reaction } from "/imports/plugins/core/core/server/Reaction";
 ```
 
-The includes additional helpers:
-
-- Reaction
-- Router
-- GeoCoder
-- Hooks
-- Logger
-- MethodHooks
-
-A similar export is available from `client/api` for client Reaction functions.
+In client code:
 
 ```js
+import { Reaction } from "/client/api";
 // import Logger functions and Reaction global object.
 import Logger from "@reactioncommerce/logger";
-import { Reaction } from "/imports/plugins/core/core/server/Reaction";
 ```

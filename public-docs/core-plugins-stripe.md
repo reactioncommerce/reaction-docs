@@ -32,6 +32,8 @@ This is the only server configuration necessary.
 
 If you are using the built-in Reaction client or one of the starter clients provided by Reaction, the necessary client components are already included and will appear where they should. If you are building your own client, you may want to use our [StripeForm React component](https://stoic-hodgkin-c0179e.netlify.com/#!/StripeForm), which is part of the Reaction Design System component library. It wraps [react-stripe-elements](https://github.com/stripe/react-stripe-elements) to do some of the work for you, but you can also use `react-stripe-elements` directly, or use any Stripe client that allows you to securely create a source token.
 
+> For Stripe payments to work in the NextJS starter app, you must set the `STRIPE_PUBLIC_API_KEY` environment variable, which is done in the `.env` file for local development.
+
 ## How to: Test a Stripe Payment
 
 > Prerequisite: Enable and configure Stripe payments with "test" keys

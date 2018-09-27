@@ -1,7 +1,8 @@
 {
   "docs": {
     "Introduction": [
-      "intro"
+      "intro",
+      "intro-glance"
     ],
     "Concepts": [
       "concepts-intro",
@@ -51,14 +52,26 @@
     "For Developers: GraphQL": [
       "graphql-what",
       "graphql-using",
-      "graphql-intro",
       "graphql-developing",
+      "graphql-intro",
       "graphql-create-mutation",
       "graphql-api"
+    ],
+    "Swag Shop tutorial": [
+      "swag-shop-1",
+      "swag-shop-2",
+      "swag-shop-3",
+      "swag-shop-4",
+      "swag-shop-5",
+      "swag-shop-6",
+      "swag-shop-7",
+      "swag-shop-8"
     ],
     "Developer How-To": [
       "how-to-client-checkout-flow",
       "how-to-get-shop-id-for-client",
+      "graphql-create-query",
+      "graphql-create-mutation",
       "how-to-create-a-payment-provider",
       "creating-a-theme",
       "how-to-rtl",
@@ -112,18 +125,6 @@
       "event-hooks",
       "reaction-module-cheatsheet",
       "template-helpers"
-    ],
-    "For Developers: Plugin Tutorial": [
-      "plugin-intro-1",
-      "plugin-creating-2",
-      "plugin-layouts-3",
-      "plugin-customizing-templates-4",
-      "plugin-fixtures-5",
-      "plugin-routes-6",
-      "plugin-workflow-7",
-      "plugin-schemas-8",
-      "plugin-i18n-9",
-      "plugin-complete-10"
     ],
     "For Developers: Meteor App Client Components": [
       "components",
@@ -194,8 +195,7 @@
       "search",
       "sms-notifications",
       "shipping-admin",
-      "payments-discounts",
-      "faqs"
+      "payments-discounts"
     ],
     "Community": [
       "guidelines",
@@ -206,13 +206,6 @@
       "code-of-conduct-committee",
       "guideline-faqs",
       "changes"
-    ],
-    "Swag shop tutorial": [
-      "swag-shop-tutorial",
-      "swag-shop-collecting-requirements",
-      "swag-shop-initialization",
-      "swag-shop-landing-page",
-      "swag-shop-pdp"
     ]
   }
 }

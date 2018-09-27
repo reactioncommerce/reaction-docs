@@ -47,6 +47,8 @@ If your client does not expect to be handling multiple fulfillment groups, or if
 - You can use the `FulfillmentOptionsCheckoutAction` component with an action supplied to the `CheckoutActions` component to collect a fulfillment option selection as part of a step-by-step checkout flow. This wraps `SelectableList` and takes care of some of the complexity for you, versus using `SelectableList` directly.
 
 ### GraphQL
+Call the `updateFulfillmentOptionsForGroup` mutation as necessary during checkout to update the `availableFulfillmentOptions` property for all fulfillment groups of a cart with fresh price quotes. These need to be recalculated every time the items in that group change. When the order is placed, the chosen option for each group will have its prices recalculated one last time. If the prices do not match, order creation will fail.
+
 Use the `selectFulfillmentOptionForGroup` mutation if you have a cart and want to store the selected fulfillment option on each of the fulfillment groups on that cart. This is recommended for data completeness and to avoid re-entry if the checkout flow is interrupted. However, you could also just cache this data on the client until you call the place order mutation.
 
 > NOTE: Call this mutation once for each fulfillment group.
@@ -84,3 +86,6 @@ If order creation is successful, the mutation will return an order object. If th
 
 ## Step 8: Show order confirmation
 If order creation is successful, the mutation will return an order object. Your client can use this to display all of the order details to the shopper on an order confirmation screen.
+
+### GraphQL
+Your "checkout complete" screen can also use the `orderById` query to get the order document at a later time.
