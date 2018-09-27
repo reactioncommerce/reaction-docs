@@ -3,11 +3,14 @@ id: graphql-developing
 title: Developing the GraphQL API
 ---
 
-## Extending and Modifying the GraphQL Schema
+## Extending and Modifying the GraphQL API
 
-The GraphQL schema is written in multiple `.graphql` files, which contain type definitions in the GraphQL schema language. These files live in the plugins to which they relate, in a `server/no-meteor/schemas` folder. You can import the `.graphql` file(s) into an `index.js` file in that folder, and then import an array from that file in your `register.js`. Refer to the `registerPackage` section.
+The GraphQL schema is written in multiple `.graphql` files, which contain type definitions in the GraphQL schema language. These files live in the plugins to which they relate, in a `server/no-meteor/schemas` folder. Refer to one of the How To articles:
 
-### Documenting the Schema
+- [How To: Create a new GraphQL query](./graphql-create-query.md)
+- [How To: Create a new GraphQL mutation](./graphql-create-mutation.md)
+
+## Documenting a GraphQL Schema
 
 Every type, input type, enum, query, mutation, and field must have documentation. Add a description using a string literal immediately above the thing you are documenting in the `.graphql` file. <strong>This is the official API documentation, so take the time to make it clear, well-formatted, and with no spelling or grammar errors.</strong>
 
@@ -18,16 +21,6 @@ Tips:
 External references:
 - [GraphQL "description" spec](https://facebook.github.io/graphql/draft/#sec-Documentation)
 - [Apollo Server: Documenting Your Schema](https://www.apollographql.com/docs/apollo-server/v2/essentials/schema.html#documentation)
-
-### Adding a mutation to the schema
-1. Find or create a `.graphql` file in the plugin that this mutation relates to.
-2. Add your mutation within `extend type Mutation { }`. Add an `extend type Mutation` section near the top if the file doesn't have it yet.
-3. We follow the Relay recommendations for mutation input arguments, which is to have only one argument named `input` that takes an input type that is the capitalized mutation name plus the suffix "Input", and to return a type that is the capitalized mutation name plus the suffix "Payload".
-
-    Example: `addAccountEmailRecord(input: AddAccountEmailRecordInput!): AddAccountEmailRecordPayload`
-
-4. Add the Input and Payload types to the schema. Both must have `clientMutationId: String` field and may have any other fields as necessary. The mutation response payload should include whatever object was mutated.
-5. Document your mutation, the new types, and all fields in those types using string literals. See [Documenting the Schema](#documenting-the-schema).
 
 ## Where Resolvers are Defined
 
@@ -191,7 +184,7 @@ if (deletedCount === 0) {
 }
 ```
 
-Keep in mind that sometimes a zero `modifiedCount` or `deletedCount` might be because nothing matched your query, and depending on the situation, this may not be an error.
+Keep in mind that sometimes a zero `modifiedCount` or `deletedCount` might be because nothing matched your query, and depending on the situation, this may not be an error. If you foresee this situation, you can opt to check `matchedCount` instead.
 
 ## Optimizing GraphQL resolvers
 
