@@ -1,7 +1,8 @@
 ---
-id: installation-docker-development
+id: version-2.0.0-rc.1-installation-docker-development
 title: Developing in Docker
 sidebar_label: Developing in Docker
+original_id: installation-docker-development
 ---
 
 We recommend doing all development in Docker containers using Docker Compose configuration to link containers together and link your host machine files into the containers. You may be able to get away with doing some development directly on your host machine, but learning the container development pattern will be necessary as we move the app toward microservice architecture.
