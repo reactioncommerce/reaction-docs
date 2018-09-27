@@ -2,8 +2,8 @@
 id: exports
 title: Exports
 ---
-    
-[Meteor allows you to import](https://guide.meteor.com/structure.html#intro-to-import-export) CSS, HTML and JavaScript in Reaction. 
+
+[Meteor allows you to import](https://guide.meteor.com/structure.html#intro-to-import-export) CSS, HTML and JavaScript in Reaction.
 
 ## import
 
@@ -34,51 +34,16 @@ export default new Collection('lists');             // default export
 
 ### Reaction
 
+The convenience wrapper `Reaction`, exports a number of helpers from Reaction Core, that can be used without an independent import.
+
+In server code:
+
 ```js
-// import Logger functions and Reaction global object.
-import { Logger, Reaction } from "/server/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 ```
 
-The convenience wrapper `Reaction`, exports a number of helpers from Reaction Core, that can be used without an independent import:
+In client code:
 
 ```js
-/**
- * Reaction methods (server)
- */
-const Reaction = Object.assign(
-  Core,
-  AssignRoles,
-  { Collections },
-  { Import },
-  LoadSettings,
-  { Log },
-  { Router },
-  { Schemas },
-  SetDomain,
-  ShopName,
-  UI,
-  Utils
-);
-export default Reaction;
-```
-
-```js
-// import Logger functions and Reaction global object.
-import { Reaction } from "/server/api";
-```
-
-The includes additional helpers:
-
-- Reaction
-- Router
-- GeoCoder
-- Hooks
-- Logger
-- MethodHooks
-
-A similar export is available from `client/api` for client Reaction functions.
-
-```js
-// import Logger functions and Reaction global object.
 import { Reaction } from "/client/api";
 ```
