@@ -1,6 +1,7 @@
 ---
-id: reaction-user-accounts
+id: version-1.16.0-reaction-user-accounts
 title: Accounts
+original_id: reaction-user-accounts
 ---
     
 Reaction extends [Meteor Account](http://docs.meteor.com/api/accounts.html) functionality in `imports/plugins/core/accounts/` with Reaction specific UI and behavior.

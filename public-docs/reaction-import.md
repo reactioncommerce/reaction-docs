@@ -2,15 +2,19 @@
 id: reaction-import
 title: Import
 ---
-    
+
 Reaction.Import provides some general importing infrastructure, to be used with more specific integration packages. The export module can be found in `server/api/core/import.js` and is can be imported from the `/server/api`.
 
 ```js
-import { Meteor} from "meteor/meteor";
-import { Reaction } from "/server/api";
+import { Meteor } from "meteor/meteor";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
-Meteor.startup(function () {
-  Reaction.Import.process(Assets.getText("data/Shipping.json"), ["name"], Reaction.Import.shipping);
+Meteor.startup(function() {
+  Reaction.Import.process(
+    Assets.getText("data/Shipping.json"),
+    ["name"],
+    Reaction.Import.shipping
+  );
   Reaction.Import.flush();
 });
 ```
@@ -88,7 +92,11 @@ When importing a document together with some documents referencing it, try to us
 The package includes a helper function, [`Reaction.Import.process`](#process), which accepts json arrays. It can be used to populate the database, importing some products might be as easy as:
 
 ```js
-Reaction.Import.process(Assets.getText(file), ['title'], Reaction.Import.product);
+Reaction.Import.process(
+  Assets.getText(file),
+  ["title"],
+  Reaction.Import.product
+);
 ```
 
 ### Automatic collection detection

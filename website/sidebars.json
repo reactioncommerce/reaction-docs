@@ -53,7 +53,9 @@
       "graphql-what",
       "graphql-using",
       "graphql-developing",
-      "graphql-intro"
+      "graphql-intro",
+      "graphql-create-mutation",
+      "graphql-api"
     ],
     "Developer How-To": [
       "how-to-client-checkout-flow",
@@ -136,6 +138,7 @@
       "divider",
       "dropDownMenu",
       "icon",
+      "link",
       "lists",
       "media",
       "menu",

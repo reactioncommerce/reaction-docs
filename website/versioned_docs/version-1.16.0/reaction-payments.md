@@ -1,6 +1,7 @@
 ---
-id: reaction-payments
+id: version-1.16.0-reaction-payments
 title: Payments
+original_id: reaction-payments
 ---
     
 Payment methods are one of the most common packages that developers need to create, especially when migrating from another platform.

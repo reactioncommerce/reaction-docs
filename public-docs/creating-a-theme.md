@@ -16,7 +16,7 @@ Every theme requires a specific structure to be properly registered as a Reactio
 register.js **(Required)** - Registers a Reaction plugin allowing it to be included automatically.
 
 ```js
-import { Reaction } from "/server/api";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
 
 Reaction.registerPackage({
   // Label that shows up in tooltips and places where the package is accessable for settings

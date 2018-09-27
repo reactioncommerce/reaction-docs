@@ -7,7 +7,7 @@ title: Exports
 
 ## import
 
-[Meteor functions](http://docs.meteor.com/api/core.html) such  as `Session`, `Meteor.methods`, `Meteor.publish/subscribe`, `Mongo.Collection`.  While Meteor does make many of these available in the global exported `Meteor` object, you can also import Meteor.
+[Meteor functions](http://docs.meteor.com/api/core.html) such as `Session`, `Meteor.methods`, `Meteor.publish/subscribe`, `Mongo.Collection`. While Meteor does make many of these available in the global exported `Meteor` object, you can also import Meteor.
 
 ```js
 import { Meteor } from "meteor/meteor";
@@ -39,11 +39,15 @@ The convenience wrapper `Reaction`, exports a number of helpers from Reaction Co
 In server code:
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
+// import Logger functions and Reaction global object.
+import Logger from "@reactioncommerce/logger";
+import { Reaction } from "/imports/plugins/core/core/server/Reaction";
 ```
 
 In client code:
 
 ```js
 import { Reaction } from "/client/api";
+// import Logger functions and Reaction global object.
+import Logger from "@reactioncommerce/logger";
 ```

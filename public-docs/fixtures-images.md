@@ -40,14 +40,14 @@ Every time the application starts, we want to check if each product has its corr
 
 ```js
 import bufferStreamReader from "buffer-stream-reader";
+import Hooks from "@reactioncommerce/hooks";
 import { FileRecord } from "@reactioncommerce/file-collections";
-import { Hooks } from "/server/api";
 import { Products } from "/lib/collections";
 import { Media } from "/imports/plugins/core/files/server";
 
 function getTopVariant(productId) {
   const topVariant = Products.findOne({
-    "ancestors": { $in: [productId] },
+    ancestors: { $in: [productId] },
     "ancestors.1": { $exists: false }
   });
   return topVariant;
@@ -110,7 +110,7 @@ function addProductImage(product) {
 }
 
 Hooks.Events.add("afterCoreInit", () => {
-  Products.find({ type: "simple" }).forEach((product) => {
+  Products.find({ type: "simple" }).forEach(product => {
     if (!Promise.await(Media.findOne({ "metadata.productId": product._id }))) {
       addProductImage(product);
     }

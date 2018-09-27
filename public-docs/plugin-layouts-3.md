@@ -2,7 +2,7 @@
 id: plugin-layouts-3
 title: Part 2: Layouts
 ---
-    
+
 _Some of the concepts in this section will be easier to understand if you have read the [Blaze](http://blazejs.org/guide/introduction.html) documentation._
 
 ## Purpose
@@ -21,15 +21,17 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
-import { getComponent as assertComponent, registerComponent } from "/imports/plugins/core/components/lib";
-
+import {
+  getComponent as assertComponent,
+  registerComponent
+} from "/imports/plugins/core/components/lib";
 
 class CoreLayoutBeesknees extends Component {
   static propTypes = {
     actionViewIsOpen: PropTypes.bool,
     data: PropTypes.object,
     structure: PropTypes.object
-  }
+  };
 
   getComponent(name) {
     try {
@@ -48,9 +50,7 @@ class CoreLayoutBeesknees extends Component {
     if (mainComponent) {
       return React.createElement(mainComponent, {});
     } else if (Template[template]) {
-      return (
-        <Blaze template={template} />
-      );
+      return <Blaze template={template} />;
     }
     return null;
   }
@@ -58,7 +58,7 @@ class CoreLayoutBeesknees extends Component {
   render() {
     const { layoutHeader, layoutFooter, template } = this.props.structure || {};
     const pageClassName = classnames({
-      "page": true,
+      page: true,
       "show-settings": this.props.actionViewIsOpen
     });
 
@@ -67,7 +67,6 @@ class CoreLayoutBeesknees extends Component {
 
     return (
       <div className={pageClassName} id="reactionAppContainer">
-
         {headerComponent && React.createElement(headerComponent, {})}
 
         <Blaze template="cartDrawer" className="reaction-cart-drawer" />
@@ -86,12 +85,17 @@ class CoreLayoutBeesknees extends Component {
               {this.props.structure.layoutFooter || "not applicable"}
             </div>
             <div className="bkdebug">
-              <em>main {this.getComponent(template) ? "component:" : "(Blaze template):"}</em>
+              <em>
+                main{" "}
+                {this.getComponent(template)
+                  ? "component:"
+                  : "(Blaze template):"}
+              </em>
               {template}
             </div>
           </div>
 
-          { this.renderMain() }
+          {this.renderMain()}
         </main>
 
         {footerComponent && React.createElement(footerComponent, {})}
@@ -131,45 +135,15 @@ import "./defaults";
 We also need to add our layout to the registry via our `register.js`. We are going to add a `layout` entry that looks like this:
 
 ```js
-layout: [{
-  layout: "coreLayoutBeesknees",
-  workflow: "coreProductGridWorkflow",
-  collection: "Products",
-  theme: "default",
-  enabled: true,
-  structure: {
-    template: "products",
-    layoutHeader: "NavBar",
-    layoutFooter: "Footer",
-    notFound: "productNotFound",
-    dashboardHeader: "",
-    dashboardControls: "dashboardControls",
-    dashboardHeaderControls: "",
-    adminControlsFooter: "adminControlsFooter"
-  }
-}]
-```
-
-so that our file will look like this
-**[/register.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/register.js)**
-
-```js
-import { Reaction } from "/server/api";
-
-// Register package as ReactionCommerce package
-Reaction.registerPackage({
-  label: "Bees Knees",
-  name: "beesknees",
-  icon: "fa fa-vine",
-  autoEnable: true,
-  layout: [{
+layout: [
+  {
     layout: "coreLayoutBeesknees",
     workflow: "coreProductGridWorkflow",
     collection: "Products",
     theme: "default",
     enabled: true,
     structure: {
-      template: "productsLanding",
+      template: "products",
       layoutHeader: "NavBar",
       layoutFooter: "Footer",
       notFound: "productNotFound",
@@ -177,7 +151,41 @@ Reaction.registerPackage({
       dashboardControls: "dashboardControls",
       dashboardHeaderControls: "",
       adminControlsFooter: "adminControlsFooter"
-    } }
+    }
+  }
+];
+```
+
+so that our file will look like this
+**[/register.js](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/register.js)**
+
+```js
+import Reaction from "/imports/plugins/core/core/server/Reaction";
+
+// Register package as ReactionCommerce package
+Reaction.registerPackage({
+  label: "Bees Knees",
+  name: "beesknees",
+  icon: "fa fa-vine",
+  autoEnable: true,
+  layout: [
+    {
+      layout: "coreLayoutBeesknees",
+      workflow: "coreProductGridWorkflow",
+      collection: "Products",
+      theme: "default",
+      enabled: true,
+      structure: {
+        template: "productsLanding",
+        layoutHeader: "NavBar",
+        layoutFooter: "Footer",
+        notFound: "productNotFound",
+        dashboardHeader: "",
+        dashboardControls: "dashboardControls",
+        dashboardHeaderControls: "",
+        adminControlsFooter: "adminControlsFooter"
+      }
+    }
   ]
 });
 ```
@@ -202,10 +210,11 @@ determine how to pull the layout record from a key of `layout + workflow`. The `
 It is essentially the "default" workflow when you hit the home page.
 
 Also note that:
+
 1. We have other parts that we could substitute without changing our layout. For example we change point our header or footer to a custom React component by changing the values for "layoutHeader" or "layoutFooter".
 2. There is a `priority` field on layout objects (with a default value) of `999`. When Reaction goes to render a route/page
-(as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
- used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
+   (as explained above) and more than one layout match is found, this `priority` field is used to determine which one is
+   used. Lower values override the default. [See example](https://github.com/reactioncommerce/reaction-example-plugin/pull/9/files).
 
 Next: [Customizing templates](plugin-customizing-templates-4.md)
 
