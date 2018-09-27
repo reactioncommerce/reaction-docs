@@ -52,8 +52,8 @@
     "For Developers: GraphQL": [
       "graphql-what",
       "graphql-using",
-      "graphql-intro",
-      "graphql-developing"
+      "graphql-developing",
+      "graphql-intro"
     ],
     "Developer How-To": [
       "how-to-client-checkout-flow",
