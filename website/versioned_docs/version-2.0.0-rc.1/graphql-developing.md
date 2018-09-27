@@ -1,6 +1,7 @@
 ---
-id: graphql-developing
+id: version-2.0.0-rc.1-graphql-developing
 title: Developing the GraphQL API
+original_id: graphql-developing
 ---
 
 ## Extending and Modifying the GraphQL API

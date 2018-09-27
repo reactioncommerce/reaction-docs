@@ -1,5 +1,7 @@
 ---
 title: Understanding Plugins
+id: version-2.0.0-rc.1-core-plugins-intro
+original_id: core-plugins-intro
 ---
 
 A Reaction plugin generally refers to something that provides a single area of functionality. In some cases a plugin has plugins of its own or has other external components that you also need to install.

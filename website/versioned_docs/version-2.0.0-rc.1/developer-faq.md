@@ -1,6 +1,7 @@
 ---
-id: developer-faq
+id: version-2.0.0-rc.1-developer-faq
 title: Developer FAQ
+original_id: developer-faq
 ---
 
 ## General

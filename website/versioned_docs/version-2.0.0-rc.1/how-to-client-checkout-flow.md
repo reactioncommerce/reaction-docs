@@ -1,5 +1,7 @@
 ---
 title: How To: Implement a client checkout flow
+id: version-2.0.0-rc.1-how-to-client-checkout-flow
+original_id: how-to-client-checkout-flow
 ---
 
 This section will guide you through everything you need to do as a developer implementing cart checkout or order placement in a client app. The exact type of client isn’t important. It could be a web app, React Native, native, or command line UI. A flow similar to this is used in the starter apps that we provide.

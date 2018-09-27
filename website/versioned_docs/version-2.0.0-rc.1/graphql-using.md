@@ -1,6 +1,7 @@
 ---
-id: graphql-using
+id: version-2.0.0-rc.1-graphql-using
 title: Using the GraphQL API
+original_id: graphql-using
 ---
 
 ## Reaction GraphQL Implementation

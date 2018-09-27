@@ -1,6 +1,7 @@
 ---
-id: creating-a-theme
+id: version-2.0.0-rc.1-creating-a-theme
 title: How To: Create a theme for the Meteor UI
+original_id: creating-a-theme
 ---
 
 ## Starting point

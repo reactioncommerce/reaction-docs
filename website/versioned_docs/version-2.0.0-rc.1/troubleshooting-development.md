@@ -1,7 +1,8 @@
 ---
-id: troubleshooting-development
+id: version-2.0.0-rc.1-troubleshooting-development
 title: Troubleshooting issues during development
 sidebar_label: Development Troubleshooting
+original_id: troubleshooting-development
 ---
 
 When working in the Reaction codebase as a developer, many issues can arise due to misconfiguration, missing dependencies, operating system differences, and software bugs. Here are some tips for diagnosing and fixing these issues.

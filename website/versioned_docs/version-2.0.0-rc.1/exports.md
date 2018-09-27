@@ -1,6 +1,7 @@
 ---
-id: exports
+id: version-2.0.0-rc.1-exports
 title: Exports
+original_id: exports
 ---
 
 [Meteor allows you to import](https://guide.meteor.com/structure.html#intro-to-import-export) CSS, HTML and JavaScript in Reaction.

@@ -1,5 +1,7 @@
 ---
 title: Marketplace Plugin (Meteor)
+id: version-2.0.0-rc.1-core-plugins-marketplace
+original_id: core-plugins-marketplace
 ---
 
 Every Reaction Commerce installation inherently supports multiple shops: almost all entities and permissions are scoped by shop ID. But there is no relationship between these shops and they do not mix.

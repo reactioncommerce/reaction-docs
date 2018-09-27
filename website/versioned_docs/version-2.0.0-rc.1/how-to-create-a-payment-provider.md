@@ -1,5 +1,7 @@
 ---
 title: How To: Add a Payment Method
+id: version-2.0.0-rc.1-how-to-create-a-payment-provider
+original_id: how-to-create-a-payment-provider
 ---
 
 ## Prerequisite Reading

@@ -34,3 +34,6 @@ yarn-error.log*
 .env
 !reports/README.md
 reports/*
+
+# IDE files
+.idea
