@@ -53,13 +53,13 @@
       "graphql-what",
       "graphql-using",
       "graphql-intro",
-      "graphql-developing",
-      "graphql-create-query",
-      "graphql-create-mutation"
+      "graphql-developing"
     ],
     "Developer How-To": [
       "how-to-client-checkout-flow",
       "how-to-get-shop-id-for-client",
+      "graphql-create-query",
+      "graphql-create-mutation",
       "how-to-create-a-payment-provider",
       "creating-a-theme",
       "how-to-rtl",
