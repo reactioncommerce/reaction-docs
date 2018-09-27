@@ -57,6 +57,16 @@
       "graphql-create-mutation",
       "graphql-api"
     ],
+    "Swag Shop tutorial": [
+      "swag-shop-1",
+      "swag-shop-2",
+      "swag-shop-3",
+      "swag-shop-4",
+      "swag-shop-5",
+      "swag-shop-6",
+      "swag-shop-7",
+      "swag-shop-8"
+    ],
     "Developer How-To": [
       "how-to-client-checkout-flow",
       "how-to-get-shop-id-for-client",
@@ -115,18 +125,6 @@
       "event-hooks",
       "reaction-module-cheatsheet",
       "template-helpers"
-    ],
-    "For Developers: Plugin Tutorial": [
-      "plugin-intro-1",
-      "plugin-creating-2",
-      "plugin-layouts-3",
-      "plugin-customizing-templates-4",
-      "plugin-fixtures-5",
-      "plugin-routes-6",
-      "plugin-workflow-7",
-      "plugin-schemas-8",
-      "plugin-i18n-9",
-      "plugin-complete-10"
     ],
     "For Developers: Meteor App Client Components": [
       "components",
@@ -208,16 +206,6 @@
       "code-of-conduct-committee",
       "guideline-faqs",
       "changes"
-    ],
-    "Swag shop tutorial": [
-      "swag-shop-1",
-      "swag-shop-2",
-      "swag-shop-3",
-      "swag-shop-4",
-      "swag-shop-5",
-      "swag-shop-6",
-      "swag-shop-7",
-      "swag-shop-8"
     ]
   }
 }
