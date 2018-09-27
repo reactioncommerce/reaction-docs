@@ -54,6 +54,7 @@
       "graphql-using",
       "graphql-intro",
       "graphql-developing",
+      "graphql-create-query",
       "graphql-create-mutation"
     ],
     "Developer How-To": [
