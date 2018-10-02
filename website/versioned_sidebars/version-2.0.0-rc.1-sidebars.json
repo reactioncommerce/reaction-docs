@@ -27,7 +27,8 @@
       "version-2.0.0-rc.1-recommended-tools",
       "version-2.0.0-rc.1-installation-docker-development",
       "version-2.0.0-rc.1-troubleshooting-development",
-      "version-2.0.0-rc.1-developer-faq"
+      "version-2.0.0-rc.1-developer-faq",
+      "version-2.0.0-rc.1-understanding-hydra-auth-setup"
     ],
     "Swag Shop Tutorial": [
       "version-2.0.0-rc.1-swag-shop-1",
