@@ -11,7 +11,7 @@ Hydra issues access, refresh, and ID Tokens, but does not offer user management 
 
 The Reaction implementation sets up Hydra to use our existing Meteor application as the Identity provider. This gives us the benefits of OAuth2 and OpenID Connect, while allowing us to use our existing user system.
 
-At a high level, when a user of the storefront logs in, the user is redirected from the storefront to Hydra, and then to the Identity provider, in this case, the Reaction API. When the authentication is complete on the Hydra side, Hydra then redirects the user back to the storefront. From the user interface perspective, the authentication process is seamless across the application.
+At a high level, when a user of the storefront logs in, the user is redirected from the storefront to Hydra, and then to the Identity provider, in this case, the Reaction API. When the authentication is complete on the Reaction app, Hydra handles the redirects between the Reaction app to the Storefront. From the user interface perspective, the authentication process is seamless across the application.
 
 Read more about Hydra, OAuth2 and OpenID Connect on Hydra docs [here](https://www.ory.sh/docs/guides/master/hydra/).
 
