@@ -17,13 +17,13 @@ The Platform will install and run the the entire suite of Reaction services in t
 
 1. Requirements:
 
-- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Windows](https://docs.docker.com/docker-for-windows/install/)<sup>*</sup> | [Linux](https://docs.docker.com/compose/install/#install-compose)<sup>**</sup>) 
+- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [Linux](https://docs.docker.com/compose/install/#install-compose)) 
 - Install [Node.js](https://nodejs.org/en/)
-- A GitHub account with a configured SSH key
+- A GitHub account with a <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">configured SSH key</a>
 
-> <sup>*</sup>Windows: Reaction Platform has not been fully tested in Windows at this time.
+> **Windows**: Reaction Platform has not been fully tested in Windows at this time.
 
-> <sup>**</sup>Linux: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
+> **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
 
 1. Before you get started, make sure you are not running any applications the necessary ports: `3000`, `4000`, `4444`.
 
@@ -31,12 +31,12 @@ The Platform will install and run the the entire suite of Reaction services in t
 
 ```sh
 git clone git@github.com:reactioncommerce/reaction-platform.git
-cd reaction-platform
 ```
 
 4. Now you're ready to install. Run this command to bootstrap and start all of the services:
 
 ```sh
+cd reaction-platform
 make
 ```
 
@@ -58,14 +58,14 @@ docker-compose logs -f
 
 6. Once the initial `make`  process finishes, the services will be accessible at the following URLs:
 
-| Directory: Service                                                                                    | URL                                                            |
-| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| Directory: Service                                                                         | URL                                                           |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
 | [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [localhost:3000/graphpql-alpha](localhost:3000/graphql-alpha) |
-| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [localhost:3000/graphiql](localhost:3000/graphiql)             |
-| [`reaction`](https://github.com/reactioncommerce/reaction): Classic UI                     | [localhost:3000](localhost:3000)                               |
-| [`reaction`](https://github.com/reactioncommerce/reaction): MongoDB                           | [localhost:27017](localhost:27017)                             |
-| [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra                     | [localhost:4444](localhost:4444)                               |
-| [`reaction-next-starterkit`](https://github.com/reactioncommerce/reaction-next-starterkit) | [localhost:4000](localhost:4000)                               |
+| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [localhost:3000/graphiql](localhost:3000/graphiql)            |
+| [`reaction`](https://github.com/reactioncommerce/reaction): Classic UI                     | [localhost:3000](localhost:3000)                              |
+| [`reaction`](https://github.com/reactioncommerce/reaction): MongoDB                        | [localhost:27017](localhost:27017)                            |
+| [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra         | [localhost:4444](localhost:4444)                              |
+| [`reaction-next-starterkit`](https://github.com/reactioncommerce/reaction-next-starterkit) | [localhost:4000](localhost:4000)                              |
 
 7. Congrats 🎉 Now you're running the entire suite of Reaction Platform services and ready to start developing.
 
