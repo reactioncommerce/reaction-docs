@@ -88,6 +88,8 @@
     "Developing in Docker": "Developing in Docker",
     "installation-linux": "Installation for Linux",
     "installation-osx": "Installation for OSX",
+    "installation-reaction-platform": "Install with Reaction Platform",
+    "Install with Reaction Platform": "Install with Reaction Platform",
     "installation-windows": "Installation for Windows",
     "internationalization": "Internationalization",
     "intro-glance": "Reaction at a Glance",

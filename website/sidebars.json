@@ -20,6 +20,7 @@
     ],
     "Getting Started As a Developer": [
       "getting-started-developing-with-reaction",
+      "installation-reaction-platform",
       "installation-osx",
       "installation-windows",
       "installation-linux",
@@ -27,7 +28,8 @@
       "recommended-tools",
       "installation-docker-development",
       "troubleshooting-development",
-      "developer-faq"
+      "developer-faq",
+      "understanding-hydra-auth-setup"
     ],
     "Swag Shop Tutorial": [
       "swag-shop-1",

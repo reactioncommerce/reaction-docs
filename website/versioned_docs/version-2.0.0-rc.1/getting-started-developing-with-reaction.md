@@ -1,6 +1,7 @@
 ---
-id: getting-started-developing-with-reaction
+id:  version-2.0.0-rc.1-getting-started-developing-with-reaction
 title: Getting Started As a Developer
+original_id: getting-started-developing-with-reaction
 ---
 
 ## Reaction 2.0
