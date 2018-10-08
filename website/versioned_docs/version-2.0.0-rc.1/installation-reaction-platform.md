@@ -1,7 +1,8 @@
 ---
+id: version-2.0.0-rc.1-installation-reaction-platform
 title: Install with Reaction Platform
 sidebar_label: Install with Reaction Platform
-id: installation-reaction-platform
+original_id: installation-reaction-platform
 ---
 
 
