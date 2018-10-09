@@ -5,9 +5,9 @@ title: Payments
     
 Payment methods are one of the most common packages that developers need to create, especially when migrating from another platform.
 
-The [Creating a Payment Provider](creating-a-payment-provider.md) tutorial was created to try and make this process as easy as possible for developers new to Reaction. It should be used as a guide in making all payment methods as consistent as possible so that they are usable by the largest number of users.
+The [Creating a Payment Provider](creating-a-payment-provider) tutorial was created to try and make this process as easy as possible for developers new to Reaction. It should be used as a guide in making all payment methods as consistent as possible so that they are usable by the largest number of users.
 
-Reaction currently comes packaged with [Stripe](payment-packages-stripe.md).
+Reaction currently comes packaged with [Stripe](payment-packages-stripe).
 
 ## Transactions
 
