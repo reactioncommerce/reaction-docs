@@ -175,9 +175,36 @@
       "version-2.0.0-rc.1-database-optimizations",
       "version-2.0.0-rc.1-how-to-configure-meteor-app"
     ],
+    "Store Operator Guide": [
+      "version-2.0.0-rc.1-dashboard",
+      "version-2.0.0-rc.1-products",
+      "version-2.0.0-rc.1-navigation-bar-and-grid",
+      "version-2.0.0-rc.1-tagging",
+      "version-2.0.0-rc.1-orders-admin",
+      "version-2.0.0-rc.1-accounts",
+      "version-2.0.0-rc.1-login-auth-services",
+      "version-2.0.0-rc.1-social-settings",
+      "version-2.0.0-rc.1-shop-admin",
+      "version-2.0.0-rc.1-merchant-shop-setup",
+      "version-2.0.0-rc.1-email-admin",
+      "version-2.0.0-rc.1-localization-and-i18n",
+      "version-2.0.0-rc.1-payment",
+      "version-2.0.0-rc.1-tax",
+      "version-2.0.0-rc.1-template",
+      "version-2.0.0-rc.1-search",
+      "version-2.0.0-rc.1-sms-notifications",
+      "version-2.0.0-rc.1-shipping-admin",
+      "version-2.0.0-rc.1-payments-discounts"
+    ],
     "Community": [
+      "version-2.0.0-rc.1-guidelines",
       "version-2.0.0-rc.1-code-of-conduct",
-      "version-2.0.0-rc.1-diversity-statement"
+      "version-2.0.0-rc.1-diversity-statement",
+      "version-2.0.0-rc.1-reporting-guide",
+      "version-2.0.0-rc.1-enforcement",
+      "version-2.0.0-rc.1-code-of-conduct-committee",
+      "version-2.0.0-rc.1-guideline-faqs",
+      "version-2.0.0-rc.1-changes"
     ]
   }
 }
