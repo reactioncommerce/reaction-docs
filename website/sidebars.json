@@ -16,10 +16,9 @@
       "concepts-products",
       "concepts-shops",
       "concepts-slugs",
-      "concepts-tags",
-      "core-plugins-intro"
+      "concepts-tags"
     ],
-    "Getting started": [
+    "Getting Started As a Developer": [
       "getting-started-developing-with-reaction",
       "installation-reaction-platform",
       "installation-osx",
@@ -42,7 +41,7 @@
       "swag-shop-7",
       "swag-shop-8"
     ],
-    "Contributing Guide": [
+    "For Developers: Contributing Guide": [
       "contributing-to-reaction",
       "styleguide",
       "git-style-guide",
@@ -53,22 +52,27 @@
       "release-process",
       "reporting-vulnerabilities",
       "community-channels",
-      "community-resources",
       "community-showcase"
     ],
-    "Intro to GraphQL": [
+    "For Developers: GraphQL": [
       "graphql-what",
       "graphql-using",
       "graphql-developing",
       "graphql-intro",
-      "graphql-create-query",
       "graphql-create-mutation",
       "graphql-api"
     ],
-    "Tutorials": [
-      "how-to-client-checkout-flow",
+    "Core Plugins": [
+      "core-plugins-intro",
+      "core-plugins-marketplace",
+      "core-plugins-search",
       "core-plugins-stripe",
+      "community-resources"
+    ],
+    "Developer How-To": [
+      "how-to-client-checkout-flow",
       "how-to-get-shop-id-for-client",
+      "graphql-create-query",
       "how-to-create-a-payment-provider",
       "creating-a-theme",
       "how-to-rtl",
@@ -79,7 +83,7 @@
       "how-to-create-a-custom-homepage",
       "extending-product-schema-location-map"
     ],
-    "Meteor API: Architecture": [
+    "For Developers: Meteor App Architecture": [
       "architecture",
       "exports",
       "security",
@@ -98,7 +102,7 @@
       "logging",
       "jobcontrol"
     ],
-    "Meteor API: Core": [
+    "For Developers: Core Meteor App API": [
       "reaction-core",
       "admin-views",
       "reaction-user-accounts",
@@ -121,11 +125,9 @@
       "collection-hooks",
       "event-hooks",
       "reaction-module-cheatsheet",
-      "template-helpers",
-      "core-plugins-marketplace",
-      "core-plugins-search"
+      "template-helpers"
     ],
-    "Meteor UI: Components": [
+    "For Developers: Meteor App Client Components": [
       "components",
       "components-api",
       "alerts",
@@ -175,9 +177,36 @@
       "database-optimizations",
       "how-to-configure-meteor-app"
     ],
+    "Store Operator Guide": [
+      "dashboard",
+      "products",
+      "navigation-bar-and-grid",
+      "tagging",
+      "orders-admin",
+      "accounts",
+      "login-auth-services",
+      "social-settings",
+      "shop-admin",
+      "merchant-shop-setup",
+      "email-admin",
+      "localization-and-i18n",
+      "payment",
+      "tax",
+      "template",
+      "search",
+      "sms-notifications",
+      "shipping-admin",
+      "payments-discounts"
+    ],
     "Community": [
+      "guidelines",
       "code-of-conduct",
-      "diversity-statement"
+      "diversity-statement",
+      "reporting-guide",
+      "enforcement",
+      "code-of-conduct-committee",
+      "guideline-faqs",
+      "changes"
     ]
   }
 }
