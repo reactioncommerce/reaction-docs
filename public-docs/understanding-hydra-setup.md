@@ -1,7 +1,7 @@
 ---
+id: understanding-hydra-auth-setup
 title: Understanding Hydra Auth Setup
 sidebar_label: Understanding Hydra Auth Setup
-id: understanding-hydra-auth-setup
 ---
 
 As of version 2.0, Reaction Commerce uses [ORY Hydra](https://github.com/ory/hydra) (Hydra), an OAuth 2.0 and Open ID Connect Provider, for authentication across the `reaction` and `reaction-next-starterkit` apps. 
