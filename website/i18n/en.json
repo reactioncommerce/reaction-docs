@@ -193,6 +193,8 @@
     "translation": "Translation",
     "troubleshooting-development": "Troubleshooting issues during development",
     "Development Troubleshooting": "Development Troubleshooting",
+    "understanding-hydra-auth-setup": "Understanding Hydra Auth Setup",
+    "Understanding Hydra Auth Setup": "Understanding Hydra Auth Setup",
     "using-ci": "CI Builds",
     "workflow": "Workflow",
     "writing-jest-integration-tests": "Writing Jest Integration Tests",
