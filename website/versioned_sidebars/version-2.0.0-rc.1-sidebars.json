@@ -1,5 +1,5 @@
 {
-  "version-2.0.0-rc.1-docs": {
+  "docs": {
     "Introduction": [
       "version-2.0.0-rc.1-intro",
       "version-2.0.0-rc.1-intro-glance"
@@ -16,9 +16,10 @@
       "version-2.0.0-rc.1-concepts-products",
       "version-2.0.0-rc.1-concepts-shops",
       "version-2.0.0-rc.1-concepts-slugs",
-      "version-2.0.0-rc.1-concepts-tags"
+      "version-2.0.0-rc.1-concepts-tags",
+      "version-2.0.0-rc.1-core-plugins-intro"
     ],
-    "Getting Started As a Developer": [
+    "Getting started": [
       "version-2.0.0-rc.1-getting-started-developing-with-reaction",
       "version-2.0.0-rc.1-installation-reaction-platform",
       "version-2.0.0-rc.1-installation-osx",
@@ -41,7 +42,7 @@
       "version-2.0.0-rc.1-swag-shop-7",
       "version-2.0.0-rc.1-swag-shop-8"
     ],
-    "For Developers: Contributing Guide": [
+    "Contributing Guide": [
       "version-2.0.0-rc.1-contributing-to-reaction",
       "version-2.0.0-rc.1-styleguide",
       "version-2.0.0-rc.1-git-style-guide",
@@ -52,28 +53,22 @@
       "version-2.0.0-rc.1-release-process",
       "version-2.0.0-rc.1-reporting-vulnerabilities",
       "version-2.0.0-rc.1-community-channels",
+      "version-2.0.0-rc.1-community-resources",
       "version-2.0.0-rc.1-community-showcase"
     ],
-    "For Developers: GraphQL": [
+    " Intro to GraphQL": [
       "version-2.0.0-rc.1-graphql-what",
       "version-2.0.0-rc.1-graphql-using",
       "version-2.0.0-rc.1-graphql-developing",
       "version-2.0.0-rc.1-graphql-intro",
       "version-2.0.0-rc.1-graphql-create-mutation",
-      "version-2.0.0-rc.1-graphql-api"
+      "version-2.0.0-rc.1-graphql-api",
+      "version-2.0.0-rc.1-graphql-create-query"
     ],
-    "Core Plugins": [
-      "version-2.0.0-rc.1-core-plugins-intro",
-      "version-2.0.0-rc.1-core-plugins-marketplace",
-      "version-2.0.0-rc.1-core-plugins-search",
-      "version-2.0.0-rc.1-core-plugins-stripe",
-      "version-2.0.0-rc.1-community-resources"
-    ],
-    "Developer How-To": [
+    "Tutorials": [
       "version-2.0.0-rc.1-how-to-client-checkout-flow",
+      "version-2.0.0-rc.1-core-plugins-stripe",
       "version-2.0.0-rc.1-how-to-get-shop-id-for-client",
-      "version-2.0.0-rc.1-graphql-create-query",
-      "version-2.0.0-rc.1-graphql-create-mutation",
       "version-2.0.0-rc.1-how-to-create-a-payment-provider",
       "version-2.0.0-rc.1-creating-a-theme",
       "version-2.0.0-rc.1-how-to-rtl",
@@ -84,7 +79,7 @@
       "version-2.0.0-rc.1-how-to-create-a-custom-homepage",
       "version-2.0.0-rc.1-extending-product-schema-location-map"
     ],
-    "For Developers: Meteor App Architecture": [
+    "Meteor API: Architecture": [
       "version-2.0.0-rc.1-architecture",
       "version-2.0.0-rc.1-exports",
       "version-2.0.0-rc.1-security",
@@ -103,7 +98,7 @@
       "version-2.0.0-rc.1-logging",
       "version-2.0.0-rc.1-jobcontrol"
     ],
-    "For Developers: Core Meteor App API": [
+    "Meteor API: Core": [
       "version-2.0.0-rc.1-reaction-core",
       "version-2.0.0-rc.1-admin-views",
       "version-2.0.0-rc.1-reaction-user-accounts",
@@ -126,9 +121,11 @@
       "version-2.0.0-rc.1-collection-hooks",
       "version-2.0.0-rc.1-event-hooks",
       "version-2.0.0-rc.1-reaction-module-cheatsheet",
-      "version-2.0.0-rc.1-template-helpers"
+      "version-2.0.0-rc.1-template-helpers",
+      "version-2.0.0-rc.1-core-plugins-marketplace",
+      "version-2.0.0-rc.1-core-plugins-search"
     ],
-    "For Developers: Meteor App Client Components": [
+    "Meteor UI: Components": [
       "version-2.0.0-rc.1-components",
       "version-2.0.0-rc.1-components-api",
       "version-2.0.0-rc.1-alerts",
@@ -178,36 +175,9 @@
       "version-2.0.0-rc.1-database-optimizations",
       "version-2.0.0-rc.1-how-to-configure-meteor-app"
     ],
-    "Store Operator Guide": [
-      "version-2.0.0-rc.1-dashboard",
-      "version-2.0.0-rc.1-products",
-      "version-2.0.0-rc.1-navigation-bar-and-grid",
-      "version-2.0.0-rc.1-tagging",
-      "version-2.0.0-rc.1-orders-admin",
-      "version-2.0.0-rc.1-accounts",
-      "version-2.0.0-rc.1-login-auth-services",
-      "version-2.0.0-rc.1-social-settings",
-      "version-2.0.0-rc.1-shop-admin",
-      "version-2.0.0-rc.1-merchant-shop-setup",
-      "version-2.0.0-rc.1-email-admin",
-      "version-2.0.0-rc.1-localization-and-i18n",
-      "version-2.0.0-rc.1-payment",
-      "version-2.0.0-rc.1-tax",
-      "version-2.0.0-rc.1-template",
-      "version-2.0.0-rc.1-search",
-      "version-2.0.0-rc.1-sms-notifications",
-      "version-2.0.0-rc.1-shipping-admin",
-      "version-2.0.0-rc.1-payments-discounts"
-    ],
     "Community": [
-      "version-2.0.0-rc.1-guidelines",
       "version-2.0.0-rc.1-code-of-conduct",
-      "version-2.0.0-rc.1-diversity-statement",
-      "version-2.0.0-rc.1-reporting-guide",
-      "version-2.0.0-rc.1-enforcement",
-      "version-2.0.0-rc.1-code-of-conduct-committee",
-      "version-2.0.0-rc.1-guideline-faqs",
-      "version-2.0.0-rc.1-changes"
+      "version-2.0.0-rc.1-diversity-statement"
     ]
   }
 }

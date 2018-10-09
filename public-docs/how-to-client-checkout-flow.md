@@ -1,4 +1,5 @@
 ---
+id: how-to-client-checkout-flow
 title: How To: Implement a client checkout flow
 ---
 
