@@ -1,5 +1,4 @@
 ---
-id: how-to-get-shop-id-for-client
 title: How To: Get the shop ID for a client
 ---
 

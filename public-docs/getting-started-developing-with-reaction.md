@@ -1,6 +1,6 @@
 ---
 id: getting-started-developing-with-reaction
-title: Getting started
+title: Getting Started As a Developer
 ---
 
 ## Reaction 2.0

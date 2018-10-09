@@ -1,5 +1,5 @@
 {
-  "docs": {
+  "version-2.0.0-rc.1-docs": {
     "Introduction": [
       "version-2.0.0-rc.1-intro",
       "version-2.0.0-rc.1-intro-glance"
@@ -16,12 +16,14 @@
       "version-2.0.0-rc.1-concepts-products",
       "version-2.0.0-rc.1-concepts-shops",
       "version-2.0.0-rc.1-concepts-slugs",
-      "version-2.0.0-rc.1-concepts-tags",
-      "version-2.0.0-rc.1-core-plugins-intro"
+      "version-2.0.0-rc.1-concepts-tags"
     ],
-    "Getting started": [
+    "Getting Started As a Developer": [
       "version-2.0.0-rc.1-getting-started-developing-with-reaction",
       "version-2.0.0-rc.1-installation-reaction-platform",
+      "version-2.0.0-rc.1-installation-osx",
+      "version-2.0.0-rc.1-installation-windows",
+      "version-2.0.0-rc.1-installation-linux",
       "version-2.0.0-rc.1-reaction-cli",
       "version-2.0.0-rc.1-recommended-tools",
       "version-2.0.0-rc.1-installation-docker-development",
@@ -39,7 +41,7 @@
       "version-2.0.0-rc.1-swag-shop-7",
       "version-2.0.0-rc.1-swag-shop-8"
     ],
-    "Contributing Guide": [
+    "For Developers: Contributing Guide": [
       "version-2.0.0-rc.1-contributing-to-reaction",
       "version-2.0.0-rc.1-styleguide",
       "version-2.0.0-rc.1-git-style-guide",
@@ -50,22 +52,27 @@
       "version-2.0.0-rc.1-release-process",
       "version-2.0.0-rc.1-reporting-vulnerabilities",
       "version-2.0.0-rc.1-community-channels",
-      "version-2.0.0-rc.1-community-resources",
       "version-2.0.0-rc.1-community-showcase"
     ],
-    " Intro to GraphQL": [
+    "For Developers: GraphQL": [
       "version-2.0.0-rc.1-graphql-what",
       "version-2.0.0-rc.1-graphql-using",
       "version-2.0.0-rc.1-graphql-developing",
       "version-2.0.0-rc.1-graphql-intro",
       "version-2.0.0-rc.1-graphql-create-mutation",
-      "version-2.0.0-rc.1-graphql-api",
-      "version-2.0.0-rc.1-graphql-create-query"
+      "version-2.0.0-rc.1-graphql-api"
     ],
-    "Tutorials": [
-      "version-2.0.0-rc.1-how-to-client-checkout-flow",
+    "Core Plugins": [
+      "version-2.0.0-rc.1-core-plugins-intro",
+      "version-2.0.0-rc.1-core-plugins-marketplace",
+      "version-2.0.0-rc.1-core-plugins-search",
       "version-2.0.0-rc.1-core-plugins-stripe",
+      "version-2.0.0-rc.1-community-resources"
+    ],
+    "Developer How-To": [
+      "version-2.0.0-rc.1-how-to-client-checkout-flow",
       "version-2.0.0-rc.1-how-to-get-shop-id-for-client",
+      "version-2.0.0-rc.1-graphql-create-query",
       "version-2.0.0-rc.1-how-to-create-a-payment-provider",
       "version-2.0.0-rc.1-creating-a-theme",
       "version-2.0.0-rc.1-how-to-rtl",
@@ -76,7 +83,7 @@
       "version-2.0.0-rc.1-how-to-create-a-custom-homepage",
       "version-2.0.0-rc.1-extending-product-schema-location-map"
     ],
-    "Meteor API: Architecture": [
+    "For Developers: Meteor App Architecture": [
       "version-2.0.0-rc.1-architecture",
       "version-2.0.0-rc.1-exports",
       "version-2.0.0-rc.1-security",
@@ -95,7 +102,7 @@
       "version-2.0.0-rc.1-logging",
       "version-2.0.0-rc.1-jobcontrol"
     ],
-    "Meteor API: Core": [
+    "For Developers: Core Meteor App API": [
       "version-2.0.0-rc.1-reaction-core",
       "version-2.0.0-rc.1-admin-views",
       "version-2.0.0-rc.1-reaction-user-accounts",
@@ -118,11 +125,9 @@
       "version-2.0.0-rc.1-collection-hooks",
       "version-2.0.0-rc.1-event-hooks",
       "version-2.0.0-rc.1-reaction-module-cheatsheet",
-      "version-2.0.0-rc.1-template-helpers",
-      "version-2.0.0-rc.1-core-plugins-marketplace",
-      "version-2.0.0-rc.1-core-plugins-search"
+      "version-2.0.0-rc.1-template-helpers"
     ],
-    "Meteor UI: Components": [
+    "For Developers: Meteor App Client Components": [
       "version-2.0.0-rc.1-components",
       "version-2.0.0-rc.1-components-api",
       "version-2.0.0-rc.1-alerts",
