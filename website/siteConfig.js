@@ -81,7 +81,7 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags
   scripts: [
     "/js/nav.js",
-    "/js/sidenav.js",
+    "/js/side-nav.js",
     "/js/act-on.js",
     "/js/gitter.js",
     "https://sidecar.gitter.im/dist/sidecar.v1.js",
