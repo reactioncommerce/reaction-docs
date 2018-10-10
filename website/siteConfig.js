@@ -58,7 +58,7 @@ const siteConfig = {
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
     `Made in the sunshine in Santa Monica, California by Reaction Commerce, Inc. © ${
-    new Date().getFullYear()}`,
+      new Date().getFullYear()}`,
 
   // Use Prism as an additional syntax highlighter for languages not supported by highlight.js
   usePrism: [
@@ -81,7 +81,7 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags
   scripts: [
     "/js/nav.js",
-    "/js/side-nav.js",
+    "/js/sidenav.js",
     "/js/act-on.js",
     "/js/gitter.js",
     "https://sidecar.gitter.im/dist/sidecar.v1.js",
