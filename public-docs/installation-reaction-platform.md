@@ -5,7 +5,7 @@ id: installation-reaction-platform
 ---
 
 
-The Reaction Platform is the easiest way to run the entire suite of Reaction services at once, as of Reaction version 2.0. The Platform installs and runs the the entire suite of Reaction services in the these directories:
+The Reaction Platform is the easiest way to run the entire suite of Reaction services at once, as of Reaction version 2.0. The Platform installs and runs the entire suite of Reaction services in these directories:
 
 | Directory                                                                                  | Services                                   |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------ |
@@ -17,7 +17,7 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 
 1. Requirements:
 
-- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [Linux](https://docs.docker.com/compose/install/#install-compose)) 
+- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [Linux](https://docs.docker.com/compose/install/#install-compose))
 - Install [Node.js](https://nodejs.org/en/)
 - A GitHub account with a <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">configured SSH key</a>
 
@@ -25,7 +25,7 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 
 > **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
 
-2. Before you get started, make sure you are not running any applications the necessary ports: `3000`, `4000`, `4444`.
+2. Before you get started, make sure you are not running any applications on the default ports: `3000`, `4000`, `4444`.
 
 3. Clone [**Reaction Platform**](https://github.com/reactioncommerce/reaction-platform)
 
@@ -89,11 +89,11 @@ cd reaction-next-starterkit
 docker-compose logs -f
 ```
 
-6. Once all of the services are running, the following  will be accessible at the these URLs:
+6. Once all of the services are running, the following will be accessible at these URLs:
 
 | Directory: Service                                                                         | URL                                                           |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [localhost:3000/graphpql-alpha](localhost:3000/graphql-alpha) |
+| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [localhost:3000/graphql-alpha](localhost:3000/graphql-alpha) |
 | [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [localhost:3000/graphiql](localhost:3000/graphiql)            |
 | [`reaction`](https://github.com/reactioncommerce/reaction): Classic UI                     | [localhost:3000](localhost:3000)                              |
 | [`reaction`](https://github.com/reactioncommerce/reaction): MongoDB                        | [localhost:27017](localhost:27017)                            |
@@ -123,16 +123,8 @@ Learn more about [Reaction Platform](https://github.com/reactioncommerce/reactio
 
 ### Docker commands
 
-Run these commands from each respective application's directory:
-
-| Command                  | Description                         |
-| ------------------------ | ----------------------------------- |
-| `docker-compose logs -f` | Display logs and follow log output. |
-| `docker-compose `        | Display logs and follow log output. |
-| `docker-compose logs -f` | Display logs and follow log output. |
-
-Learn more about [developing in Docker](https://docs.reactioncommerce.com/docs/next/installation-docker-development#run-the-apps) and [troubleshooting Docker development](https://docs.reactioncommerce.com/docs/next/troubleshooting-development#docker-issues).
+Learn more about [developing in Docker](./installation-docker-development#run-the-apps) and [troubleshooting Docker development](./troubleshooting-development#docker-issues).
 
 ### Git
 
-Each sub-project has its own respective Git repository. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and change branches there.
+Each sub-project has its own respective Git repository. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and `git checkout` a different branch there.
