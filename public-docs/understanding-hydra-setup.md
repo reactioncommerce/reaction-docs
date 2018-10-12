@@ -16,9 +16,9 @@ Read more about Hydra, OAuth2 and OpenID Connect on Hydra docs [here](https://ww
 
 To get started with [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra), make sure you have upgraded to Reaction version 2.0. The easiest way to install and run all the application is to use [`reaction-platform`](https://github.com/reactioncommerce/reaction-platform).
 
-## Integration With the Sample Storefront Application
+## Integration with the Starter Kit
 
-When the storefront application  [`reaction-next-starterkit`](https://github.com/reactioncommerce/reaction-next-starterkit) starts, it will register an OAuth 2.0 Client for itself automatically into the hydra instance. The starterkit is configured with [Passport.js](http://www.passportjs.org/) to initiate an OAuth flow for user signin. See the [`server.js`](https://github.com/reactioncommerce/reaction-next-starterkit/blob/v0.1.0/src/server.js) file for configuration details. For other available libraries that can be used in interacting with the OAuth server, see this [list](https://www.ory.sh/docs/guides/master/hydra/6-how-to/2-architecture#interacting-with-oauth-20).
+When the [`reaction-next-starterkit`](https://github.com/reactioncommerce/reaction-next-starterkit) storefront application starts, it will register an OAuth 2.0 Client for itself automatically into the Hydra instance. The storefront is configured with [Passport.js](http://www.passportjs.org/) to initiate an OAuth flow for user signin. See the [`server.js`](https://github.com/reactioncommerce/reaction-next-starterkit/blob/v0.1.0/src/server.js) file for configuration details. For other available libraries that can be used in interacting with the OAuth server, see this [list](https://www.ory.sh/docs/guides/master/hydra/6-how-to/2-architecture#interacting-with-oauth-20).
 
 ## Custom Single Page Application Clients
 
