@@ -67,6 +67,7 @@
       "core-plugins-marketplace",
       "core-plugins-search",
       "core-plugins-stripe",
+      "core-plugins-sitemap-generator",
       "community-resources"
     ],
     "Developer How-To": [

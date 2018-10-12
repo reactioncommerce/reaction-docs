@@ -41,6 +41,7 @@
     "core-plugins-intro": "Understanding Plugins",
     "core-plugins-marketplace": "Marketplace Plugin (Meteor)",
     "core-plugins-search": "Search Plugins (Meteor)",
+    "core-plugins-sitemap-generator": "Sitemap Generator Plugin (Meteor)",
     "core-plugins-stripe": "Stripe Payment Plugin (Node)",
     "creating-a-theme": "How To: Create a theme for the Meteor UI",
     "creating-test-data-for-meteor-tests": "Creating Test Data for Meteor Tests",
