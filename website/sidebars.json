@@ -74,6 +74,8 @@
       "graphql-create-query",
       "graphql-create-mutation",
       "how-to-create-a-payment-provider",
+      "how-to-extend-graphql-to-add-field",
+      "how-to-extend-product",
       "creating-a-theme",
       "how-to-rtl",
       "how-to-change-the-favicon",
@@ -85,6 +87,7 @@
     ],
     "For Developers: Meteor App Architecture": [
       "architecture",
+      "developer-catalog",
       "collections",
       "exports",
       "image-handling",
