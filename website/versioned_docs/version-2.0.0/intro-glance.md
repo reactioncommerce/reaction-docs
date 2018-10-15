@@ -20,7 +20,7 @@ Reaction is free. Our code, which is licensed under the GPL v3 license, will alw
 
 ## Installation
 
-Check out our [Installation docs](https://docs.reactioncommerce.com/docs/next/getting-started-developing-with-reaction).
+Check out our [Installation docs](https://docs.reactioncommerce.com/docs/getting-started-developing-with-reaction).
 
 ## Mobile Device Support
 
