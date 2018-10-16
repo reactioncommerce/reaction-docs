@@ -71,6 +71,7 @@
     "graphql-create-query": "How To: Create a new GraphQL query",
     "graphql-developing": "Developing the GraphQL API",
     "graphql-intro": "Tutorial: Getting started with GraphQL",
+    "graphql-resolvers-file-structure": "Understanding the Resolvers File Structure",
     "graphql-using": "Using the GraphQL API",
     "graphql-what": "What is GraphQL?",
     "guideline-faqs": "FAQs",
