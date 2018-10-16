@@ -20,7 +20,7 @@ Sometimes you only need to extend GraphQL to add a field to an existing type. He
 
 1. In the `.graphql` file, use GraphQL language to extend the type with your custom field.
 
-    ```js
+    ```graphql
     extend type SomeType {
       "Custom data for some purpose documented here"
       myCustomField: String
@@ -60,6 +60,8 @@ export default {
 ```
 
 Replace `return null` with whatever logic you need to derive the custom field value and return it. You may make the resolver function `async` if necessary.
+
+> You have some freedom here to structure the `resolvers` folder in whatever way works best for your plugin. For an explanation and recommendations, refer to [Understanding the Resolvers File Structure](./graphql-resolvers-file-structure.md)
 
 ## Register the resolver
 

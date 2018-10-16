@@ -59,6 +59,7 @@
       "version-2.0.0-graphql-using",
       "version-2.0.0-graphql-developing",
       "version-2.0.0-graphql-intro",
+      "version-2.0.0-graphql-resolvers-file-structure",
       "version-2.0.0-graphql-api"
     ],
     "Core Plugins": [

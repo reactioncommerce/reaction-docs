@@ -59,6 +59,7 @@
       "graphql-using",
       "graphql-developing",
       "graphql-intro",
+      "graphql-resolvers-file-structure",
       "graphql-api"
     ],
     "Core Plugins": [
