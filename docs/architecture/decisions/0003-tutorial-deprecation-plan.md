@@ -14,7 +14,7 @@ Readers need an easy way to find and distinguish between pre-2.0 and post-2.0 co
 
 ## Decision
 
-## Use version 1.16 editions for pre-2.0-specific content
+## Use version 1.16 edition links for pre-2.0-specific content
 
 - All pre-2.0-specific guides, for installing and customizing, will continue to live at version 1.6: https://docs.reactioncommerce.com/docs/1.16.0/intro
     - Installation:
@@ -34,22 +34,39 @@ Readers need an easy way to find and distinguish between pre-2.0 and post-2.0 co
             - https://docs.reactioncommerce.com/docs/1.16.0/swag-shop-pdp
     - These are the links that should be used to link readers back to these versions.
 
-## Installation instructions
+## Use a single installation instruction link moving forward
 
 - Use the Reaction Platform installation instructions across all READMEs: https://docs.reactioncommerce.com/docs/installation-reaction-platform
     - Reaction
     - Starter Kit
     - With the exception of the Platform itself, which will need more in-depth instructions for those who also want to develop on the Platform.
 
-## Deprecating a document and associated content
+## New process for deprecating a document
 
 1. Remove document's ID from the current `sidebars.json`
-1. In all previous versions of that document, add this note to the above links:
+2. In all previous versions of that document, add this note to the above links:
 ```> ⚠️ Note: This tutorial has been deprecated as the release of Reaction 2.0. The latest tutorial can be found at <insert link here>```
 1. Search through the rest of the Docs, especially FAQs, to see if that now-deprecated document is linked anywhere. Update links and copy as appropriate.
-1. If there are GitHub repositories associated with this document, like the Swag Shop's sample repo, that repository should be:
-    - Archived
-    - Have a similar deprecation note at the top of the README
+
+## New process for deprecating associated repositories:
+
+- If there are GitHub repositories associated with this document, like the Swag Shop's sample repo, that repository should be:
+    1. Archived
+    1. Have a similar deprecation note at the top of the README
+- List of pre-2.0 repositories:
+    - https://github.com/reactioncommerce/reaction-swag-shop
+    - https://github.com/reactioncommerce/reaction-example-theme
+    - https://github.com/reactioncommerce/reaction-example-plugin
+    - https://github.com/reactioncommerce/reaction-main-street-theme
+    - https://github.com/reactioncommerce/reaction-styleguide
+
+## New process for deprecating associated content:
+
+1. Check YouTube video tutorials and update links in description if necessary
+1. Check old Reaction Commerce blog posts that reference specific tutorials and update links in post if necessary
+
+## Communicate the deprecation to the rest of the company:
+1. Inform the rest of the company that the tutorial has been deprecated, in case people are sending links in emails, etc.
 
 ## Consequences
 
