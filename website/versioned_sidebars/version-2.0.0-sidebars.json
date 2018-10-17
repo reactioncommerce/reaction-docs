@@ -21,9 +21,6 @@
     "Getting Started As a Developer": [
       "version-2.0.0-getting-started-developing-with-reaction",
       "version-2.0.0-installation-reaction-platform",
-      "version-2.0.0-installation-osx",
-      "version-2.0.0-installation-windows",
-      "version-2.0.0-installation-linux",
       "version-2.0.0-reaction-cli",
       "version-2.0.0-recommended-tools",
       "version-2.0.0-installation-docker-development",
@@ -69,22 +66,20 @@
       "version-2.0.0-core-plugins-stripe",
       "version-2.0.0-community-resources"
     ],
-    "Developer How-To": [
+    "Developer How-To: Starter Kit": [
       "version-2.0.0-how-to-client-checkout-flow",
       "version-2.0.0-how-to-get-shop-id-for-client",
       "version-2.0.0-graphql-create-query",
       "version-2.0.0-graphql-create-mutation",
       "version-2.0.0-how-to-create-a-payment-provider",
       "version-2.0.0-how-to-extend-graphql-to-add-field",
-      "version-2.0.0-how-to-extend-product",
-      "version-2.0.0-creating-a-theme",
-      "version-2.0.0-how-to-rtl",
+      "version-2.0.0-how-to-extend-product"
+    ],
+    "Developer How-To: Meteor app": [
       "version-2.0.0-how-to-change-the-favicon",
       "version-2.0.0-register-template",
       "version-2.0.0-fixtures-images",
-      "version-2.0.0-testing-debugging-server-code",
-      "version-2.0.0-how-to-create-a-custom-homepage",
-      "version-2.0.0-extending-product-schema-location-map"
+      "version-2.0.0-testing-debugging-server-code"
     ],
     "For Developers: Meteor App Architecture": [
       "version-2.0.0-architecture",

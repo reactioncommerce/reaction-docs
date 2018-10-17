@@ -1,5 +1,3 @@
-TODO: Add great documentation.
-
 ## Architectural Decisions Records
 
 Information around the architectural decisions made for this project should be

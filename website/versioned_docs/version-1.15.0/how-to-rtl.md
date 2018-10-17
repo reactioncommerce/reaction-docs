@@ -4,6 +4,8 @@ title: How To: Add right-to-left language support in the Meteor app
 original_id: how-to-rtl
 ---
 
+> ⚠️ Note: This guide has been deprecated as the release of Reaction 2.0. The latest custom home page guide can be found [here](https://docs.reactioncommerce.com/docs/swag-shop-3).
+
 The default Reaction Meteor app theme (core-theme) uses [Bootstrap 3](https://getbootstrap.com/css/#less) and the [Less](https://lesscss.org) preprocessor to build the theme.
 
 If you want to learn how to make a theme, see our [How To: Create a theme for the Meteor app](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-theme) documentation.

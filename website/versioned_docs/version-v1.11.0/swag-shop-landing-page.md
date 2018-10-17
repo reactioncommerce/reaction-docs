@@ -3,7 +3,9 @@ id: version-v1.11.0-swag-shop-landing-page
 title: Part 3: The Landing Page
 original_id: swag-shop-landing-page
 ---
-    
+
+> ⚠️ Note: This tutorial has been deprecated as the release of Reaction 2.0. The latest tutorial can be found at [here](https://docs.reactioncommerce.com/docs/swag-shop-1).
+
 In this part, we’ll show you how we...
 
 - Added featured products to the landing page
@@ -359,4 +361,4 @@ replaceComponent("ProductsCustomer", ProductGrid);
 The rule is as following: If you’re happy with the rendered markup and you don't need custom behaviour for a component (like overriding event handlers), you can get away with simple CSS changes. CSS changes are done in _/imports/plugins/custom/reaction-swag-shop/client/styles_. Because CSS files from custom plugins are loaded after the default CSS styles, it's generally sufficient to copy the original CSS selectors and modify their values according to your needs.
 
 ## What's next
-Read in part 4 about how we implemented the [Product Detail Page (PDP)](swag-shop-pdp.md).
+Read in part 4 about how we implemented the [Product Detail Page (PDP)](swag-shop-pdp).

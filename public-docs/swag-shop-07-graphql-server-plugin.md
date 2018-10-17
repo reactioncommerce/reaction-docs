@@ -3,8 +3,6 @@ id: swag-shop-7
 title: Creating a Server-side GraphQL plugin
 ---
 
-# Creating a GraphQL query with a plugin on the server-side
-
 For our Homepage we want to have some dynamic content that can be changed by non-developers. Specifically we want feature a subset of products on the home page, which we will call "Featured Products". These products will be designated by just adding a particular tag with the name "featured-products". What we want to create is a new GraphQL query that will return a cursor of products that are tagged with this tag.
 
 To do this we need to create a new plugin in the `Reaction` project. We are going to call this plugin `featured-products` and you can find the finished code in the `server` folder in the tutorial repository. You need to place this new directory in `imports/plugins/custom` from the root of your Reaction project
@@ -29,7 +27,7 @@ Now the first thing we are going to create is our GraphQL schema files. You need
 
 In this directory now create a `schemas` directory, and in that directory create a `schema.graphql` file. I find it easier to think of this file as creating the external API and defining the "shape" of it (as the word schema would imply). So the first thing we do is add our Query. This query will take a `shopId` and return a cursor of featured products. So it looks like this:
 
-```
+```graphql
 extend type Query {
   featuredProductsByShop(shopId: ID!): CatalogItemConnection
 }
@@ -37,7 +35,7 @@ extend type Query {
 
 We defined the name of the query (featuredProductsByShop), the argument it takes (the shopId, of the type ID) and what it returns which is a `CatalogItemConnection` (more on this later). We don't need to define `CatalogItemConnection` here because it is defined elsewhere and registering the schema makes all parts of the schema available globally (since they are all published to the client-side). To make the system aware of our new schema we need to go back and edit our `register.js`. But first let's add in `index.js` file there that imports our schema as exports it as the only entry to an array:
 
-```
+```javascript
 import schema from "./schema.graphql"
 
 export default [schema]
@@ -174,7 +172,7 @@ echo -n reaction/shop:<your_shop_id> | base64
 ```
 Then just do:
 
-```
+```graphql
 {
   featuredProductsByShop(shopId: "cmVhY3Rpb24vc2hvcDpKOEJocTN1VHRkZ3daeDNyeg==") {
     nodes {

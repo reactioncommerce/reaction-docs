@@ -3,7 +3,9 @@ id: version-v1.11.0-swag-shop-collecting-requirements
 title: Part 1: Collecting the shop requirements
 original_id: swag-shop-collecting-requirements
 ---
-    
+
+> ⚠️ Note: This tutorial has been deprecated as the release of Reaction 2.0. The latest tutorial can be found at [here](https://docs.reactioncommerce.com/docs/swag-shop-1).
+
 For me, as an engineer, the first encounter with people from our design team during a project's kick-off is always exciting. It’s usually the first time I actually get a deeper understanding on the challenges I’m going to work on for the next couple of weeks. It’s also the time I get first doubts about having a timeline that’s maybe too ambiguous. Sometimes I’m asking myself, “Why I did commit to something in advance before actually knowing exactly what I'm supposed to do?” But hey—I have solved this challenge before. Why should this swag shop project be any different?
 
 To set the scene: in this particular project, our design team will play the role of the customer. Let's have a quick sneak peek into the ideas of our design team, shall we?
@@ -72,4 +74,4 @@ So we had another meeting with the product owner and explained the situation. Wh
 In the end, we agreed to strip down the functional requirements for our swag shop a bit, which resulted in different tasks to be labeled as phase2 in GitHub's [issue tracker](https://github.com/reactioncommerce/reaction-swag-shop/issues).
 
 ## What's next
-Read in part 2 about how to setup a new [Reaction project](swag-shop-initialization.md).
+Read in part 2 about how to setup a new [Reaction project](swag-shop-initialization).

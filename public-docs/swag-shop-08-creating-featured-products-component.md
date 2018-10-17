@@ -3,15 +3,13 @@ id: swag-shop-8
 title: Creating the Featured Products component
 ---
 
-# Creating the "Featured Products" component
-
 To display our featured products block we can create a custom component called HomePageFeatured that just loops over the featured products. But how to we fill the component with data? We will create a new Higher Order Component that will drop the featured products data into our component. Let's start that now.
 
 First let's create a `containers` directory in `custom` and in that directory let's create a `homepage` directory. In that directory let's create a `featured.gql` file. This is where our GraphQL query will placed.
 
 To that file let's add this code:
 
-```
+```graphql
 query featuredQuery($shopId: ID!) {
   featuredProductsByShop(shopId: $shopId) {
     nodes {
@@ -101,7 +99,6 @@ We have `HomePageFeatured` which is our presentation component wrapped by `withS
 So a simple version of a featured product component might look something like this:
 
 ```javascript
-
 @withStyles(styles, { name: "HomePageFeatured" })
 class HomePageFeatured extends Component {
   render() {

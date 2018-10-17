@@ -3,7 +3,9 @@ id: version-1.14.0-installation-osx
 title: Installation for OSX
 original_id: installation-osx
 ---
-    
+
+> ⚠️ Note: This guide has been deprecated as the release of Reaction 2.0. The latest installation guide can be found [here](https://docs.reactioncommerce.com/docs/installation-reaction-platform).
+
 [![Installation Video](/assets/guide-installation-video-screenshot.png)](https://www.youtube.com/watch?v=PkFDX8NWskY)
 
 ## Install prerequisites

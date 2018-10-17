@@ -4,15 +4,13 @@ title: Creating the Featured Products component
 original_id: swag-shop-8
 ---
 
-# Creating the "Featured Products" component
-
 To display our featured products block we can create a custom component called HomePageFeatured that just loops over the featured products. But how to we fill the component with data? We will create a new Higher Order Component that will drop the featured products data into our component. Let's start that now.
 
 First let's create a `containers` directory in `custom` and in that directory let's create a `homepage` directory. In that directory let's create a `featured.gql` file. This is where our GraphQL query will placed.
 
 To that file let's add this code:
 
-```
+```graphql
 query featuredQuery($shopId: ID!) {
   featuredProductsByShop(shopId: $shopId) {
     nodes {
@@ -89,7 +87,7 @@ export default (Component) => (
 
 This is a Component that will wrap our display components which is why we take in the argument `Component`. We are also going to wrap our component in an HOC called `withShop` so we will be getting the `shopID` of the current shop. And then we use the `Query` component from the `react-apollo` library to wrap our passed-in component and then we can pass in `featuredProducts`. So the snipped where we do the actual wrapping looks something like this
 
-```
+```javascript
 export default compose(
   withShop,
   withFeatured,
@@ -102,7 +100,6 @@ We have `HomePageFeatured` which is our presentation component wrapped by `withS
 So a simple version of a featured product component might look something like this:
 
 ```javascript
-
 @withStyles(styles, { name: "HomePageFeatured" })
 class HomePageFeatured extends Component {
   render() {

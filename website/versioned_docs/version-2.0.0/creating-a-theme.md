@@ -4,6 +4,8 @@ title: How To: Create a theme for the Meteor UI
 original_id: creating-a-theme
 ---
 
+> ⚠️ Note: This guide has been deprecated as the release of Reaction 2.0. The latest customization guide can be found [here](https://docs.reactioncommerce.com/docs/swag-shop-3).
+
 ## Starting point
 
 We've provided an example theme that you can use as a starting point for your own themes. Additionally, there's also a [YouTube tutorial](https://www.youtube.com/watch?v=D8FNJE9204Y) on this topic that should get you started in no time.

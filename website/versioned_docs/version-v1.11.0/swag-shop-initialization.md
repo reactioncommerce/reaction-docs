@@ -3,7 +3,9 @@ id: version-v1.11.0-swag-shop-initialization
 title: Part 2: Project scaffolding
 original_id: swag-shop-initialization
 ---
-    
+
+> ⚠️ Note: This tutorial has been deprecated as the release of Reaction 2.0. The latest tutorial can be found at [here](https://docs.reactioncommerce.com/docs/swag-shop-1).
+
 In this part of the tutorial, we'll cover how to get started, how to set up data fixtures, and how to include images using the [Meteor Asset API](https://docs.meteor.com/api/assets.html). We'll show how to customize the landing page and make it work a bit differently than a plain stock Reaction.
 
 All code presented here can be found in our [Swag Shop repository](https://github.com/reactioncommerce/reaction-swag-shop) on GitHub.
@@ -144,4 +146,4 @@ Technically, it wouldn't be necessary to copy the subfolder **/imports/plugins/c
 Now that we have our data and image fixtures set up, we're ready to move onto building new features on top of images. In the next part, we'll be focusing on extending schemas (in this case, the Product schema), adding fields in Admin by replacing React components, and customizing Publications and Subscriptions.
 
 ## What's next
-Read in part 3 about how we implemented the [Landing Page](swag-shop-landing-page.md).
+Read in part 3 about how we implemented the [Landing Page](swag-shop-landing-page).
