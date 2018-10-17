@@ -3,7 +3,9 @@ id: version-1.14.0-installation-windows
 title: Installation for Windows
 original_id: installation-windows
 ---
-    
+
+> ⚠️ Note: This guide has been deprecated as the release of Reaction 2.0. The latest installation guide can be found [here](https://docs.reactioncommerce.com/docs/installation-reaction-platform).
+> 
 [![Installation Video](/assets/guide-installation-video-screenshot-windows.png)](https://www.youtube.com/watch?v=FCxLQFpppLo&t=1s)
 
 ## Install prerequisites

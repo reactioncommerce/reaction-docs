@@ -3,7 +3,9 @@ id: version-1.14.0-installation-linux
 title: Installation for Linux
 original_id: installation-linux
 ---
-    
+
+> ⚠️ Note: This guide has been deprecated as the release of Reaction 2.0. The latest installation guide can be found [here](https://docs.reactioncommerce.com/docs/installation-reaction-platform).
+
 ## Install prerequisites
 
 ### Install Node
