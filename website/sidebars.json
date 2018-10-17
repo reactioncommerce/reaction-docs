@@ -67,14 +67,16 @@
       "core-plugins-sitemap-generator",
       "community-resources"
     ],
-    "Developer How-To": [
+    "Developer How-To: Starter Kit": [
       "how-to-client-checkout-flow",
       "how-to-get-shop-id-for-client",
       "graphql-create-query",
       "graphql-create-mutation",
       "how-to-create-a-payment-provider",
       "how-to-extend-graphql-to-add-field",
-      "how-to-extend-product",
+      "how-to-extend-product"
+    ],
+    "Developer How-To: Meteor app": [
       "how-to-change-the-favicon",
       "register-template",
       "fixtures-images",

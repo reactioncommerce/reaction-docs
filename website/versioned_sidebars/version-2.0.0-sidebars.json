@@ -66,14 +66,16 @@
       "version-2.0.0-core-plugins-stripe",
       "version-2.0.0-community-resources"
     ],
-    "Developer How-To": [
+    "Developer How-To: Starter Kit": [
       "version-2.0.0-how-to-client-checkout-flow",
       "version-2.0.0-how-to-get-shop-id-for-client",
       "version-2.0.0-graphql-create-query",
       "version-2.0.0-graphql-create-mutation",
       "version-2.0.0-how-to-create-a-payment-provider",
       "version-2.0.0-how-to-extend-graphql-to-add-field",
-      "version-2.0.0-how-to-extend-product",
+      "version-2.0.0-how-to-extend-product"
+    ],
+    "Developer How-To: Meteor app": [
       "version-2.0.0-how-to-change-the-favicon",
       "version-2.0.0-register-template",
       "version-2.0.0-fixtures-images",
