@@ -25,6 +25,7 @@ Readers need an easy way to find and distinguish between pre-2.0 and post-2.0 co
         - https://docs.reactioncommerce.com/docs/1.16.0/creating-a-theme
         - https://docs.reactioncommerce.com/docs/1.16.0/how-to-create-a-custom-homepage
         - https://docs.reactioncommerce.com/docs/1.16.0/extending-product-schema-location-map
+        - https://docs.reactioncommerce.com/docs/1.16.0/how-to-rtl
         - Swag Shop: 
             - https://docs.reactioncommerce.com/docs/1.16.0/swag-shop-tutorial
             - https://docs.reactioncommerce.com/docs/1.16.0/swag-shop-collecting-requirements
