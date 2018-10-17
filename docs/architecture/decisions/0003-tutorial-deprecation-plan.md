@@ -42,10 +42,11 @@ Readers need an easy way to find and distinguish between pre-2.0 and post-2.0 co
 
 ## Deprecating a document and associated content
 
-- Remove document's ID from the current `sidebars.json`
-- In all previous versions of that document, add this note to the above links:
-```> Note: This tutorial has been deprecated as the release of Reaction 2.0. The latest tutorial can be found at <insert link here>```
-- If there are GitHub repositories associated with this document, like the Swag Shop's sample repo, that repository should be:
+1. Remove document's ID from the current `sidebars.json`
+1. In all previous versions of that document, add this note to the above links:
+```> ⚠️ Note: This tutorial has been deprecated as the release of Reaction 2.0. The latest tutorial can be found at <insert link here>```
+1. Search through the rest of the Docs, especially FAQs, to see if that now-deprecated document is linked anywhere. Update links and copy as appropriate.
+1. If there are GitHub repositories associated with this document, like the Swag Shop's sample repo, that repository should be:
     - Archived
     - Have a similar deprecation note at the top of the README
 
