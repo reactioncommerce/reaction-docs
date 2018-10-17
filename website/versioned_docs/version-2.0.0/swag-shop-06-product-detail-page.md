@@ -4,8 +4,6 @@ title: Customizing the Product Detail Page
 original_id: swag-shop-6
 ---
 
-# Customizing the Product Detail Page
-
 To customize the Product Detail Page (PDP), I had to add a static image to the layout and remove the breadcrumbs, basically I wanted to override the `render()` of `ProductDetail`. For this the easiest way is to create a custom `render` function and pass it in the props to `ProductDetail`. The code in almost all the components is written in such a way that if a `render` function is passes in the `props`, that function will be run instead of the default one.
 
 Create the render function in a file, for example in `custom/components/ProductDetailCustom.js`, the code is in the format:

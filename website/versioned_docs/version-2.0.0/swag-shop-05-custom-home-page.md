@@ -4,9 +4,7 @@ title: Adding a custom homepage
 original_id: swag-shop-5
 ---
 
-# Adding a custom home page
-
-By default the home page for the starter-kit just shows a grid of products, but some people will probably want some custom content. So let's create a new component in the `custom` directory with just some placeholder text for now. So it would look something like this:
+By default, the home page for the starter-kit just shows a grid of products, but some people will probably want some custom content. So let's create a new component in the `custom` directory with just some placeholder text for now. So it would look something like this:
 
 ```javascript
 import React from "react";
@@ -37,12 +35,11 @@ HomePage.propTypes = {
 };
 
 export default withStyles(styles)(HomePage);
-
 ```
 
-You can see we wrapped this with the `withStyles` HOC so that our styling takes place and with the `<Typography>` wrapper component for consistent typography. This helps make sure that any global styling is also applied to our HomePage content.
+You can see we wrapped this with the `withStyles` higher-order component (HOC), so that our styling takes place and with the `<Typography>` wrapper component for consistent typography. This helps make sure that any global styling is also applied to our `HomePage` content.
 
-In addition to this new component we need to create a new "page" in the `src/pages` directory. Let's call this new file `home.js`
+In addition to this new component, we need to create a new "page" in the `src/pages` directory. Let's call this new file `home.js`
 
 ```javascript
 import React, { Component, Fragment } from "react";
@@ -82,7 +79,7 @@ class Home extends Component {
 export default Home;
 ```
 
-This page just wraps our `HomePage` component and applies any site Metadata through the `Helmet` helper. Passing in `shop` here allows us to add any dynamic components (most of which will rely on knowing the `shopId` as we will see when we get into adding custom GraphQL components).
+This page just wraps our `HomePage` component and applies any site `Metadata` through the `Helmet` helper. Passing in `shop` here allows us to add any dynamic components (most of which will rely on knowing the `shopId` as we will see when we get into adding custom GraphQL components).
 
 The last change we need is to make a change to our routes which is done in `src/routes.js`. Just change the entry for the `/` route to be to our home page. We provide "route-name", "path", and the name of the file in `src/pages` that it should point to.
 
