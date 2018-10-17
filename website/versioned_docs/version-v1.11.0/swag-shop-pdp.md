@@ -5,6 +5,8 @@ sidebar_label: Part 4: Category tiles and PDP
 original_id: swag-shop-pdp
 ---
 
+> ⚠️ Note: This tutorial has been deprecated as the release of Reaction 2.0. The latest tutorial can be found at [here](https://docs.reactioncommerce.com/docs/swag-shop-1).
+
 ## Building a Swag Shop: Category Tiles & Related Products
 
 In this part, we'll show you how we ...
