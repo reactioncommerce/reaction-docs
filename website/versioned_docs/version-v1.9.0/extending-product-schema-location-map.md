@@ -3,7 +3,9 @@ id: version-v1.9.0-extending-product-schema-location-map
 title: Tutorial: Add a map to Product pages
 original_id: extending-product-schema-location-map
 ---
-    
+
+> ⚠️ Note: This guide has been deprecated as the release of Reaction 2.0. The latest guide on how to customize the product detail page can be found [here](https://docs.reactioncommerce.com/docs/swag-shop-6) and the guide on how to extend a schema can be found [here](https://docs.reactioncommerce.com/docs/how-to-extend-graphql-to-add-field).
+
 Before you get started with this tutorial, make sure to complete the Plugin Tutorial and are familiar with basic React. This tutorial continues on from the `beesknees` plugin.
 
 In this tutorial, we're going to save `latitude` and `longitude` fields for each product and use that data to display a map on each Product Detail Page (PDP).

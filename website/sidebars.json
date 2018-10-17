@@ -72,14 +72,10 @@
       "how-to-get-shop-id-for-client",
       "graphql-create-query",
       "how-to-create-a-payment-provider",
-      "creating-a-theme",
-      "how-to-rtl",
       "how-to-change-the-favicon",
       "register-template",
       "fixtures-images",
-      "testing-debugging-server-code",
-      "how-to-create-a-custom-homepage",
-      "extending-product-schema-location-map"
+      "testing-debugging-server-code"
     ],
     "For Developers: Meteor App Architecture": [
       "architecture",

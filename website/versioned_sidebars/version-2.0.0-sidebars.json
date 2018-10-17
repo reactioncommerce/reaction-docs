@@ -71,14 +71,10 @@
       "version-2.0.0-how-to-get-shop-id-for-client",
       "version-2.0.0-graphql-create-query",
       "version-2.0.0-how-to-create-a-payment-provider",
-      "version-2.0.0-creating-a-theme",
-      "version-2.0.0-how-to-rtl",
       "version-2.0.0-how-to-change-the-favicon",
       "version-2.0.0-register-template",
       "version-2.0.0-fixtures-images",
-      "version-2.0.0-testing-debugging-server-code",
-      "version-2.0.0-how-to-create-a-custom-homepage",
-      "version-2.0.0-extending-product-schema-location-map"
+      "version-2.0.0-testing-debugging-server-code"
     ],
     "For Developers: Meteor App Architecture": [
       "version-2.0.0-architecture",
