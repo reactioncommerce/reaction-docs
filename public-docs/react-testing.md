@@ -92,7 +92,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 Import Fizz from “./Fizz”;
 
-test("basic snapshot with only required props", () => {
+test("basic snapshot", () => {
   const component = renderer.create(<Buzz requiredProp=”is required” />);
   expect(component.toJSON()).toMatchSnapshot();
 });
@@ -115,8 +115,8 @@ const mockContext = {
   contextProp: true
 };
 
-test("basic snapshot with only required props", () => {
-  const component = renderer.create(<Buzz requiredProp=”is required” requiredContext={mockContext} />);
+test("basic snapshot", () => {
+  const component = renderer.create(<Buzz requiredProp=”required” requiredContext={mockContext} />);
   expect(component.toJSON()).toMatchSnapshot();
 });
 ```
@@ -130,11 +130,12 @@ import renderer from "react-test-renderer";
 Import Fizz from “./Fizz”;
 
 test("basic snapshot with all optional props", () => {
-  const component = renderer.create(<Fizz 
-     someProp=”optional prop”
-     anotherProp=”optional prop”
-     optionalBool
-/>);
+  const component = renderer.create(<Fizz
+      requiredProp=”required”
+      someProp=”optional prop”
+      anotherProp=”optional prop”
+      optionalBool
+    />);
   expect(component.toJSON()).toMatchSnapshot();
 });
 ```
@@ -147,7 +148,7 @@ import renderer from "react-test-renderer";
 Import Fizz from “./Fizz”;
 
 test("basic snapshot with isVertical props", () => {
-  const component = renderer.create(<Fizz isVertical />);
+  const component = renderer.create(<Fizz requiredProp=”required” isVertical />);
   expect(component.toJSON()).toMatchSnapshot();
 });
 ```
