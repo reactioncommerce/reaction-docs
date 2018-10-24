@@ -93,7 +93,7 @@ import renderer from "react-test-renderer";
 import Fizz from “./Fizz”;
 
 test("basic snapshot", () => {
-  const component = renderer.create(<Buzz requiredProp=”is required” />);
+  const component = renderer.create(<Fizz requiredProp=”is required” />);
   expect(component.toJSON()).toMatchSnapshot();
 });
 ```
@@ -116,7 +116,7 @@ const mockContext = {
 };
 
 test("basic snapshot", () => {
-  const component = renderer.create(<Buzz requiredProp=”required” requiredContext={mockContext} />);
+  const component = renderer.create(<Fizz requiredProp=”required” requiredContext={mockContext} />);
   expect(component.toJSON()).toMatchSnapshot();
 });
 ```
@@ -150,5 +150,39 @@ Iimport Fizz from “./Fizz”;
 test("basic snapshot with isVertical props", () => {
   const component = renderer.create(<Fizz requiredProp=”required” isVertical />);
   expect(component.toJSON()).toMatchSnapshot();
+});
+```
+
+### Testing component interactions and events
+
+**Simple interaction example**
+```js
+
+import React from "react";
+import { shallow } from "enzyme";
+import Button from "./Button";
+
+const mockHandleClick = jest.fn();
+
+test("Button component onClick", () => {
+  const component = shallow(<Button onClick={mockHandleClick}>Button</Button>);
+  component.find("button").simulate("click");
+  expect(testClick).toHaveBeenCalled();
+});
+```
+
+**Interaction with state change example**
+```js
+
+import React from "react";
+import { shallow } from "enzyme";
+import Accordion from "./Accordion";
+
+test("Accordion component onClick", () => {
+  const component = shallow(<Accordion>Content</Accordion>);
+  component.find("div.header").simulate("click");
+  expect(component.state().isExpanded).toBe(true);
+  component.find("div.header").simulate("click");
+  expect(component.state().isExpanded).toBe(false);
 });
 ```
