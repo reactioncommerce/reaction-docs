@@ -90,7 +90,7 @@ When testing a React component we break props into two main groups, “required�
 ```js
 import React from "react";
 import renderer from "react-test-renderer";
-Import Fizz from “./Fizz”;
+import Fizz from “./Fizz”;
 
 test("basic snapshot", () => {
   const component = renderer.create(<Buzz requiredProp=”is required” />);
@@ -110,7 +110,7 @@ Many components will required props that are directly provided by a [Higher Orde
 ```js
 import React from "react";
 import renderer from "react-test-renderer";
-Import Fizz from “./Fizz”;
+Iimport Fizz from “./Fizz”;
 const mockContext = {
   contextProp: true
 };
@@ -127,7 +127,7 @@ Followed by another snapshot test of the component with all of the optional prop
 ```js
 import React from "react";
 import renderer from "react-test-renderer";
-Import Fizz from “./Fizz”;
+Iimport Fizz from “./Fizz”;
 
 test("basic snapshot with all optional props", () => {
   const component = renderer.create(<Fizz
@@ -145,7 +145,7 @@ Individual props can have a dramatic impact on the markup that gets rendered, th
 ```js
 import React from "react";
 import renderer from "react-test-renderer";
-Import Fizz from “./Fizz”;
+Iimport Fizz from “./Fizz”;
 
 test("basic snapshot with isVertical props", () => {
   const component = renderer.create(<Fizz requiredProp=”required” isVertical />);
