@@ -80,3 +80,50 @@ test("basic snapshot", () => {
   expect(component.toJSON()).toMatchSnapshot();
 });
 ```
+
+## Best Practices
+
+### Testing component props with snapshots
+When testing a React component we break props into two main groups, “required” and “optional”. In general we always do a simple snapshot test of the component with only required props.
+
+**Required props example**
+```js
+import React from "react";
+import renderer from "react-test-renderer";
+Import Fizz from “./Fizz”;
+
+test("basic snapshot with only required props", () => {
+  const component = renderer.create(<Buzz requiredProp=”is required” />);
+  expect(component.toJSON()).toMatchSnapshot();
+});
+```
+
+Followed by another snapshot test of the component with all of it’s optional props. Sometimes optional props can’t be used together if that's the case break this snapshot test into several and test like props in groups.
+**Optional props example**
+```js
+import React from "react";
+import renderer from "react-test-renderer";
+Import Fizz from “./Fizz”;
+
+test("basic snapshot with all optional props", () => {
+  const component = renderer.create(<Fizz 
+     someProp=”optional prop”
+     anotherProp=”optional prop”
+     optionalBool
+/>);
+  expect(component.toJSON()).toMatchSnapshot();
+});
+```
+
+Individual props can have a dramatic impact on the markup that gets rendered, these types of props should have their own dedicated snapshot test.
+
+```js
+import React from "react";
+import renderer from "react-test-renderer";
+Import Fizz from “./Fizz”;
+
+test("basic snapshot with isVertical props", () => {
+  const component = renderer.create(<Fizz isVertical />);
+  expect(component.toJSON()).toMatchSnapshot();
+});
+```
