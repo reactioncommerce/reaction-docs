@@ -98,7 +98,7 @@ test("basic snapshot", () => {
 });
 ```
 
-Many components will required props that are directly provided by a [Higher Order Component]() or via a context provider like MobX or Apollo. In these cases we create a mock context object and pass it to the component as a prop. Several complex context structers have been mocked out as a testing utility:
+Many components will required props that are directly provided by a [Higher Order Component](https://reactjs.org/docs/higher-order-components.html) or via a context provider like [MobX](https://github.com/mobxjs/mobx) or [Apollo Client](https://www.apollographql.com/docs/react/). In these cases we create a mock context object and pass it to the component as a prop. Several complex context structers have been mocked out as a testing utility:
   *  [mockComponents](https://github.com/reactioncommerce/reaction-component-library/blob/master/package/src/tests/mockComponents.js) context.
   *  [Products](https://github.com/reactioncommerce/reaction-next-starterkit/blob/develop/src/components/ProductGrid/__mocks__/products.mock.js) query results.
   *  [Product](https://github.com/reactioncommerce/reaction-next-starterkit/blob/develop/src/components/ProductDetail/__mocks__/productData.mock.js) query results.
