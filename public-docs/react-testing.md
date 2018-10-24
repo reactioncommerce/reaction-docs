@@ -98,7 +98,31 @@ test("basic snapshot with only required props", () => {
 });
 ```
 
-Followed by another snapshot test of the component with all of it’s optional props. Sometimes optional props can’t be used together if that's the case break this snapshot test into several and test like props in groups.
+Many components will required props that are directly provided by a [Higher Order Component]() or via a context provider like MobX or Apollo. In these cases we create a mock context object and pass it to the component as a prop. Several complex context structers have been mocked out as a testing utility:
+  *  [mockComponents](https://github.com/reactioncommerce/reaction-component-library/blob/master/package/src/tests/mockComponents.js) context.
+  *  [Products](https://github.com/reactioncommerce/reaction-next-starterkit/blob/develop/src/components/ProductGrid/__mocks__/products.mock.js) query results.
+  *  [Product](https://github.com/reactioncommerce/reaction-next-starterkit/blob/develop/src/components/ProductDetail/__mocks__/productData.mock.js) query results.
+  *  [Variant](https://github.com/reactioncommerce/reaction-next-starterkit/blob/develop/src/components/VariantItem/__mocks__/variant.mock.js) query results.
+  *  [Options](https://github.com/reactioncommerce/reaction-next-starterkit/blob/develop/src/components/ProductDetailOptionsList/__mocks__/options.mock.js) query results.
+  *  [Option](https://github.com/reactioncommerce/reaction-next-starterkit/blob/develop/src/components/ProductDetailOption/__mocks__/option.mock.js) query results.
+
+**Required context/HOC props example**
+```js
+import React from "react";
+import renderer from "react-test-renderer";
+Import Fizz from “./Fizz”;
+const mockContext = {
+  contextProp: true
+};
+
+test("basic snapshot with only required props", () => {
+  const component = renderer.create(<Buzz requiredProp=”is required” requiredContext={mockContext} />);
+  expect(component.toJSON()).toMatchSnapshot();
+});
+```
+
+
+Followed by another snapshot test of the component with all of the optional props. Sometimes optional props can’t be used together if that's the case break this snapshot test into several and test like props in groups.
 **Optional props example**
 ```js
 import React from "react";
