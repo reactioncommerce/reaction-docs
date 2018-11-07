@@ -71,6 +71,7 @@
       "graphql-create-query",
       "graphql-create-mutation",
       "how-to-create-a-payment-provider",
+      "how-to-add-address-validation-service",
       "how-to-add-tax-service",
       "how-to-extend-graphql-to-add-field",
       "how-to-extend-product",
