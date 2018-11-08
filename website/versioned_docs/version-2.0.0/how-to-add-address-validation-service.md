@@ -6,6 +6,7 @@ original_id: how-to-add-address-validation-service
 
 ## Prerequisite Reading
 - [Understanding Plugins](./core-plugins-intro.md)
+- [Address Validation Operator Guide](./operator-address-validation.md)
 
 ## Overview
 In general, to add an address validation service you must do the following:

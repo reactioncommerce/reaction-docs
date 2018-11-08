@@ -200,7 +200,8 @@
       "search",
       "sms-notifications",
       "shipping-admin",
-      "payments-discounts"
+      "payments-discounts",
+      "operator-address-validation"
     ],
     "Community": [
       "guidelines",
