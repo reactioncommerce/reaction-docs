@@ -165,6 +165,7 @@
       "writing-jest-unit-tests",
       "writing-jest-integration-tests",
       "react-testing",
+      "how-to-write-tests-for-plugins",
       "creating-test-data",
       "creating-test-data-for-meteor-tests",
       "jest-tips"
