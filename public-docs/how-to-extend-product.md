@@ -20,7 +20,7 @@ Because products have a publishing flow and have variants, extending them requir
 
 ### Extend database schemas
 
-To extend any database schema, you just need a file that is imported into server code. We recommend using a file named `dbschema.js` in your plugin's `server/no-meteor` folder.
+To extend any database schema, you just need a file that is imported into server code. We recommend using a file named `dbschema.js` in your plugin's `server/no-meteor` folder, and then importing that file in your plugin's `server/index.js`. (The `no-meteor` folder helps keep track of which files rely on Meteor while Reaction is transitioning from Meteor to pure Node. If your plugin has no Meteor dependencies, you may omit that folder level.)
 
 Refer to [SimpleSchema docs](https://github.com/aldeed/simple-schema-js#schema-rules) for more information about the object you pass to `extend`.
 
