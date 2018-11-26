@@ -1,6 +1,7 @@
 ---
-id: react-best-practices
+id: version-2.0.0-react-best-practices
 title: React Best Practices
+original_id: react-best-practices
 ---
 
 ## General guidelines
