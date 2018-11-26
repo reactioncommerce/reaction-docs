@@ -1,13 +1,14 @@
 ---
 id: how-to-write-tests-for-plugins
-title: How To: Write jest tests for reaction plugins
+title: How To: Write Jest tests for plugins
 ---
 
-# Wriring tests for Plugins
+# Writing tests for Reaction Meteor App plugins
 
-We use and recommend plugin authors to use jest for writing tests for their plugins.
+We use and recommend plugin authors to use Jest for writing tests for their plugins.
 
-Consider the following `module.js` file
+Consider the following `module.js` file:
+
 ```js
 import Logger from "@reactioncommerce/logger";
 import Reaction from "/imports/plugins/core/core/server/Reaction";
@@ -19,19 +20,24 @@ export async function doRequest() {
   return await sendRequest(shop);
 }
 ```
-and the following `API.js` file
+
+and the following `API.js` file:
+
 ```js
 import tranformData from "/imports/tranformData";
 
 export default async function sendRequest (shop) {
-  const fomatData = tranformData(shop);
-  return fomatData;
+  const formatData = tranformData(shop);
+  return formatData;
 }
 ```
+
 # To write the tests
 
 ### 1. Mock function that don't exist in the path
-Since a plugin will depends on functions that are present in the Reaction's codebase, we need to mock them in the tests. To mock the `Reaction`, `Logger` and `tranformData` for the above code we use:
+
+Since a plugin depends on functions that are present in the Reaction's codebase, we need to mock them in the tests. To mock the `Reaction`, `Logger` and `tranformData` for the above code we use:
+
 ```js
 // disable the Logger
 jest.mock(
@@ -67,10 +73,13 @@ jest.mock(
 
 import tranformData from "/imports/tranformData";
 ```
+
 **Notice that the import will only work after the mock**
 
  ### 2. Write the test body
+ 
  Now we just import the functions that we need to test and write the tests for them:
+ 
  ```js
  import { doRequest } from "./module";
 
@@ -97,8 +106,10 @@ describe("example test suite", () => {
 });
 ```
 
-### 3. Change implementation:
+### 3. Change implementation
+
 Mock the function/module again inside the test function and `require` the modules again which depend on it. For example to test the case when `sendRequest` throws Error we can write the following test:
+
 ```js
 test("request throws exception", async () => {
     expect.assertions(1);
@@ -121,7 +132,9 @@ test("request throws exception", async () => {
 ```
 
 ### 4. Override implementation of a "virtual" ES6 module
-To do this use the `mockImplementation` function of the jest functions.
+
+To do this use the `mockImplementation` function of the Jest functions.
+
 ```js
 test("format data change implementation", async () => {
     expect.assertions(1);
