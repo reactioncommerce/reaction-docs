@@ -70,6 +70,9 @@
       "core-plugins-sitemap-generator",
       "community-resources"
     ],
+    "Developer How-To: General": [
+      "dev-how-do-i"
+    ],
     "Developer How-To: Reaction API Server": [
       "graphql-create-query",
       "graphql-create-mutation",
