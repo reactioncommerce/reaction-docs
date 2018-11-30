@@ -127,13 +127,9 @@ Learn more about [developing in Docker](./installation-docker-development#run-th
 
 ### Git
 
-Each sub-project has its own respective Git repository. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and `git checkout` a different branch there.
+Each sub-project has its own respective Git repository. The normal bootstrapping process will give you the latest released versions of the platform subprojects and is the recommended configuration for regular development. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and `git checkout` a different branch there. These steps are an alternative to the standard bootstrapping approach, you should do one or the other, not both:
 
-## Installation Working with Particular Git Branches
-
-The normal bootstrapping process will give you the latest released versions of the platform subprojects and is the recommended configuration for regular development. However, if you know you require a particular previous release or alternative git branch, you can take the following steps to bring up the platform with the particular versions you need. These steps are an alternative to the standard bootstrapping approach, you should do one or the other, not both.
-
-As [documented above](#installation), install the prerequisites and clone the reaction-platform repository. In a terminal, run the following commands:
+As [documented above](#installation), install the prerequisites and clone the reaction-platform repository. Then:
 
 ```sh
 cd reaction-platform
