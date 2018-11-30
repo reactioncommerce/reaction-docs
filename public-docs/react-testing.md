@@ -154,31 +154,31 @@ test("basic snapshot with isVertical props", () => {
 ```
 
 ### Testing component interactions and events
+It's common for components to have functionallity based around user interaction that will usually fire a callback function or manipulate component state in some way. 
+We can test these interaction using shallow rendering form Enzyme to simulate the interaction event and test for the components reaction.
 
 **Simple interaction example**
 ```js
-
 import React from "react";
 import { shallow } from "enzyme";
 import Button from "./Button";
 
 const mockHandleClick = jest.fn();
 
-test("Button component onClick", () => {
+test("Button component fires callback function onClick", () => {
   const component = shallow(<Button onClick={mockHandleClick}>Button</Button>);
   component.find("button").simulate("click");
-  expect(testClick).toHaveBeenCalled();
+  expect(mockHandleClick).toHaveBeenCalled();
 });
 ```
 
 **Interaction with state change example**
 ```js
-
 import React from "react";
 import { shallow } from "enzyme";
 import Accordion from "./Accordion";
 
-test("Accordion component onClick", () => {
+test("Accordion component open & closes onClick", () => {
   const component = shallow(<Accordion>Content</Accordion>);
   component.find("div.header").simulate("click");
   expect(component.state().isExpanded).toBe(true);
