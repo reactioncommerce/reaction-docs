@@ -123,7 +123,30 @@ Learn more about [Reaction Platform](https://github.com/reactioncommerce/reactio
 
 ### Git
 
-Each sub-project has its own respective Git repository. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and `git checkout` a different branch there.
+Each sub-project has its own respective Git repository. The normal bootstrapping process will give you the latest released versions of the platform subprojects and is the recommended configuration for regular development. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and `git checkout` a different branch there. These steps are an alternative to the standard bootstrapping approach, you should do one or the other, not both:
+
+As [documented above](#installation), install the prerequisites and clone the reaction-platform repository. Then:
+
+```sh
+cd reaction-platform
+make clone
+```
+
+Within the necessary subproject directory or directories run the `git checkout <your-release-tag-or-branch>` commands you need to get the specific subproject versions you need checked out.
+
+Example:
+
+```sh
+cd reaction-next-starterkit
+git checkout develop
+```
+
+Then run the following
+
+```sh
+cd .. # cd into reaction-platform
+make
+```
 
 ### Environment variables
 
