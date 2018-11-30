@@ -67,19 +67,23 @@
       "core-plugins-sitemap-generator",
       "community-resources"
     ],
-    "Developer How-To: Starter Kit": [
-      "how-to-client-checkout-flow",
-      "how-to-get-shop-id-for-client",
+    "Developer How-To: Reaction API Server": [
       "graphql-create-query",
       "graphql-create-mutation",
       "how-to-create-a-payment-provider",
+      "how-to-add-address-validation-service",
+      "how-to-add-tax-service",
       "how-to-extend-graphql-to-add-field",
-      "how-to-extend-product"
+      "how-to-extend-product",
+      "register-template",
+      "fixtures-images"
+    ],
+    "Developer How-To: GraphQL Clients": [
+      "how-to-client-checkout-flow",
+      "how-to-get-shop-id-for-client"
     ],
     "Developer How-To: Meteor app": [
       "how-to-change-the-favicon",
-      "register-template",
-      "fixtures-images",
       "testing-debugging-server-code"
     ],
     "For Developers: Meteor App Architecture": [
@@ -196,7 +200,8 @@
       "search",
       "sms-notifications",
       "shipping-admin",
-      "payments-discounts"
+      "payments-discounts",
+      "operator-address-validation"
     ],
     "Community": [
       "guidelines",

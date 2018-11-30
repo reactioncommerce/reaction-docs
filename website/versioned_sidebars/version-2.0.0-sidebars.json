@@ -66,19 +66,23 @@
       "version-2.0.0-core-plugins-stripe",
       "version-2.0.0-community-resources"
     ],
-    "Developer How-To: Starter Kit": [
-      "version-2.0.0-how-to-client-checkout-flow",
-      "version-2.0.0-how-to-get-shop-id-for-client",
+    "Developer How-To: Reaction API Server": [
       "version-2.0.0-graphql-create-query",
       "version-2.0.0-graphql-create-mutation",
       "version-2.0.0-how-to-create-a-payment-provider",
+      "version-2.0.0-how-to-add-address-validation-service",
+      "version-2.0.0-how-to-add-tax-service",
       "version-2.0.0-how-to-extend-graphql-to-add-field",
-      "version-2.0.0-how-to-extend-product"
+      "version-2.0.0-how-to-extend-product",
+      "version-2.0.0-register-template",
+      "version-2.0.0-fixtures-images"
+    ],
+    "Developer How-To: GraphQL Clients": [
+      "version-2.0.0-how-to-client-checkout-flow",
+      "version-2.0.0-how-to-get-shop-id-for-client"
     ],
     "Developer How-To: Meteor app": [
       "version-2.0.0-how-to-change-the-favicon",
-      "version-2.0.0-register-template",
-      "version-2.0.0-fixtures-images",
       "version-2.0.0-testing-debugging-server-code"
     ],
     "For Developers: Meteor App Architecture": [
@@ -195,7 +199,8 @@
       "version-2.0.0-search",
       "version-2.0.0-sms-notifications",
       "version-2.0.0-shipping-admin",
-      "version-2.0.0-payments-discounts"
+      "version-2.0.0-payments-discounts",
+      "version-2.0.0-operator-address-validation"
     ],
     "Community": [
       "version-2.0.0-guidelines",
