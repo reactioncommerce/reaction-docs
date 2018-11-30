@@ -23,6 +23,7 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 
 ### Firefox
 
+- [Altair GraphQL Client](https://addons.mozilla.org/en-US/firefox/addon/altair-graphql-client/)
 - [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
 
 ## Code Editor Extensions

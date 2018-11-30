@@ -25,7 +25,7 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 
 > **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
 
-2. Before you get started, make sure you are not running any applications on the default ports: `3000`, `4000`, `4444`.
+2. Before you get started, make sure you are not running any applications on the default ports: `3000`, `4000`, `4444`, `4445`, `5555`, `5432`, and `27017`.
 
 3. Clone [**Reaction Platform**](https://github.com/reactioncommerce/reaction-platform)
 
@@ -121,10 +121,6 @@ Run these commands from the `reaction-platform` directory:
 
 Learn more about [Reaction Platform](https://github.com/reactioncommerce/reaction-platform).
 
-### Docker commands
-
-Learn more about [developing in Docker](./installation-docker-development#run-the-apps) and [troubleshooting Docker development](./troubleshooting-development#docker-issues).
-
 ### Git
 
 Each sub-project has its own respective Git repository. The normal bootstrapping process will give you the latest released versions of the platform subprojects and is the recommended configuration for regular development. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and `git checkout` a different branch there. These steps are an alternative to the standard bootstrapping approach, you should do one or the other, not both:
@@ -151,3 +147,13 @@ Then run the following
 cd .. # cd into reaction-platform
 make
 ```
+
+### Environment variables
+
+Most Reaction services need certain environment variables set properly before they will start. Each project has a `.env.example` file that is copied to a Git-ignored `.env` file by the project's pre-build script. In most cases, these should have the correct values for running locally by default, but it's a good idea to review them.
+
+Later, when you pull new commits for a project or check out a different branch, the project may have changed requirements for environment variables. But your `.env` file will not update automatically because it is Git-ignored. Thus, it's a good idea after every pull or checkout to either rebuild the project or `cd` into the project folder and run the `bin/setup` script. (For the `reaction` project, the script is at `.reaction/scripts/setup` instead of `bin/setup` due to how Meteor works.) This script will copy missing environment variables from `.env.example` to `.env`. Alternatively, you can compare and update `.env` manually.
+
+### Docker commands
+
+Learn more about [developing in Docker](./installation-docker-development#run-the-apps) and [troubleshooting Docker development](./troubleshooting-development#docker-issues).

@@ -21,7 +21,7 @@ Tax services are registered by passing an array of them to the `taxServices` pro
 
 ```js
 import Reaction from "/imports/plugins/core/core/server/Reaction";
-import calculateOrderGroupTaxes from "./server/no-meteor/util/calculateOrderGroupTaxes";
+import calculateOrderTaxes from "./server/no-meteor/util/calculateOrderTaxes";
 import getTaxCodes from "./server/no-meteor/util/getTaxCodes";
 
 Reaction.registerPackage({
@@ -33,7 +33,7 @@ Reaction.registerPackage({
       displayName: "Custom Rates",
       name: "custom-rates",
       functions: {
-        calculateOrderGroupTaxes,
+        calculateOrderTaxes,
         getTaxCodes
       }
     }
@@ -46,33 +46,34 @@ See below for how to create the two functions.
 
 ### Create a tax calculation function
 
-Every tax service is expected to register a function that calculates taxes for an order group. The core `taxes` plugin calls it like this:
+Every tax service is expected to register a function that calculates taxes for a single CommonOrder. The core `taxes` plugin calls it like this:
 
 ```js
-const taxServiceResult = await activeTaxService.functions.calculateOrderGroupTaxes({ context, group });
+const taxServiceResult = await activeTaxService.functions.calculateOrderTaxes({ context, order });
 ```
 
 One or more plugins can provide one or more tax services, so each shop must choose exactly one service (or none) to enable. This is done by an operator in the General Tax Settings panel.
 
-The return from a `calculateOrderGroupTaxes` function is expected to be similar to this:
+The return from a `calculateOrderTaxes` function is expected to be similar to this:
 
 ```js
 {
   // Taxes grouped by item
   itemTaxes: [
     {
-      itemId: "abc", // Must match `_id` from one of the `group.items`
-      tax: 1, // Total amount due for this item, for all types of tax combined, in `group.currencyCode`
-      taxableAmount: 1, // Amount of `item.subtotal` that was deemed subject to taxation, in `group.currencyCode`
+      itemId: "abc", // Must match `_id` from one of the `order.items`
+      tax: 1, // Total amount due for this item, for all types of tax combined, in `order.currencyCode`
+      taxableAmount: 1, // Amount of `item.subtotal` that was deemed subject to taxation, in `order.currencyCode`
       taxes: [] // Breakdown of all taxes that apply to this item
     }
   ],
   // Combined taxes
   taxSummary: {
     calculatedAt: new Date(), // The time at which this calculation happened
+    calculatedByTaxServiceName: "my-tax-service", // optionally, provide a name that will be stored on the final order, allowing you to identify which orders this service calculated taxes for and mark the order complete in your external tax service if required
     referenceId: "123", // Optional ID to tie this calculation back to an external system
-    tax: 1, // Total amount due for all items, for all types of tax combined, in `group.currencyCode`
-    taxableAmount: 1, // Amount of the group total that was deemed subject to taxation, in `group.currencyCode`
+    tax: 1, // Total amount due for all items, for all types of tax combined, in `order.currencyCode`
+    taxableAmount: 1, // Amount of the order total that was deemed subject to taxation, in `order.currencyCode`
     taxes: [] // Breakdown of all taxes that apply to any item, with combined values for all items they applied to
   }
 }
@@ -85,14 +86,18 @@ Where each item in the `taxes` arrays has this shape:
   _id: "123", // Generate a random unique ID if you don't have one
   jurisdictionId: "123", // Optionally provide an ID for the jurisdiction this tax is for. Not currently used by core.
   sourcing: "destination", // Either "destination" or "origin" depending on which address triggered this tax
-  tax: 1, // Total amount due for this type of tax only, in `group.currencyCode`
-  taxableAmount: 1, // Total deemed taxable for this type of tax only, in `group.currencyCode`
+  tax: 1, // Total amount due for this type of tax only, in `order.currencyCode`
+  taxableAmount: 1, // Total deemed taxable for this type of tax only, in `order.currencyCode`
   taxName: "CA Sales Tax", // A human-readable string for showing to operators and customers in the UI
   taxRate: 3.5 // The tax rate for this type of tax, used for this calculation
 }
 ```
 
 If you are integrating with a third-party tax service, you will typically get back a result similar to this. You simply need to map the result to the return shape expected.
+
+The `calculateOrderTaxes` function is called frequently, every time a cart changes and whenever an order is placed. Your function should return `null` if it's called with a CommonOrder that does not yet have enough information on it to calculate taxes. However, if `order.sourceType` is `"order"` and you still do not have enough information to calculate, then something is wrong. It may be wise to throw an error in this case, and in a production system you'll want to track such events and get alerts if this happens.
+
+> External tax APIs often require various addresses with various names. Do your best to provide what they require, but the shipping address is usually the most important. Reaction does not guarantee that all orders will have shipping or billing addresses. If you have one or the other, it is usually fine to substitute billing for shipping or vice versa in order to at least get a calculation and allow the order to be placed. If an order has neither address, you'll need to decide what action is proper based on the third-party API. There should always be an `originAddress` provided, and that may be enough to do a calculation in some cases.
 
 ### Create a tax codes function
 

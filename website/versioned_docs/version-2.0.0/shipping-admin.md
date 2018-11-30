@@ -1,6 +1,7 @@
 ---
-id: shipping-admin
+id: version-2.0.0-shipping-admin
 title: Shipping
+original_id: shipping-admin
 ---
 
 Reaction comes with a simple flat rate shipping plugin. To manage your shipping rates, click on the **Shipping icon** <i class="rui font-icon fa fa-truck"></i>.

@@ -38,6 +38,9 @@
       "swag-shop-7",
       "swag-shop-8"
     ],
+    "For Developers: Concepts": [
+      "devs-understanding-commonorder"
+    ],
     "For Developers: Contributing Guide": [
       "contributing-to-reaction",
       "styleguide",
@@ -66,6 +69,9 @@
       "core-plugins-stripe",
       "core-plugins-sitemap-generator",
       "community-resources"
+    ],
+    "Developer How-To: General": [
+      "dev-how-do-i"
     ],
     "Developer How-To: Reaction API Server": [
       "graphql-create-query",
@@ -165,6 +171,7 @@
       "writing-jest-unit-tests",
       "writing-jest-integration-tests",
       "react-testing",
+      "how-to-write-tests-for-plugins",
       "creating-test-data",
       "creating-test-data-for-meteor-tests",
       "jest-tips"

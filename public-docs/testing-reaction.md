@@ -41,6 +41,9 @@ NOTE: For now, there are also some Meteor integration tests, which are located t
 
 ## Further Reading
 
+For a walkthrough on how to write test for reaction's plugin:
+- [How to write tests for plugins](how-to-write-tests-for-plugin.md)
+
 For Jest, see the following:
 - [Running Jest Unit Tests](running-jest-unit-tests.md)
 - [Running Jest Integration Tests](running-jest-integration-tests.md)

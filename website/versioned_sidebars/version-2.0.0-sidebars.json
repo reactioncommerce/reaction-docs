@@ -38,6 +38,9 @@
       "version-2.0.0-swag-shop-7",
       "version-2.0.0-swag-shop-8"
     ],
+    "For Developers: Concepts": [
+      "version-2.0.0-devs-understanding-commonorder"
+    ],
     "For Developers: Contributing Guide": [
       "version-2.0.0-contributing-to-reaction",
       "version-2.0.0-styleguide",
@@ -65,6 +68,9 @@
       "version-2.0.0-core-plugins-search",
       "version-2.0.0-core-plugins-stripe",
       "version-2.0.0-community-resources"
+    ],
+    "Developer How-To: General": [
+      "version-2.0.0-dev-how-do-i"
     ],
     "Developer How-To: Reaction API Server": [
       "version-2.0.0-graphql-create-query",

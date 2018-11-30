@@ -17,7 +17,7 @@
     "lint:eslint": "eslint website/.",
     "lint:fix": "yarn run lint:fix:eslint",
     "lint:fix:eslint": "eslint --fix website/.",
-    "start": "cd website && yarn start --no-watch --port 4000",
+    "start": "cd website && yarn start --no-watch --port $PORT",
     "test": "echo 'No tests yet'",
     "version": "cd website && yarn run version",
     "rename-version": "cd website && yarn run rename-version"
