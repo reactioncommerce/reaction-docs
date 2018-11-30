@@ -186,3 +186,35 @@ test("Accordion component open & closes onClick", () => {
   expect(component.state().isExpanded).toBe(false);
 });
 ```
+
+### Testing Form components
+
+All new Reaction form & input components are based on the [composable form spec](http://composableforms.com/) and uses the [composable form test](https://github.com/DairyStateDesigns/composable-form-tests#readme) package to user interaction.
+
+**Simple Input test example**
+```js
+import React from "react";
+import { mount } from "enzyme";
+import { testInput } from "composable-form-tests";
+import Input from "./Input";
+
+testInput({
+  component: Input,
+  defaultValue: null,
+  exampleValueOne: "ONE",
+  exampleValueTwo: "TWO",
+  mount,
+  simulateChanging(wrapper, value) {
+    // Refer to Enzyme documentation
+    wrapper.find("input").simulate("change", { target: { value } });
+  },
+  simulateChanged(wrapper, value) {
+    // Refer to Enzyme documentation
+    wrapper.find("input").simulate("blur", { target: { value } });
+  },
+  simulateSubmit(wrapper) {
+    // Refer to Enzyme documentation
+    wrapper.find("input").simulate("keypress", { which: 13 });
+  }
+});
+```
