@@ -122,6 +122,38 @@ const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId
 
 ## Run plugin code on app startup
 
+Copy the following into a `server/no-meteor/startup.js` file in the plugin folder:
+
+```js
+/**
+ * @summary Called on startup
+ * @param {Object} context Startup context. This is the normal app context but without
+ *   any information about the current request because there is no current request.
+ * @returns {undefined}
+ */
+export default function startup(context) {
+  // Plugin startup code here
+}
+```
+
+Then import and register the startup function in the plugin's `register.js` file:
+
+```js
+import Reaction from "/imports/plugins/core/core/server/Reaction";
+import startup from "./server/no-meteor/startup";
+
+Reaction.registerPackage({
+  label: "Shipping",
+  name: "reaction-shipping",
+  icon: "fa fa-truck",
+  autoEnable: true,
+  functionsByType: {
+    startup: [startup]
+  }
+  // other props
+});
+```
+
 ## Emit an app event
 
 Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming.
