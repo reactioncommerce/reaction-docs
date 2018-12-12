@@ -87,6 +87,7 @@
     "how-to-create-a-custom-homepage": "Tutorial: Create a custom homepage",
     "how-to-create-a-payment-provider": "How To: Add a Payment Method",
     "how-to-extend-graphql-to-add-field": "How To: Extend GraphQL to add a field",
+    "how-to-extend-graphql-with-remote-schema": "How To: Extend GraphQL with Remote Schema Delegation",
     "how-to-extend-product": "How To: Extend the Product Schema",
     "how-to-get-shop-id-for-client": "How To: Get the shop ID for a client",
     "how-to-rtl": "How To: Add right-to-left language support in the Meteor app",
