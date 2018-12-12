@@ -90,7 +90,7 @@
     "how-to-extend-product": "How To: Extend the Product Schema",
     "how-to-get-shop-id-for-client": "How To: Get the shop ID for a client",
     "how-to-rtl": "How To: Add right-to-left language support in the Meteor app",
-    "how-to-write-tests-for-plugins": "How To: Write jest tests for reaction plugins",
+    "how-to-write-tests-for-plugins": "How To: Write Jest tests for plugins",
     "i18n": "i18n and RTL",
     "icon": "Icon",
     "image-handling": "Images",
