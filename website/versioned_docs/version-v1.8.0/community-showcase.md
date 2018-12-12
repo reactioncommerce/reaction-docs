@@ -29,22 +29,30 @@ original_id: community-showcase
       <p class="item-info item-label">Marketplace</p>
     </div>
   </a>
-   <a href="https://greennie.com/" class="showcase-grid-item" target="_blank">
-     <img src="/assets/community-showcase-greenie.jpg">
-     <div>
-       <p class="item-info">greennie.com</p>
-       <p class="item-info item-label">Canada</p>
-       <p class="item-info item-label">Ecommerce</p>
-     </div>
-    </a>
-    <a href="https://hop.exchange/" class="showcase-grid-item" target="_blank">
-      <img src="/assets/community-showcase-hop-exchange.jpg">
-      <div>
-        <p class="item-info">hop.exchange</p>
-        <p class="item-info item-label">UK</p>
-        <p class="item-info item-label">Marketplace</p>
-      </div>
-    </a>
+  <a href="https://hop.exchange/" class="showcase-grid-item" target="_blank">
+    <img src="/assets/community-showcase-hop-exchange.jpg">
+    <div>
+      <p class="item-info">hop.exchange</p>
+      <p class="item-info item-label">UK</p>
+      <p class="item-info item-label">Marketplace</p>
+    </div>
+  </a>
+  <a href="https://90pluswine.com/" class="showcase-grid-item" target="_blank">
+    <img src="/assets/community-showcase-90-plus-wine.png">
+    <div>
+      <p class="item-info">90+ Wine</p>
+      <p class="item-info item-label">USA</p>
+      <p class="item-info item-label">Ecommerce</p>
+    </div>
+  </a>
+  <a href="https://shop.geospatial.com/" class="showcase-grid-item" target="_blank">
+    <img src="/assets/community-showcase-east-view-geospatial.png">
+    <div>
+      <p class="item-info">East View Geospatial</p>
+      <p class="item-info item-label">USA</p>
+      <p class="item-info item-label">Ecommerce</p>
+    </div>
+  </a>
 </div>
 
 ## Building a project on Reaction?
