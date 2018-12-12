@@ -36,7 +36,7 @@ This plugin can serve as a reference to create extra IDP features.
 
 ## Customizing the interface
 
-The [`hydra-oauth`](https://github.com/reactioncommerce/reaction/tree/v2.0.0-rc.3/imports/plugins/core/hydra-oauth) also provides the React component for the log in user interface. To change basic colors and typography, use the CSS styles applied in [`templates.html`](https://github.com/reactioncommerce/reaction/blob/v2.0.0-rc.3/imports/plugins/core/hydra-oauth/client/templates.html). To use your own login form and add different user interactions, look at the React template in the [`client`](https://github.com/reactioncommerce/reaction/tree/v2.0.0-rc.3/imports/plugins/core/hydra-oauth/client) and replace the component with your own using the Reaction [`replaceComponent`](http://localhost:4000/docs/components-api#replacing-components) API.
+The [`hydra-oauth`](https://github.com/reactioncommerce/reaction/tree/v2.0.0-rc.3/imports/plugins/core/hydra-oauth) also provides the React component for the log in user interface. To change basic colors and typography, use the CSS styles applied in [`templates.html`](https://github.com/reactioncommerce/reaction/blob/v2.0.0-rc.3/imports/plugins/core/hydra-oauth/client/templates.html). To use your own login form and add different user interactions, look at the React template in the [`client`](https://github.com/reactioncommerce/reaction/tree/v2.0.0-rc.3/imports/plugins/core/hydra-oauth/client) and replace the component with your own using the Reaction [`replaceComponent`](./components-api#replacing-components) API.
 
 ## Troubleshooting Guide
 
