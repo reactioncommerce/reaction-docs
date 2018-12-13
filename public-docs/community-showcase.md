@@ -39,7 +39,7 @@ title: Community showcase
   <a href="https://90pluswine.com/" class="showcase-grid-item" target="_blank">
     <img src="/assets/community-showcase-90-plus-wine.png">
     <div>
-      <p class="item-info">90+ Wine</p>
+      <p class="item-info">Ninety Plus Wine</p>
       <p class="item-info item-label">USA</p>
       <p class="item-info item-label">Ecommerce</p>
     </div>
