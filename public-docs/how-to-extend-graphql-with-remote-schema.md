@@ -2,11 +2,11 @@
 title: How To: Extend GraphQL with Remote Schema Delegation
 ---
 
-If you have an external service providing a GraphQL interface and you would like to make it available via the main reaction GraphQL API, here's how to do it. For this example, we'll use the public sample Pokemon GraphQL API from `https://graphql-pokemon.now.sh`.
+If you have an external service providing a GraphQL interface and you would like to make it available via the main Reaction GraphQL API, here's how to do it. For this example, we'll use the [public sample Pokemon GraphQL API](https://github.com/lucasbento/graphql-pokemon) from `https://graphql-pokemon.now.sh`.
 
 ## Export your service's schema
 
-You can use the `get-graphql-schema` command line utility from npm to generate the Schema Definition Language (SDL) text file you need.
+Use the [`get-graphql-schema`](https://www.npmjs.com/package/get-graphql-schema) command line utility from npm to generate the Schema Definition Language (SDL) text file you need.
 
 ```sh
 cat <<EOF | docker run --interactive node bash > pokemon.graphql
@@ -20,7 +20,7 @@ Incorporate that `pokemon.graphql` file into your plugin's directory structure.
 
 ## Load your schema and link your service
 
-In your plugin's `register.js` file, load the schema and use the graphql-tools helper functions to generate a remote schema instance, which your plugin can then provide to reaction.
+In your plugin's `register.js` file, load the schema and use the graphql-tools helper functions to generate a remote schema instance, which your plugin can then provide to Reaction.
 
 ```js
 import Reaction from "/imports/plugins/core/core/server/Reaction";
@@ -52,8 +52,7 @@ Reaction.registerPackage({
 
 ## Verify your queries
 
-Once your plugin is loading properly, you should be able to execute the additional queries from your remote service via the reaction GraphQL endpoint. The queries will be delegated to your service and responses will be merged together.
-
+Once your plugin is loading properly, execute the additional queries from your remote service via the Reaction GraphQL endpoint. The queries will be delegated to your service and responses will be merged together.
 
 ```graphql
 # Submit this query via the reaction graphiql interface to verify
