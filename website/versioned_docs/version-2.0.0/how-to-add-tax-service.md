@@ -51,10 +51,12 @@ See below for how to create the two functions.
 Every tax service is expected to register a function that calculates taxes for a single CommonOrder. The core `taxes` plugin calls it like this:
 
 ```js
-const taxServiceResult = await activeTaxService.functions.calculateOrderTaxes({ context, order });
+const taxServiceResult = await primaryTaxService.functions.calculateOrderTaxes({ context, order });
 ```
 
-One or more plugins can provide one or more tax services, so each shop must choose exactly one service (or none) to enable. This is done by an operator in the General Tax Settings panel.
+One or more plugins can provide one or more tax services. Each shop can choose one service as a primary tax service and another as a fallback service. This is done by an operator in the [General Tax Settings panel]((tax.md#enable-a-tax-service)).
+
+> A fallback service is used to calculate the tax when the primary service returns a `null` result. This could be due to errors from the plugin configuration or a network failure. The tax plugin is expected to handle such errors and returns a `null` result when appropriate to allow the fallback service to kick in.
 
 The return from a `calculateOrderTaxes` function is expected to be similar to this:
 
