@@ -1,5 +1,7 @@
 ---
+id: version-2.0.0-concepts-payments
 title: Payments
+original_id: concepts-payments
 ---
 
 A **payment** is information attached to an order, which represents a way of paying for that part of the order after it has been fulfilled.
