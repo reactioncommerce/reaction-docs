@@ -32,7 +32,7 @@ This is the only server configuration necessary.
 
 ### Client Components
 
-If you are using the built-in Reaction client or one of the starter clients provided by Reaction, the necessary client components are already included and will appear where they should. If you are building your own client, you may want to use our [StripeForm React component](https://stoic-hodgkin-c0179e.netlify.com/#!/StripeForm), which is part of the Reaction Design System component library. It wraps [react-stripe-elements](https://github.com/stripe/react-stripe-elements) to do some of the work for you, but you can also use `react-stripe-elements` directly, or use any Stripe client that allows you to securely create a source token.
+If you are using a starter client UI provided by Reaction, the necessary client components are already included and will appear where they should. If you are building your own client, you may want to use our [StripeForm React component](https://designsystem.reactioncommerce.com/#!/StripeForm), which is part of the Reaction Design System component library. It wraps [react-stripe-elements](https://github.com/stripe/react-stripe-elements) to do some of the work for you, but you can also use `react-stripe-elements` directly, or use any Stripe client that allows you to securely create a source token.
 
 > For Stripe payments to work in the NextJS starter app, you must set the `STRIPE_PUBLIC_API_KEY` environment variable, which is done in the `.env` file for local development.
 
@@ -40,9 +40,10 @@ If you are using the built-in Reaction client or one of the starter clients prov
 
 > Prerequisite: Enable and configure Stripe payments with "test" keys
 
-1. Access the built-in Reaction client or one of the starter clients we provide.
+1. Access the storefront UI.
 2. Add items to your cart and begin checkout.
-3. When you get to the payment step, you should see the Stripe credit card entry form. Enter the following test information in the fields:
+3. When you get to the payment step, choose "Credit Card" payment method if multiple options are shown.
+4. You should see the Stripe credit card entry form. Enter the following test information in the fields:
     - One of Stripe’s [test card numbers](https://stripe.com/docs/testing#cards), such as 4242 4242 4242 4242
     - Any three-digit CVC code
     - Any expiration date in the future
