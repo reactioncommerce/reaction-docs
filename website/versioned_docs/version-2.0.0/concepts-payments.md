@@ -28,7 +28,7 @@ If the checkout UI component for a payment method supports entering a specific a
 
 When a client creates an order, it passes collected payment input along with the order. The payments plugin will then create one or more **payments** (also referred to as "charges") to pay for the order. While placing the order, each payment must be "authorized" by the payment method handler, but each payment method can decide what "authorized" means.
 
-If all payments for an order are authorized, then the order is created. After that, a shop operator can individually "capture", "refund", or "partially refund" each payment. Again, each payment method can decide what "capture" means. For a credit card payment, it means actually charging the card. For an invoice payment method, it might mean sending the invoice. It might do nothing.
+If all payments for an order are authorized, then the order is created. After that, a shop operator can individually "capture", "refund", or "partially refund" each payment. Again, each payment method can decide what "capture" means. For a credit card payment, it means actually charging the card. For an invoice payment method, it might mean sending the invoice. It might not mean anything, in which case the payment method will mark the payment captured without doing anything.
 
 Additionally, payment methods may or may not support refunding. Each payment has a current status based on what has happened. Examples of statuses are "authorized", "captured", "refunded", and "partially refunded".
 
