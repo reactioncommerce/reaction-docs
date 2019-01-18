@@ -63,6 +63,9 @@ Your plugin must define functions for the following actions:
 
 - authorize
 - capture
+
+Your plugin must define functions for the following actions only if it supports refunding:
+
 - refund
 - list refunds
 
@@ -119,7 +122,7 @@ If you are unable to authorize the payment, the function should throw an error w
 
 #### capture function
 
-This method must capture an authorized payment if it hasn't been captured yet. It receives a `PaymentMethod` object as its only argument. For some payment methods, this might do nothing.
+This function must capture an authorized payment if it hasn't been captured yet. It receives a `PaymentMethod` object as its only argument. For some payment methods, this might do nothing.
 
 The signature of this function is `(context, payment)`, where `payment` is what your authorize function returned.
 
@@ -132,7 +135,7 @@ The function is expected to return an object with `result` property, and optiona
 
 #### refund function
 
-This method must create a refund in your external payment system. It can be an `async` function.
+This function must create a refund in your external payment system. It can be an `async` function. If your payment method can't be refunded, you do not need to provide this function.
 
 The function signature is `(context, payment, amount)`, where `amount` is the requested refund amount and `payment` is what your authorize function returned.
 
@@ -142,7 +145,7 @@ The function signature is `(context, payment, amount)`, where `amount` is the re
 
 #### list refunds function
 
-This method must query your external payment system and return an array of refund objects for a single payment. It can be an `async` function.
+This function must query your external payment system and return an array of refund objects for a single payment. It can be an `async` function. If your payment method can't be refunded, you do not need to provide this function.
 
 The function signature is `(context, payment)`, where `payment` is what your authorize function returned.
 
@@ -181,6 +184,7 @@ Reaction.registerPackage({
   paymentMethods: [{
     name: "stripe_card",
     displayName: "Stripe Card",
+    canRefund: true,
     functions: {
       capturePayment: stripeCapturePayment,
       createAuthorizedPayment: stripeCreateAuthorizedPayment,
@@ -197,6 +201,8 @@ Each object in `paymentMethods` must have a `name` and `displayName`.
 The `displayName` is used in the operator UI, in the Payment panel, where each registered method is shown and can be toggled on or off. It is also sent to storefront clients with the `availablePaymentMethods` GraphQL query response, so it should be what you want shown in the checkout UI (although storefront client UI code could choose to display some other name).
 
 The `name` is the key used to identify a payment as being of this method. The `name` property of the payment object returned from your authorize function must exactly match this.
+
+The `canRefund` option is `true` by default, but if your method does not support refunds, you must set `canRefund: false` in its config.
 
 #### Settings UI
 
