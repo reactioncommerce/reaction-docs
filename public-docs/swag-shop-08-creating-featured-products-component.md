@@ -127,4 +127,4 @@ While this is a deliberately simple example, you can see how you can easily take
 With that you should have a working `Featured Products` section of the home page that you can edit by just editing the tags on individual products.
 
 
-Congratulations. You can completed the Swag Shop Tutorial 🎉
+Congratulations. You have completed the Swag Shop Tutorial 🎉
