@@ -139,7 +139,7 @@ Shipping methods *are not* required to have a `deny` restriction, but it does ma
 Creating an `deny` restriction will restrict the method from being shipped to any location inside the stated rule location. Checks are done in reverse order, to allow you to pinpoint smaller areas to restrict. Keeping in mind that the restriction already has an `allow` rule on it, we'll assume it's a `country` rule:
 
 - If you deny at the `postal` level, then you can ship to anywhere in the allowed `country` except for that postal code.
-- If you deny at the `region` level, then you can ship to anywhere in the allowed `country` except for that postal code.
+- If you deny at the `region` level, then you can ship to anywhere in the allowed `country` except for that region.
 - The country restriction wouldn't apply in this particular case, but if you deny at the `country` level, then you can ship to anywhere aside from that country. This might make sense in the future if we have a `universal` method, but doesn't come into play in the current environment.
 
 Each of the above, country, region, and postal, are arrays, so multiple locations are allowed inside each restriction.
