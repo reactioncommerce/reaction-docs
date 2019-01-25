@@ -331,7 +331,9 @@ Example 3: Shipping method with the ID `stviZaLdqRvTKW6J5` is `allow`ed to ship 
   }
 ]
 ```
+
 Example 4: Shipping method with the ID `stviZaLdqRvTKW6J5` is `allow`ed to ship to anywhere in the United States, but `deny`ed from shipping knives to New York State. The knife is still allowed to ship to any of the other 49 states.
+```
 [
   {
     "_id" : "allow001",
