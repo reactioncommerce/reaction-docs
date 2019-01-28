@@ -110,6 +110,18 @@ jobs:
               "$DOCKER_REPOSITORY:$CIRCLE_SHA1" \
               yarn run test
 
+  test-e2e:
+    <<: *defaults
+    steps:
+      - run:
+          name: Install Broken Link Checker
+          command: |
+            yarn add broken-link-checker
+      - run:
+          name: Broken Link Test
+          command: |
+            ./node_modules/.bin/blc ${PROD_URL} -ro -filter=3 -e
+
   snyk-security:
     <<: *defaults
     steps:
@@ -203,3 +215,6 @@ workflows:
               only:
                 - /^staging$/
                 - /^master$/
+      - test-e2e
+          # requires:
+          #   - deploy
