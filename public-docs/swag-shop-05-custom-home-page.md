@@ -159,7 +159,7 @@ export default Home;
 
 This page just wraps our `HomePage` component and applies any site Metadata through the `Helmet` helper. Passing in `shop` here allows us to add any dynamic components (most of which will rely on knowing the `shopId` as we will see when we get into adding custom GraphQL components).
 
-The last change we need is to make a change to our routes which is done in `src/routes.js`. Just change the entry for the `/` route to be to our home page. We provide "route-name", "path", and the name of the file in `src/pages` that it should point to.
+The last change we need is to make a change to our routes which is done in `src/custom/routes.js`. Just change the entry for the `/` route to be to our home page. We provide "route-name", "path", and the name of the file in `src/pages` that it should point to.
 
 ```javascript
 const routes = require("next-routes")();
