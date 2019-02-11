@@ -17,11 +17,11 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 
 1. Requirements:
 
-- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Windows](https://docs.docker.com/docker-for-windows/install/) | [Linux](https://docs.docker.com/compose/install/#install-compose))
+- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Linux](https://docs.docker.com/compose/install/#install-compose))
 - Install [Node.js](https://nodejs.org/en/)
 - A GitHub account with a <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">configured SSH key</a>
 
-> **Windows**: Reaction Platform has not been fully tested on Windows at this time.
+> **Windows**: Reaction Platform does not officially support development on Windows currently. Development on Windows may be possible, but is untested. We are unable to provide support for developers using Windows.
 
 > **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
 
