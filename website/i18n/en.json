@@ -85,6 +85,7 @@
     "how-to-client-checkout-flow": "How To: Implement a client checkout flow",
     "how-to-configure-meteor-app": "How To: Configure the Meteor app",
     "how-to-create-a-custom-homepage": "Tutorial: Create a custom homepage",
+    "how-to-create-a-fulfillment-methods-plugin": "How To: Create a Fulfillment Methods Plugin",
     "how-to-create-a-payment-provider": "How To: Add a Payment Method",
     "how-to-extend-graphql-to-add-field": "How To: Extend GraphQL to add a field",
     "how-to-extend-graphql-with-remote-schema": "How To: Extend GraphQL with Remote Schema Delegation",
