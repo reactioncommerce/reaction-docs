@@ -238,3 +238,36 @@ export default function startup(context) {
 Now `context.collections.MyCustomCollection` will be available in all query and mutation functions. Note that usually MongoDB will not actually create the collection until the first time you insert into it.
 
 If you need to ensure indexes on any fields, the startup function is a good place to do that, too.
+
+## Ensure MongoDB collection indexes from a plugin
+
+Use the `collectionIndex` util function. It handles errors in a standard way.
+
+```js
+export default function startup(context) {
+  collectionIndex(collections.Surcharges, { shopId: 1 });
+}
+```
+
+## Loop over async function results
+
+Often you have a list of functions that return a Promise, and you need to loop through the list and call each function. The recommended way to do this depends on whether the functions are expecting to be called in series or can be safely called in parallel.
+
+For performance reasons, you should call them in parallel if you can. To do so, use `map` and await `Promise.all`.
+
+```js
+const promisedResults = listOfFunctions.map((func) => func());
+const results = await Promise.all(promisedResults);
+```
+
+However, in some cases the functions have side effects that require them to be executed one after another, or you need to pass the result of function 1 into the function 2 call and so on. In these cases, you can use `await` within a `for` loop. The default `eslint` rule config disallows this, so it's a good idea to leave a detailed comment explaining why it's necessary.
+
+```js
+// We need to run each of these functions in a series, rather than in parallel, because
+// we are mutating the same object on each pass. It is recommended to disable `no-await-in-loop`
+// eslint rules when the output of one iteration might be used as input in another iteration, such as this case here.
+// See https://eslint.org/docs/rules/no-await-in-loop#when-not-to-use-it
+for (const func of listOfFunctions) {
+  await func(product); // eslint-disable-line no-await-in-loop
+}
+```
