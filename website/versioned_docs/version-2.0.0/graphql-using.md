@@ -40,7 +40,7 @@ As long as you use POST method (not GET) and use the `/graphql-alpha` path as th
 We are working on a new identity and authorization system that does not rely on Meteor’s accounts system, but until that is finished, you can authenticate a GraphQL request by including a header named `meteor-login-token` with a valid Meteor login token in it.
 
 Here is how to get this login token:
-1. Log in to the Reaction Meteor app as the user from which you want your GraphQL requests to come.
+1. Log in to the Reaction operator app as the user from which you want your GraphQL requests to come.
 2. Open the browser console and enter `localStorage.getItem("Meteor.loginToken")`
 3. Copy this token and set it as the value of the `meteor-login-token` HTTP header in your GraphQL client.
 
