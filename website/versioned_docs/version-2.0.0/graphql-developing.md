@@ -66,7 +66,7 @@ Newer Reaction code runs within a single `ReactionNodeApp` instance, which is cr
 - Builds the `context` object that’s available in all resolver functions. See [The Reaction GraphQL Context](#the-reaction-graphql-context)
 - Formats the `errors` array that is returned to clients, to make errors as helpful as possible
 - Provides the merged GraphQL schema
-- Sets the path as `/graphql-alpha` and exposes a GraphiQL UI on `/graphiql`
+- Sets the path as `/graphql-alpha` and exposes a GraphQL Playground for GET requests on `/graphql-alpha`
 
 ## The Reaction GraphQL Context
 

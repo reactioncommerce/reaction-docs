@@ -1,6 +1,7 @@
 ---
-id: graphql-intro
+id: version-2.0.0-graphql-intro
 title: Tutorial: Getting started with GraphQL
+original_id: graphql-intro
 ---
 
 ## Install
