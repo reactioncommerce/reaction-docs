@@ -159,6 +159,18 @@ export default {
 };
 ```
 
+If you are returning multiple documents (see step #3) you'll need to add an additional export here, `getConnectionTypeResolvers`, in order to be able to query `edges->node`:
+
+```js
+import { getConnectionTypeResolvers } from "@reactioncommerce/reaction-graphql-utils";
+import Query from "./Query"
+
+export default {
+  Query
+  ...getConnectionTypeResolvers("QueryName")
+};
+```
+
 Then pass the full `resolvers` object to `registerPackage` in the plugin's `register.js` file:
 
 ```js
