@@ -1,15 +1,27 @@
 ---
-title: How To: Implement a client checkout flow
-id: version-2.0.0-how-to-client-checkout-flow
-original_id: how-to-client-checkout-flow
+id: version-2.0.0-storefront-checkout-page
+title: Build a checkout page
+original_id: storefront-checkout-page
 ---
 
-This section will guide you through everything you need to do as a developer implementing cart checkout or order placement in a client app. The exact type of client isn’t important. It could be a web app, React Native, native, or command line UI. A flow similar to this is used in the starter apps that we provide.
+This article is part of the [Storefront UI Development Guide](./storefront-intro.md).
+- Previous Task: [Implement cart modification](./storefront-cart-modification.md)
+- Next Task: [Build an order view page](./storefront-order-view-page.md)
 
-> A cart is not necessary to create an order. This flow assumes you have items stored in a cart and want to store checkout information on that cart as it is entered. There are good reasons to do this: to avoid having to enter it again if the shopper gets interrupted, to gather as much data in your system as possible even if the order is never placed. But if these reasons don’t matter to you, your client can simply collect all of the necessary information and use it to create the order without ever creating a cart.
+It's time to support checking out a cart. You have a lot of freedom in how you design your checkout flow. We'll present one suggested flow here, but it will not work for everyone. Keep in mind the following guideline:
+
+> At the end of a checkout flow, your goal is to place a valid order using the `placeOrder` GraphQL mutation. This can be done without ever even having a cart! The cart exists as an in-progress or potential order and nothing more. After you create the order, you delete the related cart.
+
+So as you collect information during checkout, you must decide where to store it until the order is placed. Some information can be stored on the cart by mutating it. Some you may want to store in `localStorage` or a cookie. Other sensitive information you may want to store only in memory and have the shopper re-enter it if they refresh or navigate away. Some related data you may even store directly in custom or third-party systems using their own APIs. As long as you can gather all the necessary information when it's time to call `placeOrder` in your UI client code, Reaction does not care where it comes from.
+
+In the following sections, we'll assume that you have an anonymous cart with some items in it and the user has clicked a "Checkout" button somewhere in the UI. You navigate to a checkout page, on which you will implement all of these checkout steps.
+
+Generally speaking, a checkout flow consists of a flow controller (some code that decides what step you are on and which steps are complete and incomplete) and several checkout step components. This could happen across more than one page if you prefer, and for many payment methods, part of the flow consists of being redirected to an external checkout page and then coming back and picking up where you left off.
+
+> Ensure that you've enabled anonymous checkout in the shop settings on your server. Even if you don't plan to enable anonymous checkout, it's usually easiest to start by building anonymous checkout. We'll later add support for logging in, at which point you'd just need to force the user to log in anytime during the checkout flow, prior to placing the order. After you have all of that working, you can disable anonymous checkout in the shop settings on your server.
 
 ## Step 1: Collect an email address
-If the shopper is logged in, you may choose to skip this step and use one of the emails from their account. You can also move this step to somewhere else in the flow as long as you have an email address for creating the order. An order cannot be created without an email address.
+If the shopper is logged in, you may choose to skip this step and use one of the emails from their account. You can also move this step to somewhere else in the flow as long as you have an email address by the time you create the order. An order cannot be created without an email address.
 
 ### Reaction Design System components
 The `GuestForm` React component can be used to collect an email address for anonymous (guest) checkout
@@ -78,16 +90,10 @@ It’s usually a good idea to allow the shopper to review all of the order detai
 - You can use the `FinalReviewCheckoutAction` component with an action supplied to the `CheckoutActions` component to show all items for review as part of a step-by-step checkout flow. This wraps `CartItems` and `CartSummary` and takes care of some of the complexity for you, versus using those components directly.
 
 ## Step 7: Create the order
-Order creation GraphQL mutations are provided by each payment plugin. Refer to plugin documentation for exact instructions, but in general they will all expect an `OrderInput` object and some tokenized payment details. They will attempt to create one charge per fulfillment group, and if all charges are successfully created, they will create the order.
+Finally, to create the order use the `placeOrder` mutation, including all required fields in the `input`. The information needed can be gathered from the cart and your application state, and arranged into the `OrderInput` object expected by `placeOrder`.
 
 If order creation is successful, the mutation will return an order object. If this is an anonymous order, there will also be a `token` in the response payload. All future GraphQL queries for this order will need to provide this token, so you should save it in state and potentially in local persistent storage, depending on the needs of your client.
 
-### GraphQL
-- The Stripe payment plugin provides a `placeOrderWithStripeCardPayment` mutation. You must pass it a valid `OrderInput` object and a payment object with a billing address and Stripe card token ID on it.
-- The IOU payment plugin provides a `placeOrderWithIOUPayment` mutation. You must pass it a valid `OrderInput` object and a payment object with a billing address on it. (The IOU payment method is intended to be used for demos and other non-production purposes.)
+If order creation is successful, the related cart is no longer needed and will be deleted by the server. If it is an anonymous cart, you are expected to remove the `cart` from your local cache and delete its ID and token from your persistent application state.
 
-## Step 8: Show order confirmation
-If order creation is successful, the mutation will return an order object. Your client can use this to display all of the order details to the shopper on an order confirmation screen.
-
-### GraphQL
-Your "checkout complete" screen can also use the `orderById` query to get the order document at a later time.
+Next Task: [Build an order view page](./storefront-order-view-page.md)
