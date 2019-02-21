@@ -56,3 +56,11 @@ All queries, mutations, and types in the Reaction GraphQL schema are documented 
 The GraphQL specification recommends globally unique IDs, and IDs in Reaction GraphQL follow this recommendation. These IDs are opaque, meaningless, and unsorted, so you should not use them for anything other than identifying an object.
 
 Every type that has an ID implements the `Node` interface. You will eventually be able to use the `Query.node` query to get back any Node type without even knowing which type it is.
+
+## Query Pagination
+
+To understand our pagination approach, which is Relay-spec compliant, use these resources:
+- http://graphql.org/learn/pagination/
+- https://facebook.github.io/relay/docs/en/graphql-server-specification.html#connections
+- https://facebook.github.io/relay/graphql/connections.htm
+- https://www.apollographql.com/docs/react/recipes/pagination.html

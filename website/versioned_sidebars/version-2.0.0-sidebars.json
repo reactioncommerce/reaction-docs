@@ -84,8 +84,21 @@
       "version-2.0.0-fixtures-images"
     ],
     "Developer How-To: GraphQL Clients": [
-      "version-2.0.0-how-to-client-checkout-flow",
       "version-2.0.0-how-to-get-shop-id-for-client"
+    ],
+    "Storefront UI Development Guide": [
+      "version-2.0.0-storefront-intro",
+      "version-2.0.0-storefront-apollo-client",
+      "version-2.0.0-storefront-product-listing-page",
+      "version-2.0.0-storefront-product-detail-page",
+      "version-2.0.0-storefront-nav-menus",
+      "version-2.0.0-storefront-add-to-cart",
+      "version-2.0.0-storefront-cart-page",
+      "version-2.0.0-storefront-cart-modification",
+      "version-2.0.0-storefront-checkout-page",
+      "version-2.0.0-storefront-order-view-page",
+      "version-2.0.0-storefront-login",
+      "version-2.0.0-storefront-account-management"
     ],
     "Developer How-To: Meteor app": [
       "version-2.0.0-how-to-change-the-favicon",

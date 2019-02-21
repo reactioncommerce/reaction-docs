@@ -86,8 +86,21 @@
       "fixtures-images"
     ],
     "Developer How-To: GraphQL Clients": [
-      "how-to-client-checkout-flow",
       "how-to-get-shop-id-for-client"
+    ],
+    "Storefront UI Development Guide": [
+      "storefront-intro",
+      "storefront-apollo-client",
+      "storefront-product-listing-page",
+      "storefront-product-detail-page",
+      "storefront-nav-menus",
+      "storefront-add-to-cart",
+      "storefront-cart-page",
+      "storefront-cart-modification",
+      "storefront-checkout-page",
+      "storefront-order-view-page",
+      "storefront-login",
+      "storefront-account-management"
     ],
     "Developer How-To: Meteor app": [
       "how-to-change-the-favicon",
