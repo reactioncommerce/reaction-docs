@@ -20,6 +20,6 @@ query anonymousCartByCartIdQuery($cartId: ID!, $token: String!, $itemsAfterCurso
 }
 ```
 
-Typically we recommend an infinite loading style pagination for cart items. When the user is scrolling and nears the bottom of the list, refetch this query with `itemsAfterCursor` variable set to the `cursor` from the last item's edge.
+Typically we recommend an infinite scrolling style pagination for cart items. When the user is scrolling and nears the bottom of the list, refetch this query with `itemsAfterCursor` variable set to the `cursor` from the last item's edge.
 
 Next Task: [Implement cart modification](./storefront-cart-modification.md)
