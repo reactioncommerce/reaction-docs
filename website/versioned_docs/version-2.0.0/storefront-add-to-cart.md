@@ -8,7 +8,7 @@ This article is part of the [Storefront UI Development Guide](./storefront-intro
 - Previous Task: [Build navigation menus](./storefront-nav-menus.md)
 - Next Task: [Build a cart page](./storefront-cart-page.md)
 
-In Reaction, there are anonymous carts and account carts. For more information, refer to [Concepts: Carts](./concepts-cards.md). Since we haven't added a way to log in to the storefront yet, we're going to work only with anonymous carts in this section.
+In Reaction, there are anonymous carts and account carts. For more information, refer to [Concepts: Carts](./concepts-carts.md). Since we haven't added a way to log in to the storefront yet, we're going to work only with anonymous carts in this section.
 
 In your UI, on product list items, the product detail page, or both, you will add a button, which usually says something like "Add to Cart". This button must invoke logic that decides which GraphQL mutation to use:
 - If you already have an anonymous cart ID and token in your application state, call the `addCartItems` mutation.
