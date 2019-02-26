@@ -3,7 +3,7 @@ id: swag-shop-7
 title: Creating a Server-side GraphQL plugin
 ---
 
-For our Homepage we want to have some dynamic content that can be changed by non-developers. Specifically we want feature a subset of products on the home page, which we will call "Featured Products". These products will be designated by just adding a particular tag with the name "featured-products". What we want to create is a new GraphQL query that will return a cursor of products that are tagged with this tag.
+For our Homepage we want to have some dynamic content that can be changed by non-developers. Specifically we want to feature a subset of products on the home page, which we will call "Featured Products". These products will be designated by just adding a particular tag with the name "featured-products". What we want to create is a new GraphQL query that will return a cursor of products that are tagged with this tag.
 
 To do this we need to create a new plugin in the `Reaction` project. We are going to call this plugin `featured-products` and you can find the finished code in the `server` folder in the tutorial repository. You need to place this new directory in `imports/plugins/custom` from the root of your Reaction project
 
