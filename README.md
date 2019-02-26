@@ -1,4 +1,6 @@
 # reaction-docs
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Freactioncommerce%2Freaction-docs.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Freactioncommerce%2Freaction-docs?ref=badge_shield)
+
 
 📝 `reaction-docs` is the new static documentation generator for all Reaction Commerce projects.
 
@@ -148,3 +150,7 @@ Merging to `staging` will trigger a CircleCI build to https://reaction-docs-stag
 ### Merge to `master` branch
 
 Merging to `master` will trigger a CircleCI build to http://reaction-docs-production.netlify.com
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Freactioncommerce%2Freaction-docs.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Freactioncommerce%2Freaction-docs?ref=badge_large)
