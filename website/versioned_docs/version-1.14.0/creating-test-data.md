@@ -13,7 +13,7 @@ For non-Meteor Jest tests, Reaction Commerce provides a simple data `Factory` te
 Creating mock data structures.
 ``` js
 import { Factory } from "/imports/test-utils/helpers/factory";
-const mockTag = Factory.Tags.makeOne();
+const mockTag = Factory.Tag.makeOne();
 ```
 The `mockTag` output returns an object with fake data like this:
 ```js
@@ -37,7 +37,7 @@ The `mockTag` output returns an object with fake data like this:
 ```
 
 ```js
-const mockTags = Factory.Tags.makeMany(2);
+const mockTags = Factory.Tag.makeMany(2);
 ```
 The `mockTags` output returns an object with fake data like this:
 ```js
@@ -81,7 +81,7 @@ The `mockTags` output returns an object with fake data like this:
 
 Creating mock data with custom property values. Sometimes you may need mock data to have a custom or consistent property, a `shopId` on a list of Tags is an example of a property that you might want the same for each `mockTag` created. To do this you can provide a properties object as an argument to ether the `makeOne` or `makeMany` factory methods to overwrite the mock data's mock value.
 ``` js
-const mockTag = Factory.Tags.makeOne({ shopId: "1234" });
+const mockTag = Factory.Tag.makeOne({ shopId: "1234" });
 ```
 The `mockTag` output returns an object with custom data like this:
 ```js
@@ -106,7 +106,7 @@ The `mockTag` output returns an object with custom data like this:
 
 Creating mock data with custom property function. When creating many mock object you may need more control over the some of mock values, for example having sequential `_id` properties for each `mockTag` for more predictable test cases. To do this you can define an arrow function as a value in the properties arguments object the return value will be the new mockValue.
 ``` js
-const mockTags = Factory.Tags.makeMany(2, { shopId: "1234", _id: (i) => (i + 100).toString() });
+const mockTags = Factory.Tag.makeMany(2, { shopId: "1234", _id: (i) => (i + 100).toString() });
 ```
 The `mockTags` output returns an object with custom data like this:
 ```js
