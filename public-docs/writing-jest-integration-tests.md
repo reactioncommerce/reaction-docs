@@ -61,6 +61,15 @@ mockAccount = Factory.Accounts.makeOne({
 await testApp.createUserAndAccount(mockAccount);
 ```
 
+### Create a User with Owner Admin role
+
+```js
+mockAdminAccount = Factory.Accounts.makeOne({
+  // ...any specific properties you need on the account
+});
+await testApp.createUserAndAccount(mockAdminAccount, ["owner"]);
+```
+
 ### Set and Clear the Logged in User
 
 ```js
