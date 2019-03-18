@@ -118,6 +118,7 @@ Run these commands from the `reaction-platform` directory:
 | `make rm`                  | Removes all containers. Volumes are not removed.                                      |
 | `make clean`               | Removes all containers, networks, and volumes. Any volume data will be lost.          |
 | `make init-<project-name>` | Example: `make init-reaction-next-starterkit`. Does clone/setup for a single project. |
+| `make clone`               | Run from a specific project to bootstrap with a particular Git branch. Read [more](https://github.com/reactioncommerce/reaction-platform/blob/master/README.md#bootstrapping). |
 
 Learn more about [Reaction Platform](https://github.com/reactioncommerce/reaction-platform).
 
