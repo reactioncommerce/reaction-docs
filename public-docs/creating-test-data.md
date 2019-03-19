@@ -42,7 +42,7 @@ The `mockTag` output returns an object with fake data like this:
 
 ### Mock multiple objects
 
-Use the `makeMany` method and pass an integer to make multiple instances of one collection:
+Use the `makeMany` method and pass an integer to make multiple instances of one object:
 
 ```js
 const mockTags = Factory.Tag.makeMany(2);
@@ -120,10 +120,12 @@ The `mockTag` output returns an object with custom data like this:
 
 ### Mock multiple object with custom values
 
-Creating mock data with custom property function. When creating many mock object you may need more control over the some of mock values, for example having sequential `_id` properties for each `mockTag` for more predictable test cases. To do this you can define an arrow function as a value in the properties arguments object the return value will be the new mockValue.
+Creating mock data with custom property function. When creating many mock object, you may need more control over the some of mock values, for example having sequential `_id` properties for each `mockTag` for more predictable test cases. To do this, you can define an arrow function as a value in the property's arguments object and the return value will be the new mockValue.
+
+Pass an arrow function with an index:
 
 ``` js
-const mockTags = Factory.Tag.makeMany(2, { shopId: "1234", _id: (i) => (i + 100).toString() });
+const mockTags = Factory.Tag.makeMany(2, { shopId: "1234", _id: (index) => (index + 100).toString() });
 ```
 
 The `mockTags` output returns an object with custom data like this:
@@ -167,17 +169,23 @@ The `mockTags` output returns an object with custom data like this:
 ]
 ```
 
-Iterators can be passed from one `makeMany` method into another `makeMany` method. This example creates many CatalogItems with CatalogProducts with a specified `product._id` value:
+Indexes can be passed from one `makeMany` method into another `makeMany` method. In this example, passing `30` into `makeMany` will then pass `30` into `makeMockProductWithSpecificId`. This way, you can create many CatalogItems with CatalogProducts with a specified `product._id` value:
 
-```
-const mockCatalogItemsWithFeaturedProducts = Factory.Catalog.makeMany(30, {
-  product: (iterator) => Factory.CatalogProduct.makeOne({
-    _id: (iterator + 100).toString(),
+```js
+function makeMockProductWithSpecificId(index) {
+  const productId = (index + 100).toString();
+
+  return Factory.CatalogProduct.makeOne({
+    _id: productId,
     isDeleted: false,
     isVisible: true,
     tagIds: [mockTagWithFeatured._id],
     shopId: internalShopId
-  }),
+  });
+}
+
+const mockCatalogItemsWithFeaturedProducts = Factory.Catalog.makeMany(30, {
+  product: makeMockProductWithSpecificId,
   shopId: internalShopId
 });
 ```
