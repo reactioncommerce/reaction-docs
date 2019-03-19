@@ -56,7 +56,7 @@ title: Community showcase
     <img src="/assets/community-showcase-icemachinesplus.png">
     <div>
       <p class="item-info">Ice Machines Plus</p>
-      <p class="item-info item-label">USAK</p>
+      <p class="item-info item-label">USA</p>
       <p class="item-info item-label">Ecommerce</p>
     </div>
   </a>
