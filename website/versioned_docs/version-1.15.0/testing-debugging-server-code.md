@@ -80,7 +80,7 @@ In this example, the code stopped executing at a breakpoint in the Products publ
 
 5. At this breakpoint, you can access the Console by hitting <kbd>esc</kbd> and opening the _Drawer_.
 
-![DevTools setup](http://g.recordit.co/1hRutFIaLe.gif)
+![](/assets/devtools.gif "DevTools setup")
 
 Now you can watch variables, check the call stack and investigate scope to better debug while you develop.
 

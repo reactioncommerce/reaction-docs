@@ -53,6 +53,30 @@ original_id: community-showcase
       <p class="item-info item-label">Ecommerce</p>
     </div>
   </a>
+  <a href="https://www.icemachinesplus.com/" class="showcase-grid-item" target="_blank">
+    <img src="/assets/community-showcase-icemachinesplus.png">
+    <div>
+      <p class="item-info">Ice Machines Plus</p>
+      <p class="item-info item-label">USA</p>
+      <p class="item-info item-label">Ecommerce</p>
+    </div>
+  </a>
+  <a href="https://www.dispatchcoffee.ca/" class="showcase-grid-item" target="_blank">
+    <img src="/assets/community-showcase-dispatch-coffee.png">
+    <div>
+      <p class="item-info">Dispatch Coffee</p>
+      <p class="item-info item-label">Canada</p>
+      <p class="item-info item-label">Ecommerce, Subscription</p>
+    </div>
+  </a>
+  <a href="https://classactdesigns.com" class="showcase-grid-item" target="_blank">
+    <img src="/assets/community-showcase-classactdesigns.png">
+    <div>
+      <p class="item-info">Class Act Designs</p>
+      <p class="item-info item-label">USA</p>
+      <p class="item-info item-label">Ecommerce</p>
+    </div>
+  </a>
 </div>
 
 ## Building a project on Reaction?
