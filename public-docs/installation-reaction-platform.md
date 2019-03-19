@@ -93,8 +93,8 @@ docker-compose logs -f
 
 | Directory: Service                                                                         | URL                                                           |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [localhost:3000/graphql-alpha](localhost:3000/graphql-alpha) |
-| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [localhost:3000/graphiql](localhost:3000/graphiql)            |
+| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [POST localhost:3000/graphql-alpha](localhost:3000/graphql-alpha) |
+| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [GET localhost:3000/graphql-alpha](localhost:3000/graphql-alpha)            |
 | [`reaction`](https://github.com/reactioncommerce/reaction): Classic UI                     | [localhost:3000](localhost:3000)                              |
 | [`reaction`](https://github.com/reactioncommerce/reaction): MongoDB                        | [localhost:27017](localhost:27017)                            |
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra         | [localhost:4444](localhost:4444)                              |
@@ -118,6 +118,7 @@ Run these commands from the `reaction-platform` directory:
 | `make rm`                  | Removes all containers. Volumes are not removed.                                      |
 | `make clean`               | Removes all containers, networks, and volumes. Any volume data will be lost.          |
 | `make init-<project-name>` | Example: `make init-reaction-next-starterkit`. Does clone/setup for a single project. |
+| `make clone`               | Run from a specific project to bootstrap with a particular Git branch. Read [more](https://github.com/reactioncommerce/reaction-platform/blob/master/README.md#bootstrapping). |
 
 Learn more about [Reaction Platform](https://github.com/reactioncommerce/reaction-platform).
 

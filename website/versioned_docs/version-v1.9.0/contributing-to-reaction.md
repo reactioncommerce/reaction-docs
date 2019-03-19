@@ -3,7 +3,7 @@ id: version-v1.9.0-contributing-to-reaction
 title: Contributing Guide
 original_id: contributing-to-reaction
 ---
-    
+
 At Reaction Commerce, we're dedicated to the open source community. In fact, we've designed our entire platform and business to grow from the passion and creativity that an open source community ignites. We've already attracted a small, dedicated team of open source contributors, and there's always room for more. If you'd like to join us, here's how to get started.
 
 ## Step 1: Get Reaction running
@@ -47,7 +47,11 @@ If you are interested in a specific aspect of the project but aren't sure where 
 
 ## Step 3: Prepare a pull request for review
 
+Branch off `develop` for your PR branch, unless you're fixing an urgent issue to a specific release that is still supported.
+
 Once your branch fulfills the issue it tackles, you are ready to [create a pull request](https://help.github.com/articles/creating-a-pull-request/) (PR).
+
+Select `develop` as the base branch (the branch you want your changes pulled into).
 
 ### Use our Git commit message conventions
 
@@ -56,13 +60,6 @@ Follow the [Git Style Guide](git-style-guide.md) rules outlined in the docs for 
 ### Give your PR a good title
 
 Title the PR with the ID number of the GitHub issue. Add `WIP` (work in progress) to the beginning of the title if your PR is still in development and you do not want it to be merged.
-
-### Pass all tests
-
-As soon as your PR is pushed, automated test run to ensure:
-
-- `npm run lint`: Pass current continuous integration tests
-- `reaction test`: Pass linter code review and follow Reaction style guidelines
 
 ### Fill out the pull request template
 
@@ -109,6 +106,13 @@ Before you are ready for a team code review, you will also have to fill out the 
 - **Testing Instructions**
   - Write instructions for testing your changes. You can assume that reviewers know how to start the app and how to perform basic setup tasks. For any task where there may be multiple ways to do something, be explicit. (e.g. there are several ways to "Create a Product" and many options once created before a product is published).
   - The steps you list should guide the reviewer through testing the feature or fix you've implemented. These steps will generally be very similar to the reproduction steps in the issue.
+
+### Pass all tests
+
+As soon as your PR is pushed, automated tests run to ensure:
+
+- `npm run lint`: Code style is correct
+- `npm run test`: All unit and integration tests pass
 
 ## Step 4: PR review process begins
 

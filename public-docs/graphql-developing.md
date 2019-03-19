@@ -65,11 +65,11 @@ Newer Reaction code runs within a single `ReactionNodeApp` instance, which is cr
 - Builds the `context` object that’s available in all resolver functions. See [The Reaction GraphQL Context](#the-reaction-graphql-context)
 - Formats the `errors` array that is returned to clients, to make errors as helpful as possible
 - Provides the merged GraphQL schema
-- Sets the path as `/graphql-alpha` and exposes a GraphiQL UI on `/graphiql`
+- Sets the path as `/graphql-alpha` and exposes a GraphQL Playground for GET requests on `/graphql-alpha`
 
 ## The Reaction GraphQL Context
 
-All GraphQL resolvers receive a [context](https://www.apollographql.com/docs/apollo-server/setup.html#graphqlOptions.context) object as their third argument. The base context is built within the `ReactionNodeApp` constructor, and additional request-specific properties (like `accountId` and `userHasPermission`) are added to it in `/imports/node-app/core/util/buildContext.js`.
+All GraphQL resolvers receive a [context](https://www.apollographql.com/docs/apollo-server/essentials/data.html#context) object as their third argument. The base context is built within the `ReactionNodeApp` constructor, and additional request-specific properties (like `accountId` and `userHasPermission`) are added to it in `/imports/node-app/core/util/buildContext.js`.
 
 If you call a function that needs the context object, and you’re calling from within a Meteor method or publication, you can build it like this:
 

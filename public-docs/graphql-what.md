@@ -11,4 +11,4 @@ To understand our pagination approach, which is Relay-spec compliant, use these 
 - http://graphql.org/learn/pagination/
 - https://facebook.github.io/relay/docs/en/graphql-server-specification.html#connections
 - https://facebook.github.io/relay/graphql/connections.htm
-- https://www.apollographql.com/docs/react/recipes/pagination.html
+- https://www.apollographql.com/docs/react/features/pagination.html#relay-cursors
