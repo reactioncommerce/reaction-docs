@@ -69,7 +69,7 @@ title: Community showcase
     </div>
   </a>
   <a href="https://classactdesigns.com" class="showcase-grid-item" target="_blank">
-    <img src="/assets/community-classactdesigns.png">
+    <img src="/assets/community-showcase-classactdesigns.png">
     <div>
       <p class="item-info">Class Act Designs</p>
       <p class="item-info item-label">USA</p>
