@@ -69,23 +69,7 @@ Meteor.call("cart/removeFromCart", itemId, quantity);
 
 ### cart/copyCartToOrder
 
-Transforms cart document to order.
-
-```js
-/**
- * cart/copyCartToOrder
- * @summary transform cart to order
- * when a payment is processed we want to copy the cart
- * over to an order object, and give the user a new empty
- * cart. reusing the cart schema makes sense, but integrity of
- * the order, we don't want to just make another cart item
- * @todo:  Partial order processing, shopId processing
- * @todo:  Review Security on this method
- * @param {String} cartId - cartId to transform to order
- * @return {String} returns orderId
- */
-Meteor.call("cart/copyCartToOrder", cartId);
-```
+Meteor method deprecated. Use `createOrder` GraphQL mutation.
 
 ### cart/setShipmentMethod
 
