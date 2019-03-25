@@ -42,7 +42,6 @@ Under Settings, you can view the rest of your store's feature settings, which yo
 - [Taxes](tax.md) - Enable custom taxes
 - [Template](template.md) - Customize your email's messaging and look and feel
 - [Search](search.md) - Configure your store's search settings
-- [SMS Notifications](sms-notifications.md) - Enable SMS notifications
 - [Shipping](shipping-admin.md) - Set up and manage your shipping rates and Shippo integration
 
 ## FAQ
