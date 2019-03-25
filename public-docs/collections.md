@@ -102,8 +102,7 @@ Reaction Core collections defined in `lib/collections/collections.js` extend [Mo
 
 - [aldeed:AutoForm](https://github.com/aldeed/meteor-autoform)
 - [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
-- [aldeed:simple-schema](https://github.com/aldeed/meteor-simple-schema)
-- [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
+- [aldeed:simple-schema-js](https://github.com/aldeed/simple-schema-js)
 
 Collections and Schemas can be used to create or customize collections, including extending Reaction Core collections.
 
