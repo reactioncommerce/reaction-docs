@@ -60,10 +60,12 @@ function addRolesToVisitors() {
 Then let's add another Hook Event to call that code.
 
 ```js
+import appEvents from "/imports/node-app/core/util/appEvents";
+
 /**
  * Hook to make additional configuration changes
  */
-Hooks.Events.add("afterCoreInit", () => {
+appEvents.on("afterCoreInit", () => {
   addRolesToVisitors();
 });
 ```
@@ -99,4 +101,3 @@ Next [Workflow](plugin-workflow-7.md)
 Read More
 
 [Routing](routing.md)
-[Hooks](1.16.0/event-hooks.md)
