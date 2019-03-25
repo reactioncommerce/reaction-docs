@@ -11,10 +11,11 @@ Software that evolves will sooner or later have to change existing data in their
 
 On application startup, Reaction will migrate to the latest database revision. It does so by sourcing the revision files in directory [`/imports/plugins/core/versions/server/migrations/*.js`](https://github.com/reactioncommerce/reaction/tree/master/imports/plugins/core/versions/server/migrations) and apply their content's database instructions, if necessary.
 
-[**/imports/plugins/core/versions/server/startup.js**](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/versions/server/startup.js)
+[**/imports/plugins/core/versions/server/startup.js**](https://github.com/reactioncommerce/reaction/blob/v2.0.0-rc.11/imports/plugins/core/versions/server/startup.js#L32)
 
 ```js
-Hooks.Events.add("afterCoreInit", () => {
+appEvents.on("afterCoreInit", () => {
+  // ...
   Migrations.migrateTo("latest");
 });
 ```
