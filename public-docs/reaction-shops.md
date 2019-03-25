@@ -31,11 +31,7 @@ Meteor.call("shop/getLocale");
 
 ### shop/getCurrencyRates
 
-Returns the current exchange rate against the shop currency
-
-```js
-Meteor.call("shop/getCurrencyRates", "USD");
-```
+Meteor method deprecated. Use [this method](https://github.com/reactioncommerce/reaction/pull/4803) instead. 
 
 ### shop/flushCurrencyRate
 
