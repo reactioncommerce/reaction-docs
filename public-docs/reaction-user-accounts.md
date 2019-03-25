@@ -112,15 +112,7 @@ Meteor.call("accounts/inviteShopMember", shopId, email, name);
 
 ### accounts/sendWelcomeEmail
 
-Send a welcome email to consumers
-
-#### Example
-
-```js
-import { Meteor } from "meteor/meteor";
-
-Meteor.call("accounts/sendWelcomeEmail", shopId, userId);
-```
+Deprecated Meteor method as of [https://github.com/reactioncommerce/reaction/pull/4867](https://github.com/reactioncommerce/reaction/pull/4867). Calls from server code should be updated to import and call the util function.
 
 ### accounts/addUserPermissions
 
