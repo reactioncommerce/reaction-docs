@@ -1,4 +1,4 @@
----
+[---
 id: simple-schema
 title: Schemas
 ---
@@ -60,35 +60,11 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 
 ### Reaction Schemas
 
-View all schemas in the [API Docs](http://api.docs.reactioncommerce.com/schemas.html).
-
-| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/master/lib/collections/schemas) | \*                |
-| ---------------------------------------------------------------------------------------------------- | ----------------- |
-| Email                                                                                                | Address           |
-| Accounts                                                                                             | CartItem          |
-| CartItem                                                                                             | CartItems         |
-| Cart                                                                                                 | DiscountType      |
-| DiscountRules                                                                                        | Discounts         |
-| Layout                                                                                               | OrderItem         |
-| OrderTransaction                                                                                     | Order             |
-| Permissions                                                                                          | Workflow          |
-| PackageConfig                                                                                        | CorePackageConfig |
-| PaymentMethod                                                                                        | Invoice           |
-| Payment                                                                                              | VariantMedia      |
-| ProductPosition                                                                                      | ProductVariant    |
-| Product                                                                                              | ShippingMethod    |
-| ShipmentQuote                                                                                        | ShipmentItem      |
-| ShippingParcel                                                                                       | Shipment          |
-| ShippingProvider                                                                                     | Shipping          |
-| CustomEmailSettings                                                                                  | Metafield         |
-| Currency                                                                                             | Locale            |
-| Shop                                                                                                 | Tag               |
-| TaxRates                                                                                             | Taxes             |
-| Templates                                                                                            | Translation       |
+View all schemas in the [API Docs](http://api.docs.reactioncommerce.com/schemas.html) and [collections/schemas](https://github.com/reactioncommerce/reaction/tree/v2.0.0-rc.11/imports/collections/schemas)
 
 ### Automatic Values
 
-Reaction provides `autoValue` helpers in [`/lib/collections/schemas/helpers.js`](https://github.com/reactioncommerce/reaction/blob/v1.8.0/lib/collections/schemas/helpers.js).
+Reaction provides `autoValue` helpers in [`/lib/collections/schemas/helpers.js`](https://github.com/reactioncommerce/reaction/blob/v2.0.0-rc.11/imports/collections/schemas/helpers.js).
 
 ```js
 /**
@@ -116,9 +92,7 @@ export const SchemaExample =  new SimpleSchema({
 | `createdAtAutoValue`     | Date representing now, if it's an insert                                              |
 | `updatedAtAutoValue`     | Date representing now                                                                 |
 | `shopIdAutoValue`        | Current shopId                                                                        |
-| `shopIdAutoValueForCart` | Current shopId for a cart                                                             |
 | `schemaIdAutoValue`      | A `Random.id()` only if not already set on the server, or if inserting on the client. |
-| `shopDefaultCountry`     | The country value from the default shop                                               |
 
 ### Examples
 
