@@ -3,7 +3,39 @@ id: appevent-hooks
 title: App Event Hooks
 ---
 
-The `Hooks.Events` API and `MethodHooks` from previous versions of Reaction have been deprecated in favor of `appEvents`. 
+The `Hooks.Events` API and `MethodHooks` from previous versions of Reaction have been deprecated in favor of `appEvents`. `appEvents`, like hooks, allow you to attach callbacks to particular events throughout the app lifecycle.
+
+## Emit an app event
+
+Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming.
+
+### In New Server Code
+
+```js
+context.appEvents.emit("eventName", payload, options);
+```
+
+### In Meteor Server Code
+
+```js
+import Reaction from "/imports/plugins/core/core/server/Reaction";
+import getGraphQLContextInMeteorMethod from "/imports/plugins/core/graphql/server/getGraphQLContextInMeteorMethod";
+
+// In a Meteor method or publication:
+const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId()));
+context.appEvents.emit("eventName", payload, options);
+```
+
+## Listen for an app event
+
+See "Run plugin code on app startup" and attach event listeners in startup code.
+
+```js
+// In startup function:
+context.appEvents.on("eventName", (payload, options) => {
+  // Handle the event
+});
+```
 
 ## Events
 
