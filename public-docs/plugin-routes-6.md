@@ -99,5 +99,4 @@ Next [Workflow](plugin-workflow-7.md)
 Read More
 
 [Routing](routing.md)
-
-[Hooks](event-hooks.md)
+[Hooks](1.16.0/event-hooks.md)

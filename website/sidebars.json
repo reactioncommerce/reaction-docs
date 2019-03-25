@@ -146,7 +146,6 @@
       "reaction-import",
       "reaction-inventory",
       "reaction-localization",
-      "event-hooks",
       "reaction-module-cheatsheet",
       "template-helpers"
     ],
