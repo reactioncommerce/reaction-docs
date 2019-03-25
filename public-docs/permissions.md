@@ -231,6 +231,8 @@ So, if you had a previous reference to `shop.defaultVisitorRoles`, use the group
 If you need to have more default groups on initializing your app, you can call the `createGroups()` method passing in the shopId and a roles object containining key-value pairs representing the group slug (key) and array of roles for the group (value). See the [documentation page](http://api.docs.reactioncommerce.com/global.html#createGroups) for more details. This can be done, for example, in an `afterCoreInit` function e.g
 
 ```js
+import appEvents from "/imports/node-app/core/util/appEvents";
+
 appEvents.on("afterCoreInit", () => {
   Reaction.createGroups({
     shopId,
