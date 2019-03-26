@@ -244,6 +244,8 @@ If you need to ensure indexes on any fields, the startup function is a good plac
 Use the `collectionIndex` util function. It handles errors in a standard way.
 
 ```js
+import collectionIndex from "/imports/utils/collectionIndex";
+
 export default function startup(context) {
   collectionIndex(collections.Surcharges, { shopId: 1 });
 }
