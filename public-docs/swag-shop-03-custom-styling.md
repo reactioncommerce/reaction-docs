@@ -10,7 +10,7 @@ All the CSS styles can be added directly in `lib/reactionTheme.js` file. The Sta
 For example, to style the Header component:
 
 1. Open the Header component at `/src/components/Header/Header.js` and take note of the `name` of the Component passes to `withStyle`. Here it is "Header" as is evident from the line `@withStyles(styles, { name: "Header" })`
-2. Open `lib/reactionTheme.js` and in the object being passed to `createMuiTheme` add a property `overrides` in the following way:
+2. Open `src/custom/reactionTheme.js` and in the object being passed to `createMuiTheme` add a property `overrides` in the following way:
   ```javascript
   const theme = createMuiTheme({
     overrides: {
