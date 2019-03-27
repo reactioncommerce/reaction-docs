@@ -153,6 +153,7 @@
       "template-helpers"
     ],
     "For Developers: Meteor App Client Components": [
+      "blocks-api",
       "components",
       "components-api",
       "alerts",
