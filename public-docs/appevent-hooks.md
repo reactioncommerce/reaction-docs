@@ -3,7 +3,7 @@ id: appevent-hooks
 title: App Event Hooks
 ---
 
-The `Hooks.Events` API and `MethodHooks` from previous versions of Reaction have been deprecated in favor of `appEvents`. `appEvents`, like hooks, allow you to attach callbacks to particular events throughout the app lifecycle.
+The `Hooks.Events` API and `MethodHooks` from previous versions of Reaction have been removed in favor of `appEvents`. `appEvents`, like hooks, allow you to attach callbacks to particular events throughout the app lifecycle.
 
 ## Emit an app event
 
