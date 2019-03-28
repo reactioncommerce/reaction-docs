@@ -7,7 +7,16 @@ The `Hooks.Events` API and `MethodHooks` from previous versions of Reaction have
 
 ## Emit an app event
 
-Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming.
+Emit app events in API code using `appEvents.emit`. The `emit` function takes at least two parameters: the name of the event as a string and the `payload` of functions as an object.
+
+### Function parameters and options
+
+- *Event name*: The first argument is the event name, as a string. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming. See events table below.
+- *Payload*: The second argument, the `payload`, should always be an object, and not an entity object. Rather than passing `order` in directly, pass it in an object: `{ order }`, so that more fields can be added or removed from the payload more easily.
+- *Option arguments*: The last argument is an array of arguments to pass to each function from `payload`.
+- *Using `await`*: Using the method with `await` will not resolve until all of the registered handler methods have resolved.
+
+## Examples
 
 ### In New Server Code
 
@@ -16,6 +25,8 @@ context.appEvents.emit("eventName", payload, options);
 ```
 
 ### In Meteor Server Code
+
+In Meteor code, fetch the GraphQL `context` in a Promise, and use `context.appEvents`:
 
 ```js
 import Reaction from "/imports/plugins/core/core/server/Reaction";
@@ -28,12 +39,26 @@ context.appEvents.emit("eventName", payload, options);
 
 ## Listen for an app event
 
-See "Run plugin code on app startup" and attach event listeners in startup code.
+See ["Run plugin code on app startup"](dev-how-do-i.md) and attach event listeners in startup code.
 
 ```js
 // In startup function:
 context.appEvents.on("eventName", (payload, options) => {
   // Handle the event
+});
+```
+
+## Avoid infinite loops
+
+It's possible to get stuck in an infinite loop of emitting and listening for the same event. To avoid this, pass `emittedBy` key with a string value in the third options parameter on the `emit`, and check for it on the `on` function:
+
+```js
+const EMITTED_BY_NAME = "myPluginHandler";
+
+appEvents.on("afterCartUpdate", async ({ cart }, { emittedBy } = {}) => {
+  if (emittedBy === EMITTED_BY_NAME) return; // short circuit infinite loops
+   
+  appEvents.emit("afterCartUpdate", { cart: updatedCart, updatedBy: userId }, { emittedBy: EMITTED_BY_NAME });
 });
 ```
 
