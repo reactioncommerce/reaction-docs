@@ -12,16 +12,18 @@ These are the key differences:
 
 ## GraphQL Integration Tests
 
-GraphQL integration tests are useful for testing things like
+GraphQL integration tests are useful for testing things like:
 
-- queries involving multiple resolvers
-- response pagination
-- whether mutations properly affect the MongoDB collections
-- the effect of complex permission rules on query results
+- Queries involving multiple resolvers
+- Response pagination
+- Whether mutations properly affect the MongoDB collections
+- The effect of complex permission rules on query results
 
 ### Writing GraphQL Tests
 
 The folder and file structure in `/tests` should match as much as possible the graphql plugin folder structure.
+
+Before writing tests for new queries, make sure the new files are imported in `imports/node-app/devserver` so that the integration test's `TestApp` can find the queries. Import new queries, resolvers, schemas and mutations into their respective file into `imports/node-app/devserver`. For example, a new `schema` file should be imported to `imports/node-app/devserver/schemas.js` and included in the `merge` parameters at the end of the file.
 
 Prior to running the tests in each file, initialize a server, in-memory database, and any collection data you need. Then stop the server when done. The general pattern is something like this:
 
@@ -57,6 +59,15 @@ mockAccount = Factory.Accounts.makeOne({
   // ...any specific properties you need on the account
 });
 await testApp.createUserAndAccount(mockAccount);
+```
+
+### Create a User with Owner Admin role
+
+```js
+mockAdminAccount = Factory.Accounts.makeOne({
+  // ...any specific properties you need on the account
+});
+await testApp.createUserAndAccount(mockAdminAccount, ["owner"]);
 ```
 
 ### Set and Clear the Logged in User
