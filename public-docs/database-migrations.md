@@ -13,13 +13,6 @@ On application startup, Reaction will migrate to the latest database revision. I
 
 [**/imports/plugins/core/versions/server/startup.js**](https://github.com/reactioncommerce/reaction/blob/v2.0.0-rc.11/imports/plugins/core/versions/server/startup.js#L32)
 
-```js
-appEvents.on("afterCoreInit", () => {
-  // ...
-  Migrations.migrateTo("latest");
-});
-```
-
 The Migrations package keeps track of the applied changes in a dedicated collection aptly called _Migrations_ (configurable):
 ![Screenshot of Collection Migrations](https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/screenshot-migrations-collection.png)
 
