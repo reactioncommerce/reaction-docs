@@ -109,7 +109,9 @@ we try to modify them) so we are going to add our function on to the `afterCoreI
 So we just call out function from the Hook Event we created earlier
 
 ```js
-Hooks.Events.add("afterCoreInit", () => {
+import appEvents from "/imports/node-app/core/util/appEvents";
+
+appEvents.on("afterCoreInit", () => {
     addRolesToVisitors();
     modifyCheckoutWorkflow();
 });

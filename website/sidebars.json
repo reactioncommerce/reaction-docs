@@ -129,6 +129,7 @@
       "workflow"
     ],
     "For Developers: Core Meteor App API": [
+      "appevents-hooks",
       "reaction-core",
       "admin-views",
       "reaction-user-accounts",
@@ -140,15 +141,11 @@
       "reaction-product-detail",
       "reaction-products",
       "reaction-tags",
-      "reaction-cart",
       "reaction-shipping",
       "reaction-orders",
       "reaction-import",
       "reaction-inventory",
       "reaction-localization",
-      "method-hooks",
-      "collection-hooks",
-      "event-hooks",
       "reaction-module-cheatsheet",
       "template-helpers"
     ],
@@ -220,7 +217,6 @@
       "tax",
       "template",
       "search",
-      "sms-notifications",
       "shipping-admin",
       "payments-discounts",
       "operator-address-validation"

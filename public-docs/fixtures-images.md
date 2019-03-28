@@ -34,7 +34,7 @@ Notice: Because the images can only be loaded through the Meteor Assets API, it'
 meteor npm install buffer-stream-reader --save
 ```
 
-Every time the application starts, we want to check if each product has its corresponding image imported already. That can be achieved through adding a Reaction hook:
+Every time the application starts, we want to check if each product has its corresponding image imported already. That can be achieved through adding a Reaction hook on `afterCoreInit`:
 
 **/server/loadProductImages.js**
 
