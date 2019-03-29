@@ -129,9 +129,9 @@
       "workflow"
     ],
     "For Developers: Core Meteor App API": [
-      "appevents-hooks",
+      "appevent-hooks",
       "reaction-core",
-      "admin-views",
+      "admin-views", 
       "reaction-user-accounts",
       "reaction-alerts",
       "analytics",
