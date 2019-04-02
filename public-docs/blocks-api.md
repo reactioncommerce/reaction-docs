@@ -149,6 +149,7 @@ Below is the full API for the Reaction components system. Each of these items ca
 - [`registerBlockHOC()`](#registerblockhoc)
 - [`getBlockHOCs()`](#getblockhocs)
 - [`copyBlockHOCs()`](#copyblockhocs)
+- [`loadRegisteredBlocks()`](#loadregisteredblocks)
 
 ### [Registered Blocks](#registeredblocks)
 
@@ -397,6 +398,16 @@ const MyExtraProductFieldsBlockWithHOCs = copyBlockHOCs({
     block: "ProductDetailForm",
     MyExtraProductFields
 });
+```
+
+### loadRegisteredBlocks()
+
+Used to wrap/load all registered Block Components on app startup. This generally should be run right before the router assembles the app tree so that all components are available for the UI. This is run by Reaction internally, so no third parties should ever need to use it.
+
+```js
+import { loadRegisteredBlocks } from "@reactioncommerce/reaction-components";
+
+Meteor.startup(() => loadRegisteredBlocks());
 ```
 
 ## Registered Blocks
