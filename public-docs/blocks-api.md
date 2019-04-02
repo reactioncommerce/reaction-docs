@@ -414,6 +414,8 @@ Meteor.startup(() => loadRegisteredBlocks());
 
 ### Product Detail
 
+All blocks inherit props from the `withProduct` HOC.
+
 | Region               | Block                | HOCs              | Priority |
 |----------------------|----------------------|-------------------|----------|
 | ProductDetailSidebar | VariantList          |                   | 10       |
@@ -426,6 +428,8 @@ Meteor.startup(() => loadRegisteredBlocks());
 | ProductDetailMain    | VariantTable         |                   | 60       |
 
 ### Variant Detail
+
+All blocks inherit props from the `withProduct` and `withVariant` HOC.
 
 | Region               | Block                | HOCs              | Priority |
 |----------------------|----------------------|-------------------|----------|
