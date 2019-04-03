@@ -31,7 +31,7 @@ Meteor.call("shop/getLocale");
 
 ### shop/getCurrencyRates
 
-Meteor method deprecated. Use [this method](https://github.com/reactioncommerce/reaction/pull/4803) instead. 
+Meteor method removed. Use [this method](https://github.com/reactioncommerce/reaction/pull/4803) instead. 
 
 ### shop/flushCurrencyRate
 

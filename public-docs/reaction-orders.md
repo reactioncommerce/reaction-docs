@@ -26,7 +26,7 @@ Products.update({
 
 ### orders/addOrderEmail
 
-Called when a customer has checked out as a guest, then adds an email within the order confirmation page. This also adds an email field to `Reaction.Collections.Orders.email`
+Meteor method removed as of [release-2.0.0-rc.7](https://github.com/reactioncommerce/reaction/pull/4815/commits/1de05d5421fa1bafb8a1f543a9d57922cd5734b3)
 
 ### orders/updateHistory
 
