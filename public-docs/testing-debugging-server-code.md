@@ -14,42 +14,37 @@ Here are the steps to get started using Reaction in `inspect` mode in any editor
 Check your Reaction version by running:
 
 ```sh
-docker-compose run --rm reaction reaction -v
+grep '"version"' package.json
 ```
 
 You should see an output of Reaction's version:
 
 ```sh
-Node: 8.11.4
-NPM: 5.6.0
-Meteor Node: 8.11.4
-Meteor NPM: 6.4.1
-Reaction CLI: 0.29.0
-Reaction: 2.0.0-rc.10
+"version": "2.0.0-rc.10",
 ```
 
 If your Reaction version is older than 1.6, you will have to upgrade to at least 1.6 first.
 
-2. Now you're ready to run `reaction` in inspect mode.
+2. Now you're ready to run reaction in inspect mode.
 
-If you're using Docker to develop, first, make sure you are not already running `reaction ` with `docker-compose up`. In that case, make sure you `docker-compose down` first. Then, run `reaction` with one of the following `inspect` flags:
+If you're using Docker to develop, first, make sure you are not already running `reaction ` with `docker-compose up`. In that case, make sure you `docker-compose stop reaction` first. Then, run reaction with one of the following `inspect` flags:
 
 ```sh
-docker-compose run --rm --service-ports reaction yarn inspect-docker
+docker-compose run --rm --service-ports --name reaction reaction npm run inspect-docker
 ```
 
 ```sh
-docker-compose run --rm --service-ports reaction yarn inspect-brk-docker
+docker-compose run --rm --service-ports --name reaction reaction npm run inspect-brk-docker
 ```
 
 Or, you can run the application in inspect-mode without Docker using:
 
 ```sh
-reaction yarn inspect
+npm run inspect
 ```
 
 ```sh
-reaction yarn inspect-brk
+npm run inspect-brk
 ```
 
 Using `inspect-brk` will break before any user code starts, while `inspect` will break at a specified point. Learn more about `inspect` and `inspect-brk` from the [Node documentation](https://nodejs.org/en/docs/guides/debugging-getting-started/#command-line-options).
@@ -60,7 +55,7 @@ Using `inspect-brk` will break before any user code starts, while `inspect` will
 Debugger listening on ws://127.0.0.1:9229/...
 ```
 
-After that, the application will run, just like running `reaction`.
+After that, the application will run, just like running `npm dev`.
 
 You'll see the typical Reaction application logging:
 
