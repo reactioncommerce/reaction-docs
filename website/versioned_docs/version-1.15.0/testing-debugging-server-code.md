@@ -4,48 +4,59 @@ title: How To: Debug Meteor server-side code
 original_id: testing-debugging-server-code
 ---
 
-You can debug Meteor server code using the `--inspect` flag in Chrome DevTools and within integrated developer environments like [Visual Studio Code (VS Code)](https://code.visualstudio.com/), a free code editor, and [WebStorm by JetBrains](https://www.jetbrains.com/webstorm/).
+You can debug server-side code, both Meteor and Node API code, using Chrome DevTools and within integrated developer environments like [Visual Studio Code (VS Code)](https://code.visualstudio.com/), a free code editor and [WebStorm by JetBrains](https://www.jetbrains.com/webstorm/).
 
 Here are the steps to get started using Reaction in `inspect` mode in any editor:
 
 ## Launch the application in `inspect` mode
 
-1. Before we get started, make sure you have at least Reaction 1.6.
+1. Before we get started, make sure you are running Reaction 2.0.
 
-You can do that by running:
+Check your Reaction version by running:
 
 ```sh
-reaction -v
+grep '"version"' package.json
 ```
 
 You should see an output of Reaction's version:
 
 ```sh
-Node: 8.2.1
-NPM: 5.6.0
-Meteor Node: 8.9.3
-Meteor NPM: 5.5.1
-Reaction CLI: 0.24.2
-Reaction: 1.6.4
-Reaction branch: master
-Docker: 17.09.0-ce
+"version": "2.0.0-rc.10",
 ```
 
 If your Reaction version is older than 1.6, you will have to upgrade to at least 1.6 first.
 
-2. Run `reaction` with the `--inspect` flag:
+2. Now you're ready to run reaction in inspect mode.
+
+If you're using Docker to develop, first, make sure you are not already running `reaction ` with `docker-compose up`. In that case, make sure you `docker-compose stop reaction` first. Then, run reaction with one of the following `inspect` flags:
 
 ```sh
-reaction --inspect
+docker-compose run --rm --service-ports --name reaction reaction npm run inspect-docker
 ```
 
-Once this process has started, Node opens a WebSocket to listen for a debugger on port 9229 by default. Once you've successfully attached a debugger, you'll see the Debugger attached message in your Terminal:
+```sh
+docker-compose run --rm --service-ports --name reaction reaction npm run inspect-brk-docker
+```
+
+Or, you can run the application in inspect-mode without Docker using:
+
+```sh
+npm run inspect
+```
+
+```sh
+npm run inspect-brk
+```
+
+Using `inspect-brk` will break before any user code starts, while `inspect` will break at a specified point. Learn more about `inspect` and `inspect-brk` from the [Node documentation](https://nodejs.org/en/docs/guides/debugging-getting-started/#command-line-options).
+
+3. Once this process has started, Node opens a WebSocket to listen for a debugger on port 9229 by default. Once you've successfully attached a debugger, you'll see the Debugger attached message in your Terminal:
 
 ```sh
 Debugger listening on ws://127.0.0.1:9229/...
 ```
 
-After that, the application will run, just like running `reaction`.
+After that, the application will run, just like running `npm dev`.
 
 You'll see the typical Reaction application logging:
 
@@ -80,7 +91,7 @@ In this example, the code stopped executing at a breakpoint in the Products publ
 
 5. At this breakpoint, you can access the Console by hitting <kbd>esc</kbd> and opening the _Drawer_.
 
-![](/assets/devtools.gif "DevTools setup")
+![DevTools setup](/assets/devtools-setup.gif "Open the drawer in console")
 
 Now you can watch variables, check the call stack and investigate scope to better debug while you develop.
 
