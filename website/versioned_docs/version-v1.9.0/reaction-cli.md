@@ -3,7 +3,7 @@ id: version-v1.9.0-reaction-cli
 title: Reaction CLI
 original_id: reaction-cli
 ---
-    
+
 Reaction ships with all the standard Meteor commands, as documented in the [Meteor Guides](https://docs.meteor.com/commandline.html), along with those from Reaction's own command line interface (CLI). Here are some handy commands to use while developing on Reaction:
 
 ## Reaction CLI
@@ -61,9 +61,9 @@ This will create a template project in the `/imports/plugin/custom` directory.
 
 ## Other useful commands for development
 
-### reaction --inspect
+### inspect
 
-Running reaction with the `--inspect` flag will allow you to use Node's native server-side debugger. To learn more on how to set up the inspector, check out our [debugging documentation](testing-debugging-server-code.md).
+To learn more on how to set up the inspector, check out our [debugging documentation](testing-debugging-server-code.md).
 
 ### npm run lint
 
