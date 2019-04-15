@@ -25,7 +25,7 @@ For example, to style the Header component:
       .....
     }
   ```
-3. Refresh the webpage for the changes to load.
+3. Refresh the webpage for the changes to load. If you are running on a Windows operating system, you may need to refresh your container before refreshing the webpage.
 
 ## Styling a new component
 
