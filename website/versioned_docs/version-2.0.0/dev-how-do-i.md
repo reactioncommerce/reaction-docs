@@ -242,13 +242,16 @@ If you need to ensure indexes on any fields, the startup function is a good plac
 
 ## Ensure MongoDB collection indexes from a plugin
 
-Use the `collectionIndex` util function. It handles errors in a standard way.
+Import the `collectionIndex` util function and call it in a startup function registered by your plugin. It handles errors in a standard way and forces the `background: true` option.
 
 ```js
 import collectionIndex from "/imports/utils/collectionIndex";
 
 export default function startup(context) {
   collectionIndex(collections.Surcharges, { shopId: 1 });
+
+  // You can pass options as the third argument
+  collectionIndex(collections.Custom, { referenceId: 1 }, { unique: true });
 }
 ```
 
