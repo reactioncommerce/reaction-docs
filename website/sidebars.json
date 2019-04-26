@@ -71,7 +71,8 @@
       "community-resources"
     ],
     "Developer How-To: General": [
-      "dev-how-do-i"
+      "dev-how-do-i",
+      "dev-debug-app-slowness"
     ],
     "Developer How-To: Reaction API Server": [
       "graphql-create-query",
@@ -130,7 +131,7 @@
     "For Developers: Core Meteor App API": [
       "appevent-hooks",
       "reaction-core",
-      "admin-views", 
+      "admin-views",
       "reaction-user-accounts",
       "reaction-alerts",
       "analytics",

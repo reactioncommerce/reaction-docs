@@ -70,7 +70,8 @@
       "version-2.0.0-community-resources"
     ],
     "Developer How-To: General": [
-      "version-2.0.0-dev-how-do-i"
+      "version-2.0.0-dev-how-do-i",
+      "version-2.0.0-dev-debug-app-slowness"
     ],
     "Developer How-To: Reaction API Server": [
       "version-2.0.0-graphql-create-query",
