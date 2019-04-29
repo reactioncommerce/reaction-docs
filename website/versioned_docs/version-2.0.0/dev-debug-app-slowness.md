@@ -4,7 +4,7 @@ title: How To: Debug slowness
 original_id: dev-debug-app-slowness
 ---
 
-Nobody likes a slow experience on the web. But even worse than experiencing slowness is being tasked with figuring out *why* something is slow. When dealing with the Internet, there are layers upon layers of processing and transfer, and any layer or layer may be causing the slowness. In some cases, the cause may be that one layer is really slow. In other cases, there may be multiple slow layers, each of which are just a little bit slower than they should be, but the cumulative effect is unacceptable slowness.
+Nobody likes a slow experience on the web. But even worse than experiencing slowness is being tasked with figuring out *why* something is slow. When dealing with the Internet, there are layers upon layers of processing and transfer, and any layer or layers may be causing the slowness. In some cases, the cause may be that one layer is really slow. In other cases, there may be multiple slow layers, each of which are just a little bit slower than they should be, but the cumulative effect is unacceptable slowness.
 
 Although this article won't delve into the subject, your first step when debugging slowness should be to rule out a network cause. Test on a fast network, with a wired connection, on a computer that is near the server's data center. If it's still slow, then proceed with the rest of this article.
 
@@ -17,6 +17,8 @@ Before you start reading code and examining database queries, be sure that you u
 - What user or system action begins the slowness? Document the specific reproduction steps.
 - How slow is it and how fast should it be to meet your users' expectations?
 - If it is user interface slowness, on what types of devices or which frontend apps does it happen?
+- What, if anything, has changed since it was fast? Is there a different data set? Additional load? Configuration differences? A different set of plugins running?
+- Is it slow in all environments? Is the problem still present if you reduce the number of plugins?
 
 It is extremely important to drill down as far as possible before going further. If your issue description is "the listing page is slow", then you haven't gone specific enough. If your description is "when sorting by price, from low to high, on any listing page on a desktop browser, the listings take on average 7 seconds to load and paint, and we need that to be 2 seconds or less", then put on your hard hat and don your spectacles because it's time to debug some slowness!
 
