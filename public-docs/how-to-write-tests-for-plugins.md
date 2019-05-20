@@ -3,8 +3,6 @@ id: how-to-write-tests-for-plugins
 title: How To: Write Jest tests for plugins
 ---
 
-# Writing tests for Reaction Meteor App plugins
-
 We use and recommend plugin authors to use Jest for writing tests for their plugins.
 
 Consider the following `module.js` file:
@@ -32,7 +30,7 @@ export default async function sendRequest (shop) {
 }
 ```
 
-# To write the tests
+## To write the tests
 
 ### 1. Mock function that don't exist in the path
 
@@ -74,7 +72,7 @@ jest.mock(
 import tranformData from "/imports/tranformData";
 ```
 
-**Notice that the import will only work after the mock**
+> Note: Notice that the import will only work after the mock.
 
  ### 2. Write the test body
  
