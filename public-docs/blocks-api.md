@@ -30,7 +30,7 @@ The above example creates two Block Region called `MyCustomPage` and `ProductDet
 
 ## Replacing Blocks
 
-Registered blocks can be replaced with the `replaceBlock` method. This will replace the Block component and it will inherit any higher order components (HOC) that might be wrapping the original Block component (more detail on HOC's below).
+Registered blocks can be replaced with the `replaceBlock` method. This will replace the Block component and it will inherit any higher order components (HOC) that might be wrapping the original Block component (more detail on HOCs below).
 
 ```jsx
 import { replaceBlock } from "@reactioncommerce/reaction-components";
@@ -61,31 +61,31 @@ const MyExtraProductFields = (props) => (
 
 registerBlock({
   region: "ProductDetailMain",
-  block: "MyExtraProductFields",
+  name: "MyExtraProductFields", // Block name
   component: MyExtraProductFields,
   priority: 15
 });
 ```
 
-## Higher Order Components (HOC's)
+## Higher Order Components (HOCs)
 
-To understand how Blocks works in Reaction, it's important to understand what higher order components (HOC's) are and how they interact with UI (presentational) components. If this is the first time you're hearing about higher order components, we recommend you read some or all of the following items to get familiar with this pattern of writing React components.
+To understand how Blocks works in Reaction, it's important to understand what higher order components (HOCs) are and how they interact with UI (presentational) components. If this is the first time you're hearing about higher order components, we recommend you read some or all of the following items to get familiar with this pattern of writing React components.
 
 - Official React docs <https://facebook.github.io/react/docs/higher-order-components.html>
 - Higher Order Components in React <https://spin.atomicobject.com/2017/03/02/higher-order-components-in-react/>
 - A Gentle Introduction to React's Higher Order Components <https://www.robinwieruch.de/gentle-introduction-higher-order-components/>
-- Recompose (a handy library of HOC's that we use in Reaction) <https://github.com/acdlite/recompose/blob/master/docs/API.md>
+- Recompose (a handy library of HOCs that we use in Reaction) <https://github.com/acdlite/recompose/blob/master/docs/API.md>
 
 A higher order component's role is essentially to wrap another component and pass it props that help it to render what you want in the UI. This could be a list of items from the database, the current user, info about the current route, etc.
 
-In Reaction, HOC's are added either at the point when components are registered or when you are replacing an existing component.
+In Reaction, HOCs are added either at the point when components are registered or when you are replacing an existing component.
 
 For example, this is how we pass the `currentUser` object to the `MyExtraProductFields` Block component in the `ProductDetailMain` Block Region:
 
 ```js
 registerBlock({
-  regionName: "ProductDetailMain",
-  block: "MyExtraProductFields",
+  region: "ProductDetailMain",
+  name: "MyExtraProductFields", // Block name
   component: MyExtraProductFields,
   hocs: [withCurrentUser];
 });
@@ -106,7 +106,7 @@ const MyCustomExtraProductFields = ({ currentUser }) => (
 replaceComponent("MainDropdown", MyCustomDropdown);
 ```
 
-You can also add additional HOC's when replacing a UI component. The final wrapped component will inherit the original HOC's and also add your new HOC(s). For example, we can add the `withIsAdmin` HOC to our custom dropdown:
+You can also add additional HOCs when replacing a UI component. The final wrapped component will inherit the original HOCs and also add your new HOC(s). For example, we can add the `withIsAdmin` HOC to our custom dropdown:
 
 ```js
 const MyExtraProductFields = ({ currentUser, isAdmin }) => (
@@ -122,7 +122,7 @@ const MyExtraProductFields = ({ currentUser, isAdmin }) => (
 );
 
 replaceBlock({
-  regionName: "ProductDetailMain",
+  region: "ProductDetailMain",
   block: "MyExtraProductFields",
   component: MyExtraProductFields,
   hocs: [withIsAdmin]
@@ -160,7 +160,7 @@ Below is the full API for the Reaction components system. Each of these items ca
 
 ### Blocks
 
-This is the main `Blocks` Component which is used to register a Block Region. All Blocks registered to the spedicifed region will be rendered in the order of their priority.
+This is the main `Blocks` Component which is used to register a Block Region. All Blocks registered to the specified region will be rendered in the order of their priority.
 
 ```jsx
 import { Blocks } from "@reactioncommerce/reaction-components";
@@ -204,9 +204,9 @@ This is where all of the separate pieces of a Block Component are stored. You wi
 The structure of a single Block Component in the table looks like this:
 
 ```jsx
-BlocksTable.RegionName.block = {
-  regionName: "RegionName"
-  block: "block"
+BlocksTable.RegionName.BlockName = {
+  region: "RegionName"
+  name: "BlockName"
   hocs: [fn1, fn2],
   rawComponent: MyComponent,
   priority: 25
@@ -229,14 +229,14 @@ const MyExtraProductFields = (props) => (
 );
 
 registerBlock({
-  regionName: "ProductDetailMain",
-  block: "MyExtraProductFields",
+  region: "ProductDetailMain",
+  name: "MyExtraProductFields",
   component: MyExtraProductFields,
   priority: 15
 });
 ```
 
-or the same thing, but with a few HOC's
+or the same thing, but with a few HOCs
 
 ```jsx
 import { registerBlock, withCurrentUser, withIsAdmin } from "@reactioncommerce/reaction-components";
@@ -254,8 +254,8 @@ const MyExtraProductFields = ({ currentUser, isAdmin }) => (
 );
 
 registerBlock({
-  regionName: "ProductDetailMain",
-  block: "MyExtraProductFields",
+  region: "ProductDetailMain",
+  name: "MyExtraProductFields",
   component: MyExtraProductFields,
   priority: 15,
   hocs: [
@@ -275,7 +275,7 @@ const MyCustomProductDetailForm = (props) => (
 );
 
 replaceBlock({
-  regionName: "ProductDetailMain",
+  region: "ProductDetailMain",
   block: "ProductDetailForm",
   component: MyCustomProductDetailForm
 });
@@ -288,10 +288,10 @@ This is used to get a single Block Component.
 ```jsx
 import { getBlock } from "@reactioncommerce/reaction-components";
 
-const MyExtraProductFields = getBlock({
-  regionName: "ProductDetailMain",
-  block: "MyExtraProductFields"
-});
+const MyExtraProductFields = getBlock(
+  "ProductDetailMain", // Region name
+  "MyExtraProductFields" // Block name
+);
 
 const MyComponent = (props) => (
   <div>
@@ -307,7 +307,7 @@ This is used to get an array Block Components. This is equivalent to importing `
 ```jsx
 import { getBlocks } from "@reactioncommerce/reaction-components";
 
-const ProductDetailMainBlocks = getBlocks("ProductDetailMain")
+const ProductDetailMainBlocks = getBlocks("ProductDetailMain");
 
 const MyComponent = (props) => (
   <div>
@@ -318,15 +318,15 @@ const MyComponent = (props) => (
 
 ### getRawBlock()
 
-This gets the plain presentational Block Component without any HOC's wrapping it. You will be responsible for any props these raw component require to function properly.
+This gets the plain presentational Block Component without any HOCs wrapping it. You will be responsible for any props these raw component require to function properly.
 
 ```jsx
 import { getRawBlock } from "@reactioncommerce/reaction-components";
 
-const MyExtraProductFields = getRawComponent({
-  regionName: "ProductDetailMain",
-  block: "MyExtraProductFields"
-});
+const MyExtraProductFields = getRawBlockComponent(
+  "ProductDetailMain", // Region name
+  "MyExtraProductFields" // Block name
+);
 
 const MyComponent = (props) => (
   <div>
@@ -337,9 +337,9 @@ const MyComponent = (props) => (
 
 ### registerBlockHOC()
 
-It is generally recommended that you register any higher order components at the same time you register your presentational Block Components, but this method exists so that you have the option to only register a HOC and leave the Block Component alone. Note that this _adds_ your HOC's and does **not** replace the existing ones.
+It is generally recommended that you register any higher order components at the same time you register your presentational Block Components, but this method exists so that you have the option to only register a HOC and leave the Block Component alone. Note that this _adds_ your HOCs and does **not** replace the existing ones.
 
-Considering that a HOC injects things on props, this method will not be likely be useful for most cases (since you have to update the Block Component to use the new props). However, one valid use case for this is render highjacking. For example, you might add a HOC that decides whether to render the child Block Component based on conditions outside of the component. In that case, the Block Component doesn't need to do anything with props.
+Considering that a HOC injects things on props, this method will not be likely be useful for most cases (since you have to update the Block Component to use the new props). However, one valid use case for this is render hijacking. For example, you might add a HOC that decides whether to render the child Block Component based on conditions outside of the component. In that case, the Block Component doesn't need to do anything with props.
 
 ```jsx
 import { registerBlockHOC } from "@reactioncommerce/reaction-components";
@@ -348,16 +348,16 @@ function withConditionalRender(component) {
   // some logic that decides whether to render the child component
 }
 
-registerBlockHOC({
-  region: "ProductDetailMain",
-  block: "MyExtraProductFields",
-  hocs: [withConditionalRender]
-});
+registerBlockHOC(
+  "ProductDetailMain", // Region name
+  "MyExtraProductFields", // Block name
+  [withConditionalRender] // HOCs
+);
 ```
 
 ### getBlockHOCs()
 
-This gets the array of higher order components from an existing Block Component. One possible use case it to use a set of HOC's on another Block Component. However, depending on your use case, `copyBlockHOCs` (see below) may be a better fit.
+This gets the array of higher order components from an existing Block Component. One possible use case it to use a set of HOCs on another Block Component. However, depending on your use case, `copyBlockHOCs` (see below) may be a better fit.
 
 ```jsx
 import { getBlockHOCs, registerBlock } from "@reactioncommerce/reaction-components";
@@ -375,7 +375,7 @@ const MyExtraProductFields = (props) => (
 
 registerBlock({
   region: "ProductDetailMain",
-  block: "MyExtraProductFields",
+  name: "MyExtraProductFields",
   hocs: [ProductDetailFormHOCs]
 });
 ```
@@ -393,11 +393,11 @@ const MyExtraProductFields = (props) => (
   </div>
 );
 
-const MyExtraProductFieldsBlockWithHOCs = copyBlockHOCs({
-    region: "ProductDetailMain",
-    block: "ProductDetailForm",
-    MyExtraProductFields
-});
+const MyExtraProductFieldsBlockWithHOCs = copyBlockHOCs(
+  "ProductDetailMain", // Source region name
+  "ProductDetailForm", // Source block name
+  MyExtraProductFields // React component
+);
 ```
 
 ### loadRegisteredBlocks()
