@@ -6,9 +6,9 @@ original_id: concepts-inventory
 
 The default Reaction system does not have inventory tracking enabled for any products. All products that you publish to the catalog are available for purchase in any quantity and will never show up as low quantity, sold out, or backordered.
 
-If you do track inventory, Reaction provides a Simple Inventory plugin that allows you to update inventory in stock and other inventory settings in the operator UI. It also keeps track of inventory that was ordered but which you have not yet removed from the in-stock number, to ensure that you do not sell what you don't have available.
+If you do track inventory, Reaction provides a [Simple Inventory plugin](./core-plugins-simple-inventory.md) that allows you to update inventory in stock and other inventory settings in the operator UI. It also keeps track of inventory that was ordered but which you have not yet removed from the in-stock number, to ensure that you do not sell what you don't have available.
 
-If you use a third-party inventory system or want to design your own inventory system, you can create a custom plugin.
+If you use a third-party inventory system or want to design your own inventory system, you can [create a custom plugin](./how-to-create-inventory-plugin.md).
 
 Regardless of which plugin tracks your inventory, there are some general ways in which inventory impacts your catalog products, catalog variants, and cart items.
 

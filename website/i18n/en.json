@@ -90,6 +90,7 @@
     "how-to-create-a-custom-homepage": "Tutorial: Create a custom homepage",
     "how-to-create-a-fulfillment-methods-plugin": "How To: Create a Fulfillment Methods Plugin",
     "how-to-create-a-payment-provider": "How To: Add a Payment Method",
+    "how-to-create-inventory-plugin": "How To: Create an Inventory Data Provider Plugin",
     "how-to-extend-graphql-to-add-field": "How To: Extend GraphQL to add a field",
     "how-to-extend-graphql-with-remote-schema": "How To: Extend GraphQL with Remote Schema Delegation",
     "how-to-extend-product": "How To: Extend the Product Schema",
