@@ -22,8 +22,6 @@ query catalogItemProductQuery($slugOrId: String!) {
       slug
       description
       vendor
-      inventoryAvailableToSell
-      inventoryInStock
       isLowQuantity
       isSoldOut
       isBackorder
@@ -57,7 +55,6 @@ query catalogItemProductQuery($slugOrId: String!) {
         }
         canBackorder
         inventoryAvailableToSell
-        inventoryInStock
         isBackorder
         isSoldOut
         isLowQuantity
@@ -74,7 +71,6 @@ query catalogItemProductQuery($slugOrId: String!) {
           optionTitle
           canBackorder
           inventoryAvailableToSell
-          inventoryInStock
           isBackorder
           isSoldOut
           isLowQuantity
