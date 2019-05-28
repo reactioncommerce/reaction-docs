@@ -40,7 +40,8 @@
       "swag-shop-8"
     ],
     "For Developers: Concepts": [
-      "devs-understanding-commonorder"
+      "devs-understanding-commonorder",
+      "developer-inventory"
     ],
     "For Developers: Contributing Guide": [
       "contributing-to-reaction",
@@ -69,6 +70,7 @@
       "core-plugins-search",
       "core-plugins-stripe",
       "core-plugins-sitemap-generator",
+      "core-plugins-simple-inventory",
       "community-resources"
     ],
     "Developer How-To: General": [

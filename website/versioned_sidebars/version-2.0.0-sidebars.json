@@ -40,7 +40,8 @@
       "version-2.0.0-swag-shop-8"
     ],
     "For Developers: Concepts": [
-      "version-2.0.0-devs-understanding-commonorder"
+      "version-2.0.0-devs-understanding-commonorder",
+      "version-2.0.0-developer-inventory"
     ],
     "For Developers: Contributing Guide": [
       "version-2.0.0-contributing-to-reaction",
@@ -68,6 +69,7 @@
       "version-2.0.0-core-plugins-marketplace",
       "version-2.0.0-core-plugins-search",
       "version-2.0.0-core-plugins-stripe",
+      "version-2.0.0-core-plugins-simple-inventory",
       "version-2.0.0-community-resources"
     ],
     "Developer How-To: General": [
