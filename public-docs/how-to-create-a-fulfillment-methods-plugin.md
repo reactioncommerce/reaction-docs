@@ -7,7 +7,7 @@ title: How To: Create a Fulfillment Methods Plugin
 - [Understanding Plugins](./core-plugins-intro.md)
 
 ## Overview
-In general, to add a payment method you must do the following:
+In general, to add a fulfillment method you must do the following:
 - Create a new plugin
 - Create a `getFulfillmentMethodsWithQuotes` function in your plugin
 - Create a React component for operators to enter and edit fulfillment method details, unless they'll be managed in an external system
