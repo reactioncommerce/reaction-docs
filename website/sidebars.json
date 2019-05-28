@@ -10,6 +10,7 @@
       "concepts-carts",
       "concepts-catalogs",
       "concepts-fulfillment",
+      "concepts-inventory",
       "concepts-orders",
       "concepts-payments",
       "concepts-pricing",
