@@ -28,6 +28,30 @@ Despite these features that help you automatically manage your available invento
 
 **Option 2** If your external inventory system produces periodic exports but cannot be queried in real time, then you may want to keep the included `simple-inventory` plugin and create a script that reads the exported files and updates the `SimpleInventory` collection as necessary. If you do this in a custom plugin, then it's best to call `context.mutations.updateSimpleInventory` with `context.isInternalCall` set to `true`, and let that take care of properly updating the collection. If you can't do it in a custom plugin, then your external script should be written to look similar to the `updateSimpleInventory` mutation function in the `simple-inventory` plugin.
 
+Example of option 2:
+
+```
+const STANDARD_LOW_INVENTORY_THRESHOLD = 10;
+
+async function externalSystemInventoryUpdateWorker(context, productId, productVariantId, shopId, inventoryInStock) {
+  await context.mutations.updateSimpleInventory(
+    { ...context, isInternalCall: true },
+    {
+      productConfiguration: {
+        productId,
+        productVariantId
+      },
+      shopId,
+      canBackorder: false,
+      lowInventoryWarningThreshold: STANDARD_LOW_INVENTORY_THRESHOLD,
+      isEnabled: true,
+      inventoryInStock
+    },
+    { returnUpdatedDoc: false } // improves performance
+  );
+}
+```
+
 ## How to configure products with no tracked inventory
 
 There are a few reasons why some products may not have tracked inventory. Some may be digital or conceptual products that you can make unlimited copies of. You may build some products to specification after they are ordered. Or you may drop ship some products and have no insight into what quantity are available.
