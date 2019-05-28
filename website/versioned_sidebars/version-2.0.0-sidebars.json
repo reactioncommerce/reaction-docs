@@ -105,7 +105,8 @@
       "version-2.0.0-storefront-checkout-page",
       "version-2.0.0-storefront-order-view-page",
       "version-2.0.0-storefront-login",
-      "version-2.0.0-storefront-account-management"
+      "version-2.0.0-storefront-account-management",
+      "version-2.0.0-storefront-inventory-status-badges"
     ],
     "Developer How-To: Meteor app": [
       "version-2.0.0-how-to-change-the-favicon",

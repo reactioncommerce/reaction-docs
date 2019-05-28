@@ -107,7 +107,8 @@
       "storefront-checkout-page",
       "storefront-order-view-page",
       "storefront-login",
-      "storefront-account-management"
+      "storefront-account-management",
+      "storefront-inventory-status-badges"
     ],
     "Developer How-To: Meteor app": [
       "how-to-change-the-favicon",
