@@ -152,6 +152,7 @@
       "version-2.0.0-template-helpers"
     ],
     "For Developers: Meteor App Client Components": [
+      "version-2.0.0-blocks-api",
       "version-2.0.0-components",
       "version-2.0.0-components-api",
       "version-2.0.0-alerts",
