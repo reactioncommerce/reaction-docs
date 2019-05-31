@@ -183,7 +183,7 @@ Where `input` is:
   "settingsUpdates": {
     "isMyPluginTurboMode": true
   },
-  "shopId: "some_real_shop_id"
+  "shopId": "some_real_shop_id"
 }
 ```
 
