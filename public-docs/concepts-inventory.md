@@ -1,4 +1,5 @@
 ---
+id: concepts-inventory
 title: Inventory
 ---
 
