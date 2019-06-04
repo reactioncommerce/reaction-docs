@@ -70,6 +70,8 @@ export default async function register(app) {
 }
 ```
 
+> You may be aware that the core inventory plugin provides two queries: `inventoryForProductConfigurations` (multiple) and `inventoryForProductConfiguration` (single). The single version of the function is a convenience wrapper that calls the multiple version. Thus, an inventory data plugin needs to provide only this one function, which expects multiple product configurations.
+
 ## Optionally add UI components
 
 How and whether you should do this step depends a lot on how your plugin is tracking inventory. If you want any information to be viewable or editable in the operator UI, you can extend the GraphQL API and register UI blocks to appear where you need them.
