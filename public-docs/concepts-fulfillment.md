@@ -8,7 +8,7 @@ Broadly, the term “fulfillment” refers to the way in which shoppers choose t
 
 A **fulfillment type** is an identifier that categorizes a certain way in which an order for an item can be fulfilled. The built-in fulfillment types are **“shipping”**, **“pickup”**, and **“digital”**.
 
-Every product variant (catalog item) has a list of available fulfillment types. If a catalog item can be fulfilled in more than one way (e.g., shipping or pickup), then a shopper is shown a selector during checkout, allowing her to choose the fulfillment type she prefers.
+Every product variant (catalog item) has a list of available fulfillment types. If a catalog item can be fulfilled in more than one way (e.g., shipping or pickup), then a shopper is shown a selector during checkout, allowing them to choose the preferred fulfillment type.
 
 The fulfillment type also determines which user interface components are shown to a shopper during checkout. For example, a client may show a shipping address form for items with the “shipping” type, and a pickup time and location form for items with the “pickup” type.
 

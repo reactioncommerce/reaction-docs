@@ -1,6 +1,7 @@
 ---
-id: blocks-api
+id: version-2.0.0-blocks-api
 title: Blocks API
+original_id: blocks-api
 ---
 
 The Blocks API is a method of component extension that allows for adding additional UI components into various regions across the admin interface. For example, you can add additional fields to the product editor to extend it's functionality without having to override the entire component or package.

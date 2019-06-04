@@ -3,7 +3,7 @@ id: swag-shop-2
 title: Preparing for Upstream changes
 ---
 
-If you are going to make changes, you will need to have your own copy of the repo: one that you can make your changes on seperate from the original repo. The simplest way to do that is to create a "fork".
+If you are going to make changes, you will need to have your own copy of the repo: one that you can make your changes on separate from the original repo. The simplest way to do that is to create a "fork".
 
 ### Method 1: Create a public fork through GitHub
 

@@ -10,6 +10,7 @@
       "concepts-carts",
       "concepts-catalogs",
       "concepts-fulfillment",
+      "concepts-inventory",
       "concepts-orders",
       "concepts-payments",
       "concepts-pricing",
@@ -39,7 +40,8 @@
       "swag-shop-8"
     ],
     "For Developers: Concepts": [
-      "devs-understanding-commonorder"
+      "devs-understanding-commonorder",
+      "developer-inventory"
     ],
     "For Developers: Contributing Guide": [
       "contributing-to-reaction",
@@ -68,6 +70,7 @@
       "core-plugins-search",
       "core-plugins-stripe",
       "core-plugins-sitemap-generator",
+      "core-plugins-simple-inventory",
       "community-resources"
     ],
     "Developer How-To: General": [
@@ -78,6 +81,7 @@
       "graphql-create-query",
       "graphql-create-mutation",
       "how-to-create-a-fulfillment-methods-plugin",
+      "how-to-create-inventory-plugin",
       "how-to-create-a-payment-provider",
       "how-to-add-address-validation-service",
       "how-to-add-tax-service",
@@ -85,6 +89,7 @@
       "how-to-extend-graphql-with-remote-schema",
       "how-to-store-custom-order-fields",
       "how-to-extend-product",
+      "how-to-manage-app-settings",
       "fixtures-images"
     ],
     "Developer How-To: GraphQL Clients": [
@@ -102,7 +107,8 @@
       "storefront-checkout-page",
       "storefront-order-view-page",
       "storefront-login",
-      "storefront-account-management"
+      "storefront-account-management",
+      "storefront-inventory-status-badges"
     ],
     "Developer How-To: Meteor app": [
       "how-to-change-the-favicon",

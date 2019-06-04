@@ -71,6 +71,7 @@ fragment CartItemConnectionFragment on CartItemConnection {
         value
       }
       createdAt
+      inventoryAvailableToSell
       isBackorder
       isLowQuantity
       isSoldOut
@@ -91,7 +92,6 @@ fragment CartItemConnectionFragment on CartItemConnection {
       productVendor
       variantTitle
       optionTitle
-      currentQuantity
     }
   }
 }

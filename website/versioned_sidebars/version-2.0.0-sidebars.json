@@ -10,6 +10,7 @@
       "version-2.0.0-concepts-carts",
       "version-2.0.0-concepts-catalogs",
       "version-2.0.0-concepts-fulfillment",
+      "version-2.0.0-concepts-inventory",
       "version-2.0.0-concepts-orders",
       "version-2.0.0-concepts-payments",
       "version-2.0.0-concepts-pricing",
@@ -39,7 +40,8 @@
       "version-2.0.0-swag-shop-8"
     ],
     "For Developers: Concepts": [
-      "version-2.0.0-devs-understanding-commonorder"
+      "version-2.0.0-devs-understanding-commonorder",
+      "version-2.0.0-developer-inventory"
     ],
     "For Developers: Contributing Guide": [
       "version-2.0.0-contributing-to-reaction",
@@ -67,6 +69,7 @@
       "version-2.0.0-core-plugins-marketplace",
       "version-2.0.0-core-plugins-search",
       "version-2.0.0-core-plugins-stripe",
+      "version-2.0.0-core-plugins-simple-inventory",
       "version-2.0.0-community-resources"
     ],
     "Developer How-To: General": [
@@ -77,12 +80,14 @@
       "version-2.0.0-graphql-create-query",
       "version-2.0.0-graphql-create-mutation",
       "version-2.0.0-how-to-create-a-fulfillment-methods-plugin",
+      "version-2.0.0-how-to-create-inventory-plugin",
       "version-2.0.0-how-to-create-a-payment-provider",
       "version-2.0.0-how-to-add-address-validation-service",
       "version-2.0.0-how-to-add-tax-service",
       "version-2.0.0-how-to-extend-graphql-to-add-field",
       "version-2.0.0-how-to-store-custom-order-fields",
       "version-2.0.0-how-to-extend-product",
+      "version-2.0.0-how-to-manage-app-settings",
       "version-2.0.0-fixtures-images"
     ],
     "Developer How-To: GraphQL Clients": [
@@ -100,7 +105,8 @@
       "version-2.0.0-storefront-checkout-page",
       "version-2.0.0-storefront-order-view-page",
       "version-2.0.0-storefront-login",
-      "version-2.0.0-storefront-account-management"
+      "version-2.0.0-storefront-account-management",
+      "version-2.0.0-storefront-inventory-status-badges"
     ],
     "Developer How-To: Meteor app": [
       "version-2.0.0-how-to-change-the-favicon",
@@ -152,6 +158,7 @@
       "version-2.0.0-template-helpers"
     ],
     "For Developers: Meteor App Client Components": [
+      "version-2.0.0-blocks-api",
       "version-2.0.0-components",
       "version-2.0.0-components-api",
       "version-2.0.0-alerts",

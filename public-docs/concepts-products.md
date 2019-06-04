@@ -13,12 +13,3 @@ A variant defines a certain product configuration, a set of configurable attribu
 If necessary, a variant can have further variants, which we call **“options”** or **“second level variants”**. For example, the “Size 9” variant for “Pair of Best Brand Shoes, Model B”, may come in two different colors, black and red. So the “Size 9” variant would have two variants of its own, “Black” and “Red”.
 
 It’s important to note that only a terminal variant may be ordered. So if a variant has options, a shopper will need to order one of the options, but if a variant has no options, that variant itself may be ordered (added to a cart).
-
-## Inventory and Badges
-
-A product, variant and option can have different badge alerts appear in the storefront, depending on the inventory status. Here are the default badge settings:
-
-- A product's `isLowQuantity` is true when _any_ variant or option has quantity that is less than or equal to its threshold
-- A variant's `isLowQuantity` is true when no options and quantity are less than or equal to its threshold
-- A variant's `isLowQuantity` is true when there are options and quantity that are less than or equal to its threshold for at least one of the options
-- An option's `isLowQuantity` is true when quantity is less than or equal to its threshold
