@@ -11,7 +11,7 @@ The PrimaryAppBar component provides a simple way to easily create new toolbars 
 ```js
 import React from "react";
 import Button from "@material-ui/core/Button";
-import PrimaryAppBar from "/imports/client/ui/components/PrimaryAppBar/PrimaryAppBar";
+import PrimaryAppBar from "/imports/client/ui/components/PrimaryAppBar";
 
 export default function MyComponent() {
   return (
