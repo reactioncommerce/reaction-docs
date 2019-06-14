@@ -1,6 +1,7 @@
 ---
 id: version-2.0.0-register-operator-route
 title: Register Operator Routes
+original_id: register-operator-route
 ---
 
 The function `registerOperatorRoute` registers a new route for administrator users that renders a React Component when navigated to. It may also add a link the the main navigation if desired. This will be the primary method of registering new pages in the operator experience. **This method is not for registering public routes.**
