@@ -136,6 +136,7 @@
     ],
     "For Developers: Core Meteor App API": [
       "appevent-hooks",
+      "register-operator-route",
       "reaction-core",
       "admin-views",
       "reaction-user-accounts",
@@ -159,6 +160,7 @@
       "blocks-api",
       "components",
       "components-api",
+      "components-primary-app-bar",
       "alerts",
       "badge",
       "cards",
