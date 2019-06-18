@@ -3,6 +3,8 @@ id: components-primary-app-bar
 title: PrimaryAppBar
 ---
 
+![](/assets/components-primary-app-bar.png "PrimaryAppBar Component")
+
 The PrimaryAppBar component provides a simple way to easily create new toolbars for the main content area an admin view. It provides a prop for a title and positions any elements added as children
 
 ## Using the PrimaryAppBar
