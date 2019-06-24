@@ -12,11 +12,13 @@ Reaction includes only a test address validation service, which is for testing a
 
 > If you will be collecting tax or dynamically calculating shipping rates, then it's important to install and enable an address validation service to improve the accuracy of these calculations.
 
-## Enable one or more address validation services
+![Address Validation Operator UI](/assets/operator-ui-address-validation.png "Address Validation Operator UI")
 
-1. Open the <i class="rui font-icon fa fa-th"></i> **Shop** panel.
-2. Expand the "Address Validation" section.
-3. Each address validation service may have settings in the panel and/or may require that certain environment variables be set. Before enabling a service, verify that you've properly configured it.
+## Enable one or more address validation services
+1. Click the <i class="rui font-icon fa fa-cog"></i> **Settings** menu from the side panel.
+2. Click *Shop* from the list
+3. Expand the "Address Validation" section.
+4. Each address validation service may have settings in the panel and/or may require that certain environment variables be set. Before enabling a service, verify that you've properly configured it.
 4. Click **Add address validation service**
 5. The first address validation service that matches the country of the address being validated will be used. Be sure to create these entries in the correct order to achieve the fallback behavior you want.
 6. Choose the validation service to enable.
