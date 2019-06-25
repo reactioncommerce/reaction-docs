@@ -226,11 +226,6 @@
       "version-2.0.0-payment",
       "version-2.0.0-tax",
       "version-2.0.0-template",
-<<<<<<< HEAD
-      "version-2.0.0-search",
-=======
-      "version-2.0.0-sms-notifications",
->>>>>>> Deprecates search with warning message to account for fallback structure of docusaurus
       "version-2.0.0-shipping-admin",
       "version-2.0.0-payments-discounts",
       "version-2.0.0-operator-address-validation"
