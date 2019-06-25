@@ -7,6 +7,12 @@ Reaction ships with all the standard Meteor commands, as documented in the [Mete
 
 ## Reaction CLI
 
+To install the CLI, run the following:
+
+```sh
+npm i -g reaction-cli
+```
+
 ### reaction -v
 
 Before you get started using the Reaction CLI, it's important to make sure you're using the latest version. Use `reaction -v` to check what versions of Node, NPM, Meteor Node, Reaction CLI, Docker and what branch and version of Reaction you are currently running.
