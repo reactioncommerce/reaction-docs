@@ -1,8 +1,9 @@
 ---
-id: payments-discounts
+id: version-2.0.0-payments-discounts
 title: Discounts
+original_id: payments-discounts
 ---
-    
+
 Reaction has support for discount codes and discount rates.  A "code" is a code that can be applied during checkout that applies a discount to the cart subtotal.  A "rate" is a discount that is applied without needing a discount code to be applied.
 
 ## Codes
@@ -25,4 +26,4 @@ Discount codes can be enabled in the **Payment** section under the <i class="rui
 
 ![](/assets/admin-dashboard-payments-discounts-catalyst.png "Payment Discounts")
 
-Discounts are validated when a user enters a code during checkout, and are applied as payment methods on the cart. The discount code usage is tracked once the order has been placed.s
+Discounts are validated when a user enters a code during checkout, and are applied as payment methods on the cart. The discount code usage is tracked once the order has been placed.
