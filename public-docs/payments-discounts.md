@@ -25,4 +25,4 @@ Discount codes can be enabled in the **Payment** section under the <i class="rui
 
 ![](/assets/admin-dashboard-payments-discounts-catalyst.png "Payment Discounts")
 
-Discounts are validated when a user enters a code during checkout, and are applied as payment methods on the cart. The discount code usage is tracked once the order has been placed.s
+Discounts are validated when a user enters a code during checkout, and are applied as payment methods on the cart. The discount code usage is tracked once the order has been placed.
