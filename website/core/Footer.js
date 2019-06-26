@@ -48,7 +48,7 @@ class Footer extends React.Component {
             <div className="link-grid-column">
               <h5>Engage</h5>
               <ul className="footer-list">
-                <li><a target="_blank" href="https://reactioncommerce.com/partners">Partner</a></li>
+                <li><a target="_blank" href="https://reactioncommerce.com/become-a-partner">Partner</a></li>
                 <li><a target="_blank" href="https://reactioncommerce.com/contributors">Contribute</a></li>
                 <li><a target="_blank" href="http://marketing.reactioncommerce.com/acton/media/37362/get-in-touch">Get in Touch</a></li>
               </ul>
