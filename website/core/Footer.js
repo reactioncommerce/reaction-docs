@@ -66,7 +66,7 @@ class Footer extends React.Component {
             <div className="row">
               <img src="/img/footer-sun.svg" alt="" />
               &nbsp;&nbsp;Made in the sunshine in Santa Monica, California by&nbsp;<a href="/" target="_blank">Reaction Commerce, Inc.</a>
-              ©&nbsp;2018&nbsp;|&nbsp;<a href="https://reactioncommerce.com/legal">Legal</a>
+              ©&nbsp;2019&nbsp;|&nbsp;<a href="https://reactioncommerce.com/legal">Legal</a> | <a href="https://www.reactioncommerce.com/legal/privacy">Privacy Policy</a>
             </div>
 
           </div>
