@@ -1,6 +1,7 @@
 ---
-id: template
+id: version-2.0.0-template
 title: Template
+original_id: template
 ---
     
 Reaction comes preloaded with email templates that are sent out with various user actions, such as Password Resets, Order Completion, and Shipping Notifications.
