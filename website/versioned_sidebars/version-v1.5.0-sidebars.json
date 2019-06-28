@@ -152,8 +152,7 @@
     "Deploying": [
       "version-v1.5.0-deploying",
       "version-v1.5.0-prerender",
-      "version-v1.5.0-deploying-reaction-using-docker",
-      "version-v1.5.0-deploying-on-reaction-platform"
+      "version-v1.5.0-deploying-reaction-using-docker"
     ],
     "Guidelines": [
       "version-v1.5.0-guidelines",

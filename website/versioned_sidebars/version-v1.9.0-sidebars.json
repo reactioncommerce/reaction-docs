@@ -149,8 +149,7 @@
     "Deploying": [
       "version-v1.9.0-deploying",
       "version-v1.9.0-prerender",
-      "version-v1.9.0-deploying-reaction-using-docker",
-      "version-v1.9.0-deploying-on-reaction-platform"
+      "version-v1.9.0-deploying-reaction-using-docker"
     ],
     "Store Operator's Guide": [
       "version-v1.9.0-dashboard",
