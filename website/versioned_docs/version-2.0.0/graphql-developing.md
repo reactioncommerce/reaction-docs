@@ -57,7 +57,7 @@ TIP: If you’re confused about where to draw the line, imagine what would have 
 
 ## The Endpoint
 
-The GraphQL server and `/graphql-alpha` endpoint is configured and returned by the `createApolloServer` function, which is called from the `ReactionNodeApp` class and the `TestApp` class for Jest integration tests.
+The GraphQL server and `/graphql-beta` endpoint is configured and returned by the `createApolloServer` function, which is called from the `ReactionNodeApp` class and the `TestApp` class for Jest integration tests.
 
 Newer Reaction code runs within a single `ReactionNodeApp` instance, which is created by Meteor code during app startup. For development and testing purposes, it's also possible to run Reaction as a pure Node app, which also initializes a single `ReactionNodeApp` instance, but without a Meteor context available.
 
@@ -66,7 +66,7 @@ Newer Reaction code runs within a single `ReactionNodeApp` instance, which is cr
 - Builds the `context` object that’s available in all resolver functions. See [The Reaction GraphQL Context](#the-reaction-graphql-context)
 - Formats the `errors` array that is returned to clients, to make errors as helpful as possible
 - Provides the merged GraphQL schema
-- Sets the path as `/graphql-alpha` and exposes a GraphQL Playground for GET requests on `/graphql-alpha`
+- Sets the path as `/graphql-beta` and exposes a GraphQL Playground for GET requests on `/graphql-beta`
 
 ## The Reaction GraphQL Context
 

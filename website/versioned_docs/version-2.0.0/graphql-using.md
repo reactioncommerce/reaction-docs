@@ -6,7 +6,7 @@ original_id: graphql-using
 
 ## Reaction GraphQL Implementation
 
-Reaction GraphQL is accessible at `/graphql-alpha` when running the Meteor app. You can also access it without running the Meteor app by running a Node Express server.
+Reaction GraphQL is accessible at `/graphql-beta` when running the Meteor app. You can also access it without running the Meteor app by running a Node Express server.
 
 To run the full Meteor app from a local checkout:
 
@@ -20,7 +20,7 @@ To run the Node Express server only from a local checkout:
 npm run devserver
 ```
 
-If your Reaction shop is already hosted somewhere, just POST to /graphql-alpha at that URL to use GraphQL.
+If your Reaction shop is already hosted somewhere, just POST to /graphql-beta at that URL to use GraphQL.
 
 The GraphQL server is implemented using [Apollo Server](https://www.apollographql.com/docs/apollo-server/). It is compatible with [Apollo Client](https://www.apollographql.com/docs/react/) or [Relay Modern](https://facebook.github.io/relay/) for client development.
 
@@ -33,7 +33,7 @@ We recommend using a standalone GraphQL client to connect and make requests. Her
 
 ### Making Queries
 
-As long as you use POST method (not GET) and use the `/graphql-alpha` path as the URL, requests from any GraphQL client should work. Many queries and mutations will check identity and authorization, and therefore require you to send a bearer token along with your request. Standalone GraphQL clients have a “Headers” option where you can specify this manually. See [Identity and Authorization](#identity-and-authorization).
+As long as you use POST method (not GET) and use the `/graphql-beta` path as the URL, requests from any GraphQL client should work. Many queries and mutations will check identity and authorization, and therefore require you to send a bearer token along with your request. Standalone GraphQL clients have a “Headers” option where you can specify this manually. See [Identity and Authorization](#identity-and-authorization).
 
 ## Identity and Authorization
 
