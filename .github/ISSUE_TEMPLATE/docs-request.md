@@ -4,4 +4,4 @@ about: Request documentation for Reaction
 
 ---
 
-** Describe the documentation you'd like to read: **
+**Describe the documentation you'd like to read:**
