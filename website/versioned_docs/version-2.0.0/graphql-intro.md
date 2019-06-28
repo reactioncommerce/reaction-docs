@@ -11,7 +11,7 @@ original_id: graphql-intro
 
 ## Your first query
 
-To try a simple query, open the GraphQL Playground interface by going to `http://localhost:3000/graphql-alpha` in your browser. This is the same URL that handles GraphQL POST requests, but for GET requests it serves GraphQL Playground.
+To try a simple query, open the GraphQL Playground interface by going to `http://localhost:3000/graphql-beta` in your browser. This is the same URL that handles GraphQL POST requests, but for GET requests it serves GraphQL Playground.
 
 In the left-hand query box, enter the following:
 

@@ -94,8 +94,8 @@ docker-compose logs -f
 
 | Directory: Service                                                                         | URL                                                           |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [POST localhost:3000/graphql-alpha](localhost:3000/graphql-alpha) |
-| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [GET localhost:3000/graphql-alpha](localhost:3000/graphql-alpha)            |
+| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API                    | [POST localhost:3000/graphql-beta](localhost:3000/graphql-beta) |
+| [`reaction`](https://github.com/reactioncommerce/reaction): GraphQL API playground         | [GET localhost:3000/graphql-beta](localhost:3000/graphql-beta)            |
 | [`reaction`](https://github.com/reactioncommerce/reaction): Classic UI                     | [localhost:3000](localhost:3000)                              |
 | [`reaction`](https://github.com/reactioncommerce/reaction): MongoDB                        | [localhost:27017](localhost:27017)                            |
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra         | [localhost:4444](localhost:4444)                              |
