@@ -13,12 +13,6 @@ The `reaction-cli` incorporates functionality for any team to deploy Reaction Co
 4. Create application environment
 5. Deploy application
 
-## Request invite token
-
-As a paid user of the **Reaction Platform**, you'll receive an email containing a "invite token" from the Reaction Platform API ("Launchdock"). **Launchdock** is the name of our internal  orchestration management platform.
-
-You will be asked for your invite token when you use the [reaction-cli](http://getrxn.io/reaction-cli) to register your local Reaction environment with the Reaction Platform API.
-
 ## Register local environment
 
 ### Update `reaction-cli`
