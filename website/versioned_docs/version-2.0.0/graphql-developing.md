@@ -118,7 +118,27 @@ For the GraphQL endpoint, we have an Express middleware function that looks for 
 
 ## IDs in GraphQL
 
-All IDs are exposed in GraphQL as globally unique IDs. To convert internal IDs to opaque UUIDs, we first prefix them with "reaction/\<namespace\>" and then base64 encode them. The primary transformation functions that handle this are in `/imports/plugins/core/graphql/server/no-meteor/resolvers/xforms/id.js`, but there are namespace-specific utility functions in that `xforms` folder that are usually a better choice.
+All IDs are exposed in GraphQL as globally unique IDs on fields named `_id`. When we finalize the GraphQL API, we may change this field name to `id`, which is more commonly used in the GraphQL world.
+
+The GraphQL server specification has no opinion on what a type's ID field should look like, but it does provide [a built-in ID type](https://graphql.github.io/graphql-spec/draft/#sec-ID).
+
+> The ID scalar type represents a unique identifier, often used to refetch an object or as the key for a cache. The ID type is serialized in the same way as a String; however, it is not intended to be human‐readable. While it is often numeric, it should always serialize as a String.
+
+In particular, note that "it is not intended to be human‐readable". You should never display a field of type `ID` anywhere. They are only for references. If your data comes over from another system and has IDs with some meaning, then you should also store them on a different field where the raw value will not be obfuscated by the GraphQL layer.
+
+Note also that the server specification does not necessarily care whether an ID is globally unique. However, we intend compatibility with both Relay and Apollo for client-side frameworks, and [the Relay specification](https://facebook.github.io/relay/graphql/objectidentification.htm#sec-Node-Interface) does have a requirement here:
+
+> This `id` should be a globally unique identifier for this object, and given just this `id`, the server should be able to refetch the object.
+
+Additionally, the [Apollo caching docs](https://www.apollographql.com/docs/react/advanced/caching/#normalization) have this to say:
+
+> By default, InMemoryCache will attempt to use the commonly found primary keys of `id` and `_id` for the unique identifier if they exist
+
+This does not specifically require global uniqueness since it also uses `__typename`, but because Relay does, we've opted to ensure IDs are globally unique.
+
+In most cases, actual internal data IDs are in MongoDB collections, so they are guaranteed unique within the collection, but not among all collections. To add that extra layer of uniqueness, we concatenate the namespace with the internal ID, and then to keep it looking like a "not human‐readable" ID, we base64 encode.
+
+To convert internal IDs to opaque UUIDs, we first prefix them with "reaction/\<namespace\>" and then base64 encode them. The primary transformation functions that handle this are in `/imports/plugins/core/graphql/server/no-meteor/resolvers/xforms/id.js`, but there are namespace-specific utility functions in that `xforms` folder that are usually a better choice.
 
 The GraphQL resolver functions are the place where ID encoding and decoding happens. They then call out to plugin functions that deal exclusively with internal IDs. Any IDs returned by such functions must also be transformed before returning them, although this typically and preferably happens in a type resolver.
 
