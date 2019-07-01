@@ -10,17 +10,13 @@ original_id: faqs
 
 Reaction Commerce is an open source commerce platform that allows anyone to customize, extend, and deploy an online store or marketplace. Our codebase is available for free via [GitHub](https://github.com/reactioncommerce/reaction).
 
-### Is there a live demo shop?
-
-You can check out a live shop and use the admin tool in our [Demo Swag](https://swag.getreaction.io/) shop. You can also run the demo locally by cloning the [Reaction Swag Shop](https://github.com/reactioncommerce/reaction-swag-shop) repository.
-
 ### I already have a hosting solution. Can I host a Reaction shop anywhere I want?
 
 Yep! You can host a Reaction shop on any host or virtual machine container that supports Node.js, Meteor, and MongoDB.
 
 ### What's your pricing model?
 
-Reaction is free. Our code, which is licensed under the GPL v3 license, will always be free and available to the open source community. In early 2017, we'll be launching our hosted platform, which will come at a tiered premium price. If you'd like to learn more, check out our hosted service's [Terms & Conditions](https://reactioncommerce.com/legal/terms).
+Reaction is free. Our code, which is licensed under the GPL v3 license, will always be free and available to the open source community.
 
 ### Reaction is all JavaScript. Does this have a negative impact on SEO?
 
