@@ -8,7 +8,7 @@ Reaction Commerce is a headless commerce platform, which means that its focus is
 
 There is a built-in user interface for shop operators and admins, which supports plugins and should work well for many shops. We refer to this as the "operator UI". If you prefer, you can build your own operator UI or adapt one that you already have.
 
-For your storefront — your public-facing website or app on which consumers browse your catalog, manage their account, and purchase items — Reaction assumes that you will build your own UI to meet your needs. For those who want to get going fast, Reaction plans to provide example storefronts that you can use as starting points. These are UI projects that we expect you to fork and modify. Currently, there is one such project, the [example web storefront](https://github.com/reactioncommerce/reaction-next-starterkit).
+For your storefront — your public-facing website or app on which consumers browse your catalog, manage their account, and purchase items — Reaction assumes that you will build your own UI to meet your needs. For those who want to get going fast, Reaction plans to provide example storefronts that you can use as starting points. These are UI projects that we expect you to fork and modify. Currently, there is one such project, the [example storefront](https://github.com/reactioncommerce/example-storefront).
 
 However, if you already have a storefront UI or if the example projects are not to your liking, then you can connect any UI of your choosing to the Reaction API. If this describes your organization, then this guide is for you. It will walk you through everything that is necessary to build or adapt a storefront to use Reaction for its data.
 
