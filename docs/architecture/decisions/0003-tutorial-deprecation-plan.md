@@ -38,7 +38,7 @@ Readers need an easy way to find and distinguish between pre-2.0 and post-2.0 co
 
 - Use the Reaction Platform installation instructions across all READMEs: https://docs.reactioncommerce.com/docs/installation-reaction-platform
     - Reaction
-    - Starter Kit
+    - Example Storefront
     - With the exception of the Platform itself, which will need more in-depth instructions for those who also want to develop on the Platform.
 
 ## New process for deprecating a document

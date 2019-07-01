@@ -5,7 +5,7 @@ title: Custom Styling
 
 ## Styling a existing component
 
-All the CSS styles can be added directly in `lib/reactionTheme.js` file. The Starter Kit uses a combination of [JSS](http://cssinjs.org/) with [Material-UI](https://material-ui.com/) and [Styled Components](http://styled-components.com/) for CSS in React components.
+All the CSS styles can be added directly in `lib/reactionTheme.js` file. The Example Storefront uses a combination of [JSS](http://cssinjs.org/) with [Material-UI](https://material-ui.com/) and [Styled Components](http://styled-components.com/) for CSS in React components.
 
 For example, to style the Header component:
 

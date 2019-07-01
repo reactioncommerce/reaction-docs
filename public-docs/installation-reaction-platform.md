@@ -11,7 +11,7 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 | ------------------------------------------------------------------------------------------ | ------------------------------------------ |
 | [`reaction`](https://github.com/reactioncommerce/reaction)                                 | GraphQL API, Meteor API, Classic UI, Mongo |
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra)                     | Authentication server, PostgreSQL          |
-| [`reaction-next-starterkit`](https://github.com/reactioncommerce/reaction-next-starterkit) | Next.js storefront application             |
+| [`example-storefront`](https://github.com/reactioncommerce/example-storefront) | Next.js storefront application             |
 
 ## Installation
 
@@ -45,18 +45,18 @@ This process may take some time. The Platform is checking that dependencies are 
 By the end of the initial `make` process, you should see these log messages:
 
 ```sh
-Successfully tagged reaction-next-starterkit_web:latest
-Running post-build hook script for reaction-next-starterkit.
-reaction-next-starterkit post-build script invoked.
-Recreating reaction-next-starterkit_web_1 ... done
-Running post-project-start hook script for reaction-next-starterkit.
-reaction-next-starterkit post-project-start script invoked.
+Successfully tagged example-storefront_web:latest
+Running post-build hook script for example-storefront.
+example-storefront post-build script invoked.
+Recreating example-storefront_web_1 ... done
+Running post-project-start hook script for example-storefront.
+example-storefront post-project-start script invoked.
 Running post-system-start hook script for reaction-hydra.
 reaction-hydra post-system-start script invoked.
 
 No post-system-start hook script for reaction. Skipping.
-Running post-system-start hook script for reaction-next-starterkit.
-reaction-next-starterkit post-system-start script invoked.
+Running post-system-start hook script for example-storefront.
+example-storefront post-system-start script invoked.
 ```
 
 You can confirm that all of these containers have installed and are starting up by running:
@@ -68,7 +68,7 @@ You should see a log of all running containers with names, ports and statuses:
 
 ```sh
 CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS              PORTS                                                      NAMES
-7616b75a7277        reaction-next-starterkit_web      "sh -c 'yarn install…"   15 minutes ago      Up 15 minutes       0.0.0.0:4000->4000/tcp                                     reaction-next-starterkit_web_1
+7616b75a7277        example-storefront_web      "sh -c 'yarn install…"   15 minutes ago      Up 15 minutes       0.0.0.0:4000->4000/tcp                                     example-storefront_web_1
 56053f0275fb        reaction_reaction                 "bash -c 'npm instal…"   18 minutes ago      Up 18 minutes       0.0.0.0:3000->3000/tcp                                     reaction_reaction_1
 31f4180746a4        mongo:3.6.3                       "docker-entrypoint.s…"   2 weeks ago         Up 18 minutes       0.0.0.0:27017->27017/tcp                                   reaction_mongo_1
 1f420dd7c664        oryd/hydra:v1.0.0-beta.9-alpine   "hydra serve all --d…"   2 weeks ago         Up 19 minutes       0.0.0.0:4444-4445->4444-4445/tcp, 0.0.0.0:5555->5555/tcp   reaction-hydra_hydra_1
@@ -82,10 +82,10 @@ cd reaction
 docker-compose logs -f
 ```
 
-To display the `reaction-next-starterkit` logs, run:
+To display the `example-storefront` logs, run:
 
 ```sh
-cd reaction-next-starterkit
+cd example-storefront
 docker-compose logs -f
 ```
 
@@ -98,7 +98,7 @@ docker-compose logs -f
 | [`reaction`](https://github.com/reactioncommerce/reaction): Classic UI                     | [localhost:3000](localhost:3000)                              |
 | [`reaction`](https://github.com/reactioncommerce/reaction): MongoDB                        | [localhost:27017](localhost:27017)                            |
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra         | [localhost:4444](localhost:4444)                              |
-| [`reaction-next-starterkit`](https://github.com/reactioncommerce/reaction-next-starterkit) | [localhost:4000](localhost:4000)                              |
+| [`example-storefront`](https://github.com/reactioncommerce/example-storefront) | [localhost:4000](localhost:4000)                              |
 
 7. Congrats 🎉  Now you're running the entire suite of Reaction Platform services and ready to start developing.
 
@@ -117,14 +117,14 @@ Run these commands from the `reaction-platform` directory:
 | `make start`               | Starts all containers.                                                                |
 | `make rm`                  | Removes all containers. Volumes are not removed.                                      |
 | `make clean`               | Removes all containers, networks, and volumes. Any volume data will be lost.          |
-| `make init-<project-name>` | Example: `make init-reaction-next-starterkit`. Does clone/setup for a single project. |
+| `make init-<project-name>` | Example: `make init-example-storefront`. Does clone/setup for a single project. |
 | `make clone`               | Run from a specific project to bootstrap with a particular Git branch. Read [more](https://github.com/reactioncommerce/reaction-platform/blob/master/README.md#bootstrapping). |
 
 Learn more about [Reaction Platform](https://github.com/reactioncommerce/reaction-platform).
 
 ### Git
 
-Each sub-project has its own respective Git repository. The normal bootstrapping process will give you the latest released versions of the platform subprojects and is the recommended configuration for regular development. If you want to run a different branch of `reaction` against `reaction-next-starterkit`, for example, change directories into `reaction` and `git checkout` a different branch there. These steps are an alternative to the standard bootstrapping approach, you should do one or the other, not both:
+Each sub-project has its own respective Git repository. The normal bootstrapping process will give you the latest released versions of the platform subprojects and is the recommended configuration for regular development. If you want to run a different branch of `reaction` against `example-storefront`, for example, change directories into `reaction` and `git checkout` a different branch there. These steps are an alternative to the standard bootstrapping approach, you should do one or the other, not both:
 
 As [documented above](#installation), install the prerequisites and clone the reaction-platform repository. Then:
 
@@ -138,7 +138,7 @@ Within the necessary subproject directory or directories run the `git checkout <
 Example:
 
 ```sh
-cd reaction-next-starterkit
+cd example-storefront
 git checkout develop
 ```
 
