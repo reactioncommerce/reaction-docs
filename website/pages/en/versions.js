@@ -38,7 +38,7 @@ class Versions extends React.Component {
                     <a href={`${baseURL}docs/intro.html`}>Documentation</a>
                   </td>
                   <td>
-                    <a href={`https://github.com/reactioncommerce/reaction/releases/tag/${latestVersion}`}>Release Notes</a>
+                    <a href="https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md">Release Notes</a>
                   </td>
                 </tr>
               </tbody>
@@ -72,7 +72,7 @@ class Versions extends React.Component {
                         <a href={`${baseURL}docs/${version}/intro.html`}>Documentation</a>
                       </td>
                       <td>
-                        <a href={`https://github.com/reactioncommerce/reaction/releases/tag/${version}`}>Release Notes</a>
+                        <a href="https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md">Release Notes</a>
                       </td>
                       <td>
                         <a href="https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md">Change Log</a>
