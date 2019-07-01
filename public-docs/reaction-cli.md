@@ -3,7 +3,7 @@ id: reaction-cli
 title: Reaction CLI
 ---
 
-**Note:** As of Reaction 2.0 the CLI is deprecated and unsupported. You can use the docker commands listed in this doc, to achieve the same results. 
+> **Note:** As of Reaction 2.0 the CLI is deprecated and unsupported. You can use the Docker commands listed in this doc, to achieve the same results.
 
 This document lists some handy commands to use while developing on Reaction.
 
