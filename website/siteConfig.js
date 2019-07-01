@@ -90,6 +90,11 @@ const siteConfig = {
     "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
   ],
 
+  // Add custom stylesheets
+  stylesheets: [
+    "//cdn.materialdesignicons.com/3.7.95/css/materialdesignicons.min.css"
+  ],
+
   /* On page navigation for the current documentation page */
   onPageNav: "separate",
 
