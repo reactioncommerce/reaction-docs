@@ -3,87 +3,49 @@ id: reaction-cli
 title: Reaction CLI
 ---
 
-Reaction ships with all the standard Meteor commands, as documented in the [Meteor Guides](https://docs.meteor.com/commandline.html), along with those from Reaction's own command line interface (CLI). Here are some handy commands to use while developing on Reaction:
+**Note:** As of Reaction 2.0 the CLI is deprecated and unsupported. You can use the docker commands listed in this doc, to achieve the same results. 
 
-## Reaction CLI
+This document lists some handy commands to use while developing on Reaction.
 
-To install the CLI, run the following:
+## Check Version
 
-```sh
-npm i -g reaction-cli
-```
-
-### reaction -v
-
-Before you get started using the Reaction CLI, it's important to make sure you're using the latest version. Use `reaction -v` to check what versions of Node, NPM, Meteor Node, Reaction CLI, Docker and what branch and version of Reaction you are currently running.
+Use `grep version package.json` to check what version of Reaction you are currently running.
 
 ```sh
-reaction -v
+grep version package.json
 
-Node: 9.5.0
-NPM: 5.6.0
-Meteor Node: 8.9.3
-Meteor NPM: 5.5.1
-Reaction CLI: 0.27.0
-Reaction: 1.8.0
-Reaction branch: release-1.8.0
-Docker: 17.12.0-ce
+"version": "2.0.0-rc.10",
+          "last 2 versions"
 ```
 
-### reaction --help
-
-Shortcut: `-h`
-
-`reaction --help` or `-h` will give you help for the `reaction` command.
-
-### reaction reset
-
-Resets the Reaction database, updates npm modules, and optionally removes `node_modules` before updating.
-
-This will give you a fresh test dataset from `private/data`.
-
-```sh
-reaction reset
-```
-
-To just reset the database, pass in the `-n` flag:
-
-```sh
-reaction reset -n
-```
-
-### reaction test
+## Run Tests
 
 To run the server integration tests:
 
 ```sh
-reaction test
+docker-compose run --rm reaction npm run test
 ```
 
-### reaction plugin create <your-plugin-name>
+To run the tests for a specific file use the following commands. Replace `file` with the name of the file you want to test.
 
-This will create a template project in the `/imports/plugin/custom` directory.
+```sh
+docker-compose run --rm reaction npm run test:file
+```
 
-## Other useful commands for development
+## Lint Files
 
-### inspect
+Use the following command to lint your local files. This ensures you are running the same version of Reaction's ESLint.
+
+```sh
+docker-compose run --rm reaction npm run lint
+```
+
+## Debug Server Code
 
 To learn more on how to set up the inspector, check out our [debugging documentation](testing-debugging-server-code.md).
 
-### npm run lint
+## SKIP_FIXTURES=true
 
-Use `npm run lint` or alternatively, `npx eslint .` for linting your local files. This ensures you are running the same version of Reaction's ESLint.
-
-### SKIP_FIXTURES=true reaction
-
-Run Reaction _without_ the default sample data store and products. Read more about [fixture options](configuration.md#overwrite-sample-data).
-
-### meteor mongo
-
-Run `meteor mongo` from your Reaction directory to view and run commands in the MongoDB database directly.
-
-See Meteor's documentation on [`meteor mongo`](https://docs.meteor.com/commandline.html#meteormongo) and MongoDB's documentation on all the [Mongo shell commands](https://docs.mongodb.com/manual/reference/mongo-shell/#mongo-shell-command-history).
-
-### meteor shell
-
-Start the Meteor interactive shell with `meteor shell`. See Meteor's documentation on [`meteor shell`](https://docs.meteor.com/commandline.html#meteorshell).
+Tun Reaction _without_ the default sample data store and products:
+1. Edit `.env` and add the following variable: `SKIP_FIXTURES=true`
+2. Restart Reaction with `docker-compose restart`
