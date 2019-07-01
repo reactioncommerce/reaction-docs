@@ -18,7 +18,7 @@ We do! We have [internationalization support](i18n.md) for dozens of languages, 
 
 ## What's your pricing model?
 
-Reaction is free. Our code, which is licensed under the GPL v3 license, will always be free and available to the open source community. In early 2017, we'll be launching our hosted platform, which will come at a tiered premium price. If you'd like to learn more, check out our hosted service's [Terms & Conditions](https://reactioncommerce.com/legal/terms).
+Reaction is free. Our code, which is licensed under the GPL v3 license, will always be free and available to the open source community.
 
 ## Is MongoDB/NoSQL best suited for ecommerce?
 
