@@ -712,3 +712,7 @@ p.item-label {
   font-size: .75em;
   font-weight: bold;
 }
+
+.font-icon {
+  font-style: normal;
+}
