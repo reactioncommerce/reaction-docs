@@ -52,7 +52,7 @@ The pluggable and schemaless nature of Reaction means that interfacing with your
 ## Customization
 
 - The Classic Meteor UI can be customized using theme plugins that provide Bootstrap UI themes.
-- The Starter Kit UI can be customized using a simple theme file, or you can easily swap entire React components for your own.
+- The Example Storefront UI can be customized using a simple theme file, or you can easily swap entire React components for your own.
 - The Reaction API can be customized by plugins, including stitching your own GraphQL additions into the core schema or listening for core events and using them to trigger other actions.
 
 ## Deployment
