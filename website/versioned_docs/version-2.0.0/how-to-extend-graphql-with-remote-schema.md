@@ -1,5 +1,6 @@
 ---
-id: how-to-extend-graphql-with-remote-schema
+id: version-2.0.0-how-to-extend-graphql-with-remote-schema
+original_id: how-to-extend-graphql-with-remote-schema
 title: How To: Extend GraphQL with Remote Schema Delegation
 ---
 

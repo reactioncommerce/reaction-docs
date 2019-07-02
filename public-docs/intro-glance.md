@@ -10,7 +10,7 @@ Reaction Commerce is an open source commerce platform that allows anyone to cust
 
 ## Pricing
 
-Reaction is free. Our code, which is licensed under the GPL v3 license, will always be free and available to the open source community. In early 2017, we'll be launching our hosted platform, which will come at a tiered premium price. If you'd like to learn more, check out our hosted service's [Terms & Conditions](https://reactioncommerce.com/legal/terms).
+Reaction is free. Our code, which is licensed under the GPL v3 license, will always be free and available to the open source community.
 
 ## Installation
 
@@ -18,9 +18,7 @@ Check out our [Installation docs](https://docs.reactioncommerce.com/reaction-doc
 
 ## Mobile Device Support
 
-The Reaction web apps use mobile-first design principles, which means they look great in a mobile web browser.
-
-While we do have plans to work on a native mobile app on the [Roadmap](https://reactioncommerce.com/roadmap), we do not have a release date. However, you may create your own native mobile app using the Reaction GraphQL API. If you do so using React Native, you can use any of our Reaction Design System components to get your UI built more quickly.
+The Reaction web apps use mobile-first design principles, which means they look great in a mobile web browser. You may create your own native mobile app using the Reaction GraphQL API. If you do so using React Native, you can use any of our Reaction Design System components to get your UI built more quickly.
 
 ## Localization and Internationalization
 

@@ -70,6 +70,7 @@
       "version-2.0.0-core-plugins-search",
       "version-2.0.0-core-plugins-stripe",
       "version-2.0.0-core-plugins-simple-inventory",
+      "version-2.0.0-core-plugins-sitemap-generator",
       "version-2.0.0-community-resources"
     ],
     "Developer How-To: General": [
@@ -85,6 +86,7 @@
       "version-2.0.0-how-to-add-address-validation-service",
       "version-2.0.0-how-to-add-tax-service",
       "version-2.0.0-how-to-extend-graphql-to-add-field",
+      "version-2.0.0-how-to-extend-graphql-with-remote-schema",
       "version-2.0.0-how-to-store-custom-order-fields",
       "version-2.0.0-how-to-extend-product",
       "version-2.0.0-how-to-manage-app-settings",
@@ -134,6 +136,7 @@
     ],
     "For Developers: Core Meteor App API": [
       "version-2.0.0-appevent-hooks",
+      "version-2.0.0-register-operator-route",
       "version-2.0.0-reaction-core",
       "version-2.0.0-admin-views",
       "version-2.0.0-register-operator-route",
@@ -146,15 +149,11 @@
       "version-2.0.0-reaction-product-detail",
       "version-2.0.0-reaction-products",
       "version-2.0.0-reaction-tags",
-      "version-2.0.0-reaction-cart",
       "version-2.0.0-reaction-shipping",
       "version-2.0.0-reaction-orders",
       "version-2.0.0-reaction-import",
       "version-2.0.0-reaction-inventory",
       "version-2.0.0-reaction-localization",
-      "version-2.0.0-method-hooks",
-      "version-2.0.0-collection-hooks",
-      "version-2.0.0-event-hooks",
       "version-2.0.0-reaction-module-cheatsheet",
       "version-2.0.0-template-helpers"
     ],
@@ -194,6 +193,7 @@
       "version-2.0.0-writing-jest-unit-tests",
       "version-2.0.0-writing-jest-integration-tests",
       "version-2.0.0-react-testing",
+      "version-2.0.0-how-to-write-tests-for-plugins",
       "version-2.0.0-creating-test-data",
       "version-2.0.0-creating-test-data-for-meteor-tests",
       "version-2.0.0-jest-tips"
