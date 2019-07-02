@@ -11,7 +11,7 @@ In general, to add a fulfillment method you must do the following:
 - Create a new plugin
 - Create a `getFulfillmentMethodsWithQuotes` function in your plugin
 - Create a React component for operators to enter and edit fulfillment method details, unless they'll be managed in an external system
-- Register the function and the React components using your plugin's `registerPackage` call
+- Register the function and the React components using your plugin's `registerPlugin` call
 
 Reaction ships with one such plugin, `shipping-rates`, which you can look at for inspiration. You will want to remove that plugin if adding your own, unless you're combining multiple fulfillment method sources
 
@@ -65,16 +65,18 @@ Everything needs to be registered to be seen by Reaction core.
 Pass your function in the `functionsByType` list:
 
 ```js
-import getFulfillmentMethodsWithQuotes from "./server/getFulfillmentMethodsWithQuotes";
+import getFulfillmentMethodsWithQuotes from "./getFulfillmentMethodsWithQuotes";
 
-Reaction.registerPackage({
-  label: "My Fulfillment Plugin",
-  name: "my-fulfillment-plugin",
-  functionsByType: {
-    getFulfillmentMethodsWithQuotes: [getFulfillmentMethodsWithQuotes]
-  },
-  // ...
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "My Fulfillment Plugin",
+    name: "my-fulfillment-plugin",
+    functionsByType: {
+      getFulfillmentMethodsWithQuotes: [getFulfillmentMethodsWithQuotes]
+    },
+    // other props
+  });
+}
 ```
 
 ### Settings UI
@@ -82,17 +84,19 @@ Reaction.registerPackage({
 If your plugin needs any settings that it will not get from environment variables, register the React component in the `registry` array:
 
 ```js
-Reaction.registerPackage({
-  // ...
-  registry: [
-    {
-      label: "My Fulfillment Plugin",
-      provides: ["shippingSettings"],
-      container: "dashboard",
-      template: "MyFulfillmentPluginSettings"
-    }
-  ]
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    registry: [
+      {
+        label: "My Fulfillment Plugin",
+        provides: ["shippingSettings"],
+        container: "dashboard",
+        template: "MyFulfillmentPluginSettings"
+      }
+    ]
+    // other props
+  });
+}
 ```
 
 The `label` is shown in the operator UI to group the settings for each fulfillment plugin. The `provides` property must be an array containing `"shippingSettings"`. Set `template` to the name of your React component, which you must register with `registerComponent` in client code.

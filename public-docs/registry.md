@@ -18,20 +18,21 @@ Once registered, plugins are published to the client in the [Packages publicatio
 Here's an example of the most basic `register.js` file.
 
 ```js
-Reaction.registerPackage({
-  label: "PackageName",
-  name: "reaction-example-package",
-  icon: "fa fa-package",
-  settings: {
-    name: "Marketplace",
-    enabled: true,
-    public: {
-      somePublicSetting: true
-    }
-  },
-  registry: [] // Array of registry objects - optional
-  layout: [] // Array of layout objects - optional
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "PackageName",
+    name: "reaction-example-package",
+    icon: "fa fa-package",
+    settings: {
+      public: {
+        somePublicSetting: true
+      }
+    },
+    registry: [] // Array of registry objects - optional
+    layout: [] // Array of layout objects - optional
+    // other props
+  });
+}
 ```
 
 There are four main sections:

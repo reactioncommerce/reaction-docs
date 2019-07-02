@@ -31,15 +31,16 @@ Sometimes you only need to extend GraphQL to add a field to an existing type. He
 1. If not already done, register your schemas in the plugin's `register.js` file:
 
     ```js
-    import Reaction from "/imports/plugins/core/core/server/Reaction";
-    import schemas from "./server/no-meteor/schemas";
+    import schemas from "./schemas";
 
-    Reaction.registerPackage({
-      graphQL: {
-        schemas
-      },
-      // ...other props
-    });
+    export default async function register(app) {
+      await app.registerPlugin({
+        graphQL: {
+          schemas
+        },
+        // other props
+      });
+    }
     ```
 
 ## Create a field resolver if necessary
@@ -75,20 +76,21 @@ export default {
 };
 ```
 
-If this is the first resolver for the plugin, pass the full `resolvers` object to `registerPackage` in the plugin's `register.js` file:
+If this is the first resolver for the plugin, pass the full `resolvers` object to `registerPlugin` in the plugin's `register.js` file:
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import resolvers from "./server/no-meteor/resolvers";
-import schemas from "./server/no-meteor/schemas";
+import resolvers from "./resolvers";
+import schemas from "./schemas";
 
-Reaction.registerPackage({
-  graphQL: {
-    resolvers,
-    schemas
-  },
-  // ...other props
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    graphQL: {
+      resolvers,
+      schemas
+    },
+    // other props
+  });
+}
 ```
 
 You should now be able to query for your custom field using GraphQL.
