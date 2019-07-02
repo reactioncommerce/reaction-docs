@@ -4,6 +4,8 @@ id: version-2.0.0-core-plugins-marketplace
 original_id: core-plugins-marketplace
 ---
 
+> **Note**: Deprecating marketplaces: Reaction will not be recreating current implementation of marketplaces in v2.x. Our focus in the near-term is on improving support for multi-shop orchestration tools, for merchants who have multiple properties or sales channels.
+
 Every Reaction Commerce installation inherently supports multiple shops: almost all entities and permissions are scoped by shop ID. But there is no relationship between these shops and they do not mix.
 
 If you are interested in creating a marketplace experience, there is an experimental alpha plugin in [`/imports/plugins/included/marketplace`](https://github.com/reactioncommerce/reaction/tree/v1.15.0/imports/plugins/included/marketplace) that allows you to create shops that are “merchant” shops belonging to another shop. Use this at your own risk and expect to have to customize it a bit.
