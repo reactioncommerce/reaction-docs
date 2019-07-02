@@ -140,17 +140,18 @@ Then import and register the startup function in the plugin's `register.js` file
 
 ```js
 import Reaction from "/imports/plugins/core/core/server/Reaction";
-import startup from "./server/no-meteor/startup";
 
-Reaction.registerPackage({
-  label: "Shipping",
-  name: "reaction-shipping",
-  icon: "fa fa-truck",
-  functionsByType: {
-    startup: [startup]
-  }
-  // other props
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Shipping",
+    name: "reaction-shipping",
+    icon: "fa fa-truck",
+    functionsByType: {
+      startup: [startup]
+    }
+    // other props
+  });
+}
 ```
 
 ## Emit an app event

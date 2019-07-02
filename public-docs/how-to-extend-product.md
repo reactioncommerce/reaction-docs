@@ -68,18 +68,18 @@ Refer to [How To: Extend GraphQL to add a field](./how-to-extend-graphql-to-add-
 
 *Skip this step if your property is not needed in the published catalog*
 
-A plugin can include a `catalog` object in `registerPackage`, with `customPublishedProductFields` and `customPublishedProductVariantFields` that are set to arrays of property names. These will be appended to the core list of fields for which published status should be tracked. This is used to build the hashes that are used to display an indicator when changes need to be published.
+A plugin can include a `catalog` object in `registerPlugin`, with `customPublishedProductFields` and `customPublishedProductVariantFields` that are set to arrays of property names. These will be appended to the core list of fields for which published status should be tracked. This is used to build the hashes that are used to display an indicator when changes need to be published.
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-
-Reaction.registerPackage({
-  catalog: {
-    customPublishedProductFields: ["myProperty"],
-    customPublishedProductVariantFields: ["myProperty"]
-  },
-  // ...other props
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    catalog: {
+      customPublishedProductFields: ["myProperty"],
+      customPublishedProductVariantFields: ["myProperty"]
+    },
+    // other props
+  });
+}
 ```
 
 ### Register a function that publishes custom property
@@ -87,15 +87,16 @@ Reaction.registerPackage({
 *Skip this step if your property is not needed in the published catalog*
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import publishProductToCatalog from "./server/no-meteor/publishProductToCatalog";
+import publishProductToCatalog from "./publishProductToCatalog";
 
-Reaction.registerPackage({
-  functionsByType: {
-    publishProductToCatalog: [publishProductToCatalog]
-  },
-  // ...other props
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    functionsByType: {
+      publishProductToCatalog: [publishProductToCatalog]
+    },
+    // other props
+  });
+}
 ```
 
 Where the `publishProductToCatalog` function looks something like this:

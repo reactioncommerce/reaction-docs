@@ -33,17 +33,18 @@ export default {
 You could save that file as `resolvers.js` in `/server/no-meteor` in the payments plugin, and then import it and register it:
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import resolvers from "./server/no-meteor/resolvers";
-import schemas from "./server/no-meteor/schemas";
+import resolvers from "./resolvers";
+import schemas from "./schemas";
 
-Reaction.registerPackage({
-  graphQL: {
-    resolvers,
-    schemas
-  },
-  // ...other props
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    graphQL: {
+      resolvers,
+      schemas
+    },
+    // other props
+  });
+}
 ```
 
 While that would work and may even be fine for a simple custom plugin, there are some downsides. We want to be able to test each complex resolver function, which is easier if each function is in its own file. Also, plugins typically keep growing, so our single file might become too large to easily understand over time.

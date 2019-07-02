@@ -4,27 +4,33 @@ title: Creating a Server-side GraphQL plugin
 original_id: swag-shop-7
 ---
 
-For our Homepage, we want to have some dynamic content that can be changed by non-developers. Specifically we want feature a subset of products on the home page, which we will call "Featured Products". These products will be designated by just adding a particular tag with the name "featured-products". What we want to create is a new GraphQL query that will return a cursor of products that are tagged with this tag.
+For our Homepage we want to have some dynamic content that can be changed by non-developers. Specifically we want to feature a subset of products on the home page, which we will call "Featured Products". These products will be designated by just adding a particular tag with the name "featured-products". What we want to create is a new GraphQL query that will return a cursor of products that are tagged with this tag.
 
 To do this we need to create a new plugin in the `Reaction` project. We are going to call this plugin `featured-products` and you can find the finished code in the `server` folder in the tutorial repository. You need to place this new directory in `imports/plugins/custom` from the root of your Reaction project
 
-What we want to accomplish is to create a new Query (`featuredProductsByShop`). Let's start by creating the `register.js` at the root our new plugin. This registers all the schemas/queries/resolvers/mutations, etc and makes our plugin visible to the rest of the system.
+What we want to accomplish is to create a new Query (`featuredProductsByShop`). Let's start by creating a file named `register.js` at the root our new plugin. This registers all the schemas/queries/resolvers/mutations, etc and makes our plugin visible to the rest of the system.
 
-Let's just add the skeleton of it for now and we will add more to it as we complete them:
+For now, while we are moving server code off Meteor, you'll actually need two `register.js` files. The first is recognized by Meteor loading and should look like this:
 
 ```javascript
 import Reaction from "/imports/plugins/core/core/server/Reaction";
+import register from "./server/no-meteor/register";
 
-
-Reaction.registerPackage({
-  label: "Featured Products",
-  name: "featured-products",
-});
+Reaction.whenAppInstanceReady(register);
 ```
 
-This file also insures that our files get imported.
+The second `register.js` file goes in the `server/no-meteor` folder. Let's just add the skeleton of it for now and we will add more to it as we complete them:
 
-Now the first thing we are going to create is our GraphQL schema files. You need to create a certain directory heirarchy, in this case it's `server/no-meteor`. All of the files we create in this tutorial will be in the `server/no-meteor` directory.
+```javascript
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Featured Products",
+    name: "featured-products"
+  });
+}
+```
+
+Now the first thing we are going to create is our GraphQL schema files. You need to create a certain directory hierarchy, in this case it's `server/no-meteor`. All of the files we create in this tutorial will be in the `server/no-meteor` directory.
 
 In this directory now create a `schemas` directory, and in that directory create a `schema.graphql` file. I find it easier to think of this file as creating the external API and defining the "shape" of it (as the word schema would imply). So the first thing we do is add our Query. This query will take a `shopId` and return a cursor of featured products. So it looks like this:
 
@@ -47,17 +53,17 @@ Now let's edit our `register.js`
 We will add a new `graphQL` key which will contain a `schemas` entry. We'll import our schema file and add it there.
 
 ```javascript
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import schemas from "./server/no-meteor/schemas";
+import schemas from "./schemas";
 
-
-Reaction.registerPackage({
-  label: "Featured Products",
-  name: "featured-products",
-  graphQL: {
-    schemas
-  }
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Featured Products",
+    name: "featured-products",
+    graphQL: {
+      schemas
+    }
+  });
+}
 ```
 
 That's fine but our query doesn't actually "do" anything (often a requirement!). To make it do something we will need to add a resolver and a query. Let's start with the resolver. At the same level as we created `schemas` let's create a `resolvers` directory, add a `Query` directory (the capital letter there is intentional) and in that `Query` directory add a file called `featuredProductsByShop`. The name of the file **needs** to be the same as our query in order for the GraphQL server to find it. While we're creating files let's also create an `index.js` file there that imports the default and exports it back out as a key in an object
@@ -146,27 +152,27 @@ Nothing really special or fancy here except that if you are used to Meteor devel
 
 The only things extra to point out are that we need to `await` on every database action, the query to `Tags` and inserting the `Tag`.
 
-We now have all our pieces in place, we just need to let the system know about them through entries to our `register.js`. So we just need to add new entries for `resolvers` and `queries`. So our updated `register.js` should look somwething like this:
+We now have all our pieces in place, we just need to let the system know about them through entries to our `register.js`. So we just need to add new entries for `resolvers` and `queries`. So our updated `register.js` should look something like this:
 
 ```javascript
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import queries from "./server/no-meteor/queries";
-import resolvers from "./server/no-meteor/resolvers/index";
-import schemas from "./server/no-meteor/schemas";
+import queries from "./queries";
+import resolvers from "./resolvers";
+import schemas from "./schemas";
 
-
-Reaction.registerPackage({
-  label: "Featured Products",
-  name: "featured-products",
-  graphQL: {
-    resolvers,
-    schemas
-  },
-  queries
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Featured Products",
+    name: "featured-products",
+    graphQL: {
+      resolvers,
+      schemas
+    },
+    queries
+  });
+}
 ```
 
-if you visit GraphiQL or GraphQL playground and hit the "schema" tab you should now see your Query available to the client. If you want to execute the schema you will need to get your encoded shopId. Your shopId should be available in the `Shops` collection and to get the encoded version of it you can execute this command from the command line:
+If you visit GraphQL Playground and hit the "schema" tab you should now see your query available to the client. If you want to execute the schema you will need to get your encoded shopId. Your shopId should be available in the `Shops` collection and to get the encoded version of it you can execute this command from the command line:
 
 ```bash
 echo -n reaction/shop:<your_shop_id> | base64

@@ -19,28 +19,29 @@ In general, to add a tax service you must do the following:
 
 ### Register a tax service
 
-Tax services are registered by passing an array of them to the `taxServices` property of the `Reaction.registerPackage` options.
+Tax services are registered by passing an array of them to the `taxServices` property of the `registerPlugin` options.
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import calculateOrderTaxes from "./server/no-meteor/util/calculateOrderTaxes";
-import getTaxCodes from "./server/no-meteor/util/getTaxCodes";
+import calculateOrderTaxes from "./util/calculateOrderTaxes";
+import getTaxCodes from "./util/getTaxCodes";
 
-Reaction.registerPackage({
-  label: "Custom Rates",
-  name: "reaction-taxes-rates",
-  taxServices: [
-    {
-      displayName: "Custom Rates",
-      name: "custom-rates",
-      functions: {
-        calculateOrderTaxes,
-        getTaxCodes
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Custom Rates",
+    name: "reaction-taxes-rates",
+    taxServices: [
+      {
+        displayName: "Custom Rates",
+        name: "custom-rates",
+        functions: {
+          calculateOrderTaxes,
+          getTaxCodes
+        }
       }
-    }
-  ]
-  // ...
-});
+    ]
+    // other props
+  });
+}
 ```
 
 See below for how to create the two functions.

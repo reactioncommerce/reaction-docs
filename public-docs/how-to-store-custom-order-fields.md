@@ -47,7 +47,7 @@ const order = {
 ```
 
 ## Transforming or Adding Custom Order Fields on the Server
-Whether or not you've allowed clients to send additional order data, you can also provide a function that returns custom order fields on the server. Do this using the `functionsByType` option in `registerPackage`:
+Whether or not you've allowed clients to send additional order data, you can also provide a function that returns custom order fields on the server. Do this using the `functionsByType` option in `registerPlugin`:
 
 ```js
 functionsByType: {
