@@ -139,8 +139,6 @@ export default function startup(context) {
 Then import and register the startup function in the plugin's `register.js` file:
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-
 export default async function register(app) {
   await app.registerPlugin({
     label: "Shipping",
@@ -227,32 +225,52 @@ await createNotification(rawCollections, { accountId, type: "orderCanceled", url
 
 ## Add MongoDB collections from a plugin
 
-To create any non-core MongoDB collection that a plugin needs, add a reference to the collection instance on `context.collections` in a startup function.
+To create any non-core MongoDB collection that a plugin needs, use the `collections` option in your plugin's `registerPlugin` call:
 
 ```js
-export default function startup(context) {
-  context.collections.MyCustomCollection = context.app.db.collection("MyCustomCollection");
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "My Custom Plugin",
+    name: "my-custom-plugin",
+    collections: {
+      MyCustomCollection: {
+        name: "MyCustomCollection"
+      }
+    }
+    // other props
+  });
 }
 ```
 
-Now `context.collections.MyCustomCollection` will be available in all query and mutation functions. Note that usually MongoDB will not actually create the collection until the first time you insert into it.
+The `collections` object key is where you will access this collection on `context.collection`, and `name` is the collection name in MongoDB. We recommend you make these the same if you can.
 
-If you need to ensure indexes on any fields, the startup function is a good place to do that, too.
+The example above will make `context.collections.MyCustomCollection` available in all query and mutation functions, and all functions that receive `context`, such as startup functions. Note that usually MongoDB will not actually create the collection until the first time you insert into it.
+
+If you need to ensure indexes on any fields in your collection, see the next section.
 
 ## Ensure MongoDB collection indexes from a plugin
 
-Import the `collectionIndex` util function and call it in a startup function registered by your plugin. It handles errors in a standard way and forces the `background: true` option.
+You can add indexes for your MongoDB collection in the same place you define your collection, the `collections` object of your `registerPlugin` call:
 
 ```js
-import collectionIndex from "/imports/utils/collectionIndex";
-
-export default function startup(context) {
-  collectionIndex(collections.Surcharges, { shopId: 1 });
-
-  // You can pass options as the third argument
-  collectionIndex(collections.Custom, { referenceId: 1 }, { unique: true });
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "My Custom Plugin",
+    name: "my-custom-plugin",
+    collections: {
+      MyCustomCollection: {
+        name: "MyCustomCollection",
+        indexes: [
+          [{ referenceId: 1 }, { unique: true }]
+        ]
+      }
+    }
+    // other props
+  });
 }
 ```
+
+Each item in the `indexes` array is an array of arguments that will be passed to the Mongo `createIndex` function. The `background` option is always set to `true` so you need not include that.
 
 ## Loop over async function results
 
