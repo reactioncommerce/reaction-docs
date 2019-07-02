@@ -22,6 +22,9 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 - Install [Node.js](https://nodejs.org/en/)
 - A GitHub account with a <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">configured SSH key</a>
 
+##### Recommended settings for Docker for Mac, Windows and Linux
+- Minimum 4GB of RAM and 4CPUs, for better performance allocate 4GB+ and 4CPUs+. For instructions visit the advanced section of the [Docker for Mac Getting Started guide](https://docs.docker.com/docker-for-mac/).
+
 > **Windows**: Reaction Platform has not been fully tested on Windows at this time.
 
 > **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
@@ -101,7 +104,10 @@ docker-compose logs -f
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra         | [localhost:4444](localhost:4444)                              |
 | [`example-storefront`](https://github.com/reactioncommerce/example-storefront) | [localhost:4000](localhost:4000)                              |
 
-7. Congrats 🎉  Now you're running the entire suite of Reaction Platform services and ready to start developing.
+7. Congrats 🎉  Now you're running the entire suite of Reaction Platform services and ready to start developing. 
+
+**Note:** To login into the Classic UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/master/.env.example#L11-L12) file.
+
 
 ## Developing with Reaction Platform
 
