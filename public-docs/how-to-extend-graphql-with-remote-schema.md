@@ -44,7 +44,6 @@ Reaction.registerPackage({
   graphQL: {
     schemas: [remoteSchema]
   },
-  autoEnable: true,
   functionsByType: {},
   settings: {},
   registry: []

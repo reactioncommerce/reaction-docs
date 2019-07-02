@@ -24,7 +24,6 @@ import addressValidation from "./server/addressValidation.js";
 Reaction.registerPackage({
   label: "Great Validation Service",
   name: "great-validation-service",
-  autoEnable: true,
   addressValidationServices: [
     {
       displayName: "Great Validation",

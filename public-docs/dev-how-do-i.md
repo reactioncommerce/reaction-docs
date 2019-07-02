@@ -146,7 +146,6 @@ Reaction.registerPackage({
   label: "Shipping",
   name: "reaction-shipping",
   icon: "fa fa-truck",
-  autoEnable: true,
   functionsByType: {
     startup: [startup]
   }

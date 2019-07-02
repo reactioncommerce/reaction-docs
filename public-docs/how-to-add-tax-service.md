@@ -27,7 +27,6 @@ import getTaxCodes from "./server/no-meteor/util/getTaxCodes";
 Reaction.registerPackage({
   label: "Custom Rates",
   name: "reaction-taxes-rates",
-  autoEnable: true,
   taxServices: [
     {
       displayName: "Custom Rates",
