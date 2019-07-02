@@ -67,7 +67,6 @@
     "Core Plugins": [
       "core-plugins-intro",
       "core-plugins-marketplace",
-      "core-plugins-search",
       "core-plugins-stripe",
       "core-plugins-simple-inventory",
       "core-plugins-sitemap-generator",

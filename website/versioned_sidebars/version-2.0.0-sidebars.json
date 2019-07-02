@@ -66,8 +66,7 @@
     ],
     "Core Plugins": [
       "version-2.0.0-core-plugins-intro",
-      "version-2.0.0-core-plugins-marketplace",
-      "version-2.0.0-core-plugins-search",
+      "version-2.0.0-core-plugins-marketplace"
       "version-2.0.0-core-plugins-stripe",
       "version-2.0.0-core-plugins-simple-inventory",
       "version-2.0.0-core-plugins-sitemap-generator",
