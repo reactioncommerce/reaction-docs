@@ -72,7 +72,6 @@ import getFulfillmentMethodsWithQuotes from "./server/getFulfillmentMethodsWithQ
 Reaction.registerPackage({
   label: "My Fulfillment Plugin",
   name: "my-fulfillment-plugin",
-  autoEnable: true,
   functionsByType: {
     getFulfillmentMethodsWithQuotes: [getFulfillmentMethodsWithQuotes]
   },

@@ -182,7 +182,6 @@ Reaction.registerPackage({
   label: "Stripe",
   name: "reaction-stripe",
   icon: "fa fa-cc-stripe",
-  autoEnable: true,
   paymentMethods: [{
     name: "stripe_card",
     displayName: "Stripe Card",

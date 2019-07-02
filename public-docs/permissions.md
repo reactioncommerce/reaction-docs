@@ -33,7 +33,6 @@ Reaction.registerPackage({
   label: "Dashboard",
   name: "reaction-dashboard",
   icon: "fa fa-th",
-  autoEnable: true,
   settings: {
     name: "Dashboard"
   },

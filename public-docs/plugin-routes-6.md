@@ -2,7 +2,7 @@
 id: plugin-routes-6
 title: Part 5: Routes
 ---
-    
+
 In any web framework, "routes" are one of the core elements of what happens on a website. Certainly rendering content
 when a user hits a particular URL is a majority of what happens in web development.
 
@@ -20,7 +20,7 @@ Knees wants to add the ubiquitous "About" page to their site and wants to show e
 So the first thing we want to do is add the route in the Registry which we do by adding an entry in the `registry` key in
 our `register.js` file.
 
-This entry will look like this (placed after the `autoEnable: true` entry):
+This entry will look like this:
 
 ```js
   registry: [

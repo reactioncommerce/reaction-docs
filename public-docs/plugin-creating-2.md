@@ -2,12 +2,12 @@
 id: plugin-creating-2
 title: Part 1: Creating your plugin
 ---
-    
+
 ## What is a Reaction plugin?
 
 A Reaction plugin is a plain old JavaScript module.
 
-Going forward, Meteor is moving away from their proprietary package format and towards the [ES6 modules](http://exploringjs.com/es6/ch_modules.html) standard. Reaction is adopting the module approach as well. While adding some boilerplate structure, using JavaScript's native built-in modules adds clarity and removes some of the _magic_ that created global Meteor elements. 
+Going forward, Meteor is moving away from their proprietary package format and towards the [ES6 modules](http://exploringjs.com/es6/ch_modules.html) standard. Reaction is adopting the module approach as well. While adding some boilerplate structure, using JavaScript's native built-in modules adds clarity and removes some of the _magic_ that created global Meteor elements.
 
 Before moving forward you should have a good understanding of how [imports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) and
 [exports](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/export) work
@@ -22,14 +22,14 @@ Start with a fresh checkout of the latest version of Reaction.
 1. Create a directory with the name of the plugin, `beesknees`, within the `imports/plugins/custom` directory of Reaction.
 2. Within `beesknees`, create `client` and `server` directories.
 
-You may, at this point want to also `git init` so you can start tracking your new package with source control. 
+You may, at this point want to also `git init` so you can start tracking your new package with source control.
 
 The reference files for this tutorial are available [here](https://github.com/reactioncommerce/reaction-example-plugin).
 
 ### Create a [`register.js`](https://github.com/reactioncommerce/reaction-example-plugin/blob/master/register.js)
 
 The first file we create is going to be our `register.js`. This is absolutely the bare minimum you need to create
-a plugin. The `register.js` adds your plugin to the Registry, the Packages collection in the database. 
+a plugin. The `register.js` adds your plugin to the Registry, the Packages collection in the database.
 
 3. Create a `register.js` file would look something like this:
 
@@ -40,8 +40,7 @@ import Reaction from "/imports/plugins/core/core/server/Reaction";
 Reaction.registerPackage({
   label: "Bees Knees",
   name: "beesknees",
-  icon: "fa fa-vine",
-  autoEnable: true
+  icon: "fa fa-vine"
 });
 ```
 
