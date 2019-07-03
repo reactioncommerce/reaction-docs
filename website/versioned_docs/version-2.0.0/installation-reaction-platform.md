@@ -106,7 +106,7 @@ docker-compose logs -f
 
 7. Congrats 🎉  Now you're running the entire suite of Reaction Platform services and ready to start developing. 
 
-**Note:** To login into the Classic UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/master/.env.example#L11-L12) file.
+**Note:** To login into the Operator UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/master/.env.example#L11-L12) file.
 
 
 ## Developing with Reaction Platform
