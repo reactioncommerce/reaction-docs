@@ -41,8 +41,4 @@ Under Settings, you can view the rest of your store's feature settings, which yo
 - [Payment](payment.md) - Manage payment methods and add discount codes
 - [Taxes](tax.md) - Enable custom taxes
 - [Template](template.md) - Customize your email's messaging and look and feel
-- [Shipping](shipping-admin.md) - Set up and manage your shipping rates and Shippo integration
-
-## FAQ
-
-Have a question not mentioned here? Check out the [frequently asked questions](faqs.md).
+- [Shipping](shipping-admin.md) - Set up and manage your shipping rates
