@@ -110,6 +110,49 @@ docker-compose logs -f
 
 **Note:** To login into the Operator UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/master/.env.example#L11-L12) file.
 
+## Upgrading from 1.x?
+
+If you are upgrading from Reaction 1.x, follow these steps:
+
+1. Pull locally the latest changes from the [reaction-platform repository](https://github.com/reactioncommerce/reaction-platform)
+
+```sh
+cd reaction-platform
+git pull origin master
+```
+
+2. Pull locally the latest changes from the [reaction repository](https://github.com/reactioncommerce/reaction) and update packages
+
+```sh
+cd reaction-platform/reaction
+git pull origin master
+docker-compose run --rm reaction npm install
+```
+
+3. Pull locally the latest changes from the [example-storefront repository](https://github.com/reactioncommerce/example-storefront) and update packages
+
+```sh
+cd reaction-platform/example-storefront
+git pull origin master
+docker-compose run --rm web yarn install
+```
+
+4. You are nwo ready to start the upgraded Reaction. Run this command to bootstrap and start all of the services:
+
+```sh
+cd reaction-platform
+make
+```
+
+> **Note:** As of Reaction 2.0 the CLI is deprecated and unsupported. You can use Docker commands instead. See the [Reaction CLI](./reaction-cli) article for more information.
+
+## Upgrading from an older 2.0 release candidate?
+
+If you are upgrading from an older 2.0 release candidate, follow the steps listed in the [Installation](#installation) section of this doc. 
+
+## Repository Branches
+
+With Reaction 2.0 release, we introduced a `develop` branch at both the [Reaction](https://github.com/reactioncommerce/reaction) and the [example-storefront](https://github.com/reactioncommerce/example-storefront) repositories. This branch contains all the latest changes, while `master` is our stable branch.
 
 ## Developing with Reaction Platform
 
