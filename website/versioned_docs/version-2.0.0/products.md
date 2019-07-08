@@ -40,17 +40,9 @@ Your changes are auto-saved, but are not immediately visible to customers. Publi
 
 2. Click the **Publish** button on the top right to publish changes to your catalog.
 
-## Un-publishing your changes
+## Unpublishing your changes
 
-![](/assets/operator-ui-product-publish.png "Reaction product publish")
-
-Your changes are auto-saved, but are not immediately visible to customers. Publishing your changes with the **Publish** button, will take all changes since the last publish and make them visible to customers. Products may be to be made **Not Visible** which will hide the product from customers, even if it's published.
-
-1. After making some changes to a product
-
-2. Click the **Publish** button on the top right to publish changes to your catalog.
-
-
+Products published to the Catalog cannot be unpublished. They may be hidden from the storefront using the visibility controls outlined in the [Hiding and showing products from your storefront](#hiding-and-showing-products-from-your-storefront) section.
 
 ## Configuring your first Variant
 
