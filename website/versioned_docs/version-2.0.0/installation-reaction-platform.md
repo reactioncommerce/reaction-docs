@@ -137,7 +137,7 @@ git pull origin master
 docker-compose run --rm web yarn install
 ```
 
-4. You are nwo ready to start the upgraded Reaction. Run this command to bootstrap and start all of the services:
+4. You are now ready to start the upgraded Reaction. Run this command to bootstrap and start all of the services:
 
 ```sh
 cd reaction-platform
