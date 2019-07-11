@@ -155,32 +155,7 @@
       "version-2.0.0-template-helpers"
     ],
     "For Developers: Meteor App Client Components": [
-      "version-2.0.0-blocks-api",
-      "version-2.0.0-components",
-      "version-2.0.0-components-api",
-      "version-2.0.0-components-primary-app-bar",
-      "version-2.0.0-alerts",
-      "version-2.0.0-badge",
-      "version-2.0.0-cards",
-      "version-2.0.0-clickToCopy",
-      "version-2.0.0-divider",
-      "version-2.0.0-dropDownMenu",
-      "version-2.0.0-icon",
-      "version-2.0.0-link",
-      "version-2.0.0-lists",
-      "version-2.0.0-media",
-      "version-2.0.0-menu",
-      "version-2.0.0-metadata",
-      "version-2.0.0-multi-select",
-      "version-2.0.0-popover",
-      "version-2.0.0-avatar",
-      "version-2.0.0-settings-card",
-      "version-2.0.0-slider",
-      "version-2.0.0-sortableTable",
-      "version-2.0.0-switch",
-      "version-2.0.0-tags",
-      "version-2.0.0-tooltip",
-      "version-2.0.0-translation"
+      "version-2.0.0-blocks-api"
     ],
     "Testing": [
       "version-2.0.0-testing-reaction",
