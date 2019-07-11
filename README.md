@@ -66,48 +66,19 @@ Refer to the [FAQs](faqs.md) article
 
 ### Sign your commits
 
-Contributing to the Reaction Docs requires signing your work by way of signed Git commits.
+Developer Certificate of Origin
 
-As a contributor, we want to make sure that you understand your rights as the copyright holder. We also want to make sure that contributions done on behalf of companies (i.e. by their employees) are submitted with the acknowledgement that the contributor (employee) isn't the copyright holder (employer).
+We use the Developer Certificate of Origin (DCO) in lieu of a Contributor License Agreement for all contributions to Reaction Commerce open source projects. We request that contributors agree to the terms of the DCO and indicate that agreement by signing all commits made to Reaction Commerce projects by adding a line with your name and email address to every Git commit message contributed:
 
-This repository is using a Developer Certificate of Origin (DCO), by way of signed commits, to help contributors acknowledge that they're aware of their rights, and that they have the authority to submit their contributions either on their or on their employer's behalf.
+Signed-off-by: Jane Doe <jane.doe@example.com>
 
-To sign off on the DCO for your commits, use the command `git commit -s` which adds a line to every commit that looks like this:
+You can sign your commit automatically with Git by using git commit -s if you have your user.name and user.email set as part of your Git configuration.
 
-`Signed-Off-By: Jane Doe <jane@example.com>`
+We ask that you use your real name (please no anonymous contributions or pseudonyms). By signing your commit you are certifying that you have the right to submit it under the open source license used by that particular Reaction Commerce project. You must use your real name (no pseudonyms or anonymous contributions are allowed.)
 
-We do ask that you use your full name and a valid email address in this process.
+We use the Probot DCO GitHub app to check for DCO signoffs of every commit.
 
-The DCO signoff is attached to every single commit, thereby stating that the committer agrees to the DCO as shown below or on <https://developercertificate.org/>.
-
-```
-Developer's Certificate of Origin 1.1
-
-By making a contribution to this project, I certify that:
-
-(a) The contribution was created in whole or in part by me and I
-    have the right to submit it under the open source license
-    indicated in the file; or
-
-(b) The contribution is based upon previous work that, to the
-    best of my knowledge, is covered under an appropriate open
-    source license and I have the right under that license to   
-    submit that work with modifications, whether created in whole
-    or in part by me, under the same open source license (unless
-    I am permitted to submit under a different license), as
-    Indicated in the file; or
-
-(c) The contribution was provided directly to me by some other
-    person who certified (a), (b) or (c) and I have not modified
-    it.
-
-(d) I understand and agree that this project and the contribution
-    are public and that a record of the contribution (including
-    all personal information I submit with it, including my
-    sign-off) is maintained indefinitely and may be redistributed
-    consistent with this project or the open source license(s)
-    involved.
-```
+If you forget to sign your commits, the DCO bot will remind you and give you detailed instructions for how to amend your commits to add a signature.
 
 ## Developing
 
