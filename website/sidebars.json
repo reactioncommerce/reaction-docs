@@ -155,32 +155,7 @@
       "template-helpers"
     ],
     "For Developers: Meteor App Client Components": [
-      "blocks-api",
-      "components",
-      "components-api",
-      "components-primary-app-bar",
-      "alerts",
-      "badge",
-      "cards",
-      "clickToCopy",
-      "divider",
-      "dropDownMenu",
-      "icon",
-      "link",
-      "lists",
-      "media",
-      "menu",
-      "metadata",
-      "multi-select",
-      "popover",
-      "avatar",
-      "settings-card",
-      "slider",
-      "sortableTable",
-      "switch",
-      "tags",
-      "tooltip",
-      "translation"
+      "blocks-api"
     ],
     "Testing": [
       "testing-reaction",
