@@ -50,6 +50,7 @@
       "react-best-practices",
       "jsdoc-style-guide",
       "error-handling-guide",
+      "devs-breaking-changes",
       "using-ci",
       "release-process",
       "reporting-vulnerabilities",
