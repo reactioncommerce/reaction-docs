@@ -154,8 +154,9 @@
       "reaction-module-cheatsheet",
       "template-helpers"
     ],
-    "For Developers: Meteor App Client Components": [
-      "blocks-api"
+    "For Developers: Catalyst Components": [
+      "version-2.0.0-blocks-api",
+      "components-primary-app-bar"
     ],
     "Testing": [
       "testing-reaction",
