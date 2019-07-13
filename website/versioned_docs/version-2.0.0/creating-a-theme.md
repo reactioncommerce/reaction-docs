@@ -31,9 +31,6 @@ Reaction.registerPackage({
   // Icon for toolbars
   icon: "fa fa-bars",
 
-  // Auto-enable plugin, sets enabled: true in database
-  autoEnable: true,
-
   // Settings for plugin
   settings: {},
 

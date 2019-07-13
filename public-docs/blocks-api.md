@@ -3,13 +3,13 @@ id: blocks-api
 title: Blocks API
 ---
 
-The Blocks API is a method of component extension that allows for adding additional UI components into various regions across the admin interface. For example, you can add additional fields to the product editor to extend it's functionality without having to override the entire component or package.
+The Blocks API is a method of component extension that allows for adding additional UI components into various regions across the admin interface. For example, you can add additional fields to the product editor to extend its functionality without having to override the entire component or package.
 
 See [Full API docs](#api) below.
 
 ## Using Reaction Blocks
 
-A small subset of blocks and regions have been registered and can be imported .....
+A small subset of blocks and regions have been registered and can be imported:
 
 ```jsx
 import { Blocks } from "@reactioncommerce/reaction-components";

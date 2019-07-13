@@ -15,28 +15,28 @@ In general, to add an address validation service you must do the following:
 
 ### Register an address validation service
 
-Address validation services are registered by passing an array of them to the `addressValidationServices` property of the `Reaction.registerPackage` options.
+Address validation services are registered by passing an array of them to the `addressValidationServices` property of the `registerPlugin` options.
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import addressValidation from "./server/addressValidation.js";
+import addressValidation from "./addressValidation.js";
 
-Reaction.registerPackage({
-  label: "Great Validation Service",
-  name: "great-validation-service",
-  autoEnable: true,
-  addressValidationServices: [
-    {
-      displayName: "Great Validation",
-      functions: {
-        addressValidation
-      },
-      name: "great",
-      supportedCountryCodes: ["US", "CA", "DE", "IN"]
-    }
-  ]
-  // ...
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Great Validation Service",
+    name: "great-validation-service",
+    addressValidationServices: [
+      {
+        displayName: "Great Validation",
+        functions: {
+          addressValidation
+        },
+        name: "great",
+        supportedCountryCodes: ["US", "CA", "DE", "IN"]
+      }
+    ]
+    // other props
+  });
+}
 ```
 
 The `addressValidationServices` property is the key to making your plugin

@@ -22,11 +22,16 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 - Install [Node.js](https://nodejs.org/en/)
 - A GitHub account with a <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">configured SSH key</a>
 
+##### Recommended settings for Docker for Mac, Windows and Linux
+- Minimum 4GB of RAM and 4CPUs, for better performance allocate 4GB+ and 4CPUs+. For instructions visit the advanced section of the [Docker for Mac Getting Started guide](https://docs.docker.com/docker-for-mac/).
+
 > **Windows**: Reaction Platform has not been fully tested on Windows at this time.
 
 > **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
 
-2. Before you get started, make sure you are not running any applications on the default ports: `3000`, `4000`, `4444`, `4445`, `5555`, `5432`, and `27017`.
+2. Before you get started:
+  - Increase the memory and CPU allocated to Docker in the Docker settings. We recommend at least 4 GiB memory. The default values are usually not sufficient to run the full Reaction system. See the [troubleshooting-development](./troubleshooting-development#memory-errors-or-errors-about-meteor-rawlogs) article for more information.
+  - Make sure you are not running any applications on the default ports: `3000`, `4000`, `4444`, `4445`, `5555`, `5432`, and `27017`.
 
 3. Clone [**Reaction Platform**](https://github.com/reactioncommerce/reaction-platform)
 
@@ -101,7 +106,53 @@ docker-compose logs -f
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra         | [localhost:4444](localhost:4444)                              |
 | [`example-storefront`](https://github.com/reactioncommerce/example-storefront) | [localhost:4000](localhost:4000)                              |
 
-7. Congrats 🎉  Now you're running the entire suite of Reaction Platform services and ready to start developing.
+7. Congrats 🎉  Now you're running the entire suite of Reaction Platform services and ready to start developing. 
+
+**Note:** To login into the Operator UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/master/.env.example#L11-L12) file.
+
+## Upgrading from 1.x?
+
+If you are upgrading from Reaction 1.x, follow these steps:
+
+1. Pull locally the latest changes from the [reaction-platform repository](https://github.com/reactioncommerce/reaction-platform)
+
+```sh
+cd reaction-platform
+git pull origin master
+```
+
+2. Pull locally the latest changes from the [reaction repository](https://github.com/reactioncommerce/reaction) and update packages
+
+```sh
+cd reaction-platform/reaction
+git pull origin master
+docker-compose run --rm reaction npm install
+```
+
+3. Pull locally the latest changes from the [example-storefront repository](https://github.com/reactioncommerce/example-storefront) and update packages
+
+```sh
+cd reaction-platform/example-storefront
+git pull origin master
+docker-compose run --rm web yarn install
+```
+
+4. You are now ready to start the upgraded Reaction. Run this command to bootstrap and start all of the services:
+
+```sh
+cd reaction-platform
+make
+```
+
+> **Note:** As of Reaction 2.0 the CLI is deprecated and unsupported. You can use Docker commands instead. See the [Reaction CLI](./reaction-cli) article for more information.
+
+## Upgrading from an older 2.0 release candidate?
+
+If you are upgrading from an older 2.0 release candidate, follow the steps listed in the [Installation](#installation) section of this doc. 
+
+## Repository Branches
+
+With Reaction 2.0 release, we introduced a `develop` branch at both the [Reaction](https://github.com/reactioncommerce/reaction) and the [example-storefront](https://github.com/reactioncommerce/example-storefront) repositories. This branch contains all the latest changes, while `master` is our stable branch.
 
 ## Developing with Reaction Platform
 

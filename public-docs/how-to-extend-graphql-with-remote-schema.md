@@ -24,7 +24,6 @@ Incorporate that `pokemon.graphql` file into your plugin's directory structure.
 In your plugin's `register.js` file, load the schema and use the graphql-tools helper functions to generate a remote schema instance, which your plugin can then provide to Reaction.
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
 import {
   makeExecutableSchema,
   makeRemoteExecutableSchema
@@ -37,18 +36,18 @@ const pokemonUrl = "https://graphql-pokemon.now.sh";
 const link = new HttpLink({ uri: pokemonUrl, fetch });
 const exSchema = makeExecutableSchema({ typeDefs: schemaSDL });
 const remoteSchema = makeRemoteExecutableSchema({ schema: exSchema, link });
-Reaction.registerPackage({
-  label: "Pokemon",
-  name: "pokemon",
-  icon: "fa fa-example",
-  graphQL: {
-    schemas: [remoteSchema]
-  },
-  autoEnable: true,
-  functionsByType: {},
-  settings: {},
-  registry: []
-});
+
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Pokemon",
+    name: "pokemon",
+    icon: "fa fa-example",
+    graphQL: {
+      schemas: [remoteSchema]
+    }
+    // other props
+  });
+}
 ```
 
 ## Verify your queries

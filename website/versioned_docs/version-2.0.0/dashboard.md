@@ -1,5 +1,6 @@
 ---
-id: dashboard
+id: version-2.0.0-dashboard
+original_id: dashboard
 title: Store Operator’s Guide
 ---
 

@@ -16,7 +16,7 @@ In general, to add a payment method you must do the following:
 - Add routes for callback URLs if necessary
 - Create a React component for collecting any necessary payment data
 - Create a React component for operators to enter and edit necessary settings for your payment method
-- Register the method definition, its functions, the routes, and the React components using your plugin's `registerPackage` call
+- Register the method definition, its functions, the routes, and the React components using your plugin's `registerPlugin` call
 
 There are two included plugins (in `/imports/plugins/included`) that provide payment methods, which you can look at for inspiration:
 - payments-example
@@ -116,7 +116,7 @@ You are expected to return a valid payment object similar to this:
 Be sure that:
 - the `mode` is "authorize"
 - the `status` is "created"
-- the `name` matches the method name you specified in `registerPackage` and in the GraphQL `PaymentMethodName` enum
+- the `name` matches the method name you specified in `registerPlugin` and in the GraphQL `PaymentMethodName` enum
 - `amount` matches what was passed in
 - All required properties are present
 
@@ -173,29 +173,30 @@ If you followed [How To: Create a new GraphQL mutation](./graphql-create-mutatio
 Here's an example of how to register the payment methods your plugin provides:
 
 ```js
-import stripeCapturePayment from "./server/no-meteor/util/stripeCapturePayment";
-import stripeCreateAuthorizedPayment from "./server/no-meteor/util/stripeCreateAuthorizedPayment";
-import stripeCreateRefund from "./server/no-meteor/util/stripeCreateRefund";
-import stripeListRefunds from "./server/no-meteor/util/stripeListRefunds";
+import stripeCapturePayment from "./util/stripeCapturePayment";
+import stripeCreateAuthorizedPayment from "./util/stripeCreateAuthorizedPayment";
+import stripeCreateRefund from "./util/stripeCreateRefund";
+import stripeListRefunds from "./util/stripeListRefunds";
 
-Reaction.registerPackage({
-  label: "Stripe",
-  name: "reaction-stripe",
-  icon: "fa fa-cc-stripe",
-  autoEnable: true,
-  paymentMethods: [{
-    name: "stripe_card",
-    displayName: "Stripe Card",
-    canRefund: true,
-    functions: {
-      capturePayment: stripeCapturePayment,
-      createAuthorizedPayment: stripeCreateAuthorizedPayment,
-      createRefund: stripeCreateRefund,
-      listRefunds: stripeListRefunds
-    }
-  }],
-  // ...
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "Stripe",
+    name: "reaction-stripe",
+    icon: "fa fa-cc-stripe",
+    paymentMethods: [{
+      name: "stripe_card",
+      displayName: "Stripe Card",
+      canRefund: true,
+      functions: {
+        capturePayment: stripeCapturePayment,
+        createAuthorizedPayment: stripeCreateAuthorizedPayment,
+        createRefund: stripeCreateRefund,
+        listRefunds: stripeListRefunds
+      }
+    }],
+    // other props
+  });
+}
 ```
 
 Each object in `paymentMethods` must have a `name` and `displayName`.
@@ -211,17 +212,19 @@ The `canRefund` option is `true` by default, but if your method does not support
 If your plugin needs any settings that it will not get from environment variables, register the React component in the `registry` array:
 
 ```js
-Reaction.registerPackage({
-  // ...
-  registry: [
-    {
-      label: "Acme Payments",
-      provides: ["paymentSettings"],
-      container: "dashboard",
-      template: "AcmePaymentsPluginSettings"
-    }
-  ]
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    registry: [
+      {
+        label: "Acme Payments",
+        provides: ["paymentSettings"],
+        container: "dashboard",
+        template: "AcmePaymentsPluginSettings"
+      }
+    ]
+    // other props
+  });
+}
 ```
 
 The `label` is shown in the operator UI to group the settings for each payment plugin. The `provides` property must be an array containing `"paymentSettings"`. Set `template` to the name of your React component, which you must register with `registerComponent` in client code.

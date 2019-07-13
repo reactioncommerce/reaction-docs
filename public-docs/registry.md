@@ -2,7 +2,7 @@
 id: registry
 title: Registry
 ---
-    
+
 The `Reaction Registry` is used to add settings, routes, and permissions for Reaction packages, both from Core and any custom package you write.
 
 The Registry is the defining file of any Reaction plugin. You can think of the `register.js` file as similar, but not identical to, the `package.json` file you'd use to define an npm package.
@@ -18,21 +18,21 @@ Once registered, plugins are published to the client in the [Packages publicatio
 Here's an example of the most basic `register.js` file.
 
 ```js
-Reaction.registerPackage({  
-  label: "PackageName",
-  name: "reaction-example-package",
-  icon: "fa fa-package",
-  autoEnable: true,
-  settings: {
-    name: "Marketplace",
-    enabled: true,
-    public: {
-      somePublicSetting: true
-    }
-  },
-  registry: [] // Array of registry objects - optional
-  layout: [] // Array of layout objects - optional
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    label: "PackageName",
+    name: "reaction-example-package",
+    icon: "fa fa-package",
+    settings: {
+      public: {
+        somePublicSetting: true
+      }
+    },
+    registry: [] // Array of registry objects - optional
+    layout: [] // Array of layout objects - optional
+    // other props
+  });
+}
 ```
 
 There are four main sections:
@@ -48,7 +48,6 @@ There are four main sections:
 | `name`       | String  | Used to refer to the plugin internally. Must be unique. Namespace your plugin to avoid conflicts, e.g. `yourorg-plugin-name`.                     |
 | `label`      | String  | The label is displayed wherever the client refers to the plugin with a text label.                                                                |
 | `icon`       | String  | The icon is a set of classes that are used to define an icon. The example above refers to a Font Awesome icon.                                    |
-| `autoEnable` | Boolean | The autoEnable flag tells the app whether or not the plugin should be enabled on load, or if it must be turned on after the app has been started. |
 
 ### Settings object
 
@@ -277,7 +276,7 @@ To add and customize Dashboard panels, use these `provides` values.
   - `icon`
   - `name`
   - `description`
-  - `provides`  
+  - `provides`
 
 ### Payment-related: Methods and Settings
 

@@ -36,15 +36,16 @@ See [Resolver Mutations and Queries vs. Plugin Mutations and Queries](graphql-de
 1. If not already done, register your schemas in the plugin's `register.js` file:
 
     ```js
-    import Reaction from "/imports/plugins/core/core/server/Reaction";
-    import schemas from "./server/no-meteor/schemas";
+    import schemas from "./schemas";
 
-    Reaction.registerPackage({
-      graphQL: {
-        schemas
-      },
-      // ...other props
-    });
+    export default async function register(app) {
+      await app.registerPlugin({
+        graphQL: {
+          schemas
+        },
+        // other props
+      });
+    }
     ```
 
 ## Step 4: Create the plugin mutation file
@@ -79,16 +80,17 @@ export default {
 };
 ```
 
-If this is the first mutation for the plugin, you'll also need to pass the full `mutations` object to `registerPackage` in the plugin's `register.js` file:
+If this is the first mutation for the plugin, you'll also need to pass the full `mutations` object to `registerPlugin` in the plugin's `register.js` file:
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import mutations from "./server/no-meteor/mutations";
+import mutations from "./mutations";
 
-Reaction.registerPackage({
-  mutations,
-  // ...other props
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    mutations,
+    // other props
+  });
+}
 ```
 
 Your plugin mutation function is now available in the GraphQL context as `context.mutations.createSomething`.
@@ -168,20 +170,21 @@ export default {
 };
 ```
 
-Then pass the full `resolvers` object to `registerPackage` in the plugin's `register.js` file:
+Then pass the full `resolvers` object to `registerPlugin` in the plugin's `register.js` file:
 
 ```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import resolvers from "./server/no-meteor/resolvers";
-import schemas from "./server/no-meteor/schemas";
+import resolvers from "./resolvers";
+import schemas from "./schemas";
 
-Reaction.registerPackage({
-  graphQL: {
-    resolvers,
-    schemas
-  },
-  // ...other props
-});
+export default async function register(app) {
+  await app.registerPlugin({
+    graphQL: {
+      resolvers,
+      schemas
+    },
+    // other props
+  });
+}
 ```
 
 Calling your mutation with GraphQL should now work.
