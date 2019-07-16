@@ -9,13 +9,11 @@ This document lists some handy commands to use while developing on Reaction.
 
 ## Check Version
 
-Use `grep version package.json` to check what version of Reaction you are currently running.
+Use `npm run version --silent` from your reaction directory, to check what version of Reaction you are currently running.
 
 ```sh
-grep version package.json
-
-"version": "2.0.0-rc.10",
-          "last 2 versions"
+> npm run version --silent
+2.0.0-rc.10
 ```
 
 ## Run Tests
