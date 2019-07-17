@@ -20,7 +20,7 @@
 - LiveReload during development
 - Docker
 
-## Getting started contributing docs
+## Contributing documentation
 
 ### Run the app locally
 
@@ -41,14 +41,14 @@ To update docs for the current released version of Reaction, edit existing Markd
 1. Edit the file and save.
 1. Go to `localhost:4242/docs/<YOURMARKDOWNFILE_ID>` to see your changes locally.
 
-## Documenting unreleased features, changes
+### Documenting unreleased features, changes
 
 To update docs of unreleased features, you will need to edit existing Markdown files in `public_docs`. For example, if you are documenting *upcoming* Reaction API changes to Cart that are merged into `develop`, but not yet in `master`, you'd update the `public-docs/cart.md` file.
 
 1. Edit the file and save.
 1. Go to `localhost:4242/docs/next/<YOURMARKDOWNFILE_ID>` to see your changes locally.
 
-## Documenting new, unreleased features
+### Documenting new, unreleased features
 
 To create brand new documentation files for unreleased code that has previously not been documented, you will need to create *new* files in `public_docs`:
 
@@ -95,7 +95,7 @@ We use the Probot DCO GitHub app to check for DCO signoffs of every commit.
 
 If you forget to sign off git your commits, the DCO bot will remind you and give you detailed instructions for how to amend your commits to add a signature.
 
-## Developing
+## Contributing development
 
 The Header, Footer, index page and version pages are developed in React and CSS within the `website/core` and `website/static` directories. Site configuration details are managed in `website/siteConfig.js`.
 
@@ -113,6 +113,12 @@ docker-compose run --rm web yarn lint
 
 ```sh
 docker-compose run --rm web yarn lint:fix:eslint
+```
+
+### Building
+
+```sh
+docker-compose run --rm web yarn build
 ```
 
 ### Running commands
