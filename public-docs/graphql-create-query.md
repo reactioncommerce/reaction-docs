@@ -11,7 +11,14 @@ The complete Reaction Commerce GraphQL API is created by stitching together doma
 
 See [Resolver Mutations and Queries vs. Plugin Mutations and Queries](graphql-developing.md#resolver-mutations-and-queries-vs-plugin-mutations-and-queries)
 
-## Step 3: Define the query in the schema
+## Step 3: Name the query
+
+When choosing a name for the query, there are a few rules to follow:
+- In keeping with general GraphQL best practices, do not use verbs such as "list", "get", or "find" at the beginning of your query name. For example, use "cart" instead of "getCart" and "carts" instead of "listCarts".
+- Prefix with adjectives as necessary to fully describe what the query returns. For example, "anonymousCart" and "accountCart" queries.
+- If there are similar queries that take slightly different parameters, add a suffix to clarify. In most cases, we begin the suffix with "By". For example, "accountCartById" and "accountCartByAccountId".
+
+## Step 4: Define the query in the schema
 
 1. If it doesn't already exist, create `/server/no-meteor/schemas` folder in the plugin, and add an `index.js` file there.
 1. If it doesn't already exist, create `schema.graphql` in `/server/no-meteor/schemas` in the plugin.
@@ -46,7 +53,7 @@ See [Resolver Mutations and Queries vs. Plugin Mutations and Queries](graphql-de
     }
     ```
 
-## Step 4: Create the plugin query file
+## Step 5: Create the plugin query file
 
 1. If it doesn't already exist, create `/server/no-meteor/queries` folder in the plugin, and add an `index.js` file there.
 2. In `/server/no-meteor/queries`, create a file for the query, e.g. `widgets.js` for the `widgets` query. The file should look something like this:
@@ -66,7 +73,7 @@ export default async function widgets(context) {
 }
 ```
 
-## Step 5: Add the plugin query to the queries context
+## Step 6: Add the plugin query to the queries context
 
 In `/server/no-meteor/queries/index.js` in the plugin, import your query and add it to the default export object. Example:
 
@@ -95,7 +102,7 @@ Your plugin query function is now available in the GraphQL context as `context.q
 
 > NOTE: The queries objects from all plugins are merged, so be sure that another plugin does not have a query with the same name. The last one registered with that name will win, and plugins are generally registered in alphabetical order by plugin name. Tip: You can use this to your advantage if you want to override the query function of a core plugin without modifying core code.
 
-## Step 6: Add a test file for your query
+## Step 7: Add a test file for your query
 
 If your query is in a file named `widgets.js`, your Jest tests should be in a file named `widgets.test.js` in the same folder. Initially you can copy and paste the following test:
 
@@ -111,7 +118,7 @@ test("expect to return a Promise that resolves to null", async () => {
 
 This of course should be updated with tests that are appropriate for whatever your query does.
 
-## Step 7: Create the GraphQL query resolver file
+## Step 8: Create the GraphQL query resolver file
 
 1. If it doesn't already exist, create `/server/no-meteor/resolvers` folder in the plugin, and add an `index.js` file there.
 2. If it doesn't already exist, create `/server/no-meteor/resolvers/Query` folder in the plugin, and add an `index.js` file there. "Query" must be capitalized.
@@ -139,7 +146,7 @@ Make adjustments to the resolver function so that it reads and passes along the 
 - Call `context.queries.<queryName>` (your new plugin query) with the necessary arguments, and `await` a response.
 - Return a single document or an array of them using either `getPaginatedResponse` or `xformArrayToConnection` util function.
 
-## Step 8: Register the resolver
+## Step 9: Register the resolver
 
 In `/server/no-meteor/resolvers/Query/index.js` in the plugin, import your query resolver and add it to the default export object. Example:
 
@@ -192,7 +199,7 @@ export default async function register(app) {
 
 Calling your query with GraphQL should now work.
 
-## Step 9: Add a test file for your query resolver
+## Step 10: Add a test file for your query resolver
 
 If your query resolver is in a file named `widgets.js`, your Jest tests should be in a file named `widgets.test.js` in the same folder. Initially you can copy and paste the following test:
 
@@ -215,12 +222,12 @@ test("calls queries.widgets and returns the result", async () => {
 
 This of course should be updated with tests that are appropriate for whatever your query resolver does. For example, verify that all ID and schema transformations happen.
 
-## Step 10: Finish implementing your query
+## Step 11: Finish implementing your query
 
 Adjust the query function and the query resolver function until they work as expected, with tests that prove it. This will likely involve adding additional arguments, ID transformations, permission checks, and MongoDB queries.
 
 Refer to [Developing the GraphQL API](./graphql-developing) for answers to any questions you might have while implementing your mutation.
 
-## Step 11: Update the JSDoc comments
+## Step 12: Update the JSDoc comments
 
 Write/update jsdoc comments for the plugin query function, the query resolver, and any util functions. The resolver function must have `@memberof <PluginName>/GraphQL` in the jsdoc, and the `@name` must be the full GraphQL schema path in quotation marks, e.g., "Query.widgets". (The quotation marks are necessary for the output API documentation to be correct due to the periods.)
