@@ -79,6 +79,7 @@
     "Developer How-To: Reaction API Server": [
       "graphql-create-query",
       "graphql-create-mutation",
+      "how-to-share-code-between-plugins",
       "how-to-create-a-fulfillment-methods-plugin",
       "how-to-create-inventory-plugin",
       "how-to-create-a-payment-provider",
