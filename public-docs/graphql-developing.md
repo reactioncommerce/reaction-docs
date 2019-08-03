@@ -37,7 +37,7 @@ The path a GraphQL query or mutation takes is first to a resolver function, whic
 The resolver function:
 - Lives in `server/no-meteor/resolvers` in a plugin folder
 - Returns a Promise (is async)
-- Transforms IDs (see “IDs in GraphQL”) and data structures (where they don’t match internal data structures)
+- Transforms IDs (see [IDs in GraphQL](#ids-in-graphql)) and data structures (where they don’t match internal data structures)
 - May pull things from the GraphQL context to pass to the plugin function
 - May throw a `ReactionError` if anything goes wrong
 - Includes `clientMutationId` in the response (for mutations only)
