@@ -27,19 +27,19 @@ The folder and file structure in `/tests` should match as much as possible the g
 Prior to running the tests in each file, initialize a server, in-memory database, and any collection data you need. Then stop the server when done. The general pattern is something like this:
 
 ```js
-import TestApp from "../TestApp";
+import TestApp from "/imports/test-utils/helpers/TestApp";
 
-let tester;
+let testApp;
 beforeAll(async () => {
-  tester = new TestApp();
-  await tester.start();
+  testApp = new TestApp();
+  await testApp.start();
 });
 
-afterAll(() => tester.stop());
+afterAll(() => testApp.stop());
 
 test("something", async () => {
-  // (1) use tester.collections to write to MongoDB collections to set up initial data state
-  // (2) execute a GraphQL query or mutation using tester.query()() or tester.mutation()()
+  // (1) use testApp.collections to write to MongoDB collections to set up initial data state
+  // (2) execute a GraphQL query or mutation using testApp.query()() or testApp.mutation()()
   // (3) verify the response is as expected and/or verify that the collection data has been changed
   // (4) optionally reset the database if there is a chance it will conflict with the next test in this file
 });

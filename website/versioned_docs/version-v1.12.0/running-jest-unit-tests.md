@@ -3,7 +3,7 @@ id: version-v1.12.0-running-jest-unit-tests
 title: Running Jest Unit Tests
 original_id: running-jest-unit-tests
 ---
-    
+
 ## Description
 
 We're incrementally moving unit tests out of Meteor+Mocha and into pure Jest tests. Jest test files end in `.test.js` and can be anywhere in the Reaction codebase, ideally in the same folder and with the same base filename as the code being tested.
@@ -39,7 +39,7 @@ npm run test:unit:watch
 You can use Docker Compose to run a local development container and run tests within it. This gives a more accurate picture of how production code running in a container will behave.
 
 ```sh
-docker-compose run --rm devserver npm run test:unit
+docker-compose run --rm reaction npm run test:unit
 ```
 
 (This will also work with `:watch` suffix for watch mode.)

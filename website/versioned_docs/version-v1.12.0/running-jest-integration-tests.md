@@ -3,7 +3,7 @@ id: version-v1.12.0-running-jest-integration-tests
 title: Running Jest Integration Tests
 original_id: running-jest-integration-tests
 ---
-    
+
 ## Description
 
 We're incrementally moving integration tests out of Meteor+Mocha and into pure Jest tests. Jest integration test files end in `.test.js` and are all located in the `/tests` folder.
@@ -37,7 +37,7 @@ npm run test:integration:watch
 You can use Docker Compose to run a local development container and run tests within it. This gives a more accurate picture of how production code running in a container will behave.
 
 ```sh
-docker-compose run --rm devserver npm run test:integration
+docker-compose run --rm reaction npm run test:integration
 ```
 
 (This will also work with `:watch` suffix for watch mode.)
