@@ -27,6 +27,6 @@ In general, you'll want to do the following tasks in roughly this order:
 
 This guide will walk you through how to complete these tasks in a general, framework-agnostic way. While we don't care which UI framework you use, which component libraries you use, or how you manage app state, we do have two recommendations that will save you time.
 - Use [Apollo Client](https://www.apollographql.com/docs/react/) to interact with the Reaction GraphQL API when possible.
-- Use React storefront components from the [Reaction Design System](https://designsystem.reactioncommerce.com) wherever you can. In many cases, these components do much of the heavy lifting for you, encapsulating logic that would require much effort to implement correctly without them.
+- Use React storefront components from the [Example Storefront Component Library](https://designsystem.reactioncommerce.com) wherever you can. In many cases, these components do much of the heavy lifting for you, encapsulating logic that would require much effort to implement correctly without them.
 
 [Start Building](./storefront-apollo-client.md)

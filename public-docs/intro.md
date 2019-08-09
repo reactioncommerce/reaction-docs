@@ -5,7 +5,7 @@ title: Introduction
 
 This is the home for documentation for <a href="http://github.com/reactioncommerce/reaction">Reaction</a>, https://github.com/reactioncommerce/reaction-platform, <a href="https://github.com/reactioncommerce/example-storefront/">Example Storefront</a> and other supporting services.
 
-Reaction is no longer a customer-facing tool — it’s a commerce operator tool and offers a GraphQL API. The Example Storefront is Reaction Commerce’s headless ecommerce storefront, built using Next.js, GraphQL, React, Apollo Client and the commerce-focused React UI components provided in the <a href="http://designsystem.reactioncommerce.com/">Reaction Design System</a>.
+Reaction is a GraphQL API and a Reaction Admin app. The Example Storefront is Reaction Commerce’s headless ecommerce storefront, built using Next.js, GraphQL, React, Apollo Client and the commerce-focused React UI components provided in the <a href="http://designsystem.reactioncommerce.com/">Example Storefront Component Library</a>.
 
 <div class="content-blocks">
   <div class="content-block">
