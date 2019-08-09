@@ -11,8 +11,8 @@ This section will guide you through everything you need to do as a developer imp
 ## Step 1: Collect an email address
 If the shopper is logged in, you may choose to skip this step and use one of the emails from their account. You can also move this step to somewhere else in the flow as long as you have an email address for creating the order. An order cannot be created without an email address.
 
-### Reaction Design System components
-The `GuestForm` React component can be used to collect an email address for anonymous (guest) checkout
+### Example Storefront Component Library components
+The [GuestForm](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Forms/GuestForm) React component can be used to collect an email address for anonymous (guest) checkout
 
 ### GraphQL
 Use the `setEmailOnAnonymousCart` mutation if you have a cart and want to store the provided email address on it. This is recommended for data completeness and to avoid re-entry if the checkout flow is interrupted. However, you could also just cache this data on the client until you call the place order mutation.
@@ -24,15 +24,15 @@ Every item has a list of fulfillment types it is eligible for. A client should a
 
 For simple system where all items support a single fulfillment type and there is only one shop, you can assume there is only one fulfillment group and keep your client UI simple.
 
-### Reaction Design System components
-The `CartItems` React component can be used to show a list of items in a cart. You can use it without a cart, too, as long as you provide items in the same data structure as on a cart. Set `isReadOnly` prop to `true` if you do not want the shopper to be able to change the quantity or remove items at this point.
+### Example Storefront Component Library components
+The [CartItems](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Cart/CartItems) React component can be used to show a list of items in a cart. You can use it without a cart, too, as long as you provide items in the same data structure as on a cart. Set `isReadOnly` prop to `true` if you do not want the shopper to be able to change the quantity or remove items at this point.
 
 ## Step 3: Collect a shipping address
 This is necessary only if you have fulfillment groups of the “shipping” type. If your client UI displays multiple fulfillment groups, then you may need to have a shipping address form for each, or you can have a single form and set the same address on every “shipping” group.
 
-### Reaction Design System components
-- The `AddressForm` allows a user to enter a new address or edit an existing one. It outputs an address object matching the Reaction Commerce address schema.
-- You can use the `ShippingAddressCheckoutAction` component with an action supplied to the `CheckoutActions` component to collect a shipping address as part of a step-by-step checkout flow. This wraps `AddressForm` and takes care of some of the complexity for you, versus using `AddressForm` directly.
+### Example Storefront Component Library components
+- The [AddressForm](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Account/AddressBook) allows a user to enter a new address or edit an existing one. It outputs an address object matching the Reaction Commerce address schema.
+- You can use the [ShippingAddressCheckoutAction](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/ShippingAddressCheckoutAction) component with an action supplied to the [CheckoutActions](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/CheckoutActions) component to collect a shipping address as part of a step-by-step checkout flow. This wraps [AddressForm](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Forms/AddressForm) and takes care of some of the complexity for you, versus using `AddressForm` directly.
 
 ### GraphQL
 Use the `setShippingAddressOnCart` mutation if you have a cart and want to store the provided shipping address on all of the “shipping” type fulfillment groups on that cart. This is recommended for data completeness and to avoid re-entry if the checkout flow is interrupted. However, you could also just cache this data on the client until you call the place order mutation.
@@ -44,9 +44,9 @@ Note that the options available and their prices can vary based on the items lis
 
 If your client does not expect to be handling multiple fulfillment groups, or if you want the same selection to be used on every fulfillment group, you may choose to show only one selection list. But you’ll still need to set that selection on each group individually for order creation to succeed.
 
-### Reaction Design System components
-- The `SelectableList` React component shows a radio-like list of options, allowing you to select just one. This is a good way to show the list of available fulfillment types.
-- You can use the `FulfillmentOptionsCheckoutAction` component with an action supplied to the `CheckoutActions` component to collect a fulfillment option selection as part of a step-by-step checkout flow. This wraps `SelectableList` and takes care of some of the complexity for you, versus using `SelectableList` directly.
+### Example Storefront Component Library components
+- The [SelectableList](https://designsystem.reactioncommerce.com/#/Base%20Components/Forms/SelectableList) React component shows a radio-like list of options, allowing you to select just one. This is a good way to show the list of available fulfillment types.
+- You can use the [FulfillmentOptionsCheckoutAction](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/FulfillmentOptionsCheckoutAction) component with an action supplied to the [CheckoutActions](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/CheckoutActions) component to collect a fulfillment option selection as part of a step-by-step checkout flow. This wraps `SelectableList` and takes care of some of the complexity for you, versus using `SelectableList` directly.
 
 ### GraphQL
 Use the `selectFulfillmentOptionForGroup` mutation if you have a cart and want to store the selected fulfillment option on each of the fulfillment groups on that cart. This is recommended for data completeness and to avoid re-entry if the checkout flow is interrupted. However, you could also just cache this data on the client until you call the place order mutation.
@@ -58,10 +58,10 @@ Check to see which payment method is the default for the shop, and show the chec
 
 Ultimately, the payment method component should give you some kind of data, usually a reference ID or token, which you can pass to the server with the order details to create the order. If the payment details are invalid, the order will not be created.
 
-### Reaction Design System components
-- The `AddressForm` component allows a user to enter a new address or edit an existing one. It outputs an address object matching the Reaction Commerce address schema. You can use this to get a billing address from a shopper.
-- The `StripeForm` component collects credit card information from a shopper and gives you a Stripe token for it. This is a very secure, PCI-compliant way of providing credit card payment, but it will only work if you sign up for a Stripe account.
-- You can use the `StripePaymentCheckoutAction` component with an action supplied to the `CheckoutActions` component to collect a billing address and credit card information as part of a step-by-step checkout flow. This wraps `AddressForm` and `StripeForm` and takes care of some of the complexity for you, versus using those components directly.
+### Example Storefront Component Library components
+- The [AddressForm](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Forms/AddressForm) component allows a user to enter a new address or edit an existing one. It outputs an address object matching the Reaction Commerce address schema. You can use this to get a billing address from a shopper.
+- The [StripeForm](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Forms/StripeForm) component collects credit card information from a shopper and gives you a Stripe token for it. This is a very secure, PCI-compliant way of providing credit card payment, but it will only work if you sign up for a Stripe account.
+- You can use the [StripePaymentCheckoutAction](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/StripePaymentCheckoutAction) component with an action supplied to the [CheckoutActions](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/CheckoutActions) component to collect a billing address and credit card information as part of a step-by-step checkout flow. This wraps `AddressForm` and `StripeForm` and takes care of some of the complexity for you, versus using those components directly.
 
 ### GraphQL
 - The `availablePaymentMethods` query will give you a list of payment methods that have been registered by payment plugins and are enabled. It may also filter the methods based on region, authentication, or other factors. Although a client may choose to “hard code” its payment method flow, we recommend that you use this query to determine which UI elements to show. This allows administrators to make adjustments without always needing to redeploy the client.
@@ -70,10 +70,10 @@ Ultimately, the payment method component should give you some kind of data, usua
 ## Step 6: Allow the shopper to review
 It’s usually a good idea to allow the shopper to review all of the order details before creating the order.
 
-### Reaction Design System components
-- The `CartItems` React component can be used to show a list of items in a cart. You can use it without a cart, too, as long as you provide items in the same data structure as on a cart. Set `isReadOnly` prop to `true` if you do not want the shopper to be able to change the quantity or remove items at this point.
-- The `CartSummary` React component shows summary totals for a cart. You can use it without a cart, too, as long as you provide props in the same data structure as on a cart.
-- You can use the `FinalReviewCheckoutAction` component with an action supplied to the `CheckoutActions` component to show all items for review as part of a step-by-step checkout flow. This wraps `CartItems` and `CartSummary` and takes care of some of the complexity for you, versus using those components directly.
+### Example Storefront Component Library components
+- The [CartItems](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Cart/CartItems) React component can be used to show a list of items in a cart. You can use it without a cart, too, as long as you provide items in the same data structure as on a cart. Set `isReadOnly` prop to `true` if you do not want the shopper to be able to change the quantity or remove items at this point.
+- The [CartSummary](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Cart/CartSummary) React component shows summary totals for a cart. You can use it without a cart, too, as long as you provide props in the same data structure as on a cart.
+- You can use the [FinalReviewCheckoutAction](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/FinalReviewCheckoutAction) component with an action supplied to the [CheckoutActions](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Checkout/CheckoutActions) component to show all items for review as part of a step-by-step checkout flow. This wraps `CartItems` and `CartSummary` and takes care of some of the complexity for you, versus using those components directly.
 
 ## Step 7: Create the order
 Order creation GraphQL mutations are provided by each payment plugin. Refer to plugin documentation for exact instructions, but in general they will all expect an `OrderInput` object and some tokenized payment details. They will attempt to create one charge per fulfillment group, and if all charges are successfully created, they will create the order.
