@@ -8,7 +8,7 @@ We recommend doing all development in Docker containers using Docker Compose con
 
 ## Getting Started
 
-Follow the normal [Installation](installation.md) steps. After that:
+Follow the normal [Installation](installation-reaction-platform.md) steps. After that:
 
 1. Install [Docker](https://www.docker.com/products/docker). (Use "Docker for Mac" installer if on Mac. Use "Docker for Windows" installer if on Windows.)
 2. Install [Kitematic](https://github.com/docker/kitematic) (recommended for container management through a nice UI)
