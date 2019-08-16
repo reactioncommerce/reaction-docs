@@ -22,7 +22,7 @@ The Reaction core team recommends using Docker for deploying Reaction.
 
 We recommend you deploy with at least **2GB of memory** for Node and Reaction to run well.
 
-- [Docker Deployment Guide](deploying-reaction-using-docker.md)
+- [Docker Deployment Guide](deploying-reaction-using-docker)
 
 The database is included in development, and our containers also include a MongoDB instance inside the container, but it is only intended for development and testing. It’s not a production solution, and you should provide an external replica-set db instance with oplog access enabled for production deployment.
 
