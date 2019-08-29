@@ -1,6 +1,6 @@
 ---
-id: bulk-edit-products
-title: Products - Bulk Editing
+id: products-bulk-edit
+title: Products - Filter and Bulk Edit
 ---
 
 Products can be filtered and selected so that admin users can apply bulk actions on them.
@@ -34,7 +34,8 @@ Once you've filtered the products, you can click the **Actions** menu to take th
 
 To add or remove multiple tags:
 
-![](/assets/remove-tag.png "Add or Remove a tag")
+![](/assets/choose-remove-tags.png "Choose the Remove a tag option")
+![](/assets/remove-tags.png "Remove a tag")
 
 1. Filter products by CSV or select multiple products via checkboxes.
 1. Click **Actions** and select **Add/Remove tags**
@@ -42,4 +43,3 @@ To add or remove multiple tags:
 1. To add tags, click **Add tags to products**. To remove tags, click the arrow on the right, select **Remove tags from products** and then click **Remove tags from products**.
 1. The tags should now be added or removed. To publish these changes, make sure to click **Actions** and select **Publish**.
 
-![](/assets/choose-remove-tag.png "Choose the Remove a tag option")
