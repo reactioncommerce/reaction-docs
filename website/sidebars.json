@@ -188,8 +188,7 @@
     "Store Operator Guide": [
       "dashboard",
       "products",
-      "navigation-bar-and-grid",
-      "tagging",
+      "products-bulk-edit",
       "orders-admin",
       "accounts",
       "login-auth-services",
