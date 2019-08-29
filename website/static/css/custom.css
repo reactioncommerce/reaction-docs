@@ -51,7 +51,7 @@
   .navigationSlider .slidingNav ul li:last-child {
     display: none;
   }
- 
+
   .navPusher {
     padding-top: 70px;
   }
@@ -259,7 +259,7 @@
   .navSearchWrapper .algolia-autocomplete {
     margin-right: 0;
   }
-  
+
   .reactNavSearchWrapper input#search_input_react {
     position: absolute !important;
     right: 20px;
@@ -314,7 +314,7 @@
   .fixedHeaderContainer header img {
     height: auto;
   }
-  
+
   .headerWrapper header a:first-child {
     background: #f7fdff;
     width: 318px;
@@ -334,7 +334,7 @@
 
   .navigationSlider .slidingNav ul li a:hover {
     color:  #052a4e;
-    background: #ffffff;    
+    background: #ffffff;
   }
 
   .navigationSlider .slidingNav {
@@ -347,7 +347,7 @@
     flex: 1;
     flex-grow: 0;
   }
-  
+
   .navigationSlider .slidingNav ul li:last-child {
     flex: none;
   }
@@ -420,7 +420,7 @@
     -webkit-transition-duration: 0.12s;
     transition-duration: 0.12s;
   }
-  
+
   .mainContainer {
     padding-left: 40px;
   }
@@ -502,7 +502,7 @@
     padding-left: 40px;
     border-right: 2px solid #a7edff;
   }
-  
+
   .doc.separateOnPageNav.sideNavVisible .navPusher .mainContainer {
     padding-left: 80px;
     padding-right: 80px;
@@ -563,7 +563,7 @@ input#search_input_react {
   float: left;
 }
 
-input#search_input_react:focus, 
+input#search_input_react:focus,
 input#search_input_react:active {
   color: #000000;
   width: 100%;
@@ -711,4 +711,8 @@ p.item-label {
   letter-spacing: 0.05em;
   font-size: .75em;
   font-weight: bold;
+}
+
+.font-icon {
+  font-style: normal;
 }

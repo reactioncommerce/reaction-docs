@@ -13,8 +13,7 @@ This document lists some handy commands to use while developing on Reaction.
 Use `grep version package.json` to check what version of Reaction you are currently running.
 
 ```sh
-grep version package.json
-
+> grep version package.json
 "version": "2.0.0-rc.10",
           "last 2 versions"
 ```

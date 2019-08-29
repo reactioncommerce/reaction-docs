@@ -79,6 +79,7 @@
     "Developer How-To: Reaction API Server": [
       "graphql-create-query",
       "graphql-create-mutation",
+      "how-to-share-code-between-plugins",
       "how-to-create-a-fulfillment-methods-plugin",
       "how-to-create-inventory-plugin",
       "how-to-create-a-payment-provider",
@@ -155,8 +156,9 @@
       "reaction-module-cheatsheet",
       "template-helpers"
     ],
-    "For Developers: Meteor App Client Components": [
-      "blocks-api"
+    "For Developers: Catalyst Components": [
+      "blocks-api",
+      "components-primary-app-bar"
     ],
     "Testing": [
       "testing-reaction",
@@ -191,7 +193,6 @@
       "orders-admin",
       "accounts",
       "login-auth-services",
-      "social-settings",
       "shop-admin",
       "merchant-shop-setup",
       "email-admin",

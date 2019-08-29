@@ -18,7 +18,7 @@ Check out our [Installation docs](https://docs.reactioncommerce.com/reaction-doc
 
 ## Mobile Device Support
 
-The Reaction web apps use mobile-first design principles, which means they look great in a mobile web browser. You may create your own native mobile app using the Reaction GraphQL API. If you do so using React Native, you can use any of our Reaction Design System components to get your UI built more quickly.
+The Reaction web apps use mobile-first design principles, which means they look great in a mobile web browser. You may create your own native mobile app using the Reaction GraphQL API.
 
 ## Localization and Internationalization
 

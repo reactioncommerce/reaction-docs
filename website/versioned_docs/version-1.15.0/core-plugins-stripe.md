@@ -32,7 +32,7 @@ This is the only server configuration necessary.
 
 ### Client Components
 
-If you are using the built-in Reaction client or one of the starter clients provided by Reaction, the necessary client components are already included and will appear where they should. If you are building your own client, you may want to use our [StripeForm React component](https://stoic-hodgkin-c0179e.netlify.com/#!/StripeForm), which is part of the Reaction Design System component library. It wraps [react-stripe-elements](https://github.com/stripe/react-stripe-elements) to do some of the work for you, but you can also use `react-stripe-elements` directly, or use any Stripe client that allows you to securely create a source token.
+If you are using the built-in Reaction client or one of the starter clients provided by Reaction, the necessary client components are already included and will appear where they should. If you are building your own client, you may want to use our [StripeForm React component](https://designsystem.reactioncommerce.com/#/Storefront%20Components/Forms/StripeForm), which is part of the Example Storefront Component Library component library. It wraps [react-stripe-elements](https://github.com/stripe/react-stripe-elements) to do some of the work for you, but you can also use `react-stripe-elements` directly, or use any Stripe client that allows you to securely create a source token.
 
 ## How to: Test a Stripe Payment
 

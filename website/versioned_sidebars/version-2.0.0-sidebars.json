@@ -79,6 +79,7 @@
     "Developer How-To: Reaction API Server": [
       "version-2.0.0-graphql-create-query",
       "version-2.0.0-graphql-create-mutation",
+      "version-2.0.0-how-to-share-code-between-plugins",
       "version-2.0.0-how-to-create-a-fulfillment-methods-plugin",
       "version-2.0.0-how-to-create-inventory-plugin",
       "version-2.0.0-how-to-create-a-payment-provider",
@@ -156,8 +157,9 @@
       "version-2.0.0-reaction-module-cheatsheet",
       "version-2.0.0-template-helpers"
     ],
-    "For Developers: Meteor App Client Components": [
-      "version-2.0.0-blocks-api"
+    "For Developers: Catalyst Components": [
+      "version-2.0.0-blocks-api",
+      "version-2.0.0-components-primary-app-bar"
     ],
     "Testing": [
       "version-2.0.0-testing-reaction",
