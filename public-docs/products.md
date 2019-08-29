@@ -1,6 +1,6 @@
 ---
 id: products
-title: Products
+title: Products - Publishing
 ---
 
 Create, edit, and publish products to the catalog from the **Products** section of the Operator UI.
