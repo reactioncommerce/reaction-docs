@@ -116,6 +116,11 @@ A small node package that allows to convert a generic JSON product format into R
 
 Thank you, [Carlos!](https://github.com/carlos-olivera)
 
+### [reaction-wishlist](https://github.com/trojanh/reaction-wishlist)
+
+Reaction plugin to add producy Wishlist support for users.
+
+
 ## Deprecated resources
 
 Below there's a list of older plugins, that are may be outdated or not be maintained actively. Many would need significant rewrites to be usable again. Nevertheless we feel it's valuable to have them listed here, because they can serve as good starting point for somebody who wants to implement something similar.
