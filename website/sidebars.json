@@ -164,7 +164,6 @@
       "testing-reaction",
       "running-jest-unit-tests",
       "running-jest-integration-tests",
-      "running-meteor-integration-tests",
       "writing-jest-unit-tests",
       "writing-jest-integration-tests",
       "react-testing",
