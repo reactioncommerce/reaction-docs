@@ -19,7 +19,7 @@ To run the Node Express server only from a local checkout:
 npm run devserver
 ```
 
-If your Reaction shop is already hosted somewhere, just POST to /graphql-beta at that URL to use GraphQL.
+If your Reaction shop is already hosted somewhere, just POST to /graphql-alpha at that URL to use GraphQL.
 
 The GraphQL server is implemented using [Apollo Server](https://www.apollographql.com/docs/apollo-server/). It is compatible with [Apollo Client](https://www.apollographql.com/docs/react/) or [Relay Modern](https://facebook.github.io/relay/) for client development.
 
