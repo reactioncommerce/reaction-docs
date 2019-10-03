@@ -44,6 +44,6 @@ To learn more on how to set up the inspector, check out our [debugging documenta
 
 ## SKIP_FIXTURES=true
 
-Tun Reaction _without_ the default sample data store and products:
+Run Reaction _without_ the default sample data store and products:
 1. Edit `.env` and add the following variable: `SKIP_FIXTURES=true`
 2. Restart Reaction with `docker-compose restart`
