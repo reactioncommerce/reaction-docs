@@ -118,7 +118,7 @@ Thank you, [Carlos!](https://github.com/carlos-olivera)
 
 ### [reaction-wishlist](https://github.com/trojanh/reaction-wishlist)
 
-Reaction plugin to add producy Wishlist support for users.
+Reaction plugin to add product wishlist support for users.
 
 
 ## Deprecated resources
