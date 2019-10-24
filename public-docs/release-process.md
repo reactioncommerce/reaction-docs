@@ -129,7 +129,7 @@ Once `Reaction`, `Reaction Hydra`, and `Example Storefront` have been released, 
 
 2. Ask QA for a review of the platform, using the updated releases
 3. `Reaction Platform` can now be merged as soon as they are approved.
-4. Next, create a release using the [same instructions as above](https://www.notion.so/reactioncommerce/How-to-Creating-a-new-Reaction-Release-16c2115d865b4eb08958f8f409a3ffd5#4d7acad45af1492baf0fdc94db592753).
+4. Next, create a release using the same instructions as above.
 5. Once published, the release is official! Send a notice to the engineering channel to give everyone a heads up!
 
 ## Pulling changes back into `develop`
@@ -141,24 +141,6 @@ The `develop` branches of `Reaction` and `Example Platform` need to pull in the 
 Once we have a new release, we need to update our Sample Data to go along with the release. Even if you are certain no data has changed, we still want a new version of data to match version numbers.
 
 Follow the instructions [here](https://github.com/reactioncommerce/reaction-catalog-sample-data#how-to-update-and-export-for-a-new-reaction-release) to update the data.
-
-## Updating our Version History page with the latest information
-
-Once the release is complete, we need to update our Version History/Roadmap with the latest release info: [https://www.reactioncommerce.com/roadmap](https://www.reactioncommerce.com/roadmap)
-
-### `reaction-static`
-
-1. Go to [https://github.com/reactioncommerce/reaction-static/](https://github.com/reactioncommerce/reaction-static/)
-2. Make a PR to add copy to this page:
-
-    [https://github.com/reactioncommerce/reaction-static/blob/master/roadmap.html#L230](https://github.com/reactioncommerce/reaction-static/blob/master/roadmap.html#L230)
-
-    - Always add information from `Reaction API`
-    - Other categories: `Reaction Admin`, `Example Storefront`, `Hydra`, `Reaction Platform`, include other categories/projects/pods as you see fit - as long as it's open source.
-    - Write it in an all-community-friendly way, not just for developers.
-3. Merge to `master` - After merging to `master`, the repo will be published.
-
-### 🥕 Post to Carrot / #announcements / #engineering
 
 ## Links
 
