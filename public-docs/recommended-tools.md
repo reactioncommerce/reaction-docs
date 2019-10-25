@@ -51,7 +51,8 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 - [Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
 - [Commitizen Support](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)
 - [styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
-- [Calva](https://marketplace.visualstudio.com/items?itemName=betterthantomorrow.calva)
+- [Parinfer](https://marketplace.visualstudio.com/items?itemName=shaunlebron.vscode-parinfer)
+- [cljfmt](https://marketplace.visualstudio.com/items?itemName=pedrorgirardi.vscode-cljfmt)
 
 ### Emacs
     
