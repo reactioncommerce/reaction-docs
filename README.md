@@ -183,3 +183,7 @@ Merging to `staging` will trigger a CircleCI build to https://reaction-docs-stag
 ### Merge to `master` branch
 
 Merging to `master` will trigger a CircleCI build to http://reaction-docs-production.netlify.com
+
+## Algolia search configuration
+
+Search is generously provided by [Algolia DocSearch](https://community.algolia.com/docsearch/what-is-docsearch.html). The configuration for this site's search available [here](https://github.com/algolia/docsearch-configs/blob/master/configs/reactioncommerce.json) and can be configured by sending a pull request to that repository. More details [here](https://community.algolia.com/docsearch/config-file.html).
