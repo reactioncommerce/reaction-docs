@@ -7,45 +7,7 @@ Reaction uses the [Bunyan](https://github.com/trentm/node-bunyan) logging librar
 
 ## Log Level
 
-Most loggers have the concept of log level. That allows you to filter what is visible in your logs (see available levels and their descriptions below). The default levels in Reaction are `INFO` on the server and `WARN` on the client. To override the log level on the server, you can modify `REACTION_LOG_LEVEL` environment variable or set the value in your `settings.json`. Overriding the log level on the client requires using the `settings.json` approach - specifically in the `public` object (see below).
-
-### Environment Variable
-
-To set the server log level in development, you can add the environment variable before the `reaction` command when starting the app.
-
-```sh
-REACTION_LOG_LEVEL="DEBUG" reaction
-```
-
-Or export it...
-
-```sh
-export REACTION_LOG_LEVEL="DEBUG"
-
-reaction
-```
-
-To set it in production (assuming you're using Docker), it would look like this:
-
-```sh
-docker run -e REACTION_LOG_LEVEL="DEBUG" ...
-```
-
-### Meteor Settings
-
-```js
-// settings.json
-
-{
-  // server
-  "REACTION_LOG_LEVEL": "DEBUG",
-
-  // client
-  "public": {
-    "REACTION_LOG_LEVEL": "DEBUG"
-  }
-}
-```
+Most loggers have the concept of log level. That allows you to filter what is visible in your logs (see available levels and their descriptions below). The default levels in Reaction are `INFO` on the server and `WARN` on the client. To override the log level on the server set the `REACTION_LOG_LEVEL` environment variable to the level you want.
 
 When doing custom development and adding more logging to the app, we suggest following the [Bunyan recommendations on log levels](https://github.com/trentm/node-bunyan#levels) and use appropriate levels for your messages.
 
@@ -64,8 +26,6 @@ Suggestions: Use "DEBUG" sparingly. Information that will be useful to debug err
 
 ### Server
 
-Default level: `INFO`
-
 ```js
 import Logger from "@reactioncommerce/logger";
 ```
@@ -83,9 +43,7 @@ import Logger from "@reactioncommerce/logger";
 ### Log stuff
 
 ```js
-/**
- * Logging general info
- */
+import Logger from "@reactioncommerce/logger";
 
 // a general message string
 Logger.info("Something important happened!");

@@ -138,11 +138,9 @@ cd reaction-platform
 make
 ```
 
-> **Note:** As of Reaction 2.0 the CLI is deprecated and unsupported. You can use Docker commands instead. See the [Reaction CLI](./reaction-cli) article for more information.
-
 ## Upgrading from an older 2.0 release candidate?
 
-If you are upgrading from an older 2.0 release candidate, follow the steps listed in the [Installation](#installation) section of this doc. 
+If you are upgrading from an older 2.0 release candidate, follow the steps listed in the [Installation](#installation) section of this doc.
 
 ## Repository Branches
 

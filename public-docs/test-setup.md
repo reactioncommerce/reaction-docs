@@ -2,11 +2,11 @@
 id: test-setup
 title: Test Setup
 ---
-    
+
 ## Description
 
 ### Getting Started
-- Reset Reaction Commerce by running `reaction reset` in the terminal
+- Clear the database
 - Create a fresh product inventory using [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
 - Keep browser console open to monitor any client-side errors or warnings
 - Keep terminal in view to monitor any server-side errors or warnings

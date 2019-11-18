@@ -5,21 +5,8 @@ title: Using the GraphQL API
 
 ## Reaction GraphQL Implementation
 
-Reaction GraphQL is accessible at `/graphql-beta` when running the Meteor app. You can also access it without running the Meteor app by running a Node Express server.
-
-To run the full Meteor app from a local checkout:
-
-```bash
-docker-compose up -d reaction
-```
-
-To run the Node Express server only from a local checkout:
-
-```bash
-npm run devserver
-```
-
-If your Reaction shop is already hosted somewhere, just POST to /graphql-beta at that URL to use GraphQL.
+Reaction GraphQL is accessible at `/graphql-beta` on the API server port.
+To use GraphQL, just POST to `/graphql-beta`.
 
 The GraphQL server is implemented using [Apollo Server](https://www.apollographql.com/docs/apollo-server/). It is compatible with [Apollo Client](https://www.apollographql.com/docs/react/) or [Relay Modern](https://facebook.github.io/relay/) for client development.
 
@@ -36,10 +23,10 @@ As long as you use POST method (not GET) and use the `/graphql-beta` path as the
 
 ## Identity and Authorization
 
-We are working on a new identity and authorization system that does not rely on Meteor’s accounts system, but until that is finished, you can authenticate a GraphQL request by including a header named `meteor-login-token` with a valid Meteor login token in it.
+You can authenticate a GraphQL request by including a header named `meteor-login-token` with a valid Meteor login token in it or a header named `Authorization` with a valid token issued by Hydra in it.
 
 Here is how to get this login token:
-1. Log in to the Reaction operator app as the user from which you want your GraphQL requests to come.
+1. Log in to Reaction Admin as the user from which you want your GraphQL requests to come.
 2. Open the browser console and enter `localStorage.getItem("Meteor.loginToken")`
 3. Copy this token and set it as the value of the `meteor-login-token` HTTP header in your GraphQL client.
 
@@ -49,7 +36,7 @@ The GraphQL schema is defined in the GraphQL server code but [visible to all cli
 
 ### Reading the API Documentation
 
-All queries, mutations, and types in the Reaction GraphQL schema are documented within the schema itself. Go to `/graphiql` and click "Docs", or use your favorite standalone GraphQL client to explore the schema and read the API documentation.
+All queries, mutations, and types in the Reaction GraphQL schema are documented within the schema itself. Go to `/graphql-beta` in a browser and click "Docs", or use your favorite standalone GraphQL client to explore the schema and read the API documentation.
 
 ### Nodes and IDs
 

@@ -2,7 +2,7 @@
 id: react-testing
 title: Writing Jest Tests for React Components
 ---
-    
+
 To render your component in Jest unit tests, use either [react-test-renderer](https://reactjs.org/docs/test-renderer.html) or [enzyme](http://airbnb.io/enzyme/index.html#enzyme). `react-test-renderer` is primarily for snapshots, while `enzyme` is for whenever you need to actually interact with the component, like simulate clicking it, feed it new props and see how it changes, etc. There is a good explanation of both of them [here](https://facebook.github.io/jest/docs/en/tutorial-react.html).
 
 ## What to Test
@@ -132,7 +132,7 @@ Followed by another snapshot test of the component with all of the optional prop
 ```js
 import React from "react";
 import renderer from "react-test-renderer";
-Iimport Fizz from “./Fizz”;
+import Fizz from “./Fizz”;
 
 test("basic snapshot with all optional props", () => {
   const component = renderer.create(<Fizz
@@ -150,7 +150,7 @@ Individual props can have a dramatic impact on the markup that gets rendered, th
 ```js
 import React from "react";
 import renderer from "react-test-renderer";
-Iimport Fizz from “./Fizz”;
+import Fizz from “./Fizz”;
 
 test("basic snapshot with isVertical props", () => {
   const component = renderer.create(<Fizz requiredProp=”required” isVertical />);

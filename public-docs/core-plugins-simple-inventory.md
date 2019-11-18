@@ -1,6 +1,6 @@
 ---
 id: core-plugins-simple-inventory
-title: Simple Inventory Plugin (Node)
+title: Simple Inventory Plugin
 ---
 
 The Simple Inventory plugin (`reaction-simple-inventory`) is included and should meet your needs for inventory tracking if you do not use an external inventory system. It does the following:
