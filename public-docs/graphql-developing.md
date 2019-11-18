@@ -82,6 +82,7 @@ Here’s what's on the context object:
 - The current account ID: `context.accountId`
 - The default shop ID (this may go away): `context.shopId`
 - To check permissions: `context.userHasPermission(role, shopId)` (returns true or false)
+- To check permissions and throw error: `context.checkPermissions(role, shopId)`
 - MongoDB collections: `context.collections[CollectionName]`
 - The `ReactionAPI` instance: `context.app`
 - App events object:
