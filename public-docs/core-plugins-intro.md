@@ -35,6 +35,7 @@ Beyond `name` and `label`, the following standard keys can be included in your `
 
 - `auth`
 - `collections`
+- `contextAdditions`
 - `expressMiddleware`
 - `functionsByType`
 - `graphQL`
@@ -65,6 +66,24 @@ Refer to the following:
 
 - [Add MongoDB collections from a plugin](./dev-how-do-i#add-mongodb-collections-from-a-plugin)
 - [Ensure MongoDB collection indexes from a plugin](./dev-how-do-i#ensure-mongodb-collection-indexes-from-a-plugin)
+
+### contextAdditions
+
+A plugin can add properties to context using the `contextAdditions` option when calling `registerPlugin`. They are added before any `preStartup` or `startup` functions are run.
+
+```js
+app.registerPlugin({
+  // ...
+  contextAdditions: {
+    something: "wicked"
+  }
+});
+```
+
+```js
+// in startup fn or anywhere you have context
+console.log(context.something); // "wicked"
+```
 
 ### expressMiddleware
 
