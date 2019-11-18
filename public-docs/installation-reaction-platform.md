@@ -197,7 +197,7 @@ make
 
 Most Reaction services need certain environment variables set properly before they will start. Each project has a `.env.example` file that is copied to a Git-ignored `.env` file by the project's pre-build script. In most cases, these should have the correct values for running locally by default, but it's a good idea to review them.
 
-Later, when you pull new commits for a project or check out a different branch, the project may have changed requirements for environment variables. But your `.env` file will not update automatically because it is Git-ignored. Thus, it's a good idea after every pull or checkout to either rebuild the project or `cd` into the project folder and run the `bin/setup` script. (For the `reaction` project, the script is at `.reaction/scripts/setup` instead of `bin/setup` due to how Meteor works.) This script will copy missing environment variables from `.env.example` to `.env`. Alternatively, you can compare and update `.env` manually.
+Later, when you pull new commits for a project or check out a different branch, the project may have changed requirements for environment variables. But your `.env` file will not update automatically because it is Git-ignored. Thus, it's a good idea after every pull or checkout to either rebuild the project or `cd` into the project folder and run the `bin/setup` script. This script will copy missing environment variables from `.env.example` to `.env`. Alternatively, you can compare and update `.env` manually.
 
 ### Docker commands
 

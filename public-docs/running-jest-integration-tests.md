@@ -5,7 +5,7 @@ title: Running Jest Integration Tests
 
 ## Description
 
-We're incrementally moving integration tests out of Meteor+Mocha and into pure Jest tests. Jest integration test files end in `.test.js` and are all located in the `/tests` folder.
+Jest integration test files end in `.test.js` and are all located in the `/tests` folder.
 
 ### Prerequisites
 

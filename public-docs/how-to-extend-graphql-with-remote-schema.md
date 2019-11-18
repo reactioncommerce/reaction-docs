@@ -41,7 +41,6 @@ export default async function register(app) {
   await app.registerPlugin({
     label: "Pokemon",
     name: "pokemon",
-    icon: "fa fa-example",
     graphQL: {
       schemas: [remoteSchema]
     }

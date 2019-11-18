@@ -136,7 +136,7 @@ The team reviews code quality rules including:
 
 - **Tests:** Any new functionality should include tests
 
-- **Dependencies:** Any newly introduced dependencies should be updated to the latest version. No Meteor dependencies.
+- **Dependencies:** Any newly introduced dependencies should be updated to the latest version.
 
 - **i18n:** All static copy should use i18next. Include definitions in the appropriate `en.json` file.
 
