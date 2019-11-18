@@ -16,7 +16,7 @@ Follow the normal [Installation](installation-reaction-platform.md) steps. After
 
 ## Alias Docker Compose Commands
 
-Because they can be a lot to type and you'll type them often, we recommend at least two command aliases. In Mac OSX for example, add these two lines to `~/.bash_profile`:
+Because they can be a lot to type and you'll type them often, we recommend at least two command aliases. In Mac OSX for example, add these two lines to `~/.bashrc` (if using bash shell) or `~/.zshrc` (if using zsh shell):
 
 ```bash
 alias dc="docker-compose"
@@ -73,7 +73,7 @@ docker-compose logs -f <service_name>
 Reaction API logs:
 
 ```bash
-docker-compose logs -f reaction
+docker-compose logs -f api
 ```
 
 MongoDB logs:

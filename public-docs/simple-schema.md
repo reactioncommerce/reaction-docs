@@ -1,8 +1,8 @@
-[---
+---
 id: simple-schema
 title: Schemas
 ---
-    
+
 Reaction uses [MongoDB](https://docs.mongodb.com/manual/), which is a schemaless database. This allows maximum flexibility, particularly important when quickly reacting to the design challenges that uniquely different customizations require in the course of an ecommerce operation.
 
 However, we don't want to just get completely crazy, so we define a **schema** that is attached to the previously schemaless collection. These schemas apply basic content and structure validation, also very necessary in ecommerce.

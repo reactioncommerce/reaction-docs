@@ -1,26 +1,19 @@
 ---
 id: error-handling-guide
-title: Error Handling Guide
+title: Error Handling
 ---
-    
-## Error messaging
 
-Reaction uses Meteor's [`Meteor.Error()`](https://docs.meteor.com/api/methods.html#Meteor-Error) to throw general runtime errors to the client and server. Read the Meteor Guide's [Error handling](https://guide.meteor.com/methods.html#throwing-errors) section for more on how to use the method.
+When throwing errors designed to communicate information back to the client from within a client-called function such as a GraphQL resolver, use the `ReactionError` class rather than just `Error`. In other types of functions, throwing a `new Error()` is best.
 
-### Types of Reaction Meteor error messages
-
-[`Meteor.Error()`](https://docs.meteor.com/api/methods.html#Meteor-Error) takes three arguments, one that is required: `error`, a short machine-readable error code, and two that are optional: `reason`, a human-readable message and `details` for any additional stack trace
-information.
-
-#### Always include both error and reason messages
-
-Reaction requires using both `error` and `reason` arguments:
+Always include both a standard machine-readable error type and a human-readable error message, which must begin with a capital letter.
 
 ```js
-Meteor.Error("short-message", "Long message with more detail for users.");
+import ReactionError from "@reactioncommerce/reaction-error";
+
+throw new ReactionError("access-denied", "Access denied");
 ```
 
-#### Common `errors` and `reasons`
+## Common `errors` and `reasons`
 
 Here is a list of standardized arguments for various error situations:
 

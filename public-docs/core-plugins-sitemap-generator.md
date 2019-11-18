@@ -1,6 +1,6 @@
 ---
 id: core-plugins-sitemap-generator
-title: Sitemap Generator Plugin (Meteor)
+title: Sitemap Generator Plugin
 ---
 
 A sitemap is an XML file that contains a complete list of URLs for your website that should be accessible by search engines. Having a sitemap.xml file helps Google and other search engines easily discover and index your pages.

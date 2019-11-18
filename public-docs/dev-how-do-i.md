@@ -154,7 +154,7 @@ export default async function register(app) {
 
 ## Emit an app event
 
-Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming. Learn more about [App Event Hooks](appevent-hooks.md).
+Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming. Learn more about [App Events](appevent-hooks.md).
 
 ### In New Server Code
 

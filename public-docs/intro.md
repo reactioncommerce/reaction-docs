@@ -3,57 +3,31 @@ id: intro
 title: Introduction
 ---
 
-This is the home for documentation for <a href="http://github.com/reactioncommerce/reaction">Reaction</a>, https://github.com/reactioncommerce/reaction-platform, <a href="https://github.com/reactioncommerce/example-storefront/">Example Storefront</a> and other supporting services.
+Reaction Commerce is primarily a headless GraphQL API. There are also example storefront and administrator user interfaces, which you can fork and modify or use as inspiration to create your own.
 
-Reaction is a GraphQL API and a Reaction Admin app. The Example Storefront is Reaction Commerce’s headless ecommerce storefront, built using Next.js, GraphQL, React, Apollo Client and the commerce-focused React UI components provided in the <a href="http://designsystem.reactioncommerce.com/">Example Storefront Component Library</a>.
+## Who builds and supports Reaction?
 
-<div class="content-blocks">
-  <div class="content-block">
-    <div class="section-promo">
-      <a href="getting-started-developing-with-reaction">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-developer-guide.svg">
-        <h3 class="accent-color text-center">Developers</h3>
-      </a>
-    </div>
-  </div>
-  <div class="content-block">
-    <div class="section-promo">
-      <a href="deploying">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-store-guide.svg" height="110">
-        <h3 class="accent-color text-center">System Admins</h3>
-      </a>
-    </div>
-  </div>
-  <div class="content-block">
-    <div class="section-promo">
-      <a href="dashboard">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-store-guide.svg" height="110">
-        <h3 class="accent-color text-center">Operators</h3>
-      </a>
-    </div>
-  </div>
-  <div class="content-block">
-    <div class="section-promo">
-      <a href="http://gitter.im/reactioncommerce/">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-chat.svg" height="110">
-        <h3 class="accent-color text-center">Chat</h3>
-      </a>
-    </div>
-  </div>
-  <div class="content-block">
-    <div class="section-promo">
-      <a href="http://api.docs.reactioncommerce.com/">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-core-api-guide.svg">
-        <h3 class="accent-color text-center">Core API</h3>
-      </a>
-    </div>
-  </div>
-  <div class="content-block">
-    <div class="section-promo">
-      <a href="https://forums.reactioncommerce.com/">
-        <img class="center-block" src="https://cdn.rawgit.com/reactioncommerce/reaction-docs/master/website/static/img/reaction-commerce-forums.svg">
-        <h3 class="accent-color text-center">Forums</h3>
-      </a>
-    </div>
-  </div>
-</div>
+Reaction is a series of projects that combine the efforts of [community contributors](https://github.com/reactioncommerce/reaction/graphs/contributors) and the core [Reaction Commerce team](https://github.com/orgs/reactioncommerce/people).
+
+## Who uses Reaction?
+
+Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](community-showcase).
+
+## Project GitHub repositories
+
+- <a href="https://github.com/reactioncommerce/reaction" target="_blank">GraphQL API</a>
+- <a href="https://github.com/reactioncommerce/example-storefront" target="_blank">Example Storefront</a>
+- <a href="https://github.com/reactioncommerce/reaction-admin" target="_blank">Reaction Admin</a>
+- <a href="https://github.com/reactioncommerce/reaction-identity" target="_blank">Reaction Identity</a>
+
+## Documentation
+
+- [Developer](getting-started-developing-with-reaction)
+- [System Admins](deploying)
+- [Shop Operators](dashboard)
+
+## Help and resources
+
+- <a href="http://gitter.im/reactioncommerce/" target="_blank">Chat</a>
+- <a href="https://github.com/iamchathu/awesome-reactioncommerce" target="_blank">Awesome Reaction Commerce</a>
+- <a href="https://forums.reactioncommerce.com/" target="_blank">Forums</a>

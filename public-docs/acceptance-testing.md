@@ -2,19 +2,19 @@
 id: acceptance-testing
 title: Acceptance Testing
 ---
-    
+
 ## Overview
 
 ### What is Acceptance Testing?
 
-Acceptance testing (AT) is a process of testing the application to verify functionality from a users perspective. Related functionality is group together and tested by following the steps of an AT script. AT scripts will outline the functionality to be tested, success criteria, testing steps and any test variants.
+Acceptance testing (AT) is a process of testing the application to verify functionality from a user's perspective. Related functionality is grouped together and tested by following the steps of an AT script. AT scripts outline the functionality to be tested, success criteria, testing steps and any test variants.
 
 ### Why is AT important?
 
 Acceptance testing gives us:
-- Insight to pain-points and issues related to any user-flows.
-- Clear step to reproduce any issues discovered during AT.
-- A plan to test all user-flow variants.
+- Insight to pain-points and issues related to user flows
+- Clear steps to reproduce any issues discovered during AT
+- A plan to test all user-flow variants
 
 ## Getting Started
 There are three key touch points within the AT process
@@ -46,7 +46,7 @@ Table of contents for all Reaction Commerce AT scripts.
 ## Resources
 **Testing**
 - [reaction-devtools](https://github.com/reactioncommerce/reaction-devtools)
-- [Acceptance Test Script Templates](script-template.md)
+- [Acceptance Test Script Templates](script-template)
 
 **Reporting**
-- [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction)
+- [Contributing Guide](contributing-to-reaction)
