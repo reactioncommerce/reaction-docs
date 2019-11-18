@@ -18,7 +18,9 @@ See [Resolver Mutations and Queries vs. Plugin Mutations and Queries](graphql-de
 1. Import the GraphQL file into `index.js` and default export it in an array:
 
     ```js
-    import schema from "./schema.graphql";
+    import importAsString from "@reactioncommerce/api-utils/importAsString.js";
+
+    const schema = importAsString("./schema.graphql");
 
     export default [schema];
     ```

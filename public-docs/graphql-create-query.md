@@ -25,7 +25,9 @@ When choosing a name for the query, there are a few rules to follow:
 1. Import the GraphQL file into `index.js` and default export it in an array:
 
     ```js
-    import schema from "./schema.graphql";
+    import importAsString from "@reactioncommerce/api-utils/importAsString.js";
+
+    const schema = importAsString("./schema.graphql");
 
     export default [schema];
     ```
