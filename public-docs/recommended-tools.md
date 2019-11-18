@@ -8,7 +8,7 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 ## General
 
 - You should use [nvm](https://github.com/creationix/nvm) to install and manage NodeJS.
-- [Kadira](https://github.com/kadira-open/kadira-server) can help you optimize performance of the Meteor app.
+- [Kadira](https://github.com/kadira-open/kadira-server) can help you optimize performance of a Meteor app.
 
 ## Browser Extensions
 
@@ -55,7 +55,7 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 - [cljfmt](https://marketplace.visualstudio.com/items?itemName=pedrorgirardi.vscode-cljfmt)
 
 ### Emacs
-    
+
  - [js2-mode](https://melpa.org/#/js2-mode)
  - [rjsx-mode](https://melpa.org/#/rjsx-mode)
  - [prettier-js](https://melpa.org/#/prettier-js)

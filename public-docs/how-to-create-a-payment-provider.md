@@ -180,7 +180,6 @@ export default async function register(app) {
   await app.registerPlugin({
     label: "Stripe",
     name: "reaction-stripe",
-    icon: "fa fa-cc-stripe",
     paymentMethods: [{
       name: "stripe_card",
       displayName: "Stripe Card",

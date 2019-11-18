@@ -31,8 +31,6 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
   2. External: External packages, ordered by:
      - React packages
      - External npm modules
-     - Meteor Core packages
-     - Meteor Atmosphere packages
 
   3. Internal: Internal Reaction modules
 

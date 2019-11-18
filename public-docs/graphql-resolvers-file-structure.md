@@ -29,7 +29,7 @@ export default {
 };
 ```
 
-You could save that file as `resolvers.js` in `/server/no-meteor` in the payments plugin, and then import it and register it:
+You could save that file as `resolvers.js` in the payments plugin, and then import it and register it:
 
 ```js
 import resolvers from "./resolvers";

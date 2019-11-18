@@ -8,13 +8,10 @@ Testing Reaction breaks down into two broad categories:
 - Manual or automated acceptance testing
 - Automated code tests
 
-The automated code tests category can be further divided into three main types:
+The automated code tests category can be further divided into two main types:
 
 - Jest unit tests
 - Jest integration tests
-- Mocha integration tests with Meteor dependencies
-
-The Mocha integration tests are gradually being converted to Jest, either unit or integration tests as appropriate.
 
 The aim is to have full test coverage with Jest tests.
 
@@ -31,8 +28,6 @@ The different between a unit test and an integration test is not always clear cu
 For this reason, think of the terms "unit" and "integration" more as ends of a spectrum, where the "unit" end mocks everything and tests in complete isolation while the "integration" end mocks nothing and is essentially like running the app itself.
 
 In practice, in the Reaction codebase, the primary distinction is that integration tests are all written in the `/tests` folder and can make use of a fake, in-memory version of MongoDB, while unit tests have no mock database and are written in files throughout the code, with names similar to the name of the file they test.
-
-NOTE: For now, there are also some Meteor integration tests, which are located throughout the code, have the `.app-test.js` extension, and do have access to the full Meteor environemnt, including MongoDB, while running.
 
 ## When To Run Tests
 
@@ -53,9 +48,5 @@ For Jest, see the following:
 - [Creating Test Data](creating-test-data.md)
 - [Jest Tips](jest-tips.md)
 - [The official Jest documentation](https://facebook.github.io/jest/)
-
-For Mocha/Meteor, see the following:
-- [Creating Test Data for Meteor Tests](creating-test-data-for-meteor-tests.md)
-- [The official Meteor testing documentation](https://guide.meteor.com/testing.html)
 
 For acceptance testing, see the [Acceptance Testing](acceptance-testing.md) section.

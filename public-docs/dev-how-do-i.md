@@ -5,55 +5,11 @@ title: For Developers: How Do I...?
 
 ## Get the current authenticated user
 
-### In New Server Code
-
 Use `context.userId` or `context.user`
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-
-// In a Meteor method or publication:
-Reaction.getUserId()
-```
-
-### In Meteor Client Code
-
-```js
-import { Reaction } from "/client/api";
-
-// Anywhere:
-Reaction.getUserId()
-```
 
 ## Get the current authenticated account
 
-### In New Server Code
-
 Use `context.accountId` or `context.account`
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import { Accounts } from "/lib/collections";
-
-// In a Meteor method or publication:
-const userId = Reaction.getUserId();
-const account = Accounts.findOne({ userId });
-```
-
-### In Meteor Client Code
-
-```js
-import { Reaction } from "/client/api";
-import { Accounts } from "/lib/collections";
-
-// Anywhere:
-const userId = Reaction.getUserId();
-const account = Accounts.findOne({ userId });
-```
 
 ### Using GraphQL
 
@@ -68,61 +24,16 @@ const account = Accounts.findOne({ userId });
 
 ## Check permissions for the current authenticated user
 
-### In New Server Code
-
 ```js
-import ReactionError from "@reactioncommerce/reaction-error";
-
 // In a query or mutation function:
-if (!context.userHasPermission(["shipping"], shopId)) {
-  throw new ReactionError("access-denied", "Access Denied");
-}
+await context.checkPermissions(["shipping"], shopId)
 ```
 
-If the user has _any_ of the provided roles, the result will be `true`. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import ReactionError from "@reactioncommerce/reaction-error";
-
-// In a Meteor method or publication:
-const userId = Reaction.getUserId();
-if (!Reaction.hasPermission(["shipping"], userId, shopId)) {
-  throw new ReactionError("access-denied", "Access Denied");
-}
-```
-
-If the user has _any_ of the provided roles, the result will be `true`. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
-
-### In Meteor Client Code
-
-```js
-import { Reaction } from "/client/api";
-
-// Anywhere:
-const userId = Reaction.getUserId();
-if (Reaction.hasPermission(["shipping"], userId, shopId)) {
-  // show or hide UI, etc.
-}
-```
-
-If the user has _any_ of the provided roles, the result will be `true`. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed, or the ID of the shop that is currently visible.
-
-## Get the app (GraphQL resolver) context in a Meteor method or publication
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import getGraphQLContextInMeteorMethod from "/imports/plugins/core/graphql/server/getGraphQLContextInMeteorMethod";
-
-// In a Meteor method or publication:
-const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId()));
-```
+If the user has _any_ of the provided roles, they will be allowed. Otherwise a `ReactionError` will be thrown. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
 
 ## Run plugin code on app startup
 
-Copy the following into a `server/no-meteor/startup.js` file in the plugin folder:
+Copy the following into a `server/startup.js` file in the plugin folder:
 
 ```js
 /**
@@ -136,14 +47,13 @@ export default function startup(context) {
 }
 ```
 
-Then import and register the startup function in the plugin's `register.js` file:
+Then import and register the startup function in the plugin's `index.js` file:
 
 ```js
 export default async function register(app) {
   await app.registerPlugin({
     label: "Shipping",
     name: "reaction-shipping",
-    icon: "fa fa-truck",
     functionsByType: {
       startup: [startup]
     }
@@ -156,20 +66,7 @@ export default async function register(app) {
 
 Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming. Learn more about [App Events](appevent-hooks.md).
 
-### In New Server Code
-
 ```js
-context.appEvents.emit("eventName", payload, options);
-```
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import getGraphQLContextInMeteorMethod from "/imports/plugins/core/graphql/server/getGraphQLContextInMeteorMethod";
-
-// In a Meteor method or publication:
-const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId()));
 context.appEvents.emit("eventName", payload, options);
 ```
 
@@ -206,21 +103,12 @@ export default function startup(context) {
 
 ## Create a notification
 
-### In New Server Code
-
 ```js
-import createNotification from "/imports/plugins/included/notifications/server/no-meteor/createNotification";
-
-await createNotification(context.collections, { accountId, type: "orderCanceled", url });
-```
-
-### In Meteor Server Code
-
-```js
-import createNotification from "/imports/plugins/included/notifications/server/no-meteor/createNotification";
-import rawCollections from "/imports/collections/rawCollections";
-
-await createNotification(rawCollections, { accountId, type: "orderCanceled", url });
+await context.mutations.createNotification(context, {
+  accountId,
+  type: "orderCanceled",
+  url
+});
 ```
 
 ## Add MongoDB collections from a plugin

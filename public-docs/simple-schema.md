@@ -99,7 +99,7 @@ export const SchemaExample =  new SimpleSchema({
 #### Schema Definition
 
 ```js
-import { SimpleSchema } from "meteor/aldeed:simple-schema";
+import SimpleSchema from "simpl-schema";
 
 export const Workflow = new SimpleSchema({
   "status": {

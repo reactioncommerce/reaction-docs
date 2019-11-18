@@ -6,8 +6,8 @@ Sometimes you only need to extend GraphQL to add a field to an existing type. He
 
 ## Extend the schema
 
-1. If it doesn't already exist, create `/server/no-meteor/schemas` folder in the plugin, and add an `index.js` file there.
-1. If it doesn't already exist, create `schema.graphql` in `/server/no-meteor/schemas` in the plugin.
+1. If it doesn't already exist, create `schemas` folder in the plugin, and add an `index.js` file there.
+1. If it doesn't already exist, create `schema.graphql` in `schemas` in the plugin.
 1. Import the GraphQL file into `index.js` and default export it in an array:
 
     ```js
@@ -49,8 +49,8 @@ If your field is not stored in the database in the same schema, such as if it is
 
 ### Create the resolver
 
-1. If it doesn't already exist, create `/server/no-meteor/resolvers` folder in the plugin, and add an `index.js` file there.
-3. In `/server/no-meteor/resolvers`, create a file for the field resolver with the same name as the type the field is for, e.g. `Tag.js` if you extended the `Tag` type. The file should look something like this initially:
+1. If it doesn't already exist, create `resolvers` folder in the plugin, and add an `index.js` file there.
+3. In `resolvers`, create a file for the field resolver with the same name as the type the field is for, e.g. `Tag.js` if you extended the `Tag` type. The file should look something like this initially:
 
 ```js
 export default {
@@ -66,7 +66,7 @@ Replace `return null` with whatever logic you need to derive the custom field va
 
 ## Register the resolver
 
-In `/server/no-meteor/resolvers/index.js` in the plugin, import your new file and add it to the default export object. Example:
+In `resolvers/index.js` in the plugin, import your new file and add it to the default export object. Example:
 
 ```js
 import Tag from "./Tag"
