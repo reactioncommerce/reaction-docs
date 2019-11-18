@@ -26,16 +26,6 @@
       "troubleshooting-development",
       "understanding-hydra-auth-setup"
     ],
-    "Swag Shop Tutorial": [
-      "swag-shop-1",
-      "swag-shop-2",
-      "swag-shop-3",
-      "swag-shop-4",
-      "swag-shop-5",
-      "swag-shop-6",
-      "swag-shop-7",
-      "swag-shop-8"
-    ],
     "For Developers: Concepts": [
       "devs-understanding-commonorder",
       "developer-inventory"
@@ -165,6 +155,16 @@
       "code-of-conduct-committee",
       "guideline-faqs",
       "changes"
+    ],
+    "Swag Shop Tutorial": [
+      "swag-shop-1",
+      "swag-shop-2",
+      "swag-shop-3",
+      "swag-shop-4",
+      "swag-shop-5",
+      "swag-shop-6",
+      "swag-shop-7",
+      "swag-shop-8"
     ]
   }
 }
