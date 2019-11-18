@@ -28,7 +28,8 @@
     ],
     "For Developers: Concepts": [
       "devs-understanding-commonorder",
-      "developer-inventory"
+      "developer-inventory",
+      "appevent-hooks"
     ],
     "For Developers: Contributing Guide": [
       "contributing-to-reaction",
@@ -50,18 +51,8 @@
       "graphql-intro",
       "graphql-resolvers-file-structure"
     ],
-    "Core Plugins": [
-      "core-plugins-intro",
-      "core-plugins-stripe",
-      "core-plugins-simple-inventory",
-      "core-plugins-sitemap-generator"
-    ],
-    "Developer How-To: General": [
-      "dev-how-do-i",
-      "dev-debug-app-slowness",
-      "appevent-hooks"
-    ],
     "Developer How-To: Reaction API Server": [
+      "dev-how-do-i",
       "graphql-create-query",
       "graphql-create-mutation",
       "how-to-share-code-between-plugins",
@@ -75,7 +66,15 @@
       "how-to-store-custom-order-fields",
       "how-to-extend-product",
       "how-to-manage-app-settings",
-      "register-operator-route"
+      "register-operator-route",
+      "dev-debug-app-slowness",
+      "testing-debugging-server-code"
+    ],
+    "Core API Server Plugins": [
+      "core-plugins-intro",
+      "core-plugins-stripe",
+      "core-plugins-simple-inventory",
+      "core-plugins-sitemap-generator"
     ],
     "Developer How-To: GraphQL Clients": [
       "how-to-get-shop-id-for-client"
@@ -94,9 +93,6 @@
       "storefront-login",
       "storefront-account-management",
       "storefront-inventory-status-badges"
-    ],
-    "Developer How-To: Meteor app": [
-      "testing-debugging-server-code"
     ],
     "For Developers: Architecture": [
       "developer-catalog",
