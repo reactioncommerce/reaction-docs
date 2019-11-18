@@ -130,7 +130,7 @@ export default async function register(app) {
 }
 ```
 
-The `collections` object key is where you will access this collection on `context.collection`, and `name` is the collection name in MongoDB. We recommend you make these the same if you can.
+The `collections` object key is where you will access this collection on `context.collections`, and `name` is the collection name in MongoDB. We recommend you make these the same if you can.
 
 The example above will make `context.collections.MyCustomCollection` available in all query and mutation functions, and all functions that receive `context`, such as startup functions. Note that usually MongoDB will not actually create the collection until the first time you insert into it.
 
