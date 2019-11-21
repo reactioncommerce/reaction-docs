@@ -33,7 +33,7 @@ If the user has _any_ of the provided roles, they will be allowed. Otherwise a `
 
 ## Run plugin code on app startup
 
-Copy the following into a `server/startup.js` file in the plugin folder:
+Copy the following into a `startup.js` file in the plugin folder:
 
 ```js
 /**
@@ -181,4 +181,78 @@ However, in some cases the functions have side effects that require them to be e
 for (const func of listOfFunctions) {
   await func(product); // eslint-disable-line no-await-in-loop
 }
+```
+
+## Work with countries
+
+To get a list of all countries with details about each:
+
+```js
+import CountryDefinitions from "@reactioncommerce/api-utils/CountryDefinitions.js";
+```
+
+To get array of country label and value, suitable for rendering a select in a user interface:
+
+```js
+import CountryOptions from "@reactioncommerce/api-utils/CountryOptions.js";
+```
+
+## Work with languages
+
+To get array of language label and value, suitable for rendering a select in a user interface:
+
+```js
+import LanguageOptions from "@reactioncommerce/api-utils/LanguageOptions.js";
+```
+
+## Work with currencies
+
+To get a list of all world currencies with details about each:
+
+```js
+import CurrencyDefinitions from "@reactioncommerce/api-utils/CurrencyDefinitions.js";
+```
+
+To get details about one currency when you know the currency code:
+
+```js
+import getCurrencyDefinitionByCode from "@reactioncommerce/api-utils/getCurrencyDefinitionByCode.js";
+
+const currencyDefinition = getCurrencyDefinitionByCode("USD");
+```
+
+To get array of currency label and value, suitable for rendering a select in a user interface:
+
+```js
+import CurrencyOptions from "@reactioncommerce/api-utils/CurrencyOptions.js";
+```
+
+## Format money
+
+```js
+import formatMoney from "@reactioncommerce/api-utils/formatMoney.js";
+
+const formattedString = formatMoney(10.10, "EUR");
+```
+
+This wraps the [accounting-js](https://www.npmjs.com/package/accounting-js) `formatMoney` function.
+
+## Generate and check an access token
+
+```js
+import getAnonymousAccessToken from "@reactioncommerce/api-utils/getAnonymousAccessToken.js";
+
+const tokenInfo = getAnonymousAccessToken();
+```
+
+`tokenInfo` has `createdAt`, `hashedToken`, and `token` properties. `token` should be provided to the client or user who needs access. `createdAt` and `hashedToken` should be saved to the database. `token` must NOT be saved to the database.
+
+When `token` is later provided with an API request, you can compare it to the saved `hashedToken` like this:
+
+```js
+import hashToken from "@reactioncommerce/api-utils/hashToken.js";
+
+const { createdAt, hashedToken } = lookUpFromDatabase();
+// compare "now" to `createdAt` to determine if token is expired
+// compare `hashedToken` with `hashToken(token)` to see if they are exactly equal
 ```
