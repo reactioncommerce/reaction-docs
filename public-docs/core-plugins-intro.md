@@ -156,7 +156,7 @@ simpleSchemas: {
 }
 ```
 
-And a different plugin can them extend them in a `preStartup` function:
+And a different plugin can then extend them in a `preStartup` function:
 
 ```js
 export default function preStartup(context) {
