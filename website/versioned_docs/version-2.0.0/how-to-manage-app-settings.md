@@ -93,7 +93,13 @@ And you can also use GraphQL to get the current value of the setting:
 }
 ```
 
-Anyone can view all settings by default. If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
+Or you can get it in server code:
+
+```js
+const { myPluginLicenseKey } = await context.queries.appSettings(context);
+```
+
+*Anyone can view all settings by default.* If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
 
 ```js
 import ReactionError from "@reactioncommerce/reaction-error";
@@ -106,7 +112,7 @@ await app.registerPlugin({
     resolvers: {
       GlobalSettings: {
         myPluginLicenseKey(settings, _, context) {
-          if (!context.userHasPermission(["admin"], PRIMARY_SHOP_ID)) {
+          if (!context.userHasPermission(["admin"])) {
             throw new ReactionError("access-denied", "Access denied");
           }
 
@@ -197,7 +203,13 @@ query shopSettingsQuery($shopId: ID!) {
 }
 ```
 
-Anyone can view all settings by default. If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
+Or you can get it in server code:
+
+```js
+const { isMyPluginTurboMode } = await context.queries.appSettings(context, internalShopId);
+```
+
+*Anyone can view all settings by default.* If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
 
 ```js
 import ReactionError from "@reactioncommerce/reaction-error";
@@ -209,8 +221,8 @@ await app.registerPlugin({
   graphQL: {
     resolvers: {
       ShopSettings: {
-        isMyPluginTurboMode(settings, args, context) {
-          if (!context.userHasPermission(["admin"], args.shopId)) {
+        isMyPluginTurboMode(settings, _, context) {
+          if (!context.userHasPermission(["admin"], settings.shopId)) {
             throw new ReactionError("access-denied", "Access denied");
           }
 
