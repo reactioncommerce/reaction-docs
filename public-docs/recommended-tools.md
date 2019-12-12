@@ -82,3 +82,19 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 - [GraphQL Playground](https://github.com/prismagraphql/graphql-playground)
 - [Altair GraphQL Client](https://altair.sirmuel.design/)
 - [GraphiQL Standalone App](https://github.com/skevy/graphiql-app)
+
+## Kafka Helpers
+
+- [Conduktor](https://www.conduktor.io/download)
+- [Kafdrop](https://github.com/obsidiandynamics/kafdrop)
+
+
+  ```shell
+  # kafdrop local development sample command
+  docker run -d --rm -p 9000:9000 \
+      -e KAFKA_BROKERCONNECT=kafka:9092 \
+      -e JVM_OPTS="-Xms32M -Xmx64M" \
+      -e SERVER_SERVLET_CONTEXTPATH="/" \
+      --network streams.reaction.localhost \
+      obsidiandynamics/kafdrop
+  ```
