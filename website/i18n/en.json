@@ -39,6 +39,7 @@
     "dev-how-do-i": "For Developers: How Do I...?",
     "developer-catalog": "Catalogs",
     "developer-inventory": "Inventory Basics for Developers",
+    "developer-kafka-streams": "Kafka Streams Basics for Developers",
     "devs-breaking-changes": "Identifying and Avoiding Breaking Changes",
     "devs-node-es-modules": "Understanding Node ECMAScript Modules",
     "Understanding Node ECMAScript Modules": "Understanding Node ECMAScript Modules",

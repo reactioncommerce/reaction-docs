@@ -32,7 +32,8 @@
     "For Developers: Concepts": [
       "devs-understanding-commonorder",
       "developer-inventory",
-      "appevent-hooks"
+      "appevent-hooks",
+      "developer-kafka-streams"
     ],
     "For Developers: Contributing Guide": [
       "contributing-to-reaction",
