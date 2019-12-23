@@ -29,3 +29,16 @@ Integrant allows us to configure components within a software application, with 
 Configuration can be re-used by various components in the `config.edn` file via the `#ig/ref` edn tag. This allows dependency injection.
 
 Duct builds on top of integrant to define more components that can be shared and reused across applications like http servers, loggers, etc.
+
+## Kafka Streams Developer Glossary
+
+- **Message, Key, Value** Data is written to and read from kafka as a series of discreet Messages. Messages are a key/value pair. Keys and values can be any arbitrary data type including byte arrays. While keys can be null, within reaction keys will most of the time be strings that correspond to database primary key identifiers. Values will typically be JSON or avro encoded maps/structs.
+- **Topic** A topic is a named, ordered set of messages in kafka. Each topic has a particular set of configurations but can be simply thought of "where you go to read messages about X".
+- **Partition** Within a kafka topic, data is scaled by distributing it across a configurable number of partitions, each of which holds a fraction of the data.
+- **Topology** In kafka streams, the graph of interconnected topics joined by application code is called the topology.
+- **Kafka Streams Application** a JVM program that interacts with kafka via the kafka streams framework.
+- **Processor** This is the jackdaw/rentpath term for a kafka streams application as instantiated within a duct application
+- **Offset** The mechanism used by kafka consumers to keep track of their position in a topic. Resetting an application's consumer offset to zero causes it to "start over" and re-process all messages from the beginning.
+- **Broker** the main server component of a kafka cluster.
+- **Application Reset Tool** The [application reset tool](https://docs.confluent.io/current/streams/developer-guide/app-reset-tool.html) from confluent.
+- **REPL** Read Eval Print Loop is a primary tool for clojure interactive application development
