@@ -1,7 +1,9 @@
 {
   "docs": {
     "Introduction": [
-      "intro"
+      "intro",
+      "upgrading",
+      "devs-update-custom-plugin"
     ],
     "Concepts": [
       "concepts-intro",
@@ -23,6 +25,7 @@
       "installation-reaction-platform",
       "recommended-tools",
       "installation-docker-development",
+      "devs-node-es-modules",
       "troubleshooting-development",
       "understanding-hydra-auth-setup"
     ],
