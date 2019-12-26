@@ -15,7 +15,6 @@ Reaction is building a portion of our system on top of Kafka Streams. Kafka Stre
   - It provides higher-level capabilities like transformation, filtering, windowing without having to code low-level produce/consume logic
 - [jackdaw](https://github.com/FundingCircle/jackdaw) is a clojure library presenting the Kafka Streams API in a way more idiomatic to clojure and functional programming. We use this as our main foundation when building kafka streams applications
 
-
 ## Dependency Injection and Configuration Concepts
 
 In our clojure code bases, we use two key libraries around configurability:
@@ -42,3 +41,14 @@ Duct builds on top of integrant to define more components that can be shared and
 - **Broker** the main server component of a kafka cluster.
 - **Application Reset Tool** The [application reset tool](https://docs.confluent.io/current/streams/developer-guide/app-reset-tool.html) from confluent.
 - **REPL** Read Eval Print Loop is a primary tool for clojure interactive application development
+- **Serdes** is jargon for "Serializers" and "Deserializers". These are java classes responsible for data conversion between kafka message format (some form of encoded byte array) and java objects in a particular data type (String, Double, Map, Array, etc)
+
+## Further Study
+
+- [Beginners Guide to Kafka](https://iteritory.com/beginners-guide-apache-kafka-basic-architecture-components-concepts/)
+- [Apache Kafka for Beginners](https://www.youtube.com/playlist?list=PLt1SIbA8guusxiHz9bveV-UHs_biWFegU)
+- [Kafka Streams Documentation](https://docs.confluent.io/current/streams/index.html)
+- [Apache Avro Documentation](https://avro.apache.org/docs/current/)
+- [Avro Introduction](https://www.youtube.com/watch?v=SZX9DM_gyOE)
+- [Kafka Streams, the Clojure way](https://clojure-conundrums.co.uk/posts/kafka-streams-the-clojure-way/)
+- [Clojure for the Brave and True](https://www.braveclojure.com/clojure-for-the-brave-and-true/)
