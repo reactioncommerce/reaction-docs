@@ -5,7 +5,7 @@ title: Getting Started As a Developer
 
 ## Install
 
-To install Reaction version 2.0 and above for development, follow these [Reaction Platform instructions](installation-reaction-platform).
+To install Reaction for development, follow these [Reaction Platform instructions](installation-reaction-platform).
 
 Read [Developing In Docker](installation-docker-development) to understand how to do development on a multi-service application like Reaction.
 
