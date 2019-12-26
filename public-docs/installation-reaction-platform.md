@@ -9,38 +9,35 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 
 | Directory                                                                                  | Services                                   |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| [`reaction`](https://github.com/reactioncommerce/reaction)                                 | GraphQL API, Meteor API, Classic UI, Mongo |
+| [`reaction`](https://github.com/reactioncommerce/reaction)                                 | GraphQL API, Mongo                         |
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra)                     | Authentication server, PostgreSQL          |
-| [`example-storefront`](https://github.com/reactioncommerce/example-storefront) | Next.js storefront application             |
+| [`reaction-identity`](https://github.com/reactioncommerce/reaction-identity)               | MeteorJS based identity service            |
+| [`reaction-admin`](https://github.com/reactioncommerce/reaction-admin)                     | Classic Admin UI                           |
+| [`example-storefront`](https://github.com/reactioncommerce/example-storefront)             | Next.js storefront application             |
 
 ## Installation
 
-1. Requirements:
+###  Install and Setup Required Tooling
+1. Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Linux](https://docs.docker.com/compose/install/#install-compose))
+    > **Windows**: Reaction Platform does not officially support development on Windows currently. Development on Windows may be possible, but is untested. We are unable to provide support for developers using Windows.
 
-- Install Docker and Docker Compose ([Mac](https://docs.docker.com/docker-for-mac/install/) | [Linux](https://docs.docker.com/compose/install/#install-compose))
-- Install [Node.js](https://nodejs.org/en/)
-- A GitHub account with a <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">configured SSH key</a>
+    > **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
+2. Increase the memory and CPU allocated to Docker in the Docker settings. We recommend at least 4 GiB memory and much of our team runs with 8GiB. The default values are usually not sufficient to run the full Reaction system. See the [troubleshooting-development](./troubleshooting-development#memory-errors-or-errors-about-meteor-rawlogs) article for more information.
+3. Install [Node.js](https://nodejs.org/en/)
+4. Setup your GitHub account with a <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">configured SSH key</a>
 
-> **Windows**: Reaction Platform does not officially support development on Windows currently. Development on Windows may be possible, but is untested. We are unable to provide support for developers using Windows.
-
-> **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
-
-2. Before you get started:
-  - Increase the memory and CPU allocated to Docker in the Docker settings. We recommend at least 4 GiB memory. The default values are usually not sufficient to run the full Reaction system. See the [troubleshooting-development](./troubleshooting-development#memory-errors-or-errors-about-meteor-rawlogs) article for more information.
-  - Make sure you are not running any applications on the default ports: `3000`, `4000`, `4444`, `4445`, `5555`, `5432`, and `27017`.
-
-3. Clone [**Reaction Platform**](https://github.com/reactioncommerce/reaction-platform)
-
+5. Clone [**Reaction Platform**](https://github.com/reactioncommerce/reaction-platform)
 ```sh
 git clone git@github.com:reactioncommerce/reaction-platform.git
 ```
 
-4. Now you're ready to install. Run this command to bootstrap and start all of the services:
+6. Bootstrap and start all of the services:
+    > Note: before running these commands make sure you are not running any applications on the default ports that Reaction uses: `3000`, `4000`, `4444`, `4445`, `5555`, `5432`, and `27017`.
 
-```sh
-cd reaction-platform
-make
-```
+    ```sh
+    cd reaction-platform
+    make
+    ```
 
 This process may take some time. The Platform is checking that dependencies are present, cloning the sub-projects from GitHub, downloading and building Docker images, and starting services.
 
