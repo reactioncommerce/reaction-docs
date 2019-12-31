@@ -1,6 +1,7 @@
 ---
 id: appevent-hooks
-title: App Events
+title: "Developer Concepts: App Events"
+sidebar_label: App Events
 ---
 
 The `Hooks.Events` API and `MethodHooks` from previous versions of Reaction have been removed in favor of `appEvents`. `appEvents`, like hooks, allow you to attach callbacks to particular events throughout the app lifecycle.

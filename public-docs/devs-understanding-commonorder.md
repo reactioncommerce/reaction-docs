@@ -1,6 +1,7 @@
 ---
 id: devs-understanding-commonorder
-title: Understanding CommonOrder
+title: "Developer Concepts: CommonOrder"
+sidebar_label: CommonOrder
 ---
 
 In Reaction, the `Cart` and `Order` schemas are similar but with several key differences. But there are often calculations for taxes, shipping, and such that need to happen for both types of entities, and it can be overly complex to write such calculation functions in a way that takes into account all of the differences between carts and orders.

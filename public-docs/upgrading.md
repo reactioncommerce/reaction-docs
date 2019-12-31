@@ -69,12 +69,10 @@ New environment variables:
 
 > Other environment variables or configuration options may be available. Refer to the [Hydra documentation](https://www.ory.sh/docs/oryos.11/hydra/).
 
-Unchanged environment variables:
-- `OAUTH2_ERROR_URL`: Optional. An endpoint which will receive error messages from Hydra that should be displayed to the end user.
-
 Environment variables you no longer need:
 - `DATABASE_URL`: Renamed to `DSN`
 - `OAUTH2_CONSENT_URL`: Renamed to `URLS_CONSENT`
+- `OAUTH2_ERROR_URL`: Renamed to `URLS_ERROR`
 - `OAUTH2_ISSUER_URL`: Renamed to `URLS_SELF_ISSUER`
 - `OAUTH2_LOGIN_URL`: Renamed to `URLS_LOGIN`
 - `OIDC_SUBJECT_TYPES_SUPPORTED`: Renamed to `OIDC_SUBJECT_IDENTIFIERS_ENABLED`
@@ -88,6 +86,7 @@ New environment variables:
 - `OIDC_SUBJECT_IDENTIFIERS_PAIRWISE_SALT`: Required. Be careful not to change this in production. Refer to https://www.ory.sh/docs/oryos.9/hydra/advanced#openid-connect
 - `SECRETS_SYSTEM`
 - `URLS_CONSENT`: Required. Reaction Identity consent URL (the root URL plus `/consent`).
+- `URLS_ERROR`: Required. Reaction Identity errors URL (the root URL plus `/account/oauth-error`).
 - `URLS_LOGIN`: Required. Reaction Identity login URL (the root URL plus `/login`).
 - `URLS_LOGOUT`: Required. Reaction Identity logout URL (the root URL plus `/logout`).
 - `URLS_SELF_ISSUER`: Required. The public URL of Hydra.
@@ -104,7 +103,6 @@ Unchanged environment variables:
 - `OAUTH2_CLIENT_ID`
 - `OAUTH2_CLIENT_SECRET`
 - `OAUTH2_HOST`
-- `OAUTH2_REDIRECT_URL`
 - `OAUTH2_TOKEN_URL`
 - `PORT`
 - `SEGMENT_ANALYTICS_SKIP_MINIMIZE`
@@ -113,9 +111,16 @@ Unchanged environment variables:
 - `SESSION_SECRET`
 - `STRIPE_PUBLIC_API_KEY`
 
+Environment variables you no longer need:
+- `OAUTH2_REDIRECT_URL`: Now built automatically from `CANONICAL_URL`
+
 Environment variables you need to change:
 - `NODE_ENV`: When running locally, you must be sure that `NODE_ENV` is NOT in your `.env` file. For deployed environments (including non-production), be sure to set `NODE_ENV` to `production` or NextJS will run in development mode, which makes pages take a long time to load.
 - `OAUTH2_IDP_HOST_URL`: Required. Specify the full internal URL and port for the new Reaction Identity service. In 2.x this pointed to the API service.
+
+New environment variables:
+- `OAUTH2_PUBLIC_LOGOUT_URL`: Required. Hydra's public OpenID Connect logout URL, where the path portion is `/oauth2/sessions/logout`.
+- `OAUTH2_IDP_PUBLIC_CHANGE_PASSWORD_URL`: Required. The full public URL for the change password page on Reaction Identity. The path portion should be `/account/change-password?email=EMAIL&from=FROM`. Uppercase `EMAIL` and `FROM` placeholders are replaced with the current user's email address and the current page URL.
 
 ### Admin
 This project is new for Reaction 3.0.0. You need to set all of the environment variables listed in the `.env.example` file.

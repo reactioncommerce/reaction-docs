@@ -9,7 +9,7 @@ This article is part of the [Storefront UI Development Guide](./storefront-intro
 
 See [Concepts: Accounts](./concepts-accounts.md) for background.
 
-After you've implemented a storefront that allows anonymous shopping and checkout, you'll most likely want to add the ability to log in. For details, see [Understanding Hydra Auth Setup](./understanding-hydra-setup.md).
+After you've implemented a storefront that allows anonymous shopping and checkout, you'll most likely want to add the ability to log in. For details, see [Developer Concepts: Authentication](./developer-authentication).
 
 Actual implementation will vary depending on whether you're creating a single page app, an app with a server, a native app, or something else. For the purposes of this guide, we're just going to assume that you have an authentication flow working.
 
@@ -18,14 +18,6 @@ Actual implementation will vary depending on whether you're creating a single pa
 A successful login flow will result in your application being given an access token. You should store this access token either in a cookie or in `localStorage` such that you retain it until it expires or until the user logs out.
 
 You then need to adjust your Apollo Client initialization code to pass the access token as the `Authorization` header with all requests. Refer to [their example code](https://www.apollographql.com/docs/react/recipes/authentication.html#Header).
-
-## Logout
-
-When a user requests to log out, you must not only clear the access token from your own persistent application state but also do something like this to ask the Reaction identity provider to invalidate the token:
-
-```js
-fetch(`${config.OAUTH2_IDP_HOST_URL}logout?userId=${id}`)
-```
 
 ## Silent reauthentication
 

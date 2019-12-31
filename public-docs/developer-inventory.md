@@ -1,6 +1,7 @@
 ---
 id: developer-inventory
-title: Inventory Basics for Developers
+title: "Developer Concepts: Inventory"
+sidebar_label: Inventory
 ---
 
 As a Reaction developer, the main thing to know about inventory information is how to get it in plugin code.
