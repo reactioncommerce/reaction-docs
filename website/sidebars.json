@@ -26,13 +26,14 @@
       "recommended-tools",
       "installation-docker-development",
       "devs-node-es-modules",
-      "troubleshooting-development",
-      "understanding-hydra-auth-setup"
+      "troubleshooting-development"
     ],
     "For Developers: Concepts": [
-      "devs-understanding-commonorder",
-      "developer-inventory",
       "appevent-hooks",
+      "developer-authentication",
+      "devs-understanding-commonorder",
+      "developer-environment-variables",
+      "developer-inventory",
       "developer-kafka-streams"
     ],
     "For Developers: Contributing Guide": [
@@ -129,7 +130,9 @@
     ],
     "System Administrator Guide": [
       "deploying",
-      "database-optimizations"
+      "database-optimizations",
+      "environment-variables",
+      "authentication-in-prod"
     ],
     "Store Operator Guide": [
       "dashboard",

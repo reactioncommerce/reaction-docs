@@ -33,6 +33,8 @@ When you deploy, the services will not start properly unless your Postgres and M
 
 ## Environment Variables
 
-Most services need some additional information to run. In particular, they need to know what other services you are running on the network, and what the service names, ports, and other URLs and connection strings are. You provide this information by setting environment variables within each Docker container.
+See [Environment Variables](./environment-variables).
 
-To determine what environment variables need to be set, look at the `.env.example` file in each project that you plan to deploy. Alternatively, you can start the container without any environment variables set, and then view the logs to see a list of environment variables that are required.
+## Authentication
+
+See [Authentication in Production](./authentication-in-prod).

@@ -1,6 +1,7 @@
 ---
 id: developer-kafka-streams
-title: Kafka Streams Basics for Developers
+title: "Developer Concepts: Kafka Streams"
+sidebar_label: Kafka Streams
 ---
 
 Reaction is building a portion of our system on top of Kafka Streams. Kafka Streams is a library for building streaming applications on top of apache kafka. The software consists of layers of libraries building up from lower-level primitives to higher-level abstractions. The layers are:
