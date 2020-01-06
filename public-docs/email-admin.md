@@ -1,8 +1,8 @@
 ---
 id: email-admin
-title: Email
+title: Configuring Email Sending
 ---
-    
+
 Reaction sends emails for a variety of reasons (user signup, password reset, order receipts, etc.), so you will need to configure an email provider to send emails.
 
 You can use any of the [providers supported by Nodemailer](https://github.com/nodemailer/nodemailer-wellknown#supported-services), including [Mailgun](https://www.mailgun.com/), [Mandrill](https://www.mandrill.com/), or [Sendgrid](https://sendgrid.com/), or you can define your own custom SMTP settings.
@@ -28,6 +28,14 @@ If your preferred mail provider is not in the list, you can configure your own c
 1. Select **Custom** from the services dropdown menu.
 2. Fill out the **Host** and **Port** fields, along with the **User** and **Password** fields. Click **Save**.
 
+## Environment variable
+
+You can override all of the above mail settings by setting the `MAIL_URL` environment variable to an SMTP URL.
+
+```sh
+export MAIL_URL="smtp://username:password@example-mail-host.com:465"
+```
+
 ## Verifying your email settings
 
 Once you save your Mail Provider credentials, Reaction will immediately test your settings.
@@ -45,31 +53,3 @@ Once your shop is sending emails, a log will appear for each transactional email
 ### Resending a failed email
 
 If an email fails to send, you will see a button that will allow you to attempt to resend the failed email. Emails are scheduled with a job queue, so failed emails will automatically attempt to resend up to 5 times, with 3 minutes between each retry.
-
-## Advanced: Overriding settings in the code
-
-Reaction also allows you to override the settings outlined above with two other possible methods: [Meteor settings](http://docs.meteor.com/api/core.html#Meteor-settings) or [environment variables](https://en.wikipedia.org/wiki/Environment_variable). If these sound unfamiliar to you, we recommend using the dashboard configuration discussed above.
-
-### Meteor settings
-
-You can override the mail settings in the dashboard by adding an SMTP `MAIL_URL` to your Meteor settings file.
-
-```js
-// settings.json
-
-{
-  "MAIL_URL": "smtp://username:password@example-mail-host.com:465"
-}
-```
-
-### Environment variable
-
-Finally, you can override all of the above mail settings by setting the `MAIL_URL` environment variable to an SMTP URL.
-
-```sh
-# set the environment
-export MAIL_URL="smtp://username:password@example-mail-host.com:465"
-
-# or add it before the Reaction command
-MAIL_URL="smtp://username:password@example-mail-host.com:465" reaction
-```

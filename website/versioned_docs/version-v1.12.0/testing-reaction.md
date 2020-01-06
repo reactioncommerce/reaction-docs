@@ -3,7 +3,7 @@ id: version-v1.12.0-testing-reaction
 title: Testing
 original_id: testing-reaction
 ---
-    
+
 Testing Reaction breaks down into two broad categories:
 
 - Manual or automated acceptance testing
@@ -53,7 +53,6 @@ For Jest, see the following:
 - [The official Jest documentation](https://facebook.github.io/jest/)
 
 For Mocha/Meteor, see the following:
-- [Running Meteor integration tests](running-meteor-integration-tests.md)
 - [Creating Test Data for Meteor Tests](creating-test-data-for-meteor-tests.md)
 - [The official Meteor testing documentation](https://guide.meteor.com/testing.html)
 

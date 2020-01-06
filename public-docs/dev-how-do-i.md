@@ -5,55 +5,11 @@ title: For Developers: How Do I...?
 
 ## Get the current authenticated user
 
-### In New Server Code
-
 Use `context.userId` or `context.user`
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-
-// In a Meteor method or publication:
-Reaction.getUserId()
-```
-
-### In Meteor Client Code
-
-```js
-import { Reaction } from "/client/api";
-
-// Anywhere:
-Reaction.getUserId()
-```
 
 ## Get the current authenticated account
 
-### In New Server Code
-
 Use `context.accountId` or `context.account`
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import { Accounts } from "/lib/collections";
-
-// In a Meteor method or publication:
-const userId = Reaction.getUserId();
-const account = Accounts.findOne({ userId });
-```
-
-### In Meteor Client Code
-
-```js
-import { Reaction } from "/client/api";
-import { Accounts } from "/lib/collections";
-
-// Anywhere:
-const userId = Reaction.getUserId();
-const account = Accounts.findOne({ userId });
-```
 
 ### Using GraphQL
 
@@ -68,61 +24,16 @@ const account = Accounts.findOne({ userId });
 
 ## Check permissions for the current authenticated user
 
-### In New Server Code
-
 ```js
-import ReactionError from "@reactioncommerce/reaction-error";
-
 // In a query or mutation function:
-if (!context.userHasPermission(["shipping"], shopId)) {
-  throw new ReactionError("access-denied", "Access Denied");
-}
+await context.checkPermissions(["shipping"], shopId)
 ```
 
-If the user has _any_ of the provided roles, the result will be `true`. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import ReactionError from "@reactioncommerce/reaction-error";
-
-// In a Meteor method or publication:
-const userId = Reaction.getUserId();
-if (!Reaction.hasPermission(["shipping"], userId, shopId)) {
-  throw new ReactionError("access-denied", "Access Denied");
-}
-```
-
-If the user has _any_ of the provided roles, the result will be `true`. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
-
-### In Meteor Client Code
-
-```js
-import { Reaction } from "/client/api";
-
-// Anywhere:
-const userId = Reaction.getUserId();
-if (Reaction.hasPermission(["shipping"], userId, shopId)) {
-  // show or hide UI, etc.
-}
-```
-
-If the user has _any_ of the provided roles, the result will be `true`. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed, or the ID of the shop that is currently visible.
-
-## Get the app (GraphQL resolver) context in a Meteor method or publication
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import getGraphQLContextInMeteorMethod from "/imports/plugins/core/graphql/server/getGraphQLContextInMeteorMethod";
-
-// In a Meteor method or publication:
-const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId()));
-```
+If the user has _any_ of the provided roles, they will be allowed. Otherwise a `ReactionError` will be thrown. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
 
 ## Run plugin code on app startup
 
-Copy the following into a `server/no-meteor/startup.js` file in the plugin folder:
+Copy the following into a `startup.js` file in the plugin folder:
 
 ```js
 /**
@@ -136,14 +47,13 @@ export default function startup(context) {
 }
 ```
 
-Then import and register the startup function in the plugin's `register.js` file:
+Then import and register the startup function in the plugin's `index.js` file:
 
 ```js
 export default async function register(app) {
   await app.registerPlugin({
     label: "Shipping",
     name: "reaction-shipping",
-    icon: "fa fa-truck",
     functionsByType: {
       startup: [startup]
     }
@@ -154,22 +64,9 @@ export default async function register(app) {
 
 ## Emit an app event
 
-Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming. Learn more about [App Event Hooks](appevent-hooks.md).
-
-### In New Server Code
+Emit app events in API code using `appEvents.emit`. There is currently no limit to what event name you can emit, but generally try to follow established patterns for naming. Learn more about [App Events](appevent-hooks.md).
 
 ```js
-context.appEvents.emit("eventName", payload, options);
-```
-
-### In Meteor Server Code
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import getGraphQLContextInMeteorMethod from "/imports/plugins/core/graphql/server/getGraphQLContextInMeteorMethod";
-
-// In a Meteor method or publication:
-const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId()));
 context.appEvents.emit("eventName", payload, options);
 ```
 
@@ -206,21 +103,12 @@ export default function startup(context) {
 
 ## Create a notification
 
-### In New Server Code
-
 ```js
-import createNotification from "/imports/plugins/included/notifications/server/no-meteor/createNotification";
-
-await createNotification(context.collections, { accountId, type: "orderCanceled", url });
-```
-
-### In Meteor Server Code
-
-```js
-import createNotification from "/imports/plugins/included/notifications/server/no-meteor/createNotification";
-import rawCollections from "/imports/collections/rawCollections";
-
-await createNotification(rawCollections, { accountId, type: "orderCanceled", url });
+await context.mutations.createNotification(context, {
+  accountId,
+  type: "orderCanceled",
+  url
+});
 ```
 
 ## Add MongoDB collections from a plugin
@@ -242,7 +130,7 @@ export default async function register(app) {
 }
 ```
 
-The `collections` object key is where you will access this collection on `context.collection`, and `name` is the collection name in MongoDB. We recommend you make these the same if you can.
+The `collections` object key is where you will access this collection on `context.collections`, and `name` is the collection name in MongoDB. We recommend you make these the same if you can.
 
 The example above will make `context.collections.MyCustomCollection` available in all query and mutation functions, and all functions that receive `context`, such as startup functions. Note that usually MongoDB will not actually create the collection until the first time you insert into it.
 
@@ -293,4 +181,78 @@ However, in some cases the functions have side effects that require them to be e
 for (const func of listOfFunctions) {
   await func(product); // eslint-disable-line no-await-in-loop
 }
+```
+
+## Work with countries
+
+To get a list of all countries with details about each:
+
+```js
+import CountryDefinitions from "@reactioncommerce/api-utils/CountryDefinitions.js";
+```
+
+To get array of country label and value, suitable for rendering a select in a user interface:
+
+```js
+import CountryOptions from "@reactioncommerce/api-utils/CountryOptions.js";
+```
+
+## Work with languages
+
+To get array of language label and value, suitable for rendering a select in a user interface:
+
+```js
+import LanguageOptions from "@reactioncommerce/api-utils/LanguageOptions.js";
+```
+
+## Work with currencies
+
+To get a list of all world currencies with details about each:
+
+```js
+import CurrencyDefinitions from "@reactioncommerce/api-utils/CurrencyDefinitions.js";
+```
+
+To get details about one currency when you know the currency code:
+
+```js
+import getCurrencyDefinitionByCode from "@reactioncommerce/api-utils/getCurrencyDefinitionByCode.js";
+
+const currencyDefinition = getCurrencyDefinitionByCode("USD");
+```
+
+To get array of currency label and value, suitable for rendering a select in a user interface:
+
+```js
+import CurrencyOptions from "@reactioncommerce/api-utils/CurrencyOptions.js";
+```
+
+## Format money
+
+```js
+import formatMoney from "@reactioncommerce/api-utils/formatMoney.js";
+
+const formattedString = formatMoney(10.10, "EUR");
+```
+
+This wraps the [accounting-js](https://www.npmjs.com/package/accounting-js) `formatMoney` function.
+
+## Generate and check an access token
+
+```js
+import getAnonymousAccessToken from "@reactioncommerce/api-utils/getAnonymousAccessToken.js";
+
+const tokenInfo = getAnonymousAccessToken();
+```
+
+`tokenInfo` has `createdAt`, `hashedToken`, and `token` properties. `token` should be provided to the client or user who needs access. `createdAt` and `hashedToken` should be saved to the database. `token` must NOT be saved to the database.
+
+When `token` is later provided with an API request, you can compare it to the saved `hashedToken` like this:
+
+```js
+import hashToken from "@reactioncommerce/api-utils/hashToken.js";
+
+const { createdAt, hashedToken } = lookUpFromDatabase();
+// compare "now" to `createdAt` to determine if token is expired
+// compare `hashedToken` with `hashToken(token)` to see if they are exactly equal
 ```

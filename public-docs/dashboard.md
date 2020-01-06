@@ -5,7 +5,7 @@ title: Store Operator’s Guide
 
 Welcome to the Reaction Store Operator’s Guide! Here you can find everything you need to know to configure your store and manage your orders and products.
 
-Before going to far, it's best if you familiarize yourself with all of the [terms and concepts](concepts-intro.md) you'll encounter.
+Before going too far, it's best if you familiarize yourself with all of the [terms and concepts](concepts-intro.md) you'll encounter.
 
 Click **Sign In** and use your store operator credentials to get started.
 
@@ -13,7 +13,6 @@ Click **Sign In** and use your store operator credentials to get started.
 
 Follow these guides to get started with products and the grid:
 
-- [Grid pages](navigation-bar-and-grid.md) - Adding navigation links and merchandise products
 - [Product pages](products.md) - Adding products
 
 ## Dashboard
@@ -33,7 +32,6 @@ Under Actions, you can find important tasks that are used on a daily basis:
 
 Under Settings, you can view the rest of your store's feature settings, which you may access, configure, and customize to your heart’s content:
 
-- [Login services](login-auth-services.md) - Enable or disable customer login via social media
 - [Shop](shop-admin.md) - Configure your shop's name, address, payment methods, and other settings
 - [Email](email-admin.md) - Manage your mail setup and view email logs
 - [Localization and i18n](localization-and-i18n.md) - Configure timezone, languages, and currencies

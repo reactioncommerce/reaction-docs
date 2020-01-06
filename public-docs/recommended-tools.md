@@ -8,7 +8,7 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 ## General
 
 - You should use [nvm](https://github.com/creationix/nvm) to install and manage NodeJS.
-- [Kadira](https://github.com/kadira-open/kadira-server) can help you optimize performance of the Meteor app.
+- [Kadira](https://github.com/kadira-open/kadira-server) can help you optimize performance of a Meteor app.
 
 ## Browser Extensions
 
@@ -51,9 +51,11 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 - [Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
 - [Commitizen Support](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)
 - [styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+- [Parinfer](https://marketplace.visualstudio.com/items?itemName=shaunlebron.vscode-parinfer)
+- [cljfmt](https://marketplace.visualstudio.com/items?itemName=pedrorgirardi.vscode-cljfmt)
 
 ### Emacs
-    
+
  - [js2-mode](https://melpa.org/#/js2-mode)
  - [rjsx-mode](https://melpa.org/#/rjsx-mode)
  - [prettier-js](https://melpa.org/#/prettier-js)
@@ -80,3 +82,19 @@ If you are interested in being able to quickly debug and develop Reaction, consi
 - [GraphQL Playground](https://github.com/prismagraphql/graphql-playground)
 - [Altair GraphQL Client](https://altair.sirmuel.design/)
 - [GraphiQL Standalone App](https://github.com/skevy/graphiql-app)
+
+## Kafka Helpers
+
+- [Conduktor](https://www.conduktor.io/download)
+- [Kafdrop](https://github.com/obsidiandynamics/kafdrop)
+
+
+  ```shell
+  # kafdrop local development sample command
+  docker run -d --rm -p 9000:9000 \
+      -e KAFKA_BROKERCONNECT=kafka:9092 \
+      -e JVM_OPTS="-Xms32M -Xmx64M" \
+      -e SERVER_SERVLET_CONTEXTPATH="/" \
+      --network streams.reaction.localhost \
+      obsidiandynamics/kafdrop
+  ```

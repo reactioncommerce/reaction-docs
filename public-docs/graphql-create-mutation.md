@@ -13,12 +13,14 @@ See [Resolver Mutations and Queries vs. Plugin Mutations and Queries](graphql-de
 
 ## Step 3: Define the mutation in the schema
 
-1. If it doesn't already exist, create `/server/no-meteor/schemas` folder in the plugin, and add an `index.js` file there.
-1. If it doesn't already exist, create `schema.graphql` in `/server/no-meteor/schemas` in the plugin.
+1. If it doesn't already exist, create `schemas` folder in the plugin, and add an `index.js` file there.
+1. If it doesn't already exist, create `schema.graphql` in `schemas` in the plugin.
 1. Import the GraphQL file into `index.js` and default export it in an array:
 
     ```js
-    import schema from "./schema.graphql";
+    import importAsString from "@reactioncommerce/api-utils/importAsString.js";
+
+    const schema = importAsString("./schema.graphql");
 
     export default [schema];
     ```
@@ -49,8 +51,8 @@ See [Resolver Mutations and Queries vs. Plugin Mutations and Queries](graphql-de
 
 ## Step 4: Create the plugin mutation file
 
-1. If it doesn't already exist, create `/server/no-meteor/mutations` folder in the plugin, and add an `index.js` file there.
-2. In `/server/no-meteor/mutations`, create a file for the mutation, e.g. `createSomething.js` for the `createSomething` mutation. The file should look something like this:
+1. If it doesn't already exist, create `mutations` folder in the plugin, and add an `index.js` file there.
+2. In `mutations`, create a file for the mutation, e.g. `createSomething.js` for the `createSomething` mutation. The file should look something like this:
 
 ```js
 import Logger from "@reactioncommerce/logger";
@@ -69,7 +71,7 @@ export default async function createSomething(context) {
 
 ## Step 5: Add the plugin mutation to the mutations context
 
-In `/server/no-meteor/mutations/index.js` in the plugin, import your mutation and add it to the default export object. Example:
+In `mutations/index.js` in the plugin, import your mutation and add it to the default export object. Example:
 
 ```js
 import createSomething from "./createSomething"
@@ -82,7 +84,7 @@ export default {
 If this is the first mutation for the plugin, you'll also need to pass the full `mutations` object to `registerPlugin` in the plugin's `register.js` file:
 
 ```js
-import mutations from "./server/no-meteor/mutations";
+import mutations from "./mutations";
 
 export default async function register(app) {
   await app.registerPlugin({
@@ -114,9 +116,9 @@ This of course should be updated with tests that are appropriate for whatever yo
 
 ## Step 7: Create the GraphQL mutation resolver file
 
-1. If it doesn't already exist, create `/server/no-meteor/resolvers` folder in the plugin, and add an `index.js` file there.
-2. If it doesn't already exist, create `/server/no-meteor/resolvers/Mutation` folder in the plugin, and add an `index.js` file there. "Mutation" must be capitalized.
-3. In `/server/no-meteor/resolvers/Mutation`, create a file for the mutation resolver, e.g. `createSomething.js` for the `createSomething` mutation. The file should look something like this initially:
+1. If it doesn't already exist, create `resolvers` folder in the plugin, and add an `index.js` file there.
+2. If it doesn't already exist, create `resolvers/Mutation` folder in the plugin, and add an `index.js` file there. "Mutation" must be capitalized.
+3. In `resolvers/Mutation`, create a file for the mutation resolver, e.g. `createSomething.js` for the `createSomething` mutation. The file should look something like this initially:
 
 ```js
 /**
@@ -149,7 +151,7 @@ Make adjustments to the resolver function so that it reads and passes along the 
 
 ## Step 8: Register the resolver
 
-In `/server/no-meteor/resolvers/Mutation/index.js` in the plugin, import your mutation resolver and add it to the default export object. Example:
+In `resolvers/Mutation/index.js` in the plugin, import your mutation resolver and add it to the default export object. Example:
 
 ```js
 import createSomething from "./createSomething"
@@ -159,7 +161,7 @@ export default {
 };
 ```
 
-If this is the first mutation for the plugin, you'll also need to import the `Mutation` object into the `resolvers` object. In `/server/no-meteor/resolvers/index.js` in the plugin, import `Mutation` and add it to the default export object.
+If this is the first mutation for the plugin, you'll also need to import the `Mutation` object into the `resolvers` object. In `resolvers/index.js` in the plugin, import `Mutation` and add it to the default export object.
 
 ```js
 import Mutation from "./Mutation"
@@ -226,27 +228,7 @@ This of course should be updated with tests that are appropriate for whatever yo
 
 Adjust the mutation function and the mutation resolver function until they work as expected, with tests that prove it. This will likely involve adding additional input fields, ID transformations, permission checks, MongoDB calls, and event emitting.
 
-> NOTE: If the plugin mutation function is calling `context.callMeteorMethod`, these calls will be faked outside of running the full Meteor app. If you need this to work from the devserver app, you'll need to convert those methods (and the methods they call, and so on) to mutations, too.
-
 Refer to [Developing the GraphQL API](./graphql-developing) for answers to any questions you might have while implementing your mutation.
-
-### Copying code from an existing Meteor method
-If the plugin mutation you’re creating is essentially the same as an existing Meteor method, you can copy the method code and make a few changes to “demeteorize” it.
-
-1. Copy the contents of the existing method function into your new mutation function. Copy over the imports, too. Then read through the function line by line and convert anything that relies on Meteor to not rely on Meteor, according to the following guidelines.
-2. Change `Meteor.call` to `context.callMeteorMethod`. Do not `await` these calls unless you need the result or need to be sure that the database changes are done.
-3. Remove any collections that are imported. Instead, use `context.collections.<CollectionName>`. However, these are the raw collections from the `mongodb` Node package rather than the Meteor collections, so there are a few differences:
-    - When using `findOne`, the first argument can't be just the ID. Change any `findOne(id)` to `findOne({ _id: id })`.
-    - For a `find`, change `.fetch()` to `.toArray()`. If `.map` or `.forEach` is called directly after the `.find`, then update the code to await a `.toArray()` call first, and then loop through the array.
-    - Change `.insert` to `.insertOne`.
-    - Change `.update` to `.updateOne` or `.updateMany`
-    - Change `.remove` to `.deleteOne` or `.deleteMany`
-    - Change `.upsert` to `.updateOne` with `upsert: true` in the options.
-    - Be sure to `await` any of these that return promises.
-    - See [Meteor Collections vs. Node Collections](graphql-developing.md#meteor-collections-vs-node-collections)
-4. Change `Reaction.hasPermission` to `context.userHasPermission`. The API is a bit different. No need to pass in the user, but you must pass in the shop ID and the first argument must be an array. (Wrap string in array brackets if a string is being passed in.)
-5. Change `this.userId` or `Reaction.getUserId()` calls to `context.userId` or `context.accountId` depending on which you need.
-6. Change all `Meteor.user()` to `context.user` or `context.account` depending on which you need.
 
 ## Step 11: Update the JSDoc comments
 

@@ -20,12 +20,14 @@ When choosing a name for the query, there are a few rules to follow:
 
 ## Step 4: Define the query in the schema
 
-1. If it doesn't already exist, create `/server/no-meteor/schemas` folder in the plugin, and add an `index.js` file there.
-1. If it doesn't already exist, create `schema.graphql` in `/server/no-meteor/schemas` in the plugin.
+1. If it doesn't already exist, create `schemas` folder in the plugin, and add an `index.js` file there.
+1. If it doesn't already exist, create `schema.graphql` in `schemas` in the plugin.
 1. Import the GraphQL file into `index.js` and default export it in an array:
 
     ```js
-    import schema from "./schema.graphql";
+    import importAsString from "@reactioncommerce/api-utils/importAsString.js";
+
+    const schema = importAsString("./schema.graphql");
 
     export default [schema];
     ```
@@ -55,8 +57,8 @@ When choosing a name for the query, there are a few rules to follow:
 
 ## Step 5: Create the plugin query file
 
-1. If it doesn't already exist, create `/server/no-meteor/queries` folder in the plugin, and add an `index.js` file there.
-2. In `/server/no-meteor/queries`, create a file for the query, e.g. `widgets.js` for the `widgets` query. The file should look something like this:
+1. If it doesn't already exist, create `queries` folder in the plugin, and add an `index.js` file there.
+2. In `queries`, create a file for the query, e.g. `widgets.js` for the `widgets` query. The file should look something like this:
 
 ```js
 import Logger from "@reactioncommerce/logger";
@@ -75,7 +77,7 @@ export default async function widgets(context) {
 
 ## Step 6: Add the plugin query to the queries context
 
-In `/server/no-meteor/queries/index.js` in the plugin, import your query and add it to the default export object. Example:
+In `queries/index.js` in the plugin, import your query and add it to the default export object. Example:
 
 ```js
 import widgets from "./widgets"
@@ -88,7 +90,7 @@ export default {
 If this is the first query for the plugin, you'll also need to pass the full `queries` object to `registerPlugin` in the plugin's `register.js` file:
 
 ```js
-import queries from "./server/no-meteor/queries";
+import queries from "./queries";
 
 export default async function register(app) {
   await app.registerPlugin({
@@ -120,9 +122,9 @@ This of course should be updated with tests that are appropriate for whatever yo
 
 ## Step 8: Create the GraphQL query resolver file
 
-1. If it doesn't already exist, create `/server/no-meteor/resolvers` folder in the plugin, and add an `index.js` file there.
-2. If it doesn't already exist, create `/server/no-meteor/resolvers/Query` folder in the plugin, and add an `index.js` file there. "Query" must be capitalized.
-3. In `/server/no-meteor/resolvers/Query`, create a file for the query resolver, e.g. `widgets.js` for the `widgets` query. The file should look something like this initially:
+1. If it doesn't already exist, create `resolvers` folder in the plugin, and add an `index.js` file there.
+2. If it doesn't already exist, create `resolvers/Query` folder in the plugin, and add an `index.js` file there. "Query" must be capitalized.
+3. In `resolvers/Query`, create a file for the query resolver, e.g. `widgets.js` for the `widgets` query. The file should look something like this initially:
 
 ```js
 /**
@@ -148,7 +150,7 @@ Make adjustments to the resolver function so that it reads and passes along the 
 
 ## Step 9: Register the resolver
 
-In `/server/no-meteor/resolvers/Query/index.js` in the plugin, import your query resolver and add it to the default export object. Example:
+In `resolvers/Query/index.js` in the plugin, import your query resolver and add it to the default export object. Example:
 
 ```js
 import widgets from "./widgets"
@@ -158,7 +160,7 @@ export default {
 };
 ```
 
-If this is the first query for the plugin, you'll also need to import the `Query` object into the `resolvers` object. In `/server/no-meteor/resolvers/index.js` in the plugin, import `Query` and add it to the default export object.
+If this is the first query for the plugin, you'll also need to import the `Query` object into the `resolvers` object. In `resolvers/index.js` in the plugin, import `Query` and add it to the default export object.
 
 ```js
 import Query from "./Query"

@@ -2,7 +2,8 @@
   "docs": {
     "Introduction": [
       "intro",
-      "intro-glance"
+      "upgrading",
+      "devs-update-custom-plugin"
     ],
     "Concepts": [
       "concepts-intro",
@@ -19,29 +20,21 @@
       "concepts-slugs",
       "concepts-tags"
     ],
-    "Getting Started As a Developer": [
+    "Developer": [
       "getting-started-developing-with-reaction",
       "installation-reaction-platform",
-      "reaction-cli",
       "recommended-tools",
       "installation-docker-development",
-      "troubleshooting-development",
-      "developer-faq",
-      "understanding-hydra-auth-setup"
-    ],
-    "Swag Shop Tutorial": [
-      "swag-shop-1",
-      "swag-shop-2",
-      "swag-shop-3",
-      "swag-shop-4",
-      "swag-shop-5",
-      "swag-shop-6",
-      "swag-shop-7",
-      "swag-shop-8"
+      "devs-node-es-modules",
+      "troubleshooting-development"
     ],
     "For Developers: Concepts": [
+      "appevent-hooks",
+      "developer-authentication",
       "devs-understanding-commonorder",
-      "developer-inventory"
+      "developer-environment-variables",
+      "developer-inventory",
+      "developer-kafka-streams"
     ],
     "For Developers: Contributing Guide": [
       "contributing-to-reaction",
@@ -54,7 +47,6 @@
       "using-ci",
       "release-process",
       "reporting-vulnerabilities",
-      "community-channels",
       "community-showcase"
     ],
     "For Developers: GraphQL": [
@@ -62,21 +54,10 @@
       "graphql-using",
       "graphql-developing",
       "graphql-intro",
-      "graphql-resolvers-file-structure",
-      "graphql-api"
-    ],
-    "Core Plugins": [
-      "core-plugins-intro",
-      "core-plugins-stripe",
-      "core-plugins-simple-inventory",
-      "core-plugins-sitemap-generator",
-      "community-resources"
-    ],
-    "Developer How-To: General": [
-      "dev-how-do-i",
-      "dev-debug-app-slowness"
+      "graphql-resolvers-file-structure"
     ],
     "Developer How-To: Reaction API Server": [
+      "dev-how-do-i",
       "graphql-create-query",
       "graphql-create-mutation",
       "how-to-share-code-between-plugins",
@@ -90,7 +71,15 @@
       "how-to-store-custom-order-fields",
       "how-to-extend-product",
       "how-to-manage-app-settings",
-      "fixtures-images"
+      "register-operator-route",
+      "dev-debug-app-slowness",
+      "testing-debugging-server-code"
+    ],
+    "Core API Server Plugins": [
+      "core-plugins-intro",
+      "core-plugins-stripe",
+      "core-plugins-simple-inventory",
+      "core-plugins-sitemap-generator"
     ],
     "Developer How-To: GraphQL Clients": [
       "how-to-get-shop-id-for-client"
@@ -110,51 +99,15 @@
       "storefront-account-management",
       "storefront-inventory-status-badges"
     ],
-    "Developer How-To: Meteor app": [
-      "how-to-change-the-favicon",
-      "testing-debugging-server-code"
-    ],
-    "For Developers: Meteor App Architecture": [
-      "architecture",
+    "For Developers: Architecture": [
       "developer-catalog",
-      "collections",
-      "exports",
       "image-handling",
       "internationalization",
       "jobcontrol",
-      "layout",
       "logging",
-      "seo-metadata",
-      "database-migrations",
       "permissions",
       "product-variants",
-      "registry",
-      "routing",
-      "security",
-      "simple-schema",
-      "workflow"
-    ],
-    "For Developers: Core Meteor App API": [
-      "appevent-hooks",
-      "register-operator-route",
-      "reaction-core",
-      "admin-views",
-      "reaction-user-accounts",
-      "reaction-alerts",
-      "analytics",
-      "email-api",
-      "i18n",
-      "reaction-shops",
-      "reaction-product-detail",
-      "reaction-products",
-      "reaction-tags",
-      "reaction-shipping",
-      "reaction-orders",
-      "reaction-import",
-      "reaction-inventory",
-      "reaction-localization",
-      "reaction-module-cheatsheet",
-      "template-helpers"
+      "simple-schema"
     ],
     "For Developers: Catalyst Components": [
       "blocks-api",
@@ -164,13 +117,10 @@
       "testing-reaction",
       "running-jest-unit-tests",
       "running-jest-integration-tests",
-      "running-meteor-integration-tests",
       "writing-jest-unit-tests",
       "writing-jest-integration-tests",
       "react-testing",
-      "how-to-write-tests-for-plugins",
       "creating-test-data",
-      "creating-test-data-for-meteor-tests",
       "jest-tips"
     ],
     "Acceptance Testing": [
@@ -180,28 +130,23 @@
     ],
     "System Administrator Guide": [
       "deploying",
-      "deploying-reaction-using-docker",
-      "prerender",
       "database-optimizations",
-      "how-to-configure-meteor-app"
+      "environment-variables",
+      "authentication-in-prod"
     ],
     "Store Operator Guide": [
       "dashboard",
       "products",
-      "navigation-bar-and-grid",
-      "tagging",
+      "products-bulk-edit",
       "orders-admin",
       "accounts",
-      "login-auth-services",
       "shop-admin",
-      "merchant-shop-setup",
       "email-admin",
       "localization-and-i18n",
       "payment",
       "tax",
       "template",
       "shipping-admin",
-      "payments-discounts",
       "operator-address-validation"
     ],
     "Community": [
@@ -213,6 +158,16 @@
       "code-of-conduct-committee",
       "guideline-faqs",
       "changes"
+    ],
+    "Swag Shop Tutorial": [
+      "swag-shop-1",
+      "swag-shop-2",
+      "swag-shop-3",
+      "swag-shop-4",
+      "swag-shop-5",
+      "swag-shop-6",
+      "swag-shop-7",
+      "swag-shop-8"
     ]
   }
 }

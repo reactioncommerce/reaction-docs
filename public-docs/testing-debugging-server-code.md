@@ -3,7 +3,7 @@ id: testing-debugging-server-code
 title: How To: Debugging server-side code
 ---
 
-You can debug server-side code, both Meteor and Node API code, using Chrome DevTools and within integrated developer environments like [Visual Studio Code (VS Code)](https://code.visualstudio.com/), a free code editor and [WebStorm by JetBrains](https://www.jetbrains.com/webstorm/).
+You can debug Node API code using Chrome DevTools and within integrated developer environments like [Visual Studio Code (VS Code)](https://code.visualstudio.com/).
 
 Here are the steps to get started using Reaction in `inspect` mode in any editor:
 

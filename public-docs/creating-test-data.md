@@ -2,10 +2,8 @@
 id: creating-test-data
 title: Creating Test Data
 ---
-    
-For Meteor integration tests, see [Creating Test Data for Meteor Tests](creating-test-data-for-meteor-tests.md).
 
-For non-Meteor Jest tests, Reaction Commerce provides a simple data `Factory` test utility that can create mock data for unit and integration test. The test util uses [@reactioncommerce/data-factory](https://github.com/reactioncommerce/data-factory) to attach all core schemas to the `Factory` object.
+For Jest tests, Reaction Commerce provides a simple data `Factory` test utility that can create mock data for unit and integration tests. The test util uses [@reactioncommerce/data-factory](https://github.com/reactioncommerce/data-factory) to attach all core schemas to the `Factory` object.
 
 ## Creating mock data
 

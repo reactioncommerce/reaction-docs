@@ -8,7 +8,7 @@ We recommend doing all development in Docker containers using Docker Compose con
 
 ## Getting Started
 
-Follow the normal [Installation](installation.md) steps. After that:
+Follow the normal [Installation](installation-reaction-platform.md) steps. After that:
 
 1. Install [Docker](https://www.docker.com/products/docker). (Use "Docker for Mac" installer if on Mac. Use "Docker for Windows" installer if on Windows.)
 2. Install [Kitematic](https://github.com/docker/kitematic) (recommended for container management through a nice UI)
@@ -16,7 +16,7 @@ Follow the normal [Installation](installation.md) steps. After that:
 
 ## Alias Docker Compose Commands
 
-Because they can be a lot to type and you'll type them often, we recommend at least two command aliases. In Mac OSX for example, add these two lines to `~/.bash_profile`:
+Because they can be a lot to type and you'll type them often, we recommend at least two command aliases. In Mac OSX for example, add these two lines to `~/.bashrc` (if using bash shell) or `~/.zshrc` (if using zsh shell):
 
 ```bash
 alias dc="docker-compose"
@@ -73,7 +73,7 @@ docker-compose logs -f <service_name>
 Reaction API logs:
 
 ```bash
-docker-compose logs -f reaction
+docker-compose logs -f api
 ```
 
 MongoDB logs:

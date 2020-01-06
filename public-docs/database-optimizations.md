@@ -9,7 +9,7 @@ Start the Mongo client to connect to your database.
 
 Run `use <database_name>` and run the following commands:
 
-1. `db.Catalog.createIndex({ createdAt: 1 })` 
+1. `db.Catalog.createIndex({ createdAt: 1 })`
 2. `db.Catalog.createIndex({ "product._id": 1 })` - used in addToCart
 3. `db.Catalog.createIndex({ "product.variants._id": 1 })` - used in addToCart
 4. `db.Catalog.createIndex({ "product.variants.options._id": 1 })` - used in addToCart
@@ -27,7 +27,3 @@ Run `use <database_name>` and run the following commands:
 16. `db.cfs_gridfs.large.chunks.createIndex({ files_id: 1, n: 1 })` - useful if media is stored in db
 17. `db.cfs_gridfs.thumbnail.chunks.createIndex({ files_id: 1, n: 1 })` - useful if media is stored in db
 18. `db.cfs_gridfs.medium.chunks.createIndex({ files_id: 1, n: 1 })` - useful if media is stored in db
-
-If you are using the default Meteor database, you can connect to mongodb by running `meteor mongo` in the reaction directory.
-
-Then `use meteor` and then run the above commands.

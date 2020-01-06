@@ -92,7 +92,13 @@ And you can also use GraphQL to get the current value of the setting:
 }
 ```
 
-Anyone can view all settings by default. If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
+Or you can get it in server code:
+
+```js
+const { myPluginLicenseKey } = await context.queries.appSettings(context);
+```
+
+*Anyone can view all settings by default.* If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
 
 ```js
 import ReactionError from "@reactioncommerce/reaction-error";
@@ -104,11 +110,8 @@ await app.registerPlugin({
   graphQL: {
     resolvers: {
       GlobalSettings: {
-        myPluginLicenseKey(settings, _, context) {
-          if (!context.userHasPermission(["admin"], PRIMARY_SHOP_ID)) {
-            throw new ReactionError("access-denied", "Access denied");
-          }
-
+        async myPluginLicenseKey(settings, _, context) {
+          await context.checkPermissions(["admin"]);
           return settings.myPluginLicenseKey;
         }
       }
@@ -196,7 +199,13 @@ query shopSettingsQuery($shopId: ID!) {
 }
 ```
 
-Anyone can view all settings by default. If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
+Or you can get it in server code:
+
+```js
+const { isMyPluginTurboMode } = await context.queries.appSettings(context, internalShopId);
+```
+
+*Anyone can view all settings by default.* If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
 
 ```js
 import ReactionError from "@reactioncommerce/reaction-error";
@@ -208,11 +217,8 @@ await app.registerPlugin({
   graphQL: {
     resolvers: {
       ShopSettings: {
-        isMyPluginTurboMode(settings, args, context) {
-          if (!context.userHasPermission(["admin"], args.shopId)) {
-            throw new ReactionError("access-denied", "Access denied");
-          }
-
+        async isMyPluginTurboMode(settings, _, context) {
+          await context.checkPermissions(["admin"], settings.shopId);
           return settings.isMyPluginTurboMode;
         }
       }

@@ -1,6 +1,7 @@
 ---
 id: appevent-hooks
-title: App Event Hooks
+title: "Developer Concepts: App Events"
+sidebar_label: App Events
 ---
 
 The `Hooks.Events` API and `MethodHooks` from previous versions of Reaction have been removed in favor of `appEvents`. `appEvents`, like hooks, allow you to attach callbacks to particular events throughout the app lifecycle.
@@ -16,24 +17,9 @@ Emit app events in API code using `appEvents.emit`. The `emit` function takes at
 - *Option arguments*: The last argument is an array of arguments to pass to each function from `payload`.
 - *Using `await`*: Using the method with `await` will not resolve until all of the registered handler methods have resolved.
 
-## Examples
-
-### In New Server Code
+## Emit an app event
 
 ```js
-context.appEvents.emit("eventName", payload, options);
-```
-
-### In Meteor Server Code
-
-In Meteor code, fetch the GraphQL `context` in a Promise, and use `context.appEvents`:
-
-```js
-import Reaction from "/imports/plugins/core/core/server/Reaction";
-import getGraphQLContextInMeteorMethod from "/imports/plugins/core/graphql/server/getGraphQLContextInMeteorMethod";
-
-// In a Meteor method or publication:
-const context = Promise.await(getGraphQLContextInMeteorMethod(Reaction.getUserId()));
 context.appEvents.emit("eventName", payload, options);
 ```
 
@@ -57,7 +43,7 @@ const EMITTED_BY_NAME = "myPluginHandler";
 
 appEvents.on("afterCartUpdate", async ({ cart }, { emittedBy } = {}) => {
   if (emittedBy === EMITTED_BY_NAME) return; // short circuit infinite loops
-   
+
   appEvents.emit("afterCartUpdate", { cart: updatedCart, updatedBy: userId }, { emittedBy: EMITTED_BY_NAME });
 });
 ```
@@ -78,7 +64,7 @@ Events that are currently defined in Core and their previous Hooks-equivalents a
 | Event Name: `afterPublishProductToCatalog` Arguments: `{ catalogProduct, product }`                                                                      | Event Name: `afterPublishProductToCatalog` Arguments: `product, catalogProduct`      |
 | Event Name: `afterOrderUpdate` Arguments: `{ order, updatedBy }`                                                                                         | N/A                                                                             |
 | Event Name: `jobServerStartArguments`: NONE                                                                                                           | Event Name: `onJobServerStart` Arguments: NONE                                     |
-| Event Name: `afterCoreInit` Arguments: NONE Deprecated. Do not use in new code. Put your code directly in a non-Meteor plugin startup function instead. | Event Name: `afterCoreInit` Arguments: NONE                                        |
+| Event Name: `afterCoreInit` Arguments: NONE Deprecated. Do not use in new code. Put your code directly in a plugin startup function instead. | Event Name: `afterCoreInit` Arguments: NONE                                        |
 | Event Name: `sendEmail` Arguments: `{ job, sendEmailCompleted, sendEmailFailed }`                                                                        | N/A                                                                             |
 | Event Name: `afterShopCreate` Arguments: `{ createdBy, shop }`                                                                                           | N/A                                                                             |
 | Event Name: `afterMediaInsert` Arguments: `{ createdBy, mediaRecord }`                                                                                   | N/A                                                                             |

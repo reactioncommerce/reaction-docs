@@ -2,93 +2,147 @@
 id: release-process
 title: Release Guide
 ---
-    
+
+# How-to: Creating a new Reaction Release
+
 The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
-The process is:
-1. Create a release branch!
-1. Change destination branch from master to release branch for all PR that should be included.
-1. When PRs have been approved, tests pass, and there are no conflicts, merge PRs into release branch
-1. Create a `Release x.x.x` pull request.
-1. Create release notes
-1. Add release notes to the CHANGELOG.MD file
-1. Ask for review from QA when release is ready
-1. QA Reviews release and verifies that automated tests pass
-1. Create PR to update [sample data](https://github.com/reactioncommerce/reaction-catalog-sample-data/) migrations.
-1. Merge to `master`, wait for tests, then tag release.
-1. After successful merge, delete the release branch.
+> A "Reaction Release" consists of coordinated releases in four repositories: [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
-## Release branch
+## Preparing each project
 
-1. Create a branch from `master` named **release-x.x.x**
-2. Commit incremented `package.json` version
-3. run `meteor npm install` to bump `package-lock.json` version
-4. Should ~follow [SemVer](http://semver.org/) guidelines:
+- Create a release branch
+    1. Decide if this is a `major` / `breaking` (`X.-,-`), `minor` (`-.X.-`), or `patch` (`-.-.X`) release
+    2. Create a branch off of the `develop` branch (or `master` / `trunk` if `develop` is not present), and name it `release-vX.X.X`
 
-- MAJOR version when you make incompatible API changes,
-- MINOR version when you add functionality in a backwards-compatible manner, and
-- PATCH version when you make backwards-compatible bug fixes.
+- Increment version numbers in `package.json`
+    1. If applicable (`Reaction` & `Example Storefront`), update the version number accordingly in `package.json`, and run the app in order to get an updated `package-lock.json` file, and commit these files.
+- Update the `CHANGELOG` with release notes
 
-## Accept pull requests and i18n
+    Because of the nature of our product, it's possible, and even likely, that `Reaction` will be the only project with substantive changes. It's OK and necessary to create a release for all four projects, even if there are no changes in some of them. If there are ***ANY*** changes in a project, use the first set of instructions here. If this is just a version bump to coordinate with the other projects, use the second set of instructions.
 
-- Merge approved patches/fixes/features pull requests for this release into the `release-x.x.x` branch.
-- Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch. LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of _i18n imports_ should also be performed before merging the i18n translation PR into the release branch.
-- run `meteor npm install` as well as `reaction run` to make sure that all `package.json` and `package-lock.json` files get updated.
-- Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `master`.
+    - Creating release notes on a project with changes
+        1. Use the following script to get a list of all PR's that will be in this release, replacing `PREVIOUS-RELEASE-TAG` with the previous release version, such as `v2.3.0`
 
-## Release notes
+            git log HEAD...{PREVIOUS-RELEASE-TAG} | pcregrep -A 2 -M 'Merge pull request' | perl -pe 's/Merge.*(#[0-9]{4}).*/$1/' | perl -pe 's/^(\-|#| |(\[[a-zA-Z]+\])+|\n)*//g' | perl -0777pe 's/([0-9]{4})\n(.+)\n/ - $2 (#$1)\n/g'
 
-- Create release notes - a summary of all PR and notable changes in the release.
-- Run the following from the directory of the repo you are releasing:
+        1. Then, update the `CHANGELOG` with notes in the following format:
 
-```sh
-git log <firstCommitHash>..<lastCommitHash> | pcregrep -A 2 -M 'Merge pull request' | perl -pe 's/Merge.*(#[0-9]{4}).*/$1/' | perl -pe 's/^(\-|#| |(\[[a-zA-Z]+\])+|\n)*//g' | perl -0777pe 's/([0-9]{4})\n(.+)\n/ - $2 (#$1)\n/g'
-```
+            # v{X.X.X}
 
-- Write extended notes about anything that is a breaking change or potentially breaking change.
-- Write extended notes about anything that is interesting, adds exciting new functionality, or improves the app significantly in some way
+            Reaction v{X.X.X} adds {major|minor} features and performance enhancements, fixes bugs and contains no breaking changes since v{X.X.X - 1version}.
 
-Notes:
+            This release is being coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform) and is designed to work with `v{X.X.X}` of [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra) and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
-- You'll need `pcregrep` on your system which you can install on osx with brew `brew install pcre`
-- Replace `<firstCommitHash>` and `<lastCommitHash>` with the first and last commit or tag of the release respectively. You can use prev tag and `HEAD` for this if you have the release branch checked out. e.g. `git log v1.5.5..HEAD | ...`
-- Copy release notes to PR
+            ## Notable changes
 
-## Release docs
+            ### {Change 1: Provide details of a notable change here}
 
-- Merge outstanding documentation pull requests.
-- Tag and release reaction-docs for major versions.
+            {Description of change 1}
 
-## Release review
+            ### {Change 2: Provide details of a notable change here}
 
-- All Automated checks MUST PASS - even for admins.
-- Scores should always be 90+, no vulnerabilities.
-- Request two release reviewers to approve the PR.
-- Neither reviewer can be the person who submitted the PR.
-- Release on approval.
+            {Description of change 2}
 
-## Release
+            ## Feature
 
-- **Merge** the `Release x.x.x` pull request into `master`
-- Allow all tests and builds to complete
-- [Draft and publish a new GitHub Release](https://github.com/reactioncommerce/reaction/releases)
-- Wait for all `master` tests to pass.
-- Follow the format of previous release, copy change log from release PR into the release notes.
+            - {list all `feature` PR's here, in this format}
+            - feat: this is the description of the PR ([#1234](https://github.com/reactioncommerce/reaction/pull/1234))
 
-## Post-release checklist: All releases
+            ## Fixes
 
-- Core team: Review issues that the release resolves, that they are closed and stale branches removed.
-- Community team: Update Gitter with links to the latest release, changelog and update instructions.
+            - {list all `fix` PR's here, in this format}
+            - fix: this is the description of the PR ([#1234](https://github.com/reactioncommerce/reaction/pull/1234))
 
-## Post-release checklist: Major releases
+            ## Refactors
 
-- Community team: Tag a new Documentation release and update Editorial about any new documentation tutorial links, new FAQ questions and other relevant content for social media channels.
+            - {list all `refactor` PR's here, in this format}
+            - refactor: this is the description of the PR ([#1234](https://github.com/reactioncommerce/reaction/pull/1234))
 
-- Community / Editorial team: If a release is noteworthy enough for a blog post, assign a blog post writer for the release post. The post should include instructions on how to upgrade.
+            ## Tests
 
-- Community team: Assign team members to review and test supported repositories and tutorials. Make issues if any of these fail or break with the newest release:
-  - [reaction-example-plugin](https://github.com/reactioncommerce/reaction-example-plugin/)
-  - [`reaction-devtools`](https://github.com/reactioncommerce/reaction-devtools)
-  - [`reaction-swag-shop`](https://github.com/reactioncommerce/reaction-swag-shop)
-  - [`payments-cod`](https://github.com/reactioncommerce/payments-cod)
-  - [YouTube video tutorials](https://www.youtube.com/playlist?list=PLJ1TVRVOrm2O5OsXqzDn5iZez4WEnKRZH)
+            - {list all `test` PR's here, in this format}
+            - tests: this is the description of the PR ([#1234](https://github.com/reactioncommerce/reaction/pull/1234))
+
+            ## Contributors
+
+            Thanks to @{outside-contributor} for contributing to this release! 🎉
+
+        This is an example of a `CHANGELOG` for the `Reaction` project, please update accordingly if this is for `Reaction Platform`, `Reaction Hydra`, or `Example Storefront`.
+
+    - Creating release notes on a project with no changes, just a version bump to keep the project in sync
+
+        As previously mentioned, because of the nature of our product, not all projects will have updates with every release. If there are no updates aside from a version bump, use the following as the notes for the `CHANGELOG`:
+
+        *Be sure to change the version number and the type of release.*
+
+        ### Example Storefront
+
+            # v{X.X.X}
+
+            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra).
+
+        ### Reaction
+
+            # v{X.X.X}
+
+            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+
+        ### Reaction Hydra
+
+            # v{X.X.X}
+
+            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+
+        ### Reaction Platform
+
+            # v{X.X.X}
+
+            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction](https://github.com/reactioncommerce/reaction), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+
+- Create a PR from your release branch to the `master` / `trunk` branch, using the updated `CHANGELOG` notes as the PR description
+- Ask QA for a review
+- `Reaction`, `Reaction Hyrda`, and `Example Storefront` can be merged as soon as they are approved.
+
+Do not merge `Reaction Platform` at this time.
+
+## Creating releases for `Reaction`, `Reaction Hydra`, and `Example Storefront`
+
+Once `Reaction`, `Reaction Hydra`, and `Example Storefront` have been merged, and all CI steps have passed, it's time to create a release for each project.
+
+- In each project, click the `Draft new release` button to begin the process
+- Copy the updates from the `CHANGELOG` into the description portion of the release notes
+- Use the version number, including the `v`, as both the `Tag Version` and `Release Title`. It should look similar to this:
+
+![](New_release__reactioncommerce_reaction-c6930940-2eb9-40dd-a09c-3891bba481a4.png)
+
+- Save the release as a draft, and have your fellow release manager (or anyone) take a look to make sure everything, but especially the tag, looks correct. Once published, the tag cannot be changed.
+- If everything looks good, `Publish release`
+
+## Creating a release for `Reaction Platform`
+
+Once `Reaction`, `Reaction Hydra`, and `Example Storefront` have been released, we can update `Reaction Platform` to use these new releases, and release the platform.
+
+1. Update `[config.mk](http://config.mk)` to use the latest version numbers in the `define SUBPROJECT_REPOS` block of code:
+
+    ![](reaction-platform_config_mk_at_master__reactioncommerce_reaction-platform-63e424d3-0c72-4328-9765-838441aacf0f.png)
+
+2. Ask QA for a review of the platform, using the updated releases
+3. `Reaction Platform` can now be merged as soon as they are approved.
+4. Next, create a release using the same instructions as above.
+5. Once published, the release is official! Send a notice to the engineering channel to give everyone a heads up!
+
+## Pulling changes back into `develop`
+
+The `develop` branches of `Reaction` and `Example Platform` need to pull in the version bump and `CHANGELOG` changes we just made directly to their `master` / `trunk` branches. You ***DO NOT*** need to create an official PR for this, just merge the `master` / `trunk` branch back into `develop` and push.
+
+## Updating our sample data for the new release
+
+Once we have a new release, we need to update our Sample Data to go along with the release. Even if you are certain no data has changed, we still want a new version of data to match version numbers.
+
+Follow the instructions [here](https://github.com/reactioncommerce/reaction-catalog-sample-data#how-to-update-and-export-for-a-new-reaction-release) to update the data.
+
+## Links
+
+- Release guide in our docs: [https://docs.reactioncommerce.com/docs/release-process](https://docs.reactioncommerce.com/docs/release-process)
+- Catalog data update instructions: [https://github.com/reactioncommerce/reaction-catalog-sample-data#how-to-update-and-export-for-a-new-reaction-release](https://github.com/reactioncommerce/reaction-catalog-sample-data#how-to-update-and-export-for-a-new-reaction-release)
