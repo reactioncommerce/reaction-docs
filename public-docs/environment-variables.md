@@ -39,7 +39,10 @@ This article aims to be a full listing of the required and optional environment 
 - `OAUTH2_EXPOSE_INTERNAL_ERRORS`: Optional. Useful for debugging. Refer to https://www.ory.sh/docs/next/hydra/debugging#first-aid
 - `OIDC_SUBJECT_IDENTIFIERS_ENABLED`: Required. Be careful not to change this in production. Refer to https://www.ory.sh/docs/oryos.9/hydra/advanced#openid-connect
 - `OIDC_SUBJECT_IDENTIFIERS_PAIRWISE_SALT`: Required. Be careful not to change this in production. Refer to https://www.ory.sh/docs/oryos.9/hydra/advanced#openid-connect
-- `SECRETS_SYSTEM`: Required. A unique secret key.
+- `SECRETS_SYSTEM`: Required. A key or keys used to encrypt sensitive data using AES-GCM (256 bit) and validate HMAC signatures. Must be at least 16 characters long. This may be a single key or a comma-separated list where the first item in the list is used for signing and encryption and the whole list is used for verifying signatures and decryption. See https://www.ory.sh/docs/hydra/configuration
+- `SECRETS_COOKIE`: Optional. A secret or secrets that are used to encrypt cookie sessions. Defaults to the same keys from `SECRETS_SYSTEM` but Hydra recommends using a separate secret in production. See https://www.ory.sh/docs/hydra/configuration
+- `SERVE_PUBLIC_CORS_ALLOWED_ORIGINS`: Required. Set this to a comma-delimited list of origin URLs that should be allowed to do browser-based login. In particular, set this to the public root URL of your Reaction Admin site, plus any single-page apps you have built to use standard browser-based OIDC authentication flows.
+- `SERVE_PUBLIC_CORS_ENABLED`: Required. Set this to `true` to enable browser-based login flows. See also `SERVE_PUBLIC_CORS_ALLOWED_ORIGINS`.
 - `URLS_CONSENT`: Required. Reaction Identity consent URL (the root URL plus `/consent`).
 - `URLS_ERROR`: Required. Reaction Identity errors URL (the root URL plus `/account/oauth-error`).
 - `URLS_LOGIN`: Required. Reaction Identity login URL (the root URL plus `/login`).
