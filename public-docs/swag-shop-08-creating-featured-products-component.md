@@ -34,7 +34,7 @@ query featuredQuery($shopId: ID!) {
 
 So let's break this down a little bit. First we declared that we are creating a query and we gave it a name `featuredQuery`, and said that we take a shopId of type `ID` as our type. We will then call the server query that we created in our last [tutorial on server side GraphQL plugin](swag-shop-07-graphql-server-plugin.md) `featuredProductsByShop` with the `shopId` as input.
 
-Next, we are declaring the 'shape' of our return type. Since we are getting a cursor, we say want nodes, we want the Id of the node and we want those nodes to be of type `CatalogItemProduct` and then we declare which fields of the `CatalogItemProduct` type we want. And that's it. You can see that query looks just like our test code above with just an additional wrapper around.
+Next, we are declaring the 'shape' of our return type. Since we are getting a cursor we say want nodes, we want the Id of the node and we want those nodes to be of type `CatalogItemProduct` and then we declare which fields of the `CatalogItemProduct` type we want. And that's it. You can see that query looks just like our test code above with just an additional wrapper around.
 
 Now, let's create our actual HOC which we will call `withFeatured.js`. That file will look something like this:
 
