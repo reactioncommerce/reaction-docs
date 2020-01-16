@@ -7,7 +7,7 @@ At Reaction Commerce, we're dedicated to the open source community. In fact, we'
 
 ## Step 1: Get Reaction running
 
-If you haven't already, get Reaction running locally. Follow these [Reaction Platform instructions](installation-reaction-platform.md).
+If you haven't already, get Reaction running locally. Refer to [Getting Started as a Developer](./getting-started-developing-with-reaction)
 
 ## Step 2: Find or open an issue
 

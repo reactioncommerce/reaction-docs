@@ -5,8 +5,9 @@ title: Tutorial: Getting started with GraphQL
 
 ## Install
 
-- Make sure you are on Reaction 2.0 or above.
-- Check your current Reaction version by running: `reaction -v`
+To install Reaction for development, testing, or demonstration on your own computer, follow these [Reaction Platform instructions](https://github.com/reactioncommerce/reaction-platform/tree/release-v3.0.0#prerequisites).
+
+Make sure you are on Reaction 3.0.0 or above.
 
 ## Your first query
 

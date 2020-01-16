@@ -8,11 +8,7 @@ We recommend doing all development in Docker containers using Docker Compose con
 
 ## Getting Started
 
-Follow the normal [Installation](installation-reaction-platform.md) steps. After that:
-
-1. Install [Docker](https://www.docker.com/products/docker). (Use "Docker for Mac" installer if on Mac. Use "Docker for Windows" installer if on Windows.)
-2. Install [Kitematic](https://github.com/docker/kitematic) (recommended for container management through a nice UI)
-3. Install [Docker Compose](https://docs.docker.com/compose/install/) if necessary. If you installed "Docker for Mac" or "Docker for Windows", it's already included.
+To install Reaction for development, testing, or demonstration on your own computer, follow these [Reaction Platform instructions](https://github.com/reactioncommerce/reaction-platform/tree/release-v3.0.0#prerequisites).
 
 ## Alias Docker Compose Commands
 

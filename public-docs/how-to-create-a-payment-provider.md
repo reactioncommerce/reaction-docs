@@ -228,4 +228,4 @@ The `label` is shown in the operator UI to group the settings for each payment p
 
 #### Checkout UI
 
-With the 2.0 release, we now recommend customizing a storefront starter kit to build your storefront. In `src/custom/paymentMethods.js`, you will see a `paymentMethods` array. Modify this to add your payment method and remove any others you do not need.
+We recommend customizing a storefront starter kit to build your storefront. In `src/custom/paymentMethods.js`, you will see a `paymentMethods` array. Modify this to add your payment method and remove any others you do not need.

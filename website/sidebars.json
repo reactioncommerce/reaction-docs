@@ -22,7 +22,6 @@
     ],
     "Developer": [
       "getting-started-developing-with-reaction",
-      "installation-reaction-platform",
       "recommended-tools",
       "installation-docker-development",
       "devs-node-es-modules",
