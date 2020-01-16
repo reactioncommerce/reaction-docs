@@ -89,7 +89,7 @@ While we do aspire to this for the Reaction API, breaking changes are fine in ma
 
 ## Meteor Methods
 
-The Reaction API is being transitioned from Meteor to Node, but as of the writing of this article and the Reaction 2.0.0 release, there are still many Meteor methods and publications in the codebase. Some of these are used by Catalyst, the Reaction operator portal, while others may no longer be used but haven't been removed yet.
+The Reaction Admin is being transitioned from Meteor to a single page app, but as of the writing of this article, there are still many Meteor methods and publications in the codebase. Some of these are used, while others may no longer be used but haven't been removed yet.
 
 We have decided that, as a general rule, removing Meteor methods and publications
 from the API codebase does not require a major version release. **Feel free to remove unused Meteor code, but call this out as a potential breaking change in your pull request.**
