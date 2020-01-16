@@ -25,7 +25,7 @@ Despite these features that help you automatically manage your available invento
 
 **Option 1** If your external inventory system can be queried in real time, the simplest integration is to remove the `simple-inventory` plugin and add your own custom inventory plugin that registers an `inventoryForProductConfigurations` type function that returns current inventory in stock and other related data for a list of product configurations by calling through to your inventory management system.
 
-**Option 2** If your external inventory system produces periodic exports but cannot be queried in real time, then you may want to keep the included `simple-inventory` plugin and create a script that reads the exported files and updates the `SimpleInventory` collection as necessary. If you do this in a custom plugin, then it's best to call `context.mutations.updateSimpleInventory` with `context.isInternalCall` set to `true`, and let that take care of properly updating the collection. If you can't do it in a custom plugin, then your external script should be written to look similar to the `updateSimpleInventory` mutation function in the `simple-inventory` plugin.
+**Option 2** If your external inventory system produces periodic exports but cannot be queried in real time, then you may want to keep the included `simple-inventory` plugin and create a script that reads the exported files and updates the `SimpleInventory` collection as necessary. If you do this in a custom plugin, then it's best to call `context.mutations.updateSimpleInventory` using the result of `context.getInternalContext()` as the `context` you pass in, and let that take care of properly updating the collection. If you can't do it in a custom plugin, then your external script should be written to look similar to the `updateSimpleInventory` mutation function in the `simple-inventory` plugin.
 
 Example of option 2:
 
@@ -34,7 +34,7 @@ const STANDARD_LOW_INVENTORY_THRESHOLD = 10;
 
 async function externalSystemInventoryUpdateWorker(context, productId, productVariantId, shopId, inventoryInStock) {
   await context.mutations.updateSimpleInventory(
-    { ...context, isInternalCall: true },
+    context.getInternalContext(),
     {
       productConfiguration: {
         productId,
