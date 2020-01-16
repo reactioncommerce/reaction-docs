@@ -6,6 +6,33 @@ sidebar_label: Authentication
 
 All Reaction API servers authenticate users and clients using OAuth 2.0. This is done through a [Hydra](https://www.ory.sh/docs/hydra/) service and another service called Reaction Identity, which is what is referred to in auth-speak as an "identity provider".
 
+## API
+
+In an API service, the authentication process is pretty simple. It is implemented as an Express middleware function that does the following:
+- Check whether an HTTP request includes an "Authorization" header.
+- If it does, assume the value of that header is an OAuth access token issued by Hydra.
+- Send the access token to the Hydra service directly across the Docker network.
+- If the token is valid (exists and isn't expired), receive back a user ID from Hydra. Look up the user with that user ID in MongoDB (`users` collection) and attach the user document to the request.
+- If the token is invalid, send a "401 Unauthorized" response.
+
+This all is implemented in a small built-in plugin called "authentication".
+
+### How to Get an Access Token for Development
+
+For development purposes, you'll want to try out GraphQL requests in GraphQL Playground or another GraphQL client. The normal way of getting OAuth access tokens is by going through an OAuth flow from a browser or native client, but this is a lot of extra work when you just want to test some requests on your local computer.
+
+To obtain an access token for local testing purposes, verify that you have the Hydra service running in Docker and then run the following command in the API project:
+
+```
+bin/token [userId]
+```
+
+Substitute a real user ID, which is the internal user ID you see in the `_id` field in the MongoDB `users` collection.
+
+An access token is printed, which you can then copy and paste into the "Authorization" header for your GraphQL request.
+
+The rest of this article explains how the normal OAuth flow from a client works.
+
 ## Hydra
 
 The Hydra service is not in any way customized for Reaction. It is a standard Docker image that is configured using environment variables to communicate with several HTTP endpoints on the Reaction Identity service. This means you can learn everything you need to know about Hydra by reading [their documentation](https://www.ory.sh/docs/hydra/).

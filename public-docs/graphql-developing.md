@@ -94,12 +94,7 @@ Here’s what's on the context object:
 
 ## How Auth Works
 
-Although we plan to change this in the future, currently we use Meteor's accounts packages, which rely on tokens stored in the `users` collection for authentication.
-
-For the GraphQL endpoint, we have an Express middleware function that looks for a "meteor-login-token" HTTP header and tries to resolve that to a certain user record.
-- If the header isn't present, the request continues unauthenticated
-- If the header is present but no user has that token or that token is expired, the middleware terminates the request with a 401 status code.
-- If the header is present and the token is valid, the request continues and `req.user` is set to the authenticated user document. This is then copied to the GraphQL context object and the user’s account is looked up, giving you access to `context.user`, `context.userId`, `context.account`, `context.accountId`, and `context.userHasPermission`.
+Refer to [Developer Concepts: Authentication](./developer-authentication)
 
 ## IDs in GraphQL
 
