@@ -31,6 +31,8 @@ Substitute a real user ID, which is the internal user ID you see in the `_id` fi
 
 An access token is printed, which you can then copy and paste into the "Authorization" header for your GraphQL request.
 
+NOTE: The token will last only 1 hour with default Hydra configuration, and then you'll need to obtain a new one.
+
 The rest of this article explains how the normal OAuth flow from a client works.
 
 ## Hydra
