@@ -5,8 +5,8 @@ title: Using the GraphQL API
 
 ## Reaction GraphQL Implementation
 
-Reaction GraphQL is accessible at `/graphql-beta` on the API server port.
-To use GraphQL, just POST to `/graphql-beta`.
+Reaction GraphQL is accessible at `/graphql` on the API server port.
+To use GraphQL, just POST to `/graphql`.
 
 The GraphQL server is implemented using [Apollo Server](https://www.apollographql.com/docs/apollo-server/). It is compatible with [Apollo Client](https://www.apollographql.com/docs/react/) or [Relay Modern](https://facebook.github.io/relay/) for client development.
 
@@ -19,7 +19,7 @@ We recommend using a standalone GraphQL client to connect and make requests. Her
 
 ### Making Queries
 
-As long as you use POST method (not GET) and use the `/graphql-beta` path as the URL, requests from any GraphQL client should work. Many queries and mutations will check identity and authorization, and therefore require you to send a bearer token along with your request. Standalone GraphQL clients have a “Headers” option where you can specify this manually. See [Identity and Authorization](#identity-and-authorization).
+As long as you use POST method (not GET) and use the `/graphql` path as the URL, requests from any GraphQL client should work. Many queries and mutations will check identity and authorization, and therefore require you to send a bearer token along with your request. Standalone GraphQL clients have a “Headers” option where you can specify this manually. See [Identity and Authorization](#identity-and-authorization).
 
 ## Identity and Authorization
 
@@ -31,7 +31,7 @@ The GraphQL schema is defined in the GraphQL server code but [visible to all cli
 
 ### Reading the API Documentation
 
-All queries, mutations, and types in the Reaction GraphQL schema are documented within the schema itself. Go to `/graphql-beta` in a browser and click "Docs", or use your favorite standalone GraphQL client to explore the schema and read the API documentation.
+All queries, mutations, and types in the Reaction GraphQL schema are documented within the schema itself. Go to `/graphql` in a browser and click "Docs", or use your favorite standalone GraphQL client to explore the schema and read the API documentation.
 
 ### Nodes and IDs
 
