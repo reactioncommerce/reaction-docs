@@ -13,7 +13,7 @@ If you have custom plugins as part of your Reaction 2.x system, you'll need to g
 Every plugin should be an NPM package that is an ES module targeting Node 12.
 
   - Must have `"type": "module"` in the `package.json`
-  - Should have `"engines": { "node": ">=12.10.0" }` in the `package.json`
+  - Should have `"engines": { "node": ">=12.14.1" }` in the `package.json`
   - Use `import/export` in your files rather than `require`, and publish without running the files through Babel.
   - For a good example, see [https://github.com/reactioncommerce/api-utils/blob/trunk/package.json](https://github.com/reactioncommerce/api-utils/blob/trunk/package.json)
   - The package entry point must `export default` a function that accepts one argument, `api`, which is a `ReactionAPI` instance. In most cases, the only thing this function will do is call `api.registerPlugin`, passing in your plugin options.
