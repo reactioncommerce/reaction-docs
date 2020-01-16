@@ -58,13 +58,19 @@ You will not get any data:
 }
 ```
 
-To authenticate, you'll need a login token. For instructions, see [Using the GraphQL API: Identity and Authorization](./graphql-using#identity-and-authorization).
+To authenticate, you'll need an access token. In the API project directory, run the following command:
 
-Once you have the token copied, expand the `HTTP HEADERS` box in the bottom left corner of GraphQL Playground, and add the token header:
+```sh
+bin/token [userId]
+```
+
+Substitute a real user ID, which is the internal user ID you see in the `_id` field in the MongoDB `users` collection.
+
+An access token is printed, which you can then copy. Expand the `HTTP HEADERS` box in the bottom left corner of GraphQL Playground, and add the token header:
 
 ```json
 {
-  "meteor-login-token": "A3z_DAihyRoxc4OhQ-nN-htsPODTFL582hDWO92DBqR"
+    "Authorization": "J_oKS8T8rHrr_7b-6c46MBEusEWJWI9oOh8QF6xvWp4.NQQ5suMcDxMj-IsGE7BxSzOXzgfmMnkzbjA2x1RoZ50"
 }
 ```
 

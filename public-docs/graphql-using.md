@@ -23,12 +23,7 @@ As long as you use POST method (not GET) and use the `/graphql-beta` path as the
 
 ## Identity and Authorization
 
-You can authenticate a GraphQL request by including a header named `meteor-login-token` with a valid Meteor login token in it or a header named `Authorization` with a valid token issued by Hydra in it.
-
-Here is how to get this login token:
-1. Log in to Reaction Admin as the user from which you want your GraphQL requests to come.
-2. Open the browser console and enter `localStorage.getItem("Meteor.loginToken")`
-3. Copy this token and set it as the value of the `meteor-login-token` HTTP header in your GraphQL client.
+Refer to [Developer Concepts: Authentication](./developer-authentication)
 
 ## Understanding the Schema
 
