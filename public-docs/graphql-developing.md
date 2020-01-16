@@ -54,14 +54,14 @@ TIP: If you’re confused about where to draw the line, imagine what would have 
 
 ## The Endpoint
 
-The GraphQL server and `/graphql-beta` endpoint is configured and returned by the `createApolloServer` function, which is called from the `ReactionAPI` class instance.
+The GraphQL server and `/graphql` endpoint is configured and returned by the `createApolloServer` function, which is called from the `ReactionAPI` class instance.
 
 `createApolloServer` does pretty standard configuration of an Express app using `apollo-server-express`. The main things it does are:
 - Checks the identity token using Express middleware
 - Builds the `context` object that’s available in all resolver functions. See [The Reaction GraphQL Context](#the-reaction-graphql-context)
 - Formats the `errors` array that is returned to clients, to make errors as helpful as possible
 - Provides the merged GraphQL schema
-- Sets the path as `/graphql-beta` and exposes a GraphQL Playground for GET requests on `/graphql-beta`
+- Sets the path as `/graphql` and exposes a GraphQL Playground for GET requests on `/graphql`
 
 ## The Reaction GraphQL Context
 
