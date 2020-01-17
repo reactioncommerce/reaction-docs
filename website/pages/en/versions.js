@@ -51,12 +51,9 @@ class Versions extends React.Component {
             <table className="versions">
               <tbody>
                 <tr>
-                  <th>master</th>
+                  <th>3.0.0 Beta</th>
                   <td>
                     <a href={`${baseURL}docs/next/intro.html`}>Documentation</a>
-                  </td>
-                  <td>
-                    <a href={"https://github.com/reactioncommerce/reaction/"}>Source Code</a>
                   </td>
                 </tr>
               </tbody>
