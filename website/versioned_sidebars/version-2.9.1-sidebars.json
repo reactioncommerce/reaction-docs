@@ -1,0 +1,219 @@
+{
+  "version-2.9.1-docs": {
+    "Introduction": [
+      "version-2.9.1-intro",
+      "version-2.9.1-intro-glance"
+    ],
+    "Concepts": [
+      "version-2.9.1-concepts-intro",
+      "version-2.9.1-concepts-accounts",
+      "version-2.9.1-concepts-carts",
+      "version-2.9.1-concepts-catalogs",
+      "version-2.9.1-concepts-fulfillment",
+      "version-2.9.1-concepts-inventory",
+      "version-2.9.1-concepts-orders",
+      "version-2.9.1-concepts-payments",
+      "version-2.9.1-concepts-pricing",
+      "version-2.9.1-concepts-products",
+      "version-2.9.1-concepts-shops",
+      "version-2.9.1-concepts-slugs",
+      "version-2.9.1-concepts-tags"
+    ],
+    "Getting Started As a Developer": [
+      "version-2.9.1-getting-started-developing-with-reaction",
+      "version-2.9.1-installation-reaction-platform",
+      "version-2.9.1-reaction-cli",
+      "version-2.9.1-recommended-tools",
+      "version-2.9.1-installation-docker-development",
+      "version-2.9.1-troubleshooting-development",
+      "version-2.9.1-developer-faq",
+      "version-2.9.1-understanding-hydra-auth-setup"
+    ],
+    "Swag Shop Tutorial": [
+      "version-2.9.1-swag-shop-1",
+      "version-2.9.1-swag-shop-2",
+      "version-2.9.1-swag-shop-3",
+      "version-2.9.1-swag-shop-4",
+      "version-2.9.1-swag-shop-5",
+      "version-2.9.1-swag-shop-6",
+      "version-2.9.1-swag-shop-7",
+      "version-2.9.1-swag-shop-8"
+    ],
+    "For Developers: Concepts": [
+      "version-2.9.1-devs-understanding-commonorder",
+      "version-2.9.1-developer-inventory"
+    ],
+    "For Developers: Contributing Guide": [
+      "version-2.9.1-contributing-to-reaction",
+      "version-2.9.1-styleguide",
+      "version-2.9.1-git-style-guide",
+      "version-2.9.1-react-best-practices",
+      "version-2.9.1-jsdoc-style-guide",
+      "version-2.9.1-error-handling-guide",
+      "version-2.9.1-devs-breaking-changes",
+      "version-2.9.1-using-ci",
+      "version-2.9.1-release-process",
+      "version-2.9.1-reporting-vulnerabilities",
+      "version-2.9.1-community-channels",
+      "version-2.9.1-community-showcase"
+    ],
+    "For Developers: GraphQL": [
+      "version-2.9.1-graphql-what",
+      "version-2.9.1-graphql-using",
+      "version-2.9.1-graphql-developing",
+      "version-2.9.1-graphql-intro",
+      "version-2.9.1-graphql-resolvers-file-structure",
+      "version-2.9.1-graphql-api"
+    ],
+    "Core Plugins": [
+      "version-2.9.1-core-plugins-intro",
+      "version-2.9.1-core-plugins-stripe",
+      "version-2.9.1-core-plugins-simple-inventory",
+      "version-2.9.1-core-plugins-sitemap-generator",
+      "version-2.9.1-community-resources"
+    ],
+    "Developer How-To: General": [
+      "version-2.9.1-dev-how-do-i",
+      "version-2.9.1-dev-debug-app-slowness"
+    ],
+    "Developer How-To: Reaction API Server": [
+      "version-2.9.1-graphql-create-query",
+      "version-2.9.1-graphql-create-mutation",
+      "version-2.9.1-how-to-share-code-between-plugins",
+      "version-2.9.1-how-to-create-a-fulfillment-methods-plugin",
+      "version-2.9.1-how-to-create-inventory-plugin",
+      "version-2.9.1-how-to-create-a-payment-provider",
+      "version-2.9.1-how-to-add-address-validation-service",
+      "version-2.9.1-how-to-add-tax-service",
+      "version-2.9.1-how-to-extend-graphql-to-add-field",
+      "version-2.9.1-how-to-extend-graphql-with-remote-schema",
+      "version-2.9.1-how-to-store-custom-order-fields",
+      "version-2.9.1-how-to-extend-product",
+      "version-2.9.1-how-to-manage-app-settings",
+      "version-2.9.1-fixtures-images"
+    ],
+    "Developer How-To: GraphQL Clients": [
+      "version-2.9.1-how-to-get-shop-id-for-client"
+    ],
+    "Storefront UI Development Guide": [
+      "version-2.9.1-storefront-intro",
+      "version-2.9.1-storefront-apollo-client",
+      "version-2.9.1-storefront-product-listing-page",
+      "version-2.9.1-storefront-product-detail-page",
+      "version-2.9.1-storefront-nav-menus",
+      "version-2.9.1-storefront-add-to-cart",
+      "version-2.9.1-storefront-cart-page",
+      "version-2.9.1-storefront-cart-modification",
+      "version-2.9.1-storefront-checkout-page",
+      "version-2.9.1-storefront-order-view-page",
+      "version-2.9.1-storefront-login",
+      "version-2.9.1-storefront-account-management",
+      "version-2.9.1-storefront-inventory-status-badges"
+    ],
+    "Developer How-To: Meteor app": [
+      "version-2.9.1-how-to-change-the-favicon",
+      "version-2.9.1-testing-debugging-server-code"
+    ],
+    "For Developers: Meteor App Architecture": [
+      "version-2.9.1-architecture",
+      "version-2.9.1-developer-catalog",
+      "version-2.9.1-collections",
+      "version-2.9.1-exports",
+      "version-2.9.1-image-handling",
+      "version-2.9.1-internationalization",
+      "version-2.9.1-jobcontrol",
+      "version-2.9.1-layout",
+      "version-2.9.1-logging",
+      "version-2.9.1-seo-metadata",
+      "version-2.9.1-database-migrations",
+      "version-2.9.1-permissions",
+      "version-2.9.1-product-variants",
+      "version-2.9.1-registry",
+      "version-2.9.1-routing",
+      "version-2.9.1-security",
+      "version-2.9.1-simple-schema",
+      "version-2.9.1-workflow"
+    ],
+    "For Developers: Core Meteor App API": [
+      "version-2.9.1-appevent-hooks",
+      "version-2.9.1-register-operator-route",
+      "version-2.9.1-reaction-core",
+      "version-2.9.1-admin-views",
+      "version-2.9.1-reaction-user-accounts",
+      "version-2.9.1-reaction-alerts",
+      "version-2.9.1-analytics",
+      "version-2.9.1-email-api",
+      "version-2.9.1-i18n",
+      "version-2.9.1-reaction-shops",
+      "version-2.9.1-reaction-product-detail",
+      "version-2.9.1-reaction-products",
+      "version-2.9.1-reaction-tags",
+      "version-2.9.1-reaction-shipping",
+      "version-2.9.1-reaction-orders",
+      "version-2.9.1-reaction-import",
+      "version-2.9.1-reaction-inventory",
+      "version-2.9.1-reaction-localization",
+      "version-2.9.1-reaction-module-cheatsheet",
+      "version-2.9.1-template-helpers"
+    ],
+    "For Developers: Catalyst Components": [
+      "version-2.9.1-blocks-api",
+      "version-2.9.1-components-primary-app-bar"
+    ],
+    "Testing": [
+      "version-2.9.1-testing-reaction",
+      "version-2.9.1-running-jest-unit-tests",
+      "version-2.9.1-running-jest-integration-tests",
+      "version-2.9.1-running-meteor-integration-tests",
+      "version-2.9.1-writing-jest-unit-tests",
+      "version-2.9.1-writing-jest-integration-tests",
+      "version-2.9.1-react-testing",
+      "version-2.9.1-how-to-write-tests-for-plugins",
+      "version-2.9.1-creating-test-data",
+      "version-2.9.1-creating-test-data-for-meteor-tests",
+      "version-2.9.1-jest-tips"
+    ],
+    "Acceptance Testing": [
+      "version-2.9.1-acceptance-testing",
+      "version-2.9.1-testing-matrix",
+      "version-2.9.1-test-setup"
+    ],
+    "System Administrator Guide": [
+      "version-2.9.1-deploying",
+      "version-2.9.1-deploying-reaction-using-docker",
+      "version-2.9.1-prerender",
+      "version-2.9.1-database-optimizations",
+      "version-2.9.1-how-to-configure-meteor-app"
+    ],
+    "Store Operator Guide": [
+      "version-2.9.1-dashboard",
+      "version-2.9.1-products",
+      "version-2.9.1-navigation-bar-and-grid",
+      "version-2.9.1-tagging",
+      "version-2.9.1-orders-admin",
+      "version-2.9.1-accounts",
+      "version-2.9.1-login-auth-services",
+      "version-2.9.1-social-settings",
+      "version-2.9.1-shop-admin",
+      "version-2.9.1-merchant-shop-setup",
+      "version-2.9.1-email-admin",
+      "version-2.9.1-localization-and-i18n",
+      "version-2.9.1-payment",
+      "version-2.9.1-tax",
+      "version-2.9.1-template",
+      "version-2.9.1-shipping-admin",
+      "version-2.9.1-payments-discounts",
+      "version-2.9.1-operator-address-validation"
+    ],
+    "Community": [
+      "version-2.9.1-guidelines",
+      "version-2.9.1-code-of-conduct",
+      "version-2.9.1-diversity-statement",
+      "version-2.9.1-reporting-guide",
+      "version-2.9.1-enforcement",
+      "version-2.9.1-code-of-conduct-committee",
+      "version-2.9.1-guideline-faqs",
+      "version-2.9.1-changes"
+    ]
+  }
+}
