@@ -30,7 +30,7 @@ await app.registerPlugin({
   // ... other options
   globalSettingsConfig: {
     myPluginLicenseKey: {
-      rolesThatCanEdit: ["admin"],
+      rolesThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
       simpleSchema: {
         type: String,
         min: 10
@@ -42,7 +42,7 @@ await app.registerPlugin({
 
 Note the following:
 - `globalSettingsConfig` is an object where each key is the name of a setting you want to use. The setting names are not namespaced to your plugin, so be sure that it will be unique among all plugins. For example, this example uses `myPluginLicenseKey` instead of `licenseKey`.
-- `rolesThatCanEdit` must be an array of roles. A user must have any ONE of these roles to update this setting value.
+- `rolesThatCanEdit` must be an array of permissions. A user must belong to a group that has any ONE of these permissions to update this setting value.
 - `simpleSchema` is a [simpl-schema](https://github.com/aldeed/simple-schema-js) field definition used to validate the data before it is saved.
 - You can also add a `defaultValue` option if your setting needs a specific value before it is ever set.
 
@@ -110,8 +110,16 @@ await app.registerPlugin({
   graphQL: {
     resolvers: {
       GlobalSettings: {
+<<<<<<< Updated upstream
         async myPluginLicenseKey(settings, _, context) {
           await context.checkPermissions(["admin"]);
+=======
+        myPluginLicenseKey(settings, _, context) {
+          if (!context.userHasPermission("reaction:plugin-name:entity-name", "read:settings", { shopId: PRIMARY_SHOP_ID })) {
+            throw new ReactionError("access-denied", "Access denied");
+          }
+
+>>>>>>> Stashed changes
           return settings.myPluginLicenseKey;
         }
       }
@@ -136,7 +144,7 @@ await app.registerPlugin({
   shopSettingsConfig: {
     isMyPluginTurboMode: {
       defaultValue: false,
-      rolesThatCanEdit: ["admin"],
+      rolesThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
       simpleSchema: {
         type: String,
         min: 10
@@ -148,7 +156,7 @@ await app.registerPlugin({
 
 Note the following:
 - `shopSettingsConfig` is an object where each key is the name of a setting you want to use. The setting names are not namespaced to your plugin, so be sure that it will be unique among all plugins. For example, this example uses `isMyPluginTurboMode` instead of `isTurboMode`.
-- `rolesThatCanEdit` must be an array of roles. A user must have any ONE of these roles to update this setting value.
+- `rolesThatCanEdit` must be an array of permissions. A user must belong to a group that has any ONE of these permissions to update this setting value.
 - `simpleSchema` is a [simpl-schema](https://github.com/aldeed/simple-schema-js) field definition used to validate the data before it is saved.
 - Set a `defaultValue` if your setting needs a specific value before it is ever set.
 
@@ -217,8 +225,16 @@ await app.registerPlugin({
   graphQL: {
     resolvers: {
       ShopSettings: {
+<<<<<<< Updated upstream
         async isMyPluginTurboMode(settings, _, context) {
           await context.checkPermissions(["admin"], settings.shopId);
+=======
+        isMyPluginTurboMode(settings, args, context) {
+          if (!context.userHasPermission("reaction:plugin-name:entity-name", "read:settings", { args.shopId })) {
+            throw new ReactionError("access-denied", "Access denied");
+          }
+
+>>>>>>> Stashed changes
           return settings.isMyPluginTurboMode;
         }
       }
