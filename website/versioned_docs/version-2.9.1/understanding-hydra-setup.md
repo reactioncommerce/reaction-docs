@@ -5,7 +5,7 @@ sidebar_label: Understanding Hydra Auth Setup
 original_id: understanding-hydra-auth-setup
 ---
 
-As of version 2.0, Reaction Commerce uses [ORY Hydra](https://github.com/ory/hydra) (Hydra), an OAuth 2.0 and Open ID Connect Provider, for authentication across the `reaction` and `example-storefront` apps. 
+As of version 2.0, Reaction Commerce uses [ORY Hydra](https://github.com/ory/hydra) (Hydra), an OAuth 2.0 and Open ID Connect Provider, for authentication across the `reaction` and `example-storefront` apps.
 
 Hydra issues access, refresh, and ID Tokens, but does not offer user management (like user sign up, log in, password reset flows). Instead, Hydra uses redirects and a REST API to connect with an existing identity provider.
 
@@ -15,7 +15,7 @@ At a high level, when a user of the storefront logs in, the user is redirected f
 
 Read more about Hydra, OAuth2 and OpenID Connect on Hydra docs [here](https://www.ory.sh/docs/guides/master/hydra/).
 
-To get started with [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra), make sure you have upgraded to Reaction version 2.0. The easiest way to install and run all the application is to use [`reaction-platform`](https://github.com/reactioncommerce/reaction-platform).
+To get started with [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra), make sure you have upgraded to Reaction version 2.0. The easiest way to install and run all the application is to use [`reaction-development-platform`](https://github.com/reactioncommerce/reaction-development-platform).
 
 ## Setting up the client
 

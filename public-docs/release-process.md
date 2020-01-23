@@ -7,7 +7,7 @@ title: Release Guide
 
 The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
-> A "Reaction Release" consists of coordinated releases in four repositories: [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+> A "Reaction Release" consists of coordinated releases in four repositories: [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform), [Reaction](https://github.com/reactioncommerce/reaction), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
 ## Preparing each project
 
@@ -32,7 +32,7 @@ The [Reaction engineering team and invited community collaborators](https://gith
 
             Reaction v{X.X.X} adds {major|minor} features and performance enhancements, fixes bugs and contains no breaking changes since v{X.X.X - 1version}.
 
-            This release is being coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform) and is designed to work with `v{X.X.X}` of [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra) and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+            This release is being coordinated with [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform) and is designed to work with `v{X.X.X}` of [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra) and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
             ## Notable changes
 
@@ -68,7 +68,7 @@ The [Reaction engineering team and invited community collaborators](https://gith
 
             Thanks to @{outside-contributor} for contributing to this release! 🎉
 
-        This is an example of a `CHANGELOG` for the `Reaction` project, please update accordingly if this is for `Reaction Platform`, `Reaction Hydra`, or `Example Storefront`.
+        This is an example of a `CHANGELOG` for the `Reaction` project, please update accordingly if this is for `Reaction Development Platform`, `Reaction Hydra`, or `Example Storefront`.
 
     - Creating release notes on a project with no changes, just a version bump to keep the project in sync
 
@@ -80,21 +80,21 @@ The [Reaction engineering team and invited community collaborators](https://gith
 
             # v{X.X.X}
 
-            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra).
+            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform), [Reaction](https://github.com/reactioncommerce/reaction), and [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra).
 
         ### Reaction
 
             # v{X.X.X}
 
-            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
         ### Reaction Hydra
 
             # v{X.X.X}
 
-            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), [Reaction](https://github.com/reactioncommerce/reaction), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
+            This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform), [Reaction](https://github.com/reactioncommerce/reaction), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
-        ### Reaction Platform
+        ### Reaction Development Platform
 
             # v{X.X.X}
 
@@ -104,7 +104,7 @@ The [Reaction engineering team and invited community collaborators](https://gith
 - Ask QA for a review
 - `Reaction`, `Reaction Hyrda`, and `Example Storefront` can be merged as soon as they are approved.
 
-Do not merge `Reaction Platform` at this time.
+Do not merge `Reaction Development Platform` at this time.
 
 ## Creating releases for `Reaction`, `Reaction Hydra`, and `Example Storefront`
 
@@ -119,16 +119,16 @@ Once `Reaction`, `Reaction Hydra`, and `Example Storefront` have been merged, an
 - Save the release as a draft, and have your fellow release manager (or anyone) take a look to make sure everything, but especially the tag, looks correct. Once published, the tag cannot be changed.
 - If everything looks good, `Publish release`
 
-## Creating a release for `Reaction Platform`
+## Creating a release for `Reaction Development Platform`
 
-Once `Reaction`, `Reaction Hydra`, and `Example Storefront` have been released, we can update `Reaction Platform` to use these new releases, and release the platform.
+Once `Reaction`, `Reaction Hydra`, and `Example Storefront` have been released, we can update `Reaction Development Platform` to use these new releases, and release the platform.
 
 1. Update `[config.mk](http://config.mk)` to use the latest version numbers in the `define SUBPROJECT_REPOS` block of code:
 
     ![](reaction-platform_config_mk_at_master__reactioncommerce_reaction-platform-63e424d3-0c72-4328-9765-838441aacf0f.png)
 
 2. Ask QA for a review of the platform, using the updated releases
-3. `Reaction Platform` can now be merged as soon as they are approved.
+3. `Reaction Development Platform` can now be merged as soon as they are approved.
 4. Next, create a release using the same instructions as above.
 5. Once published, the release is official! Send a notice to the engineering channel to give everyone a heads up!
 
