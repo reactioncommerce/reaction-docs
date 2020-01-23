@@ -3,7 +3,7 @@
 # Redirects from what the browser requests to what we serve
 # 301 redirects by default
 
-/reaction-docs/master/*  /docs/next/:splat
+/reaction-docs/trunk/*  /docs/next/:splat
 /reaction-docs/v1.1.0/*  /docs/v1.1.0/:splat
 /reaction-docs/v1.2.0/*  /docs/v1.2.0/:splat
 /reaction-docs/v1.3.0/*  /docs/v1.3.0/:splat
