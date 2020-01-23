@@ -3,7 +3,7 @@ original_id: faqs
 id: version-v1.1.0-faqs
 title: FAQs
 ---
-    
+
 ## Is Reaction live and ready for production? Can I start selling now?
 
 It depends! We do have a few shops in production, but your individual requirements may vary. We're currently in our Beta release, so we're still rolling out features with each new release. For more info, check out our [Features page](https://reactioncommerce.com/features) roadmap, or our [project board](https://waffle.io/reactioncommerce/reaction).
@@ -38,7 +38,7 @@ We're always testing! During our Alpha release, we performed extensive tests, de
 
 ## Reaction is an open source project. How can I get involved?
 
-We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
+We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/trunk/guidelines)!
 
 ## Reaction runs on JavaScript. Does this have a negative impact on SEO?
 

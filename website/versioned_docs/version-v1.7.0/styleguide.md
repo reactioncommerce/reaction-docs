@@ -3,7 +3,7 @@ id: version-v1.7.0-styleguide
 title: Code Style Guide
 original_id: styleguide
 ---
-    
+
 As a community, Reaction follows guidelines for code style and naming conventions for variables, methods and filenames. The guide also includes tips on working with libraries in Reaction, like React, MongoDB, lodash and more.
 
 ## On this page
@@ -45,9 +45,9 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
 
 Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
 
-- [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/master/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
-- [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/master/.jsbeautifyrc) - [JS Beautifier](http://jsbeautifier.org) automates code formatting
-- [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/master/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
+- [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/trunk/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
+- [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/trunk/.jsbeautifyrc) - [JS Beautifier](http://jsbeautifier.org) automates code formatting
+- [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/trunk/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
 
 To see the rules in action, run `eslint .` from the command line or use [ESLint code editor tools](https://eslint.org/docs/user-guide/integrations).
 
@@ -254,7 +254,7 @@ const MyComponent = ({ title, content }) => (
   <div>
     <h1>{title}</h1>
     <div>{content}/</div>
-  </div>  
+  </div>
 );
 
 // don't
@@ -264,7 +264,7 @@ const MyComponent = ({ title, content }) => {
     <div>
       <h1>{title}</h1>
       <div>{content}/</div>
-    </div>  
+    </div>
   );
 }
 ```
@@ -275,7 +275,7 @@ const MyComponent = ({ title, content }) => {
     const MyThings = ({ things }) => (
       <ul>
         {things.map((thing) => <li>{thing}</li>)}
-      </ul>  
+      </ul>
     );
 
     // or
@@ -285,7 +285,7 @@ const MyComponent = ({ title, content }) => {
         {things.map((thing) => (
           <li>{thing}</li>
         ))}
-      </ul>  
+      </ul>
     );
 ```
 

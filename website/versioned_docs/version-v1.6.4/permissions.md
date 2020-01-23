@@ -3,7 +3,7 @@ id: version-v1.6.4-permissions
 title: Permissions
 original_id: permissions
 ---
-    
+
 [alanning:roles](https://github.com/alanning/meteor-roles) package provides Reaction permissions support.
 
 ## Packages
@@ -56,7 +56,7 @@ Reaction.registerPackage({
 ```
 
 At the point where Packages are published in the app, each registry item permissions are collected and put on the
-package registry [(source)](https://github.com/reactioncommerce/reaction/blob/master/server/publications/collections/packages.js#L31-L56).
+package registry [(source)](https://github.com/reactioncommerce/reaction/blob/trunk/server/publications/collections/packages.js#L31-L56).
 Based on these permissions, we can enable or disable functionality depending on user roles.
 
 ## Owner
@@ -189,7 +189,7 @@ get all enabled packages for payments.
 ```
 
 You can also pass in an `audience` field to filter returned apps based on assigned roles for the user.
-[(source)](https://github.com/reactioncommerce/reaction/blob/master/client/modules/core/helpers/apps.js#L106-L127)
+[(source)](https://github.com/reactioncommerce/reaction/blob/trunk/client/modules/core/helpers/apps.js#L106-L127)
 
 ```js
   Reaction.Apps({
@@ -217,7 +217,7 @@ This will add the new permissions to the group and update all existing users bel
 
 #### Updating to 1.5.0
 
-For updating to 1.5.0, note these changes: 
+For updating to 1.5.0, note these changes:
 1. The previous `shop.defaultVisitorRoles` are the roles now defined in the `guest` group.
 2. The previous `shop.defaultCustomerRoles` are the roles now defined in the default `customer` group.
 3. The default roles set previously on the Shop schema are now present on server export of Reaction, `Reaction.defaultVisitorRoles`.

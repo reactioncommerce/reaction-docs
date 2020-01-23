@@ -3,7 +3,7 @@ id: version-v1.3.0-permissions
 title: Permissions
 original_id: permissions
 ---
-    
+
 [alanning:roles](https://github.com/alanning/meteor-roles) package provides Reaction permissions support.
 
 ## Packages
@@ -55,7 +55,7 @@ Reaction.registerPackage({
    });
 ```
 At the point where Packages are published in the app, each registry item permissions are collected and put on the
-package registry [(source)](https://github.com/reactioncommerce/reaction/blob/master/server/publications/collections/packages.js#L31-L56).
+package registry [(source)](https://github.com/reactioncommerce/reaction/blob/trunk/server/publications/collections/packages.js#L31-L56).
 Based on these permissions, we can enable or disable functionality depending on user roles.
 
 ## Owner
@@ -187,7 +187,7 @@ get all enabled packages for payments.
 ```
 
 You can also pass in an `audience` field to filter returned apps based on assigned roles for the user.
-[(source)](https://github.com/reactioncommerce/reaction/blob/master/client/modules/core/helpers/apps.js#L106-L127)
+[(source)](https://github.com/reactioncommerce/reaction/blob/trunk/client/modules/core/helpers/apps.js#L106-L127)
 ```js
   Reaction.Apps({
     provides: "settings",

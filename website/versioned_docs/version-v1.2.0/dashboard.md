@@ -3,7 +3,7 @@ id: version-v1.2.0-dashboard
 title: Dashboard
 original_id: dashboard
 ---
-    
+
 The dashboard is your online store's central mainframe. It's where you manage your orders, add or remove products, install apps, and change your account settings. It's where the magic happens, more or less.
 
 To access your dashboard, simply click on the blue Reaction logo icon, located on the very top right of the page.
@@ -14,7 +14,7 @@ You'll find a selection of dashboard features, broken down into two sections, Ac
 
 ## Actions
 
-- Orders - Review and process orders. For more info, visit the [Orders](https://docs.reactioncommerce.com/reaction-docs/master/orders) section.
+- Orders - Review and process orders. For more info, visit the [Orders](https://docs.reactioncommerce.com/reaction-docs/trunk/orders) section.
 - Accounts - Add, edit, and remove permissions for each of your shop members.
 
 ## Settings

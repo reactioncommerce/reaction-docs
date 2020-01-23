@@ -3,7 +3,7 @@ id: version-v1.8.0-reaction-module-cheatsheet
 title: Module Import Cheatsheet
 original_id: reaction-module-cheatsheet
 ---
-    
+
 ## Client (Core)
 
 ### API
@@ -148,7 +148,7 @@ import PropTypes from "prop-types";
 ```javascript
 import { withMoment } from "/imports/plugins/core/components/lib";
 ```
-See [Components API](https://docs.reactioncommerce.com/reaction-docs/master/components-api#withMoment) docs for usage examples
+See [Components API](https://docs.reactioncommerce.com/reaction-docs/trunk/components-api#withMoment) docs for usage examples
 
 ## Meteor
 

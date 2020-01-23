@@ -3,7 +3,7 @@ id: version-v1.7.0-git-style-guide
 title: Git Style Guide
 original_id: git-style-guide
 ---
-    
+
 Git version control is how we work together as a team. Naming branches and writing commit messages helps us keep a easy-to-understand history of the changes in the project.
 
 ## Naming Git branches
@@ -47,8 +47,8 @@ See more [examples from Angular.js](https://docs.google.com/document/d/1QrDFcIiP
 
 Title the pull request (PR) with the ID number of the GitHub issue. Add `WIP` (work in progress) to the beginning of the title to get feedback early on.
 
-Follow the [PR template](https://github.com/reactioncommerce/reaction/blob/master/.github/pull_request_template.md) provided and make sure to add `Closes ###` with the GitHub issue number.
+Follow the [PR template](https://github.com/reactioncommerce/reaction/blob/trunk/.github/pull_request_template.md) provided and make sure to add `Closes ###` with the GitHub issue number.
 
 ## Wait for a code review
 
-Congrats! You made a pull request. Head to the [contributing guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction#step-3-the-pull-request-and-review-process) to see what's next.
+Congrats! You made a pull request. Head to the [contributing guide](https://docs.reactioncommerce.com/reaction-docs/trunk/contributing-to-reaction#step-3-the-pull-request-and-review-process) to see what's next.

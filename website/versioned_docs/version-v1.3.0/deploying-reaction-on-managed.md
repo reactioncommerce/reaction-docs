@@ -3,7 +3,7 @@ id: version-v1.3.0-deploying-reaction-on-managed
 title: Managed
 original_id: deploying-reaction-on-managed
 ---
-    
+
 Reaction Commerce offers managed deployments for Reaction. The `reaction-cli` incorporates functionality for any team to deploy Reaction to multiple environments. [Contact us](https://reactioncommerce.com/#get-a-demo) to get a demo or request an invite.
 
 `Launchdock` is the name of our registration gateway for the managed platform.
@@ -39,7 +39,7 @@ reaction apps create \
   -e REACTION_AUTH="P@s5w0rd" \
   -e REACTION_EMAIL="you@example.com" \
   --registry  path/to/reaction.json \
-  --settings path/to/settings.json  
+  --settings path/to/settings.json
 
 # Deploy your pre-built image
 reaction deploy --name <appname> --image myorg/myapp:v1.1.0
@@ -85,7 +85,7 @@ reaction apps create \
   -e REACTION_AUTH="P@s5w0rd" \
   -e REACTION_EMAIL="you@example.com" \
   --registry  path/to/reaction.json \
-  --settings path/to/settings.json  
+  --settings path/to/settings.json
 
 # Push your custom code and start a new build
 reaction deploy --name <appname>
@@ -154,7 +154,7 @@ reaction open simple-demo
 
 ## Full Example
 
-Below is a more complete example that sets up a SMTP mail server URL (for app emails), imports [Reaction registry](https://docs.reactioncommerce.com/reaction-docs/master/registry) settings and [Meteor settings](https://docs.meteor.com/api/core.html#Meteor-settings), and deploys the latest official Reaction image. Then we update the app with an API key environment variable.  And finally, we add a custom domain to the app and open it in our browser.
+Below is a more complete example that sets up a SMTP mail server URL (for app emails), imports [Reaction registry](https://docs.reactioncommerce.com/reaction-docs/trunk/registry) settings and [Meteor settings](https://docs.meteor.com/api/core.html#Meteor-settings), and deploys the latest official Reaction image. Then we update the app with an API key environment variable.  And finally, we add a custom domain to the app and open it in our browser.
 
 ```sh
 # create the app

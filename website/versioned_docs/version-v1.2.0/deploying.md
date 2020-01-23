@@ -3,14 +3,14 @@ id: version-v1.2.0-deploying
 title: Deploying
 original_id: deploying
 ---
-    
+
 Reaction is an open source platform, and you can run Reaction anywhere just like regular Node.js or Meteor applications. Operating Meteor apps correctly, so that your apps work for everyone, can be tricky if you are managing your infrastructure manually. This is why we recommend running production Reaction deployments on the [Reaction Commerce managed platform](https://reactioncommerce.com/features#get-a-demo).
 
 If you are looking to deploy Reaction manually, head on over to the [Meteor deployment documentation](https://guide.meteor.com/deployment.html) for an excellent, detailed tutorial.
 
 ## Containers
 
-Docker images are pushed when Reaction successfully builds and passes all tests on the `master` or `development` branches. These images are released on [Reaction Commerce Docker Hub](https://hub.docker.com/u/reactioncommerce/). There are two images available: [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - the latest `development` image and [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/), the `master` image.
+Docker images are pushed when Reaction successfully builds and passes all tests on the `trunk`  or `development` branches. These images are released on [Reaction Commerce Docker Hub](https://hub.docker.com/u/reactioncommerce/). There are two images available: [reactioncommerce:prequel](https://hub.docker.com/r/reactioncommerce/prequel/) - the latest `development` image and [reactioncommerce:reaction](https://hub.docker.com/r/reactioncommerce/reaction/), the `trunk`  image.
 
 All Reaction [configuration options](configuration.md) can be used with these deployment choices.
 

@@ -2,7 +2,7 @@
 id: jsdoc-style-guide
 title: JSDoc Style Guide
 ---
-    
+
 ## Requirements
 
 The Core API Documentation uses [JSDoc](http://usejsdoc.org/) and a custom version of [docdash](https://github.com/clenemt/docdash) theme to build its static API docs site.
@@ -134,7 +134,7 @@ The sidebar and page:
 ```js
 /**
  * @file Reaction Core schemas
- * Reaction uses {@link https://github.com/aldeed/meteor-simple-schema SimpleSchema} to apply basic content and structure validation to Collections. See {@link https://docs.reactioncommerce.com/reaction-docs/master/simple-schema full documentation}.
+ * Reaction uses {@link https://github.com/aldeed/meteor-simple-schema SimpleSchema} to apply basic content and structure validation to Collections. See {@link https://docs.reactioncommerce.com/reaction-docs/trunk/simple-schema full documentation}.
  * @namespace schemas
  */
 ```

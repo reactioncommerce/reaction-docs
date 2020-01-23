@@ -3,14 +3,14 @@ id: version-v1.7.0-layout
 title: Layout
 original_id: layout
 ---
-    
+
 A Reaction layout defines the if, how and where different sections like header, footer or main content of one specific route are displayed.
 
 Throughout this tutorial, we'll refer to layouts as _Layout_, sections as _Container_ and a route as _View_.
 
 A _Layout_ is always used in conjunction with _workflow processes_ or sometimes - even more specifically - with individual _workflow steps_, which both acts as _Container_ as the _Layout_ is rendered.
 
-> ProTip: There's additionally a more lightweight way of rendering templates directly without the need for a _Layout_ which is explained in the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6.md)
+> ProTip: There's additionally a more lightweight way of rendering templates directly without the need for a _Layout_ which is explained in the [Routes section](https://docs.reactioncommerce.com/reaction-docs/trunk/plugin-routes-6.md)
 
 ## What is a Layout?
 
@@ -83,7 +83,7 @@ Let's look at the full object from [`register.js`](https://github.com/reactionco
 
 ### Workflow process properties
 
-- `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6)
+- `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See the [Routes section](https://docs.reactioncommerce.com/reaction-docs/trunk/plugin-routes-6)
 
 - `layout`: This property's name is a bit misleading. Conceptually, it designates a shop-wide identifier for a collection of _Layouts_ (subsequently referred to only as **_Global Layout_**), because it covers potentially many routes (as opposed to _Layout_, which only refers to a specific _View_)
 
@@ -116,7 +116,7 @@ A workflow step contains a `container` property, along with a few other values. 
 
 ### Workflow step properties
 
-- `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See also the [Routes section](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6)
+- `workflow`: Name for the workflow. Correlates with a _View_ specified in registry. See also the [Routes section](https://docs.reactioncommerce.com/reaction-docs/trunk/plugin-routes-6)
 - `container`: The DOM element where the rendered template should go into.
 - `template`: The name of the [Blaze](http://docs.meteor.com/#/full/blaze_render) template that renders the content for this _workflow step_.
 - `enabled`: Whether this _workflow step_ should be enabled or not
@@ -146,7 +146,7 @@ One key thing to remember is that at any given time, only one Global Layout can 
 
 You can change the default layout values in [`/client/config/defaults.js`](https://github.com/reactioncommerce/reaction/blob/v1.6.0/client/config/defaults.js) by overriding them in a new file.
 
-1. Create a file called `default.js` in the [`custom/client/`](https://github.com/reactioncommerce/reaction/tree/master/custom/client) folder, already created for you.
+1. Create a file called `default.js` in the [`custom/client/`](https://github.com/reactioncommerce/reaction/tree/trunk/custom/client) folder, already created for you.
 
 2. Import [Meteor Session](http://docs.meteor.com/api/session.html), using `import { Session } from "meteor/session";`
 

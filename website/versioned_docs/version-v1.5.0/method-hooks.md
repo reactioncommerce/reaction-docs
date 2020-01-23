@@ -3,8 +3,8 @@ id: version-v1.5.0-method-hooks
 title: Method Hooks
 original_id: method-hooks
 ---
-    
-[Reaction method hooks](https://docs.reactioncommerce.com/reaction-docs/master/method-hooks) allow you to interact with a Reaction method **before** and **after** the method is called. You can pass either a single method name and hook function or pass a dictionary of `Object.<string, hook>` like you were setting up original Meteor methods.
+
+[Reaction method hooks](https://docs.reactioncommerce.com/reaction-docs/trunk/method-hooks) allow you to interact with a Reaction method **before** and **after** the method is called. You can pass either a single method name and hook function or pass a dictionary of `Object.<string, hook>` like you were setting up original Meteor methods.
 
 The method hooks utilized in Reaction are based on [Workpop/meteor-method-hooks](https://github.com/Workpop/meteor-method-hooks) which itself is based on [hitchcott/meteor-method-hooks](https://github.com/hitchcott/meteor-method-hooks)
 

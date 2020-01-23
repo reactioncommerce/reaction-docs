@@ -3,10 +3,10 @@ id: version-1.14.0-community-resources
 title: Community resources
 original_id: community-resources
 ---
-    
+
 This page is here to guide you through the Reaction ecosystem. As we've stated before, we wouldn't be here without our very engaged community. Here we'd like to introduce you to some of the best things we've seen out there.
 
-_**Note:** If you miss something that's not listed here and want to see it here, you're invited to open a [pull request](https://github.com/reactioncommerce/reaction-docs/pull/new/master)._
+_**Note:** If you miss something that's not listed here and want to see it here, you're invited to open a [pull request](https://github.com/reactioncommerce/reaction-docs/pull/new/trunk)._
 
 ## Plugins and tools maintained by Reaction
 
