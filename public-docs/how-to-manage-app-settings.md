@@ -217,16 +217,8 @@ await app.registerPlugin({
   graphQL: {
     resolvers: {
       ShopSettings: {
-<<<<<<< Updated upstream
         async isMyPluginTurboMode(settings, _, context) {
-          await context.checkPermissions(["admin"], settings.shopId);
-=======
-        isMyPluginTurboMode(settings, args, context) {
-          if (!context.userHasPermission("reaction:plugin-name:entity-name", "read:settings", { args.shopId })) {
-            throw new ReactionError("access-denied", "Access denied");
-          }
-
->>>>>>> Stashed changes
+          await context.validatePermissions("reaction:plugin-name:entity-name", "read:settings", { shopId: PRIMARY_SHOP_ID });
           return settings.isMyPluginTurboMode;
         }
       }
