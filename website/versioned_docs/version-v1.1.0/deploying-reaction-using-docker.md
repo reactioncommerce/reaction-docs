@@ -3,7 +3,7 @@ original_id: deploying-reaction-using-docker
 id: version-v1.1.0-deploying-reaction-using-docker
 title: Docker
 ---
-    
+
 We think [Docker](https://www.docker.com) is one of the easiest ways to deploy modern apps and it's currently the recommended approach if you're hosting your own Reaction Commerce shop.  If you aren't using a customized version of Reaction, there are only a few steps to get up and running and you don't even need to know much about Docker to do it. Let's get started!
 
 ### Install
@@ -56,7 +56,7 @@ Now when you run Docker commands, they will be executing on the remote server in
 
 #### Docker
 
-If you don't have a customized version of Reaction Commerce, you can use our official release builds that are [available on Docker Hub](https://hub.docker.com/r/reactioncommerce/reaction/) as `reactioncommerce/reaction:latest`. The official releases are built by [Circle CI](https://circleci.com/) every time code is merged into [the master branch on Github](https://github.com/reactioncommerce/reaction/tree/master).
+If you don't have a customized version of Reaction Commerce, you can use our official release builds that are [available on Docker Hub](https://hub.docker.com/r/reactioncommerce/reaction/) as `reactioncommerce/reaction:latest`. The official releases are built by [Circle CI](https://circleci.com/) every time code is merged into [the  branch on Github](https://github.com/reactioncommerce/reaction/tree/trunk).
 
 All you need to run the latest stable build of Reaction is a single Docker command (assuming you have a Mongo database hosted somewhere - e.g. [Compose.io](https://compose.io), etc.)
 

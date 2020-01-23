@@ -3,8 +3,8 @@ id: version-v1.7.0-collections
 title: Collections
 original_id: collections
 ---
-    
-Meteor and Reaction store data in `collections`.  
+
+Meteor and Reaction store data in `collections`.
 Collections are declared in a common location with [Mongo.Collection](http://docs.meteor.com/api/collections.html).
 
 ```js
@@ -117,7 +117,7 @@ const packages = Reaction.Collections.Packages.find({
 });
 ```
 
-Some of the [Reaction Collections](https://github.com/reactioncommerce/reaction/blob/master/lib/collections/collections.js) are:
+Some of the [Reaction Collections](https://github.com/reactioncommerce/reaction/blob/trunk/lib/collections/collections.js) are:
 
 - Accounts
 - AnalyticsEvents
@@ -132,7 +132,7 @@ Some of the [Reaction Collections](https://github.com/reactioncommerce/reaction/
 - Tags
 - Taxes
 
-The [Reaction Collection hooks](https://github.com/reactioncommerce/reaction/blob/master/packages/reaction-collections/common/collections/hooks/hooks.js) extend [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) with before/after hooks for `insert`, `update`, `remove`, `find`, and `findOne`.
+The [Reaction Collection hooks](https://github.com/reactioncommerce/reaction/blob/trunk/packages/reaction-collections/common/collections/hooks/hooks.js) extend [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) with before/after hooks for `insert`, `update`, `remove`, `find`, and `findOne`.
 
 ### Attaching a schema
 

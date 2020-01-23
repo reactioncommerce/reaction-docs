@@ -3,8 +3,8 @@ id: version-v1.2.0-collection-hooks
 title: Collection Hooks
 original_id: collection-hooks
 ---
-    
-The [Reaction Collection hooks](https://docs.reactioncommerce.com/reaction-docs/master/method-hooks) extend [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) with before/after hooks for insert, update, remove, find, and findOne.
+
+The [Reaction Collection hooks](https://docs.reactioncommerce.com/reaction-docs/trunk/method-hooks) extend [Mongo.Collection](http://docs.meteor.com/#/full/mongo_collection) with before/after hooks for insert, update, remove, find, and findOne.
 
 Works across client, server or a mix. Also works when a client initiates a collection method and the server runs the hook, all while respecting the collection validators (allow/deny).
 

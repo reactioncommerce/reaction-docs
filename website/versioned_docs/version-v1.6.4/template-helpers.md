@@ -3,8 +3,8 @@ id: version-v1.6.4-template-helpers
 title: Helpers
 original_id: template-helpers
 ---
-    
-There are many Reaction specific helpers available [Template helpers](http://docs.meteor.com/#/full/template_helpers) in the [core/client/helpers folder](https://github.com/reactioncommerce/reaction/tree/master/packages/reaction-core/client/helpers)
+
+There are many Reaction specific helpers available [Template helpers](http://docs.meteor.com/#/full/template_helpers) in the [core/client/helpers folder](https://github.com/reactioncommerce/reaction/tree/trunk/packages/reaction-core/client/helpers)
 
 Meteor Template helper docs:
 

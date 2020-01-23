@@ -4,7 +4,7 @@ title: Updating a 2.x API plugin to work with Reaction API 3.x
 sidebar_label: Updating an API plugin for 3.x
 ---
 
-The Reaction API plugin system has changed a lot in the API 3.0.0 release. Primarily this is because the API now runs as a NodeJS program instead of a Meteor app, and because the Babel build step has been removed in favor of using Node's built in support for ECMAScript modules. But many other breaking changes were made in 3.0.0 as well. For a summary of changes in 3.0.0, refer to [Upgrading](./upgrading) and the [API Changelog](https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md).
+The Reaction API plugin system has changed a lot in the API 3.0.0 release. Primarily this is because the API now runs as a NodeJS program instead of a Meteor app, and because the Babel build step has been removed in favor of using Node's built in support for ECMAScript modules. But many other breaking changes were made in 3.0.0 as well. For a summary of changes in 3.0.0, refer to [Upgrading](./upgrading) and the [API Changelog](https://github.com/reactioncommerce/reaction/blob/trunk/CHANGELOG.md).
 
 If you have custom plugins as part of your Reaction 2.x system, you'll need to go through them one by one and update them according to the following recommendations.
 

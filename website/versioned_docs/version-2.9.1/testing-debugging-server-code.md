@@ -27,7 +27,7 @@ Meteor Node: 8.9.3
 Meteor NPM: 5.5.1
 Reaction CLI: 0.24.2
 Reaction: 1.6.4
-Reaction branch: master
+Reaction branch: trunk
 Docker: 17.09.0-ce
 ```
 

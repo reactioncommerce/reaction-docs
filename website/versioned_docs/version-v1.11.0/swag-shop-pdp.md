@@ -358,7 +358,7 @@ For the Swag Shop, the ProductTags component does not need to be rendered on the
 
 ## Deploying your swag shop
 
-Now that we have a running shop, we want to show it to the world—and hopefully sell a lot of stuff. Generally, we recommend deploying via Docker Image. For an introduction into a self-hosted deployment approach, check out [Deploying Reaction Using Docker](https://docs.reactioncommerce.com/reaction-docs/master/deploying-reaction-using-docker).
+Now that we have a running shop, we want to show it to the world—and hopefully sell a lot of stuff. Generally, we recommend deploying via Docker Image. For an introduction into a self-hosted deployment approach, check out [Deploying Reaction Using Docker](https://docs.reactioncommerce.com/reaction-docs/trunk/deploying-reaction-using-docker).
 
 ## Conclusion
 

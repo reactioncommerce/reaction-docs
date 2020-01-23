@@ -3,7 +3,7 @@ original_id: deploying-reaction-using-heroku
 id: version-v1.1.0-deploying-reaction-using-heroku
 title: Heroku
 ---
-    
+
 # Heroku
 
 This will be a step by step guide on going from 0 to Heroku deployment for Reaction Commerce
@@ -18,7 +18,7 @@ Install a copy of reaction commerce.
 
 ```sh
 git clone https://github.com/reactioncommerce/reaction.git
-git checkout master
+git checkout trunk
 heroku create
 ```
 
@@ -49,7 +49,7 @@ heroku buildpacks:set https://github.com/swrdfish/meteor-buildpack-horse.git
 Finally
 
 ```sh
-git push heroku master
+git push heroku trunk
 ```
 
 Wait... And Done :)
