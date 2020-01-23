@@ -30,7 +30,7 @@ await app.registerPlugin({
   // ... other options
   globalSettingsConfig: {
     myPluginLicenseKey: {
-      rolesThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
+      permissionsThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
       simpleSchema: {
         type: String,
         min: 10
@@ -110,16 +110,8 @@ await app.registerPlugin({
   graphQL: {
     resolvers: {
       GlobalSettings: {
-<<<<<<< Updated upstream
         async myPluginLicenseKey(settings, _, context) {
-          await context.checkPermissions(["admin"]);
-=======
-        myPluginLicenseKey(settings, _, context) {
-          if (!context.userHasPermission("reaction:plugin-name:entity-name", "read:settings", { shopId: PRIMARY_SHOP_ID })) {
-            throw new ReactionError("access-denied", "Access denied");
-          }
-
->>>>>>> Stashed changes
+          await context.validatePermissions("reaction:plugin-name:entity-name", "read:settings", { shopId: PRIMARY_SHOP_ID });
           return settings.myPluginLicenseKey;
         }
       }
