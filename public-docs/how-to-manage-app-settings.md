@@ -136,7 +136,7 @@ await app.registerPlugin({
   shopSettingsConfig: {
     isMyPluginTurboMode: {
       defaultValue: false,
-      rolesThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
+      permissionsThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
       simpleSchema: {
         type: String,
         min: 10
