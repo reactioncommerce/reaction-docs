@@ -63,7 +63,7 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 
 View all schemas in the [API Docs](http://api.docs.reactioncommerce.com/schemas.html).
 
-| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/trunk/lib/collections/schemas) | \*                |
+| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/v1.11.0/lib/collections/schemas) | \*                |
 | ---------------------------------------------------------------------------------------------------- | ----------------- |
 | Email                                                                                                | Address           |
 | Accounts                                                                                             | CartItem          |

@@ -70,7 +70,7 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 
 ### Reaction Schemas
 
-| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/trunk/lib/collections/schemas) | \*                |
+| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/v1.6.4/lib/collections/schemas) | \*                |
 | ---------------------------------------------------------------------------------------------------- | ----------------- |
 | Email                                                                                                | Address           |
 | Accounts                                                                                             | CartItem          |

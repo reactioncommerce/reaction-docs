@@ -10,7 +10,7 @@ Software that evolves will sooner or later have to change existing data in their
 
 ### Migrating on startup
 
-On application startup, Reaction will migrate to the latest database revision. It does so by sourcing the revision files in directory [`/imports/plugins/core/versions/server/migrations/*.js`](https://github.com/reactioncommerce/reaction/tree/trunk/imports/plugins/core/versions/server/migrations) and apply their content's database instructions, if necessary.
+On application startup, Reaction will migrate to the latest database revision. It does so by sourcing the revision files in directory [`/imports/plugins/core/versions/server/migrations/*.js`](https://github.com/reactioncommerce/reaction/tree/v1.7.0/imports/plugins/core/versions/server/migrations) and apply their content's database instructions, if necessary.
 
 [**/imports/plugins/core/versions/server/startup.js**](https://github.com/reactioncommerce/reaction/blob/v1.7.0/imports/plugins/core/versions/server/startup.js)
 
