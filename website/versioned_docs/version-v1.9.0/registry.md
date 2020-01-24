@@ -130,7 +130,7 @@ The name property also becomes a permission or `role` that users can have. Havin
 template: "accountsDashboard"
 ```
 
-The `template` property can be assigned to a Blaze template, although where it is used depends on the value of `provides`. If you'd like to use a React component in place of a Blaze template, you just need to wrap your component in a Blaze template. There's an example of this in the [Email plugin template file](https://github.com/reactioncommerce/reaction/blob/trunk/imports/plugins/core/email/client/templates/email.html#L1).
+The `template` property can be assigned to a Blaze template, although where it is used depends on the value of `provides`. If you'd like to use a React component in place of a Blaze template, you just need to wrap your component in a Blaze template. There's an example of this in the [Email plugin template file](https://github.com/reactioncommerce/reaction/blob/v1.9.0/imports/plugins/core/email/client/templates/email.html#L1).
 
 ### Workflow
 

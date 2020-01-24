@@ -46,4 +46,4 @@ See more [examples from Angular.js](https://docs.google.com/document/d/1QrDFcIiP
 
 Title the pull request (PR) with the ID number of the GitHub issue. Add `WIP` (work in progress) to the beginning of the title to get feedback early on.
 
-Follow the [PR template](https://github.com/reactioncommerce/reaction/blob/trunk/.github/pull_request_template.md) provided and make sure to add `Closes ###` with the GitHub issue number.
+Follow the [PR template](https://github.com/reactioncommerce/reaction/blob/v1.6.4/.github/pull_request_template.md) provided and make sure to add `Closes ###` with the GitHub issue number.

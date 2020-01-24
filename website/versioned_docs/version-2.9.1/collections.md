@@ -120,7 +120,7 @@ const packages = Reaction.Collections.Packages.find({
 });
 ```
 
-Some of the [Reaction Collections](https://github.com/reactioncommerce/reaction/blob/trunk/lib/collections/collections.js) are:
+Some of the [Reaction Collections](https://github.com/reactioncommerce/reaction/blob/v2.9.1/lib/collections/collections.js) are:
 
 - Accounts
 - AnalyticsEvents

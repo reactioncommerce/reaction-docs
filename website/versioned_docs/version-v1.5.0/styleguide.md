@@ -34,9 +34,9 @@ Our rules are similar to [Airbnb JavaScript Style Guide](https://github.com/airb
 
 Other Reaction-specific rules are checked using various linting libraries. Find all the rules in the code:
 
--   [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/trunk/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
--   [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/trunk/.jsbeautifyrc) - [JS Beautifier](http://jsbeautifier.org) automates code formatting
--   [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/trunk/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
+-   [`.eslintrc`](https://github.com/reactioncommerce/reaction/blob/v1.5.0/.eslintrc) - [ESLint](http://eslint.org) checks JavaScript style, including [ES2015](https://docs.meteor.com/packages/ecmascript.html#Supported-ES2015-Features), React and Babel.
+-   [`.jsbeautifyrc`](https://github.com/reactioncommerce/reaction/blob/v1.5.0/.jsbeautifyrc) - [JS Beautifier](http://jsbeautifier.org) automates code formatting
+-   [`.editorconfig`](https://github.com/reactioncommerce/reaction/blob/v1.5.0/.editorconfig) - [Editor Config](https://editorconfig.org/) standardizes file formatting
 
 To see the rules in action, run `eslint .` from the command line or use [ESLint code editor tools](https://eslint.org/docs/user-guide/integrations).
 

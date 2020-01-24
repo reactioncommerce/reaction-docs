@@ -90,4 +90,4 @@ Templates.findOne({
 });
 ```
 
-If no template is found, it will fallback to the default template in the filesystem at [/private/email/templates/accounts/inviteShopMember.html](https://github.com/reactioncommerce/reaction/blob/trunk/private/email/templates/accounts/inviteShopMember.html) using [Meteor's Assets API](http://docs.meteor.com/api/assets.html).
+If no template is found, it will fallback to the default template in the filesystem at [/private/email/templates/accounts/inviteShopMember.html](https://github.com/reactioncommerce/reaction/blob/v1.5.0/private/email/templates/accounts/inviteShopMember.html) using [Meteor's Assets API](http://docs.meteor.com/api/assets.html).
