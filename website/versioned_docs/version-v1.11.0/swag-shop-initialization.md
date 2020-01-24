@@ -27,7 +27,7 @@ Now let's dive into the details and see what we've done so far:
 
 ## Setting up data fixtures
 
-When implementing a shop, you'll almost inevitably face the need to reset your database from time to time during development. Just adding a new translation key value requires a database reset. For our swag shop, it’s clear that the database needs to be restored to an initial state—that’s where data fixtures come in. Reaction ships with default data fixtures in [/private/data](https://github.com/reactioncommerce/reaction/tree/trunk/private/data).
+When implementing a shop, you'll almost inevitably face the need to reset your database from time to time during development. Just adding a new translation key value requires a database reset. For our swag shop, it’s clear that the database needs to be restored to an initial state—that’s where data fixtures come in. Reaction ships with default data fixtures in [/private/data](https://github.com/reactioncommerce/reaction/tree/v1.11.0/private/data).
 
 In many cases, you will want to have fixtures that come with real products, categories, and shop settings, since you probably won’t want to recreate all your products whenever the database is reset. For the swag shop, we also want to include product images as a part of the import fixtures, which is why our own fixtures live in [private/data](https://github.com/reactioncommerce/reaction-swag-shop/tree/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/private/data) and [private/images](https://github.com/reactioncommerce/reaction-swag-shop/tree/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/private/images) **within** our plugin code base.
 

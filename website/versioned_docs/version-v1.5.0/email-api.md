@@ -75,7 +75,7 @@ Returns an email template as a `String` for server side rendering of an email bo
 
 **template** `{String}` (required)
 
-The `template` name passed in is used to find a template in either the `Templates` collection in the database or the provided email templates in the filesystem. The convention is to name templates based on the folder/file structure relative to [/private/email/templates](https://github.com/reactioncommerce/reaction/tree/trunk/private/email/templates). For example, to get the template used for inviting a shop member, you would use:
+The `template` name passed in is used to find a template in either the `Templates` collection in the database or the provided email templates in the filesystem. The convention is to name templates based on the folder/file structure relative to [/private/email/templates](https://github.com/reactioncommerce/reaction/tree/v1.5.0/private/email/templates). For example, to get the template used for inviting a shop member, you would use:
 
 ```js
 const tmpl = Reaction.Email.getTemplate("accounts/inviteShopMember");

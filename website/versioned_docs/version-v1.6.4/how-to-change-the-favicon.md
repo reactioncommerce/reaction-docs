@@ -12,7 +12,7 @@ You should have a directory like this: `/imports/plugins/custom/<your-plugin-nam
 ## Step 2: Copy the favicon code from default-theme
 Create a `/client/` folder in the package, and add a `favicon.js` file.
 
-Copy the [favicon code](https://github.com/reactioncommerce/reaction/blob/v1.6.4/imports/plugins/included/default-theme/client/favicons.js) from the [default-theme](https://github.com/reactioncommerce/reaction/tree/trunk/imports/plugins/included/default-theme) package into the `favicon.js` file.
+Copy the [favicon code](https://github.com/reactioncommerce/reaction/blob/v1.6.4/imports/plugins/included/default-theme/client/favicons.js) from the [default-theme](https://github.com/reactioncommerce/reaction/tree/v1.6.4/imports/plugins/included/default-theme) package into the `favicon.js` file.
 
 ## Step 3: Create the favicon bundle files for different platforms
 For best results, you may want to create favicons for different devices. You can create favicon bundles with various online tools, e.g. https://realfavicongenerator.net
