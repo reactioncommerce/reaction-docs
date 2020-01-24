@@ -12,7 +12,7 @@ Software that evolves will sooner or later have to change existing data in their
 
 On application startup, Reaction will migrate to the latest database revision. It does so by sourcing the revision files in directory [`/imports/plugins/core/versions/server/migrations/*.js`](https://github.com/reactioncommerce/reaction/tree/trunk/imports/plugins/core/versions/server/migrations) and apply their content's database instructions, if necessary.
 
-[**/imports/plugins/core/versions/server/startup.js**](https://github.com/reactioncommerce/reaction/blob/trunk/imports/plugins/core/versions/server/startup.js)
+[**/imports/plugins/core/versions/server/startup.js**](https://github.com/reactioncommerce/reaction/blob/v1.7.0/imports/plugins/core/versions/server/startup.js)
 
 ```js
 Hooks.Events.add("afterCoreInit", () => {
@@ -27,7 +27,7 @@ Hint: In case there's an error during a migration run, it is possible that the m
 
 ### Code changes that affect existing data in MongoDB
 
-Whenever code changes require existing data in MongoDB to be changed, a new database revision is added in the plugin [reaction-migrations](https://github.com/reactioncommerce/reaction/blob/trunk/imports/plugins/core/versions/server/migrations/12_add_shopId_on_billing.js).
+Whenever code changes require existing data in MongoDB to be changed, a new database revision is added in the plugin [reaction-migrations](https://github.com/reactioncommerce/reaction/blob/v1.7.0/imports/plugins/core/versions/server/migrations/12_add_shopId_on_billing.js).
 
 **12_add_shopId_on_billing.js**
 

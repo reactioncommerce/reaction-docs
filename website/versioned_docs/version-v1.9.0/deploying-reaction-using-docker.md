@@ -178,7 +178,7 @@ docker run -d \
 
 You can also use Docker Compose to run Reaction and Mongo in separate connected Docker containers.
 
-We've included a demo [docker-compose file](https://github.com/reactioncommerce/reaction/blob/trunk/docker-compose-demo.yml) in the repository. In its current basic form, it is meant for quickly running a demo of your production build. It can also serve as starting point for your production docker-compose setup.
+We've included a demo [docker-compose file](https://github.com/reactioncommerce/reaction/blob/v1.9.0/docker-compose-demo.yml) in the repository. In its current basic form, it is meant for quickly running a demo of your production build. It can also serve as starting point for your production docker-compose setup.
 
 If you have a custom Docker image of your Reaction app, you can modify the `docker-compose-demo.yml` file to point to use it by changing the `image` name of the `reaction` service.
 

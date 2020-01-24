@@ -113,7 +113,7 @@ Now that we know where our products are located, let's enhance the existing layo
 
 ### Add AvailabilityMap component to PDP
 
-`ProductDetailPageSimpleLayout` allows us to define how the PDP should look like in a declarative way. You may have a look into it [here](https://github.com/reactioncommerce/reaction/blob/trunk/imports/plugins/included/product-detail-simple/lib/layout/simple.js).
+`ProductDetailPageSimpleLayout` allows us to define how the PDP should look like in a declarative way. You may have a look into it [here](https://github.com/reactioncommerce/reaction/blob/v1.9.0/imports/plugins/included/product-detail-simple/lib/layout/simple.js).
 
 For our example we're going to swap the section with the product metadata, `ProductMetaData`, for the map, which we'll call `AvailabilityMap`:
 
@@ -231,7 +231,7 @@ Great! This React component will inject the JavaScript we need and render the ma
 
 What isn't provided out-of-the-box is the `trackingId` property needed for Google maps inclusion. This is your personal Google API key that is available from [developer.google.com](https://developers.google.com/maps/documentation/javascript/get-api-key). We're going to store that in our settings file in `/settings/dev.settings.json`:
 
-**[/settings/dev.settings.json](https://github.com/reactioncommerce/reaction/blob/trunk/settings/dev.settings.json)**
+**[/settings/dev.settings.json](https://github.com/reactioncommerce/reaction/blob/v1.9.0/settings/dev.settings.json)**
 
 ```json
 {
