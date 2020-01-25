@@ -3,7 +3,7 @@ id: version-v1.5.0-contributing-to-reaction
 title: Contributing
 original_id: contributing-to-reaction
 ---
-    
+
 At Reaction Commerce, we're dedicated to the open source community. In fact, we've designed our entire platform and business to grow from the passion and creativity that an open source community ignites. We've already attracted a small, dedicated team of open source contributors, and there's always room for more. If you'd like to join us, here's how to get started:
 
 **Step 1:**  If you haven't already, get Reaction running locally:
@@ -29,7 +29,7 @@ Let us know how we can make the contribution process easier. We want to find the
 
 ## Pull Requests
 
-[Create a pull request](https://help.github.com/articles/creating-a-pull-request/) to propose and collaborate on changes to Reaction. These changes are proposed in a PR branch, and are reviewed before being merged into a `release-x.x.x` branch, and then released to `master`.
+[Create a pull request](https://help.github.com/articles/creating-a-pull-request/) to propose and collaborate on changes to Reaction. These changes are proposed in a PR branch, and are reviewed before being merged into a `release-x.x.x` branch, and then released to `trunk` .
 
 -   Should reference an issue if one exists, or provide detailed information on the goal of the PR.
 -   Should pass CI / Tests. New functionality should include new tests.

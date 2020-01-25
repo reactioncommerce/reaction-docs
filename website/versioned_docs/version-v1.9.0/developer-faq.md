@@ -3,7 +3,7 @@ id: version-v1.9.0-developer-faq
 title: FAQs
 original_id: developer-faq
 ---
-    
+
 ## General
 
 ### What do I need to know to work with Reaction?
@@ -19,7 +19,7 @@ Reaction tries to be as modular as possible. All user customizations are intende
 
 ### What sites are built on Reaction Commerce?
 
-Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://docs.reactioncommerce.com/reaction-docs/master/community-showcase).
+Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://docs.reactioncommerce.com/reaction-docs/trunk/community-showcase).
 
 ### Why is Reaction so slow?
 
@@ -56,7 +56,7 @@ The database acts as the persistent storage of JavaScript objects. For example, 
 
 ### Reaction is an open source project. How can I get involved?
 
-We're always open to contributions from our community. To learn more about becoming a contributor, [click here](https://blog.reactioncommerce.com/how-to-write-a-pr-for-reaction/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
+We're always open to contributions from our community. To learn more about becoming a contributor, [click here](https://blog.reactioncommerce.com/how-to-write-a-pr-for-reaction/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/trunk/guidelines)!
 
 ## Installation
 
@@ -110,7 +110,7 @@ Since 2014 [Google has indexed JavaScript when crawling websites](https://webmas
 
 1. [Prerender.io](https://prerender.io/): Reaction includes integration with Prerender.io out of the box. Prerender.io is a commercial service that will generate static renderings of the application for search engines. All you have to do is provide a key to your site and Prerender will handle the pre-rendering.
 2. [Meteor Chrome Headless Spiderable](https://github.com/artlimes/meteor-chrome-headless-spiderable) with the [Reaction Commerce Caching Plugin](https://github.com/artlimes/reaction-commerce-caching-plugin): This updated Meteor package uses Google's Headless Chrome to crawl pages. Combined with the Reaction-specific caching plugin, the Spiderable package will allow Reaction pages to be crawled by search engines.
-3. [dom](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/dom/client/dom.js): Automatically adds `<meta>` tags are for products using the [dom](https://github.com/reactioncommerce/reaction/blob/release-1.8.0/imports/plugins/core/dom/client/dom.js) core package since 1.8, which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data. Read more on [SEO and Metadata](seo-metadata.md).
+3. [dom](https://github.com/reactioncommerce/reaction/blob/v1.9.0/imports/plugins/core/dom/client/dom.js): Automatically adds `<meta>` tags are for products using the [dom](https://github.com/reactioncommerce/reaction/blob/release-1.8.0/imports/plugins/core/dom/client/dom.js) core package since 1.8, which uses the title, description and `details` fields of the product to render SEO-friendly data. You may need to use a tool like [SEO Inspector](https://chrome.google.com/webstore/detail/seo-inspector/iejckekdjogeeilmllnabmgkbbmedeal?hl=en) to see this data. Read more on [SEO and Metadata](seo-metadata.md).
 
 Read more about [SEO and Reaction Commerce](https://blog.reactioncommerce.com/how-our-javascript-platform-handles-seo/) in our latest blog post.
 
@@ -121,7 +121,7 @@ The easiest way to render a customized landing page is to set the INDEX_OPTIONS 
 
 ### How can I add add a static page?
 
-Add a single page, and more child pages, by adding a route and a template. This will require knowledge of HTML, JavaScript and Git or web development. This is covered in depth in this section of the [Customization Guide](https://docs.reactioncommerce.com/reaction-docs/master/plugin-routes-6).
+Add a single page, and more child pages, by adding a route and a template. This will require knowledge of HTML, JavaScript and Git or web development. This is covered in depth in this section of the [Customization Guide](https://docs.reactioncommerce.com/reaction-docs/trunk/plugin-routes-6).
 
 This would work great for static pages like an About or Contact us page. If you want to add tools for administrators to manage text and image content without having to code, you probably want to a content management system (CMS).
 
@@ -149,7 +149,7 @@ Longer answer: By design you can't, because presentation and data should be sepa
 
 "Right, I got all your points, but I really need to have more control over how the content is rendered."
 
-If you're absolutely keen it, you could overwrite the React component responsible for rendering [product properties](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-detail-simple/client/components/productField.js). You'll find an example on how to overwrite ReactionCommerce's built-in components [here](extending-product-schema-location-map.md).
+If you're absolutely keen it, you could overwrite the React component responsible for rendering [product properties](https://github.com/reactioncommerce/reaction/blob/v1.9.0/imports/plugins/included/product-detail-simple/client/components/productField.js). You'll find an example on how to overwrite ReactionCommerce's built-in components [here](extending-product-schema-location-map.md).
 
 ### I want to make a change to the schema and use it in the product detail page (PDP)
 

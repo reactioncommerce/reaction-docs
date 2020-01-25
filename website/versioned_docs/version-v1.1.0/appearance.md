@@ -3,10 +3,10 @@ original_id: appearance
 id: version-v1.1.0-appearance
 title: Appearance
 ---
-    
+
 The default Reaction theme (core-theme) uses [Bootstrap 3](https://getbootstrap.com/css/#less) and the [Less](https://lesscss.org) preprocessor to build the theme.
 
-If you want to learn how to make a theme, see our [Creating a Theme](https://docs.reactioncommerce.com/reaction-docs/master/creating-a-theme) documentation.
+If you want to learn how to make a theme, see our [Creating a Theme](https://docs.reactioncommerce.com/reaction-docs/trunk/creating-a-theme) documentation.
 
 ## Mixins
 

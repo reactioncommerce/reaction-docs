@@ -3,7 +3,7 @@ id: version-v1.11.0-simple-schema
 title: Schemas
 original_id: simple-schema
 ---
-    
+
 Reaction uses [MongoDB](https://docs.mongodb.com/manual/), which is a schemaless database. This allows maximum flexibility, particularly important when quickly reacting to the design challenges that uniquely different customizations require in the course of an ecommerce operation.
 
 However, we don't want to just get completely crazy, so we define a **schema** that is attached to the previously schemaless collection. These schemas apply basic content and structure validation, also very necessary in ecommerce.
@@ -63,7 +63,7 @@ import { PackageConfig } from "/lib/collections/schemas/registry";
 
 View all schemas in the [API Docs](http://api.docs.reactioncommerce.com/schemas.html).
 
-| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/master/lib/collections/schemas) | \*                |
+| [Reaction.Schemas](https://github.com/reactioncommerce/reaction/tree/v1.11.0/lib/collections/schemas) | \*                |
 | ---------------------------------------------------------------------------------------------------- | ----------------- |
 | Email                                                                                                | Address           |
 | Accounts                                                                                             | CartItem          |

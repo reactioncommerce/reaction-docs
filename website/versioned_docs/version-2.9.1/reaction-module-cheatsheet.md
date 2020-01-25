@@ -148,7 +148,7 @@ import PropTypes from "prop-types";
 import { withMoment } from "/imports/plugins/core/components/lib";
 ```
 
-See [Components API](https://docs.reactioncommerce.com/reaction-docs/master/components-api#withMoment) docs for usage examples
+See [Components API](https://docs.reactioncommerce.com/reaction-docs/trunk/components-api#withMoment) docs for usage examples
 
 ## Meteor
 

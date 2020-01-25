@@ -162,7 +162,7 @@ jobs:
       - run:
           name: "Deploy to Netlify"
           command: |
-            if [ "$CIRCLE_BRANCH" == "master" ]; then
+            if [ "$CIRCLE_BRANCH" == "trunk" ]; then
               SITE_ID=$PRODUCTION_SITE_ID
             else
               SITE_ID=$STAGING_SITE_ID
@@ -202,4 +202,4 @@ workflows:
             branches:
               only:
                 - /^staging$/
-                - /^master$/
+                - /^trunk$/

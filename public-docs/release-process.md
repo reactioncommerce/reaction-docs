@@ -13,7 +13,7 @@ The [Reaction engineering team and invited community collaborators](https://gith
 
 - Create a release branch
     1. Decide if this is a `major` / `breaking` (`X.-,-`), `minor` (`-.X.-`), or `patch` (`-.-.X`) release
-    2. Create a branch off of the `develop` branch (or `master` / `trunk` if `develop` is not present), and name it `release-vX.X.X`
+    2. Create a branch off of the `develop` branch (or `trunk`  if `develop` is not present), and name it `release-vX.X.X`
 
 - Increment version numbers in `package.json`
     1. If applicable (`Reaction` & `Example Storefront`), update the version number accordingly in `package.json`, and run the app in order to get an updated `package-lock.json` file, and commit these files.
@@ -100,7 +100,7 @@ The [Reaction engineering team and invited community collaborators](https://gith
 
             This is a {major|minor|patch} version update to keep this projects versioning coordinated with [Reaction](https://github.com/reactioncommerce/reaction), [Reaction Hydra](https://github.com/reactioncommerce/reaction-hydra), and [Example Storefront](https://github.com/reactioncommerce/example-storefront).
 
-- Create a PR from your release branch to the `master` / `trunk` branch, using the updated `CHANGELOG` notes as the PR description
+- Create a PR from your release branch to the `trunk`  branch, using the updated `CHANGELOG` notes as the PR description
 - Ask QA for a review
 - `Reaction`, `Reaction Hyrda`, and `Example Storefront` can be merged as soon as they are approved.
 
@@ -134,7 +134,7 @@ Once `Reaction`, `Reaction Hydra`, and `Example Storefront` have been released, 
 
 ## Pulling changes back into `develop`
 
-The `develop` branches of `Reaction` and `Example Platform` need to pull in the version bump and `CHANGELOG` changes we just made directly to their `master` / `trunk` branches. You ***DO NOT*** need to create an official PR for this, just merge the `master` / `trunk` branch back into `develop` and push.
+The `develop` branches of `Reaction` and `Example Platform` need to pull in the version bump and `CHANGELOG` changes we just made directly to their `trunk`  branches. You ***DO NOT*** need to create an official PR for this, just merge the `trunk`  branch back into `develop` and push.
 
 ## Updating our sample data for the new release
 

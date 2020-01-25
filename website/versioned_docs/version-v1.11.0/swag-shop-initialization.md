@@ -19,7 +19,7 @@ reaction plugins create --name <your_project>
 
 This will generate a bare-bones plugin in `/imports/plugins/custom/<your_project>`,  which will serve as a starting point for further customizations.
 
-![](https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/swag-shop-create-plugin.gif)
+![](https://raw.githubusercontent.com/reactioncommerce/reaction-docs/trunk/assets/swag-shop-create-plugin.gif)
 
 Remember to always restart `reaction` after you create a new plugin.
 
@@ -27,11 +27,11 @@ Now let's dive into the details and see what we've done so far:
 
 ## Setting up data fixtures
 
-When implementing a shop, you'll almost inevitably face the need to reset your database from time to time during development. Just adding a new translation key value requires a database reset. For our swag shop, it’s clear that the database needs to be restored to an initial state—that’s where data fixtures come in. Reaction ships with default data fixtures in [/private/data](https://github.com/reactioncommerce/reaction/tree/master/private/data).
+When implementing a shop, you'll almost inevitably face the need to reset your database from time to time during development. Just adding a new translation key value requires a database reset. For our swag shop, it’s clear that the database needs to be restored to an initial state—that’s where data fixtures come in. Reaction ships with default data fixtures in [/private/data](https://github.com/reactioncommerce/reaction/tree/v1.11.0/private/data).
 
 In many cases, you will want to have fixtures that come with real products, categories, and shop settings, since you probably won’t want to recreate all your products whenever the database is reset. For the swag shop, we also want to include product images as a part of the import fixtures, which is why our own fixtures live in [private/data](https://github.com/reactioncommerce/reaction-swag-shop/tree/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/private/data) and [private/images](https://github.com/reactioncommerce/reaction-swag-shop/tree/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/private/images) **within** our plugin code base.
 
-![](https://raw.githubusercontent.com/reactioncommerce/reaction-docs/master/assets/swag-shop-start.gif)
+![](https://raw.githubusercontent.com/reactioncommerce/reaction-docs/trunk/assets/swag-shop-start.gif)
 
 To prevent Reaction from sourcing the default data fixtures, start the server with the `SKIP_FIXTURES` environmental variable, e.g.
 ```sh
@@ -68,7 +68,7 @@ Hooks.Events.add("afterCoreInit", () => {
 
 As you can see, the shop data is imported into the `beforeCoreInit` hook, whereas all other fixtures are imported at a later time into the `afterCoreInit` hook. This is because an existing shop record is crucial for the internal bootstrap code that sets up the `Packages` collection in the database.
 
-You can read more about setting environment variables in the [Reaction Docs: Configuration](https://docs.reactioncommerce.com/reaction-docs/master/configuration).
+You can read more about setting environment variables in the [Reaction Docs: Configuration](https://docs.reactioncommerce.com/reaction-docs/trunk/configuration).
 
 ## Using Meteor Asset API for image data fixtures
 

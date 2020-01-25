@@ -27,7 +27,7 @@ Additionally, Reaction uses server-side rendering, as well as [Prerender.io](htt
 ## Operating a store
 ### How do I sign up for an account, login to my dashboard, and set up my domain?
 
-You'll need to install and run Reaction locally on your computer. For more info, check out our [Installation docs](https://docs.reactioncommerce.com/reaction-docs/master/installation).    
+You'll need to install and run Reaction locally on your computer. For more info, check out our [Installation docs](https://docs.reactioncommerce.com/reaction-docs/trunk/installation).
 
 ### Where is the admin panel?
 

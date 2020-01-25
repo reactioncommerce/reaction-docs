@@ -3,22 +3,22 @@ id: version-v1.5.0-release-process
 title: Release Process
 original_id: release-process
 ---
-    
+
 The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
 The process is:
 1.  Create a release branch, but not until you ready to release!
-1.  Change destination branch from master to release branch for all PR that should be included.
+1.  Change destination branch from `trunk`  to release branch for all PR that should be included.
 1.  Wait until all tests have passed on each PR.
 1.  Merge passing PR's into the release branch.
 1.  Create a new `Release x.x.x` pull request.
 1.  Create release notes and docs
 1.  Release review, test pass, be brave.
-1.  Merge to `master`, wait for tests, then tag release.
+1.  Merge to `trunk` , wait for tests, then tag release.
 
 ## Release Branch
 
--   Create a branch from `master` named **release-x.x.x**
+-   Create a branch from `trunk` named **release-x.x.x**
 -   Commit incremented `package.json` version
 -   Should ~follow [SemVer](http://semver.org/) guidelines.
     -   MAJOR version when you make incompatible API changes,
@@ -30,7 +30,7 @@ The process is:
 -   Approved patches/fixes/features PR's for this release should be merged into the `release-x.x.x` branch.
 -   Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch.
 -   LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of **_i18n imports_** should also be performed before merging the i18n translation PR into the release branch.
--   Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `master`.
+-   Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `trunk` .
 
 ## Release Notes
 
@@ -49,7 +49,7 @@ Notes:
 ## Release Docs
 
 -   Merge outstanding docs PRs
--   Create development => master PR
+-   Create development => trunk PR
 -   Tag and Release reaction-docs
 
 ## Release Review
@@ -62,7 +62,7 @@ Notes:
 
 ## Release
 
--   **Squash and merge** the `Release x.x.x` pull request into `master`
+-   **Squash and merge** the `Release x.x.x` pull request into `trunk`
 -   Allow all tests and builds to complete
 -   [Draft and Publish a new Github Release](https://github.com/reactioncommerce/reaction/releases)
 -   Follow the format of previous release, copy change log from release PR into the release notes.

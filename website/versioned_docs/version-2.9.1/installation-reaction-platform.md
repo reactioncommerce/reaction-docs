@@ -108,7 +108,7 @@ docker-compose logs -f
 
 7. Congrats 🎉  Now you're running the entire suite of Reaction Development Platform services and ready to start developing.
 
-**Note:** To login into the Operator UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/master/.env.example#L11-L12) file.
+**Note:** To login into the Operator UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/v2.9.1/.env.example#L11-L12) file.
 
 ## Upgrading from 1.x?
 
@@ -152,7 +152,7 @@ If you are upgrading from an older 2.0 release candidate, follow the steps liste
 
 ## Repository Branches
 
-With Reaction 2.0 release, we introduced a `develop` branch at both the [Reaction](https://github.com/reactioncommerce/reaction) and the [example-storefront](https://github.com/reactioncommerce/example-storefront) repositories. This branch contains all the latest changes, while `master` is our stable branch.
+With Reaction 2.0 release, we introduced a `develop` branch at both the [Reaction](https://github.com/reactioncommerce/reaction) and the [example-storefront](https://github.com/reactioncommerce/example-storefront) repositories. This branch contains all the latest changes, while `trunk`  is our stable branch.
 
 ## Developing with Reaction Development Platform
 

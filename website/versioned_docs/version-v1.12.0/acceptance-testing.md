@@ -3,7 +3,7 @@ id: version-v1.12.0-acceptance-testing
 title: Acceptance Testing
 original_id: acceptance-testing
 ---
-    
+
 ## Overview
 
 ### What is Acceptance Testing?
@@ -30,7 +30,7 @@ Most AT scripts will have setup steps as a prerequisite to the actual test. All 
 Once the test setup process is complete it's time for testing. Each AT script will have user-flow steps to complete, many user-flow steps will have test variants that may also need to be tested. Success critical test variants will be listed in the script's _Touch Points_, these test variants must be completed for the test to be considered successful.
 
 **Issue Reporting**
-All AT scripts will have an _Intended Outcome_ section, if you've completed each step of the AT script and you're not seeing the intended outcome then the acceptance test is considered a failure. If this is the case follow the steps for reporting an issue in the [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction#step-2-find-or-open-an-issue)
+All AT scripts will have an _Intended Outcome_ section, if you've completed each step of the AT script and you're not seeing the intended outcome then the acceptance test is considered a failure. If this is the case follow the steps for reporting an issue in the [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/trunk/contributing-to-reaction#step-2-find-or-open-an-issue)
 
 ## Test Scripts
 Table of contents for all Reaction Commerce AT scripts.
@@ -50,4 +50,4 @@ Table of contents for all Reaction Commerce AT scripts.
 - [Acceptance Test Script Templates](script-template.md)
 
 **Reporting**
-- [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/master/contributing-to-reaction)
+- [Contributing Guide](https://docs.reactioncommerce.com/reaction-docs/trunk/contributing-to-reaction)

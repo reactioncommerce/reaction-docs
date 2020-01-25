@@ -3,7 +3,7 @@ id: version-v1.5.0-reporting-vulnerabilities
 title: Report Vulnerabilities
 original_id: reporting-vulnerabilities
 ---
-    
+
 While Reaction uses automated tools to detect and report vulnerabilities, we also rely on your reporting and patches of discovered vulnerabilities.
 
 If you believe you have discovered a vulnerablity or a compliance issue that has not yet been publicly patched, and you wish to privately address the vulnerability, you can provide vulnerability and patch details through our `security@reactioncommerce.com` email group.
@@ -26,7 +26,7 @@ You can submit a patch file created with [git format-patch](https://git-scm.com/
 Example of creating a patch.
 
 ```sh
-git format-patch master --stdout > new-hotfix.patch
+git format-patch trunk --stdout > new-hotfix.patch
 ```
 
 Attach the patch file in an email to `security@reactioncommerce.com`.

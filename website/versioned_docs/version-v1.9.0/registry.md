@@ -3,7 +3,7 @@ id: version-v1.9.0-registry
 title: Registry
 original_id: registry
 ---
-    
+
 The `Reaction Registry` is used to add settings, routes, and permissions for Reaction packages, both from Core and any custom package you write.
 
 The Registry is the defining file of any Reaction plugin. You can think of the `register.js` file as similar, but not identical to, the `package.json` file you'd use to define an npm package.
@@ -19,7 +19,7 @@ Once registered, plugins are published to the client in the [Packages publicatio
 Here's an example of the most basic `register.js` file.
 
 ```js
-Reaction.registerPackage({  
+Reaction.registerPackage({
   label: "PackageName",
   name: "reaction-example-package",
   icon: "fa fa-package",
@@ -111,7 +111,7 @@ route: "/dashboard/accounts"
 
 The `route` property registers the supplied route with Reaction. Once registered, you'll be able to visit this route by navigating directly to `example.com/shop-prefix/your-route`.
 
-If you have more than one shop, you'll need to use the shop prefix when visiting a route directly. See also: [Routing Docs](https://docs.reactioncommerce.com/reaction-docs/master/routing),  [getShopPrefix](https://github.com/reactioncommerce/reaction/blob/v1.8.0/server/api/core/core.js#L447), and [Router.initPackageRoutes](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/core/router/lib/router.js#L546).
+If you have more than one shop, you'll need to use the shop prefix when visiting a route directly. See also: [Routing Docs](https://docs.reactioncommerce.com/reaction-docs/trunk/routing),  [getShopPrefix](https://github.com/reactioncommerce/reaction/blob/v1.8.0/server/api/core/core.js#L447), and [Router.initPackageRoutes](https://github.com/reactioncommerce/reaction/blob/v1.8.0/imports/plugins/core/router/lib/router.js#L546).
 
 ### Name
 
@@ -122,7 +122,7 @@ name: "accounts"
 The `name` property permits calling this route with `Router.go` - e.g.
 `Router.go("accounts");`.
 
-The name property also becomes a permission or `role` that users can have. Having a role that corresponds to the `name` within a registered route permits the user to visit that route (but only for the shopId they have that role for). For more details, check out our [Routing Docs](https://docs.reactioncommerce.com/reaction-docs/master/routing).
+The name property also becomes a permission or `role` that users can have. Having a role that corresponds to the `name` within a registered route permits the user to visit that route (but only for the shopId they have that role for). For more details, check out our [Routing Docs](https://docs.reactioncommerce.com/reaction-docs/trunk/routing).
 
 ### Template
 
@@ -130,7 +130,7 @@ The name property also becomes a permission or `role` that users can have. Havin
 template: "accountsDashboard"
 ```
 
-The `template` property can be assigned to a Blaze template, although where it is used depends on the value of `provides`. If you'd like to use a React component in place of a Blaze template, you just need to wrap your component in a Blaze template. There's an example of this in the [Email plugin template file](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/core/email/client/templates/email.html#L1).
+The `template` property can be assigned to a Blaze template, although where it is used depends on the value of `provides`. If you'd like to use a React component in place of a Blaze template, you just need to wrap your component in a Blaze template. There's an example of this in the [Email plugin template file](https://github.com/reactioncommerce/reaction/blob/v1.9.0/imports/plugins/core/email/client/templates/email.html#L1).
 
 ### Workflow
 
@@ -280,7 +280,7 @@ To add and customize Dashboard panels, use these `provides` values.
   - `icon`
   - `name`
   - `description`
-  - `provides`  
+  - `provides`
 
 ### Payment-related: Methods and Settings
 
