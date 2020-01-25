@@ -26,7 +26,7 @@ Readers need an easy way to find and distinguish between pre-2.0 and post-2.0 co
         - https://docs.reactioncommerce.com/docs/1.16.0/how-to-create-a-custom-homepage
         - https://docs.reactioncommerce.com/docs/1.16.0/extending-product-schema-location-map
         - https://docs.reactioncommerce.com/docs/1.16.0/how-to-rtl
-        - Swag Shop: 
+        - Swag Shop:
             - https://docs.reactioncommerce.com/docs/1.16.0/swag-shop-tutorial
             - https://docs.reactioncommerce.com/docs/1.16.0/swag-shop-collecting-requirements
             - https://docs.reactioncommerce.com/docs/1.16.0/swag-shop-initialization
@@ -36,7 +36,7 @@ Readers need an easy way to find and distinguish between pre-2.0 and post-2.0 co
 
 ## Use a single installation instruction link moving forward
 
-- Use the Reaction Platform installation instructions across all READMEs: https://docs.reactioncommerce.com/docs/installation-reaction-platform
+- Use the Reaction Development Platform installation instructions across all READMEs: https://docs.reactioncommerce.com/docs/installation-reaction-platform
     - Reaction
     - Example Storefront
     - With the exception of the Platform itself, which will need more in-depth instructions for those who also want to develop on the Platform.

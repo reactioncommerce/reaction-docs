@@ -24,9 +24,9 @@ This article explains the differences between Reaction 2.x releases and 3.x rele
 
 The following is a summary of all of the environment variables needed by all Reaction services, and how they changed from 2.9.1 to 3.0.0.
 
-In a development environment, if you clone a new Reaction Platform, check out the 3.0.0 branch, and run `make`, all of these should be handled automatically for you.
+In a development environment, if you clone a new Reaction Development Platform, check out the 3.0.0 branch, and run `make`, all of these should be handled automatically for you.
 
-In a development environment, if you reuse a Reaction Platform folder that has already been used to run Reaction 2.x, **you must make some manual adjustments to the `.env` files in each project**. Reaction Platform runs the `bin/setup` script in each project, but this script will not overwrite existing variables to new values or remove variables that are no longer needed. This is why we recommend a separate Reaction Platform clone for 3.x, but if you must switch between 2.x and 3.x in the same Reaction Platform, then you should **manually copy `.env.example` to `.env` in every project, completely overwriting the `.env` file contents**. If you have intentionally customized some variables, you can redo your customizations after copying over the entire `.env.example` file.
+In a development environment, if you reuse a Reaction Development Platform folder that has already been used to run Reaction 2.x, **you must make some manual adjustments to the `.env` files in each project**. Reaction Development Platform runs the `bin/setup` script in each project, but this script will not overwrite existing variables to new values or remove variables that are no longer needed. This is why we recommend a separate Reaction Development Platform clone for 3.x, but if you must switch between 2.x and 3.x in the same Reaction Development Platform, then you should **manually copy `.env.example` to `.env` in every project, completely overwriting the `.env` file contents**. If you have intentionally customized some variables, you can redo your customizations after copying over the entire `.env.example` file.
 
 In a deployed environment, you can go service by service and start from your 2.x variables, adding, removing, or changing some of them as described below.
 
@@ -162,7 +162,7 @@ See [Updating a 2.x API plugin to work with Reaction API 3.x](./devs-update-cust
 
 ## Notes for Developers
 
-- We highly recommend that you clone `reaction-platform` into a separate folder for 3.x. When you run the `git clone` command, add `reaction-platform3` or something similar at the end, and it will clone into a folder with that name instead of defaulting to the repo name. This way you will avoid having to change your `.env` file back and forth if you switch from 2.x to 3.x. Just run 2.x from one the `reaction-platform2` folder and 3.x from the `reaction-platform3` folder.
+- We highly recommend that you clone `reaction-development-platform` into a separate folder for 3.x. When you run the `git clone` command, add `reaction-development-platform3` or something similar at the end, and it will clone into a folder with that name instead of defaulting to the repo name. This way you will avoid having to change your `.env` file back and forth if you switch from 2.x to 3.x. Just run 2.x from one the `reaction-development-platform2` folder and 3.x from the `reaction-development-platform3` folder.
 - Every project now has a `.nvmrc` file listing the proper expected version of NodeJS. Always run `nvm use` after you `cd` to any project directory. If prompted, run the `nvm install` command that is shown.
   - If you don't have the `nvm` command, go here to download NVM: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
   - There are [shell extensions](https://github.com/nvm-sh/nvm/blob/master/README.md#deeper-shell-integration) you can install to automatically do `nvm use` whenever you `cd` to a directory that has a `.nvmrc` file.
