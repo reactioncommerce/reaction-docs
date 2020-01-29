@@ -6,7 +6,7 @@ original_id: getting-started-developing-with-reaction
 
 ## Install
 
-To install Reaction version 2.0 and above, follow these [Reaction Platform instructions](installation-reaction-platform.md).
+To install Reaction version 2.0 and above, follow these [Reaction Platform instructions](installation-reaction-platform).
 
 > Looking for installation instructions for older versions of Reaction? Follow these instructions to install version 1.16 for [Windows](/docs/1.16.0/installation-windows), [Mac OSX](/docs/1.16.0/installation-osx), [Linux](/docs/1.16.0/installation-linux).
 
