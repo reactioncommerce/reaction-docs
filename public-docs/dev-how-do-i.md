@@ -29,7 +29,7 @@ Use `context.accountId` or `context.account`
 await context.checkPermissions(["shipping"], shopId)
 ```
 
-If the user has _any_ of the provided roles, they will be allowed. Otherwise a `ReactionError` will be thrown. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
+If the user has _any_ of the provided permissions, they will be allowed. Otherwise a `ReactionError` will be thrown. Be sure to pass in the correct shop ID, the ID of the shop that owns whatever entity is being fetched or changed.
 
 ## Run plugin code on app startup
 
