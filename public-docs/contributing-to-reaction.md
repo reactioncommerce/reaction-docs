@@ -129,7 +129,7 @@ The team reviews code quality rules including:
 - **Documentation:** all code added or touched should have proper JSDoc, any new functionality should be documented, as outlined in [JSDoc Style Guide](jsdoc-style-guide.md).
 
 - **Security:**
-  - Code should only be usable by users with the correct roles. Any data published should be filtered to ensure that only users with the correct roles for the correct shops have access to it.
+  - Code should only be usable by users with the correct permissions. Any data published should be filtered to ensure that only users with the correct permissions for the correct shops have access to it.
   - Synk should not fail. Any failing automated tests should not be approved.
 
 - **Performance:** Code should be written with performance in mind. Data publications should only publish data necessary to accomplish the specific goal at hand.
