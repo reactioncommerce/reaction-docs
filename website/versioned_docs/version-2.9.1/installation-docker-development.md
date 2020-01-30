@@ -28,7 +28,7 @@ Then wherever these instructions say `docker-compose`, you can type only `dc`, a
 
 ## Run the Reaction API
 
-> NOTE: If you also need to run the storefront or just want to simplify this a bit, consider using [Reaction Platform](https://github.com/reactioncommerce/reaction-platform), which will do all of this and more.
+> NOTE: If you also need to run the storefront or just want to simplify this a bit, consider using [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform), which will do all of this and more.
 
 Thanks to the Dockerfiles and `docker-compose.yml` file in the root of the main Reaction project repo, you can start all necessary services in Docker containers by running:
 

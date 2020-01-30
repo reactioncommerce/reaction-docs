@@ -1,12 +1,12 @@
 ---
 id: version-2.9.1-installation-reaction-platform
-title: Install with Reaction Platform
-sidebar_label: Install with Reaction Platform
+title: Install with Reaction Development Platform
+sidebar_label: Install with Reaction Development Platform
 original_id: installation-reaction-platform
 ---
 
 
-The Reaction Platform is the easiest way to run the entire suite of Reaction services at once, as of Reaction version 2.0. The Platform installs and runs the entire suite of Reaction services in these directories:
+The Reaction Development Platform is the easiest way to run the entire suite of Reaction services at once, as of Reaction version 2.0. The Platform installs and runs the entire suite of Reaction services in these directories:
 
 | Directory                                                                                  | Services                                   |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------ |
@@ -25,7 +25,7 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
 ##### Recommended settings for Docker for Mac, Windows and Linux
 - Minimum 4GB of RAM and 4CPUs, for better performance allocate 4GB+ and 4CPUs+. For instructions visit the advanced section of the [Docker for Mac Getting Started guide](https://docs.docker.com/docker-for-mac/).
 
-> **Windows**: Reaction Platform has not been fully tested on Windows at this time.
+> **Windows**: Reaction Development Platform has not been fully tested on Windows at this time.
 
 > **Linux**: Docker Compose is included when installing Docker on Mac and Windows, but will need to be installed separately on Linux.
 
@@ -33,16 +33,16 @@ The Reaction Platform is the easiest way to run the entire suite of Reaction ser
   - Increase the memory and CPU allocated to Docker in the Docker settings. We recommend at least 4 GiB memory. The default values are usually not sufficient to run the full Reaction system. See the [troubleshooting-development](./troubleshooting-development#memory-errors-or-errors-about-meteor-rawlogs) article for more information.
   - Make sure you are not running any applications on the default ports: `3000`, `4000`, `4444`, `4445`, `5555`, `5432`, and `27017`.
 
-3. Clone [**Reaction Platform**](https://github.com/reactioncommerce/reaction-platform)
+3. Clone [**Reaction Development Platform**](https://github.com/reactioncommerce/reaction-development-platform)
 
 ```sh
-git clone git@github.com:reactioncommerce/reaction-platform.git
+git clone git@github.com:reactioncommerce/reaction-development-platform.git
 ```
 
 4. Now you're ready to install. Run this command to bootstrap and start all of the services:
 
 ```sh
-cd reaction-platform
+cd reaction-development-platform
 make
 ```
 
@@ -106,7 +106,7 @@ docker-compose logs -f
 | [`reaction-hydra`](https://github.com/reactioncommerce/reaction-hydra): oryd/hydra         | [localhost:4444](localhost:4444)                              |
 | [`example-storefront`](https://github.com/reactioncommerce/example-storefront) | [localhost:4000](localhost:4000)                              |
 
-7. Congrats 🎉  Now you're running the entire suite of Reaction Platform services and ready to start developing.
+7. Congrats 🎉  Now you're running the entire suite of Reaction Development Platform services and ready to start developing.
 
 **Note:** To login into the Operator UI use the credentials found in the [env.example](https://github.com/reactioncommerce/reaction/blob/v2.9.1/.env.example#L11-L12) file.
 
@@ -114,17 +114,17 @@ docker-compose logs -f
 
 If you are upgrading from Reaction 1.x, follow these steps:
 
-1. Pull locally the latest changes from the [reaction-platform repository](https://github.com/reactioncommerce/reaction-platform)
+1. Pull locally the latest changes from the [reaction-development-platform repository](https://github.com/reactioncommerce/reaction-development-platform)
 
 ```sh
-cd reaction-platform
+cd reaction-development-platform
 git pull origin trunk
 ```
 
 2. Pull locally the latest changes from the [reaction repository](https://github.com/reactioncommerce/reaction) and update packages
 
 ```sh
-cd reaction-platform/reaction
+cd reaction-development-platform/reaction
 git pull origin trunk
 docker-compose run --rm reaction npm install
 ```
@@ -132,7 +132,7 @@ docker-compose run --rm reaction npm install
 3. Pull locally the latest changes from the [example-storefront repository](https://github.com/reactioncommerce/example-storefront) and update packages
 
 ```sh
-cd reaction-platform/example-storefront
+cd reaction-development-platform/example-storefront
 git pull origin trunk
 docker-compose run --rm web yarn install
 ```
@@ -140,7 +140,7 @@ docker-compose run --rm web yarn install
 4. You are now ready to start the upgraded Reaction. Run this command to bootstrap and start all of the services:
 
 ```sh
-cd reaction-platform
+cd reaction-development-platform
 make
 ```
 
@@ -154,13 +154,13 @@ If you are upgrading from an older 2.0 release candidate, follow the steps liste
 
 With Reaction 2.0 release, we introduced a `develop` branch at both the [Reaction](https://github.com/reactioncommerce/reaction) and the [example-storefront](https://github.com/reactioncommerce/example-storefront) repositories. This branch contains all the latest changes, while `trunk`  is our stable branch.
 
-## Developing with Reaction Platform
+## Developing with Reaction Development Platform
 
 Once you've bootstrapped the entire Reaction development in Docker, use `make start` to start all containers.
 
-### Reaction Platform commands
+### Reaction Development Platform commands
 
-Run these commands from the `reaction-platform` directory:
+Run these commands from the `reaction-development-platform` directory:
 
 | Command                    | Description                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
@@ -171,7 +171,7 @@ Run these commands from the `reaction-platform` directory:
 | `make clean`               | Removes all containers, networks, and volumes. Any volume data will be lost.          |
 | `make init-<project-name>` | Example: `make init-example-storefront`. Does clone/setup for a single project. |
 
-Learn more about [Reaction Platform](https://github.com/reactioncommerce/reaction-platform).
+Learn more about [Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform).
 
 ### Git
 
