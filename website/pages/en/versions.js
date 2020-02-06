@@ -51,7 +51,7 @@ class Versions extends React.Component {
             <table className="versions">
               <tbody>
                 <tr>
-                  <th>3.0.0-next</th>
+                  <th>v3-next</th>
                   <td>
                     <a href={`${baseURL}docs/next/intro.html`}>Documentation</a>
                   </td>
