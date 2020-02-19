@@ -5,7 +5,7 @@ title: Tutorial: Getting started with GraphQL
 
 ## Install
 
-To install Reaction for development, testing, or demonstration on your own computer, follow these [Reaction Development Platform instructions](https://github.com/reactioncommerce/reaction-development-platform/tree/release-v3.0.0#prerequisites).
+To install Reaction for development, testing, or demonstration on your own computer, follow these [Reaction Development Platform instructions](https://github.com/reactioncommerce/reaction-development-platform/tree/v3.0.0#prerequisites).
 
 Make sure you are on Reaction 3.0.0 or above.
 
