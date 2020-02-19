@@ -6,7 +6,7 @@ original_id: getting-started-developing-with-reaction
 
 ## Install
 
-To install Reaction for development, testing, or demonstration on your own computer, follow these [Reaction Development Platform instructions](https://github.com/reactioncommerce/reaction-development-platform/tree/release-v3.0.0#prerequisites).
+To install Reaction for development, testing, or demonstration on your own computer, follow these [Reaction Development Platform instructions](https://github.com/reactioncommerce/reaction-development-platform/tree/v3.0.0#prerequisites).
 
 Read [Developing In Docker](installation-docker-development) to understand how to do development on a multi-service application like Reaction.
 
