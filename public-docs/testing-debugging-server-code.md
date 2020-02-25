@@ -28,11 +28,11 @@ You should see an output of Reaction's version:
 If you're using Docker to develop, first, make sure you are not already running `reaction ` with `docker-compose up`. In that case, make sure you `docker-compose stop reaction` first. Then, run reaction with one of the following `inspect` flags:
 
 ```sh
-docker-compose run --rm --service-ports --name reaction reaction npm run inspect-docker
+docker-compose run --rm --service-ports --name api api npm run inspect:docker
 ```
 
 ```sh
-docker-compose run --rm --service-ports --name reaction reaction npm run inspect-brk-docker
+docker-compose run --rm --service-ports --name api api npm run inspect-brk:docker
 ```
 
 Or, you can run the application in inspect-mode without Docker using:
