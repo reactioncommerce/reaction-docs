@@ -25,7 +25,7 @@ Every plugin should be an NPM package that is an ES module targeting Node 12.
 
 In your API project `docker-compose.dev.yml` file, in the `volumes` list, add one line for each local package you need to link into the container:
 
-`- /absolute/file/path/to/package/root:/usr/local/src/node_modules/your-plugin-package-name`
+`- /absolute/file/path/to/package/root:/usr/local/src/app/node_modules/your-plugin-package-name`
 
 In `registerPlugins.js`, import `your-plugin-package-name` and register it.
 
