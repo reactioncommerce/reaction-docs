@@ -3,23 +3,23 @@ id: version-v1.6.4-release-process
 title: Release Process
 original_id: release-process
 ---
-    
+
 The [Reaction engineering team and invited community collaborators](https://github.com/orgs/reactioncommerce/people) creates new release branches of Reaction.
 
 The process is:
 1. Create a release branch, but not until you ready to release!
-1. Change destination branch from master to release branch for all PR that should be included.
+1. Change destination branch from trunk to release branch for all PR that should be included.
 1. Wait until all tests have passed on each PR.
 1. Merge passing PR's into the release branch.
 1. Create a new `Release x.x.x` pull request.
 1. Create release notes and docs
 1. Release review, test pass, be brave.
-1. Merge to `master`, wait for tests, then tag release.
+1. Merge to `trunk`, wait for tests, then tag release.
 1. After successful merge, delete the release branch.
 
 ## Release branch
 
-1. Create a branch from `master` named **release-x.x.x**
+1. Create a branch from `trunk` named **release-x.x.x**
 2. Commit incremented `package.json` version
 3. run `meteor npm install` to bump `package-lock.json` version
 4. Should ~follow [SemVer](http://semver.org/) guidelines:
@@ -32,7 +32,7 @@ The process is:
 - Merge approved patches/fixes/features pull requests for this release into the `release-x.x.x` branch.
 - Create [LingoHub Pull Request](https://translate.lingohub.com/reaction-commerce/dashboard) if  i18n translations need updating in the release branch. LingoHub will automatically create files that are missing for all languages when only a `en.json` is provided, so a review of *i18n imports* should also be performed before merging the i18n translation PR into the release branch.
 - run `meteor npm install` as well as `reaction run` to make sure that all `package.json` and `package-lock.json` files get updated.
-- Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `master`.
+- Create a new pull request, with title `Release x.x.x` from the `release-x.x.x` branch to `trunk`.
 
 ## Release notes
 
@@ -65,10 +65,10 @@ Notes:
 
 ## Release
 
-- **Merge** the `Release x.x.x` pull request into `master`
+- **Merge** the `Release x.x.x` pull request into `trunk`
 - Allow all tests and builds to complete
 - [Draft and publish a new GitHub Release](https://github.com/reactioncommerce/reaction/releases)
-- Wait for all `master` tests to pass.
+- Wait for all `trunk` tests to pass.
 - Follow the format of previous release, copy change log from release PR into the release notes.
 
 ## Cleanup

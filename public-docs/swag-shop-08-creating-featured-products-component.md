@@ -32,11 +32,11 @@ query featuredQuery($shopId: ID!) {
 }
 ```
 
-So let's break this down a little bit. First we declared that we are creating a query and we gave it a name `featuredQuery`, and said that we take a shopId of type `ID` as our type. We will then call the server query called `featuredProductsByShop` with the `shopId` we were passed in.
+So let's break this down a little bit. First we declared that we are creating a query and we gave it a name `featuredQuery`, and said that we take a shopId of type `ID` as our type. We will then call the server query that we created in our last [tutorial on server side GraphQL plugin](swag-shop-07-graphql-server-plugin.md) `featuredProductsByShop` with the `shopId` as input.
 
-Next we are declaring the 'shape' of our return type. Since we are getting a cursor we says we want nodes, we want the Id of the node and we want those nodes to be of type `CatalogItemProduct` and then we declare which fields of the `CatalogItemProduct` type we want. And that's it. You can see that query looks just like our test code above with just an additional wrapper around.
+Next, we are declaring the 'shape' of our return type. Since we are getting a cursor we say want nodes, we want the Id of the node and we want those nodes to be of type `CatalogItemProduct` and then we declare which fields of the `CatalogItemProduct` type we want. And that's it. You can see that query looks just like our test code above with just an additional wrapper around.
 
-Now let's create our actual HOC which we will call `withFeatured.js`. That file will look something like this:
+Now, let's create our actual HOC which we will call `withFeatured.js`. That file will look something like this:
 
 ```javascript
 import React from "react";
@@ -84,7 +84,7 @@ export default (Component) => (
 
 ```
 
-This is a Component that will wrap our display components which is why we take in the argument `Component`. We are also going to wrap our component in an HOC called `withShop` so we will be getting the `shopID` of the current shop. And then we use the `Query` component from the `react-apollo` library to wrap our passed-in component and then we can pass in `featuredProducts`. So the snipped where we do the actual wrapping looks something like this
+This is a Component that will wrap our display components which is why we take in the argument `Component`. We are also going to wrap our component in an HOC called `withShop` so we get the `shopID` of the current shop. And then we use the `Query` component from the `react-apollo` library to make a server request for `featuredProductsByShop` GraphQL query and wrap our passed-in component. When the server responds, the `Query` component make the data available in `data` object or `loading` is `true` if the data has not yet arrived and `error` object is sent when there is some error from the server. So the snippet where we do the actual wrapping looks something like this
 
 ```
 export default compose(

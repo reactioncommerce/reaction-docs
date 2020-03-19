@@ -39,7 +39,7 @@ const ExtendedSchema = Schemas.Product.extend({
 Products.attachSchema(ExtendedSchema, { replace: true, selector: { type: "simple" } });
 ```
 
-Besides the Product schema, we’ll also need to extend the Filters schema, which is used to pass filter criteria when subscribing to products. For more information on how simple schemas are used and how to override it in Reaction, visit our [docs](https://docs.reactioncommerce.com/reaction-docs/master/simple-schema).
+Besides the Product schema, we’ll also need to extend the Filters schema, which is used to pass filter criteria when subscribing to products. For more information on how simple schemas are used and how to override it in Reaction, visit our [docs](https://docs.reactioncommerce.com/reaction-docs/trunk/simple-schema).
 
 [/imports/plugins/custom/reaction-swag-shop/server/publications/collections/schemas/filters.js](https://github.com/reactioncommerce/reaction-swag-shop/blob/15ae96a2f9607e155df0b2ae9a47210d799eb2a8/server/publications/collections/schemas/filters.js)
 ```js

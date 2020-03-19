@@ -4,7 +4,7 @@ title: Updating a 2.x API plugin to work with Reaction API 3.x
 sidebar_label: Updating an API plugin for 3.x
 ---
 
-The Reaction API plugin system has changed a lot in the API 3.0.0 release. Primarily this is because the API now runs as a NodeJS program instead of a Meteor app, and because the Babel build step has been removed in favor of using Node's built in support for ECMAScript modules. But many other breaking changes were made in 3.0.0 as well. For a summary of changes in 3.0.0, refer to [Upgrading](./upgrading) and the [API Changelog](https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md).
+The Reaction API plugin system has changed a lot in the API 3.0.0 release. Primarily this is because the API now runs as a NodeJS program instead of a Meteor app, and because the Babel build step has been removed in favor of using Node's built in support for ECMAScript modules. But many other breaking changes were made in 3.0.0 as well. For a summary of changes in 3.0.0, refer to [Upgrading](./upgrading) and the [API Changelog](https://github.com/reactioncommerce/reaction/blob/trunk/CHANGELOG.md).
 
 If you have custom plugins as part of your Reaction 2.x system, you'll need to go through them one by one and update them according to the following recommendations.
 
@@ -13,7 +13,7 @@ If you have custom plugins as part of your Reaction 2.x system, you'll need to g
 Every plugin should be an NPM package that is an ES module targeting Node 12.
 
   - Must have `"type": "module"` in the `package.json`
-  - Should have `"engines": { "node": ">=12.10.0" }` in the `package.json`
+  - Should have `"engines": { "node": ">=12.14.1" }` in the `package.json`
   - Use `import/export` in your files rather than `require`, and publish without running the files through Babel.
   - For a good example, see [https://github.com/reactioncommerce/api-utils/blob/trunk/package.json](https://github.com/reactioncommerce/api-utils/blob/trunk/package.json)
   - The package entry point must `export default` a function that accepts one argument, `api`, which is a `ReactionAPI` instance. In most cases, the only thing this function will do is call `api.registerPlugin`, passing in your plugin options.
@@ -25,7 +25,7 @@ Every plugin should be an NPM package that is an ES module targeting Node 12.
 
 In your API project `docker-compose.dev.yml` file, in the `volumes` list, add one line for each local package you need to link into the container:
 
-`- /absolute/file/path/to/package/root:/usr/local/src/node_modules/your-plugin-package-name`
+`- /absolute/file/path/to/package/root:/usr/local/src/app/node_modules/your-plugin-package-name`
 
 In `registerPlugins.js`, import `your-plugin-package-name` and register it.
 

@@ -49,7 +49,7 @@ const ExtendedSchema = new SimpleSchema([Product,
 
 After extending, we make sure that our new schema is attached to the Products collection with `Products.attachSchema()`.
 
-To overwrite the schema already bound to the collection, we pass the parameter `replace: true` into `.attachSchema()`. Also notice the `selector` option, which is explained [here, section multiple-schemas](https://docs.reactioncommerce.com/reaction-docs/master/simple-schema)
+To overwrite the schema already bound to the collection, we pass the parameter `replace: true` into `.attachSchema()`. Also notice the `selector` option, which is explained [here, section multiple-schemas](https://docs.reactioncommerce.com/reaction-docs/trunk/simple-schema)
 
 The resulting server file should look like this:
 
@@ -113,7 +113,7 @@ Now that we know where our products are located, let's enhance the existing layo
 
 ### Add AvailabilityMap component to PDP
 
-`ProductDetailPageSimpleLayout` allows us to define how the PDP should look like in a declarative way. You may have a look into it [here](https://github.com/reactioncommerce/reaction/blob/master/imports/plugins/included/product-detail-simple/lib/layout/simple.js).
+`ProductDetailPageSimpleLayout` allows us to define how the PDP should look like in a declarative way. You may have a look into it [here](https://github.com/reactioncommerce/reaction/blob/v1.9.0/imports/plugins/included/product-detail-simple/lib/layout/simple.js).
 
 For our example we're going to swap the section with the product metadata, `ProductMetaData`, for the map, which we'll call `AvailabilityMap`:
 
@@ -231,7 +231,7 @@ Great! This React component will inject the JavaScript we need and render the ma
 
 What isn't provided out-of-the-box is the `trackingId` property needed for Google maps inclusion. This is your personal Google API key that is available from [developer.google.com](https://developers.google.com/maps/documentation/javascript/get-api-key). We're going to store that in our settings file in `/settings/dev.settings.json`:
 
-**[/settings/dev.settings.json](https://github.com/reactioncommerce/reaction/blob/master/settings/dev.settings.json)**
+**[/settings/dev.settings.json](https://github.com/reactioncommerce/reaction/blob/v1.9.0/settings/dev.settings.json)**
 
 ```json
 {

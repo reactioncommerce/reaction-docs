@@ -3,14 +3,14 @@ id: version-v1.5.0-sortableTable
 title: Sortable Table
 original_id: sortableTable
 ---
-    
+
 The SortableTable component gives you a sortable, filterable, extendable data table.
 
 SortableTable is built with [ReactTable](https://react-table.js.org/#/story/readm). See their docs if you'd like to extend it further.
 
 ## Import
 
-SortableTable is available as via `registerComponent`. See the [Reaction Components API Docs](https://docs.reactioncommerce.com/reaction-docs/master/components-api) for more info.
+SortableTable is available as via `registerComponent`. See the [Reaction Components API Docs](https://docs.reactioncommerce.com/reaction-docs/trunk/components-api) for more info.
 
 ```javascript
 import { Components } from "@reactioncommerce/reaction-components";

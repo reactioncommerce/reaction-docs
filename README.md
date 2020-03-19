@@ -43,7 +43,7 @@ To update docs for the current released version of Reaction, edit existing Markd
 
 ### Documenting unreleased features, changes
 
-To update docs of unreleased features, you will need to edit existing Markdown files in `public_docs`. For example, if you are documenting *upcoming* Reaction API changes to Cart that are merged into `develop`, but not yet in `master`, you'd update the `public-docs/cart.md` file.
+To update docs of unreleased features, you will need to edit existing Markdown files in `public_docs`. For example, if you are documenting *upcoming* Reaction API changes to Cart that are merged into `develop`, but not yet in ``trunk` , you'd update the `public-docs/cart.md` file.
 
 1. Edit the file and save.
 1. Go to `localhost:4242/docs/next/<YOURMARKDOWNFILE_ID>` to see your changes locally.
@@ -172,7 +172,7 @@ docker-compose down && docker-compose up
 
 4. If all things look good, push the branch up to make a pull request.
 
-5. Merge to `master` to auto-deploy
+5. Merge to `trunk`  to auto-deploy
 
 ## Deploying
 
@@ -180,9 +180,9 @@ docker-compose down && docker-compose up
 
 Merging to `staging` will trigger a CircleCI build to https://reaction-docs-staging.reactioncommerce.com/
 
-### Merge to `master` branch
+### Merge to `trunk`  branch
 
-Merging to `master` will trigger a CircleCI build to http://reaction-docs-production.netlify.com
+Merging to `trunk`  will trigger a CircleCI build to http://reaction-docs-production.netlify.com
 
 ## Algolia search configuration
 

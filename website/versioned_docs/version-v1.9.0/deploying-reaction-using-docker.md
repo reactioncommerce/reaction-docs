@@ -3,7 +3,7 @@ id: version-v1.9.0-deploying-reaction-using-docker
 title: Docker
 original_id: deploying-reaction-using-docker
 ---
-    
+
 We think [Docker](https://www.docker.com) is one of the easiest ways to deploy modern apps and it's currently the recommended approach if you're hosting your own Reaction Commerce shop. If you aren't using a customized version of Reaction, there are only a few steps to get up and running and you don't even need to know much about Docker to do it. Let's get started!
 
 ## Install
@@ -54,7 +54,7 @@ eval "$(docker-machine env reaction-host)"
 
 Now when you run Docker commands, they will be executing on the remote server instead of your local machine. Ok, let's fire up some Docker containers on your new server!
 
-If you don't have a customized version of Reaction Commerce, you can use our official release builds that are [available on Docker Hub](https://hub.docker.com/r/reactioncommerce/reaction/) as `reactioncommerce/reaction:latest`. The official releases are built by [Circle CI](https://circleci.com/) every time code is merged into [the master branch on Github](https://github.com/reactioncommerce/reaction/tree/master).
+If you don't have a customized version of Reaction Commerce, you can use our official release builds that are [available on Docker Hub](https://hub.docker.com/r/reactioncommerce/reaction/) as `reactioncommerce/reaction:latest`. The official releases are built by [Circle CI](https://circleci.com/) every time code is merged into [the trunk branch on Github](https://github.com/reactioncommerce/reaction/tree/trunk).
 
 All you need to run the latest stable build of Reaction is a single Docker command (assuming you have a Mongo database hosted somewhere - e.g. [Compose.io](https://compose.io), etc.)
 
@@ -178,7 +178,7 @@ docker run -d \
 
 You can also use Docker Compose to run Reaction and Mongo in separate connected Docker containers.
 
-We've included a demo [docker-compose file](https://github.com/reactioncommerce/reaction/blob/master/docker-compose-demo.yml) in the repository. In its current basic form, it is meant for quickly running a demo of your production build. It can also serve as starting point for your production docker-compose setup.
+We've included a demo [docker-compose file](https://github.com/reactioncommerce/reaction/blob/v1.9.0/docker-compose-demo.yml) in the repository. In its current basic form, it is meant for quickly running a demo of your production build. It can also serve as starting point for your production docker-compose setup.
 
 If you have a custom Docker image of your Reaction app, you can modify the `docker-compose-demo.yml` file to point to use it by changing the `image` name of the `reaction` service.
 

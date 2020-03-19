@@ -3,8 +3,6 @@ id: permissions
 title: Permissions
 ---
 
-The [alanning:roles](https://github.com/alanning/meteor-roles) Meteor package provides Reaction permissions support.
-
 ## Permission Groups
 
 Permission Groups are are way to grant multiple users a group of permissions. The Accounts Dashboard provides a way to create a group and add users to them.

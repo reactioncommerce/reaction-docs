@@ -9,7 +9,7 @@ Here are the steps to get started using Reaction in `inspect` mode in any editor
 
 ## Launch the application in `inspect` mode
 
-1. Before we get started, make sure you are running Reaction 2.0.
+1. Before we get started, make sure you are running Reaction 3.0.0 or higher.
 
 Check your Reaction version by running:
 
@@ -20,21 +20,19 @@ grep '"version"' package.json
 You should see an output of Reaction's version:
 
 ```sh
-"version": "2.0.0-rc.10",
+"version": "3.0.0",
 ```
-
-If your Reaction version is older than 1.6, you will have to upgrade to at least 1.6 first.
 
 2. Now you're ready to run reaction in inspect mode.
 
 If you're using Docker to develop, first, make sure you are not already running `reaction ` with `docker-compose up`. In that case, make sure you `docker-compose stop reaction` first. Then, run reaction with one of the following `inspect` flags:
 
 ```sh
-docker-compose run --rm --service-ports --name reaction reaction npm run inspect-docker
+docker-compose run --rm --service-ports --name api api npm run inspect:docker
 ```
 
 ```sh
-docker-compose run --rm --service-ports --name reaction reaction npm run inspect-brk-docker
+docker-compose run --rm --service-ports --name api api npm run inspect-brk:docker
 ```
 
 Or, you can run the application in inspect-mode without Docker using:

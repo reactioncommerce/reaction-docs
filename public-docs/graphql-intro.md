@@ -5,12 +5,13 @@ title: Tutorial: Getting started with GraphQL
 
 ## Install
 
-- Make sure you are on Reaction 2.0 or above.
-- Check your current Reaction version by running: `reaction -v`
+To install Reaction for development, testing, or demonstration on your own computer, follow these [Reaction Development Platform instructions](https://github.com/reactioncommerce/reaction-development-platform/tree/v3.0.0#prerequisites).
+
+Make sure you are on Reaction 3.0.0 or above.
 
 ## Your first query
 
-To try a simple query, open the GraphQL Playground interface by going to `http://localhost:3000/graphql-beta` in your browser. This is the same URL that handles GraphQL POST requests, but for GET requests it serves GraphQL Playground.
+To try a simple query, open the GraphQL Playground interface by going to `http://localhost:3000/graphql` in your browser. This is the same URL that handles GraphQL POST requests, but for GET requests it serves GraphQL Playground.
 
 In the left-hand query box, enter the following:
 
@@ -58,13 +59,19 @@ You will not get any data:
 }
 ```
 
-To authenticate, you'll need a login token. For instructions, see [Using the GraphQL API: Identity and Authorization](./graphql-using#identity-and-authorization).
+To authenticate, you'll need an access token. In the API project directory, run the following command:
 
-Once you have the token copied, expand the `HTTP HEADERS` box in the bottom left corner of GraphQL Playground, and add the token header:
+```sh
+bin/token [userId]
+```
+
+Substitute a real user ID, which is the internal user ID you see in the `_id` field in the MongoDB `users` collection.
+
+An access token is printed, which you can then copy. Expand the `HTTP HEADERS` box in the bottom left corner of GraphQL Playground, and add the token header:
 
 ```json
 {
-  "meteor-login-token": "A3z_DAihyRoxc4OhQ-nN-htsPODTFL582hDWO92DBqR"
+    "Authorization": "J_oKS8T8rHrr_7b-6c46MBEusEWJWI9oOh8QF6xvWp4.NQQ5suMcDxMj-IsGE7BxSzOXzgfmMnkzbjA2x1RoZ50"
 }
 ```
 
@@ -149,6 +156,6 @@ To confirm that the mutation changed the currency as expected, you can query the
 Once you've changed an entry successfully, check in your database or your running application to confirm the changes were made correctly.
 
 ## More on GraphQL
-- [Reaction Commerce: Running Jest Tests for GraphQL](https://docs.reactioncommerce.com/reaction-docs/master/running-jest-tests)
+- [Reaction Commerce: Running Jest Tests for GraphQL](https://docs.reactioncommerce.com/reaction-docs/trunk/running-jest-tests)
 - [GraphQL: Introduction to GraphQL](http://graphql.org/learn/)
 - [Apollo GraphQL: Bind GraphQL data](https://www.apollographql.com/client/)

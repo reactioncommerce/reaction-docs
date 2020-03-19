@@ -38,7 +38,7 @@ class Versions extends React.Component {
                     <a href={`${baseURL}docs/intro.html`}>Documentation</a>
                   </td>
                   <td>
-                    <a href="https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md">Release Notes</a>
+                    <a href="https://github.com/reactioncommerce/reaction/blob/trunk/CHANGELOG.md">Release Notes</a>
                   </td>
                 </tr>
               </tbody>
@@ -51,12 +51,9 @@ class Versions extends React.Component {
             <table className="versions">
               <tbody>
                 <tr>
-                  <th>master</th>
+                  <th>v3-next</th>
                   <td>
                     <a href={`${baseURL}docs/next/intro.html`}>Documentation</a>
-                  </td>
-                  <td>
-                    <a href={"https://github.com/reactioncommerce/reaction/"}>Source Code</a>
                   </td>
                 </tr>
               </tbody>
@@ -72,10 +69,10 @@ class Versions extends React.Component {
                         <a href={`${baseURL}docs/${version}/intro.html`}>Documentation</a>
                       </td>
                       <td>
-                        <a href="https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md">Release Notes</a>
+                        <a href="https://github.com/reactioncommerce/reaction/blob/trunk/CHANGELOG.md">Release Notes</a>
                       </td>
                       <td>
-                        <a href="https://github.com/reactioncommerce/reaction/blob/master/CHANGELOG.md">Change Log</a>
+                        <a href="https://github.com/reactioncommerce/reaction/blob/trunk/CHANGELOG.md">Change Log</a>
                       </td>
                     </tr>
                   ))}

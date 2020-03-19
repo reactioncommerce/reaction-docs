@@ -3,7 +3,7 @@ id: version-v1.6.4-reaction-cart
 title: Cart
 original_id: reaction-cart
 ---
-    
+
 ## Cart Workflow
 
 `sessionId` should be unique for each new client (moz vs firefox, mobile vs desktop etc), but not unique in the same browser instance (tabs).
@@ -20,7 +20,7 @@ When this `authenticated` user logs out of the site, the `publication` is update
 
 If the existing registered `guest` user adds items to an `anonymous` cart session, and then logs in,  the `anonymous` cart will be merged to their existing cart and new items added, existing items will additional quantity will get incremented. This is true from any browser/session.
 
-## [Cart Methods](https://github.com/reactioncommerce/reaction/blob/master/packages/reaction-core/server/methods/cart.js)
+## [Cart Methods](https://github.com/reactioncommerce/reaction/blob/v1.6.4/packages/reaction-core/server/methods/cart.js)
 
 ### cart/mergeCart
 

@@ -3,7 +3,7 @@ id: version-v1.12.0-graphql-intro
 title: Tutorial: Getting started with GraphQL
 original_id: graphql-intro
 ---
-    
+
 ## Install
 
 - Make sure you are on Reaction 1.11 and above.
@@ -147,6 +147,6 @@ To confirm that the mutation changed the currency as expected, you can query the
 Once you've changed an entry successfully, check in your database or your running application to confirm the changes were made correctly.
 
 ## More on GraphQL
-- [Reaction Commerce: Running Jest Tests for GraphQL](https://docs.reactioncommerce.com/reaction-docs/master/running-jest-tests)
+- [Reaction Commerce: Running Jest Tests for GraphQL](https://docs.reactioncommerce.com/reaction-docs/trunk/running-jest-tests)
 - [GraphQL: Introduction to GraphQL](http://graphql.org/learn/)
 - [Apollo GraphQL: Bind GraphQL data](https://www.apollographql.com/client/)

@@ -3,7 +3,7 @@ id: version-v1.2.0-faqs
 title: FAQs
 original_id: faqs
 ---
-    
+
 ## How do I sign up for an account, login to my dashboard, and set up my domain?
 
 Currently, Reaction is only available locally via GitHub. In early 2017, we'll be launching the Beta release of our hosted platform, which will allow anyone to set up shop via our intuitive dashboard. Our custom hosting solution, which runs on Docker, will support domains, SSL, and more. Our vision is to allow anyone to customize, extend, and deploy his or her Reaction shop directly from on our platform.
@@ -34,7 +34,7 @@ We're always testing! During our Alpha release, we performed extensive tests, de
 
 ## Reaction is an open source project. How can I get involved?
 
-We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/master/guidelines)!
+We're always open to contributions from our community. To learn more about becoming a contributor, [click here](http://blog.reactioncommerce.com/how-to-get-involved-with-reaction-commerce/). And don't forget to read our [Community Guidelines](https://docs.reactioncommerce.com/reaction-docs/trunk/guidelines)!
 
 ## Reaction is all JavaScript. Does this have a negative impact on SEO?
 

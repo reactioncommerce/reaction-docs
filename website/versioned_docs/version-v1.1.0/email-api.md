@@ -3,7 +3,7 @@ original_id: email-api
 id: version-v1.1.0-email-api
 title: Email
 ---
-    
+
 Email sending in Reaction is handled by [Nodemailer](https://github.com/nodemailer/nodemailer) and the use of any SMTP server is supported. See the [configuration documentation](email) for details on how to set up mail in the admin dashboard.
 
 All emails that are sent from Reaction are added to a job queue for both logging and failure handling (see [vsivsi:job-collection](https://github.com/vsivsi/meteor-job-collection) for full API docs). While you can add jobs directly to the queue, it is recommended that you use the API outlined below to send emails.
@@ -75,7 +75,7 @@ Returns an email template as a `String` for server side rendering of an email bo
 
 **template** `{String}` (required)
 
-The `template` name passed in is used to find a template in either the `Templates` collection in the database or the provided email templates in the filesystem. The convention is to name templates based on the folder/file structure relative to [/private/email/templates](https://github.com/reactioncommerce/reaction/tree/master/private/email/templates). For example, to get the template used for inviting a shop member, you would use:
+The `template` name passed in is used to find a template in either the `Templates` collection in the database or the provided email templates in the filesystem. The convention is to name templates based on the folder/file structure relative to [/private/email/templates](https://github.com/reactioncommerce/reaction/tree/v1.1.0/private/email/templates). For example, to get the template used for inviting a shop member, you would use:
 
 ```js
 const tmpl = Reaction.Email.getTemplate("accounts/inviteShopMember");
@@ -90,4 +90,4 @@ Templates.findOne({
 });
 ```
 
-If no template is found, it will fallback to the default template in the filesystem at [/private/email/templates/accounts/inviteShopMember.html](https://github.com/reactioncommerce/reaction/blob/master/private/email/templates/accounts/inviteShopMember.html) using [Meteor's Assets API](http://docs.meteor.com/api/assets.html).
+If no template is found, it will fallback to the default template in the filesystem at [/private/email/templates/accounts/inviteShopMember.html](https://github.com/reactioncommerce/reaction/blob/v1.1.0/private/email/templates/accounts/inviteShopMember.html) using [Meteor's Assets API](http://docs.meteor.com/api/assets.html).

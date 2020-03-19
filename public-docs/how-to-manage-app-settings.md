@@ -30,7 +30,7 @@ await app.registerPlugin({
   // ... other options
   globalSettingsConfig: {
     myPluginLicenseKey: {
-      rolesThatCanEdit: ["admin"],
+      permissionsThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
       simpleSchema: {
         type: String,
         min: 10
@@ -42,7 +42,7 @@ await app.registerPlugin({
 
 Note the following:
 - `globalSettingsConfig` is an object where each key is the name of a setting you want to use. The setting names are not namespaced to your plugin, so be sure that it will be unique among all plugins. For example, this example uses `myPluginLicenseKey` instead of `licenseKey`.
-- `rolesThatCanEdit` must be an array of roles. A user must have any ONE of these roles to update this setting value.
+- `permissionsThatCanEdit` must be an array of permissions. A user must belong to a group that has any ONE of these permissions to update this setting value.
 - `simpleSchema` is a [simpl-schema](https://github.com/aldeed/simple-schema-js) field definition used to validate the data before it is saved.
 - You can also add a `defaultValue` option if your setting needs a specific value before it is ever set.
 
@@ -98,7 +98,7 @@ Or you can get it in server code:
 const { myPluginLicenseKey } = await context.queries.appSettings(context);
 ```
 
-*Anyone can view all settings by default.* If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
+*Anyone can view all settings by default.* If your setting value should be visible to only certain permissions, add a resolver for the field, check the current user's permissions in the resolver, and throw a `ReactionError` if they don't have proper permissions:
 
 ```js
 import ReactionError from "@reactioncommerce/reaction-error";
@@ -111,7 +111,7 @@ await app.registerPlugin({
     resolvers: {
       GlobalSettings: {
         async myPluginLicenseKey(settings, _, context) {
-          await context.checkPermissions(["admin"]);
+          await context.validatePermissions("reaction:plugin-name:entity-name", "read:settings", { shopId: PRIMARY_SHOP_ID });
           return settings.myPluginLicenseKey;
         }
       }
@@ -136,7 +136,7 @@ await app.registerPlugin({
   shopSettingsConfig: {
     isMyPluginTurboMode: {
       defaultValue: false,
-      rolesThatCanEdit: ["admin"],
+      permissionsThatCanEdit: ["reaction:plugin-name:entity-name/update:settings"],
       simpleSchema: {
         type: String,
         min: 10
@@ -148,7 +148,7 @@ await app.registerPlugin({
 
 Note the following:
 - `shopSettingsConfig` is an object where each key is the name of a setting you want to use. The setting names are not namespaced to your plugin, so be sure that it will be unique among all plugins. For example, this example uses `isMyPluginTurboMode` instead of `isTurboMode`.
-- `rolesThatCanEdit` must be an array of roles. A user must have any ONE of these roles to update this setting value.
+- `permissionsThatCanEdit` must be an array of permissions. A user must belong to a group that has any ONE of these permissions to update this setting value.
 - `simpleSchema` is a [simpl-schema](https://github.com/aldeed/simple-schema-js) field definition used to validate the data before it is saved.
 - Set a `defaultValue` if your setting needs a specific value before it is ever set.
 
@@ -205,7 +205,7 @@ Or you can get it in server code:
 const { isMyPluginTurboMode } = await context.queries.appSettings(context, internalShopId);
 ```
 
-*Anyone can view all settings by default.* If your setting value should be visible to only certain roles, add a resolver for the field, check the current user's roles in the resolver, and throw a `ReactionError` if they don't have proper permissions:
+*Anyone can view all settings by default.* If your setting value should be visible to only certain permissions, add a resolver for the field, check the current user's permissions in the resolver, and throw a `ReactionError` if they don't have proper permissions:
 
 ```js
 import ReactionError from "@reactioncommerce/reaction-error";
@@ -218,7 +218,7 @@ await app.registerPlugin({
     resolvers: {
       ShopSettings: {
         async isMyPluginTurboMode(settings, _, context) {
-          await context.checkPermissions(["admin"], settings.shopId);
+          await context.validatePermissions("reaction:plugin-name:entity-name", "read:settings", { shopId: PRIMARY_SHOP_ID });
           return settings.isMyPluginTurboMode;
         }
       }

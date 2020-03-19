@@ -38,7 +38,7 @@ class Footer extends React.Component {
               <h5>Explore</h5>
               <ul className="footer-list">
                 <li><a target="_blank" href="https://reactioncommerce.com/features">Features</a></li>
-                <li><a target="_blank" href="https://docs.reactioncommerce.com/reaction-docs/master/community-showcase">Showcase</a></li>
+                <li><a target="_blank" href="https://docs.reactioncommerce.com/reaction-docs/trunk/community-showcase">Showcase</a></li>
                 <li><a target="_blank" href="https://reactioncommerce.com/roadmap">Roadmap</a></li>
                 <li><a target="_blank" href="https://docs.reactioncommerce.com/">Docs</a></li>
                 <li><a target="_blank" href="https://github.com/reactioncommerce/reaction">GitHub</a></li>
