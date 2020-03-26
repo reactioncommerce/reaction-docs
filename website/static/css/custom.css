@@ -716,3 +716,7 @@ p.item-label {
 .font-icon {
   font-style: normal;
 }
+
+div.env-vars th {
+  min-width: 300px
+}
