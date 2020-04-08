@@ -1,5 +1,5 @@
 ---
-id: version-3.4.0-merchant-shop-setup
+id: version-2.0.0-merchant-shop-setup
 title: Merchant Shop Setup
 original_id: merchant-shop-setup
 ---
