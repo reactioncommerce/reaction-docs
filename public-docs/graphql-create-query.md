@@ -87,7 +87,7 @@ export default {
 };
 ```
 
-If this is the first query for the plugin, you'll also need to pass the full `queries` object to `registerPlugin` in the plugin's `register.js` file:
+If this is the first query for the plugin, you'll also need to pass the full `queries` object to `registerPlugin` in the plugin's `index.js` file:
 
 ```js
 import queries from "./queries";
@@ -182,7 +182,7 @@ export default {
 };
 ```
 
-Then pass the full `resolvers` object to `registerPlugin` in the plugin's `register.js` file:
+Then pass the full `resolvers` object to `registerPlugin` in the plugin's `index.js` file:
 
 ```js
 import resolvers from "./resolvers";
