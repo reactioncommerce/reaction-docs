@@ -57,6 +57,6 @@ So instead we break into separate files and folders as necessary. Whether you us
 
 Here's how the payments plugin folder structure looks splitting that one file into multiple:
 
-![](/assets/graphql-resolvers-file-structure.png "GraphQL resolvers file structure")
+![GraphQL resolvers file structure](/assets/graphql-resolvers-file-structure-3.4.0.png)
 
 For a full understanding, look through these files in the codebase.
