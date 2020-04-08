@@ -32,8 +32,8 @@ export default {
 You could save that file as `resolvers.js` in the payments plugin, and then import it and register it:
 
 ```js
-import resolvers from "./resolvers";
-import schemas from "./schemas";
+import resolvers from "./resolvers/index.js";
+import schemas from "./schemas/index.js";
 
 export default async function register(app) {
   await app.registerPlugin({
@@ -56,6 +56,6 @@ So instead we break into separate files and folders as necessary. Whether you us
 
 Here's how the payments plugin folder structure looks splitting that one file into multiple:
 
-![](/assets/graphql-resolvers-file-structure.png "GraphQL resolvers file structure")
+![GraphQL resolvers file structure](/assets/graphql-resolvers-file-structure-3.4.0.png)
 
 For a full understanding, look through these files in the codebase.

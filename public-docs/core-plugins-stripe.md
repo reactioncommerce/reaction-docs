@@ -11,34 +11,31 @@ The Stripe client components all communicate directly with Stripe servers and cr
 ### Stripe Card
 The "Stripe Card" payment method, which is provided by this plugin, allows a shopper to enter credit card details as payment for an order. Users in the United States can accept Visa, Mastercard, American Express, Discover, JCB, Diners Club, and China UnionPay credit and debit cards. The exact cards that are supported varies by country. Refer to [Stripe documentation](https://stripe.com/docs/sources/cards) for more details.
 
-### Stripe Stored Card
-Coming soon
-
 ## How to: Enable and Configure Stripe Payments
 
 > Prerequisite: Create a free Stripe account. A test account is enough if you are only testing or developing.
 
 ### Plugin Configuration
 
-1. Log in to Reaction Dashboard with an account that has permission to access plugin settings.
-2. In the sidebar, click Payment.
+1. Log in to `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally) with an account that has permission to access plugin settings.
+2. In the sidebar, go to Settings > Payment.
 3. You should see a section with a toggle for each payment plugin. If it is not already enabled, click the toggle to enable the Stripe plugin.
-4. There are two settings fields you need to fill out for Stripe to work, API Secret Key and Publishable Key. Copy these from your Stripe account, and paste them into the fields. The secret key begins with `sk_` and the publishable key begins with `pk_`. If you are logged into a development or testing environment, be sure to use the “test” keys so that you can enter fake credit card details and no money will actually change hands.
-5. Click “Save changes”
+4. With the Stripe payment method enabled, head to your API's environment variables (in `<PROJECT_ROOT>/reaction/.env` if you're running it locally) and set `STRIPE_API_KEY` to your Stripe Secret Key. Copy it from your Stripe account. The Secret Key begins with `sk_`. If you are using a development or testing environment, be sure to use the “test” keys so that you can enter fake credit card details and no money will actually change hands.
 
 This is the only server configuration necessary.
 
 ### Client Components
 
-If you are using a starter client UI provided by Reaction, the necessary client components are already included and will appear where they should. If you are building your own client, you may want to use our [StripeForm React component](https://designsystem.reactioncommerce.com/#!/StripeForm), which is part of the Example Storefront Component Library. It wraps [react-stripe-elements](https://github.com/stripe/react-stripe-elements) to do some of the work for you, but you can also use `react-stripe-elements` directly, or use any Stripe client that allows you to securely create a source token.
+If you are using the `example-storefront` provided by Reaction, the necessary client components are already included and will appear where they should. If you are building your own client, you may want to use our [StripeForm React component](https://designsystem.reactioncommerce.com/#!/StripeForm), which is part of the Example Storefront Component Library. It wraps [react-stripe-elements](https://github.com/stripe/react-stripe-elements) to do some of the work for you, but you can also use `react-stripe-elements` directly, or use any Stripe client that allows you to securely create a source token.
 
-> For Stripe payments to work in the NextJS starter app, you must set the `STRIPE_PUBLIC_API_KEY` environment variable, which is done in the `.env` file for local development.
+> For Stripe payments to work in `example-storefront`, you must set the `STRIPE_PUBLIC_API_KEY` environment variable to your Publishable Key (beginning with `pk_`). This is done in `<PROJECT_ROOT>/example-storefront/.env` for local environments.
+
 
 ## How to: Test a Stripe Payment
 
 > Prerequisite: Enable and configure Stripe payments with "test" keys
 
-1. Access the storefront UI.
+1. Access the storefront UI (on [localhost:4000](http://localhost:4000) if you're running it locally).
 2. Add items to your cart and begin checkout.
 3. When you get to the payment step, choose "Credit Card" payment method if multiple options are shown.
 4. You should see the Stripe credit card entry form. Enter the following test information in the fields:
