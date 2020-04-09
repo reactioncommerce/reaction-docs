@@ -10,7 +10,7 @@ You may use the included tax rates plugin, install a community plugin, or create
 
 ## Enable a tax service
 
-1. In `reaction-admin` (on [localhost:4000](http://localhost:4000) if you're running it locally), got to Settings > Taxes.
+1. In `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally), got to Settings > Taxes.
 2. Each tax service may have settings in the panel and/or may require that certain environment variables be set. Before enabling a service, verify that you've properly configured all of this. (For the included "Custom Rates" service, see below.)
 3. Near the top of the tax panel, select a service as the active service for your shop, and click Save.
 

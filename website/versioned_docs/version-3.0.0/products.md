@@ -4,7 +4,7 @@ title: Products
 original_id: products
 ---
 
-Create, edit, and publish products to the catalog from the **Products** section of `reaction-admin` (accessible on [localhost:4000](http://localhost:4000) if you're running it locally).
+Create, edit, and publish products to the catalog from the **Products** section of `reaction-admin` (accessible on [localhost:4080](http://localhost:4080) if you're running it locally).
 
 ## Creating a product
 

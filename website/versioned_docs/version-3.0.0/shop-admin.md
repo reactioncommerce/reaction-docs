@@ -4,7 +4,7 @@ title: Shop
 original_id: shop-admin
 ---
     
-In `reaction-admin` (on [localhost:4000](http://localhost:4000) if you're running it locally), go to `Settings > Shop` to manage the following shop settings:
+In `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally), go to `Settings > Shop` to manage the following shop settings:
 
 - **Shop name** - Change shop name
 - **Shop email** - Change shop email
