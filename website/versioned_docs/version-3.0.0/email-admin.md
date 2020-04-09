@@ -10,10 +10,10 @@ This guide will cover how to set up your transactional emails your own custom SM
 
 ## Configuring your email provider
 
-You can configure your own custom SMTP settings by setting the `MAIL_URL` environment variable to an SMTP URL. Any SMTP server is supported, including self-hosted.
+You can configure your own custom SMTP settings by setting the `MAIL_URL` environment variable to an SMTP URL (in `<PROJECT_ROOT>/reaction/.env` on a local development setup). Any SMTP server is supported, including self-hosted.
 
 ```sh
-export MAIL_URL="smtp://username:password@example-mail-host.com:465"
+MAIL_URL="smtp://username:password@example-mail-host.com:465"
 ```
 
 Reaction is now ready to send emails!
