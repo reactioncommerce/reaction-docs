@@ -24,7 +24,7 @@ The Custom Rates tax service allows you to manually enter tax rates and the coun
 
 ### Add a tax jurisdiction
 
-1. In the "Customi Tax Rates" section, notice there is a table of existing rates. Click the "New Tax Rate" button beneath it to add one.
+1. In the "Custom Tax Rates" section, notice there is a table of existing rates. Click the "New Tax Rate" button beneath it to add one.
 2. Choose the country in which the tax jurisdiction resides.
 3. If the tax jurisdiction is smaller than a country, choose the region and/or postal code of the jurisdiction. If tax needs to be collected in some but not all postal codes of a region, you will need to create one jurisdiction for each postal code.
 4. Finally, enter the sales tax rate as percentage, to be applied to all taxable products that are shipped to this jurisdiction.
