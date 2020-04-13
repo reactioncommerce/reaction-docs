@@ -1,5 +1,7 @@
 ---
-title: Stripe Payment Plugin
+title: Stripe Payment Plugin (Node)
+id: version-3.4.0-core-plugins-stripe
+original_id: core-plugins-stripe
 ---
 
 The Stripe payment plugin allows you to handle payments through your [Stripe](https://stripe.com/) account. If you don’t already have a Stripe account, you can create one for free and use the test credentials they provide to try this plugin without creating actual charges.

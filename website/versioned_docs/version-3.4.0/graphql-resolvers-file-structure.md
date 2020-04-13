@@ -1,6 +1,7 @@
 ---
-id: graphql-resolvers-file-structure
+id: version-3.4.0-graphql-resolvers-file-structure
 title: Understanding the Resolvers File Structure
+original_id: graphql-resolvers-file-structure
 ---
 
 As you may have seen, all core plugins use a similar file and folder structure for resolvers, and we recommend that you do the same for custom plugins. The basic premise is to have the folders and files reflect the hierarchy of the `resolvers` object, making it easier to find the resolver code you're looking for.

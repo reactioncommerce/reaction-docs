@@ -2,7 +2,7 @@
 id: tagging
 title: Introduction into tagging concept
 ---
-    
+
 Categorizing products is a very common scenario. Reaction Commerce offers a very flexible way of clustering products via tagging.
 
 Reaction Commerce does offer out-of-the-box functionality to build product hierarchies with tags and navigation trees, although it's important to understand that tags are specific on a product level, i.e. they do not apply down to individual variants of a specific product (or even options of variants).
@@ -55,7 +55,7 @@ Edit your product and add your tags.
 
 ![Screenshot](/assets/reaction-admin-tagging-step-3.png)
 
-## Step 3: Create and organize your navigation items 
+## Step 3: Create and organize your navigation items
 
 For now, there is no real hierearchy between your tags. In order for your users to see a nice and well organized menu with all of your categories, you need to go to the Navigation panel and add new navigation items.
 
