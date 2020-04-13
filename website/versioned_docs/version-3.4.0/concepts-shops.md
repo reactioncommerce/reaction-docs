@@ -4,7 +4,9 @@ id: version-3.4.0-concepts-shops
 original_id: concepts-shops
 ---
 
-The Reaction Commerce API is a **multi-shop system**, which means that more than one shop can exist within the same installation. Most API calls require you to specify a shop or shops. But what exactly is a shop?
+The Reaction Commerce API is a **multi-shop system**, which means that more than one shop can exist within the same installation. Most API calls require you to specify a shop or shops.
+
+While the Reaction Commerce API has multi-shop concepts built in, the default UIs for Reaction Commerce (`example-storefront` and `reaction-admin`) have only been built to support a single-shop setup out of the box. Any multi-shop UI needs will require additional development work. 
 
 While you might think you intuitively know what a “shop” is, things can become fuzzy when there are complex scenarios like multiple frontend apps, or shops that sell items from other shops. In fact, it is really up to you to decide what you want a “shop” to be in your system. But there are also some rules you have to know to make this decision wisely.
 
