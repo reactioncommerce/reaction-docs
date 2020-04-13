@@ -1,6 +1,7 @@
 ---
-id: accounts
+id: version-3.0.0-accounts
 title: Accounts
+original_id: accounts
 ---
     
 The Accounts section is the place to manage user groups and invite shop owners or managers. Here, you can add members to specific groups, thus giving them privileges to perform actions. By default the Accounts dashboard shows default admin groups (i.e Owner and Store Managers) and users belonging to each.

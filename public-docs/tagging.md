@@ -1,7 +1,6 @@
 ---
 id: tagging
 title: Introduction into tagging concept
-original_id: tagging
 ---
 
 Categorizing products is a very common scenario. Reaction Commerce offers a very flexible way of clustering products via tagging.

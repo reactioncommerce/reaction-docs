@@ -1,6 +1,7 @@
 ---
-id: shipping-admin
+id: version-3.0.0-shipping-admin
 title: Shipping
+original_id: shipping-admin
 ---
 
 Reaction comes with a simple flat rate shipping plugin. To manage your shipping rates, head to `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally) click on **Shipping** under the <i class="rui font-icon fa fa-cog"></i> **Settings** section in the sidebar.

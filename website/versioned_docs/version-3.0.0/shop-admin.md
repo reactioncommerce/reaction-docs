@@ -1,6 +1,7 @@
 ---
-id: shop-admin
+id: version-3.0.0-shop-admin
 title: Shop
+original_id: shop-admin
 ---
     
 In `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally), go to `Settings > Shop` to manage the following shop settings:

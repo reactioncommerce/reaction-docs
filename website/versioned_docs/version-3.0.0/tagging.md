@@ -1,5 +1,5 @@
 ---
-id: version-3.4.0-tagging
+id: version-3.0.0-tagging
 title: Introduction into tagging concept
 original_id: tagging
 ---

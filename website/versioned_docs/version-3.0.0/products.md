@@ -1,6 +1,7 @@
 ---
-id: products
+id: version-3.0.0-products
 title: Products
+original_id: products
 ---
 
 Create, edit, and publish products to the catalog from the **Products** section of `reaction-admin` (accessible on [localhost:4080](http://localhost:4080) if you're running it locally).

@@ -1,6 +1,7 @@
 ---
-id: payment
+id: version-3.0.0-payment
 title: Payment
+original_id: payment
 ---
 
 ## Payment options
