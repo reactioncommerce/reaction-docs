@@ -3,7 +3,7 @@ id: shop-admin
 title: Shop
 ---
     
-Click on the **Shop** <i class="rui font-icon fa fa-th"></i> icon to manage the following shop settings:
+In `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally), go to `Settings > Shop` to manage the following shop settings:
 
 - **Shop name** - Change shop name
 - **Shop email** - Change shop email
@@ -12,4 +12,5 @@ Click on the **Shop** <i class="rui font-icon fa fa-th"></i> icon to manage the 
 - **Shop address** - Set default shipping and billing addresses
 - **Brand logo** - Upload and manage brand logos, displayed in the navigation bar by default
 - **Allow Guest checkout** - Enable or disable Guest checkout
-- **[Open Exchange](https://openexchangerates.org/)** - Integrate currency exchange API
+- **Sitemap refresh rate** - Set how often you want the shop's sitemap to be refreshed
+
