@@ -34,7 +34,7 @@ At this stage, there is no plan to support multi-vendor marketplaces out of the 
 
 ## Shops and clients
 
-Every client, whether it be website, desktop app, mobile app, or IoT button, has a default shop. In the simplest scenario, the default shop will be the shop with type **“primary”**, which might be the only shop.
+Every client, whether it be website, desktop app, mobile app, or IoT button, has a default shop. In the simplest scenario, the default shop will be the shop with type `primary`, which might be the only shop.
 
 While the ID of the default shop could be coded into the client, we recommend that each client query the GraphQL API on startup and let the server determine what the default shop should be.
 
