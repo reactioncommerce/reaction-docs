@@ -1,6 +1,7 @@
 ---
-id: graphql-create-query
+id: version-3.0.0-graphql-create-query
 title: How To: Create a new GraphQL query
+original_id: graphql-create-query
 ---
 
 ## Step 1: Identify which plugin owns the query
