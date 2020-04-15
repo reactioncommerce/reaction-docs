@@ -8,7 +8,7 @@ The Reaction Commerce API is a **multi-shop system**, which means that more than
 
 While the Reaction Commerce API has multi-shop concepts built in, the default UIs for Reaction Commerce (`example-storefront` and `reaction-admin`) have only been built to support a single-shop setup out of the box. Any multi-shop UI needs will require additional development work.
 
-Technically speaking, the current state of multi-shop support is that most entities in the database have a mandatory `shopId` field in their schemas, and most API calls require you to specify a shop or shops. There is a `Shops` collection, which can list as many shops as you'd want, with different users having different rights on them thanks to the `Groups` collection. This architecture can be leveraged to build custom, multi-shop projects. Note that, once again, this is the current state of the API but not the default user interfaces, like `example-storefront` and `reaction-admin`.
+Technically speaking, the current state of multi-shop support is that most entities in the database have a mandatory `shopId` field in their schemas, and most API calls require you to specify a shop or shops. There is a `Shops` collection, which can list as many shops as you'd want, with different users having different rights on them thanks to the `Groups` collection. This architecture can be leveraged to build custom, multi-shop projects.
 
 ### Disclaimer: multi-vendor marketplaces
 
