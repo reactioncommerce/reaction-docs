@@ -35,7 +35,7 @@ An API plugin for developers to easily generate dummy products, tags and orders,
 
 A multi-vendor marketplace integration. Currently in very early stage beta.
 
-### [@outgrowio/reaction-file-collections-sa-s3[(https://github.com/outgrow/reaction-file-collections-sa-s3)
+### [@outgrowio/reaction-file-collections-sa-s3](https://github.com/outgrow/reaction-file-collections-sa-s3)
 
 A Reaction File Collections adapter to store product images on AWS S3.
 
