@@ -2,30 +2,15 @@
 title: Shops
 ---
 
-Reaction Commerce is a **multi-shop system**, which means that more than one shop can exist within the same installation. Most API calls require you to specify a shop or shops. But what exactly is a shop?
+The Reaction Commerce API is a **multi-shop system**, which means that more than one shop can exist within the same installation.
 
-While you might think you intuitively know what a “shop” is, things can become fuzzy when there are complex scenarios like multiple frontend apps, or shops that sell items from other shops. In fact, it is really up to you to decide what you want a “shop” to be in your system. But there are also some rules you have to know to make this decision wisely.
+While the Reaction Commerce API has multi-shop concepts built in, the default UIs for Reaction Commerce (`example-storefront` and `reaction-admin`) have only been built to support a single-shop setup out of the box. Any multi-shop UI needs will require additional development work.
 
-In general, we recommend that you create **shops** to be unique groupings of items and/or payment settings. In doing so, be aware of the following:
+Technically speaking, the current state of multi-shop support is that most entities in the database have a mandatory `shopId` field in their schemas, and most API calls require you to specify a shop or shops. There is a `Shops` collection, which can list as many shops as you'd want, with different users having different rights on them thanks to the `Groups` collection. This architecture can be leveraged to build custom, multi-shop projects. Note that, once again, this is the current state of the API but not the default user interfaces, like `example-storefront` and `reaction-admin`.
 
-- More than one domain name or frontend app (e.g., native mobile) can point to the same default shop. This is configurable.
+### Disclaimer: multi-vendor marketplaces
 
-- A web or mobile frontend app may allow browsing of multiple shops. This is configurable.
+It is crucial to make the distinction between multi-shop projects and multi-vendor marketplace projects. Multi-vendor marketplaces are typically projects where vendors can sign up on their own, create their shop and have their products listed on a single, unified catalog (i.e. similar to eBay or Amazon).
 
-- Carts and orders belong to a single shop, but they may contain items and fulfillment groups for multiple shops if you enable this feature.
+At this stage, there is no plan to support multi-vendor marketplaces out of the box on Reaction Commerce. However, you should check out the [community plugins](community-resources.md) that may exist to offer this feature.
 
-- A single user account can be configured to have access to multiple shops.
-
-- A single order will result in multiple fulfillment groups (e.g., multiple shipments) in the system if it contains items from multiple shops.
-
-- A single order will result in multiple payment charges in the system if it contains items from multiple shops.
-
-During checkout, the payment methods for the default shop will be available, and the default shop payment service credentials will be used. But actual payment can be redirected to the shops that will be fulfilling the order, in cases where there are items from multiple shops in the same order.
-
-## Shops and clients
-
-Every client, whether it be website, desktop app, mobile app, or IoT button, has a default shop. In the simplest scenario, the default shop will be the shop with type **“primary”**, which might be the only shop.
-
-While the ID of the default shop could be coded into the client, we recommend that each client query the GraphQL API on startup and let the server determine what the default shop should be.
-
-Some clients may choose to allow you to visit other shops as well. For example, a website may show items from the default shop at `/` route but show items from another shop at `/shop/:slug` route.
