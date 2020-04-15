@@ -1,6 +1,6 @@
 ---
 id: community-resources
-title: Community resources
+title: Community Resources
 ---
 
 This page is here to guide you through the Reaction ecosystem. As we've stated before, we wouldn't be here without our very engaged community. Here we'd like to introduce you to some of the best things we've seen out there.

@@ -1,6 +1,6 @@
 ---
 id: version-3.0.0-community-resources
-title: Community resources
+title: Community Resources
 original_id: community-resources
 ---
 
