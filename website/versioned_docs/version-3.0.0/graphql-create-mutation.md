@@ -1,7 +1,9 @@
 ---
-id: graphql-create-mutation
-title: How To: Create a new GraphQL mutation
+id: version-3.0.0-graphql-create-mutation
+title: Git Style Guide
+original_id: graphql-create-mutation
 ---
+
 
 ## Step 1: Identify which plugin owns the mutation
 
