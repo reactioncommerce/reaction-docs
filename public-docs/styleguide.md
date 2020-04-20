@@ -155,7 +155,7 @@ Naming methods:
 
 Working with methods:
 
-- Avoid ternary operators and one-line `if` statements (except in React componenets)
+- Avoid ternary operators and one-line `if` statements (except in React components)
 - Use parenthesis around all method arguments:
 
 ```js
