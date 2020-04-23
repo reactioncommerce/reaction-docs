@@ -12,7 +12,7 @@ In the past, one developed for Reaction Commerce by creating `plugins` and worki
 The [Example Storefront](https://github.com/reactioncommerce/example-storefront/) takes a different approach. The Example Storefront is JavaScript. The Example Storefront features:
 
 1. Ultra-fast restarts
-2. Ability to completely customize the look, feel, and layout using standard web devlopment practices
+2. Ability to completely customize the look, feel, and layout using standard web development practices
 3. Uses **React** + **Apollo** + **GraphQL** + **Next.js**. All technologies known to JavaScript developers and supported by a large, active community
 
 Nothing says that you cannot build your implementation in Angular or Vue or PHP for that matter. However, if you want a head start, the Example Storefront can do that.
