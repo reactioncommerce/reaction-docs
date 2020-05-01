@@ -1,5 +1,7 @@
 ---
 title: Shops
+id: version-3.0.0-concepts-shops
+original_id: concepts-shops
 ---
 
 The Reaction Commerce API is a **multi-shop system**, which means that more than one shop can exist within the same installation.
