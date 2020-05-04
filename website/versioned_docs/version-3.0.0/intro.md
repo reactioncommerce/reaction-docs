@@ -14,12 +14,9 @@ Reaction is a series of projects that combine the efforts of [community contribu
 
 Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](community-showcase).
 
-## Project GitHub repositories
+## How can I help?
 
-- <a href="https://github.com/reactioncommerce/reaction" target="_blank">GraphQL API</a>
-- <a href="https://github.com/reactioncommerce/example-storefront" target="_blank">Example Storefront</a>
-- <a href="https://github.com/reactioncommerce/reaction-admin" target="_blank">Reaction Admin</a>
-- <a href="https://github.com/reactioncommerce/reaction-identity" target="_blank">Reaction Identity</a>
+If you're interested in contributing in any way, read and bookmark the [Contributor Home](./contributing-to-reaction) page.
 
 ## Documentation
 

@@ -21,10 +21,19 @@
       "concepts-tags"
     ],
     "Developer": [
+      "contributing-to-reaction",
+      "reporting-vulnerabilities",
       "getting-started-developing-with-reaction",
+      "styleguide",
+      "git-style-guide",
+      "devs-breaking-changes",
+      "react-best-practices",
+      "jsdoc-style-guide",
+      "error-handling-guide",
+      "using-ci",
+      "release-process",
       "recommended-tools",
       "installation-docker-development",
-      "devs-node-es-modules",
       "troubleshooting-development"
     ],
     "For Developers: Concepts": [
@@ -33,20 +42,8 @@
       "devs-understanding-commonorder",
       "developer-environment-variables",
       "developer-inventory",
-      "developer-kafka-streams"
-    ],
-    "For Developers: Contributing Guide": [
-      "contributing-to-reaction",
-      "styleguide",
-      "git-style-guide",
-      "react-best-practices",
-      "jsdoc-style-guide",
-      "error-handling-guide",
-      "devs-breaking-changes",
-      "using-ci",
-      "release-process",
-      "reporting-vulnerabilities",
-      "community-showcase"
+      "developer-kafka-streams",
+      "devs-node-es-modules"
     ],
     "For Developers: GraphQL": [
       "graphql-what",
@@ -149,6 +146,7 @@
       "operator-address-validation"
     ],
     "Community": [
+      "community-showcase",
       "guidelines",
       "code-of-conduct",
       "diversity-statement",

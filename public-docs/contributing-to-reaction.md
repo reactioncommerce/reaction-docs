@@ -1,153 +1,108 @@
 ---
 id: contributing-to-reaction
-title: Contributing Guide
+title: Contributor Home
 ---
 
-At Reaction Commerce, we're dedicated to the open source community. In fact, we've designed our entire platform and business to grow from the passion and creativity that an open source community ignites. We've already attracted a small, dedicated team of open source contributors, and there's always room for more. If you'd like to join us, here's how to get started.
+At Reaction Commerce, we're dedicated to the open source community. In fact, we've designed our entire platform and business to grow from the passion and creativity that an open source community ignites. We've already attracted a small, dedicated team of open source contributors, and there's always room for more.
 
-## Step 1: Get Reaction running
+## Getting Started
 
-If you haven't already, get Reaction running locally. Refer to [Getting Started as a Developer](./getting-started-developing-with-reaction)
+[Getting Started as a Developer](./getting-started-developing-with-reaction)
 
-## Step 2: Find or open an issue
+## Creating Issues and Asking Questions
 
-There are three ways to go about contributing to Reaction: file a bug, work on an issue or bug that is already created and vetted by the team, or propose a new feature in our [Reaction Feature Requests](https://github.com/reactioncommerce/reaction-feature-requests) repository.
+If you found a bug or want to propose a feature, first determine which plugin repo owns the bug or would own the feature. Go to that repo (see [Links](#links) section below) and click Issues > New Issue. For questions and discussion, use our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
 
-### File a bug
+If you believe you have discovered a vulnerability or a compliance issue that has not yet been publicly patched, and you wish to privately address the vulnerability, you can provide vulnerability and patch details through our security@reactioncommerce.com email group. See [Reporting Vulnerabilities](./reporting-vulnerabilities).
 
-1. Before you file a bug, please [search existing issues](https://github.com/reactioncommerce/reaction/issues) first.
-2. Are you looking for support instead? Please go to our [Gitter room](https://gitter.im/reactioncommerce/reaction) instead.
-3. Make sure to follow the issue template.
+## Finding Issues to Work On
 
-Once your bug issue is filed, the community team will evaluate and prioritize using the following label/criteria:
+Use the following GitHub reports to find issues that are ready for community contributors to work on:
 
-- **impact-critical** (do now): Blocks core functionality which would include checking out, processing orders, adding a product, etc.
-- **impact-major** (do next): Blocks important functionality but there is a workaround or the problem doesn't inhibit shopping/purchasing
-- **impact-minor** (do eventually): Impacts peripheral functionality or there is a reasonable workaround (UI glitches, etc)
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+no%3Aassignee+label%3A%22help+wanted%22+" target="_blank">Help Wanted</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+no%3Aassignee+label%3A%22good+first+issue%22+" target="_blank">Good First Issue</a> (subset of Help Wanted that are easy for new contributors to do)
 
-Once it's been triaged and verified, a team member will work on it according the above criteria.
+### Before You Submit a Pull Request
 
-### Find an issue and claim it
+- Be sure to follow our [Git style guide](./git-style-guide) for all of your commits.
+- [Avoid breaking changes](./devs-breaking-changes) without prior discussion because they will probably not be merged, or your PR will be kept on ice until a new major release is approved.
 
-1. Explore the [Help Wanted](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) or [Good First Issue](https://github.com/reactioncommerce/reaction/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) issues on our GitHub repo.
-2. If you find something you want to work on, let us know right there in the comment with how you want to approach the problem.
+## Issue Reports and Triage
 
-### Create a Feature Request issue
+Reports for core contributors:
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+no%3Aassignee+label%3A%22core+work%22+" target="_blank">Core Team Work-Tracking Issues</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+no%3Aassignee+label%3A%22needs+triage%22" target="_blank">Needs Triage</a>
 
-Don't see a ticket for a feature you'd like to see in Reaction? Follow these steps:
+Other useful issue reports:
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+no%3Aassignee+label%3A%22bug%22+" target="_blank">Unassigned Bugs</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+no%3Aassignee+label%3Aenhancement+" target="_blank">Unassigned Enhancements</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+label%3Abug+label%3A%22severity+high%22+" target="_blank">High Severity Bugs</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+label%3Abug+label%3A%22priority+high%22+" target="_blank">High Priority Bugs</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+no%3Alabel+" target="_blank">Unlabeled Issues</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic" target="_blank">All Open Issues, Newest First</a>
+- <a href="https://github.com/issues?q=is%3Aopen+is%3Aissue+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+sort%3Acreated-asc" target="_blank">All Open Issues, Oldest First</a>
 
-1. Create an issue in the [Reaction Feature Requests](https://github.com/reactioncommerce/reaction-feature-requests) repository detailing the feature.
-2. Upon team review, the team will provide next steps for how to get started on the feature.
+## Pull Request Tracking
 
-If you are interested in a specific aspect of the project but aren't sure where to begin, feel free to ask us on Gitter.
+- <a href="https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+draft%3Atrue+" target="_blank">Draft PRs</a>
+- <a href="https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+review%3Anone+draft%3Afalse" target="_blank">PRs that need a reviewer assigned</a>
+- <a href="https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Areactioncommerce+is%3Apublic+-review%3Anone+draft%3Afalse+" target="_blank">PRs in review</a>
+- <a href="https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Areactioncommerce+is%3Apublic" target="_blank">All PRs</a>
 
-## Step 3: Prepare a pull request for review
+## Links
 
-Branch off `develop` for your PR branch, unless you're fixing an urgent issue to a specific release that is still supported.
+[Reaction Development Platform](https://github.com/reactioncommerce/reaction-development-platform) is the best way to get started with running Reaction components locally for demo, testing, or development.
 
-Once your branch fulfills the issue it tackles, you are ready to [create a pull request](https://help.github.com/articles/creating-a-pull-request/) (PR).
+### Service Repositories
 
-Select `develop` as the base branch (the branch you want your changes pulled into).
+A Reaction installation is made up of at least the following services:
 
-### Use our Git commit message conventions
+- <a href="https://github.com/reactioncommerce/reaction" target="_blank">Stock Reaction API</a>
+- <a href="https://github.com/reactioncommerce/example-storefront" target="_blank">Example Storefront</a>
+- <a href="https://github.com/reactioncommerce/reaction-admin" target="_blank">Reaction Admin</a>
+- <a href="https://github.com/reactioncommerce/reaction-identity" target="_blank">Reaction Identity</a>
 
-Follow the [Git Style Guide](git-style-guide.md) rules outlined in the docs for branch names and commit message styles.
+### API Components
 
-### Give your PR a good title
+The <a href="https://github.com/reactioncommerce/reaction" target="_blank">Stock Reaction API</a> is Node project that combines many different NPM packages, linked here.
 
-Title the PR with the ID number of the GitHub issue. Add `WIP` (work in progress) to the beginning of the title if your PR is still in development and you do not want it to be merged.
-
-### Fill out the pull request template
-
-Before you are ready for a team code review, you will also have to fill out the following sections in the template:
-
-- **Resolves** - Note issue number
-  - Link to the GitHub issue number
-  - If you're resolving an unreported bug, note: `Resolves unreported issue`
-  - We do not accept PRs for features without issues.
-
-- **Impact** - Choose from one of the following:
-  - **breaking** - introduces breaking changes to the app.
-  - **critical** - resolves a **critical** bug blocking core functionality. Examples include browsing products, adding products to cart, checking out, processing orders, etc.
-  - **major** - resolves a **major** bug or introduces significant new feature.
-  - **minor** - resolves a `minor` bug, minor changes to the app, or minor new feature
-
-- **Type** - Choose from one of the following:
-  - **feature**: A new feature or functionality
-  - **bugfix**: A bug fix
-  - **performance**: A code change that improves performance
-  - **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-  - **test**: Adding missing or correcting existing tests
-  - **refactor**: A code change that neither fixes a bug nor adds a feature
-  - **docs**: Documentation only changes
-  - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
-
-- **Issue Description**
-  - Describe the issue this PR is solving with the knowledge you've gained by fixing it. This may differ from the original ticket as you now have more information at your disposal.
-  - Include additional information gathered during the process of resolving the ticket that might be helpful to reviewers or other users who might encounter the same problem.
-  - Include _all_ information necessary to understand the issue this PR resolves so that the reviewer does not need to look at the original ticket.
-
-- **Solution**
-  - Summarize your solution to the problem. Please include short descriptions of any solutions you tested before arriving at your final solution. This will help reviewers know why you decided to solve this problem in this particular way and will speed up the review process.
-  - **Note new dependencies**: If you have introduced any new dependencies, please list them, explain how they are used in your solution and any other libs that you considered.
-
-- **Breaking changes:** List breaking changes, or otherwise list none.
-  - Changing file names
-  - Moving files
-  - Deleting files
-  - Renaming functions or exports
-  - Changes to code which might cause previous versions of Reaction or third-party code not to work as expected.
-  - Note any work that you did to mitigate the effect of any breaking changes such as creating migrations, deprecation warnings, etc.
-
-- **Testing Instructions**
-  - Write instructions for testing your changes. You can assume that reviewers know how to start the app and how to perform basic setup tasks. For any task where there may be multiple ways to do something, be explicit. (e.g. there are several ways to "Create a Product" and many options once created before a product is published).
-  - The steps you list should guide the reviewer through testing the feature or fix you've implemented. These steps will generally be very similar to the reproduction steps in the issue.
-
-### Pass all tests
-
-As soon as your PR is pushed, automated tests run to ensure:
-
-- `npm run lint`: Code style is correct
-- `npm run test`: All unit and integration tests pass
-
-## Step 4: PR review process begins
-
-The team triages all new pull requests as soon as the PR is complete.
-
-### PR gets reviewed
-
-The team reviews code quality rules including:
-
-- **PR template:** If the PR doesn't follow our template, reject and point the author of the PR to this doc.
-  - **Issue description:** Use this information as the starting point for your review. If something is not clear, reject the PR and ask for clarity by requesting changes. While the original issue may have useful information, the PR should contain the most up to date representation of the issue.
-  - **Solution:** Use this information to help determine a path to test this PR. Research any included packages or techniques that may have been used that you're not familiar with. Ask questions if you're confused.
-  - **Breaking changes:** Test by applying this patch to an existing install of Reaction with existing users, orders, carts, etc. Specifically, test any parts of the app where the breaking change is involved and any data set that is involved in a migration.
-  - **Testing:** Run through the author's steps to verify that it works as they've tested it. Then run through the app on your own as you would test it. Run through the app as many times as you feel comfortable before approving or requesting changes.
-
-- **Readability:** The linter will help with this, but call out anything that is difficult to understand or that you feel needs comments
-
-- **Documentation:** all code added or touched should have proper JSDoc, any new functionality should be documented, as outlined in [JSDoc Style Guide](jsdoc-style-guide.md).
-
-- **Security:**
-  - Code should only be usable by users with the correct permissions. Any data published should be filtered to ensure that only users with the correct permissions for the correct shops have access to it.
-  - Synk should not fail. Any failing automated tests should not be approved.
-
-- **Performance:** Code should be written with performance in mind. Data publications should only publish data necessary to accomplish the specific goal at hand.
-
-- **Tests:** Any new functionality should include tests
-
-- **Dependencies:** Any newly introduced dependencies should be updated to the latest version.
-
-- **i18n:** All static copy should use i18next. Include definitions in the appropriate `en.json` file.
-
-- **a11y:** Code should be a11y compliant.
-
-- **Linting:** Pass all linting tests. If there are minor linting errors, the reviewer may fix them for speed.
-
-Reviewers will note any changes that they will want to QA in the app, even if they aren't listed in the testing steps (e.g if the code changes a `cart` button, ensure that the button still works).
-
-## Step 5: Congrats! It's approved. What happens next?
-
-The Reaction team reviewer is responsible for merging the PRs they approved, unless the PR submitter has requested otherwise.
-
-Now that your PR is merged, the feature will be released in the next release. Head on over to our [Release Guide](release-process.md) for more on how we release versions of Reaction.
+- Core Reaction API package (api-core) [GitHub](https://github.com/reactioncommerce/api-core) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-core)
+- Reaction API Utilities package (api-utils) [GitHub](https://github.com/reactioncommerce/api-utils) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-utils)
+- Stock open source plugins:
+  - api-plugin-accounts - [GitHub](https://github.com/reactioncommerce/api-plugin-accounts) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-accounts)
+  - api-plugin-address-validation-test - [GitHub](https://github.com/reactioncommerce/api-plugin-address-validation-test) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-address-validation-test)
+  - api-plugin-address-validation - [GitHub](https://github.com/reactioncommerce/api-plugin-address-validation) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-address-validation)
+  - api-plugin-authentication - [GitHub](https://github.com/reactioncommerce/api-plugin-authentication) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-authentication)
+  - api-plugin-authorization-simple - [GitHub](https://github.com/reactioncommerce/api-plugin-authorization-simple) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-authorization-simple)
+  - api-plugin-carts - [GitHub](https://github.com/reactioncommerce/api-plugin-carts) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-carts)
+  - api-plugin-catalogs - [GitHub](https://github.com/reactioncommerce/api-plugin-catalogs) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-catalogs)
+  - api-plugin-discounts-codes - [GitHub](https://github.com/reactioncommerce/api-plugin-discounts-codes) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-discounts-codes)
+  - api-plugin-discounts - [GitHub](https://github.com/reactioncommerce/api-plugin-discounts) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-discounts)
+  - api-plugin-email-smtp - [GitHub](https://github.com/reactioncommerce/api-plugin-email-smtp) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-email-smtp)
+  - api-plugin-email-templates - [GitHub](https://github.com/reactioncommerce/api-plugin-email-templates) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-email-templates)
+  - api-plugin-email - [GitHub](https://github.com/reactioncommerce/api-plugin-email) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-email)
+  - api-plugin-files - [GitHub](https://github.com/reactioncommerce/api-plugin-files) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-files)
+  - api-plugin-i18n - [GitHub](https://github.com/reactioncommerce/api-plugin-i18n) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-i18n)
+  - api-plugin-inventory-simple - [GitHub](https://github.com/reactioncommerce/api-plugin-inventory-simple) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-inventory-simple)
+  - api-plugin-inventory - [GitHub](https://github.com/reactioncommerce/api-plugin-inventory) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-inventory)
+  - api-plugin-job-queue - [GitHub](https://github.com/reactioncommerce/api-plugin-job-queue) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-job-queue)
+  - api-plugin-navigation - [GitHub](https://github.com/reactioncommerce/api-plugin-navigation) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-navigation)
+  - api-plugin-notifications - [GitHub](https://github.com/reactioncommerce/api-plugin-notifications) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-notifications)
+  - api-plugin-orders - [GitHub](https://github.com/reactioncommerce/api-plugin-orders) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-orders)
+  - api-plugin-payments-example - [GitHub](https://github.com/reactioncommerce/api-plugin-payments-example) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-payments-example)
+  - api-plugin-payments-stripe - [GitHub](https://github.com/reactioncommerce/api-plugin-payments-stripe) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-payments-stripe)
+  - api-plugin-payments - [GitHub](https://github.com/reactioncommerce/api-plugin-payments) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-payments)
+  - api-plugin-pricing-simple - [GitHub](https://github.com/reactioncommerce/api-plugin-pricing-simple) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-pricing-simple)
+  - api-plugin-products - [GitHub](https://github.com/reactioncommerce/api-plugin-products) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-products)
+  - api-plugin-settings - [GitHub](https://github.com/reactioncommerce/api-plugin-settings) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-settings)
+  - api-plugin-shipments-flat-rate - [GitHub](https://github.com/reactioncommerce/api-plugin-shipments-flat-rate) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-shipments-flat-rate)
+  - api-plugin-shipments - [GitHub](https://github.com/reactioncommerce/api-plugin-shipments) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-shipments)
+  - api-plugin-shops - [GitHub](https://github.com/reactioncommerce/api-plugin-shops) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-shops)
+  - api-plugin-simple-schema - [GitHub](https://github.com/reactioncommerce/api-plugin-simple-schema) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-simple-schema)
+  - api-plugin-sitemap-generator - [GitHub](https://github.com/reactioncommerce/api-plugin-sitemap-generator) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-sitemap-generator)
+  - api-plugin-surcharges - [GitHub](https://github.com/reactioncommerce/api-plugin-surcharges) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-surcharges)
+  - api-plugin-system-information - [GitHub](https://github.com/reactioncommerce/api-plugin-system-information) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-system-information)
+  - api-plugin-tags - [GitHub](https://github.com/reactioncommerce/api-plugin-tags) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-tags)
+  - api-plugin-taxes-flat-rate - [GitHub](https://github.com/reactioncommerce/api-plugin-taxes-flat-rate) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-taxes-flat-rate)
+  - api-plugin-taxes - [GitHub](https://github.com/reactioncommerce/api-plugin-taxes) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-taxes)
+  - api-plugin-translations - [GitHub](https://github.com/reactioncommerce/api-plugin-translations) | [NPM](https://www.npmjs.com/package/@reactioncommerce/api-plugin-translations)
