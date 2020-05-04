@@ -41,7 +41,7 @@ When choosing a name for the query, there are a few rules to follow:
     Example: `groups(after: ConnectionCursor, before: ConnectionCursor, first: ConnectionLimitInt, last: ConnectionLimitInt, sortOrder: SortOrder = asc, sortBy: GroupSortByField = createdAt): GroupConnection`
 
 1. Document your query, the new types, and all fields in those types using string literals. See [Documenting a GraphQL Schema](./graphql-developing#documenting-a-graphql-schema).
-1. If not already done, register your schemas in the plugin's `register.js` file:
+1. If not already done, register your schemas in the plugin's `index.js` file:
 
     ```js
     import schemas from "./schemas";
@@ -88,7 +88,7 @@ export default {
 };
 ```
 
-If this is the first query for the plugin, you'll also need to pass the full `queries` object to `registerPlugin` in the plugin's `register.js` file:
+If this is the first query for the plugin, you'll also need to pass the full `queries` object to `registerPlugin` in the plugin's `index.js` file:
 
 ```js
 import queries from "./queries";
@@ -183,7 +183,7 @@ export default {
 };
 ```
 
-Then pass the full `resolvers` object to `registerPlugin` in the plugin's `register.js` file:
+Then pass the full `resolvers` object to `registerPlugin` in the plugin's `index.js` file:
 
 ```js
 import resolvers from "./resolvers";

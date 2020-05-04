@@ -1,7 +1,7 @@
 ---
 id: version-3.0.0-devs-node-es-modules
-title: Understanding Node ECMAScript Modules
-sidebar_label: Understanding Node ECMAScript Modules
+title: Developer Concepts: Node ECMAScript Modules
+sidebar_label: Node ECMAScript Modules
 original_id: devs-node-es-modules
 ---
 

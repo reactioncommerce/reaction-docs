@@ -1,8 +1,9 @@
 ---
 id: version-3.0.0-graphql-create-mutation
-title: How To: Create a new GraphQL mutation
+title: Git Style Guide
 original_id: graphql-create-mutation
 ---
+
 
 ## Step 1: Identify which plugin owns the mutation
 
@@ -35,7 +36,7 @@ See [Resolver Mutations and Queries vs. Plugin Mutations and Queries](graphql-de
 
 1. Add the Input and Payload types to the schema. Both must have `clientMutationId: String` field and may have any other fields as necessary. The mutation response payload should include whatever object was mutated.
 1. Document your mutation, the new types, and all fields in those types using string literals. See [Documenting a GraphQL Schema](./graphql-developing#documenting-a-graphql-schema).
-1. If not already done, register your schemas in the plugin's `register.js` file:
+1. If not already done, register your schemas in the plugin's `index.js` file:
 
     ```js
     import schemas from "./schemas";
@@ -82,7 +83,7 @@ export default {
 };
 ```
 
-If this is the first mutation for the plugin, you'll also need to pass the full `mutations` object to `registerPlugin` in the plugin's `register.js` file:
+If this is the first mutation for the plugin, you'll also need to pass the full `mutations` object to `registerPlugin` in the plugin's `index.js` file:
 
 ```js
 import mutations from "./mutations";
@@ -172,7 +173,7 @@ export default {
 };
 ```
 
-Then pass the full `resolvers` object to `registerPlugin` in the plugin's `register.js` file:
+Then pass the full `resolvers` object to `registerPlugin` in the plugin's `index.js` file:
 
 ```js
 import resolvers from "./resolvers";

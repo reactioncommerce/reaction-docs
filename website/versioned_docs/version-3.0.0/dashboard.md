@@ -8,28 +8,18 @@ Welcome to the Reaction Store Operator’s Guide! Here you can find everything y
 
 Before going too far, it's best if you familiarize yourself with all of the [terms and concepts](concepts-intro.md) you'll encounter.
 
-Click **Sign In** and use your store operator credentials to get started.
+To get started, open `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally) and log in with an owner or manager account. If you've just installed Reaction and don't have an account set up yet, the first account you'll register will automatically get owner privileges.
 
-## Products and the grid
+## Products, orders and accounts
 
-Follow these guides to get started with products and the grid:
+Follow these guides to get started with products:
 
 - [Product pages](products.md) - Adding products
-
-## Dashboard
-
-The dashboard is where you manage your orders and products and also configure your account settings.
-
-To access your dashboard sidebar, click on the **Reaction logo icon** on the top right of the page. You'll find a selection of dashboard features, broken down into two sections, **Actions** and **Settings**.
-
-### Actions
-
-Under Actions, you can find important tasks that are used on a daily basis:
-
+- [Filter and bulk-edit products](products-bulk-edit.md) - Perform bulk operations on products
 - [Orders](orders-admin.md) - Process new orders and view completed orders
 - [Accounts](accounts.md) - Add, edit, and remove permissions for each of your shop members
 
-### Settings
+## Settings
 
 Under Settings, you can view the rest of your store's feature settings, which you may access, configure, and customize to your heart’s content:
 
@@ -40,3 +30,4 @@ Under Settings, you can view the rest of your store's feature settings, which yo
 - [Taxes](tax.md) - Enable custom taxes
 - [Template](template.md) - Customize your email's messaging and look and feel
 - [Shipping](shipping-admin.md) - Set up and manage your shipping rates
+- [Address validation](operator-address-validation.md) - Set up address validation services

@@ -1,7 +1,7 @@
 ---
 id: devs-node-es-modules
-title: Understanding Node ECMAScript Modules
-sidebar_label: Understanding Node ECMAScript Modules
+title: Developer Concepts: Node ECMAScript Modules
+sidebar_label: Node ECMAScript Modules
 ---
 
 > This article pulls out some Reaction-specific key points from [the NodeJS documentation](https://nodejs.org/docs/latest-v12.x/api/esm.html), which you may want to read for more details.

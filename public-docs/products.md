@@ -1,9 +1,9 @@
 ---
 id: products
-title: Products - Publishing
+title: Products
 ---
 
-Create, edit, and publish products to the catalog from the **Products** section of the Operator UI.
+Create, edit, and publish products to the catalog from the **Products** section of `reaction-admin` (accessible on [localhost:4080](http://localhost:4080) if you're running it locally).
 
 ## Creating a product
 
@@ -16,40 +16,30 @@ To create a product, login to your dashboard and follow these steps:
 2. Click on **Create Product** to create a product.
 
 3. You can change the product title permalink, subtitle, vendor, description and origin country and more from the **Details** card.
-  ![](/assets/operator-ui-product-detail.png "Reaction's Product Details")
+  ![](/assets/reaction-admin-product-detail.png "Reaction's Product Details")
 
 3. To add images, click the **Drag image or click to upload** button. Once uploaded you'll be able to set the order of the media with the **Order** fields.
   ![](/assets/operator-ui-product-media.png "Product media")
 
 4. You can customize your product's social sharing messaging under the **Social** card.
 
-5. Add product tags by filling in the **Add tag** field and pressing the **enter/return** key or by clicking on the plus <i class="font-icon mdi mdi-plus"></i> button.
-  ![](/assets/operator-ui-product-tags.png "Product tags")
+5. Add product tags by clicking on the plus <i class="font-icon mdi mdi-plus"></i> button and selecting your tags from the dropdown in the modal.
+  ![](/assets/reaction-admin-product-tags.png "Product tags")
 
-6. Click the **Publish** button on the top right to save unpublished changes.
+6. Ensure that you've saved all of your changes.
 
+7. Make your product visible by clicking the <i class="font-icon mdi mdi-dots-horizontal"></i> icon next to its name in the left sidebar, and then clicking "Make Visible."
+  ![](/assets/reaction-admin-product-make-visible.png "Make a product visible")
 
-## Publishing your changes
-
-![](/assets/operator-ui-product-publish.png "Reaction product publish")
-
-Your changes are auto-saved, but are not immediately visible to customers. Publishing your changes with the **Publish** button, will take all changes since the last publish and make them visible to customers. Products may be to be made **Not Visible** which will hide the product from customers, even if it's published.
-
-1. After making some changes to a product
-
-2. Click the **Publish** button on the top right to publish changes to your catalog.
-
-## Unpublishing your changes
-
-Products published to the Catalog cannot be unpublished. They may be hidden from the storefront using the visibility controls outlined in the [Hiding and showing products from your storefront](#hiding-and-showing-products-from-your-storefront) section.
+But we're not finished yet. For our product to be publishable, it will need to have at least one variant.
 
 ## Configuring your first Variant
 
-Product Variants allow you to create different versions of the same base product. Perfect for products that come, in multiple colors, sizes, shapes, etc.
+Product Variants allow you to create different versions of the same base product. Perfect for products that come in multiple colors, sizes, shapes, etc.
 
 Every product comes filled with one default, required variant. To create more:
-1. Click the <i class="font-icon mdi mdi-plus"></i> icon located at the top of the **Variants** card.
-  ![](/assets/operator-ui-product-variant-add.png "Adding a product variant")
+1. Click the <i class="font-icon mdi mdi-dots-horizontal"></i> icon located next to the product's name in the left sidebar, and click "Add variant."
+  ![](/assets/reaction-admin-product-variant-add.png "Adding a product variant")
 
 2. Fill out the following fields in the edit **Variant** panel:
 
@@ -65,21 +55,34 @@ Every product comes filled with one default, required variant. To create more:
 - **Warn at** - Optional. Allows for `Limited Supply` notifications to be displayed on when quantity is lower than this number.
 - **Allow Backorder** - Optional. Allows customers to backorder the product.
 
-3. Click the **Publish** button on the top right to publish changes to your catalog.
+3. Make your variant visible by clicking "Make Visible" in the <i class="font-icon mdi mdi-dots-horizontal"></i> dropdown next to their name in the left sidebar.
 
+3. Click the **Publish** button on the top right to publish your product and all of its variants to your catalog.
+
+## Publishing your changes
+
+![](/assets/reaction-admin-product-publish.png "Reaction product publish")
+
+Your changes might be saved, but they're not immediately visible to ?customers. Publishing your changes with the **Publish** button, will take all changes since the last publish and make them visible to customers. Products may be to be made **Not Visible** which will hide the product from customers, even if it's published.
+
+1. After making some changes to a product
+
+2. Click the **Publish** button on the top right to publish changes to your catalog.
+
+## Unpublishing your changes
+
+Products published to the Catalog cannot be unpublished. They may be hidden from the storefront using the visibility controls outlined in the [Hiding and showing products from your storefront](#hiding-and-showing-products-from-your-storefront) section.
 
 ## Adding more product Variant Options
 
 Variant Options provide a second layer of customization on top of each variant. For instance, in addition to carrying shirts in multiple colors, you may also want to carry multiple size options for each color. Use this flexible structure to customize your products however you like.
 
-1. Click on the <i class="font-icon mdi mdi-plus"></i> button to the right of the **Options** section at the of a **Variant**.
-  ![](/assets/operator-ui-product-option-add.png "Adding a variant option")
+1. Click on the <i class="font-icon mdi mdi-dots-horizontal"></i> button to the right of the variant you'd like to create an option for. Then, click "Add variant."
+  ![](/assets/reaction-admin-product-option-add.png "Adding a variant option")
 
-2. Add the Variant Option's **Attribute Lanel**, **Label**, **Short Label**, **Quantity** and **Price**. **Label** is displayed in cart, checkout and orders. **Short Label** is displayed on the Product Detail Page. All fields are required.
+2. Add the option's **Attribute Lanel**, **Label**, **Short Label**, **Quantity** and **Price**. **Label** is displayed in cart, checkout and orders. **Short Label** is displayed on the Product Detail Page. 
 
-3. Keep adding more options by clicking the <i class="font-icon mdi mdi-plus"></i> button.
-
-4. Click the **Publish** button on the top right to save Unpublished changes.
+3. Make the option visible from the left sidear, then click the **Publish** button on the top right to make your changes show up on the storefront.
 
 ## Adding product images
 
@@ -101,13 +104,13 @@ These options are available for the top-level **Product**, each **Variant** and 
 
 To change change the visibility of a product, variant, or option:
 
-1. Click on the <i class="font-icon mdi mdi-dots-horizontal-circle"></i> button below the product title in the header.
-  ![](/assets/operator-ui-product-archive.png "Reaction product visibility")
+1. Click on the <i class="font-icon mdi mdi-dots-horizontal"></i> button next to the product title in the left sidebar.
+  ![](/assets/reaction-admin-product-dropdown.png "Reaction product visibility")
 
 2. Select **Make Hidden** or **Make Visible** and confirm.
-  ![](/assets/operator-ui-product-make-hidden.png "Reaction make product hidden")
+  ![](/assets/reaction-admin-product-make-hidden.png "Reaction make product hidden")
 
-3. Click the **Publish** button on the top right to save Unpublished changes.
+3. Click the **Publish** button on the top right to make your changes appear on the storefront.
 
 ## Duplicating products, variant and options
 
@@ -115,28 +118,29 @@ Duplicating a product, variant or option will create a new copy of that item wit
 
 To duplicate a product, variant, or option:
 
-1. Click on the <i class="font-icon mdi mdi-dots-horizontal-circle"></i> button below the title in the header.
-  ![](/assets/operator-ui-product-archive.png "Reaction duplicate product")
+1. Click on the <i class="font-icon mdi mdi-dots-horizontal"></i> button next to the product title in the left sidebar.
+  ![](/assets/reaction-admin-product-dropdown.png "Reaction duplicate product")
 
 2. Select **Duplicate** and confirm.
-  ![](/assets/operator-ui-product-duplicate.png "Reaction duplicate product")
+  ![](/assets/reaction-admin-product-duplicate.png "Reaction duplicate product")
 
-3. Click the **Publish** button on the top right to save Unpublished changes.
+3. Click the **Publish** button on the top right to make your changes appear on the storefront.
 
 ## Archiving and restoring a product
 
-Archiving **Products** is immediate upon confirmation, and is not reversible from the Operator UI. It may be a better to make the **Product** hidden with the **Make Hidden** option instead. Archiving may also applied to **Variants** and **Options**.
+Archiving **Products** is immediate upon confirmation, and is not reversible from `reaction-admin`. It may be a better to make the **Product** hidden with the **Make Hidden** option instead. Archiving may also apply to **Variants** and **Options**.
 
 To remove an entire **Product**, **Variant**, or **Option** from your inventory:
 
-1. Click on the <i class="font-icon mdi mdi-dots-horizontal-circle"></i> button below the product title in the header.
-  ![](/assets/operator-ui-product-archive.png "Reaction archive product")
+1. Click on the <i class="font-icon mdi mdi-dots-horizontal"></i> button next to the product, variant or option title in the left sidebar.
+  ![](/assets/reaction-admin-product-dropdown.png "Reaction archive product")
 
 2. Select **Archive** and confirm.
-  ![](/assets/operator-ui-product-archive-select.png "Reaction archive product selection")
+  ![](/assets/reaction-admin-product-archive-select.png "Reaction archive product selection")
 
-3. Click the **Publish** button on the top right to save Unpublished changes.
+3. Click the **Publish** button on the top right to make your changes appear on the storefront.
 
 To restore an archived **Product**, **Variant**, or **Option**:
 
-1. Products cannot be restored through the Operator UI.
+1. Products cannot be restored through `reaction-admin`.
+

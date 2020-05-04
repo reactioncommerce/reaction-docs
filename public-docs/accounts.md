@@ -3,29 +3,17 @@ id: accounts
 title: Accounts
 ---
     
-The Accounts section is the place to manage user groups and associated permissions. Here, you can add members to specific groups, thus giving them privileges to perform actions. By default the Accounts dashboard shows default admin groups (i.e Owner and Store Managers) and users belonging to each.
+The Accounts section is the place to manage user groups and invite shop owners or managers. Here, you can add members to specific groups, thus giving them privileges to perform actions. By default the Accounts dashboard shows default admin groups (i.e Owner and Store Managers) and users belonging to each.
 
-Before getting started, make sure you are logged in as an operator and click the <i class="font-icon fa fa-users"></i> **Accounts** icon in the Dashboard sidebar.
+Before getting started, make sure you are logged into `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally), and click the <i class="font-icon mdi mdi-account-multiple"></i> **Accounts** link in the left sidebar.
 
-![](/assets/admin-accounts-dashboard-groups.png "Accounts Dashboard showing default admin groups and an admin created group")
+![](/assets/reaction-admin-accounts.png "Accounts Dashboard showing default admin groups and an admin created group")
 
-## Add a Store Member
+## Add a Store Manager or Owner
 
-To add a new member to your store, click on the "Add User" icon, located on the upper right-hand side of the Accounts card.
+To add a new member to your store, click on the "Manage Groups" button, located on the upper right-hand side of the Accounts page.
 
-Enter the user's name and email address in the fields below, and an invitation will be sent via email.
-
-## Add an User to a Permission Group
-
-![](/assets/admin-accounts-dashboard-add-user.png "Reaction Commerce Dashboard")
-
-To add an account to a group:
-
-1. Click on user the "Add Admin User" on the right section.
-2. Enter the user's name and email address in the fields.
-3. Select Group to invite to and send. If an account with the email already exist, it is given the permissions of the group. If no account exists for the email, a new account is created under the specified group.
-
-An email is sent to the email in either of the two scenarios to notify the user of the change.
+Enter the user's name and email address, pick a role between "Owner" and "Shop Manager," and an invitation will be sent via email.
 
 ### Default Admin groups
 

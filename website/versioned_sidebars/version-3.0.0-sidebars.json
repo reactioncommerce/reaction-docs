@@ -20,11 +20,20 @@
       "version-3.0.0-concepts-slugs",
       "version-3.0.0-concepts-tags"
     ],
-    "Developer": [
+    "Contributing": [
+      "version-3.0.0-contributing-to-reaction",
+      "version-3.0.0-reporting-vulnerabilities",
       "version-3.0.0-getting-started-developing-with-reaction",
+      "version-3.0.0-styleguide",
+      "version-3.0.0-git-style-guide",
+      "version-3.0.0-devs-breaking-changes",
+      "version-3.0.0-react-best-practices",
+      "version-3.0.0-jsdoc-style-guide",
+      "version-3.0.0-error-handling-guide",
+      "version-3.0.0-using-ci",
+      "version-3.0.0-release-process",
       "version-3.0.0-recommended-tools",
       "version-3.0.0-installation-docker-development",
-      "version-3.0.0-devs-node-es-modules",
       "version-3.0.0-troubleshooting-development"
     ],
     "For Developers: Concepts": [
@@ -33,20 +42,8 @@
       "version-3.0.0-devs-understanding-commonorder",
       "version-3.0.0-developer-environment-variables",
       "version-3.0.0-developer-inventory",
-      "version-3.0.0-developer-kafka-streams"
-    ],
-    "For Developers: Contributing Guide": [
-      "version-3.0.0-contributing-to-reaction",
-      "version-3.0.0-styleguide",
-      "version-3.0.0-git-style-guide",
-      "version-3.0.0-react-best-practices",
-      "version-3.0.0-jsdoc-style-guide",
-      "version-3.0.0-error-handling-guide",
-      "version-3.0.0-devs-breaking-changes",
-      "version-3.0.0-using-ci",
-      "version-3.0.0-release-process",
-      "version-3.0.0-reporting-vulnerabilities",
-      "version-3.0.0-community-showcase"
+      "version-3.0.0-developer-kafka-streams",
+      "version-3.0.0-devs-node-es-modules"
     ],
     "For Developers: GraphQL": [
       "version-3.0.0-graphql-what",
@@ -149,6 +146,8 @@
       "version-3.0.0-operator-address-validation"
     ],
     "Community": [
+      "version-3.0.0-community-showcase",
+      "version-3.0.0-community-resources",
       "version-3.0.0-guidelines",
       "version-3.0.0-code-of-conduct",
       "version-3.0.0-diversity-statement",

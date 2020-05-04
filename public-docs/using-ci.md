@@ -3,14 +3,14 @@ id: using-ci
 title: CI Builds
 ---
 
-Whenever a Pull Request or merge request is made to the Reaction repo, there are automated acceptance steps that must pass before we merge into the `develop` branch.
+Whenever a Pull Request or merge request is made to the Reaction repo, there are automated acceptance steps that must pass before we merge into the current development branch.
 
 ## Checks
 
 - code style and lint rules adherence
 - unit and integration tests
-- docker builds on release branches
-- DCO (commit signing)
+- Docker builds on release branches
+- [DCO (commit signing)](./git-style-guide#developer-certificate-of-origin)
 
 ## Builds
 

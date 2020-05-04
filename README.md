@@ -22,7 +22,7 @@
 
 ## Contributing documentation
 
-### Run the app locally
+### Run the docs website locally
 
 ```
 git clone git@github.com:reactioncommerce/reaction-docs.git
@@ -31,7 +31,7 @@ bin/setup
 docker-compose up
 ```
 
-Open `localhost:4242`
+Open http://localhost:4242
 
 ### Update existing documentation
 
@@ -39,14 +39,14 @@ To update docs for the current released version of Reaction, edit existing Markd
 
 1. Find the Markdown file you want to edit in the latest version's folder, at `website/versioned_docs/version-CURRENTVERSION`. If the document you want to edit is not in that folder, check in previous versions' folders until you find the latest one.
 1. Edit the file and save.
-1. Go to `localhost:4242/docs/<YOURMARKDOWNFILE_ID>` to see your changes locally.
+1. Go to `http://localhost:4242/docs/<YOURMARKDOWNFILE_ID>` to see your changes locally.
 
 ### Documenting unreleased features, changes
 
-To update docs of unreleased features, you will need to edit existing Markdown files in `public_docs`. For example, if you are documenting *upcoming* Reaction API changes to Cart that are merged into `develop`, but not yet in ``trunk` , you'd update the `public-docs/cart.md` file.
+To update docs of unreleased features, you will need to edit existing Markdown files in `public_docs`. For example, if you were documenting *upcoming* Reaction API changes to Cart that are merged into `trunk` but not yet tagged in a release, you'd update the `public-docs/cart.md` file.
 
 1. Edit the file and save.
-1. Go to `localhost:4242/docs/next/<YOURMARKDOWNFILE_ID>` to see your changes locally.
+1. Go to `http://localhost:4242/docs/next/<YOURMARKDOWNFILE_ID>` to see your changes locally.
 
 ### Documenting new, unreleased features
 
@@ -61,7 +61,7 @@ title: document number 2
 ```
 1. Add the Markdown file to the table of contents, at `website/sidebars.json`.
 1. When you update `sidebars.json`, you'll need to restart the app to see changes. Restart the app.
-1. Go to `localhost:4242/docs/next/<YOURMARKDOWNFILE_ID>` to see your new file locally.
+1. Go to `http://localhost:4242/docs/next/<YOURMARKDOWNFILE_ID>` to see your new file locally.
 
 ### Tips for documenting
 
@@ -168,21 +168,21 @@ docker-compose run --rm web yarn run version <version-number>
 docker-compose down && docker-compose up
 ```
 
-3. Run locally to confirm the version number has been changed on `localhost:4242`, and the previous version has been added to `localhost:4242/versions` list.
+3. Run locally to confirm the version number has been changed in the header on http://localhost:4242, and the previous version has been added to the http://localhost:4242/versions list.
 
 4. If all things look good, push the branch up to make a pull request.
 
-5. Merge to `trunk`  to auto-deploy
+5. Merge to `trunk` to auto-deploy
 
 ## Deploying
 
 ### Merge to `staging` branch
 
-Merging to `staging` will trigger a CircleCI build to https://reaction-docs-staging.reactioncommerce.com/
+Merging to `staging` will trigger a CircleCI build to https://reaction-docs-staging.reactioncommerce.com/ using Netlify.
 
 ### Merge to `trunk`  branch
 
-Merging to `trunk`  will trigger a CircleCI build to http://reaction-docs-production.netlify.com
+Merging to `trunk`  will trigger a CircleCI build to https://docs.reactioncommerce.com/ using Netlify.
 
 ## Algolia search configuration
 

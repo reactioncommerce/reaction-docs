@@ -13,10 +13,9 @@ A single "payment plugin" may provide more than one "payment method", which is t
 
 ## Enable a payment method
 
-To enable a payment method for your shop, log in as a shop admin and navigate to your Dashboard.
+To enable a payment method for your shop, head to `reaction-admin` (on [localhost:4080](http://localhost:4080) if you're running it locally) and sign in with an owner account.
 
-1. Click **Payment** <i class="rui font-icon fa fa-credit-card"></i> from the Dashboard.
-2. You should see one section for each payment plugin, with a form for entering any data that the plugin needs. Enter the proper settings and click **Save Changes**.
-3. Now click the toggle next to each payment method that you want to enable from each plugin.
+1. In the sidebar, go to Settings > Payment .
+2. Click the toggle next to each payment method that you want to enable from each plugin.
 
 > Technical note: You can enable more than one payment method. This affects which methods are returned by the `availablePaymentMethods` GraphQL query, but keep in mind that your storefront UI will need to actually query this and respect it, and decide what to show if there are multiple enabled. You might also choose to just hard code a single payment method into your storefront UI.

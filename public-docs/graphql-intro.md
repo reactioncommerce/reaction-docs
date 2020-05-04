@@ -59,15 +59,9 @@ You will not get any data:
 }
 ```
 
-To authenticate, you'll need an access token. In the API project directory, run the following command:
+To authenticate, you'll need an access token. Follow the instructions in [How to Get an Access Token for Development](./developer-authentication#how-to-get-an-access-token-for-development).
 
-```sh
-bin/token [userId]
-```
-
-Substitute a real user ID, which is the internal user ID you see in the `_id` field in the MongoDB `users` collection.
-
-An access token is printed, which you can then copy. Expand the `HTTP HEADERS` box in the bottom left corner of GraphQL Playground, and add the token header:
+Copy the access token. Expand the `HTTP HEADERS` box in the bottom left corner of GraphQL Playground, and add the token header:
 
 ```json
 {
