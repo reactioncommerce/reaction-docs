@@ -22,7 +22,7 @@
 
 ## Contributing documentation
 
-### Run the app locally
+### Run the docs website locally
 
 ```
 git clone git@github.com:reactioncommerce/reaction-docs.git
