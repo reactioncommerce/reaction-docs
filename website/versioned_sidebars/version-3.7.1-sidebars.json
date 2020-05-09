@@ -20,11 +20,20 @@
       "version-3.7.1-concepts-slugs",
       "version-3.7.1-concepts-tags"
     ],
-    "Developer": [
+    "Contributing": [
+      "version-3.7.1-contributing-to-reaction",
+      "version-3.7.1-reporting-vulnerabilities",
       "version-3.7.1-getting-started-developing-with-reaction",
+      "version-3.7.1-styleguide",
+      "version-3.7.1-git-style-guide",
+      "version-3.7.1-devs-breaking-changes",
+      "version-3.7.1-react-best-practices",
+      "version-3.7.1-jsdoc-style-guide",
+      "version-3.7.1-error-handling-guide",
+      "version-3.7.1-using-ci",
+      "version-3.7.1-release-process",
       "version-3.7.1-recommended-tools",
       "version-3.7.1-installation-docker-development",
-      "version-3.7.1-devs-node-es-modules",
       "version-3.7.1-troubleshooting-development"
     ],
     "For Developers: Concepts": [
@@ -33,20 +42,8 @@
       "version-3.7.1-devs-understanding-commonorder",
       "version-3.7.1-developer-environment-variables",
       "version-3.7.1-developer-inventory",
-      "version-3.7.1-developer-kafka-streams"
-    ],
-    "For Developers: Contributing Guide": [
-      "version-3.7.1-contributing-to-reaction",
-      "version-3.7.1-styleguide",
-      "version-3.7.1-git-style-guide",
-      "version-3.7.1-react-best-practices",
-      "version-3.7.1-jsdoc-style-guide",
-      "version-3.7.1-error-handling-guide",
-      "version-3.7.1-devs-breaking-changes",
-      "version-3.7.1-using-ci",
-      "version-3.7.1-release-process",
-      "version-3.7.1-reporting-vulnerabilities",
-      "version-3.7.1-community-showcase"
+      "version-3.7.1-developer-kafka-streams",
+      "version-3.7.1-devs-node-es-modules"
     ],
     "For Developers: GraphQL": [
       "version-3.7.1-graphql-what",
@@ -149,6 +146,7 @@
       "version-3.7.1-operator-address-validation"
     ],
     "Community": [
+      "version-3.7.1-community-showcase",
       "version-3.7.1-guidelines",
       "version-3.7.1-code-of-conduct",
       "version-3.7.1-diversity-statement",
