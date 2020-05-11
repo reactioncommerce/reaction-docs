@@ -1,0 +1,170 @@
+{
+  "version-3.7.1-docs": {
+    "Introduction": [
+      "version-3.7.1-intro",
+      "version-3.7.1-upgrading",
+      "version-3.7.1-devs-update-custom-plugin"
+    ],
+    "Concepts": [
+      "version-3.7.1-concepts-intro",
+      "version-3.7.1-concepts-accounts",
+      "version-3.7.1-concepts-carts",
+      "version-3.7.1-concepts-catalogs",
+      "version-3.7.1-concepts-fulfillment",
+      "version-3.7.1-concepts-inventory",
+      "version-3.7.1-concepts-orders",
+      "version-3.7.1-concepts-payments",
+      "version-3.7.1-concepts-pricing",
+      "version-3.7.1-concepts-products",
+      "version-3.7.1-concepts-shops",
+      "version-3.7.1-concepts-slugs",
+      "version-3.7.1-concepts-tags"
+    ],
+    "Contributing": [
+      "version-3.7.1-contributing-to-reaction",
+      "version-3.7.1-reporting-vulnerabilities",
+      "version-3.7.1-getting-started-developing-with-reaction",
+      "version-3.7.1-styleguide",
+      "version-3.7.1-git-style-guide",
+      "version-3.7.1-devs-breaking-changes",
+      "version-3.7.1-react-best-practices",
+      "version-3.7.1-jsdoc-style-guide",
+      "version-3.7.1-error-handling-guide",
+      "version-3.7.1-using-ci",
+      "version-3.7.1-release-process",
+      "version-3.7.1-recommended-tools",
+      "version-3.7.1-installation-docker-development",
+      "version-3.7.1-troubleshooting-development"
+    ],
+    "For Developers: Concepts": [
+      "version-3.7.1-appevent-hooks",
+      "version-3.7.1-developer-authentication",
+      "version-3.7.1-devs-understanding-commonorder",
+      "version-3.7.1-developer-environment-variables",
+      "version-3.7.1-developer-inventory",
+      "version-3.7.1-developer-kafka-streams",
+      "version-3.7.1-devs-node-es-modules"
+    ],
+    "For Developers: GraphQL": [
+      "version-3.7.1-graphql-what",
+      "version-3.7.1-graphql-using",
+      "version-3.7.1-graphql-developing",
+      "version-3.7.1-graphql-intro",
+      "version-3.7.1-graphql-resolvers-file-structure"
+    ],
+    "Developer How-To: Reaction API Server": [
+      "version-3.7.1-dev-how-do-i",
+      "version-3.7.1-graphql-create-query",
+      "version-3.7.1-graphql-create-mutation",
+      "version-3.7.1-how-to-share-code-between-plugins",
+      "version-3.7.1-how-to-create-a-fulfillment-methods-plugin",
+      "version-3.7.1-how-to-create-inventory-plugin",
+      "version-3.7.1-how-to-create-a-payment-provider",
+      "version-3.7.1-how-to-add-address-validation-service",
+      "version-3.7.1-how-to-add-tax-service",
+      "version-3.7.1-how-to-extend-graphql-to-add-field",
+      "version-3.7.1-how-to-extend-graphql-with-remote-schema",
+      "version-3.7.1-how-to-store-custom-order-fields",
+      "version-3.7.1-how-to-extend-product",
+      "version-3.7.1-how-to-manage-app-settings",
+      "version-3.7.1-register-operator-route",
+      "version-3.7.1-dev-debug-app-slowness",
+      "version-3.7.1-testing-debugging-server-code"
+    ],
+    "Core API Server Plugins": [
+      "version-3.7.1-core-plugins-intro",
+      "version-3.7.1-core-plugins-stripe",
+      "version-3.7.1-core-plugins-simple-inventory",
+      "version-3.7.1-core-plugins-sitemap-generator"
+    ],
+    "Developer How-To: GraphQL Clients": [
+      "version-3.7.1-how-to-get-shop-id-for-client"
+    ],
+    "Storefront UI Development Guide": [
+      "version-3.7.1-storefront-intro",
+      "version-3.7.1-storefront-apollo-client",
+      "version-3.7.1-storefront-product-listing-page",
+      "version-3.7.1-storefront-product-detail-page",
+      "version-3.7.1-storefront-nav-menus",
+      "version-3.7.1-storefront-add-to-cart",
+      "version-3.7.1-storefront-cart-page",
+      "version-3.7.1-storefront-cart-modification",
+      "version-3.7.1-storefront-checkout-page",
+      "version-3.7.1-storefront-order-view-page",
+      "version-3.7.1-storefront-login",
+      "version-3.7.1-storefront-account-management",
+      "version-3.7.1-storefront-inventory-status-badges"
+    ],
+    "For Developers: Architecture": [
+      "version-3.7.1-developer-catalog",
+      "version-3.7.1-image-handling",
+      "version-3.7.1-internationalization",
+      "version-3.7.1-jobcontrol",
+      "version-3.7.1-logging",
+      "version-3.7.1-permissions",
+      "version-3.7.1-product-variants",
+      "version-3.7.1-simple-schema"
+    ],
+    "For Developers: Catalyst Components": [
+      "version-3.7.1-blocks-api",
+      "version-3.7.1-components-primary-app-bar"
+    ],
+    "Testing": [
+      "version-3.7.1-testing-reaction",
+      "version-3.7.1-running-jest-unit-tests",
+      "version-3.7.1-running-jest-integration-tests",
+      "version-3.7.1-writing-jest-unit-tests",
+      "version-3.7.1-writing-jest-integration-tests",
+      "version-3.7.1-react-testing",
+      "version-3.7.1-creating-test-data",
+      "version-3.7.1-jest-tips"
+    ],
+    "Acceptance Testing": [
+      "version-3.7.1-acceptance-testing",
+      "version-3.7.1-testing-matrix",
+      "version-3.7.1-test-setup"
+    ],
+    "System Administrator Guide": [
+      "version-3.7.1-deploying",
+      "version-3.7.1-database-optimizations",
+      "version-3.7.1-environment-variables",
+      "version-3.7.1-authentication-in-prod"
+    ],
+    "Store Operator Guide": [
+      "version-3.7.1-dashboard",
+      "version-3.7.1-products",
+      "version-3.7.1-products-bulk-edit",
+      "version-3.7.1-orders-admin",
+      "version-3.7.1-accounts",
+      "version-3.7.1-shop-admin",
+      "version-3.7.1-email-admin",
+      "version-3.7.1-localization-and-i18n",
+      "version-3.7.1-payment",
+      "version-3.7.1-tax",
+      "version-3.7.1-template",
+      "version-3.7.1-shipping-admin",
+      "version-3.7.1-operator-address-validation"
+    ],
+    "Community": [
+      "version-3.7.1-community-showcase",
+      "version-3.7.1-guidelines",
+      "version-3.7.1-code-of-conduct",
+      "version-3.7.1-diversity-statement",
+      "version-3.7.1-reporting-guide",
+      "version-3.7.1-enforcement",
+      "version-3.7.1-code-of-conduct-committee",
+      "version-3.7.1-guideline-faqs",
+      "version-3.7.1-changes"
+    ],
+    "Swag Shop Tutorial": [
+      "version-3.7.1-swag-shop-1",
+      "version-3.7.1-swag-shop-2",
+      "version-3.7.1-swag-shop-3",
+      "version-3.7.1-swag-shop-4",
+      "version-3.7.1-swag-shop-5",
+      "version-3.7.1-swag-shop-6",
+      "version-3.7.1-swag-shop-7",
+      "version-3.7.1-swag-shop-8"
+    ]
+  }
+}
