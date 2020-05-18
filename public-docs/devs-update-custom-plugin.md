@@ -30,6 +30,11 @@ Every plugin should be an NPM package that is an ES module targeting Node 12.
   - Alternatively enter `bin/package-link <package-name> <path-to-package-repo>` for any package that is not located in  `../api-plugins`
 - When you're done testing, run `bin/package-unlink <package-name>`
 
+#### Some additional notes for linking packages
+- It should work to link multiple plugins at once (one at a time)
+- If you do not unlink before you stop the `api` service, you will likely get into a loop where the API won't ever start. If this happens, delete the node_modules volume with something like `docker volume rm reaction_api_node_modules`, and then `docker-compose up -d` should work.
+- When you make changes to the package repo code, run the same `bin/package-link` command again. You do NOT have to (and must not) manually restart the `api` container. The Reaction API will magically restart after the linking finishes.
+
 ## Plugins Must Import Code According to Node ECMAScript Module Rules
 
 Most named imports do not work at this time and will need to be rewritten. Some examples:
