@@ -23,15 +23,17 @@ Every plugin should be an NPM package that is an ES module targeting Node 12.
 
 ### How to link in a local NPM package for a plugin while working on it
 
-In your API project `docker-compose.dev.yml` file, in the `volumes` list, add one line for each local package you need to link into the container:
+**Run `docker-compose up -d` before running any of these commands, and wait until the API has fully started.**
 
-`- /absolute/file/path/to/package/root:/usr/local/src/app/node_modules/your-plugin-package-name`
+- Enter `bin/package-link <package-name>` to link locally cloned package repo into the container and `npm link` it.
+  - This assumes that the package lives in `../api-plugins`, which will be true if you're running Reaction via the `reaction-development-platform`, it's a plugin package, and you used the `make clone-api-plugins` command to clone it.
+  - Alternatively enter `bin/package-link <package-name> <path-to-package-repo>` for any package that is not located in  `../api-plugins`
+- When you're done testing, run `bin/package-unlink <package-name>`
 
-In `registerPlugins.js`, import `your-plugin-package-name` and register it.
-
-Run `npm install` in the package directory if it has non-dev dependencies.
-
-Then in the API project, ensure that you have symlinked `docker-compose.dev.yml` to `docker-compose.override.yml` and run `docker-compose up -d` to start the API.
+#### Some additional notes for linking packages
+- It should work to link multiple plugins at once (one at a time)
+- If you do not unlink before you stop the `api` service, you will likely get into a loop where the API won't ever start. If this happens, delete the node_modules volume with something like `docker volume rm reaction_api_node_modules`, and then `docker-compose up -d` should work.
+- When you make changes to the package repo code, run the same `bin/package-link` command again. You do NOT have to (and must not) manually restart the `api` container. The Reaction API will magically restart after the linking finishes.
 
 ## Plugins Must Import Code According to Node ECMAScript Module Rules
 
