@@ -3,7 +3,7 @@ id: swag-shop-8
 title: Creating the Featured Products component
 ---
 
-To display our featured products block we can create a custom component called HomePageFeatured that just loops over the featured products. But how to we fill the component with data? We will create a new Higher Order Component that will drop the featured products data into our component. Let's start that now.
+To display our featured products block we can create a custom component called HomePageFeatured that just loops over the featured products. But how do we fill the component with data? We will create a new Higher Order Component (HOC) that will drop the featured products data into our component. Let's start that now.
 
 First let's create a `containers` directory in `custom` and in that directory let's create a `homepage` directory. In that directory let's create a `featured.gql` file. This is where our GraphQL query will placed.
 
@@ -32,7 +32,7 @@ query featuredQuery($shopId: ID!) {
 }
 ```
 
-So let's break this down a little bit. First we declared that we are creating a query and we gave it a name `featuredQuery`, and said that we take a shopId of type `ID` as our type. We will then call the server query that we created in our last [tutorial on server side GraphQL plugin](swag-shop-07-graphql-server-plugin.md) `featuredProductsByShop` with the `shopId` as input.
+Let's break this down. First we declared that we are creating a query and we gave it a name `featuredQuery`, which takes a shopId whose type is `ID`. We will then call the server query that we created in our last [tutorial on server side GraphQL plugin](swag-shop-07-graphql-server-plugin.md) `featuredProductsByShop` with the `shopId` as input.
 
 Next, we are declaring the 'shape' of our return type. Since we are getting a cursor we say want nodes, we want the Id of the node and we want those nodes to be of type `CatalogItemProduct` and then we declare which fields of the `CatalogItemProduct` type we want. And that's it. You can see that query looks just like our test code above with just an additional wrapper around.
 
