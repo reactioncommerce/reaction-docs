@@ -7,4 +7,3 @@ Each shop can have a list of **tags**, which are just predefined words or phrase
 Note the following:
 
 - Tags are set on products, and not on variants
-- In a marketplace setup, tags created in a primary shop are visible and available to all merchant shops.
