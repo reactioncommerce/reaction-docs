@@ -105,7 +105,7 @@ const siteConfig = {
   ogImage: "img/logo@2x.png",
   twitterImage: "img/logo@2x.png",
 
-  gaTrackingId: "UA-44704216-8",
+  gaTrackingId: "UA-44704216-5",
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo"s URL...
