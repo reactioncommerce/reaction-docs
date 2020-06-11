@@ -29,7 +29,6 @@ class Footer extends React.Component {
                 <li><a target="_blank" href="https://reactioncommerce.com/about">About</a></li>
                 <li><a target="_blank" href="https://blog.reactioncommerce.com/">Blog</a></li>
                 <li><a target="_blank" href="https://reactioncommerce.com/about#contact">Contact</a></li>
-                <li><a target="_blank" href="https://reactioncommerce.com/careers">Careers</a></li>
                 <li><a target="_blank" href="https://reactioncommerce.com/press">Press</a></li>
               </ul>
             </div>
