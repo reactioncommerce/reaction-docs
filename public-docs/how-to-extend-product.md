@@ -5,6 +5,7 @@ title: How To: Extend the Product Schema
 ## Prerequisite Reading
 - [Catalogs](./developer-catalog.md)
 - [Understanding Plugins](./core-plugins-intro.md)
+- [Developing Plugins](./core-plugins-developing.md)
 
 ## Overview
 
