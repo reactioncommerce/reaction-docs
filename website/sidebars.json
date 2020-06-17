@@ -73,6 +73,7 @@
     ],
     "Core API Server Plugins": [
       "core-plugins-intro",
+      "core-plugins-developing",
       "core-plugins-stripe",
       "core-plugins-simple-inventory",
       "core-plugins-sitemap-generator"
