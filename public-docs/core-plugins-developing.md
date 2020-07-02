@@ -203,6 +203,39 @@ When you’re done, be sure to unlink before stopping the API service or running
 bin/package-unlink @reactioncommerce/api-plugin-carts
 ```
 
-Note that there is currently a [bug](https://github.com/reactioncommerce/reaction/issues/6248] in the `npm unlink` command that in turn causes our `bin/package-unlink` command to unlink ALL linked packages instead of just the one you specify. Because of this you’ll need to relink any that you still wanted linked after you unlink one.
-
 This linking approach works pretty well but has the potential to get the API into a state where it complains about missing dependencies and won’t start. If this happens and restarting the API service does not fix it, you will need to use the `docker volume rm` command to delete the API `node_modules` volume (usually named something like `reaction_api_node_modules`). If that doesn’t work, running `docker-compose down -v` in the `reaction` directory will work, but be careful because that command will also wipe out your local MongoDB database.
+
+### Link multiples packages with package configuration file
+
+Before running the `bin/package-link` script, create a `yalc-packages` file from the example.
+
+```sh
+cp yalc-packages.example yalc-packages
+```
+
+Then run the link script without any arguments
+```sh
+./bin/package-link
+```
+
+This will link every package in the `yalc-packages` file to your api app. If you don't want every plugin to be linked, edit `yalc-packages` and set the packages you want disabled and unlinked to `false`.
+
+Format: `path=true|false`
+```
+../api-plugins/api-core=true
+../api-plugins/api-plugin-accounts=true
+
+```
+(You must have a blank line at the end of the file, otherwise your last plugin will be omitted)
+
+### Update package links on stop/start
+
+If you've stopped, then started your container you may notice your linked packages have been reset. To re-link previously linked packages you can run the package update script.
+
+```
+./bin/package-update
+```
+
+(This runs `yalc update` under the hood, and only re-links packages in the `yalc.lock` file, and only if those packages are still published inside the docker container.)
+
+Alternatively, if you've configured `yalc-packages`, then you can always run `./bin/package-link` again to re-link and update everything.
