@@ -26,5 +26,4 @@ If you're interested in contributing in any way, read and bookmark the [Contribu
 ## Help and resources
 
 - <a href="http://gitter.im/reactioncommerce/" target="_blank">Chat</a>
-- <a href="https://github.com/iamchathu/awesome-reactioncommerce" target="_blank">Awesome Reaction Commerce</a>
 - <a href="https://forums.reactioncommerce.com/" target="_blank">Forums</a>
