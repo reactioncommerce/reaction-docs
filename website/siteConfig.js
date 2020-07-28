@@ -32,7 +32,7 @@ const siteConfig = {
   ],
   cleanUrl: true,
   /* path to images for header/footer */
-  headerIcon: "img/reaction-commerce-logo-and-name.svg",
+  headerIcon: "img/Reaction-Logo-Black.png",
   footerIcon: "img/logo@2x.png",
   favicon: "img/favicon.png",
 
