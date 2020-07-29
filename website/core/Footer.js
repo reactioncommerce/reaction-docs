@@ -67,7 +67,7 @@ class Footer extends React.Component {
               <br />
               &copy;{new Date().getFullYear()} Reaction Commerce LLC
               <br />
-              <a href="https://reactioncommerce.com/legal">Legal</a> | <a href="https://www.reactioncommerce.com/legal/privacy">Privacy Policy</a>              
+              <a href="https://reactioncommerce.com/legal">Legal</a> | <a href="https://www.reactioncommerce.com/legal/privacy">Privacy Policy</a>
             </div>
 
           </div>
