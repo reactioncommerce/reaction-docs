@@ -63,9 +63,11 @@ class Footer extends React.Component {
             </div>
 
             <div className="row">
-              <img src="/img/footer-sun.svg" alt="" />
-              &nbsp;&nbsp;Made in the sunshine in Santa Monica, California by&nbsp;<a href="/" target="_blank">Reaction Commerce, Inc.</a>
-              ©&nbsp;2019&nbsp;|&nbsp;<a href="https://reactioncommerce.com/legal">Legal</a> | <a href="https://www.reactioncommerce.com/legal/privacy">Privacy Policy</a>
+              <img src="/img/footer-sun.svg" alt="" />&nbsp; Made in Los Angeles, and lots of other places, by the global community supporting <a href="/" target="_blank">Reaction Commerce, LLC.</a>
+              <br />
+              &copy;{new Date().getFullYear()} Reaction Commerce LLC
+              <br />
+              <a href="https://reactioncommerce.com/legal">Legal</a> | <a href="https://www.reactioncommerce.com/legal/privacy">Privacy Policy</a>
             </div>
 
           </div>
