@@ -313,6 +313,7 @@
 
   .fixedHeaderContainer header img {
     height: auto;
+    max-width: 250px;
   }
 
   .headerWrapper header a:first-child {
