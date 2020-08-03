@@ -66,6 +66,12 @@ The best option depends on your budget and your expected level of traffic. Below
 - Azure
 - Digital Ocean
 
+## Deploy Reaction on Digital Ocean
+
+The following guide is intended for users that are in the evaluation phase of Reaction Commerce. It is not meant to be a production grade deployment, rather a simple guided tutorial that will provide insight on how the platform works together. With that said, the concepts covered in the guided can be used to build a production grade deployment.
+
+[https://github.com/reactioncommerce/proxy-traefik](https://github.com/reactioncommerce/proxy-traefik)
+
 ## Who Uses Reaction?
 
 Ecommerce and marketplace sites from around the world are using Reaction in production now. Check out our [Community Showcase](https://docs.reactioncommerce.com/reaction-docs/trunk/community-showcase).

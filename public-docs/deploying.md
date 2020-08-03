@@ -5,6 +5,12 @@ title: Deploying
 
 Reaction is an open source multi-service platform. All services are either publicly available Docker images on DockerHub or are Git repositories that include a `Dockerfile` so that you can build your own Docker image after customizing the service. This means that you can deploy the Reaction system on any infrastructure that supports running a Docker container cluster with a shared network.
 
+## Deploy Reaction on Digital Ocean
+
+The following guide is intended for users that are in the evaluation phase of Reaction Commerce. It is not meant to be a production grade deployment, rather a simple guided tutorial that will provide insight on how the platform works together. With that said, the concepts covered in the guided can be used to build a production grade deployment.
+
+[https://github.com/reactioncommerce/proxy-traefik](https://github.com/reactioncommerce/proxy-traefik)
+
 ## Docker Images
 
 You can find the published Reaction images [on our DockerHub page](https://hub.docker.com/u/reactioncommerce).
