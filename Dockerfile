@@ -1,4 +1,6 @@
-FROM node:8-alpine
+FROM node:8
+# Cannot use -alpine because dh-autoreconf package is a dependency of
+# gifsicle NPM package, which docusaurus depends on.
 
 ARG NAME=reaction-docs
 ARG DESCRIPTION="Reaction Docs: Docusarus static documentation site generator"

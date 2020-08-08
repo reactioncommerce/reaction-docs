@@ -11,7 +11,7 @@
     background: #ffffff;
   }
 
-  .doc.separateOnPageNav.sideNavVisible .navPusher .container.mainContainer {
+  .separateOnPageNav.sideNavVisible .navPusher .container.mainContainer {
     padding-left: 0;
     padding-right: 0;
   }
@@ -110,7 +110,7 @@
     letter-spacing: 2px;
     font-size: 20px;
     text-transform: uppercase;
-    width: 180px;
+    width: 130px;
     text-decoration: none;
     font-family: "PostGrotesk-Medium";
   }
@@ -163,7 +163,6 @@
 
   nav.toc section .navGroups {
     background: #f7fdff;
-    padding-top: 60px;
   }
 
   nav.toc .toggleNav .navToggle {
@@ -289,7 +288,7 @@
     padding: 0;
   }
 
-  .doc.separateOnPageNav.sideNavVisible .navPusher .mainContainer {
+  .separateOnPageNav.sideNavVisible .navPusher .mainContainer {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -318,13 +317,13 @@
 
   .headerWrapper header a:first-child {
     background: #f7fdff;
-    width: 318px;
+    width: 320px;
     height: 70px;
   }
 
   .headerWrapper header a:nth-child(2) {
     position: absolute;
-    right: 358px;
+    right: 360px;
     height: 70px;
   }
 
@@ -422,6 +421,10 @@
     transition-duration: 0.12s;
   }
 
+  nav.toc .toggleNav .navGroup:first-of-type {
+    margin-top: 0;
+  }
+
   .mainContainer {
     padding-left: 40px;
   }
@@ -467,20 +470,22 @@
 }
 
 @media only screen and (min-width: 1024px) {
+  .docMainWrapper > * {
+    margin: 0;
+  }
 
-    input#search_input_react {
-      padding-top: 6px;
-      padding-bottom: 6px;
-    }
+  input#search_input_react {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 
   .navigationSlider .slidingNav ul li:first-child a {
     background: transparent !important;
     justify-content: flex-start;
-    padding-left: 70px;
     letter-spacing: 2px;
     font-size: 20px;
     text-transform: uppercase;
-    width: 180px;
+    width: 130px;
     text-decoration: none;
     font-family: "PostGrotesk-Medium";
   }
@@ -490,11 +495,10 @@
   }
 
   .onPageNav {
-    top: 10px;
-    padding-right: 40px;
+    top: 0;
   }
 
-  .doc.separateOnPageNav .docsNavContainer {
+  .separateOnPageNav .docsNavContainer {
     margin: 55px 0 0;
     flex: 0 0 320px;
     overflow-y: scroll;
@@ -504,7 +508,7 @@
     border-right: 2px solid #a7edff;
   }
 
-  .doc.separateOnPageNav.sideNavVisible .navPusher .mainContainer {
+  .separateOnPageNav.sideNavVisible .navPusher .mainContainer {
     padding-left: 80px;
     padding-right: 80px;
   }
@@ -539,7 +543,7 @@ body {
   margin-right: 12px;
 }
 
-.fixedHeaderContainer header h2 {
+.fixedHeaderContainer header .headerTitleWithLogo {
   display: none;
 }
 
@@ -560,7 +564,7 @@ input#search_input_react {
   background-color: #ebebeb;
   color: #000000;
   padding-left: 30px;
-  width: 60px;
+  width: 120px;
   float: left;
 }
 
@@ -599,7 +603,6 @@ input#search_input_react:active {
   padding-top: 30px;
   padding-left: 30px;
   padding-bottom: 30px;
-  margin-top: 30px;
 }
 
 .navigationSlider .slidingNav ul {

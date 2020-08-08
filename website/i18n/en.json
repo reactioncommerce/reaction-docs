@@ -4,202 +4,2792 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Connecting the world through commerce",
-    "acceptance-testing": "Acceptance Testing",
-    "accounts": "Accounts",
-    "appevent-hooks": "Developer Concepts: App Events",
-    "App Events": "App Events",
-    "authentication-in-prod": "Authentication in Production",
-    "Authentication in Production": "Authentication in Production",
-    "blocks-api": "Blocks API",
-    "changes": "Changes",
-    "code-of-conduct-committee": "Code of Conduct Committee",
-    "code-of-conduct": "Code of Conduct",
-    "community-resources": "Community Resources",
-    "community-showcase": "Community showcase",
-    "components-primary-app-bar": "PrimaryAppBar",
-    "concepts-accounts": "Accounts",
-    "concepts-carts": "Carts",
-    "concepts-catalogs": "Catalogs",
-    "concepts-fulfillment": "Fulfillment",
-    "concepts-intro": "Introduction to Concepts",
-    "concepts-inventory": "Inventory",
-    "concepts-orders": "Orders",
-    "concepts-payments": "Payments",
-    "concepts-pricing": "Pricing",
-    "concepts-products": "Products, Variants, and Options",
-    "concepts-shops": "Shops",
-    "concepts-slugs": "Slugs",
-    "concepts-tags": "Tags",
-    "contributing-to-reaction": "Contributor Home",
-    "core-plugins-developing": "Developing API Plugins",
-    "core-plugins-intro": "Understanding API Plugins",
-    "core-plugins-simple-inventory": "Simple Inventory Plugin",
-    "core-plugins-sitemap-generator": "Sitemap Generator Plugin",
-    "core-plugins-stripe": "Stripe Payment Plugin",
-    "creating-test-data": "Creating Test Data",
-    "dashboard": "Store Operator’s Guide",
-    "database-optimizations": "Database optimizations",
-    "deploying": "Deploying",
-    "dev-debug-app-slowness": "How To: Debug slowness",
-    "dev-how-do-i": "For Developers: How Do I...?",
-    "developer-authentication": "Developer Concepts: Authentication",
-    "Authentication": "Authentication",
-    "developer-catalog": "Catalogs",
-    "developer-environment-variables": "Developer Concepts: Environment Variables",
-    "Environment Variables": "Environment Variables",
-    "developer-inventory": "Developer Concepts: Inventory",
-    "Inventory": "Inventory",
-    "developer-kafka-streams": "Developer Concepts: Kafka Streams",
-    "Kafka Streams": "Kafka Streams",
-    "devs-breaking-changes": "Identifying and Avoiding Breaking Changes",
-    "devs-node-es-modules": "Developer Concepts: Node ECMAScript Modules",
-    "Node ECMAScript Modules": "Node ECMAScript Modules",
-    "devs-understanding-commonorder": "Developer Concepts: CommonOrder",
-    "CommonOrder": "CommonOrder",
-    "devs-update-custom-plugin": "Updating a 2.x API plugin to work with Reaction API 3.x",
-    "Updating an API plugin for 3.x": "Updating an API plugin for 3.x",
-    "diversity-statement": "Diversity Statement",
-    "email-admin": "Configuring Email Sending",
-    "enforcement": "Enforcement",
-    "environment-variables": "Environment Variables",
-    "error-handling-guide": "Error Handling",
-    "getting-started-developing-with-reaction": "Getting Started As a Developer",
-    "git-style-guide": "Git Style Guide",
-    "graphql-create-mutation": "How To: Create a new GraphQL mutation",
-    "graphql-create-query": "How To: Create a new GraphQL query",
-    "graphql-developing": "Developing the GraphQL API",
-    "graphql-intro": "Tutorial: Getting started with GraphQL",
-    "graphql-resolvers-file-structure": "Understanding the Resolvers File Structure",
-    "graphql-using": "Using the GraphQL API",
-    "graphql-what": "What is GraphQL?",
-    "guideline-faqs": "FAQs",
-    "guidelines": "Guidelines",
-    "how-to-add-address-validation-service": "How To: Add an Address Validation Service",
-    "how-to-add-tax-service": "How To: Add a Tax Service",
-    "how-to-create-a-fulfillment-methods-plugin": "How To: Create a Fulfillment Methods Plugin",
-    "how-to-create-a-payment-provider": "How To: Add a Payment Method",
-    "how-to-create-inventory-plugin": "How To: Create an Inventory Data Provider Plugin",
-    "how-to-extend-graphql-to-add-field": "How To: Extend GraphQL to add a field",
-    "how-to-extend-graphql-with-remote-schema": "How To: Extend GraphQL with Remote Schema Delegation",
-    "how-to-extend-product": "How To: Extend the Product Schema",
-    "how-to-get-shop-id-for-client": "How To: Get the shop ID for a client",
-    "how-to-manage-app-settings": "How To: Manage App Settings",
-    "how-to-share-code-between-plugins": "How To: Share Code Between API Plugins",
-    "how-to-store-custom-order-fields": "How To: Store Custom Order Fields",
-    "image-handling": "Images",
-    "installation-docker-development": "Developing in Docker",
-    "Developing in Docker": "Developing in Docker",
-    "internationalization": "Internationalization",
-    "intro": "Introduction",
-    "jest-tips": "Jest Tips",
-    "jobcontrol": "Background Jobs",
-    "jsdoc-style-guide": "JSDoc Style Guide",
-    "localization-and-i18n": "Localization and i18n",
-    "logging": "Logging",
-    "operator-address-validation": "Address Validation",
-    "order-creation": "Script: Order Creation",
-    "orders-admin": "Orders",
-    "payment": "Payment",
-    "permissions": "Permissions",
-    "product-variants": "Product Variants",
-    "products-bulk-edit": "Products - Filter and Bulk Edit",
-    "products": "Products",
-    "react-best-practices": "React Best Practices",
-    "react-testing": "Writing Jest Tests for React Components",
-    "recommended-tools": "Recommended Tools",
-    "register-operator-route": "How To: Register Operator Routes",
-    "release-process": "Release Guide",
-    "reporting-guide": "Reporting Guide",
-    "reporting-vulnerabilities": "Report Vulnerabilities",
-    "running-jest-integration-tests": "Running Jest Integration Tests",
-    "running-jest-unit-tests": "Running Jest Unit Tests",
-    "script-template": "Script Template",
-    "shipping-admin": "Shipping",
-    "shop-admin": "Shop",
-    "simple-schema": "Schemas",
-    "storefront-account-management": "Build an account management page",
-    "storefront-add-to-cart": "Add a way to add an item to a cart",
-    "storefront-apollo-client": "Add and configure Apollo Client",
-    "storefront-cart-modification": "Implement cart modification",
-    "storefront-cart-page": "Build a cart page",
-    "storefront-checkout-page": "Build a checkout page",
-    "storefront-intro": "Storefront UI Development Overview",
-    "storefront-inventory-status-badges": "Show inventory status badges",
-    "storefront-login": "Add ability to log in",
-    "storefront-nav-menus": "Build navigation menus",
-    "storefront-order-view-page": "Build an order view page",
-    "storefront-product-detail-page": "Build a product detail page",
-    "storefront-product-listing-page": "Build a product listing page",
-    "styleguide": "Code Style Guide",
-    "swag-shop-1": "Understanding the Example Storefront",
-    "swag-shop-2": "Preparing for Upstream changes",
-    "swag-shop-3": "Custom Styling",
-    "swag-shop-4": "Customizing the Layout",
-    "swag-shop-5": "Adding a custom homepage",
-    "swag-shop-6": "Customizing the Product Detail Page",
-    "swag-shop-7": "Creating a Server-side GraphQL plugin",
-    "swag-shop-8": "Creating the Featured Products component",
-    "tagging": "Introduction into tagging concept",
-    "tax": "Tax",
-    "template": "Template",
-    "test-setup": "Test Setup",
-    "testing-debugging-server-code": "How To: Debugging server-side code",
-    "testing-matrix": "End-to-end testing matrix",
-    "testing-reaction": "Testing",
-    "troubleshooting-development": "Troubleshooting issues during development",
-    "Development Troubleshooting": "Development Troubleshooting",
-    "upgrading": "Upgrading from 2.x to 3.x",
-    "Upgrading from 2.x": "Upgrading from 2.x",
-    "using-ci": "CI Builds",
-    "writing-jest-integration-tests": "Writing Jest Integration Tests",
-    "writing-jest-unit-tests": "Writing Jest Unit Tests",
-    "Docs": "Docs",
-    "Get in touch": "Get in touch",
-    "Introduction": "Introduction",
-    "Concepts": "Concepts",
-    "Contributing": "Contributing",
-    "For Developers: Concepts": "For Developers: Concepts",
-    "For Developers: GraphQL": "For Developers: GraphQL",
-    "Developer How-To: Reaction API Server": "Developer How-To: Reaction API Server",
-    "Core API Server Plugins": "Core API Server Plugins",
-    "Developer How-To: GraphQL Clients": "Developer How-To: GraphQL Clients",
-    "Storefront UI Development Guide": "Storefront UI Development Guide",
-    "For Developers: Architecture": "For Developers: Architecture",
-    "For Developers: Catalyst Components": "For Developers: Catalyst Components",
-    "Testing": "Testing",
-    "Acceptance Testing": "Acceptance Testing",
-    "System Administrator Guide": "System Administrator Guide",
-    "Store Operator Guide": "Store Operator Guide",
-    "Community": "Community",
-    "Swag Shop Tutorial": "Swag Shop Tutorial",
-    "Getting Started As a Developer": "Getting Started As a Developer",
-    "For Developers: Contributing Guide": "For Developers: Contributing Guide",
-    "Core Plugins": "Core Plugins",
-    "Developer How-To: General": "Developer How-To: General",
-    "Developer How-To: Meteor app": "Developer How-To: Meteor app",
-    "For Developers: Meteor App Architecture": "For Developers: Meteor App Architecture",
-    "For Developers: Core Meteor App API": "For Developers: Core Meteor App API",
-    "Developer How-To": "Developer How-To",
-    "For Developers: Plugin Tutorial": "For Developers: Plugin Tutorial",
-    "For Developers: Meteor App Client Components": "For Developers: Meteor App Client Components",
-    "Swag shop tutorial": "Swag shop tutorial",
-    "Getting started": "Getting started",
-    "Plugin Tutorial": "Plugin Tutorial",
-    "Customization Guides": "Customization Guides",
-    "Contributing Guide": "Contributing Guide",
-    "Architecture": "Architecture",
-    "Core": "Core",
-    "GraphQL": "GraphQL",
-    "Components": "Components",
-    "Plugins": "Plugins",
-    "Deploying": "Deploying",
-    "Store Operator's Guide": "Store Operator's Guide",
-    "Guidelines": "Guidelines",
-    "Developer": "Developer",
-    "Customization Guide": "Customization Guide",
-    "Appearance": "Appearance",
-    "Themes": "Themes",
-    "Community Guidelines": "Community Guidelines"
+    "docs": {
+      "acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "accounts": {
+        "title": "Accounts"
+      },
+      "appevent-hooks": {
+        "title": "Developer Concepts: App Events",
+        "sidebar_label": "App Events"
+      },
+      "authentication-in-prod": {
+        "title": "Authentication in Production",
+        "sidebar_label": "Authentication in Production"
+      },
+      "blocks-api": {
+        "title": "Blocks API"
+      },
+      "changes": {
+        "title": "Changes"
+      },
+      "code-of-conduct-committee": {
+        "title": "Code of Conduct Committee"
+      },
+      "code-of-conduct": {
+        "title": "Code of Conduct"
+      },
+      "community-resources": {
+        "title": "Community Resources"
+      },
+      "community-showcase": {
+        "title": "Community showcase"
+      },
+      "components-primary-app-bar": {
+        "title": "PrimaryAppBar"
+      },
+      "concepts-accounts": {
+        "title": "Accounts"
+      },
+      "concepts-carts": {
+        "title": "Carts"
+      },
+      "concepts-catalogs": {
+        "title": "Catalogs"
+      },
+      "concepts-fulfillment": {
+        "title": "Fulfillment"
+      },
+      "concepts-intro": {
+        "title": "Introduction to Concepts"
+      },
+      "concepts-inventory": {
+        "title": "Inventory"
+      },
+      "concepts-orders": {
+        "title": "Orders"
+      },
+      "concepts-payments": {
+        "title": "Payments"
+      },
+      "concepts-pricing": {
+        "title": "Pricing"
+      },
+      "concepts-products": {
+        "title": "Products, Variants, and Options"
+      },
+      "concepts-shops": {
+        "title": "Shops"
+      },
+      "concepts-slugs": {
+        "title": "Slugs"
+      },
+      "concepts-tags": {
+        "title": "Tags"
+      },
+      "contributing-to-reaction": {
+        "title": "Contributor Home"
+      },
+      "core-plugins-developing": {
+        "title": "Developing API Plugins"
+      },
+      "core-plugins-intro": {
+        "title": "Understanding API Plugins"
+      },
+      "core-plugins-simple-inventory": {
+        "title": "Simple Inventory Plugin"
+      },
+      "core-plugins-sitemap-generator": {
+        "title": "Sitemap Generator Plugin"
+      },
+      "core-plugins-stripe": {
+        "title": "Stripe Payment Plugin"
+      },
+      "creating-test-data": {
+        "title": "Creating Test Data"
+      },
+      "dashboard": {
+        "title": "Store Operator’s Guide"
+      },
+      "database-optimizations": {
+        "title": "Database optimizations"
+      },
+      "deploying": {
+        "title": "Deploying"
+      },
+      "dev-debug-app-slowness": {
+        "title": "How To: Debug slowness"
+      },
+      "dev-how-do-i": {
+        "title": "For Developers: How Do I...?"
+      },
+      "developer-authentication": {
+        "title": "Developer Concepts: Authentication",
+        "sidebar_label": "Authentication"
+      },
+      "developer-catalog": {
+        "title": "Catalogs"
+      },
+      "developer-environment-variables": {
+        "title": "Developer Concepts: Environment Variables",
+        "sidebar_label": "Environment Variables"
+      },
+      "developer-inventory": {
+        "title": "Developer Concepts: Inventory",
+        "sidebar_label": "Inventory"
+      },
+      "developer-kafka-streams": {
+        "title": "Developer Concepts: Kafka Streams",
+        "sidebar_label": "Kafka Streams"
+      },
+      "devs-breaking-changes": {
+        "title": "Identifying and Avoiding Breaking Changes"
+      },
+      "devs-node-es-modules": {
+        "title": "Developer Concepts: Node ECMAScript Modules",
+        "sidebar_label": "Node ECMAScript Modules"
+      },
+      "devs-understanding-commonorder": {
+        "title": "Developer Concepts: CommonOrder",
+        "sidebar_label": "CommonOrder"
+      },
+      "devs-update-custom-plugin": {
+        "title": "Updating a 2.x API plugin to work with Reaction API 3.x",
+        "sidebar_label": "Updating an API plugin for 3.x"
+      },
+      "diversity-statement": {
+        "title": "Diversity Statement"
+      },
+      "email-admin": {
+        "title": "Configuring Email Sending"
+      },
+      "enforcement": {
+        "title": "Enforcement"
+      },
+      "environment-variables": {
+        "title": "Environment Variables",
+        "sidebar_label": "Environment Variables"
+      },
+      "error-handling-guide": {
+        "title": "Error Handling"
+      },
+      "getting-started-developing-with-reaction": {
+        "title": "Getting Started As a Developer"
+      },
+      "git-style-guide": {
+        "title": "Git Style Guide"
+      },
+      "graphql-create-mutation": {
+        "title": "How To: Create a new GraphQL mutation"
+      },
+      "graphql-create-query": {
+        "title": "How To: Create a new GraphQL query"
+      },
+      "graphql-developing": {
+        "title": "Developing the GraphQL API"
+      },
+      "graphql-intro": {
+        "title": "Tutorial: Getting started with GraphQL"
+      },
+      "graphql-resolvers-file-structure": {
+        "title": "Understanding the Resolvers File Structure"
+      },
+      "graphql-using": {
+        "title": "Using the GraphQL API"
+      },
+      "graphql-what": {
+        "title": "What is GraphQL?"
+      },
+      "guideline-faqs": {
+        "title": "FAQs"
+      },
+      "guidelines": {
+        "title": "Guidelines"
+      },
+      "how-to-add-address-validation-service": {
+        "title": "How To: Add an Address Validation Service"
+      },
+      "how-to-add-tax-service": {
+        "title": "How To: Add a Tax Service"
+      },
+      "how-to-create-a-fulfillment-methods-plugin": {
+        "title": "How To: Create a Fulfillment Methods Plugin"
+      },
+      "how-to-create-a-payment-provider": {
+        "title": "How To: Add a Payment Method"
+      },
+      "how-to-create-inventory-plugin": {
+        "title": "How To: Create an Inventory Data Provider Plugin"
+      },
+      "how-to-extend-graphql-to-add-field": {
+        "title": "How To: Extend GraphQL to add a field"
+      },
+      "how-to-extend-graphql-with-remote-schema": {
+        "title": "How To: Extend GraphQL with Remote Schema Delegation"
+      },
+      "how-to-extend-product": {
+        "title": "How To: Extend the Product Schema"
+      },
+      "how-to-get-shop-id-for-client": {
+        "title": "How To: Get the shop ID for a client"
+      },
+      "how-to-manage-app-settings": {
+        "title": "How To: Manage App Settings"
+      },
+      "how-to-share-code-between-plugins": {
+        "title": "How To: Share Code Between API Plugins"
+      },
+      "how-to-store-custom-order-fields": {
+        "title": "How To: Store Custom Order Fields"
+      },
+      "image-handling": {
+        "title": "Images"
+      },
+      "installation-docker-development": {
+        "title": "Developing in Docker",
+        "sidebar_label": "Developing in Docker"
+      },
+      "internationalization": {
+        "title": "Internationalization"
+      },
+      "intro": {
+        "title": "Introduction"
+      },
+      "jest-tips": {
+        "title": "Jest Tips"
+      },
+      "jobcontrol": {
+        "title": "Background Jobs"
+      },
+      "jsdoc-style-guide": {
+        "title": "JSDoc Style Guide"
+      },
+      "localization-and-i18n": {
+        "title": "Localization and i18n"
+      },
+      "logging": {
+        "title": "Logging"
+      },
+      "operator-address-validation": {
+        "title": "Address Validation"
+      },
+      "order-creation": {
+        "title": "Script: Order Creation"
+      },
+      "orders-admin": {
+        "title": "Orders"
+      },
+      "payment": {
+        "title": "Payment"
+      },
+      "permissions": {
+        "title": "Permissions"
+      },
+      "product-variants": {
+        "title": "Product Variants"
+      },
+      "products-bulk-edit": {
+        "title": "Products - Filter and Bulk Edit"
+      },
+      "products": {
+        "title": "Products"
+      },
+      "react-best-practices": {
+        "title": "React Best Practices"
+      },
+      "react-testing": {
+        "title": "Writing Jest Tests for React Components"
+      },
+      "recommended-tools": {
+        "title": "Recommended Tools"
+      },
+      "register-operator-route": {
+        "title": "How To: Register Operator Routes"
+      },
+      "release-process": {
+        "title": "Release Guide"
+      },
+      "reporting-guide": {
+        "title": "Reporting Guide"
+      },
+      "reporting-vulnerabilities": {
+        "title": "Report Vulnerabilities"
+      },
+      "running-jest-integration-tests": {
+        "title": "Running Jest Integration Tests"
+      },
+      "running-jest-unit-tests": {
+        "title": "Running Jest Unit Tests"
+      },
+      "script-template": {
+        "title": "Script Template"
+      },
+      "shipping-admin": {
+        "title": "Shipping"
+      },
+      "shop-admin": {
+        "title": "Shop"
+      },
+      "simple-schema": {
+        "title": "Schemas"
+      },
+      "storefront-account-management": {
+        "title": "Build an account management page"
+      },
+      "storefront-add-to-cart": {
+        "title": "Add a way to add an item to a cart"
+      },
+      "storefront-apollo-client": {
+        "title": "Add and configure Apollo Client"
+      },
+      "storefront-cart-modification": {
+        "title": "Implement cart modification"
+      },
+      "storefront-cart-page": {
+        "title": "Build a cart page"
+      },
+      "storefront-checkout-page": {
+        "title": "Build a checkout page"
+      },
+      "storefront-intro": {
+        "title": "Storefront UI Development Overview"
+      },
+      "storefront-inventory-status-badges": {
+        "title": "Show inventory status badges"
+      },
+      "storefront-login": {
+        "title": "Add ability to log in"
+      },
+      "storefront-nav-menus": {
+        "title": "Build navigation menus"
+      },
+      "storefront-order-view-page": {
+        "title": "Build an order view page"
+      },
+      "storefront-product-detail-page": {
+        "title": "Build a product detail page"
+      },
+      "storefront-product-listing-page": {
+        "title": "Build a product listing page"
+      },
+      "styleguide": {
+        "title": "Code Style Guide"
+      },
+      "swag-shop-1": {
+        "title": "Understanding the Example Storefront"
+      },
+      "swag-shop-2": {
+        "title": "Preparing for Upstream changes"
+      },
+      "swag-shop-3": {
+        "title": "Custom Styling"
+      },
+      "swag-shop-4": {
+        "title": "Customizing the Layout"
+      },
+      "swag-shop-5": {
+        "title": "Adding a custom homepage"
+      },
+      "swag-shop-6": {
+        "title": "Customizing the Product Detail Page"
+      },
+      "swag-shop-7": {
+        "title": "Creating a Server-side GraphQL plugin"
+      },
+      "swag-shop-8": {
+        "title": "Creating the Featured Products component"
+      },
+      "tagging": {
+        "title": "Introduction into tagging concept"
+      },
+      "tax": {
+        "title": "Tax"
+      },
+      "template": {
+        "title": "Template"
+      },
+      "test-setup": {
+        "title": "Test Setup"
+      },
+      "testing-debugging-server-code": {
+        "title": "How To: Debugging server-side code"
+      },
+      "testing-matrix": {
+        "title": "End-to-end testing matrix"
+      },
+      "testing-reaction": {
+        "title": "Testing"
+      },
+      "troubleshooting-development": {
+        "title": "Troubleshooting issues during development",
+        "sidebar_label": "Development Troubleshooting"
+      },
+      "upgrading": {
+        "title": "Upgrading from 2.x to 3.x",
+        "sidebar_label": "Upgrading from 2.x"
+      },
+      "using-ci": {
+        "title": "CI Builds"
+      },
+      "writing-jest-integration-tests": {
+        "title": "Writing Jest Integration Tests"
+      },
+      "writing-jest-unit-tests": {
+        "title": "Writing Jest Unit Tests"
+      },
+      "version-1.14.0/version-1.14.0-catalog": {
+        "title": "Catalog"
+      },
+      "version-1.14.0/version-1.14.0-community-resources": {
+        "title": "Community resources"
+      },
+      "version-1.14.0/version-1.14.0-community-showcase": {
+        "title": "Community showcase"
+      },
+      "version-1.14.0/version-1.14.0-configuration": {
+        "title": "Configuration"
+      },
+      "version-1.14.0/version-1.14.0-contributing-to-reaction": {
+        "title": "Contributing Guide"
+      },
+      "version-1.14.0/version-1.14.0-creating-test-data": {
+        "title": "Creating Test Data"
+      },
+      "version-1.14.0/version-1.14.0-dashboard": {
+        "title": "Store Operator's Guide"
+      },
+      "version-1.14.0/version-1.14.0-database-optimizations": {
+        "title": "Database optimizations"
+      },
+      "version-1.14.0/version-1.14.0-developer-faq": {
+        "title": "FAQs"
+      },
+      "version-1.14.0/version-1.14.0-getting-started-developing-with-reaction": {
+        "title": "Getting started"
+      },
+      "version-1.14.0/version-1.14.0-graphql-create-mutation": {
+        "title": "Tutorial: Create a new GraphQL mutation"
+      },
+      "version-1.14.0/version-1.14.0-graphql-developing": {
+        "title": "Developing the GraphQL API"
+      },
+      "version-1.14.0/version-1.14.0-graphql-using": {
+        "title": "Using the GraphQL API"
+      },
+      "version-1.14.0/version-1.14.0-graphql-what": {
+        "title": "What is GraphQL?"
+      },
+      "version-1.14.0/version-1.14.0-installation-docker-development": {
+        "title": "Developing in Docker",
+        "sidebar_label": "Developing in Docker"
+      },
+      "version-1.14.0/version-1.14.0-installation-linux": {
+        "title": "Installation for Linux"
+      },
+      "version-1.14.0/version-1.14.0-installation-osx": {
+        "title": "Installation for OSX"
+      },
+      "version-1.14.0/version-1.14.0-installation-windows": {
+        "title": "Installation for Windows"
+      },
+      "version-1.14.0/version-1.14.0-order-creation": {
+        "title": "Script: Order Creation"
+      },
+      "version-1.14.0/version-1.14.0-payment": {
+        "title": "Payment"
+      },
+      "version-1.14.0/version-1.14.0-prerender": {
+        "title": "Prerender.io"
+      },
+      "version-1.14.0/version-1.14.0-reaction-payments": {
+        "title": "Payments"
+      },
+      "version-1.14.0/version-1.14.0-recommended-tools": {
+        "title": "Recommended Tools"
+      },
+      "version-1.14.0/version-1.14.0-registry": {
+        "title": "Registry"
+      },
+      "version-1.14.0/version-1.14.0-release-process": {
+        "title": "Release Guide"
+      },
+      "version-1.14.0/version-1.14.0-revision-api": {
+        "title": "Revisions"
+      },
+      "version-1.14.0/version-1.14.0-styleguide": {
+        "title": "Code Style Guide"
+      },
+      "version-1.14.0/version-1.14.0-tax": {
+        "title": "Tax"
+      },
+      "version-1.14.0/version-1.14.0-test-setup": {
+        "title": "Test Setup"
+      },
+      "version-1.14.0/version-1.14.0-troubleshooting-development": {
+        "title": "Troubleshooting issues during development",
+        "sidebar_label": "Development Troubleshooting"
+      },
+      "version-1.14.0/version-1.14.0-tutorial": {
+        "title": "Customization Guides"
+      },
+      "version-1.14.0/version-1.14.0-writing-jest-integration-tests": {
+        "title": "Writing Jest Integration Tests"
+      },
+      "version-1.15.0/version-1.15.0-community-resources": {
+        "title": "Community plugins"
+      },
+      "version-1.15.0/version-1.15.0-concepts-accounts": {
+        "title": "Accounts"
+      },
+      "version-1.15.0/version-1.15.0-concepts-carts": {
+        "title": "Carts"
+      },
+      "version-1.15.0/version-1.15.0-concepts-catalogs": {
+        "title": "Catalogs"
+      },
+      "version-1.15.0/version-1.15.0-concepts-fulfillment": {
+        "title": "Fulfillment"
+      },
+      "version-1.15.0/version-1.15.0-concepts-intro": {
+        "title": "Introduction to Concepts"
+      },
+      "version-1.15.0/version-1.15.0-concepts-orders": {
+        "title": "Orders"
+      },
+      "version-1.15.0/version-1.15.0-concepts-payments": {
+        "title": "Payments"
+      },
+      "version-1.15.0/version-1.15.0-concepts-pricing": {
+        "title": "Pricing"
+      },
+      "version-1.15.0/version-1.15.0-concepts-products": {
+        "title": "Products, Variants, and Options"
+      },
+      "version-1.15.0/version-1.15.0-concepts-shops": {
+        "title": "Shops"
+      },
+      "version-1.15.0/version-1.15.0-concepts-slugs": {
+        "title": "Slugs"
+      },
+      "version-1.15.0/version-1.15.0-concepts-tags": {
+        "title": "Tags"
+      },
+      "version-1.15.0/version-1.15.0-core-plugins-intro": {
+        "title": "Understanding Plugins"
+      },
+      "version-1.15.0/version-1.15.0-core-plugins-marketplace": {
+        "title": "Marketplace Plugin (Meteor)"
+      },
+      "version-1.15.0/version-1.15.0-core-plugins-search": {
+        "title": "Search Plugins (Meteor)"
+      },
+      "version-1.15.0/version-1.15.0-core-plugins-stripe": {
+        "title": "Stripe Payment Plugin (Node)"
+      },
+      "version-1.15.0/version-1.15.0-dashboard": {
+        "title": "Store Operator's Guide"
+      },
+      "version-1.15.0/version-1.15.0-getting-started-developing-with-reaction": {
+        "title": "Getting Started As a Developer"
+      },
+      "version-1.15.0/version-1.15.0-how-to-client-checkout-flow": {
+        "title": "How To: Implement a client checkout flow"
+      },
+      "version-1.15.0/version-1.15.0-how-to-configure-meteor-app": {
+        "title": "How To: Configure the Meteor app"
+      },
+      "version-1.15.0/version-1.15.0-how-to-create-a-payment-provider": {
+        "title": "Payments: Create a Payment Provider"
+      },
+      "version-1.15.0/version-1.15.0-how-to-get-shop-id-for-client": {
+        "title": "How To: Get the shop ID for a client"
+      },
+      "version-1.15.0/version-1.15.0-how-to-rtl": {
+        "title": "How To: Add right-to-left language support in the Meteor app"
+      },
+      "version-1.15.0/version-1.15.0-intro": {
+        "title": "Introduction"
+      },
+      "version-1.15.0/version-1.15.0-plugin-creating-2": {
+        "title": "Part 1: Creating your plugin"
+      },
+      "version-1.15.0/version-1.15.0-register-template": {
+        "title": "How To: Register a custom email template"
+      },
+      "version-1.15.0/version-1.15.0-testing-debugging-server-code": {
+        "title": "How To: Debug Meteor server-side code"
+      },
+      "version-1.15.0/version-1.15.0-testing-matrix": {
+        "title": "End-to-end testing matrix"
+      },
+      "version-1.16.0/version-1.16.0-community-channels": {
+        "title": "Community"
+      },
+      "version-1.16.0/version-1.16.0-intro": {
+        "title": "Introduction"
+      },
+      "version-1.16.0/version-1.16.0-link": {
+        "title": "Link"
+      },
+      "version-1.16.0/version-1.16.0-permissions": {
+        "title": "Permissions"
+      },
+      "version-1.16.0/version-1.16.0-reaction-orders": {
+        "title": "Orders"
+      },
+      "version-1.16.0/version-1.16.0-reaction-payments": {
+        "title": "Payments"
+      },
+      "version-1.16.0/version-1.16.0-reaction-user-accounts": {
+        "title": "Accounts"
+      },
+      "version-2.9.1/version-2.9.1-appevent-hooks": {
+        "title": "App Event Hooks"
+      },
+      "version-2.9.1/version-2.9.1-blocks-api": {
+        "title": "Blocks API"
+      },
+      "version-2.9.1/version-2.9.1-collections": {
+        "title": "Collections"
+      },
+      "version-2.9.1/version-2.9.1-components-primary-app-bar": {
+        "title": "PrimaryAppBar"
+      },
+      "version-2.9.1/version-2.9.1-concepts-inventory": {
+        "title": "Inventory"
+      },
+      "version-2.9.1/version-2.9.1-concepts-payments": {
+        "title": "Payments"
+      },
+      "version-2.9.1/version-2.9.1-core-plugins-intro": {
+        "title": "Understanding Plugins"
+      },
+      "version-2.9.1/version-2.9.1-core-plugins-marketplace": {
+        "title": "Marketplace Plugin (Meteor)"
+      },
+      "version-2.9.1/version-2.9.1-core-plugins-simple-inventory": {
+        "title": "Simple Inventory Plugin (Node)"
+      },
+      "version-2.9.1/version-2.9.1-core-plugins-sitemap-generator": {
+        "title": "Sitemap Generator Plugin (Meteor)"
+      },
+      "version-2.9.1/version-2.9.1-core-plugins-stripe": {
+        "title": "Stripe Payment Plugin (Node)"
+      },
+      "version-2.9.1/version-2.9.1-creating-a-theme": {
+        "title": "How To: Create a theme for the Meteor UI"
+      },
+      "version-2.9.1/version-2.9.1-dashboard": {
+        "title": "Store Operator’s Guide"
+      },
+      "version-2.9.1/version-2.9.1-dev-debug-app-slowness": {
+        "title": "How To: Debug slowness"
+      },
+      "version-2.9.1/version-2.9.1-dev-how-do-i": {
+        "title": "For Developers: How Do I...?"
+      },
+      "version-2.9.1/version-2.9.1-developer-catalog": {
+        "title": "Catalogs"
+      },
+      "version-2.9.1/version-2.9.1-developer-faq": {
+        "title": "Developer FAQ"
+      },
+      "version-2.9.1/version-2.9.1-developer-inventory": {
+        "title": "Inventory Basics for Developers"
+      },
+      "version-2.9.1/version-2.9.1-devs-breaking-changes": {
+        "title": "Identifying and Avoiding Breaking Changes"
+      },
+      "version-2.9.1/version-2.9.1-devs-understanding-commonorder": {
+        "title": "Understanding CommonOrder"
+      },
+      "version-2.9.1/version-2.9.1-exports": {
+        "title": "Exports"
+      },
+      "version-2.9.1/version-2.9.1-fixtures-images": {
+        "title": "How To: Upload images as data fixtures"
+      },
+      "version-2.9.1/version-2.9.1-getting-started-developing-with-reaction": {
+        "title": "Getting Started As a Developer"
+      },
+      "version-2.9.1/version-2.9.1-graphql-api": {
+        "title": "Reaction GraphQL API Docs"
+      },
+      "version-2.9.1/version-2.9.1-graphql-create-mutation": {
+        "title": "How To: Create a new GraphQL mutation"
+      },
+      "version-2.9.1/version-2.9.1-graphql-create-query": {
+        "title": "How To: Create a new GraphQL query"
+      },
+      "version-2.9.1/version-2.9.1-graphql-developing": {
+        "title": "Developing the GraphQL API"
+      },
+      "version-2.9.1/version-2.9.1-graphql-intro": {
+        "title": "Tutorial: Getting started with GraphQL"
+      },
+      "version-2.9.1/version-2.9.1-graphql-resolvers-file-structure": {
+        "title": "Understanding the Resolvers File Structure"
+      },
+      "version-2.9.1/version-2.9.1-graphql-using": {
+        "title": "Using the GraphQL API"
+      },
+      "version-2.9.1/version-2.9.1-how-to-add-address-validation-service": {
+        "title": "How To: Add an Address Validation Service"
+      },
+      "version-2.9.1/version-2.9.1-how-to-add-tax-service": {
+        "title": "How To: Add a Tax Service"
+      },
+      "version-2.9.1/version-2.9.1-how-to-configure-meteor-app": {
+        "title": "How To: Configure the Meteor app"
+      },
+      "version-2.9.1/version-2.9.1-how-to-create-a-fulfillment-methods-plugin": {
+        "title": "How To: Create a Fulfillment Methods Plugin"
+      },
+      "version-2.9.1/version-2.9.1-how-to-create-a-payment-provider": {
+        "title": "How To: Add a Payment Method"
+      },
+      "version-2.9.1/version-2.9.1-how-to-create-inventory-plugin": {
+        "title": "How To: Create an Inventory Data Provider Plugin"
+      },
+      "version-2.9.1/version-2.9.1-how-to-extend-graphql-to-add-field": {
+        "title": "How To: Extend GraphQL to add a field"
+      },
+      "version-2.9.1/version-2.9.1-how-to-extend-graphql-with-remote-schema": {
+        "title": "How To: Extend GraphQL with Remote Schema Delegation"
+      },
+      "version-2.9.1/version-2.9.1-how-to-extend-product": {
+        "title": "How To: Extend the Product Schema"
+      },
+      "version-2.9.1/version-2.9.1-how-to-manage-app-settings": {
+        "title": "How To: Manage App Settings"
+      },
+      "version-2.9.1/version-2.9.1-how-to-rtl": {
+        "title": "How To: Add right-to-left language support in the Meteor app"
+      },
+      "version-2.9.1/version-2.9.1-how-to-share-code-between-plugins": {
+        "title": "How To: Share Code Between API Plugins"
+      },
+      "version-2.9.1/version-2.9.1-how-to-store-custom-order-fields": {
+        "title": "How To: Store Custom Order Fields"
+      },
+      "version-2.9.1/version-2.9.1-how-to-write-tests-for-plugins": {
+        "title": "How To: Write Jest tests for plugins"
+      },
+      "version-2.9.1/version-2.9.1-installation-docker-development": {
+        "title": "Developing in Docker",
+        "sidebar_label": "Developing in Docker"
+      },
+      "version-2.9.1/version-2.9.1-installation-reaction-platform": {
+        "title": "Install with Reaction Development Platform",
+        "sidebar_label": "Install with Reaction Development Platform"
+      },
+      "version-2.9.1/version-2.9.1-intro-glance": {
+        "title": "Reaction at a Glance"
+      },
+      "version-2.9.1/version-2.9.1-intro": {
+        "title": "Introduction"
+      },
+      "version-2.9.1/version-2.9.1-logging": {
+        "title": "Logging"
+      },
+      "version-2.9.1/version-2.9.1-operator-address-validation": {
+        "title": "Address Validation"
+      },
+      "version-2.9.1/version-2.9.1-payment": {
+        "title": "Payment"
+      },
+      "version-2.9.1/version-2.9.1-payments-discounts": {
+        "title": "Discounts"
+      },
+      "version-2.9.1/version-2.9.1-permissions": {
+        "title": "Permissions"
+      },
+      "version-2.9.1/version-2.9.1-plugin-layouts-3": {
+        "title": "Part 2: Layouts"
+      },
+      "version-2.9.1/version-2.9.1-products": {
+        "title": "Products"
+      },
+      "version-2.9.1/version-2.9.1-react-best-practices": {
+        "title": "React Best Practices"
+      },
+      "version-2.9.1/version-2.9.1-reaction-cli": {
+        "title": "Reaction CLI"
+      },
+      "version-2.9.1/version-2.9.1-reaction-import": {
+        "title": "Import"
+      },
+      "version-2.9.1/version-2.9.1-reaction-module-cheatsheet": {
+        "title": "Module Import Cheatsheet"
+      },
+      "version-2.9.1/version-2.9.1-reaction-product-detail": {
+        "title": "Product Detail"
+      },
+      "version-2.9.1/version-2.9.1-register-operator-route": {
+        "title": "Register Operator Routes"
+      },
+      "version-2.9.1/version-2.9.1-shipping-admin": {
+        "title": "Shipping"
+      },
+      "version-2.9.1/version-2.9.1-storefront-account-management": {
+        "title": "Build an account management page"
+      },
+      "version-2.9.1/version-2.9.1-storefront-add-to-cart": {
+        "title": "Add a way to add an item to a cart"
+      },
+      "version-2.9.1/version-2.9.1-storefront-apollo-client": {
+        "title": "Add and configure Apollo Client"
+      },
+      "version-2.9.1/version-2.9.1-storefront-cart-modification": {
+        "title": "Implement cart modification"
+      },
+      "version-2.9.1/version-2.9.1-storefront-cart-page": {
+        "title": "Build a cart page"
+      },
+      "version-2.9.1/version-2.9.1-storefront-checkout-page": {
+        "title": "Build a checkout page"
+      },
+      "version-2.9.1/version-2.9.1-storefront-intro": {
+        "title": "Storefront UI Development Overview"
+      },
+      "version-2.9.1/version-2.9.1-storefront-inventory-status-badges": {
+        "title": "Show inventory status badges"
+      },
+      "version-2.9.1/version-2.9.1-storefront-login": {
+        "title": "Add ability to log in"
+      },
+      "version-2.9.1/version-2.9.1-storefront-nav-menus": {
+        "title": "Build navigation menus"
+      },
+      "version-2.9.1/version-2.9.1-storefront-order-view-page": {
+        "title": "Build an order view page"
+      },
+      "version-2.9.1/version-2.9.1-storefront-product-detail-page": {
+        "title": "Build a product detail page"
+      },
+      "version-2.9.1/version-2.9.1-storefront-product-listing-page": {
+        "title": "Build a product listing page"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-1": {
+        "title": "Understanding the Example Storefront"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-2": {
+        "title": "Preparing for Upstream changes"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-3": {
+        "title": "Custom Styling"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-4": {
+        "title": "Customizing the Layout"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-5": {
+        "title": "Adding a custom homepage"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-6": {
+        "title": "Customizing the Product Detail Page"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-7": {
+        "title": "Creating a Server-side GraphQL plugin"
+      },
+      "version-2.9.1/version-2.9.1-swag-shop-8": {
+        "title": "Creating the Featured Products component"
+      },
+      "version-2.9.1/version-2.9.1-tax": {
+        "title": "Tax"
+      },
+      "version-2.9.1/version-2.9.1-template": {
+        "title": "Template"
+      },
+      "version-2.9.1/version-2.9.1-testing-debugging-server-code": {
+        "title": "How To: Debug Meteor server-side code"
+      },
+      "version-2.9.1/version-2.9.1-testing-matrix": {
+        "title": "End-to-end testing matrix"
+      },
+      "version-2.9.1/version-2.9.1-troubleshooting-development": {
+        "title": "Troubleshooting issues during development",
+        "sidebar_label": "Development Troubleshooting"
+      },
+      "version-2.9.1/version-2.9.1-understanding-hydra-auth-setup": {
+        "title": "Understanding Hydra Auth Setup",
+        "sidebar_label": "Understanding Hydra Auth Setup"
+      },
+      "version-3.0.0/version-3.0.0-acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "version-3.0.0/version-3.0.0-accounts": {
+        "title": "Accounts"
+      },
+      "version-3.0.0/version-3.0.0-appevent-hooks": {
+        "title": "Developer Concepts: App Events",
+        "sidebar_label": "App Events"
+      },
+      "version-3.0.0/version-3.0.0-authentication-in-prod": {
+        "title": "Authentication in Production",
+        "sidebar_label": "Authentication in Production"
+      },
+      "version-3.0.0/version-3.0.0-blocks-api": {
+        "title": "Blocks API"
+      },
+      "version-3.0.0/version-3.0.0-community-resources": {
+        "title": "Community Resources"
+      },
+      "version-3.0.0/version-3.0.0-concepts-fulfillment": {
+        "title": "Fulfillment"
+      },
+      "version-3.0.0/version-3.0.0-concepts-products": {
+        "title": "Products, Variants, and Options"
+      },
+      "version-3.0.0/version-3.0.0-concepts-shops": {
+        "title": "Shops"
+      },
+      "version-3.0.0/version-3.0.0-contributing-to-reaction": {
+        "title": "Contributor Home"
+      },
+      "version-3.0.0/version-3.0.0-core-plugins-intro": {
+        "title": "Understanding API Plugins"
+      },
+      "version-3.0.0/version-3.0.0-core-plugins-simple-inventory": {
+        "title": "Simple Inventory Plugin"
+      },
+      "version-3.0.0/version-3.0.0-creating-test-data": {
+        "title": "Creating Test Data"
+      },
+      "version-3.0.0/version-3.0.0-dashboard": {
+        "title": "Store Operator’s Guide"
+      },
+      "version-3.0.0/version-3.0.0-database-optimizations": {
+        "title": "Database optimizations"
+      },
+      "version-3.0.0/version-3.0.0-deploying": {
+        "title": "Deploying"
+      },
+      "version-3.0.0/version-3.0.0-dev-debug-app-slowness": {
+        "title": "How To: Debug slowness"
+      },
+      "version-3.0.0/version-3.0.0-dev-how-do-i": {
+        "title": "For Developers: How Do I...?"
+      },
+      "version-3.0.0/version-3.0.0-developer-authentication": {
+        "title": "Developer Concepts: Authentication",
+        "sidebar_label": "Authentication"
+      },
+      "version-3.0.0/version-3.0.0-developer-environment-variables": {
+        "title": "Developer Concepts: Environment Variables",
+        "sidebar_label": "Environment Variables"
+      },
+      "version-3.0.0/version-3.0.0-developer-kafka-streams": {
+        "title": "Developer Concepts: Kafka Streams",
+        "sidebar_label": "Kafka Streams"
+      },
+      "version-3.0.0/version-3.0.0-devs-breaking-changes": {
+        "title": "Identifying and Avoiding Breaking Changes"
+      },
+      "version-3.0.0/version-3.0.0-devs-node-es-modules": {
+        "title": "Developer Concepts: Node ECMAScript Modules",
+        "sidebar_label": "Node ECMAScript Modules"
+      },
+      "version-3.0.0/version-3.0.0-devs-update-custom-plugin": {
+        "title": "Updating a 2.x API plugin to work with Reaction API 3.x",
+        "sidebar_label": "Updating an API plugin for 3.x"
+      },
+      "version-3.0.0/version-3.0.0-email-admin": {
+        "title": "Configuring Email Sending"
+      },
+      "version-3.0.0/version-3.0.0-environment-variables": {
+        "title": "Environment Variables",
+        "sidebar_label": "Environment Variables"
+      },
+      "version-3.0.0/version-3.0.0-error-handling-guide": {
+        "title": "Error Handling"
+      },
+      "version-3.0.0/version-3.0.0-getting-started-developing-with-reaction": {
+        "title": "Getting Started As a Developer"
+      },
+      "version-3.0.0/version-3.0.0-git-style-guide": {
+        "title": "Git Style Guide"
+      },
+      "version-3.0.0/version-3.0.0-graphql-create-mutation": {
+        "title": "Git Style Guide"
+      },
+      "version-3.0.0/version-3.0.0-graphql-create-query": {
+        "title": "How To: Create a new GraphQL query"
+      },
+      "version-3.0.0/version-3.0.0-graphql-developing": {
+        "title": "Developing the GraphQL API"
+      },
+      "version-3.0.0/version-3.0.0-graphql-intro": {
+        "title": "Tutorial: Getting started with GraphQL"
+      },
+      "version-3.0.0/version-3.0.0-graphql-resolvers-file-structure": {
+        "title": "Understanding the Resolvers File Structure"
+      },
+      "version-3.0.0/version-3.0.0-graphql-using": {
+        "title": "Using the GraphQL API"
+      },
+      "version-3.0.0/version-3.0.0-graphql-what": {
+        "title": "What is GraphQL?"
+      },
+      "version-3.0.0/version-3.0.0-how-to-create-a-payment-provider": {
+        "title": "How To: Add a Payment Method"
+      },
+      "version-3.0.0/version-3.0.0-how-to-create-inventory-plugin": {
+        "title": "How To: Create an Inventory Data Provider Plugin"
+      },
+      "version-3.0.0/version-3.0.0-how-to-extend-graphql-to-add-field": {
+        "title": "How To: Extend GraphQL to add a field"
+      },
+      "version-3.0.0/version-3.0.0-how-to-extend-graphql-with-remote-schema": {
+        "title": "How To: Extend GraphQL with Remote Schema Delegation"
+      },
+      "version-3.0.0/version-3.0.0-how-to-extend-product": {
+        "title": "How To: Extend the Product Schema"
+      },
+      "version-3.0.0/version-3.0.0-how-to-manage-app-settings": {
+        "title": "How To: Manage App Settings"
+      },
+      "version-3.0.0/version-3.0.0-installation-docker-development": {
+        "title": "Developing in Docker",
+        "sidebar_label": "Developing in Docker"
+      },
+      "version-3.0.0/version-3.0.0-internationalization": {
+        "title": "Internationalization"
+      },
+      "version-3.0.0/version-3.0.0-intro": {
+        "title": "Introduction"
+      },
+      "version-3.0.0/version-3.0.0-jest-tips": {
+        "title": "Jest Tips"
+      },
+      "version-3.0.0/version-3.0.0-jobcontrol": {
+        "title": "Background Jobs"
+      },
+      "version-3.0.0/version-3.0.0-localization-and-i18n": {
+        "title": "Localization and i18n"
+      },
+      "version-3.0.0/version-3.0.0-logging": {
+        "title": "Logging"
+      },
+      "version-3.0.0/version-3.0.0-operator-address-validation": {
+        "title": "Address Validation"
+      },
+      "version-3.0.0/version-3.0.0-orders-admin": {
+        "title": "Orders"
+      },
+      "version-3.0.0/version-3.0.0-payment": {
+        "title": "Payment"
+      },
+      "version-3.0.0/version-3.0.0-permissions": {
+        "title": "Permissions"
+      },
+      "version-3.0.0/version-3.0.0-products-bulk-edit": {
+        "title": "Products - Filter and Bulk Edit"
+      },
+      "version-3.0.0/version-3.0.0-products": {
+        "title": "Products"
+      },
+      "version-3.0.0/version-3.0.0-react-testing": {
+        "title": "Writing Jest Tests for React Components"
+      },
+      "version-3.0.0/version-3.0.0-recommended-tools": {
+        "title": "Recommended Tools"
+      },
+      "version-3.0.0/version-3.0.0-release-process": {
+        "title": "Release Guide"
+      },
+      "version-3.0.0/version-3.0.0-running-jest-integration-tests": {
+        "title": "Running Jest Integration Tests"
+      },
+      "version-3.0.0/version-3.0.0-shipping-admin": {
+        "title": "Shipping"
+      },
+      "version-3.0.0/version-3.0.0-shop-admin": {
+        "title": "Shop"
+      },
+      "version-3.0.0/version-3.0.0-simple-schema": {
+        "title": "Schemas"
+      },
+      "version-3.0.0/version-3.0.0-storefront-apollo-client": {
+        "title": "Add and configure Apollo Client"
+      },
+      "version-3.0.0/version-3.0.0-storefront-login": {
+        "title": "Add ability to log in"
+      },
+      "version-3.0.0/version-3.0.0-styleguide": {
+        "title": "Code Style Guide"
+      },
+      "version-3.0.0/version-3.0.0-swag-shop-2": {
+        "title": "Preparing for Upstream changes"
+      },
+      "version-3.0.0/version-3.0.0-swag-shop-3": {
+        "title": "Custom Styling"
+      },
+      "version-3.0.0/version-3.0.0-swag-shop-5": {
+        "title": "Adding a custom homepage"
+      },
+      "version-3.0.0/version-3.0.0-swag-shop-8": {
+        "title": "Creating the Featured Products component"
+      },
+      "version-3.0.0/version-3.0.0-tagging": {
+        "title": "Introduction into tagging concept"
+      },
+      "version-3.0.0/version-3.0.0-tax": {
+        "title": "Tax"
+      },
+      "version-3.0.0/version-3.0.0-test-setup": {
+        "title": "Test Setup"
+      },
+      "version-3.0.0/version-3.0.0-testing-debugging-server-code": {
+        "title": "How To: Debugging server-side code"
+      },
+      "version-3.0.0/version-3.0.0-testing-matrix": {
+        "title": "End-to-end testing matrix"
+      },
+      "version-3.0.0/version-3.0.0-testing-reaction": {
+        "title": "Testing"
+      },
+      "version-3.0.0/version-3.0.0-troubleshooting-development": {
+        "title": "Troubleshooting issues during development",
+        "sidebar_label": "Development Troubleshooting"
+      },
+      "version-3.0.0/version-3.0.0-upgrading": {
+        "title": "Upgrading from 2.x to 3.x",
+        "sidebar_label": "Upgrading from 2.x"
+      },
+      "version-3.0.0/version-3.0.0-using-ci": {
+        "title": "CI Builds"
+      },
+      "version-3.0.0/version-3.0.0-writing-jest-integration-tests": {
+        "title": "Writing Jest Integration Tests"
+      },
+      "version-3.1.0/version-3.1.0-devs-update-custom-plugin": {
+        "title": "Updating a 2.x API plugin to work with Reaction API 3.x",
+        "sidebar_label": "Updating an API plugin for 3.x"
+      },
+      "version-3.1.0/version-3.1.0-graphql-resolvers-file-structure": {
+        "title": "Understanding the Resolvers File Structure"
+      },
+      "version-3.1.0/version-3.1.0-testing-debugging-server-code": {
+        "title": "How To: Debugging server-side code"
+      },
+      "version-3.4.0/version-3.4.0-core-plugins-stripe": {
+        "title": "Stripe Payment Plugin (Node)"
+      },
+      "version-3.4.0/version-3.4.0-graphql-resolvers-file-structure": {
+        "title": "Understanding the Resolvers File Structure"
+      },
+      "version-3.6.0/version-3.6.0-tagging": {
+        "title": "Introduction into tagging concept"
+      },
+      "version-3.7.1/version-3.7.1-jsdoc-style-guide": {
+        "title": "JSDoc Style Guide"
+      },
+      "version-3.8.0/version-3.8.0-devs-update-custom-plugin": {
+        "title": "Updating a 2.x API plugin to work with Reaction API 3.x",
+        "sidebar_label": "Updating an API plugin for 3.x"
+      },
+      "version-v1.1.0/version-v1.1.0-acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "version-v1.1.0/version-v1.1.0-admin-revisions": {
+        "title": "Revision Control"
+      },
+      "version-v1.1.0/version-v1.1.0-admin-views": {
+        "title": "Admin Views"
+      },
+      "version-v1.1.0/version-v1.1.0-alerts": {
+        "title": "Alerts"
+      },
+      "version-v1.1.0/version-v1.1.0-analytics": {
+        "title": "Analytics"
+      },
+      "version-v1.1.0/version-v1.1.0-appearance": {
+        "title": "Appearance"
+      },
+      "version-v1.1.0/version-v1.1.0-architecture": {
+        "title": "Architecture"
+      },
+      "version-v1.1.0/version-v1.1.0-button": {
+        "title": "Button"
+      },
+      "version-v1.1.0/version-v1.1.0-cards": {
+        "title": "Cards"
+      },
+      "version-v1.1.0/version-v1.1.0-changes": {
+        "title": "Changes"
+      },
+      "version-v1.1.0/version-v1.1.0-checkbox": {
+        "title": "Checkbox"
+      },
+      "version-v1.1.0/version-v1.1.0-code-of-conduct-committee": {
+        "title": "Code of Conduct Committee"
+      },
+      "version-v1.1.0/version-v1.1.0-code-of-conduct": {
+        "title": "Code of Conduct"
+      },
+      "version-v1.1.0/version-v1.1.0-collection-hooks": {
+        "title": "Collection Hooks"
+      },
+      "version-v1.1.0/version-v1.1.0-collections": {
+        "title": "Collections"
+      },
+      "version-v1.1.0/version-v1.1.0-components": {
+        "title": "Components"
+      },
+      "version-v1.1.0/version-v1.1.0-configuration": {
+        "title": "Configuration"
+      },
+      "version-v1.1.0/version-v1.1.0-contributing-to-reaction": {
+        "title": "Contributing"
+      },
+      "version-v1.1.0/version-v1.1.0-converting": {
+        "title": "Converting Packages to Plugins"
+      },
+      "version-v1.1.0/version-v1.1.0-creating-a-payment-provider": {
+        "title": "Creating a Payment Provider"
+      },
+      "version-v1.1.0/version-v1.1.0-creating-a-theme": {
+        "title": "Creating a Theme"
+      },
+      "version-v1.1.0/version-v1.1.0-dashboard": {
+        "title": "Dashboard"
+      },
+      "version-v1.1.0/version-v1.1.0-deploying-reaction-on-galaxy": {
+        "title": "Galaxy"
+      },
+      "version-v1.1.0/version-v1.1.0-deploying-reaction-using-docker": {
+        "title": "Docker"
+      },
+      "version-v1.1.0/version-v1.1.0-deploying-reaction-using-heroku": {
+        "title": "Heroku"
+      },
+      "version-v1.1.0/version-v1.1.0-deploying-reaction-with-mup": {
+        "title": "Mup"
+      },
+      "version-v1.1.0/version-v1.1.0-deploying": {
+        "title": "Deploying"
+      },
+      "version-v1.1.0/version-v1.1.0-discounts": {
+        "title": "Discounts"
+      },
+      "version-v1.1.0/version-v1.1.0-diversity-statement": {
+        "title": "Diversity Statement"
+      },
+      "version-v1.1.0/version-v1.1.0-divider": {
+        "title": "Divider"
+      },
+      "version-v1.1.0/version-v1.1.0-dropDownMenu": {
+        "title": "DropDown Menu"
+      },
+      "version-v1.1.0/version-v1.1.0-email-api": {
+        "title": "Email"
+      },
+      "version-v1.1.0/version-v1.1.0-email": {
+        "title": "Email"
+      },
+      "version-v1.1.0/version-v1.1.0-enforcement": {
+        "title": "Enforcement"
+      },
+      "version-v1.1.0/version-v1.1.0-event-hooks": {
+        "title": "Event Hooks"
+      },
+      "version-v1.1.0/version-v1.1.0-exports": {
+        "title": "Exports"
+      },
+      "version-v1.1.0/version-v1.1.0-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.1.0/version-v1.1.0-getting-started-developing-with-reaction": {
+        "title": "Developer"
+      },
+      "version-v1.1.0/version-v1.1.0-guideline-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.1.0/version-v1.1.0-guidelines": {
+        "title": "Community guidelines"
+      },
+      "version-v1.1.0/version-v1.1.0-i18n": {
+        "title": "i18n and RTL"
+      },
+      "version-v1.1.0/version-v1.1.0-icon": {
+        "title": "Icon"
+      },
+      "version-v1.1.0/version-v1.1.0-image-handling": {
+        "title": "Images"
+      },
+      "version-v1.1.0/version-v1.1.0-including": {
+        "title": "Priority"
+      },
+      "version-v1.1.0/version-v1.1.0-intro": {
+        "title": "Introduction"
+      },
+      "version-v1.1.0/version-v1.1.0-installation": {
+        "title": "Installation"
+      },
+      "version-v1.1.0/version-v1.1.0-internationalization": {
+        "title": "Internationalization"
+      },
+      "version-v1.1.0/version-v1.1.0-jobcontrol": {
+        "title": "Job Control"
+      },
+      "version-v1.1.0/version-v1.1.0-layout": {
+        "title": "Layout"
+      },
+      "version-v1.1.0/version-v1.1.0-lists": {
+        "title": "Lists"
+      },
+      "version-v1.1.0/version-v1.1.0-logging": {
+        "title": "Logging"
+      },
+      "version-v1.1.0/version-v1.1.0-media": {
+        "title": "Media"
+      },
+      "version-v1.1.0/version-v1.1.0-menu": {
+        "title": "Menu"
+      },
+      "version-v1.1.0/version-v1.1.0-metadata": {
+        "title": "Metadata"
+      },
+      "version-v1.1.0/version-v1.1.0-method-hooks": {
+        "title": "Method Hooks"
+      },
+      "version-v1.1.0/version-v1.1.0-multi-select": {
+        "title": "MultiSelect"
+      },
+      "version-v1.1.0/version-v1.1.0-navigation-bar-and-grid": {
+        "title": "Navigation and Product tags"
+      },
+      "version-v1.1.0/version-v1.1.0-orders": {
+        "title": "Order Processing"
+      },
+      "version-v1.1.0/version-v1.1.0-packages-search": {
+        "title": "Search"
+      },
+      "version-v1.1.0/version-v1.1.0-packages": {
+        "title": "Plugins"
+      },
+      "version-v1.1.0/version-v1.1.0-payment-packages-authnet": {
+        "title": "Payments - Authorize.net"
+      },
+      "version-v1.1.0/version-v1.1.0-payment-packages-braintree": {
+        "title": "Payments - Braintree"
+      },
+      "version-v1.1.0/version-v1.1.0-payment-packages-paypal": {
+        "title": "Payments - PayPal"
+      },
+      "version-v1.1.0/version-v1.1.0-payment-packages-stripe": {
+        "title": "Payments - Stripe"
+      },
+      "version-v1.1.0/version-v1.1.0-permissions": {
+        "title": "Permissions"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-complete-10": {
+        "title": "Completing your plugin"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-creating-2": {
+        "title": "Creating your plugin"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-customizing-templates-4": {
+        "title": "Customizing Templates"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-fixtures-5": {
+        "title": "Fixtures"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-i18n-9": {
+        "title": "i18n"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-intro-1": {
+        "title": "Introduction"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-layouts-3": {
+        "title": "Layouts"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-routes-6": {
+        "title": "Routes"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-schemas-8": {
+        "title": "Schemas"
+      },
+      "version-v1.1.0/version-v1.1.0-plugin-workflow-7": {
+        "title": "Workflow"
+      },
+      "version-v1.1.0/version-v1.1.0-popover": {
+        "title": "Popover"
+      },
+      "version-v1.1.0/version-v1.1.0-prerender": {
+        "title": "Prerender"
+      },
+      "version-v1.1.0/version-v1.1.0-product-variants": {
+        "title": "Product Variants"
+      },
+      "version-v1.1.0/version-v1.1.0-products": {
+        "title": "Product Management"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-alerts": {
+        "title": "Alerts"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-cart": {
+        "title": "Cart"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-core": {
+        "title": "Core"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-import": {
+        "title": "Import"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-inventory": {
+        "title": "Inventory"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-localization": {
+        "title": "Localization"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-module-cheatsheet": {
+        "title": "Module Import Cheatsheet"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-orders": {
+        "title": "Orders"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-payments": {
+        "title": "Payments"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-product-detail": {
+        "title": "Product Detail"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-products": {
+        "title": "Products"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-shipping": {
+        "title": "Shipping"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-shops": {
+        "title": "Shops"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-tags": {
+        "title": "Tags"
+      },
+      "version-v1.1.0/version-v1.1.0-reaction-user-accounts": {
+        "title": "Accounts"
+      },
+      "version-v1.1.0/version-v1.1.0-register-component": {
+        "title": "Create Custom Components"
+      },
+      "version-v1.1.0/version-v1.1.0-register-email": {
+        "title": "Customize Email Templates"
+      },
+      "version-v1.1.0/version-v1.1.0-register-template": {
+        "title": "Create Custom Templates"
+      },
+      "version-v1.1.0/version-v1.1.0-registry": {
+        "title": "Registry"
+      },
+      "version-v1.1.0/version-v1.1.0-reporting-guide": {
+        "title": "Reporting Guide"
+      },
+      "version-v1.1.0/version-v1.1.0-requirements": {
+        "title": "Requirements"
+      },
+      "version-v1.1.0/version-v1.1.0-revision-api": {
+        "title": "Revisions"
+      },
+      "version-v1.1.0/version-v1.1.0-routing": {
+        "title": "Routing"
+      },
+      "version-v1.1.0/version-v1.1.0-security": {
+        "title": "Security"
+      },
+      "version-v1.1.0/version-v1.1.0-select": {
+        "title": "Select"
+      },
+      "version-v1.1.0/version-v1.1.0-seo-metadata": {
+        "title": "Metadata"
+      },
+      "version-v1.1.0/version-v1.1.0-shipping": {
+        "title": "Flat Rate Shipping"
+      },
+      "version-v1.1.0/version-v1.1.0-simple-schema": {
+        "title": "Schemas"
+      },
+      "version-v1.1.0/version-v1.1.0-slider": {
+        "title": "Slider"
+      },
+      "version-v1.1.0/version-v1.1.0-styleguide": {
+        "title": "Style Guide"
+      },
+      "version-v1.1.0/version-v1.1.0-switch": {
+        "title": "Switch"
+      },
+      "version-v1.1.0/version-v1.1.0-tags": {
+        "title": "Tags"
+      },
+      "version-v1.1.0/version-v1.1.0-taxes-packages-avalara": {
+        "title": "Taxes - Avalara"
+      },
+      "version-v1.1.0/version-v1.1.0-taxes-packages-taxcloud": {
+        "title": "Taxes - TaxCloud"
+      },
+      "version-v1.1.0/version-v1.1.0-taxes": {
+        "title": "Tax Calculations"
+      },
+      "version-v1.1.0/version-v1.1.0-template-helpers": {
+        "title": "Helpers"
+      },
+      "version-v1.1.0/version-v1.1.0-templates": {
+        "title": "Extend Blaze Templates"
+      },
+      "version-v1.1.0/version-v1.1.0-testing-reaction": {
+        "title": "Testing"
+      },
+      "version-v1.1.0/version-v1.1.0-textfield": {
+        "title": "Textfield"
+      },
+      "version-v1.1.0/version-v1.1.0-tooltip": {
+        "title": "Tooltip"
+      },
+      "version-v1.1.0/version-v1.1.0-translation": {
+        "title": "Translation"
+      },
+      "version-v1.1.0/version-v1.1.0-tutorial": {
+        "title": "Customization Guide"
+      },
+      "version-v1.1.0/version-v1.1.0-upload": {
+        "title": "Upload"
+      },
+      "version-v1.1.0/version-v1.1.0-using-ci": {
+        "title": "CI Builds"
+      },
+      "version-v1.1.0/version-v1.1.0-using-factories-for-testing": {
+        "title": "Factories"
+      },
+      "version-v1.1.0/version-v1.1.0-using-faker-for-testing": {
+        "title": "Faker"
+      },
+      "version-v1.1.0/version-v1.1.0-workflow": {
+        "title": "Workflow"
+      },
+      "version-v1.11.0/version-v1.11.0-acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "version-v1.11.0/version-v1.11.0-collections": {
+        "title": "Collections"
+      },
+      "version-v1.11.0/version-v1.11.0-community-resources": {
+        "title": "Community resources"
+      },
+      "version-v1.11.0/version-v1.11.0-event-hooks": {
+        "title": "Event Hooks"
+      },
+      "version-v1.11.0/version-v1.11.0-fixtures-images": {
+        "title": "Tutorial: Upload images as data fixtures"
+      },
+      "version-v1.11.0/version-v1.11.0-merchant-shop-setup": {
+        "title": "Merchant Shop Setup"
+      },
+      "version-v1.11.0/version-v1.11.0-order-creation": {
+        "title": "Script: Order Creation"
+      },
+      "version-v1.11.0/version-v1.11.0-plugin-customizing-templates-4": {
+        "title": "Part 3: Customizing Templates"
+      },
+      "version-v1.11.0/version-v1.11.0-plugin-layouts-3": {
+        "title": "Part 2: Layouts"
+      },
+      "version-v1.11.0/version-v1.11.0-running-jest-tests": {
+        "title": "Running Jest Tests"
+      },
+      "version-v1.11.0/version-v1.11.0-script-template": {
+        "title": "Script Template"
+      },
+      "version-v1.11.0/version-v1.11.0-simple-schema": {
+        "title": "Schemas"
+      },
+      "version-v1.11.0/version-v1.11.0-swag-shop-collecting-requirements": {
+        "title": "Part 1: Collecting the shop requirements"
+      },
+      "version-v1.11.0/version-v1.11.0-swag-shop-initialization": {
+        "title": "Part 2: Project scaffolding"
+      },
+      "version-v1.11.0/version-v1.11.0-swag-shop-landing-page": {
+        "title": "Part 3: The Landing Page"
+      },
+      "version-v1.11.0/version-v1.11.0-swag-shop-pdp": {
+        "title": "Part 4: Category tiles and the Product Detail page",
+        "sidebar_label": "Part 4: Category tiles and PDP"
+      },
+      "version-v1.11.0/version-v1.11.0-swag-shop-tutorial": {
+        "title": "Swag shop tutorial"
+      },
+      "version-v1.11.0/version-v1.11.0-test-setup": {
+        "title": "Test Setup"
+      },
+      "version-v1.12.0/version-v1.12.0-acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "version-v1.12.0/version-v1.12.0-contributing-to-reaction": {
+        "title": "Contributing Guide"
+      },
+      "version-v1.12.0/version-v1.12.0-creating-test-data-for-meteor-tests": {
+        "title": "Creating Test Data for Meteor Tests"
+      },
+      "version-v1.12.0/version-v1.12.0-creating-test-data": {
+        "title": "Creating Test Data"
+      },
+      "version-v1.12.0/version-v1.12.0-graphql-intro": {
+        "title": "Tutorial: Getting started with GraphQL"
+      },
+      "version-v1.12.0/version-v1.12.0-jest-tips": {
+        "title": "Jest Tips"
+      },
+      "version-v1.12.0/version-v1.12.0-react-testing": {
+        "title": "Writing Jest Tests for React Components"
+      },
+      "version-v1.12.0/version-v1.12.0-running-jest-integration-tests": {
+        "title": "Running Jest Integration Tests"
+      },
+      "version-v1.12.0/version-v1.12.0-running-jest-unit-tests": {
+        "title": "Running Jest Unit Tests"
+      },
+      "version-v1.12.0/version-v1.12.0-running-meteor-integration-tests": {
+        "title": "Running Meteor Integration Tests"
+      },
+      "version-v1.12.0/version-v1.12.0-taxes-packages-taxcloud": {
+        "title": "Taxes - TaxCloud"
+      },
+      "version-v1.12.0/version-v1.12.0-testing-reaction": {
+        "title": "Testing"
+      },
+      "version-v1.12.0/version-v1.12.0-tutorial": {
+        "title": "Customization Guides"
+      },
+      "version-v1.12.0/version-v1.12.0-writing-jest-integration-tests": {
+        "title": "Writing Jest Integration Tests"
+      },
+      "version-v1.12.0/version-v1.12.0-writing-jest-unit-tests": {
+        "title": "Writing Jest Unit Tests"
+      },
+      "version-v1.2.0/version-v1.2.0-collection-hooks": {
+        "title": "Collection Hooks"
+      },
+      "version-v1.2.0/version-v1.2.0-community-channels": {
+        "title": "Community"
+      },
+      "version-v1.2.0/version-v1.2.0-configuration": {
+        "title": "Configuration"
+      },
+      "version-v1.2.0/version-v1.2.0-creating-a-payment-provider": {
+        "title": "Creating a Payment Provider"
+      },
+      "version-v1.2.0/version-v1.2.0-dashboard": {
+        "title": "Dashboard"
+      },
+      "version-v1.2.0/version-v1.2.0-deploying-reaction-on-managed": {
+        "title": "Managed"
+      },
+      "version-v1.2.0/version-v1.2.0-deploying": {
+        "title": "Deploying"
+      },
+      "version-v1.2.0/version-v1.2.0-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.2.0/version-v1.2.0-getting-started-developing-with-reaction": {
+        "title": "Developer"
+      },
+      "version-v1.2.0/version-v1.2.0-intro": {
+        "title": "Introduction"
+      },
+      "version-v1.2.0/version-v1.2.0-installation": {
+        "title": "Installation"
+      },
+      "version-v1.2.0/version-v1.2.0-layout": {
+        "title": "Layout"
+      },
+      "version-v1.2.0/version-v1.2.0-method-hooks": {
+        "title": "Method Hooks"
+      },
+      "version-v1.2.0/version-v1.2.0-navigation-bar-and-grid": {
+        "title": "Navigation and Product tags"
+      },
+      "version-v1.2.0/version-v1.2.0-plugin-creating-2": {
+        "title": "Creating your plugin"
+      },
+      "version-v1.2.0/version-v1.2.0-plugin-customizing-templates-4": {
+        "title": "Customizing Templates"
+      },
+      "version-v1.2.0/version-v1.2.0-plugin-layouts-3": {
+        "title": "Layouts"
+      },
+      "version-v1.2.0/version-v1.2.0-plugin-routes-6": {
+        "title": "Routes"
+      },
+      "version-v1.2.0/version-v1.2.0-reaction-module-cheatsheet": {
+        "title": "Module Import Cheatsheet"
+      },
+      "version-v1.2.0/version-v1.2.0-requirements": {
+        "title": "Requirements"
+      },
+      "version-v1.2.0/version-v1.2.0-routing": {
+        "title": "Routing"
+      },
+      "version-v1.2.0/version-v1.2.0-settings-card": {
+        "title": "Settings Card"
+      },
+      "version-v1.3.0/version-v1.3.0-badge": {
+        "title": "Badge"
+      },
+      "version-v1.3.0/version-v1.3.0-clickToCopy": {
+        "title": "Click To Copy"
+      },
+      "version-v1.3.0/version-v1.3.0-dashboard": {
+        "title": "Dashboard"
+      },
+      "version-v1.3.0/version-v1.3.0-deploying-reaction-on-managed": {
+        "title": "Managed"
+      },
+      "version-v1.3.0/version-v1.3.0-dropDownMenu": {
+        "title": "DropDown Menu"
+      },
+      "version-v1.3.0/version-v1.3.0-installation": {
+        "title": "Installation"
+      },
+      "version-v1.3.0/version-v1.3.0-menu": {
+        "title": "Menu"
+      },
+      "version-v1.3.0/version-v1.3.0-permissions": {
+        "title": "Permissions"
+      },
+      "version-v1.3.0/version-v1.3.0-popover": {
+        "title": "Popover"
+      },
+      "version-v1.3.0/version-v1.3.0-react-testing": {
+        "title": "React Testing"
+      },
+      "version-v1.3.0/version-v1.3.0-styleguide": {
+        "title": "Style Guide"
+      },
+      "version-v1.4.0/version-v1.4.0-community-channels": {
+        "title": "Community"
+      },
+      "version-v1.4.0/version-v1.4.0-dashboard": {
+        "title": "Dashboard"
+      },
+      "version-v1.4.0/version-v1.4.0-orders": {
+        "title": "Order Processing"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-complete-10": {
+        "title": "Completing your plugin"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-creating-2": {
+        "title": "Creating your plugin"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-customizing-templates-4": {
+        "title": "Customizing Templates"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-fixtures-5": {
+        "title": "Fixtures"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-i18n-9": {
+        "title": "i18n"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-intro-1": {
+        "title": "Introduction"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-layouts-3": {
+        "title": "Layouts"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-routes-6": {
+        "title": "Routes"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-schemas-8": {
+        "title": "Schemas"
+      },
+      "version-v1.4.0/version-v1.4.0-plugin-workflow-7": {
+        "title": "Workflow"
+      },
+      "version-v1.4.0/version-v1.4.0-reaction-payments": {
+        "title": "Payments"
+      },
+      "version-v1.4.0/version-v1.4.0-requirements": {
+        "title": "Requirements"
+      },
+      "version-v1.4.0/version-v1.4.0-shipping": {
+        "title": "Flat Rate Shipping"
+      },
+      "version-v1.4.0/version-v1.4.0-tutorial": {
+        "title": "Customization Guide"
+      },
+      "version-v1.4.1/version-v1.4.1-community-channels": {
+        "title": "Community"
+      },
+      "version-v1.4.1/version-v1.4.1-components": {
+        "title": "Components"
+      },
+      "version-v1.4.1/version-v1.4.1-guideline-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.4.1/version-v1.4.1-login-services": {
+        "title": "Login Services"
+      },
+      "version-v1.4.1/version-v1.4.1-plugin-layouts-3": {
+        "title": "Layouts"
+      },
+      "version-v1.4.1/version-v1.4.1-reaction-module-cheatsheet": {
+        "title": "Module Import Cheatsheet"
+      },
+      "version-v1.4.1/version-v1.4.1-requirements": {
+        "title": "Requirements"
+      },
+      "version-v1.4.1/version-v1.4.1-slider": {
+        "title": "Slider"
+      },
+      "version-v1.4.1/version-v1.4.1-using-ci": {
+        "title": "CI Builds"
+      },
+      "version-v1.5.0/version-v1.5.0-acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "version-v1.5.0/version-v1.5.0-accounts": {
+        "title": "Accounts"
+      },
+      "version-v1.5.0/version-v1.5.0-alerts": {
+        "title": "Alerts"
+      },
+      "version-v1.5.0/version-v1.5.0-analytics": {
+        "title": "Analytics"
+      },
+      "version-v1.5.0/version-v1.5.0-appearance": {
+        "title": "Themes: Right-to-left"
+      },
+      "version-v1.5.0/version-v1.5.0-architecture": {
+        "title": "Architecture"
+      },
+      "version-v1.5.0/version-v1.5.0-avatar": {
+        "title": "ReactionAvatar"
+      },
+      "version-v1.5.0/version-v1.5.0-badge": {
+        "title": "Badge"
+      },
+      "version-v1.5.0/version-v1.5.0-button": {
+        "title": "Button"
+      },
+      "version-v1.5.0/version-v1.5.0-cards": {
+        "title": "Cards"
+      },
+      "version-v1.5.0/version-v1.5.0-catalog": {
+        "title": "Catalog"
+      },
+      "version-v1.5.0/version-v1.5.0-changes": {
+        "title": "Changes"
+      },
+      "version-v1.5.0/version-v1.5.0-checkbox": {
+        "title": "Checkbox"
+      },
+      "version-v1.5.0/version-v1.5.0-clickToCopy": {
+        "title": "Click To Copy"
+      },
+      "version-v1.5.0/version-v1.5.0-code-of-conduct-committee": {
+        "title": "Code of Conduct Committee"
+      },
+      "version-v1.5.0/version-v1.5.0-code-of-conduct": {
+        "title": "Code of Conduct"
+      },
+      "version-v1.5.0/version-v1.5.0-collections": {
+        "title": "Collections"
+      },
+      "version-v1.5.0/version-v1.5.0-community-channels": {
+        "title": "Community"
+      },
+      "version-v1.5.0/version-v1.5.0-components-api": {
+        "title": "Reaction Components API"
+      },
+      "version-v1.5.0/version-v1.5.0-components": {
+        "title": "Components"
+      },
+      "version-v1.5.0/version-v1.5.0-configuration": {
+        "title": "Configuration"
+      },
+      "version-v1.5.0/version-v1.5.0-contributing-to-reaction": {
+        "title": "Contributing"
+      },
+      "version-v1.5.0/version-v1.5.0-converting": {
+        "title": "Converting Packages to Plugins"
+      },
+      "version-v1.5.0/version-v1.5.0-dashboard": {
+        "title": "Store Operator's Guide"
+      },
+      "version-v1.5.0/version-v1.5.0-deploying-reaction-using-docker": {
+        "title": "Docker"
+      },
+      "version-v1.5.0/version-v1.5.0-deploying": {
+        "title": "Deploying"
+      },
+      "version-v1.5.0/version-v1.5.0-divider": {
+        "title": "Divider"
+      },
+      "version-v1.5.0/version-v1.5.0-dropDownMenu": {
+        "title": "DropDown Menu"
+      },
+      "version-v1.5.0/version-v1.5.0-email-admin": {
+        "title": "Email"
+      },
+      "version-v1.5.0/version-v1.5.0-email-api": {
+        "title": "Email"
+      },
+      "version-v1.5.0/version-v1.5.0-enforcement": {
+        "title": "Enforcement"
+      },
+      "version-v1.5.0/version-v1.5.0-event-hooks": {
+        "title": "Event Hooks"
+      },
+      "version-v1.5.0/version-v1.5.0-exports": {
+        "title": "Exports"
+      },
+      "version-v1.5.0/version-v1.5.0-guideline-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.5.0/version-v1.5.0-guidelines": {
+        "title": "Guidelines"
+      },
+      "version-v1.5.0/version-v1.5.0-i18n": {
+        "title": "i18n and RTL"
+      },
+      "version-v1.5.0/version-v1.5.0-icon": {
+        "title": "Icon"
+      },
+      "version-v1.5.0/version-v1.5.0-internationalization": {
+        "title": "Internationalization"
+      },
+      "version-v1.5.0/version-v1.5.0-lists": {
+        "title": "Lists"
+      },
+      "version-v1.5.0/version-v1.5.0-localization-and-i18n": {
+        "title": "Localization and i18n"
+      },
+      "version-v1.5.0/version-v1.5.0-logging": {
+        "title": "Logging"
+      },
+      "version-v1.5.0/version-v1.5.0-login-auth-services": {
+        "title": "Login services"
+      },
+      "version-v1.5.0/version-v1.5.0-media": {
+        "title": "Media"
+      },
+      "version-v1.5.0/version-v1.5.0-menu": {
+        "title": "Menu"
+      },
+      "version-v1.5.0/version-v1.5.0-metadata": {
+        "title": "Metadata"
+      },
+      "version-v1.5.0/version-v1.5.0-method-hooks": {
+        "title": "Method Hooks"
+      },
+      "version-v1.5.0/version-v1.5.0-multi-select": {
+        "title": "MultiSelect"
+      },
+      "version-v1.5.0/version-v1.5.0-navigation-bar-and-grid": {
+        "title": "Navigation and Product tags"
+      },
+      "version-v1.5.0/version-v1.5.0-orders-admin": {
+        "title": "Orders"
+      },
+      "version-v1.5.0/version-v1.5.0-packages-search": {
+        "title": "Search"
+      },
+      "version-v1.5.0/version-v1.5.0-packages": {
+        "title": "Plugins"
+      },
+      "version-v1.5.0/version-v1.5.0-payment-packages-authnet": {
+        "title": "Payments - Authorize.net"
+      },
+      "version-v1.5.0/version-v1.5.0-payment-packages-braintree": {
+        "title": "Payments - Braintree"
+      },
+      "version-v1.5.0/version-v1.5.0-payment-packages-paypal": {
+        "title": "Payments - PayPal"
+      },
+      "version-v1.5.0/version-v1.5.0-payment-packages-stripe": {
+        "title": "Payments - Stripe"
+      },
+      "version-v1.5.0/version-v1.5.0-payment": {
+        "title": "Payment"
+      },
+      "version-v1.5.0/version-v1.5.0-payments-discounts": {
+        "title": "Discounts"
+      },
+      "version-v1.5.0/version-v1.5.0-permissions": {
+        "title": "Permissions"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-complete-10": {
+        "title": "Completing your plugin"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-creating-2": {
+        "title": "Creating your plugin"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-customizing-templates-4": {
+        "title": "Customizing Templates"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-fixtures-5": {
+        "title": "Fixtures"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-i18n-9": {
+        "title": "i18n"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-intro-1": {
+        "title": "Introduction"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-layouts-3": {
+        "title": "Layouts"
+      },
+      "version-v1.5.0/version-v1.5.0-plugin-workflow-7": {
+        "title": "Workflow"
+      },
+      "version-v1.5.0/version-v1.5.0-popover": {
+        "title": "Popover"
+      },
+      "version-v1.5.0/version-v1.5.0-prerender": {
+        "title": "Prerender"
+      },
+      "version-v1.5.0/version-v1.5.0-product-variants": {
+        "title": "Product Variants"
+      },
+      "version-v1.5.0/version-v1.5.0-products": {
+        "title": "Products"
+      },
+      "version-v1.5.0/version-v1.5.0-react-testing": {
+        "title": "React Testing"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-alerts": {
+        "title": "Alerts"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-core": {
+        "title": "Core"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-import": {
+        "title": "Import"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-localization": {
+        "title": "Localization"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-payments": {
+        "title": "Payments"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-product-detail": {
+        "title": "Product Detail"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-shipping": {
+        "title": "Shipping"
+      },
+      "version-v1.5.0/version-v1.5.0-reaction-user-accounts": {
+        "title": "Accounts"
+      },
+      "version-v1.5.0/version-v1.5.0-registry": {
+        "title": "Registry"
+      },
+      "version-v1.5.0/version-v1.5.0-release-process": {
+        "title": "Release Process"
+      },
+      "version-v1.5.0/version-v1.5.0-reporting-guide": {
+        "title": "Reporting Guide"
+      },
+      "version-v1.5.0/version-v1.5.0-reporting-vulnerabilities": {
+        "title": "Report Vulnerabilities"
+      },
+      "version-v1.5.0/version-v1.5.0-requirements": {
+        "title": "Requirements"
+      },
+      "version-v1.5.0/version-v1.5.0-revision-api": {
+        "title": "Revisions"
+      },
+      "version-v1.5.0/version-v1.5.0-routing": {
+        "title": "Routing"
+      },
+      "version-v1.5.0/version-v1.5.0-search": {
+        "title": "Search"
+      },
+      "version-v1.5.0/version-v1.5.0-security": {
+        "title": "Security"
+      },
+      "version-v1.5.0/version-v1.5.0-settings-card": {
+        "title": "Settings Card"
+      },
+      "version-v1.5.0/version-v1.5.0-shipping-admin": {
+        "title": "Shipping"
+      },
+      "version-v1.5.0/version-v1.5.0-shop-admin": {
+        "title": "Shop"
+      },
+      "version-v1.5.0/version-v1.5.0-simple-schema": {
+        "title": "Schemas"
+      },
+      "version-v1.5.0/version-v1.5.0-sms-notifications": {
+        "title": "SMS Notifications"
+      },
+      "version-v1.5.0/version-v1.5.0-social-settings": {
+        "title": "Social settings"
+      },
+      "version-v1.5.0/version-v1.5.0-sortableTable": {
+        "title": "Sortable Table"
+      },
+      "version-v1.5.0/version-v1.5.0-styleguide": {
+        "title": "Style Guide"
+      },
+      "version-v1.5.0/version-v1.5.0-switch": {
+        "title": "Switch"
+      },
+      "version-v1.5.0/version-v1.5.0-tags": {
+        "title": "Tags"
+      },
+      "version-v1.5.0/version-v1.5.0-tax": {
+        "title": "Tax"
+      },
+      "version-v1.5.0/version-v1.5.0-taxes-packages-avalara": {
+        "title": "Taxes - Avalara"
+      },
+      "version-v1.5.0/version-v1.5.0-taxes-packages-taxcloud": {
+        "title": "Taxes - TaxCloud"
+      },
+      "version-v1.5.0/version-v1.5.0-template-helpers": {
+        "title": "Helpers"
+      },
+      "version-v1.5.0/version-v1.5.0-template": {
+        "title": "Template"
+      },
+      "version-v1.5.0/version-v1.5.0-templates": {
+        "title": "Extend Blaze Templates"
+      },
+      "version-v1.5.0/version-v1.5.0-testing-reaction": {
+        "title": "Testing"
+      },
+      "version-v1.5.0/version-v1.5.0-textfield": {
+        "title": "Textfield"
+      },
+      "version-v1.5.0/version-v1.5.0-tooltip": {
+        "title": "Tooltip"
+      },
+      "version-v1.5.0/version-v1.5.0-translation": {
+        "title": "Translation"
+      },
+      "version-v1.5.0/version-v1.5.0-tutorial": {
+        "title": "Customization Guide"
+      },
+      "version-v1.5.0/version-v1.5.0-using-ci": {
+        "title": "CI Builds"
+      },
+      "version-v1.5.0/version-v1.5.0-using-factories-for-testing": {
+        "title": "Factories"
+      },
+      "version-v1.5.0/version-v1.5.0-using-faker-for-testing": {
+        "title": "Faker"
+      },
+      "version-v1.5.0/version-v1.5.0-workflow": {
+        "title": "Workflow"
+      },
+      "version-v1.6.4/version-v1.6.4-accounts": {
+        "title": "Accounts"
+      },
+      "version-v1.6.4/version-v1.6.4-appearance": {
+        "title": "Themes: Right-to-left"
+      },
+      "version-v1.6.4/version-v1.6.4-avatar": {
+        "title": "ReactionAvatar"
+      },
+      "version-v1.6.4/version-v1.6.4-collections": {
+        "title": "Collections"
+      },
+      "version-v1.6.4/version-v1.6.4-community-channels": {
+        "title": "Community"
+      },
+      "version-v1.6.4/version-v1.6.4-community-resources": {
+        "title": "Community resources"
+      },
+      "version-v1.6.4/version-v1.6.4-components-api": {
+        "title": "Reaction Components API"
+      },
+      "version-v1.6.4/version-v1.6.4-contributing-to-reaction": {
+        "title": "Contributing Guide"
+      },
+      "version-v1.6.4/version-v1.6.4-creating-a-payment-provider": {
+        "title": "Creating a Payment Provider"
+      },
+      "version-v1.6.4/version-v1.6.4-creating-a-theme": {
+        "title": "Creating a Theme"
+      },
+      "version-v1.6.4/version-v1.6.4-csvDownload": {
+        "title": "CSV Download"
+      },
+      "version-v1.6.4/version-v1.6.4-dashboard": {
+        "title": "Store Operator's Guide"
+      },
+      "version-v1.6.4/version-v1.6.4-deploying-reaction-using-docker": {
+        "title": "Docker"
+      },
+      "version-v1.6.4/version-v1.6.4-developer-faq": {
+        "title": "FAQs"
+      },
+      "version-v1.6.4/version-v1.6.4-event-hooks": {
+        "title": "Event Hooks"
+      },
+      "version-v1.6.4/version-v1.6.4-extending-product-schema-location-map": {
+        "title": "Extending the product schema for Google map"
+      },
+      "version-v1.6.4/version-v1.6.4-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.6.4/version-v1.6.4-fixtures-images": {
+        "title": "Fixtures: Upload images"
+      },
+      "version-v1.6.4/version-v1.6.4-git-style-guide": {
+        "title": "Git Style Guide"
+      },
+      "version-v1.6.4/version-v1.6.4-how-to-change-the-favicon": {
+        "title": "Tutorial: Customize the favicon"
+      },
+      "version-v1.6.4/version-v1.6.4-installation-linux": {
+        "title": "Installation for Linux"
+      },
+      "version-v1.6.4/version-v1.6.4-installation-osx": {
+        "title": "Installation for OSX"
+      },
+      "version-v1.6.4/version-v1.6.4-installation-windows": {
+        "title": "Installation for Windows"
+      },
+      "version-v1.6.4/version-v1.6.4-installation": {
+        "title": "Installation"
+      },
+      "version-v1.6.4/version-v1.6.4-intro": {
+        "title": "Introduction"
+      },
+      "version-v1.6.4/version-v1.6.4-layout": {
+        "title": "Layout"
+      },
+      "version-v1.6.4/version-v1.6.4-merchant-shop-setup": {
+        "title": "Merchant Shop Setup"
+      },
+      "version-v1.6.4/version-v1.6.4-permissions": {
+        "title": "Permissions"
+      },
+      "version-v1.6.4/version-v1.6.4-plugin-complete-10": {
+        "title": "Completing your plugin"
+      },
+      "version-v1.6.4/version-v1.6.4-plugin-layouts-3": {
+        "title": "Layouts"
+      },
+      "version-v1.6.4/version-v1.6.4-plugin-routes-6": {
+        "title": "Routes"
+      },
+      "version-v1.6.4/version-v1.6.4-prerender": {
+        "title": "Prerender"
+      },
+      "version-v1.6.4/version-v1.6.4-products": {
+        "title": "Products"
+      },
+      "version-v1.6.4/version-v1.6.4-react-best-practices": {
+        "title": "React Best Practices"
+      },
+      "version-v1.6.4/version-v1.6.4-reaction-cart": {
+        "title": "Cart"
+      },
+      "version-v1.6.4/version-v1.6.4-reaction-product-detail": {
+        "title": "Product Detail"
+      },
+      "version-v1.6.4/version-v1.6.4-reaction-shops": {
+        "title": "Shops"
+      },
+      "version-v1.6.4/version-v1.6.4-registry": {
+        "title": "Registry"
+      },
+      "version-v1.6.4/version-v1.6.4-release-process": {
+        "title": "Release Process"
+      },
+      "version-v1.6.4/version-v1.6.4-simple-schema": {
+        "title": "Schemas"
+      },
+      "version-v1.6.4/version-v1.6.4-styleguide": {
+        "title": "Code Style Guide"
+      },
+      "version-v1.6.4/version-v1.6.4-tagging": {
+        "title": "Introduction into tagging concept"
+      },
+      "version-v1.6.4/version-v1.6.4-template-helpers": {
+        "title": "Helpers"
+      },
+      "version-v1.6.4/version-v1.6.4-testing-debugging-server-code": {
+        "title": "Tutorial: Debugging server-side code"
+      },
+      "version-v1.6.4/version-v1.6.4-testing-tutorial": {
+        "title": "Tutorial: Writing your first test"
+      },
+      "version-v1.6.4/version-v1.6.4-tutorial": {
+        "title": "Customization Guide"
+      },
+      "version-v1.6.4/version-v1.6.4-workflow": {
+        "title": "Workflow"
+      },
+      "version-v1.7.0/version-v1.7.0-acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "version-v1.7.0/version-v1.7.0-accounts": {
+        "title": "Accounts"
+      },
+      "version-v1.7.0/version-v1.7.0-alerts": {
+        "title": "Alerts"
+      },
+      "version-v1.7.0/version-v1.7.0-analytics": {
+        "title": "Analytics"
+      },
+      "version-v1.7.0/version-v1.7.0-appearance": {
+        "title": "Themes: Right-to-left"
+      },
+      "version-v1.7.0/version-v1.7.0-architecture": {
+        "title": "Architecture"
+      },
+      "version-v1.7.0/version-v1.7.0-changes": {
+        "title": "Changes"
+      },
+      "version-v1.7.0/version-v1.7.0-code-of-conduct-committee": {
+        "title": "Code of Conduct Committee"
+      },
+      "version-v1.7.0/version-v1.7.0-code-of-conduct": {
+        "title": "Code of Conduct"
+      },
+      "version-v1.7.0/version-v1.7.0-collections": {
+        "title": "Collections"
+      },
+      "version-v1.7.0/version-v1.7.0-community-channels": {
+        "title": "Community"
+      },
+      "version-v1.7.0/version-v1.7.0-community-resources": {
+        "title": "Community resources"
+      },
+      "version-v1.7.0/version-v1.7.0-components-api": {
+        "title": "Reaction Components API"
+      },
+      "version-v1.7.0/version-v1.7.0-configuration": {
+        "title": "Configuration"
+      },
+      "version-v1.7.0/version-v1.7.0-contributing-to-reaction": {
+        "title": "Contributing Guide"
+      },
+      "version-v1.7.0/version-v1.7.0-converting": {
+        "title": "Converting Packages to Plugins"
+      },
+      "version-v1.7.0/version-v1.7.0-creating-a-payment-provider": {
+        "title": "Payments: Creating a Payment Provider"
+      },
+      "version-v1.7.0/version-v1.7.0-creating-a-theme": {
+        "title": "Theme: Creating a Theme"
+      },
+      "version-v1.7.0/version-v1.7.0-dashboard": {
+        "title": "Store Operator's Guide"
+      },
+      "version-v1.7.0/version-v1.7.0-database-migrations": {
+        "title": "Migrations"
+      },
+      "version-v1.7.0/version-v1.7.0-deploying-reaction-using-docker": {
+        "title": "Docker"
+      },
+      "version-v1.7.0/version-v1.7.0-deploying": {
+        "title": "Deploying"
+      },
+      "version-v1.7.0/version-v1.7.0-developer-faq": {
+        "title": "FAQs"
+      },
+      "version-v1.7.0/version-v1.7.0-email-admin": {
+        "title": "Email"
+      },
+      "version-v1.7.0/version-v1.7.0-email-api": {
+        "title": "Email"
+      },
+      "version-v1.7.0/version-v1.7.0-enforcement": {
+        "title": "Enforcement"
+      },
+      "version-v1.7.0/version-v1.7.0-event-hooks": {
+        "title": "Event Hooks"
+      },
+      "version-v1.7.0/version-v1.7.0-exports": {
+        "title": "Exports"
+      },
+      "version-v1.7.0/version-v1.7.0-extending-product-schema-location-map": {
+        "title": "Tutorial: Extending the product schema for Google map"
+      },
+      "version-v1.7.0/version-v1.7.0-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.7.0/version-v1.7.0-fixtures-images": {
+        "title": "Tutorial: Upload images as data fixtures"
+      },
+      "version-v1.7.0/version-v1.7.0-getting-started-developing-with-reaction": {
+        "title": "Getting started"
+      },
+      "version-v1.7.0/version-v1.7.0-git-style-guide": {
+        "title": "Git Style Guide"
+      },
+      "version-v1.7.0/version-v1.7.0-guidelines": {
+        "title": "Guidelines"
+      },
+      "version-v1.7.0/version-v1.7.0-how-to-change-the-favicon": {
+        "title": "Tutorial: Customize the favicon"
+      },
+      "version-v1.7.0/version-v1.7.0-i18n": {
+        "title": "i18n and RTL"
+      },
+      "version-v1.7.0/version-v1.7.0-including": {
+        "title": "Priority"
+      },
+      "version-v1.7.0/version-v1.7.0-installation-linux": {
+        "title": "Installation for Linux"
+      },
+      "version-v1.7.0/version-v1.7.0-installation-osx": {
+        "title": "Installation for OSX"
+      },
+      "version-v1.7.0/version-v1.7.0-installation-windows": {
+        "title": "Installation for Windows"
+      },
+      "version-v1.7.0/version-v1.7.0-installation": {
+        "title": "Installation"
+      },
+      "version-v1.7.0/version-v1.7.0-intro": {
+        "title": "Introduction"
+      },
+      "version-v1.7.0/version-v1.7.0-jsdoc-style-guide": {
+        "title": "JSDoc Style Guide"
+      },
+      "version-v1.7.0/version-v1.7.0-layout": {
+        "title": "Layout"
+      },
+      "version-v1.7.0/version-v1.7.0-localization-and-i18n": {
+        "title": "Localization and i18n"
+      },
+      "version-v1.7.0/version-v1.7.0-logging": {
+        "title": "Logging"
+      },
+      "version-v1.7.0/version-v1.7.0-login-auth-services": {
+        "title": "Login services"
+      },
+      "version-v1.7.0/version-v1.7.0-media": {
+        "title": "Media"
+      },
+      "version-v1.7.0/version-v1.7.0-menu": {
+        "title": "Menu"
+      },
+      "version-v1.7.0/version-v1.7.0-merchant-shop-setup": {
+        "title": "Merchant Shop Setup"
+      },
+      "version-v1.7.0/version-v1.7.0-metadata": {
+        "title": "Metadata"
+      },
+      "version-v1.7.0/version-v1.7.0-packages": {
+        "title": "Plugins"
+      },
+      "version-v1.7.0/version-v1.7.0-payment-packages-authnet": {
+        "title": "Payments - Authorize.net"
+      },
+      "version-v1.7.0/version-v1.7.0-payment-packages-braintree": {
+        "title": "Payments - Braintree"
+      },
+      "version-v1.7.0/version-v1.7.0-payment-packages-paypal": {
+        "title": "Payments - PayPal"
+      },
+      "version-v1.7.0/version-v1.7.0-payment-packages-stripe": {
+        "title": "Payments - Stripe"
+      },
+      "version-v1.7.0/version-v1.7.0-payment": {
+        "title": "Payment"
+      },
+      "version-v1.7.0/version-v1.7.0-payments-discounts": {
+        "title": "Discounts"
+      },
+      "version-v1.7.0/version-v1.7.0-permissions": {
+        "title": "Permissions"
+      },
+      "version-v1.7.0/version-v1.7.0-plugin-complete-10": {
+        "title": "Part 9: Completing your plugin"
+      },
+      "version-v1.7.0/version-v1.7.0-plugin-creating-2": {
+        "title": "Part 1: Creating your plugin"
+      },
+      "version-v1.7.0/version-v1.7.0-plugin-fixtures-5": {
+        "title": "Part 4: Fixtures"
+      },
+      "version-v1.7.0/version-v1.7.0-plugin-i18n-9": {
+        "title": "Part 8: i18n"
+      },
+      "version-v1.7.0/version-v1.7.0-plugin-intro-1": {
+        "title": "Plugin Tutorial"
+      },
+      "version-v1.7.0/version-v1.7.0-plugin-layouts-3": {
+        "title": "Part 2: Layouts"
+      },
+      "version-v1.7.0/version-v1.7.0-product-variants": {
+        "title": "Product Variants"
+      },
+      "version-v1.7.0/version-v1.7.0-products": {
+        "title": "Products"
+      },
+      "version-v1.7.0/version-v1.7.0-react-best-practices": {
+        "title": "React Best Practices"
+      },
+      "version-v1.7.0/version-v1.7.0-react-testing": {
+        "title": "React Testing"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-cli": {
+        "title": "Reaction CLI"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-core": {
+        "title": "Core"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-import": {
+        "title": "Import"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-localization": {
+        "title": "Localization"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-payments": {
+        "title": "Payments"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-product-detail": {
+        "title": "Product Detail"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-shipping": {
+        "title": "Shipping"
+      },
+      "version-v1.7.0/version-v1.7.0-reaction-user-accounts": {
+        "title": "Accounts"
+      },
+      "version-v1.7.0/version-v1.7.0-registry": {
+        "title": "Registry"
+      },
+      "version-v1.7.0/version-v1.7.0-release-process": {
+        "title": "Release Guide"
+      },
+      "version-v1.7.0/version-v1.7.0-reporting-guide": {
+        "title": "Reporting Guide"
+      },
+      "version-v1.7.0/version-v1.7.0-reporting-vulnerabilities": {
+        "title": "Report Vulnerabilities"
+      },
+      "version-v1.7.0/version-v1.7.0-routing": {
+        "title": "Routing"
+      },
+      "version-v1.7.0/version-v1.7.0-search": {
+        "title": "Search"
+      },
+      "version-v1.7.0/version-v1.7.0-security": {
+        "title": "Security"
+      },
+      "version-v1.7.0/version-v1.7.0-shipping-admin": {
+        "title": "Shipping"
+      },
+      "version-v1.7.0/version-v1.7.0-shop-admin": {
+        "title": "Shop"
+      },
+      "version-v1.7.0/version-v1.7.0-sms-notifications": {
+        "title": "SMS Notifications"
+      },
+      "version-v1.7.0/version-v1.7.0-social-settings": {
+        "title": "Social settings"
+      },
+      "version-v1.7.0/version-v1.7.0-sortableTable": {
+        "title": "Sortable Table"
+      },
+      "version-v1.7.0/version-v1.7.0-styleguide": {
+        "title": "Code Style Guide"
+      },
+      "version-v1.7.0/version-v1.7.0-tagging": {
+        "title": "Introduction into tagging concept"
+      },
+      "version-v1.7.0/version-v1.7.0-tags": {
+        "title": "Tags"
+      },
+      "version-v1.7.0/version-v1.7.0-tax": {
+        "title": "Tax"
+      },
+      "version-v1.7.0/version-v1.7.0-template": {
+        "title": "Template"
+      },
+      "version-v1.7.0/version-v1.7.0-testing-debugging-server-code": {
+        "title": "Tutorial: Debugging server-side code"
+      },
+      "version-v1.7.0/version-v1.7.0-tutorial": {
+        "title": "Customization Guides"
+      },
+      "version-v1.7.0/version-v1.7.0-using-ci": {
+        "title": "CI Builds"
+      },
+      "version-v1.7.0/version-v1.7.0-using-factories-for-testing": {
+        "title": "Factories"
+      },
+      "version-v1.7.0/version-v1.7.0-using-faker-for-testing": {
+        "title": "Faker"
+      },
+      "version-v1.7.0/version-v1.7.0-workflow": {
+        "title": "Workflow"
+      },
+      "version-v1.8.0/version-v1.8.0-acceptance-testing": {
+        "title": "Acceptance Testing"
+      },
+      "version-v1.8.0/version-v1.8.0-code-of-conduct": {
+        "title": "Code of Conduct"
+      },
+      "version-v1.8.0/version-v1.8.0-community-resources": {
+        "title": "Community resources"
+      },
+      "version-v1.8.0/version-v1.8.0-community-showcase": {
+        "title": "Community showcase"
+      },
+      "version-v1.8.0/version-v1.8.0-components-api": {
+        "title": "Reaction Components API"
+      },
+      "version-v1.8.0/version-v1.8.0-contributing-to-reaction": {
+        "title": "Contributing Guide"
+      },
+      "version-v1.8.0/version-v1.8.0-deploying": {
+        "title": "Deploying"
+      },
+      "version-v1.8.0/version-v1.8.0-developer-faq": {
+        "title": "FAQs"
+      },
+      "version-v1.8.0/version-v1.8.0-faqs": {
+        "title": "FAQs"
+      },
+      "version-v1.8.0/version-v1.8.0-how-to-create-a-custom-homepage": {
+        "title": "Tutorial: Create a custom homepage"
+      },
+      "version-v1.8.0/version-v1.8.0-image-handling": {
+        "title": "Images"
+      },
+      "version-v1.8.0/version-v1.8.0-installation-linux": {
+        "title": "Installation for Linux"
+      },
+      "version-v1.8.0/version-v1.8.0-installation-osx": {
+        "title": "Installation for OSX"
+      },
+      "version-v1.8.0/version-v1.8.0-installation-windows": {
+        "title": "Installation for Windows"
+      },
+      "version-v1.8.0/version-v1.8.0-layout": {
+        "title": "Layout"
+      },
+      "version-v1.8.0/version-v1.8.0-plugin-layouts-3": {
+        "title": "Part 2: Layouts"
+      },
+      "version-v1.8.0/version-v1.8.0-reaction-module-cheatsheet": {
+        "title": "Module Import Cheatsheet"
+      },
+      "version-v1.8.0/version-v1.8.0-reaction-payments": {
+        "title": "Payments"
+      },
+      "version-v1.8.0/version-v1.8.0-reaction-user-accounts": {
+        "title": "Accounts"
+      },
+      "version-v1.8.0/version-v1.8.0-seo-metadata": {
+        "title": "Metadata"
+      },
+      "version-v1.9.0/version-v1.9.0-components-api": {
+        "title": "Reaction Components API"
+      },
+      "version-v1.9.0/version-v1.9.0-configuration": {
+        "title": "Configuration"
+      },
+      "version-v1.9.0/version-v1.9.0-contributing-to-reaction": {
+        "title": "Contributing Guide"
+      },
+      "version-v1.9.0/version-v1.9.0-deploying-reaction-using-docker": {
+        "title": "Docker"
+      },
+      "version-v1.9.0/version-v1.9.0-developer-faq": {
+        "title": "FAQs"
+      },
+      "version-v1.9.0/version-v1.9.0-error-handling-guide": {
+        "title": "Error Handling Guide"
+      },
+      "version-v1.9.0/version-v1.9.0-extending-product-schema-location-map": {
+        "title": "Tutorial: Add a map to Product pages"
+      },
+      "version-v1.9.0/version-v1.9.0-fixtures-images": {
+        "title": "Tutorial: Upload images as data fixtures"
+      },
+      "version-v1.9.0/version-v1.9.0-git-style-guide": {
+        "title": "Git Style Guide"
+      },
+      "version-v1.9.0/version-v1.9.0-image-handling": {
+        "title": "Images"
+      },
+      "version-v1.9.0/version-v1.9.0-internationalization": {
+        "title": "Internationalization"
+      },
+      "version-v1.9.0/version-v1.9.0-layout": {
+        "title": "Layout"
+      },
+      "version-v1.9.0/version-v1.9.0-localization-and-i18n": {
+        "title": "Localization and i18n"
+      },
+      "version-v1.9.0/version-v1.9.0-media": {
+        "title": "Media-Related"
+      },
+      "version-v1.9.0/version-v1.9.0-plugin-fixtures-5": {
+        "title": "Part 4: Fixtures"
+      },
+      "version-v1.9.0/version-v1.9.0-reaction-cli": {
+        "title": "Reaction CLI"
+      },
+      "version-v1.9.0/version-v1.9.0-registry": {
+        "title": "Registry"
+      },
+      "version-v1.9.0/version-v1.9.0-release-process": {
+        "title": "Release Guide"
+      },
+      "version-v1.9.0/version-v1.9.0-revision-api": {
+        "title": "Revisions"
+      },
+      "version-v1.9.0/version-v1.9.0-simple-schema": {
+        "title": "Schemas"
+      },
+      "version-v1.9.0/version-v1.9.0-template-helpers": {
+        "title": "Helpers"
+      }
+    },
+    "links": {
+      "Docs": "Docs",
+      "Get in touch": "Get in touch"
+    },
+    "categories": {
+      "Introduction": "Introduction",
+      "Concepts": "Concepts",
+      "Contributing": "Contributing",
+      "For Developers: Concepts": "For Developers: Concepts",
+      "For Developers: GraphQL": "For Developers: GraphQL",
+      "Developer How-To: Reaction API Server": "Developer How-To: Reaction API Server",
+      "Core API Server Plugins": "Core API Server Plugins",
+      "Developer How-To: GraphQL Clients": "Developer How-To: GraphQL Clients",
+      "Storefront UI Development Guide": "Storefront UI Development Guide",
+      "For Developers: Architecture": "For Developers: Architecture",
+      "For Developers: Catalyst Components": "For Developers: Catalyst Components",
+      "Testing": "Testing",
+      "Acceptance Testing": "Acceptance Testing",
+      "System Administrator Guide": "System Administrator Guide",
+      "Store Operator Guide": "Store Operator Guide",
+      "Community": "Community",
+      "Swag Shop Tutorial": "Swag Shop Tutorial",
+      "Getting Started As a Developer": "Getting Started As a Developer",
+      "For Developers: Contributing Guide": "For Developers: Contributing Guide",
+      "Core Plugins": "Core Plugins",
+      "Developer How-To: General": "Developer How-To: General",
+      "Developer How-To: Meteor app": "Developer How-To: Meteor app",
+      "For Developers: Meteor App Architecture": "For Developers: Meteor App Architecture",
+      "For Developers: Core Meteor App API": "For Developers: Core Meteor App API",
+      "Developer How-To": "Developer How-To",
+      "For Developers: Plugin Tutorial": "For Developers: Plugin Tutorial",
+      "For Developers: Meteor App Client Components": "For Developers: Meteor App Client Components",
+      "Swag shop tutorial": "Swag shop tutorial",
+      "Getting started": "Getting started",
+      "Plugin Tutorial": "Plugin Tutorial",
+      "Customization Guides": "Customization Guides",
+      "Contributing Guide": "Contributing Guide",
+      "Architecture": "Architecture",
+      "Core": "Core",
+      "GraphQL": "GraphQL",
+      "Components": "Components",
+      "Plugins": "Plugins",
+      "Deploying": "Deploying",
+      "Store Operator's Guide": "Store Operator's Guide",
+      "Guidelines": "Guidelines",
+      "Developer": "Developer",
+      "Customization Guide": "Customization Guide",
+      "Appearance": "Appearance",
+      "Themes": "Themes",
+      "Community Guidelines": "Community Guidelines"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

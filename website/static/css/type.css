@@ -159,7 +159,7 @@ nav.toc .toggleNav ul li a.navItemActive:hover::after {
   width: 0;
 }
 
-nav.toc .toggleNav .navGroup h3 {
+nav.toc .toggleNav .navGroup .navGroupCategoryTitle {
   font-family: 'PostGrotesk-Bold';
   font-size: 14px;
   letter-spacing: 0.6px;
@@ -215,16 +215,16 @@ nav.toc .toggleNav .navGroup h3 {
   text-decoration: underline;
 }
 
-.mainContainer .wrapper a:hover, 
-.mainContainer .wrapper a:focus, 
-.inner .projectIntro a:hover, 
+.mainContainer .wrapper a:hover,
+.mainContainer .wrapper a:focus,
+.inner .projectIntro a:hover,
 .inner .projectIntro a:focus {
   text-decoration: none;
 }
 
-.mainContainer .wrapper p, 
-.blockElement p, 
-.mainContainer .wrapper ul li, 
+.mainContainer .wrapper p,
+.blockElement p,
+.mainContainer .wrapper ul li,
 .mainContainer .wrapper ol li {
   line-height: 1.5;
 }
@@ -251,5 +251,5 @@ nav.toc .toggleNav .navGroup h3 {
 @media only screen and (max-width: 1023px) {
   .reactNavSearchWrapper input#search_input_react::-webkit-input-placeholder {
     color: #ebebeb;
-  }  
+  }
 }
