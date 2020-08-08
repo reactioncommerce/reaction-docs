@@ -41,6 +41,12 @@ To update docs for the current released version of Reaction, edit existing Markd
 1. Edit the file and save.
 1. Go to `http://localhost:4242/docs/<YOURMARKDOWNFILE_ID>` to see your changes locally.
 
+### Removing articles
+
+Docusaurus v1 does automatic fallback for all articles. This means that simply deleting an article from `/public-docs` will not remove it from the current version. Even if you delete the link to it from the sidebar, it will still be accessible through search or by typing in the URL.
+
+To disable fallback and effectively remove an existing article from future and "next" versions and search, add the article ID to the `deletedDocs` object in `siteConfig.js`, under the version that represents the first version in which the article should be removed. The version must match one of the strings in `versions.json`. (Also delete it from `/public-docs` and remove it from the main sidebars file.)
+
 ### Documenting unreleased features, changes
 
 To update docs of unreleased features, you will need to edit existing Markdown files in `public_docs`. For example, if you were documenting *upcoming* Reaction API changes to Cart that are merged into `trunk` but not yet tagged in a release, you'd update the `public-docs/cart.md` file.
