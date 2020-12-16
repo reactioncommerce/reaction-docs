@@ -1,0 +1,171 @@
+{
+  "version-3.11.0-docs": {
+    "Introduction": [
+      "version-3.11.0-intro",
+      "version-3.11.0-upgrading",
+      "version-3.11.0-devs-update-custom-plugin"
+    ],
+    "Concepts": [
+      "version-3.11.0-concepts-intro",
+      "version-3.11.0-concepts-accounts",
+      "version-3.11.0-concepts-carts",
+      "version-3.11.0-concepts-catalogs",
+      "version-3.11.0-concepts-fulfillment",
+      "version-3.11.0-concepts-inventory",
+      "version-3.11.0-concepts-orders",
+      "version-3.11.0-concepts-payments",
+      "version-3.11.0-concepts-pricing",
+      "version-3.11.0-concepts-products",
+      "version-3.11.0-concepts-shops",
+      "version-3.11.0-concepts-slugs",
+      "version-3.11.0-concepts-tags"
+    ],
+    "Contributing": [
+      "version-3.11.0-contributing-to-reaction",
+      "version-3.11.0-reporting-vulnerabilities",
+      "version-3.11.0-getting-started-developing-with-reaction",
+      "version-3.11.0-styleguide",
+      "version-3.11.0-git-style-guide",
+      "version-3.11.0-devs-breaking-changes",
+      "version-3.11.0-react-best-practices",
+      "version-3.11.0-jsdoc-style-guide",
+      "version-3.11.0-error-handling-guide",
+      "version-3.11.0-using-ci",
+      "version-3.11.0-release-process",
+      "version-3.11.0-recommended-tools",
+      "version-3.11.0-installation-docker-development",
+      "version-3.11.0-troubleshooting-development"
+    ],
+    "For Developers: Concepts": [
+      "version-3.11.0-appevent-hooks",
+      "version-3.11.0-developer-authentication",
+      "version-3.11.0-devs-understanding-commonorder",
+      "version-3.11.0-developer-environment-variables",
+      "version-3.11.0-developer-inventory",
+      "version-3.11.0-developer-kafka-streams",
+      "version-3.11.0-devs-node-es-modules"
+    ],
+    "For Developers: GraphQL": [
+      "version-3.11.0-graphql-what",
+      "version-3.11.0-graphql-using",
+      "version-3.11.0-graphql-developing",
+      "version-3.11.0-graphql-intro",
+      "version-3.11.0-graphql-resolvers-file-structure"
+    ],
+    "Developer How-To: Reaction API Server": [
+      "version-3.11.0-dev-how-do-i",
+      "version-3.11.0-graphql-create-query",
+      "version-3.11.0-graphql-create-mutation",
+      "version-3.11.0-how-to-share-code-between-plugins",
+      "version-3.11.0-how-to-create-a-fulfillment-methods-plugin",
+      "version-3.11.0-how-to-create-inventory-plugin",
+      "version-3.11.0-how-to-create-a-payment-provider",
+      "version-3.11.0-how-to-add-address-validation-service",
+      "version-3.11.0-how-to-add-tax-service",
+      "version-3.11.0-how-to-extend-graphql-to-add-field",
+      "version-3.11.0-how-to-extend-graphql-with-remote-schema",
+      "version-3.11.0-how-to-store-custom-order-fields",
+      "version-3.11.0-how-to-extend-product",
+      "version-3.11.0-how-to-manage-app-settings",
+      "version-3.11.0-register-operator-route",
+      "version-3.11.0-dev-debug-app-slowness",
+      "version-3.11.0-testing-debugging-server-code"
+    ],
+    "Core API Server Plugins": [
+      "version-3.11.0-core-plugins-intro",
+      "version-3.11.0-core-plugins-developing",
+      "version-3.11.0-core-plugins-stripe",
+      "version-3.11.0-core-plugins-simple-inventory",
+      "version-3.11.0-core-plugins-sitemap-generator"
+    ],
+    "Developer How-To: GraphQL Clients": [
+      "version-3.11.0-how-to-get-shop-id-for-client"
+    ],
+    "Storefront UI Development Guide": [
+      "version-3.11.0-storefront-intro",
+      "version-3.11.0-storefront-apollo-client",
+      "version-3.11.0-storefront-product-listing-page",
+      "version-3.11.0-storefront-product-detail-page",
+      "version-3.11.0-storefront-nav-menus",
+      "version-3.11.0-storefront-add-to-cart",
+      "version-3.11.0-storefront-cart-page",
+      "version-3.11.0-storefront-cart-modification",
+      "version-3.11.0-storefront-checkout-page",
+      "version-3.11.0-storefront-order-view-page",
+      "version-3.11.0-storefront-login",
+      "version-3.11.0-storefront-account-management",
+      "version-3.11.0-storefront-inventory-status-badges"
+    ],
+    "For Developers: Architecture": [
+      "version-3.11.0-developer-catalog",
+      "version-3.11.0-image-handling",
+      "version-3.11.0-internationalization",
+      "version-3.11.0-jobcontrol",
+      "version-3.11.0-logging",
+      "version-3.11.0-permissions",
+      "version-3.11.0-product-variants",
+      "version-3.11.0-simple-schema"
+    ],
+    "For Developers: Catalyst Components": [
+      "version-3.11.0-blocks-api",
+      "version-3.11.0-components-primary-app-bar"
+    ],
+    "Testing": [
+      "version-3.11.0-testing-reaction",
+      "version-3.11.0-running-jest-unit-tests",
+      "version-3.11.0-running-jest-integration-tests",
+      "version-3.11.0-writing-jest-unit-tests",
+      "version-3.11.0-writing-jest-integration-tests",
+      "version-3.11.0-react-testing",
+      "version-3.11.0-creating-test-data",
+      "version-3.11.0-jest-tips"
+    ],
+    "Acceptance Testing": [
+      "version-3.11.0-acceptance-testing",
+      "version-3.11.0-testing-matrix",
+      "version-3.11.0-test-setup"
+    ],
+    "System Administrator Guide": [
+      "version-3.11.0-deploying",
+      "version-3.11.0-database-optimizations",
+      "version-3.11.0-environment-variables",
+      "version-3.11.0-authentication-in-prod"
+    ],
+    "Store Operator Guide": [
+      "version-3.11.0-dashboard",
+      "version-3.11.0-products",
+      "version-3.11.0-products-bulk-edit",
+      "version-3.11.0-orders-admin",
+      "version-3.11.0-accounts",
+      "version-3.11.0-shop-admin",
+      "version-3.11.0-email-admin",
+      "version-3.11.0-localization-and-i18n",
+      "version-3.11.0-payment",
+      "version-3.11.0-tax",
+      "version-3.11.0-template",
+      "version-3.11.0-shipping-admin",
+      "version-3.11.0-operator-address-validation"
+    ],
+    "Community": [
+      "version-3.11.0-community-showcase",
+      "version-3.11.0-guidelines",
+      "version-3.11.0-code-of-conduct",
+      "version-3.11.0-diversity-statement",
+      "version-3.11.0-reporting-guide",
+      "version-3.11.0-enforcement",
+      "version-3.11.0-code-of-conduct-committee",
+      "version-3.11.0-guideline-faqs",
+      "version-3.11.0-changes"
+    ],
+    "Swag Shop Tutorial": [
+      "version-3.11.0-swag-shop-1",
+      "version-3.11.0-swag-shop-2",
+      "version-3.11.0-swag-shop-3",
+      "version-3.11.0-swag-shop-4",
+      "version-3.11.0-swag-shop-5",
+      "version-3.11.0-swag-shop-6",
+      "version-3.11.0-swag-shop-7",
+      "version-3.11.0-swag-shop-8"
+    ]
+  }
+}
