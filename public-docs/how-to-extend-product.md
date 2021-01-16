@@ -69,14 +69,14 @@ Refer to [How To: Extend GraphQL to add a field](./how-to-extend-graphql-to-add-
 
 *Skip this step if your property is not needed in the published catalog*
 
-A plugin can include a `catalog` object in `registerPlugin`, with `customPublishedProductFields` and `customPublishedProductVariantFields` that are set to arrays of property names. These will be appended to the core list of fields for which published status should be tracked. This is used to build the hashes that are used to display an indicator when changes need to be published.
+A plugin can include a `catalog` object in `registerPlugin`, with `publishedProductFields` and `publishedProductVariantFields` that are set to arrays of property names. These will be appended to the core list of fields for which published status should be tracked. This is used to build the hashes that are used to display an indicator when changes need to be published.
 
 ```js
 export default async function register(app) {
   await app.registerPlugin({
     catalog: {
-      customPublishedProductFields: ["myProperty"],
-      customPublishedProductVariantFields: ["myProperty"]
+      publishedProductFields: ["myProperty"],
+      publishedProductVariantFields: ["myProperty"]
     },
     // other props
   });
