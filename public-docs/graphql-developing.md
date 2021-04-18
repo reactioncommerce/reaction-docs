@@ -20,7 +20,7 @@ Tips:
 
 External references:
 - [GraphQL "description" spec](https://facebook.github.io/graphql/draft/#sec-Documentation)
-- [Apollo Server: Documenting Your Schema](https://www.apollographql.com/docs/apollo-server/v2/essentials/schema.html#documentation)
+- [Apollo Server: Documenting Your Schema](https://www.apollographql.com/docs/apollo-server/schema/schema/#documentation-strings)
 
 ## Where Resolvers are Defined
 
@@ -65,7 +65,7 @@ The GraphQL server and `/graphql` endpoint is configured and returned by the `cr
 
 ## The Reaction GraphQL Context
 
-All GraphQL resolvers receive a [context](https://www.apollographql.com/docs/apollo-server/essentials/data.html#context) object as their third argument. The base context is built within the `ReactionAPI` constructor, and additional request-specific properties (like `accountId` and `userHasPermission`) are added to it in `buildContext.js`.
+All GraphQL resolvers receive a [context](https://www.apollographql.com/docs/apollo-server/data/resolvers/#the-context-argument) object as their third argument. The base context is built within the `ReactionAPI` constructor, and additional request-specific properties (like `accountId` and `userHasPermission`) are added to it in `buildContext.js`.
 
 In Jest tests, you can get a mock context object with mock functions on it:
 
