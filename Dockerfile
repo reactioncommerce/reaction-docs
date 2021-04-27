@@ -1,4 +1,5 @@
 FROM node:8-alpine
+RUN mkdir -p /home/node && chown -R node:node /home/node
 
 ARG NAME=reaction-docs
 ARG DESCRIPTION="Reaction Docs: Docusarus static documentation site generator"
