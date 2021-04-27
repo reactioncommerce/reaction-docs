@@ -3,21 +3,59 @@
 # Redirects from what the browser requests to what we serve
 # 301 redirects by default
 
-/reaction-docs/trunk/*  /docs/next/:splat
-/reaction-docs/v1.1.0/*  /docs/v1.1.0/:splat
-/reaction-docs/v1.2.0/*  /docs/v1.2.0/:splat
-/reaction-docs/v1.3.0/*  /docs/v1.3.0/:splat
-/reaction-docs/v1.4.0/*  /docs/v1.4.0/:splat
-/reaction-docs/v1.4.1/*  /docs/v1.4.1/:splat
-/reaction-docs/v1.5.0/*  /docs/v1.5.0/:splat
-/reaction-docs/v1.6.4/*  /docs/v1.6.4/:splat
-/reaction-docs/v1.7/*    /docs/v1.7/:splat
-/reaction-docs/v1.7.0/*  /docs/v1.7.0/:splat
-/reaction-docs/v1.8.0/*  /docs/v1.8.0/:splat
-/reaction-docs/v1.9.0/*  /docs/v1.9.0/:splat
-/reaction-docs/v.1.11.0/* /docs/v1.11.0/:splat
-/reaction-docs/v1.11.0/* /docs/v1.11.0/:splat
-/reaction-docs/v1.12/* /docs/v1.12.0/:splat
-/reaction-docs/v1.12.0/* /docs/v1.12.0/:splat
-/reaction-docs/v1.13/* /docs/v1.13.0/:splat
-/reaction-docs/v1.13.0/* /docs/v1.13.0/:splat
+# Redirects from 1.x docker era doc links
+/reaction-docs/trunk/*          https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.1.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.2.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.3.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.4.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.4.1/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.5.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.6.4/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.7/*           https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.7.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.8.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v1.9.0/*         https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/reaction-docs/v.1.11.0/*       https://mailchimp.com/developer/open-commerce/docs/fundamentals/    
+/reaction-docs/v1.11.0/*        https://mailchimp.com/developer/open-commerce/docs/fundamentals/    
+/reaction-docs/v1.12/*          https://mailchimp.com/developer/open-commerce/docs/fundamentals/    
+/reaction-docs/v1.12.0/*        https://mailchimp.com/developer/open-commerce/docs/fundamentals/    
+/reaction-docs/v1.13/*          https://mailchimp.com/developer/open-commerce/docs/fundamentals/    
+/reaction-docs/v1.13.0/*        https://mailchimp.com/developer/open-commerce/docs/fundamentals/    
+
+# Redirects from Netlify era v-prefixed docs
+/docs/next/*                    https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.1.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.2.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.3.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.4.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.4.1/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.5.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.6.4/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.7/*                    https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.7.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.8.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.9.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.11.0/*                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.11.0/*                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.12.0/*                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.12.0/*                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.13.0/*                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/v1.13.0/*                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+
+# Redirects from Netlify unprefixed docs
+/docs/1.14.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/1.15.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/1.16.0/*                  https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/2.0.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/2.9.1/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.0.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.1.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.2.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.3.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.4.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.5.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.6.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.7.0/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/3.7.1/*                   https://mailchimp.com/developer/open-commerce/docs/fundamentals/
+/docs/next/*                    https://mailchimp.com/developer/open-commerce/docs/fundamentals/
