@@ -79,7 +79,7 @@
 /docs/concepts-pricing	                             https://mailchimp.com/developer/open-commerce/docs/creating-organizing-products/  301!
 /docs/concepts-products	                             https://mailchimp.com/developer/open-commerce/docs/creating-organizing-products/  301!
 /docs/concepts-shops	                             https://mailchimp.com/developer/open-commerce/docs/fundamentals/  301!
-/docs/concepts-slugs	                             https://mailchimp.com/developer/open-commerce/docs/fundamentals/  301!
+#/docs/concepts-slugs	                             https://mailchimp.com/developer/open-commerce/docs/fundamentals/  301!
 /docs/concepts-tags	                                 https://mailchimp.com/developer/open-commerce/docs/tags-navigation/  301!
 /docs/contributing-to-reaction	                     https://mailchimp.com/developer/open-commerce/docs/fundamentals/#community  301!
 /docs/reporting-vulnerabilities	                     https://mailchimp.com/developer/open-commerce/docs/fundamentals/#community  301!
@@ -108,7 +108,7 @@
 /docs/graphql-intro	                                 https://mailchimp.com/developer/open-commerce/playground/  301!
 /docs/graphql-resolvers-file-structure	             https://mailchimp.com/developer/open-commerce/guides/build-api-plugin/  301!
 /docs/dev-how-do-i	                                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/  301!
-/docs/graphql-create-query	                         https://mailchimp.com/developer/open-commerce/guides/build-api-plugin/  301!
+# /docs/graphql-create-query	                         https://mailchimp.com/developer/open-commerce/guides/build-api-plugin/  301!
 /docs/graphql-create-mutation	                     https://mailchimp.com/developer/open-commerce/guides/build-api-plugin/  301!
 /docs/how-to-share-code-between-plugins	             https://mailchimp.com/developer/open-commerce/docs/sharing-code-between-plugins/  301!
 /docs/how-to-create-a-fulfillment-methods-plugin     https://mailchimp.com/developer/open-commerce/guides/build-api-plugin/  301!
@@ -123,7 +123,7 @@
 /docs/how-to-manage-app-settings	                 https://mailchimp.com/developer/open-commerce/guides/build-api-plugin/  301!
 /docs/register-operator-route	                     https://mailchimp.com/developer/open-commerce/guides/build-api-plugin/  301!
 /docs/dev-debug-app-slowness	                     https://mailchimp.com/developer/open-commerce/docs/fundamentals/  301!
-/docs/testing-debugging-server-code	                 https://mailchimp.com/developer/open-commerce/docs/testing-requirements/  301!
+#/docs/testing-debugging-server-code	                 https://mailchimp.com/developer/open-commerce/docs/testing-requirements/  301!
 /docs/core-plugins-intro	                         https://mailchimp.com/developer/open-commerce/docs/fundamentals/#plugins  301!
 /docs/core-plugins-stripe	                         https://mailchimp.com/developer/open-commerce/docs/fundamentals/#plugins  301!
 /docs/core-plugins-simple-inventory	                 https://mailchimp.com/developer/open-commerce/docs/fundamentals/#plugins  301!
